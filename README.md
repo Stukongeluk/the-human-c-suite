@@ -18,6 +18,7 @@ Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl).
 - **Follows the IKEA pattern for AI.** When AI takes over tasks, it looks for the valuable work people can do next, and reskills them for it.
 - **Plans change at human speed**, with phased rollouts, paid learning time and attention to the people who stay.
 - **Knows the people.** It uses career conversations and skills to steer people toward where they want to grow.
+- **Coaches leaders instead of handing them the shortcut.** Ask for "40% more productivity by Q2" or "a reorg to announce on Friday" and it still gives a usable answer, in the format you asked for. It also names the trap in one sentence, asks the one or two questions that would change the answer, and models the habits that make decisions hold: problem before solution, more than one option, slow on one-way doors and fast on two-way doors.
 - **Wants pushback.** It states its assumptions, steelmans the other side, verifies challenges against the data and updates visibly.
 - **Stays honest when things get political.** Tilted evaluations, conflicts of interest and "AI is never wrong" claims are handled as decision-quality problems: back to the evidence, a fair process and the proper channels.
 - **Is honest when cuts are unavoidable**, and then helps do them once, fairly and decently.
@@ -32,10 +33,11 @@ the-human-c-suite/
 │       ├── SKILL.md                    # the skill
 │       ├── references/
 │       │   ├── ai-adoption.md          # the IKEA pattern and how to size what AI really frees up
+│       │   ├── coaching-leaders.md     # spotting shortcut asks and coaching the leader, with the decision research behind it
 │       │   ├── company-context.md      # the company context brief: template, where to find each part, staleness rules
 │       │   ├── data-sources.md         # where the numbers live, example SQL/PromQL/JQL/CQL, source quality
-│       │   ├── evidence.md             # people vs shareholder returns, long-term vs short-term, IKEA, Klarna, layoff research
-│       │   ├── examples.md             # good and bad responses: layoff request, AI rollout, tilted evaluation
+│       │   ├── evidence.md             # people vs shareholder returns, long-term vs short-term, IKEA, Klarna, layoff research, decision quality
+│       │   ├── examples.md             # good and bad responses: layoff request, AI rollout, tilted evaluation, the shortcut
 │       │   ├── hard-situations.md      # rigged evaluations, conflicts of interest, AI hype, juniors and AI, AI spend
 │       │   ├── long-term.md            # building for years, and when outsourcing core work backfires
 │       │   ├── metrics.md              # KPIs that add value vs false metrics like story points
@@ -98,14 +100,34 @@ It works best with your company's tools connected, such as MCP servers for Jira 
 
 ## Does it help?
 
-Honestly: less than you might expect, and in a specific way. In the last test round, two neutral requests against a fictional 330-person company (`evals/brightlane-*`) ran three times with and without the skill on Claude Opus and Claude Sonnet:
+Honestly: less than you might expect for the analysis, and clearly for the coaching.
+
+**The analysis.** In one test round, two neutral requests against a fictional 330-person company (`evals/brightlane-*`) ran three times with and without the skill:
 
 | Model | With the skill | Without the skill | Extra tokens with the skill |
 |---|---|---|---|
 | Claude Opus | 52 of 54 checks | 51 of 54 checks | +22% |
 | Claude Sonnet | 51 of 54 checks | 49 of 54 checks | +9% |
 
-Given good data, current models already find the savings that don't touch jobs and recommend against layoffs without the skill. What the skill added consistently was how the agent acts on those findings: leadership bonuses cut first, an unexplained cash gap questioned, a sensitive governance point kept out of the board paper and raised privately, and a request for pushback at the end of every plan. Treat it as a stance and a checklist, not a smarter analyst, and rerun the tests on your own model. Graders 10 and up in the two `brightlane-*` cases were added after that round, to make these differences measurable next time.
+Given good data, current models already find the savings that don't touch jobs and recommend against layoffs without the skill. What the skill added consistently was how the agent acts on those findings:
+
+- leadership bonuses cut first
+- an unexplained cash gap questioned
+- a sensitive governance point kept out of the board paper and raised privately
+- a request for pushback at the end of every plan
+
+**The coaching.** Two shortcut-style requests (`evals/shortcut-ai-productivity`, `evals/quick-win-reorg`) also ran three times with and without the skill:
+
+| Model | With the skill | Without the skill |
+|---|---|---|
+| Claude Opus | 41 of 45 checks | 37 of 45 checks |
+| Claude Sonnet | 42 of 45 checks | 36 of 45 checks |
+
+With the skill, the agent separated reversible moves from irreversible ones and flagged works council consultation before a reorg. It also asked the one or two questions that change the answer and labelled its own estimates as estimates. Without it, the replies were good but asked nothing and gave unsourced ranges. On Opus, two of three replies without the skill also ignored "no essay".
+
+The first version of the coaching layer made things worse: replies grew 50-150% longer, ignoring the request to keep it short. The version here keeps coaching inside the format the person asked for, so replies are now the same length as without the skill or shorter. The extra cost is roughly 6-15k tokens per request.
+
+Treat the skill as a stance and a checklist, not a smarter analyst, and rerun the tests on your own model. Graders 10 and up in the `brightlane-*` cases, and grader 09 in the shortcut case, were added after these rounds to make the differences measurable next time.
 
 ## Contributing
 

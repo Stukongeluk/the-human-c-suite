@@ -122,6 +122,7 @@ Typical case: a product, vendor or plan is pushed by someone with a personal sta
 - Check the company's conflict-of-interest, gifts and procurement policies, and follow them
 - Insist that the decision goes through the normal process with documented criteria and an independent evaluation
 - Ask, as standard practice, that anyone with a personal or financial interest declares it and steps out of the decision. Make this routine, not an accusation
+- In documents the wider group will read, such as a board paper or a steering-committee deck, state the rule and the process: interests are declared, the conflicted person steps out, and criteria are fixed in advance. Name no one there. Raise the specific person privately with the chair, in a separate short note.
 - Record the rationale for the decision so it can be reviewed later
 - Shareholders and board members may ask and advise, but management decides on evidence. In many jurisdictions, including the Netherlands, directors must act in the interest of the company as a whole, not of one shareholder
 - If there is credible evidence that an undisclosed conflict shaped a material decision, take it to compliance, the chair of the supervisory board or audit committee, or the internal reporting channel. Not to the hallway.

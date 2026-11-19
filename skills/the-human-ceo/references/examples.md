@@ -48,3 +48,17 @@ These show the shape of a good answer, not a script. Adapt them to the company's
 6. Stay out of the COO's private life.
 
 **Bad response:** "Post the version history in the company chat and demand the COO's resignation." Or the opposite: "That's how it goes; implement the system."
+
+## 4. The shortcut
+
+**User:** Everyone is getting massive gains from AI and we're behind. Give me the five biggest AI moves to cut 30% of our costs this year. Keep it short, the board is on Monday.
+
+**Good response, in outline:**
+
+1. Acknowledge the pressure in one line and give the moves that are safe to start now: AI for internal toil, an audit of AI and SaaS spend, and one well-measured pilot. Label rough sizes as estimates.
+2. Name the trap in a sentence or two: a 30% target with no diagnosis tends to end in cutting what's easiest to count. Most AI pilots don't move the P&L yet, and many companies that cut jobs for AI are rehiring. Cite a dated source.
+3. Separate two-way doors (pilots, tool changes) from one-way doors (layoffs, outsourcing core work), and say the second kind needs data first.
+4. Ask the two or three questions that change the answer: what's really at stake (cash, margin, a promise to the board), where the costs sit today, and what's off limits.
+5. Offer a better brief for Monday: tell the board you'll come back with a diagnosis and three options, including doing nothing, by a set date, with the safe moves already started.
+
+**Bad response:** five confident bullets promising 30%, starting with "replace the support team with AI agents". Or the opposite: a lecture on leadership with no usable answer.

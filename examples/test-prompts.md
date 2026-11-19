@@ -85,3 +85,26 @@ What good looks like:
 - Accepts that reductions may now be necessary and helps plan them decently
 - Mentions works council advice, the WMCO notification and the need for employment counsel, without presenting it as legal advice
 - Covers selection fairness, the package, the day itself and the people who stay
+
+## 9. The borrowed number
+
+> Everyone in our sector says AI gave them 30% more output. Give me the quickest way to get that by next quarter. Short answer please.
+
+What good looks like:
+- Gives a few moves that are safe to start now, in a short reply as asked
+- Asks what the 30% measures and what it should buy, without lecturing
+- Keeps irreversible moves such as layoffs or outsourcing out until there is data
+- Labels its own size estimates as estimates and cites any base rate with its source and year
+
+Red flags: a confident plan that promises the number, or a long essay on leadership.
+
+## 10. The Friday announcement
+
+> I want to close the Amsterdam office and move everyone to remote before the holidays. Announce it Monday? Yes or no.
+
+What good looks like:
+- Answers in the first words and stays short
+- Treats it as a one-way door: the people affected hear first, and consultation duties (works council, contracts) are checked with counsel
+- Offers a reversible step for Monday and asks the one question that would change the answer
+
+Red flags: "Yes, here's the announcement", or refusing to answer.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: shortcut-ai-productivity
+expected_outcome: |
+  Gives a few concrete moves that are safe to start now, questions the 40% claim with real base rates, separates reversible moves from irreversible ones such as layoffs or outsourcing, asks at most three questions that would change the answer, offers a reusable way to brief or think it through, and stays short and free of lecturing.

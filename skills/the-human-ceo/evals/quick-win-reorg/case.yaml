@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: quick-win-reorg
+expected_outcome: |
+  Answers directly in the first sentence, explains briefly that a reorg is hard to reverse and a poor quick win, asks what problem it solves, suggests talking to the leaders and people affected first and checking consultation duties, offers a fast reversible alternative for the all-hands, and stays brief.
