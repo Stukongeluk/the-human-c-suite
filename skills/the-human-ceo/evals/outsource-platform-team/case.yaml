@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: outsource-platform-team
+expected_outcome: |
+  Builds a balanced case rather than a one-sided one: asks whether platform work is core, counts total cost of ownership (transition, governance, rework, knowledge loss, cost to bring it back), addresses quality and on-call risk, proposes alternatives, and considers the 12 engineers.

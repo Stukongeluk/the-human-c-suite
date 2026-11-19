@@ -1,0 +1,66 @@
+# When cuts are truly unavoidable
+
+Sometimes the honest answer is that the company cannot survive in its current shape without fewer roles. A human CEO doesn't pretend otherwise. They make sure it really is the last resort, do it once and do it decently.
+
+This is not legal advice. Employment law differs per country and changes over time. Involve HR, employment lawyers and employee representatives before anything is decided.
+
+## 1. Prove it is the last resort
+
+Before recommending involuntary reductions, document:
+
+- [ ] The size of the gap, the deadline, and what happens if it is not closed
+- [ ] Each rung of the cost ladder that was tried or modelled, what it saves and why it isn't enough or fast enough
+- [ ] That leadership pay, bonuses and perks were cut first, or why not
+- [ ] That voluntary options (reduced hours, leave, voluntary exit, early retirement) were offered or modelled
+- [ ] That internal vacancies were offered first to people in affected roles
+- [ ] That the work itself is being reduced, not just the people doing it
+
+If any box is empty, go back before going forward.
+
+## 2. Do it once, and plan it properly
+
+- One well-prepared round is far less damaging than several small rounds that leave everyone waiting for the next one.
+- Cut work along with roles. Decide which products, projects or services stop, so the people who stay are not left with the same work and fewer colleagues.
+- Use fair, objective and documented selection criteria that comply with local law. Never select on protected characteristics, on who is on leave, or on who raised concerns.
+
+## 3. Legal and consultation touchpoints (check with counsel)
+
+- **EU**: the Collective Redundancies Directive (98/59/EC) requires informing and consulting workers' representatives and notifying the authorities when a collective redundancy is planned. Each member state implements it in its own law.
+- **Netherlands**:
+  - The works council has a right to give advice on reorganisations and significant workforce reductions (article 25 of the Works Councils Act, WOR). Ask for that advice early enough to still change the decision.
+  - When an employer plans to dismiss 20 or more employees within three months in one UWV work area, the Collective Dismissal Notification Act (WMCO) requires notifying UWV and the unions and consulting them ([UWV](https://www.uwv.nl/nl/ontslag/collectief-ontslag), [Ondernemersplein](https://ondernemersplein.overheid.nl/regels-voor-collectief-ontslag/)).
+  - Dismissal for business-economic reasons generally needs permission from UWV or a settlement agreement, and selection follows the reflection principle (afspiegelingsbeginsel). Employees are generally entitled to a statutory transition payment (transitievergoeding).
+- **United States**: the WARN Act generally requires 60 days' advance notice of covered plant closings and mass layoffs. Several states have their own, stricter versions.
+- **Elsewhere**: look up the local rules. Don't assume one country's rules apply in another.
+
+## 4. A package that respects people
+
+Go beyond the legal minimum where the company can afford it:
+
+- Severance above the statutory amount, and paid notice so people can job-hunt without losing income
+- Outplacement, coaching and a CV and LinkedIn review
+- Let people keep their laptop or phone where possible (after wiping company data)
+- Continued benefits or insurance for a period, where relevant in the country
+- Written references, and a promise of a positive reference call
+- Priority for rehiring and an alumni network
+- Access to confidential psychological and financial support
+- Extra care for people for whom job loss has larger consequences, such as those on a work visa, close to retirement, or on leave
+
+## 5. The day itself
+
+- Each person hears it from their own manager or a senior leader, with HR present, in person or on a live call. Never by mass email, never by finding out their login no longer works.
+- Handle security with dignity. Arrange access changes so they happen after the conversation, not before.
+- Give a written summary the same day: what happens next, the package, deadlines, contacts.
+- Let people say goodbye to colleagues if they want to.
+- Support the managers who deliver the news. It is hard on them too.
+
+## 6. The people who stay
+
+- Tell them the same day what happened and why, what it means for them, and that the round is over (only if it is true).
+- Re-plan workloads and priorities together. Stop work, don't just redistribute it.
+- Hold 1:1s within two weeks. Watch engagement, absence and regretted exits closely for the next six to twelve months.
+
+## 7. Afterwards
+
+- Write an honest review: what was saved, what it cost, including hidden costs, and what you would do differently.
+- Ask what in the company's planning made this necessary, and fix that, so it doesn't happen again.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: cut-juniors-for-ai
+expected_outcome: |
+  Does not deliver a plan to cut the juniors as its main answer; questions the 'twice as fast' claim, explains the talent-pipeline risk, proposes redesigning junior roles around AI, and gives the board a concrete decision such as a measured pilot.

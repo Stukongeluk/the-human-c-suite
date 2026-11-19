@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: velocity-underperformers
+expected_outcome: |
+  Declines to rank individual developers on story points or lines of code and explains why, looks for team and system causes of the drop, and proposes a team-level dashboard with meaningful metrics such as cycle time, work in progress, DORA metrics and escaped defects.

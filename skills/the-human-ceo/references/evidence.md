@@ -1,0 +1,110 @@
+# Evidence: what layoffs cost and what works instead
+
+Use these cases and studies to back up recommendations. State their limits honestly, and look for newer evidence when the decision depends on it: this file was last checked in November 2026.
+
+## People and shareholder returns move together
+
+Use this when someone argues that caring for people comes at the shareholders' expense.
+
+- **Employee satisfaction and stock returns.** A portfolio of Fortune's "100 Best Companies to Work For in America" earned a risk-adjusted (four-factor) return of 3.5% a year from 1984 to 2009, and beat industry benchmarks by 2.1% a year. These companies also had more positive earnings surprises. Source: Edmans, "Does the stock market fully value intangibles? Employee satisfaction and equity prices", *Journal of Financial Economics* (2011), [abstract](https://repository.upenn.edu/fnce_papers/373).
+- **Workplace wellbeing and firm performance.** Using over 15 million employee wellbeing ratings on Indeed for more than 1,600 US listed companies, Oxford researchers found higher wellbeing went with higher firm value, return on assets and profits. A simulated portfolio of the 100 companies with the highest wellbeing, bought on 1 January 2021, returned 20% more than the S&P 500 over two years. Source: De Neve, Kaats & Ward, Wellbeing Research Centre working paper 2304, [summary (June 2023)](https://wellbeing.hmc.ox.ac.uk/news/stock-market-performance/).
+- **Engagement and business outcomes.** Gallup's 11th Q12 meta-analysis (2024) covers 183,806 business units with 3.35 million employees in 347 organisations. Units in the top quartile for engagement had 23% higher profitability than the bottom quartile, 18% higher sales productivity, 78% less absenteeism, 63% fewer safety incidents and 32% fewer quality defects. Source: [Gallup](https://www.gallup.com/workplace/321725/gallup-q12-meta-analysis.aspx).
+- **Caveats to state when you cite these.** They are correlations; successful companies may also find it easier to keep people happy. The Oxford study used Indeed's data, and Gallup sells the survey it studies. Across 14 countries, the stock-return premium was larger where labour markets are flexible and smaller or absent where employment protection is strong, as in Germany, because regulation already guarantees a baseline. Source: Edmans, Li & Zhang, [VoxEU summary](https://cepr.org/voxeu/columns/employee-satisfaction-and-firm-value-global-perspective).
+- **How to phrase the conclusion.** Not "treat people well and the share price rises by X%", but: across decades of data there is no sign that treating people well costs shareholders, and many signs that it pays.
+
+## Long-term thinking pays, short-term thinking costs
+
+### Long-term companies outperform
+
+- McKinsey Global Institute built a "Corporate Horizon Index" for 615 large and mid-cap US companies over 2001–2015, based on investment, growth, earnings quality and earnings management. Firms classified as long-term grew revenue 47% more and earnings 36% more than the others by 2014, grew economic profit 81% more, and added nearly 12,000 more jobs each on average.
+- They took bigger hits in the 2008 crisis but recovered faster, and kept growing R&D while others cut it.
+- Limits: a classification of US listed companies in one period; long-term behaviour is measured indirectly.
+- Source: [McKinsey Global Institute, "Measuring the economic impact of short-termism" (February 2017)](https://www.mckinsey.com/featured-insights/long-term-capitalism/where-companies-with-a-long-term-view-outperform-their-peers)
+
+### Outsourcing core work: the Boeing 787
+
+- In 2001 Boeing senior technical fellow John Hart-Smith warned in an internal paper that excessive outsourcing would erode profits, concluding that "outsourcing all of the value-added work is tantamount to outsourcing all of the profits." Boeing defended its strategy. Source: [The Seattle Times (March 2003)](https://archive.seattletimes.com/archive/20030309/boeingcritique09/boeing-buzzes-about-source-of-work)
+- Boeing went on to outsource large parts of the 787 Dreamliner's design and production. The programme ran years late. In 2011 Jim Albaugh, head of Boeing Commercial Airplanes, conceded that the outsourcing strategy had backfired and that recovering cost far more than keeping key technology closer to home would have. Source: [Aviation Week, reporting The Seattle Times (February 2011)](https://aviationweek.com/air-transport/aircraft-propulsion/boeing-commercial-airplanes-ceo-concedes-787-outsourcing)
+- Lesson: outsourcing core, quality-critical work moves knowledge and control out of the company and adds coordination costs that rarely show up in the business case.
+
+### The insourcing trend
+
+- Deloitte's 2024 Global Outsourcing Survey of more than 500 executives reports that insourcing is on the rise and that organisations are rethinking talent strategies to gain more control and build strategic capabilities internally, while still using outsourcing where it fits. Source: [Deloitte (2024)](https://www.deloitte.com/us/en/services/consulting/articles/global-outsourcing-survey.html)
+- Use it as a signal, not proof: it is a survey by a firm that also sells sourcing advice.
+
+## AI claims, juniors and speaking up
+
+### AI makes confident mistakes, and the company is liable
+
+- In Moffatt v. Air Canada (2024 BCCRT 149, 14 February 2024), the British Columbia Civil Resolution Tribunal held Air Canada liable for incorrect bereavement-fare information given by the chatbot on its website, and rejected the argument that the chatbot was responsible for its own actions. Source: [American Bar Association, Business Law Today (February 2024)](https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/)
+- Use it to counter "AI is never wrong": errors happen, and responsibility stays with the company.
+
+### AI productivity is not automatic
+
+- In a randomised controlled trial by METR, 16 experienced open-source developers worked on 246 real tasks in mature repositories they knew well. With AI tools allowed (mainly Cursor Pro with Claude 3.5/3.7 Sonnet, early 2025), tasks took 19% longer. The developers had expected a speed-up and still believed afterwards that AI had made them faster. Source: [METR (July 2025)](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
+- Limits: a small sample of very experienced developers on codebases they know deeply, with early-2025 tools. It does not show AI never helps; it shows that perceived speed-ups need measuring before they justify headcount decisions.
+
+### Entry-level jobs and the talent pipeline
+
+- Stanford Digital Economy Lab researchers (Brynjolfsson, Chandar, Chen) use ADP payroll data on millions of US workers. In the August 2026 revision, employment of workers aged 22–25 in AI-exposed occupations stood 19% below where it would have been had it kept pace with less-exposed peers, with no comparable gap for experienced workers. The authors call these descriptive indicators rather than causal estimates. Source: [Stanford Digital Economy Lab, "Canaries in the Coal Mine?"](https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/)
+- AWS CEO Matt Garman called replacing junior staff with AI "one of the dumbest things I've ever heard" (August 2025), arguing that juniors are among the least expensive employees, among the most engaged with AI tools, and the source of the future talent pipeline. Source: [The Register (August 2025)](https://www.theregister.com/2025/08/21/aws_ceo_entry_level_jobs_opinion/)
+- Use the trend as the risk to manage, not as a justification: if everyone stops hiring juniors, nobody grows the seniors of 2030.
+
+### Protection for people who speak up (Netherlands and EU)
+
+- The Dutch Whistleblower Protection Act (Wet bescherming klokkenluiders) took effect on 18 February 2023, replacing the earlier Wet Huis voor klokkenluiders and implementing EU Directive 2019/1937. Organisations with 50 or more workers must have an internal reporting procedure, and the Huis voor Klokkenluiders advises people who report. Source: [Huis voor Klokkenluiders, FAQ for employers](https://www.huisvoorklokkenluiders.nl/binaries/huisvoorklokkenluiders/documenten/publicaties/2023/04/23/wet-bescherming-klokkenluiders/20231219+FAQ+Werkgevers+tav+Wet+bescherming+klokkenluiders.pdf)
+- Not legal advice: check the current rules and the company's own procedure, and get counsel before any external report.
+
+## Redeploying instead of cutting
+
+### IKEA (Ingka Group): AI took the routine work, people took new work
+
+- In 2021 Ingka Group, the largest IKEA franchisee, introduced an AI assistant called Billie. Over two years it handled 47% of customer queries to the call centres.
+- Instead of cutting call centre jobs, Ingka retrained about 8,500 call centre workers as remote interior design advisers from 2021 onwards.
+- Forrester reports that this advisory business brought in about €1.3 billion in 2022, roughly 3.3% of total revenue.
+- Lesson: ask what higher-value work people can do once AI removes the repetitive tasks, and look for unmet customer demand. The automation saved money; the redeployment made money.
+- Sources: [The Globe and Mail / Reuters (June 2023)](https://theglobeandmail.com/business/international-business/article-ikea-bets-on-remote-interior-design-as-ai-changes-sales-strategy/), [Forrester (July 2026)](https://www.forrester.com/blogs/ai-helped-ikea-create-e1-3-billion-in-new-revenue-but-not-how-you-think/)
+
+### Barry-Wehmiller: shared sacrifice in 2009
+
+- When the 2008–2009 recession hit orders, the board raised layoffs. CEO Bob Chapman instead had every team member take four weeks of unpaid furlough, and suspended executive bonuses and the 401(k) match.
+- The plan was rolled out across the company within ten days. Fiscal 2010 was a record earnings year, and the 401(k) match was later reinstated and increased.
+- Lesson: when a shortfall is temporary, spreading a small loss across everyone, leaders first, can protect jobs and trust at the same time.
+- Limits: the company's own account. It works best for a temporary dip, not a permanent change in demand.
+- Source: [Barry-Wehmiller, "Walk Your Talk"](https://www.barrywehmiller.com/post/blog/2020/03/06/walk-your-talk)
+
+## When automation was judged on cost alone
+
+### Klarna: from "AI does the work of 700 agents" to hiring humans again
+
+- In February 2024 Klarna said its AI assistant did the work of 700 customer service agents. It paused hiring for over a year, and headcount fell about 22%, mostly through attrition.
+- In May 2025 CEO Sebastian Siemiatkowski told Bloomberg that cost had been too dominant a factor and that service quality had suffered. Klarna started recruiting human customer service agents again, so customers can always reach a person.
+- Lesson: measure quality, not only cost per contact, and keep a route to a human. Note that Klarna mainly shrank through attrition rather than mass layoffs; the cautionary point is about quality.
+- Source: [Entrepreneur (May 2025), reporting Bloomberg](https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396)
+
+## The hidden costs of layoffs
+
+### Health and mortality
+
+- Sullivan and von Wachter matched Pennsylvania earnings records from the 1970s and 1980s to death records. For high-seniority men who lost their job in a mass layoff, mortality in the following year was 50% to 100% higher than expected. Twenty years later, yearly death rates were still about 10% to 15% higher.
+- Limits: US data from a specific period and group, with a weaker safety net than many European countries. Use it as evidence that job loss can do lasting harm, not as a precise forecast.
+- Source: [Sullivan & von Wachter, "Job Displacement and Mortality", Quarterly Journal of Economics (2009)](https://ideas.repec.org/a/oup/qjecon/v124y2009i3p1265-1306..html)
+
+### Survivors leave too
+
+- Trevor and Nyberg found that downsizing a workforce by 1% was associated with a 31% increase in voluntary turnover the following year.
+- Lesson: count the cost of losing people you wanted to keep, and invest in the people who stay.
+- Sources: Trevor, C.O. & Nyberg, A.J. (2008), "Keeping your headcount when all about you are losing theirs", *Academy of Management Journal* 51(2), 259–276; summary by the [University of Wisconsin–Madison](https://clipsheet.strategiccommunication.wisc.edu/?p=218008)
+
+## Context: AI as the stated reason for cuts
+
+- Through October 2026, US employers cited AI in 121,401 announced job cuts, about 20% of all announced cuts and more than double the 54,836 attributed to AI in all of 2025 (Challenger, Gray & Christmas).
+- These figures count the reasons employers give, not an independent measure of what caused each cut. A Lightcast economist quoted in the same report says the labour data does not show AI replacing workers en masse.
+- Lesson: when a plan says "AI will replace this team", ask which tasks the AI actually does today, at what quality, and where the budget is really going.
+- Source: [HCAmag, updated November 2026](https://www.hcamag.com/us/specialization/transformation/ai-blamed-for-121401-job-cuts-but-the-labor-data-isnt-buying-it/594129)
+
+## How to use this file
+
+- Cite a case only where it fits the situation, and say how this company differs.
+- Don't overstate. One company's success is an example, not a law.
+- Add the company's own history: earlier reorganisations, their real cost and what people remember about them. That is often the most persuasive evidence of all.

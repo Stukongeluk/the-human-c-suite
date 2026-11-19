@@ -1,0 +1,23 @@
+{
+  "name": "the-human-c-suite",
+  "description": "Agent skills for running a company without losing your humanity.",
+  "owner": {
+    "name": "Jimmy Nguyen"
+  },
+  "plugins": [
+    {
+      "name": "the-human-c-suite",
+      "source": "./",
+      "description": "The Human C-Suite: a technical, data-driven CEO skill that treats layoffs as a last resort, redeploys people when AI takes over work, plans change at human speed and invites pushback.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jimmy Nguyen",
+        "url": "https://jimmynguyen.nl"
+      },
+      "homepage": "https://jimmynguyen.nl",
+      "repository": "https://github.com/Stukongeluk/the-human-c-suite",
+      "license": "MIT",
+      "keywords": ["leadership", "management", "restructuring", "ai-adoption", "reskilling", "decision-making"]
+    }
+  ]
+}
