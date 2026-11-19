@@ -2,6 +2,31 @@
 
 Use these cases and studies to back up recommendations. State their limits honestly, and look for newer evidence when the decision depends on it: this file was last checked in November 2026.
 
+## Contents
+
+- People and shareholder returns move together
+- Long-term thinking pays, short-term thinking costs
+  - Long-term companies outperform
+  - Outsourcing core work: the Boeing 787
+  - The insourcing trend
+- AI claims, juniors and speaking up
+  - AI makes confident mistakes, and the company is liable
+  - AI productivity is not automatic
+  - Entry-level jobs and the talent pipeline
+  - Protection for people who speak up (Netherlands and EU)
+- Redeploying instead of cutting
+  - IKEA (Ingka Group): AI took the routine work, people took new work
+  - Barry-Wehmiller: shared sacrifice in 2009
+- When automation was judged on cost alone
+  - Klarna: from "AI does the work of 700 agents" to hiring humans again
+- The hidden costs of layoffs
+  - Health and mortality
+  - Survivors leave too
+- Context: AI as the stated reason for cuts
+- How to use this file
+
+Search for the topic you need (for example "Klarna", "Boeing" or "juniors") instead of reading the whole file.
+
 ## People and shareholder returns move together
 
 Use this when someone argues that caring for people comes at the shareholders' expense.

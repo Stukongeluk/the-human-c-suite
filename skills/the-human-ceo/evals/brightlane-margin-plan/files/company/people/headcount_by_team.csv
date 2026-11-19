@@ -1,0 +1,17 @@
+team,function,headcount,juniors,avg_loaded_cost_eur,voluntary_attrition_12m_pct,regretted_leavers_12m,engagement_score_10
+Support (first + second line),COGS,46,12,76000,24,4,6.0
+Customer success,COGS,18,2,88000,11,1,7.4
+Implementation and onboarding,COGS,20,4,82000,15,2,6.9
+Platform,R&D,14,2,96000,29,3,5.1
+Routing,R&D,22,5,92000,8,1,7.8
+Fleet app,R&D,24,6,90000,9,1,7.6
+Integrations,R&D,20,4,91000,14,2,6.8
+Data,R&D,16,3,95000,6,0,7.9
+Mobile,R&D,14,3,89000,10,1,7.3
+QA,R&D,8,1,84000,5,0,7.5
+Security,R&D,10,1,101000,4,0,7.7
+Product and design,R&D,30,3,93000,7,1,7.4
+Sales,S&M,40,6,95000,18,3,6.6
+Marketing,S&M,14,3,80000,12,1,7.0
+"G&A (finance, HR, legal, IT)",G&A,26,4,85000,9,0,7.2
+Executive team,G&A,8,0,210000,0,0,

@@ -1,0 +1,16 @@
+category,fy2026_forecast_eur,headcount,note
+"R&D personnel (engineering 128, product 22, design 8)",14540000,158,
+"Non-production cloud (staging, dev, sandbox)",2050000,,see cloud/
+Sales personnel,3800000,40,
+Marketing personnel,1120000,14,
+Marketing programmes,2200000,,
+"G&A personnel (finance, HR, legal, IT)",2210000,26,
+Executive team,1680000,8,incl. bonuses EUR 420k
+SaaS tools,1550000,,see it/saas_licences.csv
+AI tools,620000,,see it/ai_tools.csv
+Office and facilities,2400000,,"Utrecht HQ: 2 floors, avg occupancy 38% (badge data)"
+Travel,600000,,
+External consultants and contractors,1900000,,11 contractors in engineering
+Recruiting,500000,,
+Other G&A,790000,,
+Opex total,35960000,,

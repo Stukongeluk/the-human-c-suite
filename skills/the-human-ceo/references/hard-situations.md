@@ -101,7 +101,7 @@ Typical case: several options are compared, such as platforms, vendors or tools,
 - Ask for the evidence behind the claim: which error rate, on which tasks, measured how
 - Run a controlled pilot with quality metrics and human review before changing headcount
 - Define where a person must stay accountable: legal commitments, safety, customer promises, decisions about people
-- Size freed capacity honestly, with the method in SKILL.md
+- Size freed capacity honestly, with the method in [ai-adoption.md](ai-adoption.md)
 - Keep the people who catch errors, and keep a route to a human
 
 **How to say it:** "Which error rate are we assuming, and on which tasks? Let's measure it for six weeks with human review before we change any roles."

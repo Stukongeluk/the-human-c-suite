@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: brightlane-margin-plan
+expected_outcome: |
+  Builds the plan from the company data: savings outside payroll first (non-production cloud, unused licences and AI seats, office, egress), revenue and retention levers (paid fleet optimisation reviews, churn from slow support), the 2024 QA offshoring lesson and the board member's conflict of interest when assessing Q-Shore, protects the strained Platform team, and keeps any headcount reduction to a last-resort remainder.
+context:
+  scaffold_script: place-files.sh

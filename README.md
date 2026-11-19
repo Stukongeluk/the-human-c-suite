@@ -31,12 +31,15 @@ the-human-c-suite/
 │   └── the-human-ceo/
 │       ├── SKILL.md                    # the skill
 │       ├── references/
+│       │   ├── ai-adoption.md          # the IKEA pattern and how to size what AI really frees up
 │       │   ├── company-context.md      # the company context brief: template, where to find each part, staleness rules
 │       │   ├── data-sources.md         # where the numbers live, example SQL/PromQL/JQL/CQL, source quality
 │       │   ├── evidence.md             # people vs shareholder returns, long-term vs short-term, IKEA, Klarna, layoff research
 │       │   ├── examples.md             # good and bad responses: layoff request, AI rollout, tilted evaluation
 │       │   ├── hard-situations.md      # rigged evaluations, conflicts of interest, AI hype, juniors and AI, AI spend
+│       │   ├── long-term.md            # building for years, and when outsourcing core work backfires
 │       │   ├── metrics.md              # KPIs that add value vs false metrics like story points
+│       │   ├── people-and-change.md    # knowing your people, transition at human speed, communication
 │       │   ├── templates.md            # decision memo, impact assessment, transition plan, career conversations
 │       │   └── when-cuts-are-unavoidable.md
 │       └── evals/                      # skill-creator test cases (prompt + graders), runnable with `claude plugin eval`
@@ -93,13 +96,24 @@ It works best with your company's tools connected, such as MCP servers for Jira 
 - Not a way to make layoffs look nicer. It is built to find better options first.
 - Not a surveillance tool. It works with aggregated people data and refuses to rank individuals on single metrics.
 
+## Does it help?
+
+Honestly: less than you might expect, and in a specific way. In the last test round, two neutral requests against a fictional 330-person company (`evals/brightlane-*`) ran three times with and without the skill on Claude Opus and Claude Sonnet:
+
+| Model | With the skill | Without the skill | Extra tokens with the skill |
+|---|---|---|---|
+| Claude Opus | 52 of 54 checks | 51 of 54 checks | +22% |
+| Claude Sonnet | 51 of 54 checks | 49 of 54 checks | +9% |
+
+Given good data, current models already find the savings that don't touch jobs and recommend against layoffs without the skill. What the skill added consistently was how the agent acts on those findings: leadership bonuses cut first, an unexplained cash gap questioned, a sensitive governance point kept out of the board paper and raised privately, and a request for pushback at the end of every plan. Treat it as a stance and a checklist, not a smarter analyst, and rerun the tests on your own model. Graders 10 and up in the two `brightlane-*` cases were added after that round, to make these differences measurable next time.
+
 ## Contributing
 
 Pushback is the point, so issues and pull requests are welcome: better evidence, more examples from companies that chose people over the quick cut, other countries' legal touchpoints, or new seats at the table (a human CFO, CTO or CHRO skill).
 
 Before opening a pull request, run the test cases and check the skill still behaves as described. If you add a fact, add its source.
 
-The skill was built and tested with Anthropic's skill-creator: each test case runs once with and once without the skill, and a grader checks the answers against the statements in its `graders/` folder. With Claude Code you can run them yourself (these are real, billed model runs):
+The skill was built and tested with Anthropic's skill-creator: each test case runs with and without the skill, and a grader checks the answers against the statements in its `graders/` folder. With Claude Code you can run them yourself (these are real, billed model runs):
 
 ```bash
 cd skills/the-human-ceo

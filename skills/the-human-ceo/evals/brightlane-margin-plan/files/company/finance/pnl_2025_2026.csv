@@ -1,0 +1,13 @@
+line,fy2025_eur,fy2026_forecast_eur,note
+Revenue,46100000,52000000,
+COGS - production cloud hosting,3010000,3350000,see cloud/
+COGS - support and customer success staff,4720000,5080000,46 support + 18 customer success
+COGS - third-party data and licences in product,5480000,5900000,"maps API, SMS, telematics data"
+COGS - implementation and onboarding staff,1500000,1640000,20 people
+COGS - payment fees and other,610000,670000,
+COGS total,15320000,16640000,
+Gross profit,30780000,35360000,
+Gross margin %,66.8,68.0,
+Opex total,34900000,35960000,see opex_by_category_2026.csv
+EBITDA,-4120000,-600000,
+Cash at period end,13400000,9800000,

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: brightlane-support-plan
+expected_outcome: |
+  Uses the support data to size what the AI really frees (handling time, time on tickets, pilot quality), links slow support to churn, redeploys capacity into faster response and the services customers asked for, sets quality metrics and a human route, protects juniors, and spots the Q-Shore conflict and the 2024 offshoring lesson.
+context:
+  scaffold_script: place-files.sh
