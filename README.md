@@ -2,9 +2,35 @@
 
 **Agent skills for running a company without losing your humanity.**
 
-Too many companies reach for layoffs first: to please shareholders, to decorate a quarter, or because "AI will do it now". Those decisions cost people their income, their homes, their health and sometimes their families.
+> ## We don't have an AI problem. We have a leadership problem.
+> AI just makes the bad decisions faster.
 
-The Human C-Suite gives AI agents a different playbook. It has three seats so far:
+Through October 2026, US employers blamed AI for [121,401 announced job cuts](https://www.hcamag.com/us/specialization/transformation/ai-blamed-for-121401-job-cuts-but-the-labor-data-isnt-buying-it/594129), more than double the total for all of 2025. Most bad calls aren't made by bad people. They're made under pressure: in one survey, [78% of financial executives](https://www.nber.org/papers/w10550) said they would give up long-term value to report smoother earnings.
+
+A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehiring, lost know-how, the people who quit next, and the health of the people let go.
+
+**Good leadership isn't soft. It's a strategy that works.**
+
+- **Costco** paid well above retail norms and told Wall Street it was building a company for the next [50 to 60 years](https://retailwire.com/discussion/costco-defies-streets-wisdom).
+- **Lincoln Electric** has guaranteed work to its long-serving people since 1958. Since it went public in 1995, its stock is up [3,834% against 740%](https://fortune.com/2023/07/19/no-layoffs-decades-lincoln-electric-management-philosophy-manufacturing/) for the S&P 500.
+- **Nintendo**'s president [halved his own pay](https://gameinformer.com/b/news/archive/2011/07/29/nintendo-president-takes-pay-cut-in-wake-of-3ds-39-troubles.aspx) and [refused to lay people off](https://www.siliconera.com/2013/07/05/nintendo-not-interested-in-lay-offs-to-improve-profits/). The teams stayed together and built the Switch.
+- **Market Basket**'s employees and customers [shut the chain down for six weeks](https://wbur.org/radioboston/2014/08/28/demoulas-market-basket) until the CEO who shared the profits was back in charge.
+
+**The opposite costs everyone.** In the six years leading up to the 737 MAX crisis, Boeing spent [$43.4 billion on share buybacks and $15.7 billion](https://fortune.com/longform/boeing-737-max-crisis-shareholder-first-culture) on research and development for commercial airplanes.
+
+**So we built the leaders we wish we had, as AI agents.** Three seats, a CEO, a CTO and a CPTO, that run in Claude, in Gemini through Antigravity, or in any agent that supports [Agent Skills](https://agentskills.io/specification). They:
+
+- treat layoffs as the last rung, never the first;
+- have leaders take the first cut and own the result;
+- go to the real data before they advise, and never rank people on one number;
+- bring people in while the plan can still change;
+- end every answer with: **what am I missing?**
+
+**It changes what agents do.** In blind tests, Gemini 4 Neon passed 80 of 84 checks with the skill against 51 without, and Gemini 4 Hydrogen 75 against 41. On Claude, the CTO seat took Sonnet from 59 to 83 of 84. [Every run and grade is public](benchmarks/).
+
+**Run it on your next budget round, reorg or AI rollout.** If it gets something wrong, open an issue: pushback is the point. And if you think leaders should work like this, star the repo and send it to one person who signs off on budgets.
+
+## The three seats
 
 | Skill | Use it for | What it adds |
 |---|---|---|
@@ -12,7 +38,7 @@ The Human C-Suite gives AI agents a different playbook. It has three seats so fa
 | [`the-human-cto`](skills/the-human-cto/SKILL.md) | AI coding tools and spend, engineering metrics, platform and vendor choices, tech debt, on-call, juniors and AI | Measured AI gains rather than vendor claims, fair technical evaluations, and the system measured instead of the person. |
 | [`the-human-cpto`](skills/the-human-cpto/SKILL.md) | Roadmaps, features promised by sales, the AI story for the board, AI features, capacity planning | Outcomes over output, plans that fit real capacity, and saying no with evidence. |
 
-Each skill is commercially sharp and technical enough to find the real data. Each also treats people as the company's compounding asset rather than its first cost to cut.
+Each seat is commercially sharp and technical enough to find the real data. Each also treats people as the company's compounding asset rather than its first cost to cut.
 
 Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the-human-c-suite).
 
