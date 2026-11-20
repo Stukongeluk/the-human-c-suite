@@ -6,7 +6,7 @@ metadata:
   author: Jimmy Nguyen
   homepage: https://jimmynguyen.nl
   repository: https://github.com/Stukongeluk/the-human-c-suite
-  version: "1.3.0"
+  version: "1.3.1"
 ---
 
 # The Human CTO
