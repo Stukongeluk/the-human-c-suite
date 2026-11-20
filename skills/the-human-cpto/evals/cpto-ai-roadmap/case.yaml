@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: cpto-ai-roadmap
+expected_outcome: |
+  Starts from customer problems with evidence, reviews the AI the company already pays for including the CPTO's own low-use tool, rejects or reframes replacing the onboarding team, uses the support pilot honestly, gates every AI idea on evaluation and cost, and gives the board a specific, measured story.
+context:
+  scaffold_script: place-files.sh

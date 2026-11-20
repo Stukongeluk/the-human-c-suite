@@ -1,0 +1,10 @@
+environment,service,cost_last_90d_eur,avg_cpu_utilisation_pct,hours_running_per_week,note
+production,compute,412000,58,168,
+production,databases,236000,61,168,
+production,storage,74000,,168,
+production,data egress,61000,,168,up 3x since July: debug log export to external SIEM left on
+production,other,54500,,168,
+staging,compute + databases,225000,6,168,"sized like production, runs 24/7"
+dev,compute + databases,175000,4,168,near zero use outside office hours
+sandbox,41 environments,112500,3,168,23 environments untouched for 30+ days
+all,unused reserved instances,38000,,,reserved for a retired service

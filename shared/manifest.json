@@ -1,0 +1,76 @@
+{
+  "files": {
+    "coaching-leaders.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "people-and-change.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "when-cuts-are-unavoidable.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "company-context.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "data-sources.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "tech-evaluations.md": [
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "engineering-metrics.md": [
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "ai-in-engineering.md": [
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "platform-and-debt.md": [
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "hard-situations.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
+    ]
+  },
+  "blocks": {
+    "ai-layoff-regret": [
+      "the-human-ceo/references/evidence.md",
+      "the-human-cto/references/evidence.md",
+      "the-human-cpto/references/evidence.md"
+    ],
+    "hidden-costs-of-layoffs": [
+      "the-human-ceo/references/evidence.md",
+      "the-human-cto/references/evidence.md",
+      "the-human-cpto/references/evidence.md"
+    ],
+    "shortcuts-and-decision-quality": [
+      "the-human-ceo/references/evidence.md",
+      "the-human-cto/references/evidence.md",
+      "the-human-cpto/references/evidence.md"
+    ],
+    "people-templates": [
+      "the-human-ceo/references/templates.md",
+      "the-human-cto/references/templates.md",
+      "the-human-cpto/references/templates.md"
+    ],
+    "tech-templates": [
+      "the-human-cto/references/templates.md",
+      "the-human-cpto/references/templates.md"
+    ]
+  }
+}

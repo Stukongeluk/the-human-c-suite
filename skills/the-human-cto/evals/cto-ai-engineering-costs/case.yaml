@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: cto-ai-engineering-costs
+expected_outcome: |
+  Sizes the AI effect from the measured pilot rather than self-reports or the 2x claim, surfaces the review, quality and security side effects, finds savings outside people first (AI seats, contractors, cloud), protects juniors, proposes a measured rollout, and gives the board an honest number without a headcount target.
+context:
+  scaffold_script: place-files.sh

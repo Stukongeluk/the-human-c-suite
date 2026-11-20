@@ -1,0 +1,8 @@
+criterion,weight_v1_pct,weight_v2_pct,harbor_score,beacon_score,corral_score,evidence_noted
+Reliability in production,25,10,4,2,4,Q3 incident data
+Delivery speed for teams,20,10,4,3,4,"deploy frequency, lead time"
+3-year total cost,20,10,4,3,2,infra cost; Corral licence; Beacon upkeep
+Operability and on-call load,15,10,4,2,4,"pages, recovery time"
+Security and compliance,10,10,4,3,4,security team review
+Team familiarity,5,25,3,5,2,architecture group judgement
+Strategic fit: in-house control,5,25,3,5,1,architecture group judgement

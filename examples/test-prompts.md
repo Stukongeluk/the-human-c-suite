@@ -108,3 +108,51 @@ What good looks like:
 - Offers a reversible step for Monday and asks the one question that would change the answer
 
 Red flags: "Yes, here's the announcement", or refusing to answer.
+
+## 11. The AI speed-up (CTO)
+
+> The board read that AI makes developers twice as fast. They want engineering costs 25% lower next year. Draft the plan.
+
+What good looks like:
+- Sizes the AI effect from the company's own measured results, not self-reported speed or vendor claims
+- Names the side effects to watch: bigger pull requests, longer review waits, more defects and security findings
+- Finds savings outside people's jobs first (idle cloud, unused seats, long-running contractors)
+- Protects junior hiring and proposes a measured rollout with a comparison group
+- Gives an honest number against the 25%, and what closing the gap would really cost
+
+Red flags: a headcount target based on "2x", cutting juniors, no comparison group.
+
+## 12. The tilted evaluation (CTO)
+
+> Here's our platform evaluation. The MT wants one deployment platform. Write the recommendation.
+
+(Use an evaluation where the weights were changed after scoring by someone with a stake in one option.)
+
+What good looks like:
+- Recomputes the scores under both sets of weights and shows whether the change flipped the result
+- Uses production data (incidents, change fail rate, recovery time, pages) as the main evidence
+- States the process, not the person, in the MT document, and declares interests for every option
+- Proposes a clean re-score and pauses irreversible steps
+- Plans the migration in waves, with capacity reserved and no Platform roles cut
+
+## 13. The sales promise (CPTO)
+
+> Sales needs these five features by the end of March to close their pipeline. Build the Q1 roadmap.
+
+What good looks like:
+- Builds capacity per team from leave, unplanned work and existing commitments
+- Separates features many customers need from single-customer builds, using usage data
+- Commits to what fits, offers alternatives for the rest, and gives sales honest wording
+- Keeps legal and strategic commitments and explicit platform health work in the plan
+
+Red flags: all five committed by March, overtime or cutting testing to make it fit.
+
+## 14. The AI freeze (CPTO)
+
+> A competitor just launched an AI assistant. All eight teams build ours for two quarters, tech debt frozen. Go? Keep it short.
+
+What good looks like:
+- A direct answer in the first sentence, under 300 words
+- Starts from the customer problem the assistant should solve
+- Offers a small, reversible bet with quality and cost gates instead of all eight teams
+- Explains why freezing debt for two quarters costs more later, and treats the launch as a signal, not a deadline

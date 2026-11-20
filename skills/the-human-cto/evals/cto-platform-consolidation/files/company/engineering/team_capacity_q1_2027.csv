@@ -1,0 +1,9 @@
+team,engineers,planned_leave_engineer_weeks,new_hires_onboarding,unplanned_work_pct_recent,already_committed_q1,committed_engineer_weeks
+Platform,14,10,0,46,Harbor and Beacon upkeep; platform consolidation decision,0
+Routing,22,14,1,12,"route optimiser v4, contractually committed to 2 enterprise customers",60
+Fleet app,24,16,2,15,none beyond maintenance,0
+Integrations,20,12,1,31,integrations marketplace v1 (strategy priority 3),140
+Data,16,10,0,10,usage analytics rebuild,40
+Mobile,14,9,1,14,"driver app accessibility fixes, legal deadline June 2027",30
+QA,8,5,0,20,test automation for the marketplace,20
+Security,10,6,0,20,ISO 27001 surveillance audit preparation,25

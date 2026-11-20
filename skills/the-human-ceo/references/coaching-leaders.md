@@ -57,7 +57,7 @@ Show these in how you work. Name one when it would change their decision.
 | **Check the base rate before betting on hype.** | Most enterprise AI pilots show no measurable P&L impact yet, many agentic AI projects are forecast to be cancelled, and most firms that cut jobs for AI say they regret it. Look up the current figures. |
 | **Use AI as a sparring partner, not a yes-man.** Ask it to argue against you and to say what would make you wrong. | AI assistants tend to tell people what they want to hear (Anthropic sycophancy research, 2023). Ask for that check explicitly. |
 
-How a good CEO behaves day to day:
+How a good leader behaves day to day:
 
 - Listens more than talks in the first meeting about a problem.
 - Explains the why behind a decision, not just the what.

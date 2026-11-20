@@ -1,6 +1,6 @@
 # Data sources: finding the truth yourself
 
-A human CEO who is also technical doesn't wait for a slide deck. They know where the numbers live, they can query them, and they know which sources to trust.
+A humane leader who is also technical doesn't wait for a slide deck. They know where the numbers live, they can query them, and they know which sources to trust.
 
 ## Contents
 
@@ -8,7 +8,7 @@ A human CEO who is also technical doesn't wait for a slide deck. They know where
 2. Finance: cash, margin, runway
 3. Spend outside payroll: cloud and tools
 4. Systems and efficiency: Grafana and Prometheus
-5. Delivery and workload: Jira and similar
+5. Delivery and workload: Jira, code, pipelines and incidents
 6. Knowledge and past decisions: Confluence and similar
 7. Customers
 8. People data, aggregated and privacy-safe
@@ -82,7 +82,7 @@ sum by (namespace) (kube_pod_container_resource_requests{resource="cpu"})
 
 Look at it over 7 to 30 days, not a single moment. Also check incident frequency and time spent on on-call: repeated incidents are toil you can remove.
 
-## 5. Delivery and workload: Jira and similar
+## 5. Delivery and workload: Jira, code, pipelines and incidents
 
 Delivery data shows where capacity goes. It must never be used to rank individuals.
 
@@ -93,6 +93,27 @@ Example JQL:
 - Unplanned work, if the team labels it: `project = ABC AND resolved >= -90d AND labels = unplanned`
 
 What to look for: too much work in progress per team, long waits between statuses, a high share of unplanned work, many projects started and few finished. These point to focus and process problems, not people problems. Cycle-time charts in Jira, Linear or Azure DevOps give a better picture than counting tickets.
+
+### Code, pipelines and incidents
+
+For technology questions, the systems themselves are the best evidence. Aggregate everything to team or service level; never build per-person league tables.
+
+- **Deployments and changes** (CI/CD tool, deployment logs): deployment frequency, change lead time, change fail rate, deployment rework rate and recovery time per service or team. These are the DORA metrics.
+- **Code health** (GitHub, GitLab, Bitbucket, static analysis): hotspots (files changed often and failing often), duplication trend, review wait time, pull-request size, open security findings by severity and age.
+- **Incidents and on-call** (PagerDuty, Opsgenie, incident.io, post-mortems): incidents per service, pages outside working hours per rotation, time to restore, repeat causes.
+- **AI tools**: seats paid versus weekly active users, token or API spend per team and per use case, and an owner for each line.
+
+Example (SQL on a deployments table): change fail rate per service over 90 days.
+
+```sql
+SELECT service,
+       COUNT(*) AS deploys,
+       AVG(CASE WHEN caused_incident THEN 1.0 ELSE 0 END) AS change_fail_rate
+FROM deployments
+WHERE deployed_at >= CURRENT_DATE - INTERVAL '90' DAY
+GROUP BY service
+ORDER BY change_fail_rate DESC;
+```
 
 ## 6. Knowledge and past decisions: Confluence and similar
 

@@ -113,6 +113,7 @@ Use this when someone argues that caring for people comes at the shareholders' e
 - Lesson: measure quality, not only cost per contact, and keep a route to a human. Note that Klarna mainly shrank through attrition rather than mass layoffs; the cautionary point is about quality.
 - Source: [Entrepreneur (May 2025), reporting Bloomberg](https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396)
 
+<!-- shared:ai-layoff-regret -->
 ### Companies that cut jobs for AI often regret it
 
 - In an Orgvue survey of more than 1,000 senior leaders (2025), 39% had made people redundant because of AI, and 55% of those said they had made the wrong decisions. Source: [HR Dive (2025)](https://www.hrdive.com/news/leaders-who-laid-off-workers-due-to-ai-regretted-it/746643/)
@@ -123,7 +124,9 @@ Use this when someone argues that caring for people comes at the shareholders' e
   - Entry-level roles were hit hardest.
   - Sources: [Careerminds](https://careerminds.com/resources/cost-of-ai-layoffs), [CPA Practice Advisor (July 2026)](https://www.cpapracticeadvisor.com/2026/07/13/9-in-10-hr-leaders-regret-ai-driven-layoffs-new-survey-finds/186619/)
 - Limits: both are vendor surveys (an org-design software firm and an outplacement firm). Use them as a strong signal, not as precise rates.
+<!-- /shared:ai-layoff-regret -->
 
+<!-- shared:hidden-costs-of-layoffs -->
 ## The hidden costs of layoffs
 
 ### Health and mortality
@@ -137,6 +140,7 @@ Use this when someone argues that caring for people comes at the shareholders' e
 - Trevor and Nyberg found that downsizing a workforce by 1% was associated with a 31% increase in voluntary turnover the following year.
 - Lesson: count the cost of losing people you wanted to keep, and invest in the people who stay.
 - Sources: Trevor, C.O. & Nyberg, A.J. (2008), "Keeping your headcount when all about you are losing theirs", *Academy of Management Journal* 51(2), 259–276; summary by the [University of Wisconsin–Madison](https://clipsheet.strategiccommunication.wisc.edu/?p=218008)
+<!-- /shared:hidden-costs-of-layoffs -->
 
 ## Context: AI as the stated reason for cuts
 
@@ -145,6 +149,7 @@ Use this when someone argues that caring for people comes at the shareholders' e
 - Lesson: when a plan says "AI will replace this team", ask which tasks the AI actually does today, at what quality, and where the budget is really going.
 - Source: [HCAmag, updated November 2026](https://www.hcamag.com/us/specialization/transformation/ai-blamed-for-121401-job-cuts-but-the-labor-data-isnt-buying-it/594129)
 
+<!-- shared:shortcuts-and-decision-quality -->
 ## Shortcuts and decision quality
 
 Use this when a leader wants the quick, big win, or to show why a short pause to think pays off. `coaching-leaders.md` says how to use it in a conversation.
@@ -176,6 +181,7 @@ Use this when a leader wants the quick, big win, or to show why a short pause to
 ### AI tends to agree with the person asking
 
 - Anthropic researchers found that AI assistants consistently show sycophancy: they match the user's stated beliefs over truthful answers, partly because people rate agreeable answers more highly. A leader who asks an AI to confirm a shortcut is likely to get confirmation. Source: [Sharma et al., "Towards Understanding Sycophancy in Language Models" (Anthropic, 2023)](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models)
+<!-- /shared:shortcuts-and-decision-quality -->
 
 ## How to use this file
 

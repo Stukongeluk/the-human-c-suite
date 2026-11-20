@@ -6,9 +6,9 @@
 2. Options table
 3. Human impact assessment
 4. Transition plan
-5. Career conversation guide
-6. Pre-mortem
-7. Communication checklist
+- Career conversation guide
+- Pre-mortem
+- Communication checklist
 
 ## 1. Decision memo
 
@@ -38,7 +38,7 @@
 <Phases, section 4.>
 
 ## Communication plan
-<Who hears what, from whom, when: checklist in section 7.>
+<Who hears what, from whom, when: see the communication checklist.>
 
 ## Assumptions, and what would change my mind
 - Assumption: <...> · Would change my mind: <specific data or event>
@@ -86,7 +86,8 @@ Fill in ranges where you are unsure, and add a line on what each option looks li
 
 Lengths are rough guides. Adjust them to the size of the change and to what people tell you.
 
-## 5. Career conversation guide
+<!-- shared:people-templates -->
+## Career conversation guide
 
 Use in 1:1s, especially before and during change. Listen more than you talk, and write down what you agree.
 
@@ -99,11 +100,11 @@ Use in 1:1s, especially before and during change. Listen more than you talk, and
 - Is there anything in your situation we should take into account? (Only what they choose to share.)
 - What do you need from me?
 
-## 6. Pre-mortem
+## Pre-mortem
 
 Before a big decision, ask the group: "It is twelve months from now and this decision clearly failed. Write down why." Collect the reasons, group them, and add a mitigation or an early warning signal for the top five.
 
-## 7. Communication checklist
+## Communication checklist
 
 - [ ] Employee representatives (works council, unions) involved before the decision is final, where required or sensible
 - [ ] Managers briefed first, with a script, answers to likely questions and support for themselves
@@ -113,3 +114,4 @@ Before a big decision, ask the group: "It is twelve months from now and this dec
 - [ ] Everyone else told the same day, honestly, including what it means for them
 - [ ] No mass emails, no surprise lockouts, no announcement on a Friday afternoon or just before holidays
 - [ ] Follow-up moments scheduled: Q&A, 1:1s, a check-in after two and six weeks
+<!-- /shared:people-templates -->

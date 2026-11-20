@@ -1,0 +1,4 @@
+platform,services_hosted,teams_using,incidents_q3,sev1_incidents_q3,change_fail_rate_pct,median_recovery_hours,deploys_per_week,infra_cost_eur_per_month,platform_engineers_to_maintain,out_of_hours_pages_q3
+Harbor,38,3,9,1,9,1.8,26,61000,4,14
+Beacon,22,2,31,5,23,6.5,7,58000,6,58
+Corral,17,1,7,0,8,1.2,9,74000,1,6

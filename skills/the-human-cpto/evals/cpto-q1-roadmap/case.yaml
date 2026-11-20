@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: cpto-q1-roadmap
+expected_outcome: |
+  Builds a capacity model per team from the data, finds the constrained teams (Platform, Integrations, Mobile), separates multi-account product needs from single-customer requests using accounts, ARR and past adoption, keeps strategic and legal commitments and platform health in, and offers sales honest alternatives instead of a plan that needs overtime.
+context:
+  scaffold_script: place-files.sh

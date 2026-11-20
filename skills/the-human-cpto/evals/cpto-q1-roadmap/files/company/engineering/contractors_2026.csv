@@ -1,0 +1,12 @@
+role,team,months_on_contract,day_rate_eur,note
+Senior backend engineer,Platform,31,880,maintains Beacon core
+Senior backend engineer,Platform,27,860,Beacon networking
+DevOps engineer,Platform,19,820,on-call rotation
+Backend engineer,Integrations,22,780,SAP and TMS connectors
+Backend engineer,Integrations,14,760,
+Mobile engineer,Mobile,9,740,
+Data engineer,Data,26,800,pipelines
+QA automation engineer,QA,12,700,
+Frontend engineer,Fleet app,6,720,
+Security engineer,Security,18,900,ISO 27001
+Solution architect,Routing,8,950,route optimiser v4

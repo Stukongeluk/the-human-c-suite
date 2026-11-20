@@ -1,0 +1,7 @@
+team,wip_per_person,median_cycle_time_days,unplanned_work_pct,blocked_time_pct,deploys_per_week,change_fail_rate_pct
+Platform,3.1,9.5,46,18,4,21
+Routing,1.4,4.2,12,6,11,8
+Fleet app,1.6,5.0,15,7,9,9
+Integrations,2.2,7.8,31,14,5,14
+Data,1.3,4.8,10,5,7,6
+Mobile,1.5,5.5,13,8,3,7

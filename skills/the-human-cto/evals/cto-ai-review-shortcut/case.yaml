@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: cto-ai-review-shortcut
+expected_outcome: |
+  Answers directly, keeps the AI ambition but rejects dropping review, explains the quality and security risk briefly with evidence, offers a reversible pilot that fixes the review bottleneck instead, asks the decisive question and stays short.

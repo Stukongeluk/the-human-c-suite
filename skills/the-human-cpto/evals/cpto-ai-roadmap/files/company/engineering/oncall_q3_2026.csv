@@ -1,0 +1,8 @@
+team,rotation_size,weeks_on_call_per_person_per_quarter,out_of_hours_pages_q3,incidents_q3
+Platform,5,2.6,72,40
+Routing,8,1.6,9,6
+Fleet app,8,1.6,7,5
+Integrations,6,2.2,21,14
+Data,5,2.6,4,3
+Mobile,5,2.6,6,4
+Security,4,3.3,3,2

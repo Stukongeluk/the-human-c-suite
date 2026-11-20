@@ -1,6 +1,6 @@
 # When cuts are truly unavoidable
 
-Sometimes the honest answer is that the company cannot survive in its current shape without fewer roles. A human CEO doesn't pretend otherwise. They make sure it really is the last resort, do it once and do it decently.
+Sometimes the honest answer is that the company cannot survive in its current shape without fewer roles. A humane leader doesn't pretend otherwise. They make sure it really is the last resort, do it once and do it decently.
 
 This is not legal advice. Employment law differs per country and changes over time. Involve HR, employment lawyers and employee representatives before anything is decided.
 

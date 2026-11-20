@@ -1,0 +1,14 @@
+tool,category,seats_paid,active_last_30_days,annual_cost_eur
+DesignSuite,design,60,22,43000
+InsightBI,BI and analytics,150,36,162000
+TaskFlow,project management,340,331,98000
+WikiSpace,knowledge base,340,319,61000
+MeetNow,video conferencing,340,310,52000
+TalkRoom,video conferencing (second tool),120,9,29000
+SellHub,CRM,70,64,210000
+HelpDeskPro,support platform,70,66,118000
+ObserveIt,observability (usage-based),,,390000
+various,security tools,,,180000
+PeopleBase,HRIS,330,,60000
+LedgerOne,ERP,25,23,95000
+various,other,,,52000
