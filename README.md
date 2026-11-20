@@ -2,8 +2,9 @@
 
 **Agent skills for running a company without losing your humanity.**
 
-> ## We don't have an AI problem. We have a leadership problem.
-> AI just makes the bad decisions faster.
+## We don't have an AI problem. We have a leadership problem.
+
+**AI just makes the bad decisions faster.**
 
 Through October 2026, US employers blamed AI for [121,401 announced job cuts](https://www.hcamag.com/us/specialization/transformation/ai-blamed-for-121401-job-cuts-but-the-labor-data-isnt-buying-it/594129), more than double the total for all of 2025. Most bad calls aren't made by bad people. They're made under pressure: in one survey, [78% of financial executives](https://www.nber.org/papers/w10550) said they would give up long-term value to report smoother earnings.
 
