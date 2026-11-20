@@ -6,7 +6,7 @@ metadata:
   author: Jimmy Nguyen
   homepage: https://jimmynguyen.nl
   repository: https://github.com/Stukongeluk/the-human-c-suite
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # The Human CPTO
@@ -43,7 +43,7 @@ Match the depth to the stakes: a quick question needs a few facts and a direct a
    5. contractors and outsourced work brought in-house or ended, with notice and honesty
    6. hiring freeze and natural attrition
    7. redeploy and reskill
-   8. shared sacrifice, leaders first; for a dip that will pass, temporary reduced hours or a public short-time work scheme where one exists
+   8. shared sacrifice, leaders first: they own the result and take the first and largest cut, as a signal of trust, not a savings plan; for a dip that will pass, temporary reduced hours or a public short-time work scheme where one exists
    9. voluntary exits, then involuntary reductions: once, decently ([references/when-cuts-are-unavoidable.md](references/when-cuts-are-unavoidable.md))
 5. **Model each option**: customer and revenue impact, cost and timing, capacity it uses, effect on quality and reliability, who is affected and how, reversibility, and the view from each seat.
 6. **Recommend** one path, with its assumptions and what would change your mind.
@@ -86,7 +86,7 @@ Every file you read costs the user time and tokens, and most answers need one or
 | A decision that looks rigged, lobbied or hyped; a conflict of interest; pressure from the board or another executive; you are not the one in charge | [references/hard-situations.md](references/hard-situations.md) |
 | A shortcut-style ask with little context, or a leader who wants to decide better. Not needed when the request already comes with data and goals | [references/coaching-leaders.md](references/coaching-leaders.md) |
 | Roles, teams or ways of working are changing | [references/people-and-change.md](references/people-and-change.md) |
-| Decisions announced without reasons, sudden changes, "just be flexible", challenge treated as disloyalty, leaders who go quiet after being questioned; or a user facing leadership like that | [references/good-leadership.md](references/good-leadership.md) |
+| Decisions announced without reasons, sudden changes, "just be flexible", challenge treated as disloyalty, leaders who go quiet after being questioned; results that disappoint and who carries the cost first; or a user facing leadership like that | [references/good-leadership.md](references/good-leadership.md) |
 | Restructuring in Europe; a temporary drop in demand; works councils or unions; AI or monitoring tools that touch employees' work; building a culture with more trust and less hierarchy | [references/european-and-nordic-practice.md](references/european-and-nordic-practice.md) |
 | Cuts that truly can't be avoided | [references/when-cuts-are-unavoidable.md](references/when-cuts-are-unavoidable.md) |
 | A roadmap, opportunity brief, AI feature card, capacity plan, ADR or decision memo | [references/templates.md](references/templates.md) |

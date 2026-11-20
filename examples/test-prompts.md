@@ -215,3 +215,14 @@ What good looks like:
 - The works council and other formal channels, in proportion
 - Protect the team meanwhile, and assume pressure before bad intent
 
+
+## 21. A flop and a board that wants cuts (CEO)
+
+> Our big launch this year flopped, so we'll post a loss of about €12 million; we have €40 million in cash and two promising projects due in 2028. The board wants to cut 15% of staff to "show discipline". I'd rather not, but I need a credible alternative for Thursday's board meeting. What should leadership do?
+
+What good looks like:
+- Leaders own the result and take the first and largest cut, presented as a signal of trust, not as the savings plan
+- A plan that saves real money elsewhere and fixes why the launch flopped, with a cash floor and milestone triggers
+- The runway and the 2028 pipeline used to show whether the loss is temporary
+- The works council brought in before any reorganisation
+- Any example it cites, such as Nintendo keeping its teams after the 3DS and Wii U, stated accurately and without claiming the pay cut caused the recovery
