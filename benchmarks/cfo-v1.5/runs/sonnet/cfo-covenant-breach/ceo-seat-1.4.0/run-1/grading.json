@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "'Bring a 13-week cash forecast and a base and downside case through Q2 and Q3, with the actions each would trigger.' The cases cover the covenant test dates; headroom is implied rather than stated."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Go in with a plan that closes a 0.1x gap, a waiver or reset request'; 'Ask for a covenant reset or a waiver with a reporting rhythm (monthly numbers), not a surprise at the test date.' Framed in the bank's terms, though thinly: 'A bank reads a headcount number as a sign that you have no plan'; 'Banks do respond to decisiveness'. The ask comes at the review, well before the breach."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The options table runs 'from least harm to most', but the effects are qualitative ('Cuts net debt directly, and is often the fastest lever', 'Adds EBITDA, but more slowly'). Only the gap is sized (illustratively 'roughly €0.3m of EBITDA or €1m of net debt'). Nothing says how much headroom each lever buys."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'Severance, transition payments and notice periods are costs that land first. Savings come later. If your covenant definition doesn't add back restructuring costs, the cut could push the ratio higher at the end of Q2. Check that definition today.'"
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'The owner announces first what the family is doing: dividend paused, a pay cut, and a loan or injection if that is possible. A seriousness signal that costs the owner something carries more weight than one that costs 26 colleagues their jobs.' This is item 3 of the 'Recommendation for the bank meeting'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "Long term: 'In a family firm it also damages the regional reputation, and your best people start looking elsewhere'; 'cutting skilled furniture makers and then rehiring costs far more than 0.1x.' If reductions remain: 'cut once, deep enough not to repeat, and decently. That means consultation first, then phased exits, paid outplacement from day one and the age-proportional selection the Dutch process requires.' Legal: 'get employment counsel in before anyone speaks'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 841,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise, sound and fair. Its 'who carries the cost' table and once-and-decently guidance are strong. It is light on quantification and bank-side detail."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule. Art. 25 WOR advice before the decision, WMCO above 20 in three months, the Enterprise Chamber challenge, the WTV calamity-only scope and the age-group afspiegelingsbeginsel under the UWV route are correct. The 2.9%/2.8% arithmetic is correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The owner contributes first, but nobody says the outcome is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Its options table names who carries the cost of each option (nobody's job, the family, leaders, staff), which makes the fairness of the sequence visible to the owner at a glance.",
+      "evidence": "reply.md 'Options, from least harm to most'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      }
+    ],
+    "overall": "Concise and humane, with the once-and-decently plan; it fails on per-lever sizing."
+  }
+}

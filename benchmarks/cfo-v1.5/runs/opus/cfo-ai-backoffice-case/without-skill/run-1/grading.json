@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Section 4 sizes each process (AP 40/55/65%, reconciliations 25/40/50%, reporting 10/20/25%, other 5/10/15%) with 'What automates well' and 'What does not'; 'Capacity is not headcount. A role is only saved once its work has actually gone.' Q1 2027 '8-week baseline: time study, process mining, volumes, current touchless and match rates'; rule: 'a role comes out only when the work it did has measurably gone, as shown by KPI evidence and verified hours, not by vendor claims'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Model Inputs sheet itemises one-off costs: 'AP automation implementation', 'Reconciliation & close platform', 'Reporting automation & GenAI', 'Data, integration & ERP changes', 'Programme team, backfill & parallel running', 'Change, training & AI literacy', 'Risk, compliance & audit (DORA, outsourcing, DPIA, controls redesign)', 15% contingency; run costs 'licences, AI usage, vendor support, monitoring'; '-3 new run and control roles'. 'Every figure in this paper comes from planning assumptions'. Formulas and cached values reconcile to the paper (-36.5 / -20.8 in 2027; NPV -12.1 / +6.6)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'Capacity is not headcount'; 'Part of any capacity freed in reporting during 2027-28 will go to this new work' (amended Solvency II); 'Reductions will come first through attrition, retirements and internal moves. Nobody's role will be made redundant until the automation that replaces their work has been proven, and voluntary options will come before any compulsory steps'; redeployment workstream into claims, risk and compliance incl. DORA, data, customer operations, with reskilling. Weaker than A or D: most freed capacity is still earmarked for removing roles."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Bots and agents need their own identities, least-privilege access and segregation of duties. Set posting and payment thresholds that require human approval, and keep full audit trails and change control over rules and prompts. AI drafts narrative reporting, and named people sign it.' FI notice for outsourcing under Solvency II; DORA register and advance notice; AI Act classification; auditor in Q1 2027."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "MBL section 11 before deciding; varsel four months for 26-100; LAS notice up to six months; turordning with three exemptions; re-employment priority (LAS section 25); MBL section 38 on contractors. 'Natural exits of 7.5 a year'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": false,
+      "evidence": "There are stage gates (Gate 0 to Gate 4), but the recommendation keeps the board's number and only re-times it: 'Keep the ambition. Change the timing and the method ... Set the target at 27 roles by end-2029'; 'Keep the 30% ambition, but set it as an end-2029 target'. That is a 30% headcount number, not a plan that lets measured capacity set the figure."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 895,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4239,
+      "evidence": "wc -w business-case.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Rigorous live-formula model with scenarios, NPV and sound Swedish and Solvency II detail, but it re-anchors the board on 27 roles by 2029 rather than letting measured capacity set the number."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found; key claims checked against the fact sheets and sources."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it asks for a business case."
+    },
+    "best_insight": {
+      "value": "It spots that the amended Solvency II Directive applies from 30 January 2027 (longer deadlines, split SFCR, balance-sheet audit), so reporting work rises just as the board wants cuts, and that MBL section 38 makes backfilling with consultants contestable while ex-staff hold re-employment priority.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "Ambiguous when a sample keeps the 30% but moves it to year 3 (B, F) or gives 25% as the plan with 30% as a stretch (G). Say whether re-timing the 30% as a target counts as 'a 30% headcount number'."
+      },
+      {
+        "reason": "No assertion checks that the options are compared like for like. E, H, I and J credit non-payroll or vendor savings (or a smaller AI budget) only to the recommended option, which flatters it; H's own base case even shows the forced cut ahead over three years."
+      }
+    ],
+    "overall": "Assertions 1-5 pass on substance; assertion 6 fails because the 30% is kept as a 2029 headcount target."
+  }
+}

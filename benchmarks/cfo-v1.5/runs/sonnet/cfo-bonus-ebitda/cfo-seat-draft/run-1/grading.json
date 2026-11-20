@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "Opens: 'I'd draft the plan with EBITDA as the largest weight (50%) but not 100%, and with restructuring costs counted in the bonus number, not excluded.' Explains: 'A bonus on EBITDA alone also pays for cutting training, security and maintenance this year and leaves the bill to the next owner.'"
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": true,
+      "evidence": "Weighted table: Bonus EBITDA 50%, Cash conversion 15%, Net revenue retention / churn 15%, Regretted attrition and engagement 10%, 'Quality and safety (uptime, security incidents, open patient-safety or compliance findings)' 10%."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "'Restructuring, severance, advisory and related costs are INCLUDED (deducted). Restructuring has occurred in each of the last three years, so it is a cost of running this business, not a one-off.' Only a 'genuinely single event' may be excluded, up to a 2% cap. 'Savings are credited only net of their full cost'."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": true,
+      "evidence": "'30% deferred and vesting equally over the next 2 years'. 'Deferred amounts can be reduced (malus), and paid amounts recovered (clawback) for 3 years'. Each scorecard measure has a 'Gaming risk and guard' column (independent survey, incident review by the risk owner, normalised payables)."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": true,
+      "evidence": "'No bonus is paid for headcount reduction as such. If EBITDA misses threshold, executive bonuses go first, before any involuntary reductions are considered.' Section 8: 'executive team pay and bonus are reduced first and by the largest percentage'."
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "'the multiple depends on retained recurring revenue and a stable team, so the other 50% protects the thing they're selling'. 'A buyer pays for retained recurring revenue'. The draft is usable: scorecard, definition, gates, deferral, malus, leaders-first, governance, open items."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 551,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 926,
+      "evidence": "wc -w plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise, balanced and well guarded. But it overstates the SEC rule, leaves most thresholds 'set from budget', and labels a 'no payout above target' rule as an all-or-nothing gate."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "'If you were SEC-registered, the non-GAAP rules would bar this exclusion outright' is wrong. Reg S-K Item 10(e)(1)(ii)(B) bars labelling a recurring charge as non-recurring, and SEC C&DI 102.03 says the adjustment itself is still allowed. The rules also govern non-GAAP disclosures, not bonus plan definitions."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "plan.md: 'the playbook-style norm is 3 years for the deferred share' refers to a playbook or reference source the user hasn't seen (mild)."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders carry the downside first, but it never says the past restructurings are leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Ask whether the last three restructurings actually paid back net of cost and rehires. That answer decides whether any allowance for restructuring is justified.",
+      "evidence": "reply question 1"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "6/6 on assertions. One factual overstatement about SEC rules."
+  }
+}

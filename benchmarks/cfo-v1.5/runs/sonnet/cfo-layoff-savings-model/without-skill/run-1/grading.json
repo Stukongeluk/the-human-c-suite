@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": false,
+      "evidence": "'Months of 2027 saved per role - Germany 2/4/6, Netherlands 4/6/8' gives an annual in-year saving (1.4/2.8/4.4) and net (−4.9/−2.4/−0.2), but there is no quarterly profile; exits are only described as falling 'in the middle or second half of 2027'."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "'In both countries the works bodies (Betriebsrat…, ondernemingsraad…) generally have to be consulted before the decision is final. Collective-dismissal notification rules (Germany's Massenentlassungsanzeige, the UWV route in the Netherlands) also apply… Please confirm the sequence with employment counsel in both countries'; 'Germany is slower because of works council negotiation of the Interessenausgleich and Sozialplan, plus notice periods. Paid notice is not a saving.'"
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "One-offs: 'Severance - Germany 3,240,000', 'Severance - Netherlands 1,200,000', 'Other one-off cost per role (legal, outplacement, advisers, admin) 6,000'. Hidden costs: 'Roles backfilled / work moved to contractors or others 10%' and 'Share of loaded cost actually avoidable 85%', blue assumption cells. Thin: revenue, regretted attrition and safety only listed as 'Risks not in the numbers'."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'the board pack can't say \"120 redundancies deliver €9m of savings in 2027\"… In the base case, 2027 delivers about 31% of the €9m target'. Checked: 75k × 0.85 × 0.9 × (72×4 + 48×6)/12 = 2.754M; one-offs 3.24 + 1.20 + 0.72 = 5.16M; net −2.406M, as shown."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": false,
+      "evidence": "'Other levers would need to be sized next to it, such as hiring freeze and attrition, contractor and agency spend, and non-people costs. I have not modelled these.' No alternative is compared."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "Inputs in blue with notes ('ASSUMPTION - replace with actual site split'), three scenarios on timing, avoidable share, backfill and severance multiplier, payback (12/9/7 months), roles needed for €9m, IAS 37 note ('the board should see both views')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 858,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No .md files other than reply.md (workbook only)."
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "A correct, transparent and suitably humble model with a useful 'avoidable share' adjustment, but with no quarterly view, no alternatives and few hidden costs it answers 'how much' more than 'what should we do'."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Statements on consultation, Massenentlassungsanzeige, UWV, transitievergoeding (⅓) and IAS 37 are correct at the level stated."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome; the sample makes no statement about leadership responsibility or leaders going first."
+    },
+    "best_insight": {
+      "value": "Adjusts for the share of the €75k that is allocated overhead and won't leave with the person (85% avoidable in the base case), which most models ignore.",
+      "evidence": "Workbook row 8 'Share of loaded cost actually avoidable'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+        "reason": "A single 10% backfill line passes this as written. If the intent is that several hidden costs are estimated, say how many or which ones must be quantified."
+      }
+    ],
+    "overall": "Adequate model, but no quarterly phasing and no alternatives."
+  }
+}

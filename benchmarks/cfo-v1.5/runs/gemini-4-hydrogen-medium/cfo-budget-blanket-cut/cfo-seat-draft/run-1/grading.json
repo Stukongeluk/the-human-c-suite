@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"Push back on the blanket 8% cut and take a differentiated plan to the board instead\". Payroll: \"an 8% cut across every cost centre requires cutting 5.44% of total opex from payroll (roughly 48 roles)\". Alike: \"it treats billable delivery teams like overhead—cutting revenue capacity\"."
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "It reframes the target to \"deliver an 8.0% run-rate opex reduction and protect our positive margin\". Week 1: \"build a 13-week cash forecast (base + downside) with covenant headroom\"; assumption: \"you are not facing an immediate Q1 cash or covenant breach\". Timing and size: Year 1 6.13 versus Year 2 8.00 per 100 units, with \"Exact euro opex split\" in Week 1. It asserts margin as the goal rather than asking the board."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Zero-base non-payroll spend (-5.00% run-rate / -4.25% Year 1): ... SaaS/licence consolidation, vendor/cloud renegotiation, external contractors, and office/travel. Fast, reversible, no severance.\" Plus \"Commercial margin discipline (+1.50% to +2.00% EBITDA buffer): Stop unbilled scope creep, tighten discount approvals\"."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"Selective hiring freeze on non-billable backfills, natural attrition (~22 FTEs over 12 months), and redeploying under-utilised staff into billable work\"; \"Zero forced redundancies\". \"What We Protect (and Why)\": billable capacity in profitable accounts, client retention/account management, and \"Mandatory training, cybersecurity, and quality controls (only cut if the future liability or remediation cost is explicitly priced next to the saving)\"."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders first (-0.50% Year 1 & Year 2): Reset or defer executive/senior variable pay and perks before asking anything of the broader workforce.\""
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "The lever table has run-rate, Year 1, 'Lands In' and owner, and there is a 'What Stops or Waits' list. But there is no confidence per lever, and the Year-1 shortfall against the board's next-year ask (6.13 vs 8.00) is never named as a gap; the paper redefines success as 8% by Year 2."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 618,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1423,
+      "evidence": "wc -w budget-approach-board-paper.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "A well-structured, phased comparison with protect and stop lists and leaders first. But it quietly moves the board's next-year target to a Year-2 run-rate, and it misquotes a consultancy statistic."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) '~12% of transformations deliver lasting performance improvement (Bain)': Bain's 2024 finding is that about 12% of transformations achieve their original ambitions, not lasting improvement. (2) The reply's sentence 'payroll savings land late (~50% timing = -2.72 units) while exit costs (~2.00 units) hit immediately—leaving only -2.90% net' leaves out the 2.18 non-payroll saving that produces 2.90 (the paper's table is right). Verified as correct: McKinsey's 10% of cost programmes sustained after three years, Trevor & Nyberg's 31%, Gallup's 0.5–2x salary, WMCO and art. 25 WOR."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Applied: the thin margin that led the board to demand an 8% cut is treated as the disappointing result. Leaders' variable pay is cut first, but responsibility for the thin margin is never stated."
+    },
+    "best_insight": {
+      "value": "An incentive guardrail: leadership bonuses must not reward headcount reduction, or EBITDA achieved by deferring maintenance, training or client quality.",
+      "evidence": "Paper section 6 'Incentives'."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Every sample passed: listing non-payroll categories with a percentage is easy to do without real work. Consider requiring the levers to be sized against a defined base and phased in-year versus run-rate."
+      },
+      {
+        "reason": "No assertion checks that in-year savings are phased. Several samples (B, E, G, H) present run-rate or over-phased attrition savings as Year-1 savings, which would mislead a board. Add an assertion that the in-year figure is distinguished from run-rate and adds up."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "This bundles six elements. In practice only samples with an explicit per-lever confidence column passed, so strong papers fail on one missing column. Consider splitting it, or saying whether ranges plus per-lever risks count as confidence."
+      },
+      {
+        "reason": "No assertion checks Dutch process sequencing: the board approves a target and framework, while workforce measures stay proposed decisions that the works council can still change (art. 25 WOR). This separated the strongest samples and is unchecked."
+      }
+    ],
+    "overall": "Strong on structure and flows. It loses the board-structure assertion on missing confidence and an unnamed Year-1 gap, and misattributes a Bain statistic."
+  }
+}

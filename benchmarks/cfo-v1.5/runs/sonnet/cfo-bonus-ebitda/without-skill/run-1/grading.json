@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": false,
+      "evidence": "Opens: 'I've drafted this to the board's brief: payout driven by adjusted EBITDA, with restructuring adjusted out.' The plan keeps 'Adjusted EBITDA, 100% weighting (as the board requested)'. Moving '20 to 25% of the weight to recurring revenue' comes up only at the very end, as an 'if there is room' suggestion."
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": false,
+      "evidence": "No weighted scorecard. Customer health and the healthcare risk gate are discretionary committee reviews, not weighted measures, and there is no people measure."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "Challenges it: 'A cost that recurs every year is an operating cost, not a one-off.' Defines the measure with an exhaustive list of permitted adjustments, a 'Recurring allowance ... equal to the three-year average ... treated as an ordinary operating cost', a cap and a payback test. But rule 2 ('Savings count in full') still lets savings count while above-allowance costs are excluded."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": false,
+      "evidence": "Clawback for [3] years and gaming guardrails (capitalisation, cost deferral review) are present. The only multi-year element is '[Optional: 25% deferred 12 months, subject to employment.]', a bracketed option, not an added element."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": false,
+      "evidence": "No rule cutting leadership bonuses first, and no explicit rule against paying for headcount reduction. The closing aim ('stop the plan rewarding profit that comes from cutting people') is not built into the plan."
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": false,
+      "evidence": "The plan document is usable (participants, curve, leavers, change of control, clawback). But the owners' case stops at 'An exit EBITDA that has been adjusted every year invites a diligence haircut'. It doesn't argue that retained customers, recurring revenue or capable teams drive exit value."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1294,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "A well-drafted, usable 100% EBITDA plan with thoughtful restructuring rules. But it accepts the single metric, and its 'savings count in full' rule keeps part of the double benefit it criticises."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable claim found wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "It doesn't attribute the three restructurings to leadership."
+    },
+    "best_insight": {
+      "value": "Participants may not approve the exclusion of their own plan's costs, and any excluded restructuring must pass a payback test.",
+      "evidence": "Restructuring rules 5 and 6"
+    }
+  },
+  "summary": {
+    "passed": 1,
+    "failed": 5,
+    "total": 6,
+    "pass_rate": 0.17
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "1/6: complies with the 100% EBITDA brief and only hardens the restructuring definition."
+  }
+}

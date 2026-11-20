@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "'Rebuild the forecast. Run a base case, a downside case and a management case. Show which assumptions drive the 3.6x and how sensitive it is to them.' 'Build a 13-week cash flow and a quarterly bridge to the end of Q2.'"
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'engage the bank before the review, not at it. Call your relationship manager this week. Banks hate surprises far more than they hate bad news.' 'Ask for... a covenant waiver, a reset of the test level or the test date, or a covenant holiday... Expect an amendment fee, perhaps a margin step-up, and tighter reporting'. Framed in the bank's terms: 'The bank wants to know three things. Do you understand the problem? Do you have a credible plan? Will the owners stand behind it?'"
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The no-job levers come first ('cheapest and fastest first': working capital, capex, hiring freeze, agency, pricing, owner support), but the only sizing is the gap (2.9% EBITDA / 2.8% net debt) and 'A few percent of net debt can often be found here quickly.' No lever is sized."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'Notice periods, the transition payment, any social plan, and advisers' fees all land before the savings do. The cuts would probably lower EBITDA and cash in H1... Restructuring costs are only excluded from covenant EBITDA if your facility agreement says so.' Also: 'Check the exact definitions of net debt and EBITDA, the permitted add-backs'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Owner support. This is the strongest signal you can send. Options are a subordinated shareholder loan, an equity injection or cure, deferring dividends and owner withdrawals'; the bank pack includes 'the owner's commitment'; 'Offer the alternative that does send the strong signal: a visible owner commitment'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "If cuts are justified: 'size it to the real gap... do it properly. Brief the OR early, ask for its advice before deciding, apply the selection criteria, and negotiate a social plan', with counsel flagged ('Check the OR and UWV points with your employment counsel'). It never commits to a single round, and the long-term case is thin: 'the people you most want to keep' and 'reputational exposure', with no mention of skilled trades or the family name. It also floats short-time working as an option without saying the Dutch scheme does not cover a demand drop. The spirit is partly met; the specific elements are not."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1283,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Practical and sensible: it calls the bank this week, checks whether the breach is definitional, uses a contingency trigger instead of an announcement, and checks the add-backs. It sizes no levers, hints at short-time work that isn't available for a demand drop, and claims personal experience ('in my experience')."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule. The NOW scheme has indeed ended. The art. 25 WOR advice right, the Enterprise Chamber challenge, the WMCO threshold, the UWV permit criteria (necessity, afspiegelingsbeginsel, redeployment) and the ratio arithmetic (3.6/3.5 = 1.029; 0.1/3.6) are correct. Suggesting short-time working 'to check with your adviser' is incomplete rather than wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the forecast breach."
+    },
+    "best_insight": {
+      "value": "It checks first whether the breach is real or definitional: one-offs or IFRS 16 lease treatment could move the ratio by the whole 0.1x.",
+      "evidence": "reply.md section 3, Week 1 item 4"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      }
+    ],
+    "overall": "Practical and bank-savvy; it falls short on lever sizing and on a clear once-and-decently plan with a long-term case."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Plan: 'Build a 13-week cash forecast (base and downside)'; bank pack: '13-Week Cash Forecast: Weekly cash inflows/outflows under Base and Downside cases, showing minimum liquidity headroom', plus 'Q2 bridge to <3.5x, downside triggers'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "Reply: 'Go to the bank early with a 13-week cash forecast... a pre-emptive request for a temporary Q2/Q3 covenant waiver or reset (e.g., to 3.75x–4.0x)'. Plan: 'Deliver the Bank Pack (48–72 hours before the meeting)'. Framed in the bank's terms: 'Credit committees respond to visibility, control, and skin in the game' and 'Expect a modest waiver fee and tighter reporting'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The levers are ordered 'by Speed & Least Harm', but every 'Q2 Impact' cell is a placeholder ('[Estimate from ERP: €___k]'). Only the overall ~3% gap is sized. Nothing says how much headroom each lever buys."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "Timing: 'people leave in Q3 or Q4—while statutory transition payments (transitievergoeding) and legal fees hit cash first, pushing Net Debt up in Q2'. Definition check: 'verify exact CAO and loan-agreement definitions (especially how restructuring charges and cash netting affect covenant EBITDA and Net Debt)'; plan: 'EBITDA (are restructuring charges excluded or included)?'"
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Freeze family dividends, owner drawings, and management bonuses... If needed, put a temporary subordinated shareholder loan or guarantee on the table.' Bank pack: 'Owner Commitment: Formal confirmation that dividends/drawings are paused and leadership bonuses are suspended'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Skilled people are protected ('permanently lose 26 skilled craftspeople'; 'keeping apprentices and scarce trades'), and counsel is flagged ('Verify any current statutory or CAO rules... before taking any formal HR steps'). But there is no plan for reductions if they remain, beyond a placeholder trigger ('If order intake falls below €X for 6 weeks, we activate Y'). Nothing on doing it once or decently. Regional reputation is mentioned only about supplier terms."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 538,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 993,
+      "evidence": "wc -w bank-review-action-plan.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "The structure is sound and covers the add-back check, but all lever amounts are left blank, the timing claims are stated too confidently ('zero payroll savings before Q2 closes'), and it says nothing on how to handle cuts if they become necessary."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule found. WMCO threshold and region, WOR art. 25, Enterprise Chamber, 1–4 month notice, WAB 4-day rule, Gallup's 0.5x–2x replacement cost and CAO Meubelindustrie all check out. 'Zero payroll savings before Q2 closes' is an overstatement if Q2 ends in June 2027, but it rests on an unstated timing assumption."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Owners and leaders go first' is said, but nobody says the outcome is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It suggests requiring deposits on custom and B2B orders as a working-capital lever suited to furniture making, with a guardrail against stretching small local suppliers.",
+      "evidence": "reply.md section 2.1; plan lever table"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      }
+    ],
+    "overall": "A competent template, but the levers are placeholders and there is no plan for cuts if they remain."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "§3 task-level table: 'AP High (40–60% of routine volume)', 'Reconciliations Medium-High (30–50%)', 'Reporting Low-Medium (15–25%)', with 'What Must Remain Human'. Prepare phase: 'Map tasks (not jobs) ... verify baseline hours, error rates'. Pilot: 'track actual hours freed net of review work', gate 'Error rate ≤ baseline; net hours freed ≥ 15%'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": false,
+      "evidence": "Costs are only aggregates: '−9.0 (5.0 impl, 1.5 ops, 2.5 exit/transition)' and '−4.5 (3.0 phased impl, 1.0 ops, 0.5 reskilling)'. Data work, controls, human review and exception handling are never costed; they appear only qualitatively ('creates new oversight work'). The forced-cut option has no cost for covering the work that remains after exits in Year 1. Estimates are labelled, but the full cost isn't counted."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'Redeploying 6–10 experienced staff into higher-value margin and risk work (e.g., claims leakage, broker analytics, and regulatory reporting)'; 'cleaning up reconciliation backlogs'. Board question: 'Which unmet finance or risk work ... would the Board rather redeploy freed capacity into?' The hiring freeze and reskilling start in the Expand phase, after the pilot, and voluntary exits are decided only at the Year-1 review."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "Keeps 'dual-signoff on disbursements', 'vendor fraud/sanctions checks', 'audit sign-off', 'audit trail verified by Internal Audit' and 'Finansinspektionen sign-off'. Flags AI Act Art. 26(7) from 2 Dec 2027."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "Covers MBL negotiation 'before making major operational or organisational changes—including introducing AI systems', LAS turordning with three exemptions, four months to Arbetsförmedlingen and nine months' priority. 'Natural attrition runs ~8%/year (~7 FTEs/year).'"
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "§6 has four phases (Prepare / Pilot / Expand / Review & Decide) with gate criteria, and 'Board review of verified Year-1 savings before any Year-2 headcount targets are set'. Recommendation: Option 2, not a 30% cut."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 589,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 1915,
+      "evidence": "wc -w ai_finance_business_case.md"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "It covers the right themes and has a clear phased plan. But its own table puts the forced cut ahead over two years (−3.3 + 19.0 vs +0.5 + 12.9) without saying so, the forced-cut case leaves out the cost of the work still to be done, and the AI costs are thin."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Rules and dates checked: four months for 26–100 people, LAS three exemptions, nine-month priority, AI Act Art. 50 from Aug 2026 and Art. 26(7) from 2 Dec 2027, Ingka 47% / 8,500. Two overstatements, not counted as errors: Moffatt v Air Canada (a Canadian tribunal decision) is presented as having 'established' a general liability rule, and the OECD is cited for 'speeds implementation', which it doesn't claim."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt (the board asks for a case; nothing has gone wrong yet)."
+    },
+    "best_insight": {
+      "value": "It asks the board which unmet finance or risk work (claims leakage, fraud detection, broker profitability) it would want freed capacity redeployed into, which turns capacity into a choice for the board.",
+      "evidence": "ai_finance_business_case.md §7"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "All 12 samples pass it, because it only checks that MBL, LAS and attrition are named. Consider testing correctness and consequence instead: the four-month Arbetsförmedlingen notice for 26-100 people, notice periods pushing first-year savings out, and the insurance collective agreement's own notice and outplacement terms (FAO-Forena)."
+      },
+      {
+        "assertion": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+        "reason": "A qualitative list of tasks plus a mention of a pilot is enough to pass. Consider requiring quantified sizing per process (share of hours, net of new oversight work) that the headcount figures are actually derived from."
+      },
+      {
+        "reason": "No assertion checks that the options are compared like-for-like or that the numbers support the recommendation. Several samples credit non-AI vendor savings only to the recommended option, book attrition savings before the pilot gate, or show the forced cut ahead on their own figures without saying so."
+      },
+      {
+        "assertion": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+        "reason": "It isn't clear whether all three named controls are required. Samples that name only human sign-off and control testing pass. State whether segregation of duties and an audit trail must appear."
+      }
+    ],
+    "overall": "5/6. Fails on full cost. No assertion catches that its numbers favour the option it rejects."
+  }
+}

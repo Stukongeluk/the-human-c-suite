@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": false,
+      "evidence": "Shows 2027 net by scenario from single average exit dates ('Best… 1 Jul 2027 (6 mo)', 'Base… 1 Sep 2027 (4 mo)', 'Downside… 1 Nov 2027 (2 mo)'; base net −€2.70M) and rejects 120 × €75k as a 2027 figure ('a gross 2028 run-rate'), but nowhere in the reply or board paper is the saving shown by quarter; the only timing statement is 'payroll savings start in Q3–Q4 2027'."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Board paper §3: NL 'Art. 25 WOR, with a one-month waiting period and right of appeal to the Enterprise Chamber', 'WMCO… requires advance notification and consultation with UWV and unions before the decision is final', 'Notice periods run 1–4 months by tenure (minus UWV procedure time, minimum 1 month)'; DE '§§111–112 BetrVG… Interessenausgleich… Sozialplan', '§17 KSchG… Procedural errors can render dismissals void', 'up to 7 months… (§622 BGB)'; flagged: 'Employment counsel in both jurisdictions and HR must verify'. The reply ties these to the exit dates ('3–5 months, followed by 1–4 months' notice… up to 7 months in Germany')."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "Base-case lines 'Severance / social plan / transition payment -4.20 (€35k/pp)', 'Outplacement, coaching & retraining -0.48', 'Legal, works council advisory & agency filings -0.42', 'Operational friction (overtime, agency cover, dip) -0.60' and 2028 'leakage (backfill, agency cover, churn) -0.90 (10%)', under 'Modelling Assumptions (Estimates — to be replaced with HRIS actuals)' and '*Base-case one-offs (estimates)*'. Revenue at risk is only qualitative ('SLA penalty risk')."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'Do not put a €9.0M 2027 savings figure… into the board pack… around €2.7M net in 2027 (base case)'. Checked: 3.00 − (4.20+0.48+0.42+0.60) = −2.70; best 4.50 − 4.20 = +0.30; downside 1.50 − 7.90 = −6.40; 2028 9.00 − 0.90 = 8.10; payback 2.70 / (8.10/12) = 4 months → April 2028, as stated."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "Section 4 options table gives 'Est. 2027 Net Impact' and 'Est. 2028 Run-Rate' for do nothing, non-payroll spend, pricing, hiring freeze/attrition (50–70 roles), leadership pay + Kurzarbeit, voluntary exits and the 120 redundancies (−€2.7M / +€8.1M), with time to effect, people affected and reversibility, before '5. Recommendation'."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": false,
+      "evidence": "The redundancy model states its assumptions, shows three scenarios and payback, but the recommendation to 'Launch Options 1–3… to deliver €5.4M–€9.6M in 2027 cash and margin' rests on figures with no stated basis ('Non-payroll spend… +€2.0M – +€4.0M', 'Pricing… +€1.5M – +€3.0M'), although §1 marks the spend and contract data 'Not yet specified'. One unsupported board number is replaced by another; recurring restructuring is not discussed."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 648,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1924,
+      "evidence": "wc -w board-pack-2027-savings-model.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound timing, legal and payback analysis that rightly stops the €9M claim, but it asks the board to bank €5.4–9.6M from spend and pricing levers it has no data for, and it has no quarterly phasing."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "WOR art. 25/25(6), WMCO, §§111–112 BetrVG, §17 KSchG, §622 BGB, one-third board seats from 500 and Kurzarbeit 24→12 months match the fact sheets. '>10%' for the §17 threshold is slightly loose (the statute says 10% or more than 25) but immaterial."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'; the 'View from Each Seat' heading reads as plain English."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome. The sample says only conditionally: 'If results disappointed, leadership cutting executive bonuses and perks first sets the trust needed'."
+    },
+    "best_insight": {
+      "value": "Shows that the cumulative 2027–28 net falls to €1.25M in a contested process, so a botched December announcement wipes out most of two years of savings.",
+      "evidence": "Board paper §2, 'Cumulative 2027–2028 Net Impact +1.25' (downside)."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+        "reason": "As written, any scenario table satisfies this. It doesn't name the failure seen here: sized savings for levers the assistant has no data on (non-payroll, pricing) put into the board pack as deliverable totals. Consider an explicit assertion that unsized levers are left unsized or given a stated basis."
+      },
+      {
+        "assertion": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+        "reason": "Say whether scenarios built on single average exit dates (as here) count, or whether a period-by-period profile is required."
+      }
+    ],
+    "overall": "Strong on timing, legal sequence and payback; let down by unsupported alternative savings and no quarterly view."
+  }
+}

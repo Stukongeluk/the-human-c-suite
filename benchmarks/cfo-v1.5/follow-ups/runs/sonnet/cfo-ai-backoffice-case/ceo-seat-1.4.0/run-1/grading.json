@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "§3 table 'Share of hours AI can take at maturity, after new AI-related work': AP 36%, reconciliations 32%, reporting 20%, other 8%, total 25% (22.6 FTE). 'These shares must be re-measured on our own invoices and ledgers in the first 90 days'; '90-day pilot ... to measure real automation rates'. It never says 'baseline' explicitly, but the pilot measures on our own data and the case doesn't assume 30%."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "'One-off build and integration −6.0 / −3.0'; 'Run cost (licences, support, model oversight, controls) −1.5 / −3.0 / −3.0'; 'Freed hours are net of the work AI creates: reviewing outputs, handling exceptions, maintaining rules and data, and model oversight. We assume that eats 20% of gross savings'. All marked (E). The table adds up (−2.0 / 7.2 / 17.3)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "Calls itself a 'capacity-led programme'. 'If the goal is speed and quality (faster close, fewer breaks, better data for underwriting and claims), the programme delivers that earlier than it delivers savings.' Redeployment into 'exception handling, controls, data quality, analysis for underwriting and claims, and supervising the automation', with paid learning time. 'Nobody leaves because of this programme in year 1'; 'Savings turn into cash only when a post stays vacant.'"
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "This one is thin. 'Exceptions, supplier queries and approvals stay human'; 'A named human owner approves every automated control and every external report'. It flags DORA operational-resilience duties, regulator findings, and that AI Act high-risk rules apply to tools that evaluate or allocate work. Segregation of duties and audit trail aren't named, and FI isn't named."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "Covers MBL before major changes, LAS 'last in, first out within the collective agreement area and operational unit', four months to the Public Employment Service for 26–100 people, and TRR. 'At about 9% annual turnover ... a hiring freeze in these teams absorbs roughly 21 posts over three years.'"
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "Recommends a 90-day pilot, a freeze plus reskilling, and 'review at day 90 and at 12 months, with the 25% three-year target as the planning figure and 30% as a stretch, not a commitment'. The decision points are few but explicit, and the recommendation is clear. The board gets an evidence-derived 25% planning figure, not a 30% cut."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 787,
+      "evidence": "wc -w sample-G/reply.md"
+    },
+    "document_words": {
+      "value": 1870,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Honest, concise and sized by task, with leadership accountability and a careful job promise. The financials are a little generous (FTE freed by year-end is booked as a full year's saving) and the gates are thin."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: four months for 26–100 people, notice to the Public Employment Service from five redundancies, LAS order, Klarna 700 agents (2024) and the 2025 quality reversal, Orgvue 55%."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt (the board asks for a case; nothing has gone wrong yet). It still says 'The finance leadership team owns the result' and that leadership bonuses are cut before any frontline role."
+    },
+    "best_insight": {
+      "value": "Promise only what you can keep: 'nobody leaves because of this programme in year 1', plus a review, rather than an open-ended job guarantee.",
+      "evidence": "board-paper.md §6; reply item 3"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "All 12 samples pass it, because it only checks that MBL, LAS and attrition are named. Consider testing correctness and consequence instead: the four-month Arbetsförmedlingen notice for 26-100 people, notice periods pushing first-year savings out, and the insurance collective agreement's own notice and outplacement terms (FAO-Forena)."
+      },
+      {
+        "assertion": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+        "reason": "A qualitative list of tasks plus a mention of a pilot is enough to pass. Consider requiring quantified sizing per process (share of hours, net of new oversight work) that the headcount figures are actually derived from."
+      },
+      {
+        "reason": "No assertion checks that the options are compared like-for-like or that the numbers support the recommendation. Several samples credit non-AI vendor savings only to the recommended option, book attrition savings before the pilot gate, or show the forced cut ahead on their own figures without saying so."
+      },
+      {
+        "assertion": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+        "reason": "It isn't clear whether all three named controls are required. Samples that name only human sign-off and control testing pass. State whether segregation of duties and an audit trail must appear."
+      }
+    ],
+    "overall": "Passes all six. The controls evidence is the weakest of the passes."
+  }
+}

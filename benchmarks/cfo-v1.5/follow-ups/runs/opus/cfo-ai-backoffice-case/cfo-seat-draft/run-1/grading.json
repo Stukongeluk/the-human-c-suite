@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "§4: 'We should size the work by task, not by role ... The pilot exists to measure these shares against a baseline.' The table gives the AI share of hours per process (45% / 30% / 15% / 0%), process simplification and new oversight work, for 24.4 FTE net. 2027 Q1: 'Baseline the processes: volumes, touch time, error rates, days to close'; Gate 1 checks 'measured capacity against plan'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Appendix A has separate lines: 'AI licences and usage', 'Implementation, integration, data work', 'Controls, DORA and outsourcing review, audit', 'Reskilling and AI literacy', 'Backfill for staff working on the programme'. 'Less new oversight work: exception handling, monitoring, control testing, vendor management −3.0' FTE. 'Every figure in this paper is an estimate.' Running ai_case_model.py reproduces every table."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'Lets measured capacity lead and headcount follow.' 'Freed capacity first covers the staff working on the programme, then absorbs leavers who are not replaced. Leavers are still replaced while the capacity isn't there yet.' Moves go into 'claims, risk, data and DORA work', with 'Reskilling for about 30 people into exception handling, controls, analysis and AI operations'. Voluntary terms come only for a measured surplus at the 2028 Q2 gate."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Segregation of duties stays. A person approves payments, journals, supplier master-data changes and every figure we report. Audit trails meet the Bookkeeping Act (1999:1078).' Also covers the auditor's IT-controls work, DORA register and exit plans, FI notification under Solvency II Art. 49, the AI Act and GDPR."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "Covers MBL negotiation, the LAS order by length of service per unit and agreement area with three exemptions ('Job category is not a criterion'), four months to Arbetsförmedlingen, nine months' priority, and the job security council. '10% attrition a year'; attrition and vacancies drive option 3."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "§6 plan with tranche releases, Gate 1 (end Q2 2027), Gate 2 (Jan 2028), Gate 3 (end Q2 2028), and explicit stop/scale rules. Recommendation: option 3; 'Do not approve a target of 30% fewer roles (27 of 90) through redundancies in 2027.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1016,
+      "evidence": "wc -w sample-K/reply.md"
+    },
+    "document_words": {
+      "value": 6433,
+      "evidence": "wc -w board-paper-ai-finance-operations.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The most rigorous sample: a reproducible quarterly model, a steelmanned alternative, its own weak spot named, and controls, accounting and gates all covered. It is very long."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: 'Since February 2025, Article 4 has required deployers to ensure their staff have sufficient AI literacy.' The AI Omnibus, in force since July 2026, changed this to 'take measures to support the development of' AI literacy. Checked and correct: Gartner/CFO Dive nine to ten months and 57%, Gartner Nov 2025 (183 leaders, 59%, 91%), Bookkeeping Act 1999:1078, IFRIC 2021 SaaS decision, four months for 26–100 people."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt (the board asks for a case; nothing has gone wrong yet). It does commit to 'No bonus tied to headcount, mine included'."
+    },
+    "best_insight": {
+      "value": "It steelmans the board with a single round timed to proven capacity, and shows that every route converges on about 24 FTE. Redundancies don't raise the AI's limit; they only add one-off cost. It then names its own weak spot (6% attrition with no vacancies means 12 voluntary exits and lands 1–2m behind).",
+      "evidence": "board paper §5, §10"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "All 12 samples pass it, because it only checks that MBL, LAS and attrition are named. Consider testing correctness and consequence instead: the four-month Arbetsförmedlingen notice for 26-100 people, notice periods pushing first-year savings out, and the insurance collective agreement's own notice and outplacement terms (FAO-Forena)."
+      },
+      {
+        "assertion": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+        "reason": "A qualitative list of tasks plus a mention of a pilot is enough to pass. Consider requiring quantified sizing per process (share of hours, net of new oversight work) that the headcount figures are actually derived from."
+      },
+      {
+        "reason": "No assertion checks that the options are compared like-for-like or that the numbers support the recommendation. Several samples credit non-AI vendor savings only to the recommended option, book attrition savings before the pilot gate, or show the forced cut ahead on their own figures without saying so."
+      },
+      {
+        "assertion": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+        "reason": "It isn't clear whether all three named controls are required. Samples that name only human sign-off and control testing pass. State whether segregation of duties and an audit trail must appear."
+      }
+    ],
+    "overall": "Strong sample; passes all six."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Bank pack: 'A 13-week cash forecast, updated weekly' and 'Covenant headroom by quarter: base case and downside (for example, 5% lower revenue)'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Go to the bank first, within days, with a covenant plan'; 'Ask for a covenant waiver or a temporary reset (headroom of 0.2-0.3x for two quarters), or an equity cure from the family. A fee and a margin step-up are likely'. Framed in the bank's terms: 'A bank hears \"10% cuts, three weeks before review\" as \"the order book is weaker than you said\". Showing them a plan is more persuasive'; the owner's contribution 'is also what the bank will want to see'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The levers are explicitly ordered 'before any job goes'. The gap is sized with a placeholder ('€0.3m more EBITDA or about €1.0m less net debt'), and there is one rough claim ('Inventory and debtors alone can cover most of the €1.0m... (to verify)'). No lever is sized individually; the pack only asks for 'What each lever contributes, by quarter'."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'most exits land in Q3 or later'; 'Transition payments and advisers fall in Q1 and Q2, ahead of any saving... 26 people at about €65k loaded is about €1.7m a year gross, against about €0.65m of one-off costs. Unless your covenant definition adds back restructuring costs (check the facility agreement), Q2 EBITDA gets worse, not better.'"
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Owner and leaders first. Dividends and owner drawings stop. Leadership bonuses are suspended or cut, starting with yours and the owner's. This is also what the bank will want to see'; 'an equity cure from the family'; pack item: 'What the owners and leaders are contributing'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "Long term: 'skilled furniture makers are hard to replace'; 'For a family firm that values its name in the region, there is also a reputation cost that does not show in the model.' If reductions remain: 'Then voluntary exits. Involuntary cuts last, once, with works council consultation and support from the day of notice.' Legal: 'counsel must confirm the route'; 'involve employment counsel before any announcement'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 884,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Well-sequenced and humane: it goes to the bank within days, puts owner and leaders first, checks the add-backs and plans any later cut done once with support. The numbers are placeholders and there is no worked model."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule. The WMCO 20-in-three-months threshold in one region, the OR mandatory from 50 employees with the art. 25 advice right, notice of one to four months and the WTV calamity-only scope are correct. Arithmetic (36/3.5 = 10.29; 26 × €65k ≈ €1.7m) is correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders' bonuses are cut 'starting with yours and the owner's', but nobody says the breach is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It suggests giving the owner a one-page comparison by quarter of 'announce 10%' versus 'covenant plan' versus 'do nothing', so he can see the trade-off rather than be argued out of it.",
+      "evidence": "reply.md 'Handling the owner'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      }
+    ],
+    "overall": "Solid and humane; it fails only on per-lever sizing."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "Opens: 'I'd take two changes back to the board: restructuring costs stay inside the EBITDA we pay on, and EBITDA carries 50% of the bonus (60% with cash conversion) instead of 100%... a mid-year restructuring cuts reported 2027 EBITDA by 0.5m and lifts the payout from 100% to 125% of target.' The draft adds: 'One year of EBITDA alone pays for cuts whose cost arrives later: product engineering, security, training and support.'"
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": true,
+      "evidence": "'Bonus EBITDA 50%, cash conversion 10%, gross revenue retention 15%, service quality and safety 15% (availability against SLA, Sev-1 incidents, security and compliance) and regretted attrition 10%'. The Sev-1 component covers 'customer or clinical impact'."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "'Three years running is not one-off.' Closed list of allowed adjustments. 'Not allowed: restructuring, reorganisation, redundancy and severance costs...'. A budget reorganisation line, a symmetry rule ('A cost is never excluded while its savings are counted') and a line-by-line reconciliation to the audited accounts."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": true,
+      "evidence": "'One-third deferred to [April 2030] and paid if no malus event has occurred'. Malus and clawback ('up to three years after payment'). Each measure has a 'How it could be gamed, and the guard' column, and the capitalisation ratio is frozen at budget, plus protected-spend and incident-reporting guards."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": true,
+      "evidence": "'No measure, and no discretionary adjustment, pays for fewer people as such.' 'If costs have to come out in 2027, the management bonus accrual is released before any role outside management is cut. In a year with compulsory redundancies, ExCo payouts are capped at target.'"
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "Buyer's view: 'quality-of-earnings review ... about 9.5% of profit, or roughly 16m of value at 12×'. 'Recurring revenue from customers who stay is what a buyer pays the multiple for'. 'Knowledge of our product and our customers' workflows leaves with people'. The draft is complete: participants, plan cost, scorecard, EBITDA definition, deferral, governance timetable, inputs. Arithmetic checked: 14.7/14 = 105% pays 125%; 13.5/14 = 96.4% pays 64%; scorecard 82%; 1.33/14 = 9.5%; ×12 ≈ 16m."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 727,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3301,
+      "evidence": "wc -w 2027-management-bonus-plan-draft.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Rigorous and fair. It keeps EBITDA dominant, pays the same at plan as the board's version, closes the double benefit with a symmetry rule, and every number checks out. Only drawback: length."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The SEC Item 10(e) summary is correct ('wouldn't let a US-listed company call a charge non-recurring when a similar one occurred in the prior two years'). The Gallup 0.5–2x replacement cost and NEN 7510 are correct. Illustration arithmetic verified."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders-first rules are written in, but it never says the three past restructurings are leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "A budgeted reorganisation line means a year that goes to plan pays the same as the board's version, so the honest definition costs management nothing at plan. That makes it sellable.",
+      "evidence": "reply 'A year that goes to plan pays the same as the board's version would'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "6/6. The strongest sample: every assertion met with specific, checked mechanics."
+  }
+}

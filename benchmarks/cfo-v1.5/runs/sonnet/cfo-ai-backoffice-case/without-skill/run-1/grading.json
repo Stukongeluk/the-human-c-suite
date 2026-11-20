@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Table 'Where the capacity is' with 'Realistic automation of effort' per area (AP 40-55%, reconciliations 30-50%, reporting 15-30%, other 15-30%, controllers 0-10%); 'Reaching 27 requires the top of nearly every row'. 'Weeks 0-6: baseline. Measure volumes, touch time, exception rates and cost per invoice ...'; 'Weeks 6-12: select and pilot ... Run in parallel with the manual process'; 'measure error rates against today's baseline'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Cost lines: 'One-off: implementation, integration, data cleanup', 'Recurring: licences, cloud, model usage', 'Governance, validation, monitoring, audit support (2-3 FTE equivalent)', redundancy and transition cost; sensitivities include 'rework and exception rates after go-live'. 'All numbers are planning assumptions ... marked (A)'. Arithmetic checks: -10.5 / +3 / +12, cumulative +4.5."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": false,
+      "evidence": "The financials turn every released FTE straight into 'Realised labour saving' and budget 'Redundancy, notice and transition cost ... -4m' in Year 1, so redundancies run alongside, not after, redeployment. The use of freed capacity is left open ('Decide in advance what freed capacity is for'), and step 4 lists 'hiring freezes, attrition, redeployment ... and retraining' together, adding 'Start MBL negotiations early if redundancies are likely'."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Keep human review on exceptions and on material items, and measure error rates against today's baseline'; 'Segregation of duties still applies'; 'exception queues and human sign-off thresholds. Agree controls with the auditor'; 'Replacing a human control with a model-driven one needs documented validation'. Flags Finansinspektionen oversight, DORA, AI Act, GDPR, Solvency II reporting controls."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "'negotiation obligations towards the unions under MBL before the decision is taken'; 'notice periods of 1-6 months'; turordning 'within the collective bargaining unit ... you cannot choose which roles go'; 'Natural attrition and redeployment are faster and cheaper, and they avoid turordning problems.' (It calls the Arbetsförmedlingen notification only 'possibly' needed 'if numbers are large', though 27 clearly triggers it.)"
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "'Present a staged target, not a single 30% number.' Phased steps (weeks 0-6 baseline, weeks 6-12 pilot, quarters 2-3 scale, quarters 3-4 release) with 'Gate each step on measured results. Release headcount against realised, audited savings, not forecast ones.' 'We recommend approving phase 1 (baseline and AP/reconciliation pilots) now, with headcount decisions gated on results.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1356,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Practical, arithmetically sound and honest about first-year economics, but it bakes redundancies into the base case, is vague on the notification duty and offers no model or board paper."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found; key claims checked against the fact sheets and sources."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it asks for a business case."
+    },
+    "best_insight": {
+      "value": "It makes two sharp control points: a 98%-accurate AP model still sends wrong payments, and if the external auditor does not accept the new controls the manual process stays and the saving never happens, so engage the auditor early.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "All ten samples pass, so it barely discriminates. Consider requiring the effect of the legal timeline on first-year savings, the re-employment priority, or a check of the applicable collective agreement."
+      },
+      {
+        "reason": "No assertion checks in-year versus run-rate timing of savings; G books full-year savings on year-end FTE, and several samples start attrition savings before the pilot gate."
+      }
+    ],
+    "overall": "Passes five of six; fails the capacity-first assertion because redundancy costs sit in its Year 1 base case and freed capacity has no named destination."
+  }
+}

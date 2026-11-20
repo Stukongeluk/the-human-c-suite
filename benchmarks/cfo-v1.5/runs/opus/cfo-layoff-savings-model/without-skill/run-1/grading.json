@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": true,
+      "evidence": "The 'Phasing' sheet runs month by month from Jan-27 to Dec-28 per scenario and country (Base: 'NL… off payroll Jul–Aug 27; DE… off payroll Sep–Dec 27'); the reply gives '2027 in-year net savings 2.4' and '2027 net P&L impact (3.5)' with the bridge 'Less €5.3m for exit timing'. Monthly rather than quarterly, which is finer."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Reply 'Why the timing slips': works council advice, 'collective-dismissal notification with its one-month waiting period', UWV permits or settlements, notice; Interessenausgleich and Sozialplan, 'mass-dismissal notification, a works-council hearing before each notice, and notice periods of 1–7 months', Einigungsstelle. The 'Process & timeline' sheet says 'Confirm every step and duration with German and Dutch employment counsel'; the reply calls it 'a finance planning view, not legal advice'."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "One-offs: transition payment × 1.5, Sozialplan 0.75 months per year, litigation settlements, outplacement €4k, legal €700k, retention awards, 'Temporary cover and knowledge transfer', 10% contingency. Hidden costs: '10% leakage: re-hires, contractors, overtime', a leaver-mix effect, a revenue-at-risk input ('Currently set to 0%… If some are, revenue capacity leaves with them'), regretted attrition under 'Not in the numbers'. All marked 'Assumption'/placeholder."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'The €9m is a full-year run-rate (120 × €75k). It is not what 2027 will deliver… 2027 in-year net savings 2.4… 2027 net P&L impact (3.5)'. Bridge: 9.0 + 0.3 − 0.7 ≈ 8.5; − 0.9 = 7.7; − 5.3 = 2.4; − 5.9 = (3.5). The Checks sheet shows 'All checks pass: True'."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "Scenarios D (voluntary first) and E (attrition and redeployment first) run on the same engine: 'E… delivers ~39 of the 120 roles through attrition, cuts compulsory redundancies to ~81, lowers one-off costs by €1.4m and improves 2027 by €1.8m', in the side-by-side table before 'What I'd put to the CEO'."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "Placeholders listed with values; Sensitivity sheet ('2027 in-year savings range from €0.4m to €3.7m and one-off costs from €4.8m to €9.0m'); payback 'about 9 months of run-rate'; FY2026 provision view ('a 2026 results decision the board should take knowingly')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1086,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No .md files other than reply.md (workbook only)."
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "The most thorough workbook (five scenarios, monthly phasing, reconciliation checks, a sourced legal timeline), but it sets revenue at risk to zero by default for an industrial services group and leaves non-headcount levers to a single line."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: the Summary and reply table give 120 compulsory redundancies for scenario D, the 'Voluntary-first programme', which contradicts its own description of voluntary agreements. The legal points check out: WMCO waiting period, §113 BetrVG, §18 KSchG one-month block, §17 threshold of 30+ at 500+ employees, and the €102,000 cap for 2026."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome; the sample makes no statement about leadership responsibility or leaders going first."
+    },
+    "best_insight": {
+      "value": "Models a leaver-mix effect (social selection tends to pick lower-cost, shorter-serving staff) and notes that both countries require suitable vacancies to be offered before dismissal, so a freeze is partly required anyway.",
+      "evidence": "Inputs rows 11 and 34; reply point 4."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+        "reason": "Monthly phasing in the workbook was accepted here as meeting 'by quarter'. State whether monthly counts and whether the phasing must appear in the reply or may live only in a file."
+      }
+    ],
+    "overall": "Excellent model; a few defaults (revenue at risk 0%, the scenario D label) need fixing."
+  }
+}

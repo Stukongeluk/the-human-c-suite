@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Reply: 'bring a 13-week cash forecast, base and downside covenant projections, and the actions'. Note: 'Twelve-month EBITDA, net debt and the covenant projection by quarter to Q4 2027, base and downside', with headroom targeted: 'Aim for 3.3x (net debt down about 8%)'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Call your relationship manager this week... Ask for a temporary reset as a safety net; agreed months ahead, it usually costs less than a waiver after a breach.' The note frames it in the bank's terms: 'What the bank needs from us: Liquidity (a 13-week cash forecast), covenant projections in base and downside, concrete actions with leads and dates, and what the owner is contributing', and 'We offer monthly reporting and expect a fee.'"
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The gap is sized in percentages and with a worked example ('€0.5m less net debt or €0.14m more EBITDA'), and natural turnover is estimated ('13–21 people leave over twelve months'). But the action table's 'Size (to validate)' column is all placeholders ('€[ ]m'), and the reply lists levers without amounts. It does not say how much headroom each lever buys."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "Timing: 'the test catches one or two months of a roughly €1.5m annual saving (€0.1–0.25m), while €0.4–0.5m of transition payments and advice goes out first'. Accounting: 'Announcing can force a restructuring provision into the twelve months being tested. Unless the facility allows an add-back, covenant EBITDA falls.' The note models '3.52x if restructuring costs can be added back... 3.87x if they can't'. Verified: 18.28/5.19 = 3.52; 18.28/4.72 = 3.87."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Take the bank a costed plan... with the owner's money going in first'; 'a paused dividend'; 'Own it: tell the bank the forecast is management's and the owner's to fix, with management bonuses suspended.' Note: 'temporary pay reduction for the management team, me included'; an equity cure or subordinated owner loan; meeting outline item '5. What the family and the management team are contributing'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "Long term: 'Skilled trades take years to rebuild, and our name in the region is part of how we hire.' If reductions remain: 'decided on the facts, with the works council, voluntary routes first, once.' Note section 6: 'agree a social plan with the unions; fund training, coaching and job-search support from the first day of notice; do it once, sized properly.' Legal: 'Check the legal steps with employment counsel'; 'The law (to check with employment counsel)'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 478,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1846,
+      "evidence": "wc -w owner-note-covenant-plan.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A tight reply plus a ready-to-send owner note that models the cut with and without add-backs, cites IAS 37, owns the result plainly, and plans any later reduction humanely. Only the lever amounts are left blank."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: WOR art. 25(1)(d)/(2) and art. 26, the WMCO waiting month, agency workers going first then the afspiegelingsbeginsel, IAS 37 para 72 and RJ 252, and notice of 1–4 months minus the UWV procedure with a minimum of one month. On the Wpc bill, Rijksoverheid says 'kan het wetsvoorstel op 1 januari 2029 in werking treden' and the Eerste Kamer page shows it still in the Tweede Kamer. All correct; the model arithmetic checks out."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Owner note: 'This forecast is the result of decisions we took as owner and management team. Fixing it is our job, not our employees'.' Reply: 'Own it: tell the bank the forecast is management's and the owner's to fix'."
+    },
+    "best_insight": {
+      "value": "At 5–8% normal turnover, 13–21 of the 260 people leave within a year anyway, so a hiring freeze could absorb much of a 10% reduction without dismissing anyone.",
+      "evidence": "owner-note-covenant-plan.md section 4; reply item 4"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      }
+    ],
+    "overall": "Excellent and humane, with explicit ownership; only per-lever sizing is missing."
+  }
+}

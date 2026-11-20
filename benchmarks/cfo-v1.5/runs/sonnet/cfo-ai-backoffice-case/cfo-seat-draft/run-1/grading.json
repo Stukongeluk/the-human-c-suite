@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "'What AI can do here, by task (hypotheses until piloted)': AP 'high: 50-70% touchless', reconciliations '40-60% auto-matched', reporting '20-30%', each with 'What stays human'. 'Size tasks, not jobs: the pilot (section 7) replaces these ranges with our own measured numbers.' 'Pilot AP and bank reconciliation on one entity ..., with a baseline measured first.'"
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "'Estimated: 8.7 in year 1 (5.0 integration and data work, 2.5 licences and usage, 1.2 for two FTE of controls, monitoring and output review), 5.1 in year 2', plus packages, contractor backfill at 1.5x and regretted attrition for the cut. 'All figures ... are estimates built on placeholder assumptions.' model.py reruns to the same numbers."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "Capacity estimated 'in FTE-equivalents freed'; the staged route 'only releases what the automation has already freed'; 'Redeploy and reskill: move people from AP and reconciliation into exception handling, controls, data quality and analytics, with paid training'; voluntary exits before any compulsory step; 'A gate that is missed pauses further headcount release; it does not bring forward cuts.' Weaker than A or D: nearly all freed capacity is earmarked for the 27-FTE reduction."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Segregation of duties, audit trails and a named human approver for anything that moves money or affects people. Brief external audit before design'; Finansinspektionen expectations on governance, outsourcing and resilience; DORA for AI vendors; Solvency II and IFRS 17 deadlines; AI Act."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "MBL before any decision to dismiss; LAS order by length of service with three exemptions; notice one to six months; four months' notification for 26-100 (two for 5-25); TRR; 'at about 10% a year that is about 9 people a year'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": false,
+      "evidence": "It has a 90-day pilot and quarterly gates, but the recommendation hands the board the 30% headcount number re-timed: 'a target of 30% (27 FTE) lower finance and back-office capacity by the end of year 3' and 'What I'd ask the board to approve: the 30% as a year-3 target'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 739,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1800,
+      "evidence": "wc -w business-case.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise and candid that neither route pays back within 24 months, with clear legal and control points, but it keeps the 30% as a year-3 target and its sensitivity for the staged route is hard-coded."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": [
+        "Claims the staged route's year-2 net is 'unchanged at 2.7' at half the assumed capacity 'because it only releases what the automation has already freed', but model.py keeps releasing 11.5 FTE in year 2 while half capacity frees only 8.5 FTE, so the staged route would also face a gap."
+      ]
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it asks for a business case."
+    },
+    "best_insight": {
+      "value": "It warns that splitting the reduction into smaller batches to stay under the four-month notification bracket is likely to be read as avoidance.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "Ambiguous when a sample keeps the 30% but moves it to year 3 (B, F) or gives 25% as the plan with 30% as a stretch (G). Say whether re-timing the 30% as a target counts as 'a 30% headcount number'."
+      }
+    ],
+    "overall": "Passes five of six; fails assertion 6 because the 30% is kept as a year-3 headcount target."
+  }
+}

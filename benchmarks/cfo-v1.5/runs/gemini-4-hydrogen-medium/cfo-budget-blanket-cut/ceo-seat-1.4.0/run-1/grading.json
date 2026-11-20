@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"Take a sequenced, differentiated 8% opex plan to the board instead of a flat 8% cut\". \"The trap is that a flat 8% cut across every cost centre cuts billable delivery capacity alongside waste\". For payroll, the options table gives \"~48 FTE equivalent if taken in headcount\", and the paper shows \"Payroll 68.0% | -8.0% (~48 FTE equivalent)\". This is weaker than an explicit 5.4-of-8-points explanation, but it is specific."
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": false,
+      "evidence": "The target's purpose appears only as an assumption (\"The board's goal is sustainable margin improvement, not an immediate cash crisis\") and a closing question to the user (\"is the board's 8% target driven by a specific covenant/cash deadline or by a return-on-equity goal?\"). There is no definition of the base, and no in-year versus run-rate target for the plan: it claims \"Yr 1 Opex Impact -7.1% to -8.9%\" while payroll takes \"3–12 months\". No gap is identified; euros are only 'to be populated'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"target 12.5%–15.0% on non-payroll spend (32% of opex = 4.0%–4.8% of total opex)\": idle SaaS licences, unused cloud, top-20 vendor renegotiation, agency/consultancy, travel and office. Also \"Review bottom-quartile margin client contracts for underpricing, unbilled scope creep\"."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": false,
+      "evidence": "Flows are present: \"Freeze all non-billable and overhead backfills; require CFO + functional head sign-off for any replacement hire\", natural attrition, and \"paid reskilling to redeploy bench/overhead staff\". But nothing is protected beyond billable delivery capacity in general. No named investments (training, sales, security, junior intake) are ring-fenced, and there are no criteria for protecting them."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leadership restraint first (signal of shared ownership): Freeze executive bonuses and discretionary leadership perks before asking any team to tighten its belt.\""
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "Levers come only as two category ranges (non-payroll -4.0 to -4.8%, payroll -3.1 to -4.1%) with timing. There is no owner or confidence per lever (owners appear only per sprint week), no concrete list of what stops or waits beyond \"Cut internal low-value projects\", and no remaining gap: the plan claims to hit 7.1–8.9% in Year 1."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 540,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1344,
+      "evidence": "wc -w board-budget-approach.md"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "The direction is right and the Dutch basics are correct, but the paper is generic. It overstates Year 1 by treating attrition savings as landing in full, so the board would be promised an 8% it won't see in-year."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) The plan's Year-1 impact (-7.1% to -8.9%) equals its full run-rate, although its own timing says payroll savings arrive through attrition over 3–12 months; the paper also calls the same figure the '8% run-rate target'. (2) Imprecise: it describes art. 25 WOR advice as carrying 'a one-month standstill period', but the one-month suspension applies only when the decision departs from the works council's advice (art. 25(6) WOR). WMCO, the 50-employee works council threshold and 1–4 months' notice are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Applied: the thin margin that led the board to demand an 8% cut is treated as the disappointing result. Only 'Leadership restraint first (signal of shared ownership)'; nobody says plainly that the thin margin is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It pairs the opex plan with tracking indicators (billable utilisation, regretted attrition, sickness absence, workload pulse), so savings that come from burnout show up early.",
+      "evidence": "Paper section 7."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Every sample passed: listing non-payroll categories with a percentage is easy to do without real work. Consider requiring the levers to be sized against a defined base and phased in-year versus run-rate."
+      },
+      {
+        "reason": "No assertion checks that in-year savings are phased. Several samples (B, E, G, H) present run-rate or over-phased attrition savings as Year-1 savings, which would mislead a board. Add an assertion that the in-year figure is distinguished from run-rate and adds up."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "This bundles six elements. In practice only samples with an explicit per-lever confidence column passed, so strong papers fail on one missing column. Consider splitting it, or saying whether ranges plus per-lever risks count as confidence."
+      },
+      {
+        "reason": "No assertion checks Dutch process sequencing: the board approves a target and framework, while workforce measures stay proposed decisions that the works council can still change (art. 25 WOR). This separated the strongest samples and is unchecked."
+      }
+    ],
+    "overall": "Leaders first and the non-payroll levers are present, but Year 1 is overstated, investments aren't protected, and the board structure lacks owners, confidence and a gap."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that funds investments clearing the hurdle rate before any buyback, and does not use a buyback to meet the EPS guidance.",
+      "passed": true,
+      "evidence": "Short answer: '1. Approve the €120m transformation, released in stage-gated tranches against a business case the COO has to defend. 2. Approve a smaller buyback, about €100m this year, sized from cash that is genuinely surplus... 3. Do not size or time the buyback to hit EPS guidance.' Framework: 'Fund returns-justified investment first.'"
+    },
+    {
+      "text": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+      "passed": false,
+      "evidence": "Good on return drivers ('conversion, online share, attach and service revenue... each with a baseline and a target'), risks ('replatforming projects often overrun. Add a contingency and a named owner') and gates/kill criteria, but there is no cost of capital, hurdle rate, WACC, NPV or IRR anywhere: the €120m is never evaluated against the cost of capital."
+    },
+    {
+      "text": "The reply backs the point with evidence or reasoning about EPS-driven buybacks and short-termism, such as buybacks that coincide with cuts in employment and investment.",
+      "passed": true,
+      "evidence": "Reasoning only, no empirical evidence: 'A buyback justified by a guidance miss looks like earnings management. It is worse if management pay is tied to EPS'; weighted-average mechanics; 'If the shares are cheap, that argues for a buyback, but it still does not argue for spending the cash the business needs to stay competitive.'"
+    },
+    {
+      "text": "The reply sets out a capital allocation framework: commitments and minimum cash first, then investment, then returning genuine excess cash (for example a smaller buyback or a dividend).",
+      "passed": true,
+      "evidence": "'1. Maintain a stated minimum liquidity buffer. 2. Fund returns-justified investment first. 3. Return surplus cash to shareholders through buybacks and/or dividends, with a disclosed trigger... 4. Review it at set points'."
+    },
+    {
+      "text": "The reply handles the activist and other shareholders constructively, in their terms: long-term returns and honest guidance rather than a few cents of EPS.",
+      "passed": true,
+      "evidence": "'Meet them early and listen. Do not stonewall, and do not give in on the headline number. Bring a capital allocation framework, not a single number'; 'Offer evidence: the investment case, the liquidity analysis and a credible return plan'; 'Reset guidance now, with a clear explanation'."
+    },
+    {
+      "text": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+      "passed": false,
+      "evidence": "No payout is funded by cuts ('shrink the buyback first, not the investment'), but training and store staff are never treated as an investment: the only mention of training is as a cost that lowers EPS ('Any expensed part (training, platform running costs, dual-running...) will lower EPS'), with nothing on protecting training, paid time or staff in the service model."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1419,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Thorough and sound on mechanics and governance (deployable cash, x/(1−x) accretion, closed periods, AGM authority, board record), but evidence-free, silent on store staff, and its own sizing table understates the shortfall."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Sizing table: with a €150–200m buffer, deployable cash is €200–250m; after €120m + €100m the remaining headroom is −€20m to +€30m, not 'about 0 to 30 at the low end of the range' (at a €200m buffer the plan is €20m below the buffer). Other claims (x/(1−x) accretion, standing bank mandate through closed periods) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the miss; 'You are also personally exposed' is about personal risk, not ownership."
+    },
+    "best_insight": {
+      "value": "A standing bank mandate lets a buyback run through closed periods, and buyback accretion is roughly x/(1−x) less the after-tax interest forgone, so the EPS case must be run on real numbers.",
+      "evidence": "judgement after reading reply and files"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply backs the point with evidence or reasoning about EPS-driven buybacks and short-termism, such as buybacks that coincide with cuts in employment and investment.",
+        "reason": "Passes on the Graham, Harvey & Rajgopal earnings-smoothing survey alone, which is about short-termism in general, not EPS-motivated buybacks. To discriminate, require evidence specifically on EPS-driven repurchases (e.g. Almeida, Fos & Kronlund 2016) or a concrete mechanism."
+      },
+      {
+        "assertion": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+        "reason": "The first half ('funds no payout by cutting jobs, training or maintenance') is satisfied by absence in almost every sample; consider requiring an explicit guard against trimming training, store hours or maintenance to make the quarter."
+      },
+      {
+        "assertion": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+        "reason": "No sample could compute a return without the user's data; say whether setting the hurdle/WACC test (NPV/IRR/payback as a gate) with risks and KPIs is enough, or whether an illustrative break-even is expected. This assertion was the main discriminator."
+      },
+      {
+        "reason": "No assertion checks the sharpest CFO points seen in the stronger samples: buying back while management expects a guidance miss may breach market-abuse rules (inside information, closed periods), and a buyback spread over the year moves this year's weighted-average EPS far less than the headline, so the €300m may not even deliver the cents."
+      },
+      {
+        "reason": "No assertion checks whether the reply surfaces the conflict of EPS-linked executive pay and asks the remuneration committee to strip out buyback effects; most good samples did, some did not."
+      }
+    ],
+    "overall": "4/6: fails the cost-of-capital evaluation and never treats store-staff training as an investment."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": false,
+      "evidence": "Annual 2027 table per scenario with average exit dates ('Aggressive (Avg. Exit 1 May 2027)', 'Base Case (Avg. Exit 1 Jul 2027)', 'Downside (Avg. Exit 1 Sep 2027)'), net after leakage +2,600/+25/−2,400 — no quarterly profile of the saving."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Reply: 'Announcing \"120 redundancies\" before consulting the Ondernemingsraad (Art. 25 WOR, Enterprise Chamber appeal risk) and Betriebsrat (§§111–112 BetrVG Interessenausgleich & Sozialplan), or mistiming WMCO / UWV (NL) and §17 KSchG / Agentur für Arbeit (DE) notifications, can delay exits or void dismissals' '(verify with employment counsel, not legal advice)'; paper: 'Consultation (2–4 mo) + statutory/contractual notice', DE 'up to 7 months after 20 years' service'. The Dutch notice length is not given; the weakest of the passes."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "'Severance / Sozialplan / Transitievergoeding −3,300 (Est. €27.5k/FTE…)', 'Outplacement, training & legal/advisory −500 (Est.)', 'Operational leakage (overtime / agency / lost margin) −675… Est. 15% of gross'; 2028 'Ongoing subcontractor / overtime backfill −1,350'. Thin: rehiring and extra attrition appear only as named risks ('regretted attrition, knowledge loss')."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'Announcing 120 redundancies next month will not deliver €9 million in 2027… net 2027 savings are roughly €25k to €700k'. Checked: 4,500 − 3,300 − 500 = 700; 700 − 675 = 25; shortfall 9,000 − 25 = 8,975; aggressive 6,000 − 2,400 − 400 − 600 = 2,600; downside 3,000 − 4,200 − 600 − 600 = −2,400."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "Section 3 options table with 'Est. 2027 Net Effect (€k)', time to P&L, people affected, hidden costs and reversibility for do nothing, non-payroll squeeze, repricing, hiring freeze, leaders first, Kurzarbeit and '7. Targeted 120 redundancies… +25 to +700 (+9,000 in 2028)', before the recommendations in §§5–6."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": false,
+      "evidence": "Redundancy assumptions are stated and the three scenarios act as sensitivities, but the board options table carries savings with no basis ('+1,500 to +3,500 (est.)' non-payroll, '+1,000 to +2,500' repricing, '+1,200 to +2,500' hiring freeze, '+300 to +800' leaders first); there is no break-even, and recurring restructuring isn't discussed. Unsupported numbers for alternatives don't meet 'assumptions are stated'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 513,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1462,
+      "evidence": "wc -w board-pack-2027-savings-model.md"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "Gets the headline right and lists the legal steps, but the model is one annual table with thin hidden costs, and the options table invents savings ranges without data."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The §17 KSchG threshold written as '10% or >25/30+ employees within 30 days' is muddled but not wrong; the other legal points match the fact sheets."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome. The options table says leaders-first sacrifice 'proves leadership owns the result before frontline cuts'."
+    },
+    "best_insight": {
+      "value": "Notes that social selection and the reflection principle may make leavers cheaper than the €75k average, so the saving per head may be lower than the headline assumes.",
+      "evidence": "Board pack §2B 'Note on €75k average cost'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+        "reason": "This passes with a generic '2–4 mo consultation + notice' and no Dutch notice length. If the intent is that the delays drive the model's exit dates per country, say so."
+      }
+    ],
+    "overall": "Right headline, thin model; no quarterly view and unsupported alternative numbers."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Section 4 table per area: 'What automation does well', 'What stays with people' and 'Work removed, FTE (est.): end 2027 / 2028 / 2029' (AP 20/40/55%, reconciliations 10/30/40%, reporting 0/12/20%), less 'New work the programme creates' -2.0/-3.0/-3.5. 'Six-week diagnostic: hours by process'; pilot 'run alongside today's process on full production volume, not a selected sample'; Gate 1 'touchless rate, error rate and hours saved, measured on our own data'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Recommended-path lines: 'Implementation and integration', 'Licences and running costs', 'Training and change', 'Parallel running and temporary cover', 'Reskilling for internal moves'; capacity net of new work 'Running the automation, exception queues, testing automated controls, model and vendor oversight'. 'Figures marked (est.) are planning estimates'. Tables add up (C: -10.6 / +3.0 / +12.3 = +4.7; B: -20.9 / -6.6 / +12.6 = -14.9)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "Target is 'up to 30% of Finance & Back Office capacity'; 'Capacity moved to higher-value work (FTE) ~4' for 'in-sourcing consultant work, faster premium collection and reinsurance recoveries, and better forecasting'; 'Bring consultant work back in-house as capacity frees up'; paid learning time, career conversations, first call on open roles; 'Nobody is made redundant because of the programme before the end of 2028'."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "Stays with people: 'new suppliers and bank-detail changes (fraud risk), payment approval', 'journal approval, control sign-off'; Gate 1 'controls signed off by internal control and discussed with the auditor'. Solvency II Art. 49 'FI must be notified before we outsource critical or important functions'; DORA register and exit plans; AI Act; EIOPA Opinion on AI governance (human oversight). No explicit 'segregation of duties' or 'audit trail' wording, but the controls are specific."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "MBL sections 11 and 19; LAS selection by length of service with three exemptions, nine-month priority; Act 1974:13 notification four months for 26-100 (two for 5-25); FAO-Forena notice and outplacement; 8% attrition with backfill freeze ('~14 leavers not replaced')."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "Transition table with Gate 1 (end June 2027), Gate 2 (Jan 2028), Gate 3 (Jun 2028: 'set the 2029 target and decide whether a voluntary programme is needed'); decisions requested: 'Agree the target as up to 30% of Finance & Back Office capacity by the end of 2029 ... This replaces the target of 27 redundancies in 2027.' Headcount outcome about 68, not a 30% headcount cut."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 878,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 5027,
+      "evidence": "wc -w business-case.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Board-ready and well sourced (including the actual FAO-Forena terms), arithmetically consistent, with a fair four-option comparison, human-impact and communication plans and clear leadership accountability."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found; key claims checked against the fact sheets and sources."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it asks for a business case."
+    },
+    "best_insight": {
+      "value": "It costs the redundancy route from the insurance sector's own collective agreement (six months' notice after 30 months, outplacement of at least 1.5 price base amounts, transition pay) and adds a 'keep everyone, reinvest' option, so the board sees the full range.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks that the options are compared like for like. E, H, I and J credit non-payroll or vendor savings (or a smaller AI budget) only to the recommended option, which flatters it; H's own base case even shows the forced cut ahead over three years."
+      },
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "All ten samples pass, so it barely discriminates. Consider requiring the effect of the legal timeline on first-year savings, the re-employment priority, or a check of the applicable collective agreement."
+      }
+    ],
+    "overall": "Strongest-tier sample; all assertions pass with specific evidence and its sources check out."
+  }
+}

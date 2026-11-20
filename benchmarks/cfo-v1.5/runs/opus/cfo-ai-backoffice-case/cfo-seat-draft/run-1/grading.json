@@ -1,0 +1,84 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Board paper section 4: 'We should size the work by task, not by role. The table below is my first estimate of the share of each process's hours that AI can handle at the required quality ... The pilot exists to measure these shares against a baseline.' Table: AP 45%, reconciliations 30%, reporting 15%, each with 'AI does well today' and 'Stays with people'. 2027 Q1: 'Baseline the processes: volumes, touch time, error rates, days to close'; Gate 1 measures 'capacity against plan'. Reply: 'Why \"30% next year\" doesn't hold up'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Appendix A lines in every option: 'AI licences and usage', 'Implementation, integration, data work', 'Controls, DORA and outsourcing review, audit', 'Reskilling and AI literacy', 'Backfill for staff working on the programme'; capacity is net of '-3.0 new oversight work: exception handling, monitoring, control testing, vendor management'. 'Every figure in this paper is an estimate unless it is marked as given or sourced'; Appendix C labels each assumption. Model reruns and totals check (option 3: -14.4 / 5.5 / 13.8 = +4.9)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'lets measured capacity lead and headcount follow'; 'Freed capacity first covers the staff working on the programme, then absorbs leavers who are not replaced ... we move about one person a quarter into funded vacancies elsewhere, such as claims, risk, data and DORA work'; 'Reskilling for about 30 people into exception handling, controls, analysis and AI operations'; 'No compulsory redundancies are planned in this programme', voluntary terms only for a measured surplus."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Segregation of duties stays. A person approves payments, journals, supplier master-data changes and every figure we report. Audit trails meet the Bookkeeping Act (1999:1078).' DORA register and exit plans; 'If any part ... counts as outsourcing a critical or important function, we notify Finansinspektionen in advance (Directive 2009/138/EC, Article 49)'; AI Act Annex III classification; external auditor from design."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "Section 8: MBL negotiation before deciding; LAS selection order by length of service per unit and agreement area, three exemptions; notice one to six months; Arbetsförmedlingen four months for 26-100; nine-month re-employment priority. Recommended route works through '10% attrition a year' and a hiring freeze with exceptions."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "Gates table: Gate 1 end of Q2 2027 ('Scale, adjust or stop'; tranche 2), Gate 2 January 2028, Gate 3 Q2 2028; stop rule 'measured capacity at a gate is below 60% of plan'. Recommendation: 'Do not approve a target of 30% fewer roles (27 of 90) through redundancies in 2027.' It projects about 24 FTE (27%) by 2029 as the outcome of measured capacity, not as a target."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1016,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 6433,
+      "evidence": "wc -w board-paper-ai-finance-operations.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Board-ready and internally consistent (the quarterly model reruns to the paper's figures), with honest sensitivities, a disclosed weak spot and strong Swedish and insurer detail; long, and one AI Act point is out of date."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": [
+        "States that 'Since February 2025, Article 4 has required deployers to ensure their staff have sufficient AI literacy'. The Digital Omnibus (Regulation (EU) 2026/1744, in force July 2026) softened Article 4 to taking measures that support AI literacy, with no required level (minor)."
+      ]
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it asks for a business case."
+    },
+    "best_insight": {
+      "value": "It shows every route converges on about 24 FTE because the AI's capacity is the limit, and that LAS selection order removes recent hires rather than the people whose tasks went, so redundancies only add one-off cost and an irreversible bet (break-even at 113% of assumed capacity).",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks that the options are compared like for like. E, H, I and J credit non-payroll or vendor savings (or a smaller AI budget) only to the recommended option, which flatters it; H's own base case even shows the forced cut ahead over three years."
+      },
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "Ambiguous when a sample keeps the 30% but moves it to year 3 (B, F) or gives 25% as the plan with 30% as a stretch (G). Say whether re-timing the 30% as a target counts as 'a 30% headcount number'."
+      }
+    ],
+    "overall": "Strongest-tier sample; assertions all pass on substance. The evals don't reward its standout features (model that reconciles, break-even and weak-spot disclosure)."
+  }
+}

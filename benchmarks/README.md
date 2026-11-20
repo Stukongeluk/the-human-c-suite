@@ -9,6 +9,7 @@ Every reply, grade and token count behind the results in the main [README](../RE
 | [`check-v1.3.2/`](check-v1.3.2/benchmark.md) | The "push back privately first" rule, on the two cases it affects | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 16 |
 | [`check-v1.3.3/`](check-v1.3.3/benchmark.md) | Clear direction: version 1.3.3 against version 1.3.2 and no skill, on a rebrand-before-a-sale case and a rebrand-against-customers case | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 48 |
 | [`company-types-v1.4/`](company-types-v1.4/benchmark.md) | Every kind of organisation: the version 1.4 draft against version 1.3.3 (and no skill on Claude) on six cases outside software, plus the [follow-ups](company-types-v1.4/follow-ups.md) that led to version 1.4.0 | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 60 + 17 |
+| [`cfo-v1.5/`](cfo-v1.5/benchmark.md) | A humane CFO seat: the draft against the CEO seat (and no skill on Claude) on six finance cases, plus the [follow-ups](cfo-v1.5/follow-ups/) that led to version 1.5.0 | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 60 + 8 |
 
 ## Method
 
@@ -28,6 +29,7 @@ Each run folder holds `reply.md`, any document the agent wrote, `grading.json` (
 - **Token counts aren't comparable across vendors.** Claude counts are a subagent's total tokens; Gemini counts are `agy`'s `total_tokens`. Compare within one model only.
 - **Six more Gemini runs were rerun for version 1.4.** The skill tells the agent to search its evidence file, and Gemini Hydrogen used `rg` for that; headless mode couldn't ask permission and the run ended empty. The harness now also allows read-only search and read commands (`rg`, `grep`, `findstr`, `Select-String`, `Get-Content`, `cat`, `type`).
 - **Seven Gemini runs were rerun.** In those runs the agent first tried to list its folder (`Get-ChildItem`, `ls`). Headless mode can't ask for that permission, so the run ended with no answer. The harness now allows read-only folder listings and nothing else, and those seven runs were repeated with it; the empty first attempts are not graded.
+- **Thirteen Gemini runs were rerun for version 1.5.** The draft CFO seat told the agent to compute totals in code; the agent tried to run a script, headless mode refused it and the run ended empty (the CEO seat hit it too). Those runs were repeated with one more line in the note for both setups: running commands isn't available, so do the arithmetic yourself and check it. The seats now say to compute in code where you can.
 - **The checks have known gaps.** The graders' notes in each `grading.json` list them, for example checks that every reply passes and checks that bundle two things. They are the starting point for the next round of test cases.
 
 ## Rerun

@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"My recommendation: don't take 8% off every cost centre.\" Payroll: \"8% of payroll is about €3.9M, or about 48 roles, roughly 36 of them billable\"; \"A uniform percentage lands where the money is\". Alike: \"It cuts training and well-run teams as hard as bloated ones.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"What is the 8% for? 8% of opex is about twice this year's operating result, so it's really a margin target... If the board needs a margin, cash or covenant number...\" Paper: \"We ask the board to tell us the margin, cash or covenant number it needs, and by when.\" Sized in money: €5.8M (8% below the 2027 baseline) versus €7.8M (below 2026), with a quarterly path and a 2027 gap of -€1.0M."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "Eight non-payroll levers (bench before contractors, offices, licences and cloud, travel and lease, consultants, marketing, internal projects, insurance and telecom) give €2.54M in 2027 and €3.30M full-year. Pricing and leakage add €0.99M/€1.35M; collections add €2.1M of cash."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"about 18 of the ~66 expected leavers not replaced, 600 → ~582 people, no exits\"; \"Delivery roles in teams at or above target utilisation are refilled. Internal candidates are considered first for every open role.\" Protect list with reasons: \"Training and development (€1,230k). Skills are what we sell\", delivery capacity at or above target utilisation, sales, security, and small suppliers' payment terms."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders first: executive bonuses suspended for 2027, senior managers' bonus pool halved, no executive pay rise\", \"including the CEO's and the CFO's\"; \"it starts with our own bonuses\"."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "The section 5 table gives 2027 effect, full year, 'Lands', 'Owner', 'Confidence' and 'Human impact' for all 12 levers. Section 9 lists 'What stops or waits'. The table shows \"Gap to (B) -1,013\" and \"Gap to (A) -3,060\", and section 14 orders the contingencies, each with a trigger."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 888,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4226,
+      "evidence": "wc -w budget-2027-board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Board-ready and humane: an owned, confidence-rated lever register that reconciles, a fair test of when the blanket cut would win, leaders first, and an honest €1.0M 2027 gap with triggered contingencies."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: the blanket option's 'extra regretted attrition' line shows -€246k, while its stated formula (12 leavers × 0.5 × €82k) gives about -€493k. This understates the blanket cut's cost and doesn't change the conclusion. Verified as correct: McKinsey's 10% (cited as 'research cited by McKinsey'), art. 25/26/27 WOR, WMCO including settlements, BW 7:672/7:673, afspiegeling, Trevor & Nyberg and Gallup. The main tables reconcile (e.g. 2,539 + 739 + 500 = 3,778; total 4,765)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Applied: the thin margin that led the board to demand an 8% cut is treated as the disappointing result. Executives suspend their own bonuses first, but nobody says the thin margin is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It computes the breakeven: the blanket cut beats the plan only if fewer than about 1 in 8 of the removed delivery roles had client work. That turns the CEO debate into a testable utilisation question.",
+      "evidence": "Reply and paper section 7 sensitivity table."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Every sample passed: listing non-payroll categories with a percentage is easy to do without real work. Consider requiring the levers to be sized against a defined base and phased in-year versus run-rate."
+      },
+      {
+        "reason": "No assertion checks that in-year savings are phased. Several samples (B, E, G, H) present run-rate or over-phased attrition savings as Year-1 savings, which would mislead a board. Add an assertion that the in-year figure is distinguished from run-rate and adds up."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "This bundles six elements. In practice only samples with an explicit per-lever confidence column passed, so strong papers fail on one missing column. Consider splitting it, or saying whether ranges plus per-lever risks count as confidence."
+      },
+      {
+        "reason": "No assertion checks Dutch process sequencing: the board approves a target and framework, while workforce measures stay proposed decisions that the works council can still change (art. 25 WOR). This separated the strongest samples and is unchecked."
+      }
+    ],
+    "overall": "Passes all six with the most complete, reconciled board structure; only a minor inconsistency in one line of the blanket-cut model."
+  }
+}

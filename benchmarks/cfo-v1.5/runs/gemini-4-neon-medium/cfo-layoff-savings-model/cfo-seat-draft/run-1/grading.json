@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": true,
+      "evidence": "'Quarterly Cash and P&L Table (Option A)': gross saving 0 | 0 | +1,125 | +2,250; net cash −250 | −2,790 | −1,895 | +1,190 = −3,745; exits 'Tranche 1 (60 roles…) exits 30 June 2027… Tranche 2… exits 30 September 2027'."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Q1 2027 'Works council and union consultation, German Interessenausgleich and Sozialplan negotiation… Dutch WOR Art. 25 advice / WMCO notification / UWV filing'; notice 'in the Netherlands, 1–4 months… in Germany, up to 7 months after 20 years under §622 BGB'; §17 KSchG; 'Not legal advice — get German and Dutch employment counsel in before any communication'."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "Severance €40k/FTE, legal €400k, outplacement €4k/FTE; 'Work still to be done (overtime, contractors)' 16%/10%, 'Revenue at risk' €4M at 30%, 'Extra voluntary attrition' ~32 staff, 'Rehiring & ramp-up of cut roles' 12 roles, under 'Basis / Assumption (All Estimates)'."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'120 redundancies started next month will drain an estimated €3.75M of cash in 2027'. Checked: −250 − 2,790 − 1,895 + 1,190 = −3,745; peak −4,935; 2028 9,000 − 900 − 1,200 − 900 − 900 = 5,100; direct-only 3,375 − 4,800 − 400 − 480 = −2,305; payback late Q3 2028."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "Side-by-side table of Option A (120 redundancies), Option B (blended, no compulsory cuts) and Option C (do nothing) on 2027 net cash, P&L, peak drain, 2028, cumulative and payback, with Option B also by quarter, before the recommendation."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": false,
+      "evidence": "The redundancy model is well caveated ('restructuring that recurs across years should not be labelled \"one-off\"', delay and severance sensitivities, two-year break-even). But Option B is said to deliver '+€6.18M of recurring 2027 EBIT/cash', 'closing the €9.0M cash gap in 2027', from vendor (+€2,100k), pricing (+€1,600k) and leadership (+€600k) lines with no stated spend base or rate. §6 itself says these need ERP and CRM data. Precise-looking numbers without stated assumptions."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 695,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2173,
+      "evidence": "wc -w 2027-savings-model-board-pack.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "An arithmetically clean quarterly model with good hidden costs, but it replaces the CEO's unsupported €9M with an equally unsupported, falsely precise €6.2M blended plan."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Legal statements (WOR, WMCO before the final decision, §§111–112 BetrVG, §17 KSchG, Sozialauswahl, §622 BGB, one-third board seats from 500, Kurzarbeit 24→12 months) match the fact sheets. Recognising the provision in Q1 2027 is consistent with its own timeline, though a December announcement could pull it into FY2026."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon ('sequences actions from least to most human harm' is plain English)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome. The sample includes 'Leaders first: Freeze executive salaries and reset 2027 management bonus pool' but no statement of responsibility."
+    },
+    "best_insight": {
+      "value": "Shows a 'direct costs only' floor (−€2.3M in 2027), so the conclusion doesn't depend on the softer hidden-cost estimates.",
+      "evidence": "Board pack §3 note: 'Even on direct costs alone… 2027 net cash is still −€2,305k'."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+        "reason": "Make explicit that this covers the alternatives too: a quarterly table of vendor and pricing savings with no data behind it should fail honesty even when the redundancy side is well caveated."
+      }
+    ],
+    "overall": "Strong redundancy model; the alternative plan is presented with false precision."
+  }
+}

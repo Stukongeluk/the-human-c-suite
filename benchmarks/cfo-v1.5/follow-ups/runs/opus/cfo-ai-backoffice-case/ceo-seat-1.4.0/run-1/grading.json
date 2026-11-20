@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "business-case.md §4 sizes work by area: what automation does well, what stays with people, and work removed by end 2027/28/29 net of new oversight work (6% / 20% / 29%). §10 starts with a 'Six-week diagnostic: hours by process, volumes, e-invoice share...'. The pilot runs 'alongside today's process on full production volume', and 'Gate 1 (end June 2027): touchless rate, error rate and hours saved, measured on our own data'. The 30% becomes an estimate-backed capacity ceiling for 2029, not an assumption for 2027."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "§7 has separate labelled lines: 'Implementation and integration −8.0', 'Licences and running costs −2.0/−3.0/−3.0', 'Training and change', 'Parallel running and temporary cover', 'Reskilling for internal moves'. §4 adds 'New work the programme creates: Running the automation, exception queues, testing automated controls, model and vendor oversight −2.0 / −3.0 / −3.5'. 'Figures marked (est.) are planning estimates.' The tables add up (C: −10.6 / +3.0 / +12.3, total +4.7)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "The reply frames it as 'freeing up to 30% of the team's capacity'. Financials show 'Capacity moved to higher-value work (FTE) ~0 / ~4 / ~4', with upside from 'in-sourcing consultant work, faster premium collection and reinsurance recoveries, and better forecasting'. Option D reinvests all capacity. Half of 2027 leavers are replaced ('specialists, and roles not yet automated'). Paid learning time, career conversations and 'First call on open roles' come before any exit. 'Nobody is made redundant because of the programme before the end of 2028', and a voluntary programme is considered only at Gate 3."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "What stays with people: 'payment approval', 'journal approval, control sign-off', 'new suppliers and bank-detail changes (fraud risk)'. Gate 1 requires 'controls signed off by internal control and discussed with the auditor', and 'controls proven before the old process is switched off'. §9 flags the Solvency II amendments from 30 Jan 2027, FI notification before outsourcing critical functions (Art. 49), DORA, the AI Act, EIOPA's AI Opinion and GDPR. It doesn't use the words 'segregation of duties' or 'audit trail', but the controls are clearly kept."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "Reply: 'MBL negotiation comes first. Arbetsförmedlingen must be notified at least four months ahead when 26–100 people are affected', and 'LAS selection follows length of service across the operational unit and agreement area'. Headcount falls 'through attrition, a backfill freeze and moves into open roles'. 'Attrition decides the most: at 5% instead of 8%, the 2029 reduction falls to about 17 roles.'"
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "§10 sets out Prepare / Pilot / Expand / Settle phases with Gates 1–3 and criteria. §15 lists the decisions requested. The recommendation (option C) is explicit: 'Agree the target as up to 30% of Finance & Back Office capacity by the end of 2029 ... This replaces the target of 27 redundancies in 2027.' The board gets a capacity target with gates, not a headcount cut."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 878,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 5027,
+      "evidence": "wc -w business-case.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A thorough case, specific to Sweden and to insurers, whose numbers add up. It turns the board's headcount target into a gated capacity plan and is honest about trade-offs and accountability; the reply runs long."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: price base amount 2027 SEK 59,600 (Regeringen/SCB); FAO–Forena terms (six months' employer notice after 30 months, outplacement ≥1.5 price base amounts, transition compensation up to six months); Ardent 49.2% touchless and 9% vs 22% exceptions (Corpay); Gartner 4 Nov 2026 quote and 23% / 17% from 1,303 leaders; EIOPA Feb 2026 survey (347 firms, 64% back-end); Klarna over 7,000 to under 3,000 (Fortune); four-month notice for 26–100 people; AI Act 2 Dec 2027; DORA 17 Jan 2025; Solvency II amendments from 30 Jan 2027."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt (the board asks for a case; nothing has gone wrong yet). Even so, §14 says 'Finance leadership owns the delivery ... If it underdelivers, that is ours to explain.'"
+    },
+    "best_insight": {
+      "value": "It flags 2027 as a Solvency II reporting-change year (amendments from 30 January 2027, plus an audit of the SFCR balance sheet), which makes cutting reporting capacity then especially risky. It also costs exits from the actual FAO–Forena agreement terms.",
+      "evidence": "business-case.md §1, §7, §9"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "All 12 samples pass it, because it only checks that MBL, LAS and attrition are named. Consider testing correctness and consequence instead: the four-month Arbetsförmedlingen notice for 26-100 people, notice periods pushing first-year savings out, and the insurance collective agreement's own notice and outplacement terms (FAO-Forena)."
+      },
+      {
+        "assertion": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+        "reason": "A qualitative list of tasks plus a mention of a pilot is enough to pass. Consider requiring quantified sizing per process (share of hours, net of new oversight work) that the headcount figures are actually derived from."
+      },
+      {
+        "reason": "No assertion checks that the options are compared like-for-like or that the numbers support the recommendation. Several samples credit non-AI vendor savings only to the recommended option, book attrition savings before the pilot gate, or show the forced cut ahead on their own figures without saying so."
+      },
+      {
+        "assertion": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+        "reason": "It isn't clear whether all three named controls are required. Samples that name only human sign-off and control testing pass. State whether segregation of duties and an audit trail must appear."
+      }
+    ],
+    "overall": "Strong sample; passes all six. Assertions 1, 4 and 5 discriminate weakly."
+  }
+}

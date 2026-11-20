@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"Take the board one company-wide target with different targets per cost centre, not an 8% cut in every cost centre. With payroll at 68% of opex, a uniform 8% cut is in practice about 8% of your people. That is around 48 roles\". Paper: \"Lean teams are cut as hard as padded ones, and teams that bring in revenue as hard as teams that don't.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"What is the 8% protecting: a margin target, a bank covenant, cash or a shareholder expectation? And is it measured against 2026 actuals or the 2027 run-rate?\" Paper: \"We propose to express the target as an EBIT improvement of €[x]m by the end of 2027\"; reading A needs 11.9 points and reading B 8.3, with 1 point = €[x]m; 2027 P&L and run-rate are shown separately."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Third-party spend −10–15%, incl. external labour in non-billable roles 3.3–4.9\"; \"Pause low-value internal projects 0.5–1.0\"; \"Price, indexation, realisation (margin) 1.5–3.1\"."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"Vacancy board: 25–35 of about 70 expected leavers not replaced, where work stops or capacity isn't sold; open roles filled internally first\"; delivery \"vacancies are refilled where utilisation is above [x]%\". \"Protected lines: training and learning budgets, junior and trainee intake where delivery demand supports it, information security and compliance, and the service levels we promised clients.\""
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"MT bonuses are suspended and MT base pay is cut before anyone's job is touched\"; paper section 8: suspended MT and director bonuses, a [10]% MT base pay cut including the CEO and CFO, and a review of perks."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "The workstream table has owner, run-rate and 2027 P&L, and the gap is stated (\"Under reading A, the cost measures close 60–90% of the 11.9-point gap\"). But there is no confidence per lever (only ranges, and confidence on input facts), and what stops is a rule (\"Every role not refilled comes with an explicit decision on what work stops\") rather than a list."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 958,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3113,
+      "evidence": "wc -w board-paper-budget-2027.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Sharp and humane: it reframes the target as EBIT against a CPB-based 2027 baseline, owns the result in writing, puts management pay first, and protects training and junior intake. It lacks per-lever confidence and a concrete stop list."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: it describes BCG's December 2025 survey as '2,080 executives', but BCG says the respondents ranged from top leaders to managers and non-managerial employees. Verified as correct: CPB MEV 2027 (+4.4% wage costs per employee, +3.8% CAO wages, 2.7% inflation); the €102,000 transition payment cap in 2026; the WMCO one-month wait; notice minus UWV time with at least one month remaining; employers paying 70% of wages for up to two years of sickness; art. 24/25/27/31a WOR; the BCG ~20% success rate. The points arithmetic reconciles."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Applied: the thin margin that led the board to demand an 8% cut is treated as the disappointing result. Paper: 'The management team is responsible for this result. The cost base, the pricing and the shape of the organisation are the result of our decisions.'"
+    },
+    "best_insight": {
+      "value": "'No vacancy without a decision on the work', plus a reversal rule that reopens a team's budget if its sickness absence, regretted attrition or service levels slip.",
+      "evidence": "Paper sections 7 and 12."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Every sample passed: listing non-payroll categories with a percentage is easy to do without real work. Consider requiring the levers to be sized against a defined base and phased in-year versus run-rate."
+      },
+      {
+        "reason": "No assertion checks that in-year savings are phased. Several samples (B, E, G, H) present run-rate or over-phased attrition savings as Year-1 savings, which would mislead a board. Add an assertion that the in-year figure is distinguished from run-rate and adds up."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "This bundles six elements. In practice only samples with an explicit per-lever confidence column passed, so strong papers fail on one missing column. Consider splitting it, or saying whether ranges plus per-lever risks count as confidence."
+      },
+      {
+        "reason": "No assertion checks Dutch process sequencing: the board approves a target and framework, while workforce measures stay proposed decisions that the works council can still change (art. 25 WOR). This separated the strongest samples and is unchecked."
+      }
+    ],
+    "overall": "Passes five of six; it misses only the per-lever confidence and a concrete stop list in its board structure."
+  }
+}

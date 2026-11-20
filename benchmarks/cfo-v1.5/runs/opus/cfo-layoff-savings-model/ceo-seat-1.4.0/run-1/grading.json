@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": true,
+      "evidence": "The 'Phasing' sheet runs month by month for 2027–28 under three timings; base case 'Netherlands… exits 31 May', 'Germany… exits 31 July'; reply table 'Full saving from (DE / NL) Aug / Jun', '2027 net cash −1.9'; the Checks sheet shows 'ALL OK'. Monthly rather than quarterly, which is finer."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Germany: §§111–112 BetrVG; 'the mass-dismissal notification, which can only be filed once consultation is complete. The Federal Labour Court ruled on 1 April 2026 that filing it earlier makes the dismissals invalid' (verified, 6 AZR 152/22); §622 BGB. Netherlands: art. 25 WOR, WMCO, UWV permits or settlements, then notice. 'Have employment counsel in both countries confirm the timeline before anything is announced.'"
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "One-offs: severance DE 1.0 and NL 0.5 months per year, transition support €6k, legal €0.5m (range €3.3–9.3m total). Hidden costs: 'Roles refilled or covered by agency or contractors 10%… at 1.2× cost', 'Extra voluntary turnover among the 1,280 who stay +1 point'; revenue at risk named in 'Not in the model… For the savings above to hold, this must be close to zero'. A Confidence column grades each input."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'that plan saves about €4.5m gross in 2027 and is about €1.9m cash-negative in 2027'. Checked: 4.5 − 0.54 − 0.168 − 5.72 = −1.928; payback April 2028; run-rate 9.0 − 1.08 = 7.92."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "§5 'Options side by side' (do nothing, third-party spend, pricing, insourcing, stopping work, hiring freeze '~2.0 (illustrative)' / '~4.3' with '15% assumed' cover, redeployment, executive bonuses, Kurzarbeit, voluntary exits, compulsory 120 '−1.9 net cash' / '7.9') in the same columns, before §7 'Decisions requested'. Unsized levers are marked 'To size' with their data source."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "Sensitivity grid of timing × one-off level (+2.1 to −7.4); payback per scenario; an assumption table with 'Basis' and 'Confidence'; provision timing ('It moves the P&L charge between years; it doesn't change the cash'); no lever sized without a basis."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 849,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3162,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "An honest, well-structured board paper and reconciled monthly model that asks the board to approve consultation rather than a number, owns responsibility, and sizes only what it can."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Verified: BAG 1 April 2026 (6 AZR 152/22, notification before consultation ends makes dismissals invalid), €102,000 cap for 2026, Wet personeelsbehoud bij crisis (36940) still before the Tweede Kamer, Kurzarbeit 12 months from 2027, art. 25(6) WOR."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon; 'From each seat' is plain English."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome. The paper still says 'The gap this programme has to close is the result of management decisions, and management owns it.'"
+    },
+    "best_insight": {
+      "value": "Cites the Federal Labour Court's 1 April 2026 ruling that a notification filed before consultation ends voids the dismissals, showing why announcing a number first can't speed things up.",
+      "evidence": "Reply, 'Germany' bullets, and board paper §4."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion rewards framing the board decision correctly (approve consultation on the target, not the announcement of a headcount), which is the most useful thing this sample does for a finance director facing a CEO deadline."
+      }
+    ],
+    "overall": "Meets every assertion with substance; among the best."
+  }
+}

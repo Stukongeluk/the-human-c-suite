@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Bank pack: '13-week cash flow forecast: Weekly liquidity headroom under base and downside cases' and 'Covenant bridge (Q2–Q4): Line-by-line bridge from 3.6x to <=3.4x'; reply: 'a rolling 13-week cash forecast with base and downside cases'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Send the pack to the relationship manager 5–7 days before the meeting—banks reward early, honest warning and penalise surprises'; 'a proactive temporary reset (e.g., 3.85x for Q2–Q3) paired with agreed downside triggers'. Framed in the bank's terms: 'What the owner wants vs. what the bank actually wants: No surprises... Liquidity certainty... Owner commitment... A clean ask'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The gap math is precise ('2.8% of Net Debt or 2.9% of LTM EBITDA... 5.6% of Net Debt, or a 3% + 3% mix... to reach 3.4x'), but the options table only describes direction ('Directly lowers Q2 Net Debt', 'Improves Q2 EBITDA & Cash') and says 'Populate the euro amounts'. No lever is sized."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'your cash outflows land in Q2–Q3 while net payroll savings do not arrive until late Q3/Q4 at the earliest'; plan: 'unless your loan agreement explicitly adds back restructuring charges without a cap, Q2 EBITDA is hit too'; 'Check the loan agreement first... whether operating leases or specific add-backs apply'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Owners & leaders first: Pause family dividends/drawings and defer executive bonuses immediately'; 'willingness to support a small subordinated loan or equity cure'; bank pack: 'Owner & leadership commitment: Paused dividends/drawings, deferred leadership bonuses, and (if applicable) willingness to provide an equity cure'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Long-term protection is strong: 'protecting the firm's independence, the family's name in the region, and the skilled workforce you will need when demand recovers'. Counsel is flagged: 'confirm exact timelines and any applicable CAO rules with Dutch employment counsel'. But if reductions remain, it offers only 'Headcount only through flows... Hiring freeze..., natural attrition, and internal redeployment'. There is no plan for involuntary reductions done once and decently."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 872,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1630,
+      "evidence": "wc -w bank-review-covenant-plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A well-organised plan with correct gap math, a good bank-pack outline, the add-back check and family-business framing. Levers are unsized and it has no plan for cuts if the downside proves structural."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: WOR art. 25, WMCO (settlement agreements count; one-month waiting period before termination), notice 1–4 months minus UWV time with a minimum of 1 month, the WTV calamity-only scope, Trevor & Nyberg 1% → 31%, Gallup 0.5x–2x, Kachaner et al. 2012. All correct; the 15–50 bps amendment fee is labelled an estimate."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that leadership owns the breach."
+    },
+    "best_insight": {
+      "value": "It adds operational and customer health (order book, on-time delivery, scrap and rework, key-customer retention) to the bank pack, to show the core business is worth backing, not just that the ratio can be patched.",
+      "evidence": "bank-review-covenant-plan.md section 5 item 6"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      }
+    ],
+    "overall": "Good plan and bank framing; it fails on per-lever sizing and on a once-and-decently plan if cuts remain."
+  }
+}

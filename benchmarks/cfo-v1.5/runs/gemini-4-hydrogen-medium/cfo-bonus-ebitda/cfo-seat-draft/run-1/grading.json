@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "Opens: 'Do not put a 100% Adjusted EBITDA plan in front of the management team—replace it with a balanced scorecard'. Explains: 'makes layoffs look free on the bonus sheet' and 'the fastest way to hit a one-year profit target is to starve R&D, customer support, and security'."
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": true,
+      "evidence": "Weighted: Reported EBITDA incl. restructuring 40%, Cash Conversion 15%, NRR with GRR floor 20%, Regretted Attrition & Engagement 15%, Platform Quality, Uptime & Security 10% ('cannot trade clinical reliability or patient-data security for margin')."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "'No \"one-off\" exclusion for restructuring. Because the company has restructured in 2024, 2025, and 2026, all severance, notice, consultation, outplacement, and reorganisation costs in 2027 are treated as normal operating expenses inside EBITDA', plus a reconciliation rule."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": true,
+      "evidence": "'40% deferred ... vesting equally over 3 years'. 'Malus & Clawback ... for 3 years ... short-term cost cuts that demonstrably cause subsequent customer or operational failure'. A gaming-and-guard column per measure (GRR floor, severity definitions locked, survey response minimum)."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": true,
+      "evidence": "'No bonus for headcount cuts. Restructuring milestones or headcount reductions may never be used as a bonus KPI or trigger.' 'If 2027 EBITDA misses Threshold or the company initiates involuntary redundancies..., executive management bonus pools are reduced or zeroed first before any frontline or engineering roles are cut.'"
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "'PE buyers price durability, not adjusted slides'. Option B 'Aligns management with exit multiple drivers (recurring revenue, cash, capable teams, safe software)'. Usable plan: options, scorecard with thresholds, profit definition, deferral, gates, sign-offs."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 552,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1277,
+      "evidence": "wc -w 2027-management-bonus-plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Clear, balanced and complete on the essentials. But it is thin on restructuring mechanics (no way to neutralise a board-approved change), has no worked numbers, and its first deferred tranche vests in 2028, which weakens the multi-year link."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The SEC rule is stated as barring exclusion 'as non-recurring', which is acceptable. Gallup's 0.5–2x is correct. Nothing found wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'skilled software employee' is ordinary usage. No leak."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'To end the cycle of annual restructuring' doesn't attribute responsibility to leadership."
+    },
+    "best_insight": {
+      "value": "A GRR floor that caps NRR payout at 50% stops price rises from masking customer losses. Any headcount reduction needs a full-cost case compared against non-payroll levers first.",
+      "evidence": "scorecard NRR row; section 4.2"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "6/6. Solid and concise, though lighter on mechanics than the best samples."
+  }
+}

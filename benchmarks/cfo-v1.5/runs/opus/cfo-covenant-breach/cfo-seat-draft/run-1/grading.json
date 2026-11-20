@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Reply: 'Run base and downside cases to the end of 2027, plus a 13-week cash forecast.' Pack outline: 'Covenant forecast per quarter to the end of 2027: base and downside, with and without actions' and '13-week cash forecast, base and downside'. Headroom is targeted explicitly: 'Aim for about 3.3x, not 3.49x'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Call your relationship manager this week, so the review holds no surprises. As a backstop, ask for headroom on the Q2 and Q3 2027 tests (say 4.0x) or a pre-agreed equity cure... An amendment before a breach is cheaper than a waiver after one.' The plan adds what the bank gets in return ('monthly covenant forecasts, a 13-week cash forecast updated weekly, the action tracker') and the bijzonder beheer risk. Cost is estimated: 0.15% fee on €15m = €22k plus 0.5% on €14m for six months = €35k."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Every lever is sized and owned: 'inventory down €0.5m; receivables collected four days faster: €0.44m; capex... €0.3m (timing, not a saving); 2% on new orders from February: €0.15m; indirect spend and energy: €0.1m; a hiring freeze...: €0.08m'. Total €1.72m off net debt and €333k EBITDA, giving 2.93x full delivery and 3.25x half. 'About 14% of it reaches 3.5x'. Verified: 12,679/4,333 = 2.93; 13,540/4,166 = 3.25; break-even delivery for 3.5x = 400/2,886.5 = 13.9%."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "Quarterly model: only €89k of a €1.43m saving lands by 30 June while €313k cash goes out and €575k is booked. 'Result at 30 June: about 4.2x if covenant EBITDA doesn't add back restructuring costs, and about 3.6x if it does.' Also 'Pin down the definitions... add-backs'. Verified: 14,624/3,514 = 4.16; 14,624/4,089 = 3.58; exit-timing savings 19.5 person-months × €4.58k = €89k."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Owners and leaders go first. No dividend from 2026. Suspend management bonuses for 2026 and 2027 (about €0.15m in cash...). Get a written standby commitment from the owner to put in equity or a subordinated loan... To a bank, that's what \"serious\" looks like.' The pack includes '5. Owner and leadership contribution', with the standby 'sized to cure the Q2 test... (about €400k)'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "Long term: 'you lose skilled people who are hard to rehire'; 'What we protect: maintenance, safety, quality, training and apprentices'; 'The firm's name in the region is worth protecting'. If reductions remain: 'start the works council process on capacity. Size it to the real volume and do it once.' The cost model includes settlement premiums and 'outplacement and training €3k' per person, and agency staff get 'first call on permanent vacancies'. Legal: section 9 'Legal and process checkpoints (check with counsel; not legal advice)' covering WOR 25/26/31a/20, WMCO, afspiegelingsbeginsel and the transition payment cap."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 953,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2410,
+      "evidence": "wc -w covenant-plan-bank-review-draft.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A fully costed, internally consistent model that a CFO could take straight into the owner meeting. It covers the cut's quarterly P&L and cash effect with and without add-backs, sized levers with confidence levels, the bank cost, triggers, and the year-end provision risk. It stops short of leaders saying the outcome is theirs."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked every table (all add up) and the legal points. WOR art. 25/26 and the one-month suspension, the WMCO threshold with settlement agreements counting, the afspiegelingsbeginsel (job category, age group, service), the transition payment cap and IAS 37/RJ 252 are correct. Bill 36940 is still before the Tweede Kamer with entry into force by royal decree (Eerste Kamer page). One minor imprecision: the WMCO waiting period is waived when the unions state they were consulted and agree, not merely consulted."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders go first with dividends and bonuses, but no statement that the forecast breach is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "An announcement in December books the restructuring provision in the 2026 accounts, so if leverage is also tested at year end, the cut could bring the breach forward (3.3x becomes about 3.85x).",
+      "evidence": "reply.md 'It could bring the breach forward'; draft section 3"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      },
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+        "reason": "Only this sample sizes each lever. Others leave placeholders, citing missing data. The assertion discriminates well; consider making explicit that illustrative estimates with stated assumptions are acceptable."
+      }
+    ],
+    "overall": "The strongest sample: quantified, correct and humane; only the ownership statement is missing."
+  }
+}

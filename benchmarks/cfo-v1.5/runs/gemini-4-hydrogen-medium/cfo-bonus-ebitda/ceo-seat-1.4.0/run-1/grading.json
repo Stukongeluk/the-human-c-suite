@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "Reply opens: 'Do not pay the 2027 management bonus 100% on adjusted EBITDA with restructuring excluded; tie 50% to EBITDA after restructuring costs, 25% to NRR...'. 'The Trap' explains what it rewards: 'a recurring incentive to cut people to hit a margin target, while hiding the customer churn and lost institutional knowledge'. The plan's gate also names 'deferred maintenance or understaffing'."
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": true,
+      "evidence": "Weighted scorecard: 'Quality EBITDA 50% (EBITDA after restructuring & severance costs)', 'Net Revenue Retention 25%', 'Product & Clinical Reliability 15% (SLA Uptime & Critical Incident Rate ... escaped clinical-safety defects)', 'Regretted Attrition Rate 10%'."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "Challenges it: 'A fourth restructuring cannot credibly be treated as non-recurring.' Defines the measure: 'EBITDA after restructuring & severance costs (GAAP/IFRS Operating EBITDA, excluding only board-approved M&A transaction fees)', with covenant Adjusted EBITDA kept separate for lenders."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": false,
+      "evidence": "No deferral or other multi-year element, and no malus or clawback clause. There is only a 'Board discretionary reduction up to 100%' for safety and regulatory events, a covenant gate and 'No Mid-Year Re-Baselining'. The multi-year element and the malus/clawback are missing."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": true,
+      "evidence": "'If the company initiates involuntary layoffs or a fourth restructuring during FY 2027 ... the executive management team's total bonus payout is capped at 0% for the year, and executive variable pay is reduced before any broader employee bonus pool.' Options table: 'Stops rewarding headcount cuts; leaders absorb the downside first'."
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "Owners' terms: 'buyers in due diligence price recurring revenue durability (NRR), system uptime, and key-person retention'. The plan says enterprise value at exit is driven by quality of earnings, revenue durability and 'retention of domain-expert engineers and implementation staff'. The draft is usable: weights, definitions, data owners, payout curve, gates, worked scenarios and a timetable. It has no participants, target percentages or leaver terms."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 518,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1072,
+      "evidence": "wc -w 2027-management-bonus-plan.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "A clear recommendation and a concrete worked comparison. But there is no deferral or clawback, the 0% executive cap on any involuntary layoff is blunt (it could deter a needed change or push exits to be called voluntary), and Scenario A has an arithmetic slip."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Scenario A says 'NRR slips to 100% (Threshold -> 50%)' against a 105% target. Under the plan's own curve (threshold = 90% of target), 100/105 = 95.2% of target, which pays about 76%, not 50%. The scenario total would be about 64%, not 57.5%. The conclusion stands."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The 'Leaders own the result' heading covers the future 0% cap. It never says the three past restructurings are leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Scenario A shows the old plan paying 120% for a cut-to-hit year against 57.5% under the new plan, which makes the incentive problem concrete for a board.",
+      "evidence": "plan section 5"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "5/6: strong scorecard and leaders-first rule. Fails only on the missing deferral and malus/clawback."
+  }
+}

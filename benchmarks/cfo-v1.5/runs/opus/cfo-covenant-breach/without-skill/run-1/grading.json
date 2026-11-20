@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Bank pack: 'A quarterly covenant forecast for the next 4–6 quarters, base and downside cases, with headroom' and 'Liquidity: a 13-week cash flow and 12 months of headroom on the facilities'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Call your relationship manager this week... The formal review shouldn't be the first time the bank hears about this.' The ask: 'resetting the covenant for Q2–Q4 and stepping it back down to 3.5x / a one-off waiver for Q2 / using the cure right'. Framed in the bank's terms: 'A credit committee wants answers to five questions: Is liquidity safe? Is the forecast credible? Is the breach temporary or structural? Is management in control? Will the shareholder back the company?', plus the warning about bijzonder beheer."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The no-job levers come first and are well ordered (working capital, capex, family payments, pricing, purchasing, hiring freeze, non-core assets). It sizes the gap ('~€0.45m less net debt or ~€0.13m more LTM EBITDA'; €1.35m / €0.4m to reach 3.3x) and one lever ('If you carry €6m of stock, taking 10% out is worth ~0.13x'). Capex, dividends, pricing and the other levers are not sized; it only asks for 'each lever quantified' in the bank pack. That is partial, not each lever."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "The worked table shows 3.60x → 4.10x if costs are not added back and 3.50x if they are: 'maybe two months of savings (~€0.26m) fall inside the LTM... One-off costs are ~€0.7m'. It checks the definition: 'add-backs for exceptional or restructuring costs and any caps, and pro forma savings', and notes that an announcement triggers the provision under IFRS and Dutch GAAP. The arithmetic checks out (16.64/4.06 = 4.10; 16.64/4.76 = 3.50)."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Payments to the family. Suspend dividends, management fees and other payments to the family'; 'a subordinated shareholder loan or new equity, or at least a written standby commitment to cure the breach'; bank pack item '6. The owner's commitment'; 'Bring the owner. Their being there, with a concrete commitment, does more than any announcement.'"
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Long-term protection is present: 'skilled production staff are slow and expensive to replace'; 'In a family company, your reputation as an employer is part of what the company is worth'. Legal steps go to counsel: 'have a Dutch employment lawyer confirm the OR and WMCO route and your CAO's reorganisation clauses'. But if reductions remain, it only says 'decide that on its own merits and run it properly'. There is no commitment to a single round, and nothing on decent treatment (social plan as a benefit, transition support, how people are told). 'Social-plan top-ups' appear only as a cost line."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1815,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A thorough, banker-literate answer. The illustrative model is correct with and without add-backs, the legal detail is accurate, and the advice is excellent on credit insurers, bijzonder beheer and the owner standby. It is weaker on the humane plan if cuts remain, and long."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: WOR art. 25/26 (Enterprise Chamber can order withdrawal), the WMCO one-month waiting period that also blocks settlement agreements unless the unions agree (CMS), IAS 37/RJ 252 provision triggered by announcing the main features, and the claim that WTV and the Wpc bill cover only events outside normal business risk (CMS confirms the Wpc is limited to 'omstandigheden die niet tot het normale ondernemersrisico behoren'). All correct; all table arithmetic is correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader says the breach is leadership's responsibility. The owner is persuaded, not asked to own the result."
+    },
+    "best_insight": {
+      "value": "It warns that credit insurers and suppliers read restructuring news too: lower supplier credit limits shrink payables and raise net debt, so the announcement can worsen the very ratio it is meant to fix.",
+      "evidence": "reply.md, 'Collateral damage'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      },
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+        "reason": "Only one lever is sized here. Decide whether illustrative sizing of the main lever plus a conversion factor (e.g. €0.45m net debt = 0.1x) should count, and state that in the assertion."
+      }
+    ],
+    "overall": "Strong on bank framing, covenant mechanics and Dutch law; it misses per-lever sizing and a once-and-decently plan if cuts remain."
+  }
+}

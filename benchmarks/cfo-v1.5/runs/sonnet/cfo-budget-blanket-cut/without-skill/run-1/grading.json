@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"My recommendation is to take the 8% target to the board, but not to deliver it as a flat 8% per cost centre.\" Payroll: \"A flat cut therefore takes about 5.4 points of the 8% out of payroll... roughly 48 FTE-equivalents\". Alike: \"A flat cut also rewards the cost centres that padded their budgets and penalises the ones that already run lean.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"Ask the CEO and the board what problem the 8% is solving. If it is margin, a combination of cost and revenue or pricing levers may do better... If it is cash or covenant compliance, the timing of savings matters more than the annual total.\" Baseline: \"8% below this year's actual opex or 8% below next year's baseline... closer to 10 to 12%\". Timing: \"Your savings will not be a full-year 8% unless the measures start on 1 January. Phasing matters\". Money: board pack item \"what 8% means in euros, and against what\"."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Track 1: Non-payroll... Vendors, software licences and SaaS consolidation, subcontractors and freelancers, travel, office space, marketing programmes... 10 to 12% of 32% is roughly 3.2 to 3.8 points of the 8%.\" \"Savings here are fastest, reversible, and do not touch the revenue engine.\""
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": false,
+      "evidence": "Flows are present (\"Hiring freeze or selective approval for non-revenue roles, and not replacing leavers\", natural attrition), but the payroll track is only \"achieved mostly without redundancy\". Protection is generic: \"Name the cost centres that are protected or partly protected (typically billable delivery and sales)\". No investment is named and ring-fenced, and training is listed among the Track 1 cuts."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": false,
+      "evidence": "The only pay item is \"review variable pay and bonus design\" inside the payroll track. Executive pay, bonuses or perks are never put on the table before jobs."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "It gives a board-pack outline by track, but no lever-level owner (Track 1 is 'owned by finance and procurement', Track 2 has no owner), no timing per lever, no confidence, no list of what stops or waits, and no remaining gap: \"That brackets 8%.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1252,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "Clear reasoning on why the blanket cut fails and on the baseline question. But leaders don't go first, training is on the cut list, and it stops at an outline rather than a board-ready plan."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No material errors. 'With more than 50 employees you have a works council' is loosely worded (the threshold is 50 or more), which doesn't matter at 600. UWV permit, afspiegeling by age group, WMCO at 20+ in a UWV region within three months, and art. 25 WOR advice before the decision are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Applied: the thin margin that led the board to demand an 8% cut is treated as the disappointing result. No leader takes responsibility for the result."
+    },
+    "best_insight": {
+      "value": "It flags that CAO wage indexation makes '8% below this year's actual' a roughly 10–12% real cut, so the baseline has to be agreed in writing before anything else.",
+      "evidence": "Section 4 'The baseline is undefined'."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Every sample passed: listing non-payroll categories with a percentage is easy to do without real work. Consider requiring the levers to be sized against a defined base and phased in-year versus run-rate."
+      },
+      {
+        "reason": "No assertion checks that in-year savings are phased. Several samples (B, E, G, H) present run-rate or over-phased attrition savings as Year-1 savings, which would mislead a board. Add an assertion that the in-year figure is distinguished from run-rate and adds up."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "This bundles six elements. In practice only samples with an explicit per-lever confidence column passed, so strong papers fail on one missing column. Consider splitting it, or saying whether ranges plus per-lever risks count as confidence."
+      },
+      {
+        "reason": "No assertion checks Dutch process sequencing: the board approves a target and framework, while workforce measures stay proposed decisions that the works council can still change (art. 25 WOR). This separated the strongest samples and is unchecked."
+      }
+    ],
+    "overall": "Good diagnosis, but no leaders-first, no protected investments and no board-ready lever structure."
+  }
+}

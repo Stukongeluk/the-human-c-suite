@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "§3 'Task-Level AI Sizing (Not Job-Level)': AP 25–35%, reconciliations 15–25%, reporting 10–15%, total 15–23% (13.5–21 FTE). 'Book zero payroll savings until the Q2 gate proves freed hours at required accuracy.' Gate: 'Measured net hours freed (after human review and exception handling) exceed 15% in the pilot scope', against hours from time and activity logs."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Separate lines: 'AI build, integration, licences & DORA controls', 'Reskilling, training & change support', 'Dual-running, QA & exception cover', 'Error / control risk allowance'. 'Every number ... is a labelled estimate.' All tables recompute (A −15.10 / +9.12; B −6.36 / +4.44; C +1.60 / +3.20)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'Book capacity first, payroll second: Commit zero headcount reduction until the Q2 pilot gate'. Option B's payroll line is 0 before the gate. Freed capacity 'should go toward underwriting insight, capital efficiency, and faster close cycles'. Reskilling and redeployment are funded from Q1, and there are no involuntary layoffs."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Must retain segregation of duties, audit trails, exception handling, and named human sign-off for Finansinspektionen (FI) and external auditors.' Gate: 'Internal Audit, CTO, and Compliance confirm DORA and Solvency II segregation-of-duties compliance'. Also flags DORA third-party rules and AI Act Art. 26(7)."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "Covers MBL before a decision, the four-month varsel for 26–100 people, LAS turordning with three exemptions or an avtalsturlista, and nine months' priority. 'Capture proven capacity through natural attrition (~10%/year) and internal redeployment.'"
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "A Q2 pilot go/no-go gate with criteria (accuracy thresholds, net hours freed >15%, audit sign-off), quarterly review, and a Q3 revisit if results exceed 25%. Recommendation: B + C, 'rather than committing to a 30% headcount reduction next year'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 607,
+      "evidence": "wc -w sample-F/reply.md"
+    },
+    "document_words": {
+      "value": 2594,
+      "evidence": "wc -w board-paper-ai-finance-business-case.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Well structured, with a consistent model, zero payroll booked before a defined gate, non-payroll savings kept in their own option, and a capped downside. One citation is shaky."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "'Bain's study of 470 companies found only 12% of cost transformations delivered sustained improvement' doesn't match Bain's published work. Its 12% comes from a 2024 survey of 400+ executives on transformations in general, not 470 companies or cost transformations. Checked and correct: four-month varsel, LAS rules, DORA date, METR 19%, Guthrie & Datta 2008, Gallup range."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt (the board asks for a case; nothing has gone wrong yet)."
+    },
+    "best_insight": {
+      "value": "It caps the pilot's downside (SEK 3.2m if the Q2 gate fails) and models non-payroll savings as a separate option so they aren't double counted.",
+      "evidence": "board paper §5–6"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "All 12 samples pass it, because it only checks that MBL, LAS and attrition are named. Consider testing correctness and consequence instead: the four-month Arbetsförmedlingen notice for 26-100 people, notice periods pushing first-year savings out, and the insurance collective agreement's own notice and outplacement terms (FAO-Forena)."
+      },
+      {
+        "assertion": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+        "reason": "A qualitative list of tasks plus a mention of a pilot is enough to pass. Consider requiring quantified sizing per process (share of hours, net of new oversight work) that the headcount figures are actually derived from."
+      },
+      {
+        "reason": "No assertion checks that the options are compared like-for-like or that the numbers support the recommendation. Several samples credit non-AI vendor savings only to the recommended option, book attrition savings before the pilot gate, or show the forced cut ahead on their own figures without saying so."
+      },
+      {
+        "assertion": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+        "reason": "It isn't clear whether all three named controls are required. Samples that name only human sign-off and control testing pass. State whether segregation of duties and an audit trail must appear."
+      }
+    ],
+    "overall": "Passes all six. Has one unverified citation that the assertions don't catch."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": false,
+      "evidence": "Only a qualitative note: 'Task suitability differs sharply by function ... High potential for AI-assisted invoice capture, coding, and transaction matching'; 'Measure hours freed against a baseline before reducing capacity'. Nothing is sized, and Option 2's savings are assumed attrition ('1→3→6→10 FTEs Y1') starting in Q1, not task capacity measured in a pilot."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": false,
+      "evidence": "The board-ask option counts 'AI licences, integration, data & DORA controls' and contractor cover, but the recommended Option 2 counts only 'AI pilots, integration & licences' and 'Reskilling, process redesign & union co-design', sets 'Contractors / Rehiring / Extra attrition 0.00', and has no review, exception-handling, data or controls cost, on an AI budget less than half of Option 1's."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": false,
+      "evidence": "Benefit is booked directly as 'Gross payroll saving (attrition not backfilled)' from Q1, before any pilot result. No statement of where freed hours go (backlog, controls, service or new work); reskilling appears only as a pairing with the hiring freeze."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'payment approvals still require segregation of duties and human sign-off'; 'Any AI touching AP payments, reconciliations, or regulatory reporting requires full audit trails, model-error monitoring, and human sign-off'; Finansinspektionen oversight, Solvency II/IFRS 17, DORA, AI Act Art. 26(7) from December 2027."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "MBL before deciding; '4 months' advance notice' for 26-100; LAS 1-6 months; turordning with three exemptions unless a list is agreed; 9-month re-employment priority; '~10 FTEs of normal turnover in Year 1 and ~8 in Year 2'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": false,
+      "evidence": "Clear recommendation, but the staged plan is only named: 'stage-gated, task-first automation programme' and 'Quarterly Stage-Gates & Indicators' listing indicators. No phases, timeline, gate criteria or decision at each gate."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 592,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1451,
+      "evidence": "wc -w board-business-case-ai-finance.md"
+    },
+    "overall_quality": {
+      "value": 4,
+      "evidence": "Right instinct and correct Swedish rules, but a thin, flattering model (cheaper AI, vendor savings and zero transition cost credited only to the recommendation) with internal inconsistencies and a local file link."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": [
+        "Labels Option 2's break-even 'Q3 Year 1', but its cumulative net is still -0.60 MSEK after Q3 and turns positive only in Q4 (Option 1's 'Late Year 2' uses the cumulative basis).",
+        "Says at 6% attrition Year 2 stays '+9-10 MSEK'; on the paper's own figures it is about +6 MSEK (about 7.9 payroll + 1.2 vendor - 2.7 costs)."
+      ]
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it asks for a business case."
+    },
+    "best_insight": {
+      "value": "It starts with non-payroll spend (finance SaaS licences, duplicate tools, advisory spill-over, bank and print fees), which costs nobody a job, though the model credits it only to the recommended option.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+        "reason": "Passes for a sample that fully costs only the board-ask option it rejects. E, H, I and J cost data work, controls and exception handling for the cut option but not for the plan they recommend. Require the recommended plan's own costing to include review and exception-handling effort."
+      },
+      {
+        "reason": "No assertion checks that the options are compared like for like. E, H, I and J credit non-payroll or vendor savings (or a smaller AI budget) only to the recommended option, which flatters it; H's own base case even shows the forced cut ahead over three years."
+      },
+      {
+        "assertion": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+        "reason": "Clarify whether 'sizes' requires an estimate of how much of each task AI can take. E, H and I name suitable tasks and a pilot metric but never size anything; their headcount paths come from assumed attrition."
+      }
+    ],
+    "overall": "Weakest sample: passes only the controls and Swedish-law assertions; sizing, costing, capacity framing and the staged plan are a nod rather than substance."
+  }
+}

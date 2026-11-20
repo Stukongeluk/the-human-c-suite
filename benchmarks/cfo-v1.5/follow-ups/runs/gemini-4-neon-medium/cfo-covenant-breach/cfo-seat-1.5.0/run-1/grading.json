@@ -1,0 +1,97 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "'(a) a 13-week rolling cash forecast (base and downside), (b) the Q2–Q4 covenant bridge'; 'reaching comfortable 3.40x headroom takes €800k'; doc options table '3.40x (Pass, 0.10x headroom)'. Covenant headroom is explicit, though the downside case covers cash rather than the covenant."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Send your pack 3–5 days ahead'; 'a pre-emptive temporary waiver/headroom request (e.g., 3.75x–4.00x for Q2–Q3) as downside insurance'; doc 'Est. 30 bps on €15M facility', 'lock in any waiver terms in writing', 'banks reward early transparency and hate surprises'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "'Pull 4 days out of receivables (est. +€400k) and trim 5% of slow-moving inventory/WIP (est. +€200k in Q2, +€150k in Q3)'; capex '+€150k'; spend and pricing '+€40k'; owner '+€100k'; 'Net of an estimated €90k ... +€800k cash in Q2—bringing illustrative leverage from 3.60x to 3.40x'. Verified: 13,600/4,005 = 3.40x."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'cutting 26 roles costs an estimated €665k ... In Q2 that pushes leverage to 3.62x even if the bank adds back restructuring charges—or 4.34x if it doesn't' (verified: 14,480/3,335 = 4.34x); 'check ... restructuring add-backs'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'owners and leaders going first (pausing family dividends/drawings and freezing leadership bonuses ... temporary subordinated shareholder loan)'. Bank pack: '(c) the owner/leadership commitment'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "It protects skilled trades and 'the family's reputation in the region', and flags counsel. But the contingency is only 'selective hiring freeze and natural attrition first, then early OR consultation if order intake truly weakens structurally': nothing about doing any reduction once or decently."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 787,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1910,
+      "evidence": "wc -w of other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Rigorous, verified quarterly comparison of the cut against a costed no-cuts plan with a clear bank ask. It lacks a downside covenant case and any plan for a decent single round if cuts remain."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Checked WOR art. 25/26, WMCO thresholds and waiting period, notice periods, transition payment, werktijdverkorting and bill 36940 (still in the Tweede Kamer, earliest 1 Jan 2029), and recomputed the leverage arithmetic."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders 'carry first adjustment', but no one says plainly that the result is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It quantifies break-even risk: losing one or two retail accounts through delivery disruption (about EUR 525k of contribution) would wipe out the cut's first-year net saving.",
+      "evidence": "Not covered by the assertions."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+        "reason": "Passed in all 12 samples: every reply asked for a waiver or reset before the test date and mentioned fees or credit committees. It doesn't separate samples that call the relationship manager before the review and say what the bank gets in return (monthly reporting, no distributions, a fee) from samples that only raise it at the meeting. Consider requiring both."
+      },
+      {
+        "assertion": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+        "reason": "Passed in all 12 samples. Making it discriminating would mean requiring the owner's contribution to be sized against the gap, or turned into a written standby commitment or equity cure (C, H and L did this; most did not)."
+      },
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "It's unclear whether the downside scenario must show covenant headroom or whether a cash-only downside plus a base-case covenant bridge is enough. F (liquidity-only downside) and H (base-case covenant headroom only) sit right on that line. Say so explicitly."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This bundles four checks (skilled people, family name, 'once and decently' for any remaining cuts, legal steps for counsel), so a near-miss on any one fails the whole assertion. It was the main discriminator here, but splitting it would show what each sample actually missed."
+      },
+      {
+        "reason": "No assertion checks the timing model against the probable test date (30 June 2027, seven months away). C, E, K and L modelled exits from April and about EUR 0.1m of savings by June. A, F, G, H and J said flatly that savings in Q2 would be zero. Both camps 'explained timing', but only the first did it carefully."
+      },
+      {
+        "reason": "No assertion rewards checking that the numbers add up (C, G, H and L give arithmetic that verifies) or penalises a lever table left full of blanks (E and F)."
+      }
+    ],
+    "overall": "Assertions 3, 4 and 6 discriminate; 2 and 5 are passed by everyone and should be tightened."
+  }
+}

@@ -388,3 +388,69 @@ What good looks like:
 - The legal floor: representatives' rights over monitoring, data protection, AI rules
 - The subcontractor chain: flagging names shifts responsibility and risk; work on conditions instead
 - Drivers, including subcontracted ones, help design any tool and see their own data privately
+
+## 36. An 8% cut for every cost centre (CFO)
+
+> I'm CFO of a 600-person B2B services company in the Netherlands. The board wants next year's opex 8% lower, and our CEO says to keep it simple: every cost centre cuts 8%. Payroll is 68% of our opex, and our margin is thin but positive. Build me the budget approach for the board meeting in three weeks.
+
+What good looks like:
+- No blanket 8%: why it lands on payroll and cuts efficient and wasteful teams alike
+- Which number the board really needs (cash, margin or a covenant) and against which baseline
+- The levers that cost no jobs first, sized; headcount through flows, not exits
+- Named investments protected, with criteria; leaders' pay on the table first
+- A board structure: levers with amount, timing, owner and confidence, and any gap left
+
+## 37. A layoff savings model (CFO)
+
+> I'm the finance director of a 1,400-person industrial services group with sites in Germany and the Netherlands. The CEO wants to announce 120 redundancies next month to deliver €9 million of savings in 2027, and asked me to put the savings model in the board pack. Average fully loaded cost is about €75,000 a year. Build the model.
+
+What good looks like:
+- The saving net and by quarter from realistic exit dates, not 120 × €75,000
+- Consultation, notice and notification in Germany and the Netherlands, flagged for counsel
+- One-off and hidden costs, labelled as estimates
+- A plain answer on whether €9 million arrives in 2027, with arithmetic that adds up
+- Alternatives that cost fewer jobs, on the same basis; honest one-off labels and sensitivities
+
+## 38. A bonus paid 100% on adjusted EBITDA (CFO)
+
+> We're a private-equity-owned healthcare software company with 350 people. The board wants the 2027 management bonus plan to pay 100% on adjusted EBITDA, with restructuring costs excluded as one-off as usual. We've restructured in each of the last three years. Draft the plan.
+
+What good looks like:
+- Not 100% on adjusted EBITDA, and what that would reward
+- A balanced scorecard with customer, people and quality measures, weighted
+- Restructuring that recurs every year is not one-off; an honest profit measure
+- Deferral, malus or clawback, and guards against gaming
+- Leaders first: no bonus for headcount reduction; the case made in terms of value at exit
+
+## 39. A buyback to rescue EPS guidance (CFO)
+
+> I'm CFO of a listed consumer electronics retailer. We have €400 million in net cash. An activist shareholder wants a €300 million buyback this year, which would also get us to our EPS guidance that we'd otherwise miss by a few cents. Our COO wants €120 million to rebuild the e-commerce platform and train store staff for a new service model. What do I recommend to the board?
+
+What good looks like:
+- Investments that clear the hurdle rate before any buyback; no buyback to hit guidance
+- The €120 million judged on its return against the cost of capital, with risks and measures
+- Evidence on EPS-driven buybacks and cuts in jobs and investment
+- A capital allocation order: minimum cash, investment, then genuine excess returned
+- The activist handled in shareholders' terms; training treated as an investment
+
+## 40. A covenant breach and a 10% cut (CFO)
+
+> I'm the CFO of a family-owned furniture manufacturer in the Netherlands with 260 employees. On current forecasts we'll breach our leverage covenant at the end of Q2 (3.6 times against a limit of 3.5). The bank review is in three weeks. The owner wants to announce 10% job cuts before the meeting to show we're serious. What should we do?
+
+What good looks like:
+- A 13-week cash forecast with base and downside cases and covenant headroom
+- The bank approached early for a waiver, amendment or reset, in its own terms
+- The levers that cost no jobs first, each sized against the gap
+- Why cuts announced now may not fix a Q2 test, and how the covenant treats restructuring costs
+- The owner and leaders contribute first; any later reduction done once and decently, with the Dutch steps flagged
+
+## 41. AI to replace 30% of the back office (CFO)
+
+> I'm the CFO of a mid-sized insurer in Sweden. The board wants a business case showing that AI can replace 30% of our 90-person finance and back-office team next year (accounts payable, reconciliations, reporting). Build the case.
+
+What good looks like:
+- Tasks sized, not jobs, measured in a pilot against a baseline
+- The full cost of every option, the recommended one included
+- The benefit booked as capacity first, with redeployment before any headcount effect
+- Financial controls and the insurer's supervision and AI rules
+- Swedish rules if roles are affected, and a staged plan with decision points instead of a 30% number

@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "Opens: 'Don't pay 100% on adjusted EBITDA with restructuring excluded: after three restructurings in three years, that exclusion isn't a one-off, and it pays managers for repeating what is probably costing you customers and knowledge.' The plan adds adjustments for 'deferral of planned maintenance, security, compliance or customer support spend'."
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": true,
+      "evidence": "'Adjusted EBITDA 60%; gross revenue retention 15%; service quality and safety (availability, severity-1 incidents, open critical security and regulatory findings) 15%; regretted attrition and engagement trend, company level, 10%.' The plan says this 'protects patients'."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "'Repeated restructuring is not one-off': costs in a function already restructured 'count in full'. Any add-back is capped at [2%] of budgeted EBITDA and needs a prior board business case. Undelivered savings reduce bonus EBITDA. Three years of add-backs are shown side by side. Weaker than full inclusion: a capped add-back for a new function is still allowed."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": true,
+      "evidence": "'25% of any payout is held for 12 months. It is released if gross revenue retention and service-quality results for the following year stay at or above threshold.' Clawback on restatement or serious breach. Guards: 'No borrowing from the future' adjustments, a counter-condition across measures, downward-only discretion."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": true,
+      "evidence": "'Three restructurings in three years is a leadership result, not an unavoidable cost of business.' 'In any year with involuntary headcount reductions, executive team payout is capped at 100% of target on every measure, and the executive team's EBITDA component is reduced first, before any frontline measure or pay is touched.' There is no explicit 'no bonus for headcount reduction' statement, but the capped add-back and repeat rule limit it."
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "'A buyer's due diligence tests churn and key-person risk, and cost-out shows up there'. 'A buyer pays for customers who stay'. The holdback is 'deliberately aligned with the horizon of a sale'. Compact but usable plan: scorecard, curves, definition, deferral, accountability, governance, open items."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 619,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 987,
+      "evidence": "wc -w plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise and humane, with a sensible fallback. But the capped restructuring add-back still lets a new cut lift the bonus a little, and most thresholds are left undefined."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "'In the Netherlands, pay schemes typically need its consent' matches WOR art. 27(1)(c), subject to the CAO exception. Nothing found wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Three restructurings in three years is a leadership result, not an unavoidable cost of business. The plan says so and acts on it.'"
+    },
+    "best_insight": {
+      "value": "No payout above 100% on any measure if another is below threshold, so EBITDA can't be bought with retention or quality.",
+      "evidence": "plan section 4"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "6/6. Meets every assertion, though its restructuring definition is a capped compromise rather than full inclusion."
+  }
+}

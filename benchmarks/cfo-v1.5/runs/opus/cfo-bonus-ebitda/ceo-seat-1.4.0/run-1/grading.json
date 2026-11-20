@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "The reply opens 'keep adjusted EBITDA as the main measure, but stop excluding restructuring costs... which pays management to restructure'. The cover note opens 'Adjusted EBITDA stays the main measure, at 70% of the bonus' and explains: 'EBITDA on its own can be raised by cutting what customers and a future buyer value most: support, security, maintenance and product quality.' Borderline: the lead is the definition, with the weighting presented as secondary."
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": false,
+      "evidence": "'Plan EBITDA 70%, gross revenue retention 15%, and a four-item quality, security and safety scorecard 15%.' Customer and quality/safety measures are there, but there is no people measure (regretted attrition, engagement) in the scorecard."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "'Restructuring and change costs count' (4.2), with the target set after budgeted change costs. Board-approved mid-year changes have 'both its 2027 costs and its 2027 savings' removed. The adjustment list is closed, symmetric and capped, and the reconciliation goes to all participants."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": true,
+      "evidence": "'[one third] of any payout above 100% of target is deferred to [April 2029] and paid if 2028 GRR is at or above the 2027 threshold'. Malus and clawback in section 9. Section 11 has a full 'How the plan could be gamed' table (capitalisation, incident under-reporting, renewals)."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": false,
+      "evidence": "No reward for cuts ('the plan has no preference between redeploying someone and letting them go'), and it owns the past ('a management result, mine included'). But the leaders-first rule only caps executive payouts 'at 100% of target' in redundancy years, so executives can still take a full target bonus. Nothing cuts leadership bonuses before others when results disappoint."
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "'It pays on a number a buyer is unlikely to pay for'. GRR protects 'Customers and recurring revenue'. 'Keeping someone's product and customer knowledge is the better business decision'. The plan is complete and usable: participants, definition, curves, gates, deferral, malus, governance, gaming table."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 722,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2940,
+      "evidence": "wc -w 2027-management-bonus-plan-draft.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Sharp, well-sourced analysis with the strongest restructuring mechanics and honest ownership of the past. But after three restructurings it has no people measure, and its leaders-first rule is only a cap at target."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Verified: Dechow, Huson & Sloan (1994), Accounting Review 69(1), 91 Fortune 500 firms, 182 charges; S&P via Bloomberg: 97% of speculative-grade 2019 acquirers missed first-year forecasts; Trevor & Nyberg 1% cut → 31% more voluntary turnover; Taylor & Yozzo, ABI Journal June 2023; WOR art. 27 consent (CAO exception) and art. 31d (100+ employees); SEC 10(e) labelling rule. Example: 16.0/15.0 pays 133%, 14.5/15.0 pays 83%."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Three restructurings in three years is a management result, mine included, and the cover note says so.'"
+    },
+    "best_insight": {
+      "value": "Excluding severance while counting retraining at full cost makes redundancy cheaper than redeployment in the bonus. And no measure should count incidents reported, since that rewards hiding them.",
+      "evidence": "cover note point 2; section 5.3"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "4/6: excellent restructuring treatment and sources. Fails on the missing people measure and a weak leaders-first rule."
+  }
+}

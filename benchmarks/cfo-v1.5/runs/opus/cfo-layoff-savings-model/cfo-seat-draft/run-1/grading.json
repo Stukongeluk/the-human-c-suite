@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": true,
+      "evidence": "Board paper §3 quarterly table: 'Gross saving from actual exit dates – | 75 | 1,125 | 1,894 | 3,094' and 'Net cash effect −480 | −1,480 | −1,558 | 154 | −3,365'. Exits come from a monthly profile per country ('Exit timing' sheet: NL end May to end Sep, DE end Jul to end Dec 2027), and the bridge starts from 'Headline: 120 × €75k 9,000' less '−5,906' payroll still paid."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "§6 timetable by country: art. 25 WOR, 'WMCO… one-month WMCO waiting period runs from UWV's confirmation that the notification is complete, applies to settlement agreements too' (matches CMS, 28 Jan 2026), UWV permits, art. 25(6)/26 WOR; DE §§111–113 BetrVG, §17 KSchG, §102 BetrVG, §622 BGB notice up to seven months. 'Check every step with employment counsel in both countries before anything is announced.'"
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "Separate lines: 'Severance and social plan', 'Transition support from the day of notice', 'Legal, advisory, conciliation board, UWV', 'Germany: dismissal claims settled', 'Work still to be done (overtime, agency, subcontractors)', 'Revenue at risk (lost contribution)', 'Rehiring and ramp-up', 'Extra voluntary attrition', each labelled 'Estimate' or 'Placeholder' in the source column."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'120 redundancies are worth about €9m a year from 2028, not €9m in 2027. In the base case they cost €3.4m more cash than they save in 2027'. Checked: 9,000 − 5,906 = 3,094; 3,094 − 5,103 − 1,356 = −3,365; workbook 'Check: lines add to net' = 0 in every column."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "§7 'Options on the same basis': A (−3,365 / 6,119), B freeze (1,797 / 5,977), C voluntary first (637 / 6,824), D do nothing, all from the same monthly engine with the same hidden-cost lines, plus payback, dismissals and reversibility, and stress tests of B and C, before §8 'Recommendation'."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "§5: 'call the charge one-off only if it really is: a restructuring that recurs is a cost of running the business'; §9 sensitivities (timing, split, severance, cost, backfill, attrition, revenue, all favourable/unfavourable) and break-even ('wiped out by about €10m a year of lost revenue… or by about 98 more regretted leavers'); §12 assumptions with status; unsized levers left as '€[ ]' rather than invented."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 938,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3504,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A board-ready, internally consistent monthly model that tells the CEO the truth, compares real alternatives on the same footing, refuses to invent unsized savings and even states when the CEO's plan would be right."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: WMCO waiting period and settlement agreements (CMS, 28 Jan 2026), €102,000 transition-payment cap for 2026 (Rendement), Kurzarbeit back to 12 months from 2027, art. 25(6)/26 WOR, IAS 37 timing. The EWC thresholds are phrased 'more than' rather than 'at least', which is immaterial."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome. The recommendation still says leaders' bonuses are suspended 'and leaders say plainly that the result is theirs'."
+    },
+    "best_insight": {
+      "value": "Gives the strongest case for the CEO's proposal ('if the work behind these roles has gone for good… one well-run compulsory round now is kinder than a slow drip') next to the Dutch rule that agency and contract workers in the same roles go first.",
+      "evidence": "Board paper §7 'The case for the proposal as it stands' and §6."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks the cash-versus-P&L point: a December announcement may put the restructuring provision in FY2026, so FY2027 EBITDA looks positive while cash is negative. This sample handles it well; others miss it."
+      }
+    ],
+    "overall": "Meets every assertion with substance; the assertions don't separate it from merely adequate samples on cash-vs-P&L and on not inventing numbers."
+  }
+}

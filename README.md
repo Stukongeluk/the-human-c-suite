@@ -24,7 +24,7 @@
 /plugin install the-human-c-suite@the-human-c-suite
 ```
 
-Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. The plugin installs all three seats.
+Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. The plugin installs all four seats.
 
 ### Claude Code (as plain skills)
 
@@ -64,7 +64,7 @@ A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehirin
 
 **The opposite costs everyone.** In the six years leading up to the 737 MAX crisis, Boeing spent [$43.4 billion on share buybacks and $15.7 billion](https://fortune.com/longform/boeing-737-max-crisis-shareholder-first-culture) on research and development for commercial airplanes.
 
-**So we built the leaders we wish we had, as AI agents.** Three seats, a CEO, a CTO and a CPTO, that run in Claude, in Gemini through Antigravity, or in any agent that supports [Agent Skills](https://agentskills.io/specification). They:
+**So we built the leaders we wish we had, as AI agents.** Four seats, a CEO, a CFO, a CTO and a CPTO, that run in Claude, in Gemini through Antigravity, or in any agent that supports [Agent Skills](https://agentskills.io/specification). They:
 
 - treat layoffs as the last rung, never the first;
 - have leaders take the first cut and own the result;
@@ -72,15 +72,16 @@ A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehirin
 - bring people in while the plan can still change;
 - end every answer with: **what am I missing?**
 
-**It changes what agents do.** In blind tests, Gemini 4 Neon passed 80 of 84 checks with the skill against 51 without, and Gemini 4 Hydrogen 75 against 41. On Claude, the CTO seat took Sonnet from 59 to 83 of 84. [Every run and grade is public](benchmarks/).
+**It changes what agents do.** In blind tests, Gemini 4 Neon passed 80 of 84 checks with the skill against 51 without, and Gemini 4 Hydrogen 75 against 41. On Claude, the CTO seat took Sonnet from 59 to 83 of 84. On six finance cases, the CFO seat beat the CEO seat on all four models. [Every run and grade is public](benchmarks/).
 
 **Run it on your next budget round, reorg or AI rollout.** If it gets something wrong, open an issue: pushback is the point. And if you think leaders should work like this, star the repo and send it to one person who signs off on budgets.
 
-## The three seats
+## The four seats
 
 | Skill | Use it for | What it adds |
 |---|---|---|
 | [`the-human-ceo`](skills/the-human-ceo/SKILL.md) | Cost cuts, layoffs, reorgs, outsourcing, AI rollouts, shareholder pressure, board papers | The whole company in view: money, customers, people and governance. Layoffs as the last rung of a cost ladder. |
+| [`the-human-cfo`](skills/the-human-cfo/SKILL.md) | Budgets and opex targets, savings and layoff business cases, cash, covenants and the bank, buybacks and capital allocation, bonus plans, adjusted EBITDA, AI business cases | Every saving net of its costs and by quarter, honest numbers, the levers that cost no jobs first, and incentives that reward the long term, with leaders' pay first. |
 | [`the-human-cto`](skills/the-human-cto/SKILL.md) | AI coding tools and spend, engineering metrics, platform and vendor choices, tech debt, on-call, juniors and AI | Measured AI gains rather than vendor claims, fair technical evaluations, and the system measured instead of the person. |
 | [`the-human-cpto`](skills/the-human-cpto/SKILL.md) | Roadmaps, features promised by sales, the AI story for the board, AI features, capacity planning | Outcomes over output, plans that fit real capacity, and saying no with evidence. |
 
@@ -114,15 +115,16 @@ Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the
 
 ### The seats work together
 
-Each skill knows the others. When a question crosses seats, it brings in their view: what the CEO would ask about cash and people, what the CTO would ask about the system, and what product would ask about customers. If the other skills are installed, it uses them. You get one answer, and where the seats disagree, it shows the trade-off instead of hiding it.
+Each skill knows the others. When a question crosses seats, it brings in their view: what the CEO would ask about strategy and people, what the CFO would check in the numbers, what the CTO would ask about the system, and what product would ask about customers. If the other skills are installed, it uses them. You get one answer, and where the seats disagree, it shows the trade-off instead of hiding it.
 
 ## What's inside
 
 ```
 the-human-c-suite/
-├── .claude-plugin/marketplace.json     # Claude Code plugin marketplace (installs all three skills)
+├── .claude-plugin/marketplace.json     # Claude Code plugin marketplace (installs all four skills)
 ├── skills/
 │   ├── the-human-ceo/                  # SKILL.md, references/, evals/
+│   ├── the-human-cfo/                  # SKILL.md, references/, evals/
 │   ├── the-human-cto/                  # SKILL.md, references/, evals/
 │   └── the-human-cpto/                 # SKILL.md, references/, evals/
 ├── shared/                             # canonical copies of the reference files the seats share
@@ -147,6 +149,7 @@ The skills follow the open [Agent Skills](https://agentskills.io/specification) 
 The skills load automatically when a request matches, for example:
 
 - CEO: "The board wants 15% cost savings by Q3. What are our options?"
+- CFO: "We'll breach our leverage covenant at Q2 and the owner wants to announce 10% job cuts before the bank meeting. What should we do?"
 - CTO: "The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs."
 - CPTO: "Sales needs these five features by March to close their pipeline. Build the Q1 roadmap."
 
@@ -190,6 +193,21 @@ Start with one decision record on one upcoming decision, and build from there.
 ## Does it help?
 
 Every test case ran with and without the skill, on Claude Sonnet and Claude Opus; the version 1.2 and later cases compare against the previous version instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder. Every reply, grade and token count from the version 1.3 and later tests, and from the Gemini tests, is in [`benchmarks/`](benchmarks/).
+
+### Version 1.5: a humane CFO
+
+Does a dedicated CFO seat give better money advice than the CEO seat? Six finance cases, one run per setup, graded blind: an 8% opex cut for every cost centre, a model for 120 redundancies in Germany and the Netherlands, a bonus paid 100% on adjusted EBITDA, a buyback to rescue EPS guidance, a covenant breach with 10% job cuts on the table, and AI to replace 30% of an insurer's back office. The rule set before the test: the CFO becomes the fourth seat only if it beats the CEO seat on every model.
+
+| Model | CFO seat | CEO seat | Without a skill |
+|---|---|---|---|
+| Claude Sonnet | 33 of 36 checks (quality 7.3) | 31 of 36 (6.8) | 21 of 36 (5.8) |
+| Claude Opus | 36 of 36 (9.0) | 32 of 36 (8.5) | 26 of 36 (7.5) |
+| Gemini 4 Neon (Medium) | 29 of 36 (6.5) | 25 of 36 (6.0) | not run |
+| Gemini 4 Hydrogen (Medium) | 28 of 36 (6.0) | 25 of 36 (5.7) | not run |
+
+Quality is the grader's overall score from 1 to 10, given apart from the checks. The lead is consistent but modest. The biggest gains were on the blanket budget cut, the bonus plan and the layoff model: which number the 8% is measured against and what lands next year once Dutch consultation and exit costs are counted, what a bonus that excludes recurring restructuring would reward, and whether the €9 million really arrives in 2027 (it doesn't).
+
+It was weakest on the AI back-office case, where it sometimes costed only the board's option, and on the covenant case, where it sometimes left the levers as blanks. Version 1.5.0 costs every option on the same basis and sizes each lever with a labelled estimate. Rerun on those two cases, it passed 44 of 48 checks against 35 for the draft and 40 for the CEO seat. Details: [`benchmarks/cfo-v1.5/`](benchmarks/cfo-v1.5/benchmark.md).
 
 ### Version 1.4: every kind of organisation
 

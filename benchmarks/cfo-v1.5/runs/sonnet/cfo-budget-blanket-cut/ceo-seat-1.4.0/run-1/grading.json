@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"I'd take a targeted plan to the board, not an equal 8% per cost centre\". Payroll: \"Equal shares mean 5.44 of the 8 points come from payroll and 2.56 from non-payroll... roughly 48 of 600 FTE\". Alike: \"It rewards padded budgets and punishes lean teams.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"What is the 8% protecting: a covenant, a return to shareholders, a pricing squeeze?\"; \"Is 8% measured against this year's actual or next year's budget?\"; to the board: \"Would the board accept an 8% run-rate by year-end, with 5 to 8 points in-year, rather than 8 points in-year?\"; gap sized: \"The remaining gap, up to 2.8 points in year one, is the real decision for the board.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "Option B: \"Non-payroll spend: vendors, licences, travel, office, freelancers and subcontractors... 2.5 to 3.5\" and \"Stop or pause low-value work and projects 1.0 to 1.5\". It also flags \"indexing rates on contracts due for renewal and fixing under-priced work\"."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"Hiring freeze with targeted backfill: let net headcount fall 3 to 4% through attrition, protecting billable delivery\"; \"No reduction is applied to billable teams without a utilisation and pipeline check\"; \"We will protect a minimum intake of graduates and trainees.\" Involuntary cuts come only after gates, following reduced hours and voluntary exits."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders go first: freeze executive pay and cut bonuses and perks before any employee measure\"; recommendation 1 says this is \"announced before anything else.\""
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "The Option B table gives low/high amounts and an honest year-one gap. But there is no owner per lever (\"Each stopped item named with its owner\" is a promise), no confidence per lever, no timing beyond 'in-year', and no named list of what stops or waits."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 725,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1749,
+      "evidence": "wc -w board_paper.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Honest and humane: it owns the result, protects graduate intake and names the year-one gap. But the in-year attrition figure contradicts its own phasing note, and the levers have no owners."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "The hiring-freeze year-one effect is listed as 1.5–2.5 points, while the note beside it says the full-year effect is 2.0–2.7 with 'roughly half' landing in year one (about 1.0–1.35). So the 5.2–7.9 in-year total is overstated and the 'up to 2.8' gap understated, by roughly 0.5–1.2 points. The legal points (works council from 50, art. 25 WOR, WMCO 20+) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Applied: the thin margin that led the board to demand an 8% cut is treated as the disappointing result. Paper: 'Leadership owns the result. A thin margin is a management outcome, not something employees caused'; reply: 'say plainly that the thin margin is leadership's result to own.'"
+    },
+    "best_insight": {
+      "value": "It protects a minimum graduate and trainee intake during the freeze, so cost control doesn't quietly cut the junior pipeline, and it sets the escalation order: reduced hours, then voluntary exits, then involuntary cuts.",
+      "evidence": "Paper sections 5 and 6."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Every sample passed: listing non-payroll categories with a percentage is easy to do without real work. Consider requiring the levers to be sized against a defined base and phased in-year versus run-rate."
+      },
+      {
+        "reason": "No assertion checks that in-year savings are phased. Several samples (B, E, G, H) present run-rate or over-phased attrition savings as Year-1 savings, which would mislead a board. Add an assertion that the in-year figure is distinguished from run-rate and adds up."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "This bundles six elements. In practice only samples with an explicit per-lever confidence column passed, so strong papers fail on one missing column. Consider splitting it, or saying whether ranges plus per-lever risks count as confidence."
+      },
+      {
+        "reason": "No assertion checks Dutch process sequencing: the board approves a target and framework, while workforce measures stay proposed decisions that the works council can still change (art. 25 WOR). This separated the strongest samples and is unchecked."
+      }
+    ],
+    "overall": "Owns the result and puts leaders first, but has an arithmetic slip on year-one attrition and no owners or confidence per lever."
+  }
+}

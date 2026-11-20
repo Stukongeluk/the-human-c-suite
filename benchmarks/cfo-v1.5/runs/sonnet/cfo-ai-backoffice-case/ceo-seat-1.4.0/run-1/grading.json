@@ -1,0 +1,84 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "'Where AI can and cannot take work (task level)': AP 36%, reconciliations 32%, reporting and close 20%, other 8% of hours 'after new AI-related work', with reasons; 'these shares must be re-measured on our own invoices and ledgers in the first 90 days'; 'A 90-day pilot (about SEK 2m) to measure real automation rates on AP and reconciliations'. The word 'baseline' is not used, but the pilot measures automation rates on current work before any number is committed."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "'One-off build and integration' -6.0/-3.0 and 'Run cost (licences, support, model oversight, controls)'; 'Freed hours are net of the work AI creates: reviewing outputs, handling exceptions, maintaining rules and data, and model oversight. We assume that eats 20% of gross savings'; every figure marked '(E)'."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "Recommendation delivered 'through attrition, a hiring freeze in affected teams and redeployment, with no redundancies in year 1'; 'Staff with ledger and process knowledge are our best candidates for exception handling, controls, data quality, analysis for underwriting and claims, and supervising the automation'; 'If the goal is speed and quality (faster close, fewer breaks, better data for underwriting and claims), the programme delivers that earlier than it delivers savings'."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'A named human owner approves every automated control and every external report'; 'exceptions, supplier queries and approvals stay human'; IFRS 17, Solvency II and 'DORA operational-resilience duties'; AI Act classification and workplace use. Thin: no explicit segregation of duties, audit trail or Finansinspektionen."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "MBL negotiation; Arbetsförmedlingen notice four months for 26-100 and required from five redundancies; LAS order within agreement area and unit; TRR; 'Option C assumes about 9% annual turnover ... a hiring freeze in these teams absorbs most of the reduction'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "'Approve the 90-day pilot ... Agree to review at day 90 and at 12 months, with the 25% three-year target as the planning figure and 30% as a stretch, not a commitment.' Recommendation: option C. It still gives an FTE planning figure (about 22), but not the 30%."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 787,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1870,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Clear, humane and well structured with task-level sizing and a promise sized to what can be kept, but the year-1 saving is overstated and the control and insurer-regulation coverage is thin."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": [
+        "Books full-year savings on the year-end cumulative FTE freed (6.1 FTE x SEK 0.9m = 5.5m in year 1; 14.7 FTE = 13.2m in year 2) although posts empty gradually through attrition; in-year savings are roughly half, so the recommended route's year-1 net is nearer -4.5m than the stated -2.0m."
+      ]
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it asks for a business case."
+    },
+    "best_insight": {
+      "value": "It limits the job-security promise to year 1 plus a review because 'you can only promise what you can keep', and cuts leadership bonuses before any frontline role.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks in-year versus run-rate timing of savings; G books full-year savings on year-end FTE, and several samples start attrition savings before the pilot gate."
+      },
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "Ambiguous when a sample keeps the 30% but moves it to year 3 (B, F) or gives 25% as the plan with 30% as a stretch (G). Say whether re-timing the 30% as a target counts as 'a 30% headcount number'."
+      }
+    ],
+    "overall": "Passes all six, though assertions 1 and 4 pass on thinner evidence than A, B or D."
+  }
+}

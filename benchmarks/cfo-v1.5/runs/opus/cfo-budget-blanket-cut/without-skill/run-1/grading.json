@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"Keep the 8% and keep it simple. But make the rules simple rather than the cut uniform. With 68% of opex in payroll, 'every cost centre cuts 8%' mostly means cutting the billable people who earn your revenue.\" Alike: \"It rewards padded budgets, punishes lean ones, and hides the trade-offs from the board.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "Section 1, \"First, pin down what '8% lower' means\": €8.3M versus €5.8M of actions (8% below 2026 versus below the 2027 baseline), \"Whether the target is in-year or the exit run-rate\", \"Whether the real objective is margin\", and \"Each 1% of extra price realisation is worth about €0.7M of EBIT\". Cash and covenants aren't named, but the margin question, the timing and the gap in money are explicit."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "Lever register: discretionary -12% (€0.5M), contractors to own bench (€1.5M), IT/software true-up (€0.5M), housing, lease cars, recruitment fees, for €3.4M run-rate non-payroll. \"full indexation of client contracts is one of the biggest levers you have\"."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"A hiring freeze with a weekly 30-minute exception panel... Backfill only... billable roles with demand, in practices at or above utilisation target; critical control and security roles. Natural turnover becomes the main payroll lever.\" \"Redeploy before any exit.\" Protect list: \"Training and certification (€0.7M)... Sales capacity backed by pipeline... named key-talent group\" (\"no cuts without an ExCo decision\"). Caveat: the base plan includes a redesign of ~7 support roles with '7 or fewer' forced exits, after redeployment."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": false,
+      "evidence": "No executive pay, bonus or perk measure appears anywhere in the reply or paper. Option C instead proposes \"A salary round 1 point below market drift\" for staff."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "The lever register gives base, run-rate, 2027, owner and timing/dependency, and the 2027 gap is explicit (\"Neither option delivers 8% inside 2027... about 5% in-year\"). But there is no confidence per lever and no list of what stops or waits; budget holders \"choose what to stop\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1462,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3283,
+      "evidence": "wc -w board-budget-approach.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "The most rigorous financial analysis in the set: a CPB-based baseline, revenue per billable FTE, Dutch sequencing, a reconciled lever register and a budget-holder note. But it never asks leaders to go first, and it even floats a below-drift salary round for staff."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Verified: CPB MEV 2027 (contract wages +3.8%, wage rate/labour cost per employee +4.4%, CPI +2.7%, AWVN 18 Sep 2026); the transition payment cap of €102,000 in 2026; the WMCO one-month waiting period unless the unions agree; the art. 25(6) WOR suspension; the arts. 31–31a WOR budget information right; afspiegeling by age group and service; DBA enforcement resumed in 2025. The arithmetic reconciles (e.g. 5.8 = 3.4 + 1.2 + 1.2; 2027 total 3.7)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills (other than staff skills), reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Applied: the thin margin that led the board to demand an 8% cut is treated as the disappointing result. No leader takes responsibility; leadership pay is never mentioned."
+    },
+    "best_insight": {
+      "value": "The board should approve the target and framework, not job cuts, so specific eliminations stay proposed decisions the works council can still change (art. 25 WOR). It also shows that afspiegeling means a uniform cut can't even target the bench.",
+      "evidence": "Reply section 6; paper sections 2 and 5.3."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Every sample passed: listing non-payroll categories with a percentage is easy to do without real work. Consider requiring the levers to be sized against a defined base and phased in-year versus run-rate."
+      },
+      {
+        "reason": "No assertion checks that in-year savings are phased. Several samples (B, E, G, H) present run-rate or over-phased attrition savings as Year-1 savings, which would mislead a board. Add an assertion that the in-year figure is distinguished from run-rate and adds up."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "This bundles six elements. In practice only samples with an explicit per-lever confidence column passed, so strong papers fail on one missing column. Consider splitting it, or saying whether ranges plus per-lever risks count as confidence."
+      },
+      {
+        "reason": "No assertion checks Dutch process sequencing: the board approves a target and framework, while workforce measures stay proposed decisions that the works council can still change (art. 25 WOR). This separated the strongest samples and is unchecked."
+      }
+    ],
+    "overall": "Excellent analysis and Dutch sequencing, but it fails leaders-first outright, and its lever register lacks confidence and a stop list."
+  }
+}

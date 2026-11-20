@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": true,
+      "evidence": "Base sheet runs month by month with Q1–Q4 totals; reply: 'Base case by quarter (net cash): Q1 −€0.4m, Q2 −€1.4m, Q3 −€0.7m, Q4 +€1.4m', exits 'Apr-Sep'; the fast case 'all out by 31 Mar' is treated 'as the ceiling, not the plan'."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "'What sets the timeline (check all of this with employment counsel)': art. 25 WOR 'while the decision can still change'; WMCO with 'employer-initiated settlement agreements count toward the 20'; NL notice 'one to four months'; §§111–112 BetrVG; §17 KSchG 'errors can void dismissals'; Sozialauswahl; DE notice 'up to seven months'."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "'Severance, social plan, outplacement −3.48', 'Legal and advisory −0.40', 'Work still to be done (10% of saving)', 'Rehiring (5% of roles, from Q4)', 'Extra voluntary leavers (20 people) −0.75', with 'every estimate in a yellow cell' and Assumptions marked 'ESTIMATE'; revenue loss is used in the break-even."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'don't put \"120 redundancies = €9m of savings in 2027\" in the board pack… about €4.1m gross in 2027 and a net cash effect of roughly −€1.1m'. Checked: 4.125 − 3.48 − 0.40 − 0.4125 − 0.2025 − 0.75 = −1.12; quarters −0.40 − 1.436 − 0.731 + 1.448 = −1.12; 2028 9.0 − 0.9 − 0.45 = 7.65."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "Sizes a fewer-jobs alternative on the same 2027/run-rate basis: 'a partial hiring freeze… saves about €2.1m in 2027 and €4.2m a year after, with no severance and no consultation delay' (workbook 'Hiring freeze option' sheet), against the redundancy's −€1.1m in 2027 and €7.65m in 2028, under 'Options side by side, including doing nothing. Redundancy should come last.' Only one alternative is sized (the rest need the ledger), and no cover cost is applied to the freeze."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "'A charge that recurs isn't one-off'; sensitivities ('one-off costs +25% gives −2.0… every exit one month later gives −1.8'); break-even ('about €5m of lost revenue… wipes out the 2027 net'); 'Key assumptions to challenge' listed; levers without data are not sized."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1012,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No .md files other than reply.md (workbook only)."
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "An honest monthly model with a quarterly view, sensible base timing, sensitivities, a break-even and a covenant-first question; the alternatives are thin but not invented."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "WOR, WMCO (settlements count), §§111–112 BetrVG, §17 KSchG, notice ranges and Kurzarbeit 12 months from January 2027 are all correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome. The sample says 'The board should also see leadership bonuses and pay taken first.'"
+    },
+    "best_insight": {
+      "value": "If the €9m is about a covenant, talk to the bank now: a waiver may be cheaper than a restructuring that is cash-negative until 2028.",
+      "evidence": "Reply, 'What I'd bring to the board instead', point 1."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+        "reason": "'Same basis' is ambiguous: same metrics (2027 and run-rate) or the same costing method (hidden costs and cover applied to the alternative too). This sample passes on metrics, but its freeze has no cover cost while the redundancy carries 10%."
+      }
+    ],
+    "overall": "Strong, honest model; alternatives could be fuller."
+  }
+}

@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: cfo-ai-backoffice-case
+expected_outcome: >
+  Sizes tasks rather than jobs with a measured pilot, counts the full cost, books the benefit as
+  capacity first with redeployment before any headcount effect, keeps financial controls and flags
+  supervision and AI rules, flags Swedish employment rules, and gives the board a staged plan
+  instead of a 30% headcount number.

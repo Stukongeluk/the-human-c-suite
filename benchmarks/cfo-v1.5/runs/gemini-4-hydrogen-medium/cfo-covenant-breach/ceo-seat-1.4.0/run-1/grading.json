@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Plan: '13-week rolling cash flow forecast + Q2–Q4 covenant bridge (base case and downside case)'; reply: 'A 13-week cash forecast, base and downside covenant scenarios, the owner's commitment, and pre-agreed downside triggers'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "Reply: 'paired with a request for a temporary Q2 covenant waiver or reset (e.g., to 3.75x–4.0x)'. Plan: 'Ask for a temporary Q2 covenant waiver or reset (e.g., to 3.75x–4.0x for two quarters) as a bridge, not a rescue'. Framed in the bank's terms: 'Credit committees look for cash visibility, covenant headroom, and owner commitment' and 'Build the Bank Pack (What Credit Committees Actually Want)'. The ask is raised at the review, months before the breach. It does not suggest calling the bank before the review."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "The no-job levers are listed and come first: 'Pull down timber/fabric/finished-goods inventory and WIP, tighten receivables, defer non-safety capex, freeze hiring...'. The plan heads them 'Immediate Net Debt & EBITDA levers (quantified)' but gives no amount for any of them. Only the overall gap is sized ('roughly a 2.8% improvement in Net Debt or EBITDA'). Nothing says how much headroom each lever buys."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": false,
+      "evidence": "The timing and one-off cost part is covered: 'Cash goes out before savings arrive... Q2 absorbs severance and legal costs with zero payroll relief before quarter-end'. But neither file checks how restructuring costs are treated in the covenant definition. There is no mention of add-backs, the EBITDA definition or the facility agreement."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "Reply: 'Leaders first: Pause or cut the owner's dividend/draw and freeze executive bonuses and pay before touching shop-floor jobs'. Plan: 'If needed, explore a temporary subordinated shareholder loan or equity cure as a backstop' and 'At the bank: Present the forecast, the owner's financial commitment, and the immediate cash levers'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Skilled people are protected ('risks losing scarce woodworking, CNC, and upholstery skills'), and counsel is flagged ('confirm timelines with Dutch employment counsel'; 'Engage Dutch employment counsel quietly on any contingent scenarios'). But if reductions remain, the only plan is option D, 'Targeted restructuring... Must follow WOR/WMCO consultation', plus 'Involve the Works Council early if cuts remain needed'. Nothing says the cut is done once, nothing covers decent treatment (package, support, how people are told), and the family firm's name is not mentioned."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 490,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 765,
+      "evidence": "wc -w covenant-bank-review-plan.md"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "The direction is sound and the plan is short and usable. But it never checks the covenant's add-back definition, sizes no levers, and states as fact that cuts bring 'zero payroll relief' and 'miss the covenant anyway' without modelling the timing."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule found. The WOR art. 25, WMCO 20-in-three-months, 1–4 month notice, transitievergoeding and WAB 4-day call-off rules are all correct. 'Zero payroll relief before quarter-end' is an overstatement if Q2 ends in June 2027, but it rests on an unstated timing assumption rather than a wrong rule."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Leaders first' and 'leaders carry the first cut' are present, but no leader says the responsibility for the forecast breach is leadership's."
+    },
+    "best_insight": {
+      "value": "It frames the waiver as 'a bridge, not a rescue', with a concrete target level and duration (3.75x–4.0x for two quarters), which gives the bank a specific, bounded ask.",
+      "evidence": "covenant-bank-review-plan.md, Week 3"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "All ten samples pass this. A 13-week forecast with base and downside cases is standard advice. To make it discriminating, require numbers for covenant headroom in each scenario by test date, or the actions each scenario would trigger."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This is a compound assertion: long-term protection, reductions done once and decently, and legal steps flagged for counsel. Most samples cover the legal steps but drop the one-round, humane-package part. Splitting it would show which part failed."
+      },
+      {
+        "reason": "No assertion checks whether the leaders own the outcome (that the forecast is leadership's to fix, not the staff's), or whether the sample models when the Q2 test actually falls (about seven months away on 20 November 2026). The samples differ sharply on both."
+      },
+      {
+        "assertion": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+        "reason": "This sample fails only on the covenant-definition half. The assertion works well here: it separates samples that understand add-backs from those that only argue timing."
+      }
+    ],
+    "overall": "A sound, concise answer that misses the covenant-definition check and gives no per-lever sizing."
+  }
+}

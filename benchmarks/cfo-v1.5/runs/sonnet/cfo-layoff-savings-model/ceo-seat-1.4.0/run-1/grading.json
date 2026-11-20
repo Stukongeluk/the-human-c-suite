@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": false,
+      "evidence": "Three timing scenarios expressed as 'Months of 2027 saving' (8/6/4), net 2027 +1.05/−0.30/−1.65, and a Timeline sheet ('Base case assumes payroll stops end of June'), but neither reply nor workbook shows the saving by quarter."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Reply: 'In the Netherlands the works council must be asked for advice before the decision is made, and 20 or more dismissals in one UWV area trigger a notification to UWV and the unions. In Germany… you negotiate an Interessenausgleich and Sozialplan, and the German collective-dismissal notification has to be right or the dismissals can be void'; 'Dutch notice runs one to four months and German notice up to seven'; 'please have counsel check the Dutch and German steps before the date is set'. The Timeline sheet maps each step to months."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "One-offs computed by country from tenure and pay: 'NL one-off: transition payment incl. uplift −1,250,000', 'DE one-off: severance / social plan −2,250,000', 'Transition support / outplacement −600,000', 'Legal and advisory −250,000'. Hidden costs: 'Leakage: backfill, overtime, contractors, lost output… 10%… ESTIMATE'. Thin: one bundled line, and extra attrition only as a remark ('the leakage assumption in my model is probably too low')."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'I would not put the €9 million in the board pack as a 2027 number… the 2027 net is roughly −€0.3 million. The €9 million is the full-year run-rate from 2028'. Checked: 4.5 × 0.9 = 4.05; 1.25+2.25+0.60+0.25 = 4.35; 4.05 − 4.35 = −0.30; workbook formulas give the same."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": false,
+      "evidence": "No alternative is quantified: 'These are non-core spend, vendors, energy… a hiring freeze with natural attrition, redeployment, and voluntary exits. I have no data on those, so I have not sized them.' Honest, but there is no comparison on the same basis."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "Assumptions sheet with a 'Source / status' column ('PLACEHOLDER', 'ESTIMATE'); Sensitivity sheet (months saved × one-off per head); payback per exit 'about 6.5 months'; 'Heads needed for EUR 9m net in 2027' = 'never in 2027' in base and slow; IAS 37 provision note ('confirm with the auditors… That changes the P&L view, but not the cash')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 907,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No .md files other than reply.md (workbook only)."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "An honest, compact and correct model with a useful sensitivity grid and a refusal to invent alternative savings, but there is no quarterly phasing and no sized alternatives for the board to weigh."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Legal and transition-payment points match the fact sheets. The Timeline note 'Announcing a decided 120 first can void the consultation' is loose wording for the real Enterprise Chamber and §113 risk, but not a wrong rule."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt states no bad outcome. The sample adds: 'If results disappoint, leadership owns that, in the paper and in the announcement.'"
+    },
+    "best_insight": {
+      "value": "Computes per-exit payback (~6.4 months) and shows that the headcount needed for €9m net in 2027 is 'never in 2027' at base and slow timing, so the target's impossibility shows in one cell.",
+      "evidence": "Scenarios sheet rows 19–20."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+        "reason": "This sample fails because it honestly declined to size levers without data. Make clear whether sizing at least one alternative from the given data (natural attrition at an assumed rate) is expected, so the assertion rewards comparison without rewarding invented numbers."
+      }
+    ],
+    "overall": "Honest and correct, but thin: no quarterly view and no alternatives on the same basis."
+  }
+}

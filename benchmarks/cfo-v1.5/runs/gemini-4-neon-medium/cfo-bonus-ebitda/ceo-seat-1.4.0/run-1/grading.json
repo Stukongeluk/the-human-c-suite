@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "Opens: 'Do not tie 100% of the 2027 management bonus to Adjusted EBITDA with restructuring excluded; instead...'. 'The trap: ... excluding it from a 100% EBITDA bonus pays management to cut headcount in Q4 whenever the commercial plan slips.'"
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": true,
+      "evidence": "Weighted scorecard: Unadjusted EBITDA 40%, FCF Conversion 20%, NRR (with GRR floor) 15%, Product & Service Reliability (uptime, P1/P2 recovery, regulatory/security audit) 10%, Regretted Attrition 10%, Team Stability & Key-Person Coverage 5%."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "'Restructuring in each of the last three years is an operating pattern, not a one-off'. 'Unadjusted EBITDA: Operating EBITDA including all severance, redundancy, and restructuring costs'. 'Narrow, pre-approved exclusions only ... No retroactive adjustments.'"
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": false,
+      "evidence": "No deferral or multi-year element. Malus/clawback is mentioned only as 'authority to reduce or cancel payouts (malus/clawback)' inside the safety gate. A definition lock and no retroactive adjustments guard against gaming, but the multi-year element is missing."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": false,
+      "evidence": "The plan's only rule is 'a mandatory downward review to executive bonus payouts before any payment is authorised'. The reply's 'leadership bonuses should be deferred or reduced first before any headcount action' applies only if covenant headroom is tight. No commitment that leaders' bonuses are cut first."
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "'Why this is a PE value problem': 'QoE will strip it out anyway', 'Healthcare buyers pay for durability and low key-person risk'. Usable draft: scorecard, payout curve, gates, scenarios (checked: 43.0% and 115.0% add up), data checklist. It has no participants, target percentages or leaver terms."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 692,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1264,
+      "evidence": "wc -w 2027-management-bonus-plan.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Persuasive in PE terms, with a clean scorecard and checked scenarios. But there are no deferral or clawback mechanics, and leaders face only a vague 'downward review'."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable claim found wrong. Scenario arithmetic verified."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "It doesn't say the three restructurings are leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Free cash flow conversion exposes the severance cash an add-back hides, and a key-person coverage metric targets the knowledge loss that repeated cuts cause.",
+      "evidence": "scorecard rows FCF and Team Stability"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "The wording 'a multi-year element, malus or clawback' can be read as three requirements or as 'a multi-year element such as malus or clawback'. Samples with clawback but no deferral (C, E, H) pass or fail depending on the reading. Name the requirements separately."
+      },
+      {
+        "assertion": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+        "reason": "'Leadership bonuses cut first' needs a bar. A cap at target in redundancy years (F) or a 'mandatory downward review' (H) is much weaker than releasing the management accrual before any role is cut (B) or zeroing executive pools first (D, I, J). Say what counts."
+      },
+      {
+        "assertion": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+        "reason": "'Defines the profit measure honestly' is met by capped or allowance-based add-backs (C, G) that still let savings count while part of the cost is excluded. Consider requiring that no cost is excluded while its savings are counted (symmetry)."
+      },
+      {
+        "reason": "No assertion checks that worked examples add up, or that hard gates don't create perverse effects. Zero bonus on any involuntary reduction (A, I) can deter a needed change or encourage disguised exits. A seasoned CFO would weigh both."
+      }
+    ],
+    "overall": "4/6: good scorecard and exit case. Fails on multi-year/malus and on leaders-first commitments."
+  }
+}

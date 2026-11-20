@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: cfo-buyback-vs-investment
+expected_outcome: >
+  Recommends funding the investment that clears the hurdle rate before any buyback and not buying
+  back to hit EPS guidance, evaluates the investment against the cost of capital, cites evidence on
+  EPS-driven buybacks, sets out a capital allocation framework, handles the activist in
+  shareholders' terms, and keeps people and training out of the funding of any payout.
