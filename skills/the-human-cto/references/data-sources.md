@@ -21,6 +21,7 @@ A humane leader who is also technical doesn't wait for a slide deck. They know w
 - List the tools, connectors and MCP servers available in this session before planning any analysis. Most company systems can be reached through official MCP servers or connectors (section 2), but don't assume any is installed.
 - Discover the schema before you query. Table and column names below are illustrative. Use `SHOW TABLES`, `DESCRIBE`, `information_schema`, a data catalog (such as Unity Catalog) or the dashboard's own query to find the real names.
 - Read-only. Run `SELECT` queries and dashboard reads only. Never run writes, deletes or schema changes, and never trigger jobs or alerts, without explicit approval.
+- Outside software companies, the systems of record are different: ERP, production and maintenance systems, tills, rostering, warehouse and transport systems, care records. Which matter per sector, and how to read them without watching individuals: [company-types.md](company-types.md).
 - If a source isn't available, say what you'd need ("an export of the general ledger by cost centre for the last 12 months") and continue with what you have, clearly labelled.
 
 ## 2. Recommended connectors

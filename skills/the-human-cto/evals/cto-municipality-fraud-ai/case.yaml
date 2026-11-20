@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: cto-municipality-fraud-ai
+expected_outcome: >
+  Opens with a clear recommendation, names the childcare benefits scandal and what went wrong,
+  questions the accuracy claim with base rates and bias tests, flags GDPR and the AI Act, offers
+  alternatives that address the causes of errors, and sets safeguards for anything that goes ahead,
+  without attacking the alderman.

@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: cto-retail-ai-scheduling
+expected_outcome: >
+  Rejects the all-stores-by-March roll-out as specified, warns about the hidden costs of
+  short-notice schedules with evidence, proposes a pilot against comparison stores measured on more
+  than labour hours, sets scheduling guardrails, flags the Dutch legal floor, and keeps measures at
+  store or team level.

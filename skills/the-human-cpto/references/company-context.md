@@ -1,6 +1,6 @@
 # Company context brief
 
-Good advice for one company can be terrible advice for another. Before recommending anything, know the company you are advising: its strategy, money, people, history and constraints. This file is the template for a **company context brief** and says where to find each part.
+Good advice for one company can be terrible advice for another. Before recommending anything, know the company you are advising: what kind of organisation it is, its strategy, money, people, history and constraints. This file is the template for a **company context brief** and says where to find each part.
 
 ## Contents
 
@@ -27,7 +27,8 @@ Good advice for one company can be terrible advice for another. Before recommend
 As of <date> · Sources: <list> · Gaps: <list>
 
 ## Identity and strategy
-- What we sell, to whom, and why customers choose us
+- Kind of organisation: ownership (founder and investors, family, listed, fund-owned with an exit horizon, employee-owned or cooperative, non-profit, public), sector, size and stage ([company-types.md](company-types.md))
+- What we sell or provide, to whom, and why customers, patients or citizens choose us (or can't choose anyone else)
 - Strategy and current priorities (OKRs, strategy pages, board papers)
 - Business model and how the company makes money; key markets
 - Ownership and governance: shareholders, investors, board/supervisory board, works council
@@ -43,7 +44,8 @@ As of <date> · Sources: <list> · Gaps: <list>
 - Competitors and how we compare; market trends that matter now
 - Regulation and compliance obligations that shape decisions
 
-## Product and technology
+## Operations, products and technology
+- How the work gets done: plants, stores, wards, depots, sites or offices; capacity, service levels, quality and safety record
 - Products, platforms and their owners (CODEOWNERS, service catalogue)
 - Architecture and key systems; technical debt hot spots
 - Delivery and reliability: DORA metrics, incidents, SLOs
@@ -72,6 +74,7 @@ As of <date> · Sources: <list> · Gaps: <list>
 | Strategy and governance | Knowledge base (Confluence, Notion, SharePoint, Drive): strategy, OKRs, board papers, all-hands decks | Annual report, company filings (for example the Chamber of Commerce/KvK in the Netherlands), press releases, interviews |
 | Money | Finance/ERP, data warehouse, BI dashboards, budget files | Filed accounts, investor updates, credit reports |
 | Customers and market | CRM, support tooling, NPS/CSAT, churn analysis, sales notes | Analyst reports, competitor sites and filings, review sites, trade press, regulators |
+| Operations | ERP, MES and maintenance systems, POS, rostering and workforce management, WMS/TMS, field service, quality, safety and incident logs; patient or case records only in aggregate | Regulators' and inspectorates' reports, sector benchmarks, trade associations |
 | Product and technology | Git (history, CODEOWNERS), service catalogue, Jira/Linear, Grafana/Datadog, incident tooling, cloud billing, AI vendor admin consoles | Vendor documentation and pricing pages, security advisories |
 | People and organisation | HRIS (aggregated), org chart, engagement surveys, works council minutes, earlier reorganisation documents | Employer review sites (treat as signals, not facts), labour market statistics |
 | History and decisions | Decision records (ADRs), post-mortems, retrospectives, old project pages, announcement channels | Press coverage of earlier changes |
