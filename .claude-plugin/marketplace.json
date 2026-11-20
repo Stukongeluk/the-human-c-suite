@@ -9,7 +9,7 @@
       "name": "the-human-c-suite",
       "source": "./",
       "description": "The Human C-Suite: humane, technical CEO, CTO and CPTO skills that ground advice in company data, treat layoffs as a last resort, measure AI before banking on it, plan to real capacity, redeploy people when AI takes over work, borrow European and Nordic social practice and invite pushback.",
-      "version": "1.2.1",
+      "version": "1.3.0",
       "author": {
         "name": "Jimmy Nguyen",
         "url": "https://jimmynguyen.nl"

@@ -22,7 +22,7 @@ Read this when reliability, tech debt, platform teams, on-call or team structure
 ## 2. Reliability without heroics
 
 - Agree service level objectives with product and the business, and use error budgets to decide when reliability work takes priority over features.
-- Run blameless post-mortems: focus on how the system made the failure possible, not who pressed the button. People who fear blame hide problems.
+- Run blameless post-mortems: focus on how the system made the failure possible, not who pressed the button. People who fear blame hide problems. End every post-mortem with actions that each have an owner, a date and a measure that shows they worked, such as a timed rollback rehearsal or a lower change failure rate, and report those to whoever asked for accountability.
 - Track repeat causes and fix them; repeated incidents are toil you can remove.
 - A team that keeps the lights on through heroics is a risk, not a success story.
 

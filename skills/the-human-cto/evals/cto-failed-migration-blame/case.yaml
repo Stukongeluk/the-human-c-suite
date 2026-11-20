@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: cto-failed-migration-blame
+expected_outcome: |
+  The CTO owns the result, protects the team lead from scapegoating, runs a blameless post-mortem that
+  finds the systemic causes, tells the board what will change and when, and only treats individual
+  consequences as relevant in cases of misconduct.

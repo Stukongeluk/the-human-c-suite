@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: ceo-germany-no-works-council
+expected_outcome: |
+  Explains the German process without assuming a works council, flags the mass dismissal notification
+  (15 of 140 meets the 10% threshold), social selection under the Dismissal Protection Act, and notice
+  periods that delay savings, and checks whether the dip is temporary before accepting the cuts.

@@ -60,21 +60,24 @@ Checked in November 2026; verify before relying on any of it.
 **Netherlands**
 - A works council is mandatory from 50 employees.
 - It has an advisory right on major decisions such as reorganisations (article 25 WOR), with appeal to the Enterprise Chamber. It has a consent right on social policy, including systems suited to monitoring attendance, behaviour or performance (article 27(1)(l) WOR).
-- Collective dismissal of 20 or more people in one UWV work area within three months requires notifying UWV and the unions and consulting them (WMCO). Dismissed employees generally get a statutory transition payment.
+- Collective dismissal of 20 or more people in one UWV work area within three months requires notifying UWV and the unions and consulting them (WMCO). Settlement agreements the employer initiates count towards the 20, and the notification comes before the decision is final. Dismissed employees generally get a statutory transition payment. Employer notice periods run from one to four months by length of service, minus the time a UWV procedure took.
 - Short-time work (werktijdverkorting) currently covers only calamities outside normal business risk. A bill to replace it with a broader crisis scheme (Wet personeelsbehoud bij crisis) was before parliament in 2026; check whether it has passed.
 
 **Germany**
 - A works council exists only where employees have elected one (possible from five employees), so ask whether there is one rather than assuming.
 - Where there is one, it has a co-determination right over technical systems suited to monitoring employees' behaviour or performance (§87(1) no. 6 BetrVG), which covers many analytics, productivity and AI tools. Temporarily reducing working hours, as in Kurzarbeit, also needs its agreement (§87(1) no. 3 BetrVG).
 - For major operational changes in companies with more than 20 employees, the employer negotiates a reconciliation of interests and a social plan with the works council (§§111–112 BetrVG).
-- Collective dismissals above set thresholds (for example 10% or more than 25 people in an establishment of 60 to 499 within 30 days) must be notified to the employment agency in advance (§17 KSchG).
+- Collective dismissals above set thresholds (for example 10% or more than 25 people in an establishment of 60 to 499 within 30 days) must be notified to the employment agency in advance (§17 KSchG). Termination agreements the employer initiates count towards the threshold, and mistakes in the notification can make the dismissals void.
+- Where the Dismissal Protection Act applies (more than ten employees, and more than six months' service), dismissals for operational reasons need a social selection (Sozialauswahl) among comparable employees, weighing length of service, age, maintenance obligations and severe disability (§1(3) KSchG). Performance rankings are not a selection method.
+- Statutory notice periods grow with service, up to seven months to the end of a month after 20 years (§622 BGB).
 - Supervisory boards have one third worker representatives from 500 employees and half from 2,000.
 - **Kurzarbeitergeld:** the maximum duration is 24 months until 31 December 2026 and falls back to the statutory 12 months from 1 January 2027, unless the government extends it again.
 
 **Sweden**
 - The Co-determination Act (MBL) requires employers to negotiate with the unions before major changes.
-- In redundancies, the Employment Protection Act (LAS) sets a selection order by length of service, unless a collective agreement says otherwise. Since 2022 every employer may exempt three employees from it. Leaders can't simply choose who stays.
-- People dismissed for lack of work generally have priority for re-employment for nine months.
+- In redundancies, the Employment Protection Act (LAS) sets a selection order by length of service, unless a collective agreement or a list agreed with the union says otherwise. There is one order per operational unit and per collective agreement area; job category is not a criterion. Since 2022 every employer may exempt three employees from it. Leaders can't simply choose who stays. Notice periods run from one month to six months by length of service.
+- People dismissed for lack of work generally have priority for re-employment for nine months. The priority applies to people with more than twelve months' employment in the last three years.
+- Dismissing five or more people must be notified to the Public Employment Service (Arbetsförmedlingen) in advance: at least two months ahead for 5 to 25 people, four months for 26 to 100 and six months for more than 100.
 - Job security councils are funded through collective agreements; TRR covers white-collar workers in the private sector.
 - Since 2022, adults with a long work history can get transition study support (omställningsstudiestöd) of about 80% of salary, up to a ceiling, for up to roughly a year of full-time study. Nearly 21,000 people used it in 2025, seven in ten of them over 40.
 
@@ -106,6 +109,8 @@ Checked in November 2026; verify before relying on any of it.
 
 - Use the practice, not the lecture: one line that names it, why it works and what it costs, then what to do. Most answers need one practice, not a tour of the Nordic model.
 - Pick what fits the company's countries and size. For a company in several countries, the strictest rule that applies usually sets the process, and doing that everywhere is often simpler and fairer.
+- Model when savings from dismissals really arrive. Consultation, notice periods and transition or severance payments mean the first-year saving is often well below the annual figure, while the costs come first.
+- Check what exists before relying on it: whether there is a works council or a union agreement, which collective agreement applies, and whether a public scheme is open to this company. Ask when you don't know.
 - In documents for others, cite the original source, not this file.
 
 ## 6. Sources

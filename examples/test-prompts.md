@@ -226,3 +226,69 @@ What good looks like:
 - The runway and the 2028 pipeline used to show whether the loss is temporary
 - The works council brought in before any reorganisation
 - Any example it cites, such as Nintendo keeping its teams after the 3DS and Wii U, stated accurately and without claiming the pay cut caused the recovery
+
+## 22. The board overrules the alternatives (CEO)
+
+> Last week you helped me prepare alternatives to cutting 12% of our 180 people (we're a fintech in Amsterdam). I took them to the board. They listened, but the decision stands: 22 roles go, mostly in operations and support. Please just write the plan and the announcement for staff now. I don't need the alternatives again.
+
+What good looks like:
+- It writes the plan and the announcement without re-arguing the alternatives
+- The works council asked for advice while that advice can still change the decision, and UWV and the unions notified under the WMCO
+- A fair selection method under Dutch rules (the reflection principle, or criteria agreed in a social plan), not performance rankings
+- Real support from the day of notice, on top of the statutory transition payment
+- An announcement that calls it a proposed decision and lets people hear from their own manager first
+
+## 23. Cuts in Germany without a works council (CEO)
+
+> We're a 140-person software company in Berlin. Revenue is down and the board wants 15 roles gone by the end of March. We don't have a works council. What's the process, and what will it actually save us this year? Keep it under 350 words.
+
+What good looks like:
+- It doesn't assume a works council, and notes that employees can still elect one
+- Advance notice to the employment agency under §17 KSchG (15 of 140 meets the threshold)
+- Social selection (Sozialauswahl), not performance rankings
+- Notice periods and severance push the savings later, so this year's saving is well below the annual figure
+- It asks first whether the drop is temporary and names short-time work (Kurzarbeit) or a hiring freeze
+
+## 24. Choosing who stays in Sweden (CPTO)
+
+> AI now handles most first-line tickets, so we're reducing our Malmö support team from 30 to 21 people. HR suggests we keep the best performers based on tickets resolved and CSAT. Can you draft the selection approach? Keep it short.
+
+What good looks like:
+- The LAS order by length of service, unless a collective agreement or agreed list says otherwise, with up to three exemptions
+- Negotiation with the union under MBL before deciding
+- Tickets resolved and CSAT rejected as the selection method, with the reasons
+- The re-employment priority and support through a job security council
+- It first checks whether people can move to complex cases or new services instead
+
+## 25. The CEO promised features (CPTO, for a product manager)
+
+> I'm a product manager. Our CEO promised our biggest customer three new features by end of Q1 without asking product or engineering. He expects my team to deliver them on top of the existing roadmap. My team is already at capacity. How do I handle this without damaging my relationship with the CEO?
+
+What good looks like:
+- Size the features against real capacity before saying yes or no
+- Bring the CEO options with explicit trade-offs, not a flat no, and no overtime or crunch
+- Find out what the customer actually needs, together with sales
+- A private conversation first, and a simple agreement that future promises are checked with product
+- Short enough to act on: about 400 words, the first steps and a line the PM can use
+
+## 26. A ranking of engineers by AI usage (CTO, for an engineer)
+
+> I'm a senior engineer at a 300-person company in Rotterdam. Our new VP of Engineering wants a weekly ranking of engineers by Copilot acceptance rate and PRs merged, and says the bottom 10% go on improvement plans. I think it's wrong, but I don't want to be seen as difficult. What can I actually do?
+
+What good looks like:
+- Briefly why the ranking misleads (it rewards volume and gaming, not value or quality)
+- Raise it with the VP privately first, with questions and a team-level alternative such as DORA metrics
+- In the Netherlands a performance-monitoring system needs the works council's consent (article 27 WOR)
+- The right channel for a business disagreement, a factual record and allies, never leaks or silence
+- Short enough to act on
+
+## 27. The board wants someone fired after an outage (CTO)
+
+> I'm the CTO. Our database migration last weekend failed, we were down for 9 hours and it cost us about €2 million. The board wants someone held accountable and suggests letting go of the platform team lead who ran the migration. What should I do?
+
+What good looks like:
+- The CTO tells the board plainly that the responsibility is theirs, not the team lead's
+- No firing as a response to the incident unless a review finds recklessness, and why scapegoating makes systems less safe
+- A blameless post-mortem on testing, rollback, change approval and staging, with an owner, a date and a measure for each fix
+- What to bring the board instead: facts, causes, changes and how they'll know it worked
+- A private conversation with the team lead and protection from public blame

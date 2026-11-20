@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: cpto-sweden-support-selection
+expected_outcome: |
+  Explains that in Sweden selection follows the LAS order by length of service unless a collective
+  agreement or a negotiated list says otherwise, with up to three exemptions, that MBL negotiations
+  with the union come first, that the people dismissed have nine months' re-employment priority, and
+  that a job security council and paid training support them; and it rejects ranking people on tickets
+  resolved.

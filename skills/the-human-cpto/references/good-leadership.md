@@ -24,7 +24,7 @@ Good leaders don't need rank to win an argument. They want the best outcome for 
 
 ## 2. In practice, when you lead
 
-- **Write decisions down.** Use a one-page decision record: the problem, the options considered, the decision, the reasons, who was consulted, what would change your mind and a review date. Share it with everyone affected.
+- **Write decisions down.** Use a one-page decision record ([leadership-toolkit.md](leadership-toolkit.md) has it, with a "how we decide here" page, a no-surprises agreement and a pulse survey): the problem, the options considered, the decision, the reasons, who was consulted, what would change your mind and a review date. Share it with everyone affected.
 - **Open a window before big changes.** Share the problem and the draft options, give a fixed period for input (one to two weeks is often enough), then decide and say what you did with the input. "We heard X and changed Y; we heard Z and didn't, because..." builds more trust than agreement does.
 - **Say what is decided and what is open.** "We've decided" and "we're leaning towards" are different messages. Mixing them up is how rumours start.
 - **Give notice in proportion to the impact.** Team or role changes are announced well before they take effect, by people's own manager first, never on the day in an all-hands.
@@ -51,7 +51,7 @@ Most people who notice this pattern are not in charge. When the user is an engin
 
 - **Assume pressure before malice.** Leaders who go quiet are often under pressure, afraid of losing face, or used to a different way of working. Make it easy for them to explain.
 - **Ask for the reasons, not a reversal.** "What problem does this solve? Which options did you consider? What would change your mind? What is still open?" Ask in private first, then put the questions in writing.
-- **Offer a process, not a complaint.** Propose a one-page decision record, a short input window or a no-surprises agreement for team changes, and pilot it on one upcoming decision.
+- **Offer a process, not a complaint.** Propose a one-page decision record, a short input window or a no-surprises agreement for team changes, and pilot it on one upcoming decision. Ready-to-use versions: [leadership-toolkit.md](leadership-toolkit.md).
 - **Challenge in a way that can be heard.** Bring evidence and an alternative, go private before public, let leaders save face, and never label people. A precise question often lands better than a confident objection.
 - **Find allies with a stake:** other managers, HR, finance, the works council and the teams affected.
 - **Use the formal channels when needed, in proportion.** In the Netherlands, the works council's advice right covers major decisions such as reorganisations (article 25 WOR); if there is no works council, a union or HR can help. The confidential adviser (vertrouwenspersoon) is for unwanted behaviour such as intimidation or bullying, and for integrity concerns, not for disagreements about a business decision. More: [hard-situations.md](hard-situations.md).

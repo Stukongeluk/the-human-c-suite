@@ -67,7 +67,7 @@ the-human-c-suite/
 └── examples/test-prompts.md            # more prompts to check behaviour by hand
 ```
 
-Every skill is self-contained, so you can install one seat on its own. The files the seats share live once in `shared/`. Examples are coaching, people and change, good leadership, European and Nordic practice, company context, data sources, hard situations, AI in engineering and tech evaluations. `scripts/sync_shared.py` copies them into each skill, so a fix lands everywhere.
+Every skill is self-contained, so you can install one seat on its own. The files the seats share live once in `shared/`. Examples are coaching, people and change, good leadership, the leadership toolkit, European and Nordic practice, company context, data sources, hard situations, AI in engineering and tech evaluations. `scripts/sync_shared.py` copies them into each skill, so a fix lands everywhere.
 
 Each skill folder holds:
 - `SKILL.md`: the skill itself, with non-negotiables, a way of working, coaching, and a routing table for its reference files;
@@ -134,6 +134,17 @@ The seats work best when they can read your real systems. Without them, each sea
 
 Connect them read-only and with the user's own permissions, and add write access per tool only when a task needs it. The seats' `references/data-sources.md` has the read-only setting for each one.
 
+### Use it without AI
+
+Good habits don't need an agent. [`shared/leadership-toolkit.md`](shared/leadership-toolkit.md) has four templates to copy and fill in:
+
+- **Decision record:** one page with the problem, the options, the decision, the reasons, who was consulted and what would change your mind.
+- **How we decide here:** who decides what, how people disagree, and how decisions are shared.
+- **No-surprises agreement:** leaders' promise about notice, input windows and who hears about a change first.
+- **Pulse survey:** seven statements and one open question to check whether people feel heard.
+
+Start with one decision record on one upcoming decision, and build from there.
+
 ## What it is not
 
 - Not legal, financial or HR advice. It flags where employment law, works councils, unions, data protection and the AI Act come in; humans and their advisers decide.
@@ -142,7 +153,28 @@ Connect them read-only and with the user's own permissions, and add write access
 
 ## Does it help?
 
-Every test case ran three times with and three times without the skill, on Claude Sonnet and Claude Opus; the version 1.2 cases compare against version 1.1 instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder.
+Every test case ran with and without the skill, on Claude Sonnet and Claude Opus; the version 1.2 and 1.3 cases compare against the previous version instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder.
+
+### Version 1.3: leaders go first, shorter advice for individuals
+
+Seven new cases, each run twice with version 1.3 and twice with version 1.2.1, on Claude Sonnet and Claude Opus, graded blind. Two runs per setup is a small sample, so read the numbers as direction, not precision.
+
+| Case | Model | Version 1.3 | Version 1.2.1 |
+|---|---|---|---|
+| A flop and a board that wants 15% cuts | Claude Sonnet | 12 of 12 checks | 8 of 12 checks |
+| | Claude Opus | 12 of 12 checks | 10 of 12 checks |
+| Advice to one person: a PM with a promised feature, an engineer facing a ranking, a CTO after an outage | Claude Sonnet | 34 of 36 checks | 26 of 36 checks |
+| | Claude Opus | 36 of 36 checks | 29 of 36 checks |
+
+**What version 1.3 added:**
+- where something had gone wrong, a leader in the advice said plainly that the result was theirs in 7 of 8 Sonnet runs (against 3 of 8) and 8 of 8 Opus runs (against 4 of 8);
+- after the flop, leadership owned the result and took the first and largest cut in 4 of 4 runs, against 0 of 4 with version 1.2.1, presented as a signal of trust rather than the savings plan;
+- advice to one person came in at 430 to 600 words with the first steps and a line they can use; version 1.2.1 wrote 770 to 1,060 words, and most of its missed checks were length;
+- runs with a factual error: Sonnet 2 of 14 (against 3), Opus 0 of 14 (against 2).
+
+**What didn't separate:** the board that overrules the alternatives, cuts in Germany without a works council, and choosing who stays in a Swedish support team. Both versions wrote the plan when asked, used the right selection rules and flagged the notifications, so those checks barely moved. Version 1.3 costs about 1% (Sonnet) to 4% (Opus) more tokens than version 1.2.1.
+
+The first draft of the shorter-replies rule ("the first 300 to 500 words") still let Sonnet run to 600 to 800 words; the final wording ("about 400 words and never more than 500") fixed that, and those three cases were rerun.
 
 ### Version 1.2: European practice, connectors and good leadership
 
