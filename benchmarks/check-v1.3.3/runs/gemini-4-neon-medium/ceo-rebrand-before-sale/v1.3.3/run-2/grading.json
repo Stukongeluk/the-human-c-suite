@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "'The trap is treating an 18-month profit target as a headcount and branding exercise when the actual leak is customer retention.' Problem statement: 'Our exit valuation in 18 months is threatened by accelerating customer churn and a 25-point drop in NPS'."
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "'Customer retention war room (top priority): Analyse the 25-point NPS drop and rising churn by entity... resolve the top 5 recurring product/service defects.' Evidence: 'Segment by acquired entity, customer tier, and verbatim root causes in CRM/support'; 'top churn reasons by acquired entity'; 'Support / Jira: Top 5 recurring customer defects driving the NPS drop'."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "'Minimal brand wrapper: Defer the full Q1 rebrand. If commercial clarity is needed for cross-selling or buyers, use a lightweight endorsement (\"Company X, part of [Group]\") at minimal cost'."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "'Three restructures in 24 months have already created hand-off friction and organisational fatigue without resolving post-M&A integration'; 'productivity dips and top performers leave right before due diligence begins'. Alternative: 'Remove toil, not layers'."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "'Contractors often hold undocumented knowledge of legacy logistics systems. Keep the ones critical to delivery long enough for a paid handover'. Cutting juniors 'hollows out succession'. 'Capture faster, reversible EBITDA first (Days 1–90)', then a Month 6 gate."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": false,
+      "evidence": "Owners' terms are strong: 'a buyer in vendor due diligence... will scrutinise gross/net retention, NPS, customer references, and key-person risk'. Phases have months. But owners appear only for accounts ('Assign executive owners to the top 20 at-risk accounts'). The scorecard lists metrics without targets, and the plan only recommends publishing '3–5 group priorities' instead of giving them with owners."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 792,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2192,
+      "evidence": "wc -w of the board plan .md in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clearly wrong rule. Imprecise: 'Sozialauswahl, § 1(3) KSchG, which prohibits targeting roles by seniority/age group rather than applying statutory social criteria'. Social selection itself weighs tenure and age, which tends to expose short-tenure juniors first, though the core point (criteria applied among comparable employees) is right. Correct: DrittelbG from 500; §17 KSchG; §87(1) no. 6 BetrVG; an exit ~Q2 2028; the board 'week of 23 November 2026'. It also rightly flags Scheinselbstständigkeit/AÜG exposure."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep only matched 'Betriebsänderung')."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'The integration friction, organisational churn, and drop in customer satisfaction over the last 24 months are leadership's responsibility.'"
+    },
+    "best_insight": {
+      "value": "Auditing contractors for Scheinselbstständigkeit and AÜG exposure before ending engagements is a real due-diligence risk a buyer's lawyers would find, and no assertion covers it.",
+      "evidence": "Not covered by the six assertions."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+        "reason": "Passed in all 12 samples: every sample opened by rejecting the three moves on churn grounds. As worded it can't separate 'leads with the customer problem' from 'leads with stopping the rebrand'. Consider requiring the first sentence or recommendation to name customer retention as the top priority."
+      },
+      {
+        "assertion": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+        "reason": "Passed in all 12 samples (all deferred the rebrand behind an endorsement line), so it doesn't discriminate on this case."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "Bundles four things (direction, owners/measures/dates, short list, owners' terms). Every sample made the case in the owners' terms; the verdict turned almost entirely on named owners. Splitting it would show which part fails."
+      },
+      {
+        "reason": "No assertion checks German labour-law accuracy, though most samples made specific claims, and several got rules wrong (the §111 BetrVG threshold, 'any targeted reduction needs a social plan', social-selection direction) or assumed a works council exists. Consider an assertion that the reply checks for a works council rather than assuming one, and states the consultation rules correctly or not at all."
+      },
+      {
+        "reason": "Leadership ownership of the NPS drop separated samples (B, C, E, G, I, J, L did it; A, D, F, H, K did not) and is central to the scenario, but it is only an extra check. Consider promoting it to an assertion."
+      }
+    ],
+    "overall": "Clear customer-first diagnosis with evidence sources and a well-argued case against the restructure; it lacks owners and targets for its priorities."
+  }
+}

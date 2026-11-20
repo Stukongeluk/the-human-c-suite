@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "It splits the drop: 'Split the 35% drop into the part that will come back and the part that won't.' It uses the customers' own forecasts as evidence: 'Only one customer says its cut is permanent.' And it makes the answer depend on the split: 'your adviser is right if most of the drop is permanent and cash can't carry everyone through 2027'. The table also shows '~€1.8M if half the drop is temporary; ~€0.5M if none is', and the reply asks 'how much of each one's cut is permanent?'"
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "Short-time work only for the temporary part: 'Bridge the temporary part with Kurzarbeit... It is legally only for a drop that will pass.' Its conditions are flagged: 'Kurzarbeit needs their agreement anyway (§87(1) no. 3 BetrVG)', 'holiday and working-time balances go first (§96 SGB III)', and 'The 24-month extension ends on 31 December 2026, so plan for 12 months'. There is a real plan for the structural part: 'retirements, partial retirement, voluntary packages and moves into service, retrofit and new customers', Qualifizierungsgeld, and 'Ask your engineers which machines fit other sectors, and ask the customer going electric what its new lines will need.'"
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": false,
+      "evidence": "It is strong on the forecast and scenarios: 'Build a 13-week cash forecast and 2027 base and downside cases', 'Take the bank a plan with scenarios and triggers, not a headcount number', the IDW S 6 question and a Bürgschaftsbank guarantee. But it never mentions covenants or covenant headroom, one of the four named items. 'Without the credit line, how many weeks of cash do you have?' is about liquidity, not covenant headroom."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "Non-job levers come first: 'Free up cash (down payments, inventory, receivables)'. The owner goes first: 'Go first, visibly. Suspend your dividend and drawings, and cut your own and your family's pay before anyone else's.' Then 'Freeze hiring' and 'end agency and fixed-term contracts', all before any dismissal."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": true,
+      "evidence": "Apprentices: 'Apprentices can't be dismissed for business reasons after probation (§22 BBiG), and shouldn't be.' Scarce skills: 'mostly younger skilled workers would go, the ones you need for the next 20 years.' Any reductions happen once and decently: 'a transfer company comes before any dismissal... Any dismissals after that: one round, under a social plan.' The works council is brought in now, the German steps are named (§17 KSchG, §1(3) KSchG social selection, §112a BetrVG), and it says 'This isn't legal advice: check the process with employment counsel, or Südwestmetall'."
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": true,
+      "evidence": "'About your grandfather. His record is worth protecting, but not at the cost of the company. You may not be able to promise that nobody ever leaves. You can promise that you go first, that you decide with your people rather than about them, and that nobody leaves without support.' Reputation is weighed as an asset, with 'your name in the region' listed as a risk of dismissals, and so is the long term ('the ones you need for the next 20 years')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 939,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: §17 KSchG threshold; §112a BetrVG (20% or at least 37 in establishments of 60-249, so 45 of 210 triggers an enforceable social plan); §622 BGB up to seven months; §87(1) no. 3 BetrVG; §96 SGB III leave and balances first; 4. KugBeV end date; §82a SGB III Qualifizierungsgeld (10% under 250 staff plus a works or collective agreement, verified on gesetze-im-internet.de); §111 SGB III 12 months; §22 BBiG; Trevor & Nyberg 31%; and the Kurzarbeit arithmetic (about 70% of idle-hour cost saved, 10-12% net pay loss at 30% fewer hours), which is plausible. Simplification, not counted: social selection also allows key performers to be exempted (§1(3) sentence 2 KSchG). The web search budget ran out, so Qualifizierungsgeld, §112a and §111 were checked against the statute pages directly."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'skill' appears only as 'skilled workers' and 'Young skills lost'; no talk of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Say it plainly to the bank and to staff: \"We became too dependent on two customers. That happened on my watch, and fixing it is my job.\"'"
+    },
+    "best_insight": {
+      "value": "It looks for a Bürgschaftsbank Baden-Württemberg guarantee on part of the credit line and puts a transfer company before any dismissal, giving the bank and the staff a route that neither 'fire 45' nor 'fire no one' offers.",
+      "evidence": "Step 1 and step 5 of 'What I'd do'."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "Both samples fail this only because neither mentions covenants or covenant headroom, though both reject a headcount-only plan and Sample A explicitly builds a 13-week forecast with base and downside cases. If covenant headroom is the point, keep it; otherwise split it into its own assertion so this one can separate Sample A's explicit forecast-and-scenarios from Sample B's request for a forecast."
+      },
+      {
+        "reason": "No assertion checks when dismissal savings actually arrive. Both samples modelled that 45 dismissals save little or even cost cash in 2027, the year the bank looks at. That is the decisive argument here, and a reply that simply said 'don't fire anyone' would still pass the current set."
+      },
+      {
+        "reason": "No assertion checks that the reply asks what 'restructuring plan' the bank actually means (a full IDW S 6 opinion versus a forecast with measures). Both samples raised it, and it changes the timeline and the fees."
+      }
+    ],
+    "overall": "The assertions are well aimed but don't discriminate here: both samples pass 5/6 and fail the same covenant-headroom item, and the cash-timing argument isn't tested."
+  }
+}

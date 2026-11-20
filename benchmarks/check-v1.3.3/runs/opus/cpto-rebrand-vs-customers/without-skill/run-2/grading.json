@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "'Don't set Q1 up as \"rebrand vs. customers\". Set it up as \"a rebrand that works\"... Push back, with numbers, on one specific assumption: that it needs the *whole* organisation.' The recommendation B is 'Rebrand plus a protected customer team'."
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "Each of the four parts is sized separately ('New name in the app... one or two teams, plus a few days from everyone else'; 'Design system. Hard and slow. A realistic Q1 goal is design tokens, core components, and the most-used screens'; 'New domain. A small team, high risk, and hard to undo'), with 'Ask each lead for an honest estimate in people-weeks'. The draft has a people-weeks table per workstream. Weakness: the Q1 part still takes 'two-thirds to three-quarters of capacity'."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "'Which accounts have raised each of the three issues, their ARR, and their renewal dates in H1'; 'NPS detractors and comments, split by legacy company and by theme'. The draft has a per-issue table, the integration is prioritised if it corrupts financial data, and reports are limited 'to the two or three customers ask for most'. Measures: 'Integration sync failure rate', 'Invoice run time (p95)', 'Ticket volume on the three themes', 'Renewal rate of the at-risk group'."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Options A/B/C with trade-offs ('The fixes slip to Q2 at the earliest... X ARR is at risk'; B 'Slightly less rebrand capacity than A'; C 'Rebrand date slips'), in both the reply and the draft."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": false,
+      "evidence": "It asks for the reasons ('Find out what the real deadline is and why it exists'), separates reversible decisions ('\"any decision beats no decision\" holds for decisions you can reverse. The domain switch is the one part that deserves extra care'), offers a one-page proposal with a decision date and tripwires, and doesn't attack ('Don't argue with... Use them', 'don't lecture'). But it never advises a private conversation with the CEO first; it suggests briefing the CRO/CFO beforehand and then bringing the proposal."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": false,
+      "evidence": "reply.md is 1,460 words (wc -w). A 490-word draft proposal is attached separately, but the reply itself is far above 550."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1460,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 490,
+      "evidence": "wc -w of other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The domain and email claims (SSO/SAML, OAuth redirect URIs, CSP/CORS, SPF/DKIM/DMARC, sender reputation) are accurate. Accounting-marketplace listings generally go through partner review, which the reply hedges as 'usually'. The reply calls the CEO 'his' though the prompt gives no gender; that's an assumption, not counted as an error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Don't pass blame down' is about communicating the decision. No leader says the responsibility for the NPS fall or the open complaints is leadership's."
+    },
+    "best_insight": {
+      "value": "It treats an accounting integration that produces wrong financial data as a defect with trust and possibly legal consequences that no roadmap freeze should cover, and it warns that invoices from an unwarmed domain could turn 'slow invoicing' into 'missing invoices'.",
+      "evidence": "from reply.md and attached document"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This assertion bundles four required behaviours plus a tone check. Several strong samples met three of the four and failed on one (usually asking for the reasons, or splitting reversible from irreversible decisions). Splitting it into two assertions would give a clearer signal."
+      },
+      {
+        "reason": "No assertion checks the technical link between the new domain and the broken accounting integration (OAuth redirect URIs, webhooks, sending-domain reputation, customer allowlists). Most samples raised it, and it is the most practical sequencing argument. Capacity realism (no overtime, slack for incidents) and committing to the decision once it is made also go unchecked."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "'Small must-have part' isn't defined. Some samples keep most of the rebrand in Q1 (60-75% of capacity) and only phase part of the design system. I passed them on a clear split plus visible costs, but the assertion could say whether the size of the must-have part matters."
+      }
+    ],
+    "overall": "The richest analysis, with a solid attached proposal, but the reply is nearly three times the length limit and leaves out the private conversation with the CEO."
+  }
+}

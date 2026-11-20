@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+      "passed": false,
+      "evidence": "Questions the cut on cost ('saves perhaps €0.3m, an eighth of the gap') and contract grounds ('Insurers require enough HBO nurses for indication; nurses you lose are hard to win back'). But there is no evidence linking staffing or qualifications to client outcomes and little on client safety. Monitoring is named only for the central-planning pilot ('compare continuity, travel, absence'), not for a skill-mix change."
+    },
+    {
+      "text": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+      "passed": true,
+      "evidence": "'Costs money and adds admin; under hourly billing, admin time is lost income. Needs works council consent (art. 27(1)(l) WOR) and likely a DPIA.' Alternative: 'Use existing care-record and planning data: worked versus billed hours per team, never per person'."
+    },
+    {
+      "text": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+      "passed": true,
+      "evidence": "'Diagnose in four weeks: cost per client hour against each tariff, absence, agency spend, worked versus billed hours, travel, overhead'; 'is the gap mainly price ... or cost (absence, agency staff, unbilled hours)?' Skill mix only 'via natural turnover ... No dismissals'."
+    },
+    {
+      "text": "The reply works the income side: it brings full-cost evidence to the insurers and municipalities and is prepared to renegotiate, or to decline work that can't be delivered safely.",
+      "passed": true,
+      "evidence": "'Revenue before people: negotiate with cost-price evidence. Municipalities must agree realistic tariffs and indexation (art. 5.4 Uitvoeringsbesluit Wmo 2015; VNG advises 3.59% for 2027), and the cao adds 3.6% from 1 June 2027.'"
+    },
+    {
+      "text": "The reply involves nurses and carers, the works council and the client council before deciding.",
+      "passed": true,
+      "evidence": "'Bring in the works council, client council and nursing advisory council now, with the real numbers, while they can still change the plan.'"
+    },
+    {
+      "text": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+      "passed": false,
+      "evidence": "The table gives each measure a 'Better version', and the reply recommends one plan covering continuity ('insurers want a fixed team per client'), retention ('the autonomy that keeps nurses') and finance (reserves bridge). But the regulator (IGJ) is never mentioned, and the side-by-side board options are only offered ('Want this as a board paper with the options side by side?')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 501,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "All dated figures verified (CBS 9.9% for the VVT subsector, VNG 3.59%, cao VVT 3.6% on 1 June 2027, CZ fixed team and hbo nurses, art. 27(1)(l) WOR). Arithmetic consistent with the stated assumptions."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill or reference-file mentions."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'The gap is real and closing it is my responsibility' owns the fix rather than saying the bad result is leadership's responsibility. The leader pay cut is framed 'as a signal'."
+    },
+    "best_insight": {
+      "value": "It brings dated, checkable negotiation facts (cao VVT +3.6% from 1 June 2027 and VNG's 3.59% indexation advice) and notes that under hourly billing every extra minute of admin is lost income.",
+      "evidence": "Points 3 and the app row of the table."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+        "reason": "Passed by all ten samples, so it doesn't discriminate. Tighten it, e.g. require the works council's consent right on monitoring systems (art. 27(1)(l) WOR) or the 2018 sector agreement to end minute registration in district nursing."
+      },
+      {
+        "assertion": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+        "reason": "Passed by all ten samples. Consider requiring that these levers are sized or sequenced before any frontline change, not just listed."
+      },
+      {
+        "assertion": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+        "reason": "Bundles three tests (care at the centre, outcome evidence, monitoring). Samples with the best evidence (D, G) failed only on monitoring, and samples with good monitoring (A, F, H) failed only on evidence. Splitting it would show which part is missing."
+      },
+      {
+        "assertion": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+        "reason": "'The regulator' (IGJ/NZa) is the only element most samples missed (B, D, E, H, I, J all gave options and trade-offs). Consider splitting it, or saying explicitly that the care inspectorate must be named."
+      },
+      {
+        "reason": "No assertion checks the strongest argument some samples found: funders' own 2027 terms (CZ requires enough hbo-bachelor nurses and a fixed team per client; only hbo/master BIG-registered nurses may do the needs assessment), so the skill-mix and planning cuts could breach contracts. None checks Year-1 timing of savings (notice, transition payments) or factual accuracy either."
+      }
+    ],
+    "overall": "Tight, accurate and current, and it involves all three councils. It lacks outcome evidence and monitoring on skill mix, and the regulator is missing from the board case."
+  }
+}

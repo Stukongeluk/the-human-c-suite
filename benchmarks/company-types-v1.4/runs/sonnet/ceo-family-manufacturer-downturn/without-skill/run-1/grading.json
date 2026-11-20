@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "'Find out what is cyclical and what is structural... That mixes two different problems.' Evidence: 'Revenue share of each of the two customers, and gross margin on that work', 'Order book and backlog by quarter for the next 12 to 18 months', and 'ask for a sensitivity: what does the plan look like if Customer A recovers half, fully, or not at all?' Dependence: 'it should be sized to the structural gap, not the whole dip' and 'I would not sign off on a number like 45 until the cyclical-versus-structural split and the liquidity picture are on paper.'"
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "Tool matched to cause: Kurzarbeit 'works well for the cyclical part and badly as a cover for a permanent loss, so use it for the Customer A dip and not to delay a decision about Customer B'. The conditions are flagged only in general terms: 'Check the current rules with the Agentur für Arbeit: the maximum duration and conditions have changed in recent years' and 'Talk to your Betriebsrat (if you have one)'. Structural plan is strong: e-drive machines for Customer B (battery, e-motor, power electronics), two new sectors, service, retrofit, spare parts, and a 'no customer above 20%' concentration target."
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": false,
+      "evidence": "It asks for 'a liquidity forecast with scenarios, the measures you have started and their effect, owner contribution, and a realistic business plan' and a 13-week cash forecast. But it never mentions covenants or headroom, and it never ties actions to scenarios (no trigger, no 'if this case, then that action'). Two of the four named elements are missing."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": false,
+      "evidence": "The owner and non-people costs come last in its stated order. Under 'Use the levers that protect jobs, in this order' it lists 1 Kurzarbeit, 2 working-time flexibility, 3 attrition, 4 'Voluntary leave programmes', then only 5 'Cost measures that are not about people' and 6 'Management sharing the burden... Cut your own pay'. Voluntary exits, which cost jobs, come before non-people costs and before the owner's own cut, and Kurzarbeit asks the shop floor for pay before management goes first. That contradicts its own line 'before you ask the shop floor for anything'."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": true,
+      "evidence": "Apprentices: 'Commit publicly to completing every apprenticeship'. Skills: 'you should not destroy skills you will need in 18 months', 'Freeze external hiring except for critical skills', 'a labour market with a shortage of skilled workers'. Process: 'Do it once. Repeated rounds destroy trust', Betriebsrat with Interessenausgleich and Sozialplan, §17 KSchG, Sozialauswahl, Transfergesellschaft and outplacement, 'Get a specialist employment lawyer', and 'I am not a lawyer or a certified restructuring adviser... have an Arbeitsrechtler and your Steuerberater check the specifics'."
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": false,
+      "evidence": "Values are handled honestly: 'He never laid anyone off, but he also did not face a customer going electric... If you eventually conclude a smaller reduction is needed, you can still honour his principle: exhaust the alternatives first, share the burden from the top, treat people fairly, and tell them the truth.' But the reply never treats the family firm's long-term view or reputation as an asset. Long-term survival is the goal ('a business that is still here in ten years'), not a strength to use, and reputation, regional standing and the family name are absent."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1631,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor misstatement: 'If two customers can reduce your revenue by a third'. The prompt says the two customers cut their orders by 35%, which is a one-third drop in total revenue only if they were nearly all of it. Imprecise, not counted: 'the rules for structural rather than cyclical loss of work are stricter'. Ordinary Kurzarbeitergeld isn't available for a permanent loss at all; only transfer Kurzarbeitergeld is. Correct: §15a InsO duties, StaRUG, §17 KSchG, Sozialauswahl criteria and the partial key-performer exemption, IDW S6, Bürgschaftsbank/L-Bank/KfW. It also never states the 24→12-month change on 1 Jan 2027, though it applies just before the bank date."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder/rung jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Management shares the burden, but no leader says the responsibility for the outcome is leadership's."
+    },
+    "best_insight": {
+      "value": "It turns the EV customer into a prospect: ask Customer B which battery, e-motor, power-electronics and thermal-management assembly and test machines it will need, and set a concentration target of no customer above 20%.",
+      "evidence": "reply.md section 6"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "The four bank elements are listed without 'such as', so it is unclear whether all are required. Several samples give a cash forecast and a clean trigger but never mention covenants or headroom, while others list scenarios and covenants with no scenario-to-action mapping. Say which elements are required."
+      },
+      {
+        "assertion": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+        "reason": "This bundles about seven checks (apprentices, scarce skills, once, works council, social selection or §17, counsel, not-legal-advice flag). One missing item, such as the word 'once' or a disclaimer, fails an otherwise excellent answer. Split it into 'protects apprentices and scarce skills' and 'plans any remaining cuts once, with legal steps and counsel'."
+      },
+      {
+        "reason": "No assertion checks the German facts that drive the timing: Kurzarbeit's 24-month maximum falls back to 12 months on 1 January 2027, right before the February bank date, and dismissal savings land mid-2027 because of §17 KSchG, social-plan talks and notice periods of up to seven months. Most samples get these right; an assertion would catch the ones that are vague (G) or that overstate how much cash dismissals burn before February (D, I, J)."
+      }
+    ],
+    "overall": "Thoughtful and practical with a strong commercial plan, but the lever order puts voluntary exits ahead of non-people costs and the owner's own cut, the bank package lacks covenants and triggers, and the Kurzarbeit conditions are vague."
+  }
+}

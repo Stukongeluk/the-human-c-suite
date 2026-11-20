@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "\"Buyers price retention, not only profit... NPS falling from +31 to +6 while churn rises is the number most likely to cost you value.\" Decision 1 sets the objective \"by EBITDA and by revenue retention, not by EBITDA alone\"."
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "\"5.1 Win customers back (first priority, starts now)\": \"Code every detractor comment by theme\", \"The leadership team and I personally speak with [20 to 30] customers\", \"Each of the top three detractor themes gets an owner, a date and a measure.\""
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "\"One name decided in Q1, rolled out in stages\": group-level launch, endorsement line, per-company gate (NPS >= +[15], stable GRR), hard budget cap."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "\"One final, targeted redesign... No broad fourth round\"; Appendix B asks for \"Cost and timeline of each of the three previous restructures, and what they delivered\"; diagnosis overlays NPS with \"the dates of our restructures\"; costs: Maertz et al. survivors, Gartner, and \"the people we most need to keep... will leave first\"."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "Section 5.4: contractors end/convert/keep, \"No contractor leaves before their knowledge has been handed over\"; juniors kept where cheapest, \"It cuts our talent pipeline\"; non-people spend first (\"Profit programme: non-people spend first\")."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": true,
+      "evidence": "Profit bridge with an Owner column (\"CIO / CFO\", \"CTO\", \"COO / CTO\", \"CRO\", \"Head of Services\", \"CEO / CHRO\"); targets \"NPS >= +[15] by Q3 2027 and >= +[20] by Q4 2027\"; dated roadmap; value equation \"EUR 1m of recurring revenue lost to churn... -EUR 9m\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 682,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4706,
+      "evidence": "wc -w board-plan.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found; checked claims are listed under 'claims'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference files, cost ladder, rungs found nothing (only 'skills pyramid'/'critical skills' and 'Betriebsänderung')."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Only a hypothesis: \"our own changes are a major cause of the NPS fall\"; no plain statement that leadership is responsible."
+    },
+    "best_insight": {
+      "value": "It sets tripwires in advance (for example, pause brand migration if NPS or GRR worsen two months running) and asks the board to minute that it accepts the revenue risk if it overrides the plan.",
+      "evidence": "Not covered by the assertions."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+        "reason": "Passed by all 12 samples, so it does not discriminate. Consider requiring a named must-have scope (name, legal entities, redirects) plus a customer-metric gate, or a statement that technical identifiers and contracts stay fixed."
+      },
+      {
+        "assertion": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+        "reason": "Passed by all 12 samples. Consider requiring the reply to size the junior saving against the cost of seniors absorbing the work, or to flag contractor status risk (false self-employment) that a buyer's diligence will find."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "Bundles three checks (direction, priorities with owners/measures/dates, owners' terms). The 'owners' element alone decided half the verdicts; splitting it would show which part a sample misses."
+      },
+      {
+        "assertion": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+        "reason": "'Asks which problem it would solve' is ambiguous: several samples make the change conditional on spans/duplication data without asking what the earlier three rounds failed to fix. State which of these counts."
+      },
+      {
+        "reason": "No assertion checks leadership accountability (saying the NPS fall is leadership's result, leaders' pay first) or accuracy of the German process (works councils exist only if elected, §§111-112 BetrVG, §17 KSchG, notice periods). Both separated samples here."
+      }
+    ],
+    "overall": "Comprehensive and accurate, with owners, targets and German law; lacks an explicit leadership-accountability statement."
+  }
+}

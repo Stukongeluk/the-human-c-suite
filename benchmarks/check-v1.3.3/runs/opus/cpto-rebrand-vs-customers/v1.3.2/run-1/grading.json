@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "'Don't plan Q1 as rebrand versus customers. Plan two protected tracks: ship the parts of the rebrand that really need Q1, and ring-fence a few teams for slow invoicing, the accounting integration and the missing reports.'"
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "'The in-app name, domain and marketing site are usually a few teams' work. Rolling a new design system through every screen is the expensive part: build the foundation in Q1 and apply it as teams touch screens in Q2 and Q3.' Option B is 'core rebrand in Q1 with N teams', and 'Have the teams estimate both tracks'."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "'ARR renewing by June among accounts that raised one of the three issues, ticket volume per issue, churn reasons since the merger.' Measures: 'invoice run time, integration errors, report tickets, NPS among affected accounts'."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "'One page, two options, a date for the decision': 'A: everyone on the rebrand, as decided. The complaints stay open until at least Q2, with €X of renewals exposed' and 'B: core rebrand in Q1 with N teams; M teams fix the three complaints; the design-system rollout runs through Q3.'"
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": false,
+      "evidence": "Private first ('the CEO, privately, before any planning forum'), a light process (one page, a decision date, a mid-quarter review on the same numbers), and no labelling ('The CEO's case is real'). But it doesn't advise asking leadership for its reasons ('is there a hard date behind the rebrand?' is put to the user), and it doesn't separate reversible from irreversible decisions; it just 'takes \"any decision beats no decision\" at its word'."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "452 words (wc -w), with a this-week and next-week plan and a script."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 452,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "'NPS has fallen 24 points' is correct, and the domain overlap with the integration (OAuth redirect URLs, webhooks, email sending) is accurate. No wrong claims found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader says the responsibility for the NPS fall or the open complaints is leadership's."
+    },
+    "best_insight": {
+      "value": "It asks whether the complaints come mostly from one merged company's customers, and says to 'Give the complaint teams problems, not a feature list'.",
+      "evidence": "from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This assertion bundles four required behaviours plus a tone check. Several strong samples met three of the four and failed on one (usually asking for the reasons, or splitting reversible from irreversible decisions). Splitting it into two assertions would give a clearer signal."
+      },
+      {
+        "reason": "No assertion checks the technical link between the new domain and the broken accounting integration (OAuth redirect URIs, webhooks, sending-domain reputation, customer allowlists). Most samples raised it, and it is the most practical sequencing argument. Capacity realism (no overtime, slack for incidents) and committing to the decision once it is made also go unchecked."
+      }
+    ],
+    "overall": "Tight and actionable, with costed options. It misses asking the CEO for the reasons and the reversibility split."
+  }
+}

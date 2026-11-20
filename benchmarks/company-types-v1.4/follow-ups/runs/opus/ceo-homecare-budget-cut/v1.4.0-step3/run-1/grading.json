@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+      "passed": true,
+      "evidence": "Outcome evidence: 'In European hospitals, each 10% more professional nurses in the mix was associated with 11% lower odds of death (Aiken et al., BMJ Quality & Safety, 2017; hospital data).' Care role: 'Fewer nurses still carry all assessments (indicatiestelling) and complex care.' Monitoring: 'care quality: incidents, falls, pressure injuries, hospital admissions, the number of different carers per client and client satisfaction. Agree in advance which numbers would stop or reverse a pilot.'"
+    },
+    {
+      "text": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+      "passed": true,
+      "evidence": "It questions the app: 'Stopwatch care and lost trust', 'licences and registration time cost money', and the need for works council consent and a DPIA. Lighter alternative: 'Registration that removes admin and catches undeclared care. Team-level reports only, no location tracking, designed with nurses.'"
+    },
+    {
+      "text": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+      "passed": true,
+      "evidence": "'Close the gap first through price, care you deliver but aren't paid for, and the costs that don't touch care (agency staff, absence, turnover, overhead)'. Also 'Hidden staff costs: agency and self-employed cover, overtime, absence and turnover' and 'Overhead: offices, procurement, IT and management layers.'"
+    },
+    {
+      "text": "The reply works the income side: it brings full-cost evidence to the insurers and municipalities and is prepared to renegotiate, or to decline work that can't be delivered safely.",
+      "passed": true,
+      "evidence": "'Bring municipalities and insurers a full-cost calculation', citing the 'reële prijs' rules. 'Reopen talks with full-cost figures and claim undeclared care. Cap or exit contracts that lose money on every hour, with a careful handover so no client is left without care.'"
+    },
+    {
+      "text": "The reply involves nurses and carers, the works council and the client council before deciding.",
+      "passed": true,
+      "evidence": "'Bring the works council (OR), the client council and the nurses in now, with the real numbers, while they can still change the plan.' Also 'Each team sets its skill mix task by task' and the app is 'designed with nurses'."
+    },
+    {
+      "text": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+      "passed": false,
+      "evidence": "It gives a real options table (saving, main risks, better version for each measure) and a recommendation covering continuity ('More different faces per client'), finances ('a two-year path to balance') and retention ('Nurses you let go walk to a competitor'). But it never mentions the regulator (IGJ or NZa), one of the four named terms."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 927,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: Aiken 2017 skill-mix figure; WOR art. 25 and 27(1)(l); DPIA for monitoring; KPMG 2015 on Buurtzorg; CAO VVT; reële prijs for Wmo; dismissal consequences (UWV, transition payment, duty to redeploy). The estimates (€35M costs, €0.3M per point of absence) are labelled as assumptions."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'skill' appears only in 'skill mix' and 'pay by skill level', which are domain terms; no talk of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Own it. Say plainly, to the board and staff, that the gap is management's to solve: management signed these contracts, and the nurses didn't set the prices.'"
+    },
+    "best_insight": {
+      "value": "It turns the skill-mix idea into a career route ('Fill some nurse vacancies with carers on a paid training route to nurse') and looks for revenue in care that is delivered but never declared, before cutting any care.",
+      "evidence": "The 'Better version' column of the table and the 'Unpaid care' bullet."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+        "reason": "Both samples fail only on 'the regulator': neither mentions the IGJ (Health and Youth Care Inspectorate) or the NZa. That hides a real difference. Sample A gives the board a full options table (saving, risks, better version) with monitoring, while Sample B only offers to draft one. Consider putting the regulator in its own assertion."
+      },
+      {
+        "reason": "No assertion checks the numbers: both samples showed the skill-mix cut closes only about a tenth of a roughly €2.4-3M gap. That is the most persuasive point for this board, and a reply could pass every assertion without it."
+      },
+      {
+        "reason": "No assertion covers the governance relationship (the director runs the organisation, the supervisory board supervises; talk to the chair first), which Sample B handled well and Sample A did not address."
+      }
+    ],
+    "overall": "A1 discriminates well (outcome evidence and a monitoring plan for skill mix); A6 fails both samples on the same single element."
+  }
+}

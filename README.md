@@ -41,6 +41,8 @@ A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehirin
 
 Each seat is commercially sharp and technical enough to find the real data. Each also treats people as the company's compounding asset rather than its first cost to cut.
 
+They fit any kind of organisation: a startup on a tight runway, a family business, a listed or fund-owned company, a cooperative, a non-profit or a public body, and frontline work in factories, stores, care, warehouses and public services as well as offices.
+
 Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the-human-c-suite).
 
 <p align="center">
@@ -55,6 +57,7 @@ Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the
 ## What every seat does
 
 - **Knows the whole company before it advises.** It builds a company context brief (strategy, money, customers, technology, people and history) from every valid source it can reach. That includes data warehouses (Databricks, Snowflake, BigQuery), dashboards (Grafana, Power BI), Jira, Confluence, code and pipelines, finance, CRM and aggregated HR data through connected MCP tools. It adds filings, research and current practice, and dates each fact and checks it against a second source.
+- **Fits the organisation in front of it.** It identifies the kind of organisation first: who owns it, what stage it's in, its sector and its size. Owners, pressures and levers differ between a startup, a family firm, a fund-owned group, a hospital and a municipality, and so does who carries the cost. It makes the long-term case in the owners' own terms (runway, the next generation, value at exit, the mission, public trust), knows the systems of record outside software (ERP, tills, rosters, warehouse and care systems) and treats rosters, quotas and staffing levels as people decisions.
 - **Serves shareholders by keeping the company and its people healthy.** Shareholder value matters, but it is the result, not the purpose, and the research on employee satisfaction and returns backs that up.
 - **Builds for the long term.** It looks for investments in people, tooling and quality. It is sceptical of short-term plays like outsourcing core work or freezing tech debt, which often cost more than they save.
 - **Knows which KPIs matter.** It challenges false metrics like story points, velocity, lines of code, AI seat counts or self-reported speed-ups. It prefers outcomes: retention, margin, DORA delivery metrics, feature adoption and regretted attrition.
@@ -94,7 +97,7 @@ the-human-c-suite/
 └── examples/test-prompts.md            # more prompts to check behaviour by hand
 ```
 
-Every skill is self-contained, so you can install one seat on its own. The files the seats share live once in `shared/`. Examples are coaching, people and change, good leadership, the leadership toolkit, European and Nordic practice, company context, data sources, hard situations, AI in engineering and tech evaluations. `scripts/sync_shared.py` copies them into each skill, so a fix lands everywhere.
+Every skill is self-contained, so you can install one seat on its own. The files the seats share live once in `shared/`. Examples are coaching, people and change, good leadership, company types, the leadership toolkit, European and Nordic practice, company context, data sources, hard situations, AI in engineering and tech evaluations. `scripts/sync_shared.py` copies them into each skill, so a fix lands everywhere.
 
 Each skill folder holds:
 - `SKILL.md`: the skill itself, with non-negotiables, a way of working, coaching, and a routing table for its reference files;
@@ -184,7 +187,35 @@ Start with one decision record on one upcoming decision, and build from there.
 
 ## Does it help?
 
-Every test case ran with and without the skill, on Claude Sonnet and Claude Opus; the version 1.2 and 1.3 cases compare against the previous version instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder. Every reply, grade and token count from the version 1.3 tests, and from the Gemini tests, is in [`benchmarks/`](benchmarks/).
+Every test case ran with and without the skill, on Claude Sonnet and Claude Opus; the version 1.2 and later cases compare against the previous version instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder. Every reply, grade and token count from the version 1.3 and later tests, and from the Gemini tests, is in [`benchmarks/`](benchmarks/).
+
+### Version 1.4: every kind of organisation
+
+Six new cases outside software, on Claude and Gemini, one run per setup, graded blind: a family machine builder in a downturn, a non-profit home-care organisation with a budget gap, a startup with nine months of runway, AI rostering for a supermarket chain, an AI fraud score for a municipality's welfare benefits, and a leaderboard for parcel drivers employed by subcontractors.
+
+| Model | First draft of version 1.4 | Version 1.3.3 | Without the skill |
+|---|---|---|---|
+| Claude Sonnet | 32 of 36 checks | 27 of 36 | 20 of 36 |
+| Claude Opus | 24 of 36 | 26 of 36 | 29 of 36 |
+| Gemini 4 Neon (Medium) | 28 of 36 | 24 of 36 | not run |
+| Gemini 4 Hydrogen (Medium) | 26 of 36 | 19 of 36 | not run |
+
+The draft helped most where the situation was furthest from software: the startup's runway and one well-sized cut, stable schedules and a fair pilot in the supermarket, base rates and safeguards in the welfare case.
+
+Opus did worse with the skill than without it. It treated a care director and a municipal CIO who had to advise a supervisory board or a council like someone acting in their own role, and kept to about 500 words, which left out the legal floor and the safeguards. Version 1.4.0 keeps the short limit for people acting in their own role and gives a formal recommendation to a board, council or supervisory body the full answer. Rerun side by side on four cases, Opus passed 21 of 24 checks with the fix against 15 of 24 with the draft, and the head-of-product replies stayed under 500 words. Details: [`benchmarks/company-types-v1.4/`](benchmarks/company-types-v1.4/benchmark.md) and its [follow-ups](benchmarks/company-types-v1.4/follow-ups.md).
+
+### Version 1.3.3: clear direction
+
+Two new cases about a company that has lost its direction: a fund-owned group about to rebrand, restructure for the fourth time and end all contractor and junior roles while NPS fell from +31 to +6, and a head of product told to put everyone on a rebrand while customer complaints stay open. Two runs per setup, graded blind.
+
+| Model | Version 1.3.3 | Version 1.3.2 | Without the skill |
+|---|---|---|---|
+| Claude Sonnet | 18 of 24 checks | 15 of 24 | 14 of 24 |
+| Claude Opus | 23 of 24 | 23 of 24 | 20 of 24 |
+| Gemini 4 Neon (Medium) | 21 of 24 | 17 of 24 | 13 of 24 |
+| Gemini 4 Hydrogen (Medium) | 18 of 24 | 16 of 24 | 10 of 24 |
+
+With the skill, replies started from the customer problems, kept the rebrand to its must-have part, asked what the earlier restructures failed to solve, and rejected ending all contractor and junior roles as a blanket move. Replies without the skill had more factual errors. Details: [`benchmarks/check-v1.3.3/`](benchmarks/check-v1.3.3/benchmark.md).
 
 ### Version 1.3: leaders go first, shorter advice for individuals
 

@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "reply.md opens: \"Don't take the three moves to the board as agreed. Take this instead: protect customers first, do only the must-have part of the rebrand in Q1...\" and \"A buyer in 18 months will price retained customers, and NPS falling from +31 to +6 with churn rising is the number their due diligence will open with... puts the exit multiple at risk\". board-plan.md decision 1: \"Make retained customers and recurring revenue the group's first priority for the next 18 months\"; §2: \"the plan that raises profit before the sale is the one that stops customer loss first.\" "
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "board-plan.md §5, weeks 1-2: \"Rank the top customer problems by revenue at risk, with evidence from NPS comments, churn reasons, support tickets and account managers. Talk to the 20 largest accounts and the 20 largest recent churners\". Q1-Q2: \"Fix the top 3 to 5 customer problems. Each gets one named owner, a measure and a date\", measured by \"NPS, churn and time-to-resolve for each problem\". The reply makes it the first move: \"protect customers first\"."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "reply.md: \"Q1 covers the name, legal entities, redirects and contract templates only. Product and customer-facing changes follow by renewal cycle, once the top churn causes are being fixed. A new name does not fix an unhappy customer\". board-plan.md: \"Approve a minimal rebrand in Q1 ... with the rest phased behind the customer fixes\"."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "reply.md: \"Before it goes ahead, name what the first three failed to solve. If nobody can, the problem was never defined.\" board-plan.md names the cost: \"Every restructure costs productivity, creates new handoffs and takes out people who know how things work. If three have not solved the problem, the problem has probably not been defined.\" It also lists the people effect of Option A as \"Third and fourth wave of uncertainty for 900 people\"."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "reply.md: \"Ending all of them saves little and costs a lot. Juniors are cheap, and no juniors now means no seniors later. Contractors may hold knowledge or scarce skills. Review role by role\". On other levers: \"Duplicated tools, vendors, offices and cloud across four companies, pricing and discounts, stopping low-value work, and a hiring freeze with natural attrition.\" board-plan.md §7 sets the order and puts involuntary reductions last: \"only if the earlier steps cannot close the gap, once, with a fair social plan\"."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": true,
+      "evidence": "board-plan.md §5 is a table of when, what, owner and measure. Examples: \"Weeks 2-6 | Spend and duplication review ... | CFO, CTO | Savings identified, sized as ranges\"; \"Q1 | Must-have rebrand only ... | CMO or equivalent | Accounts told personally; no unplanned churn attributed to the rebrand\". It adds \"What stops or waits\". In the owners' terms: \"A buyer in about 18 months will price retained customers, recurring revenue and capable teams\", and the reply says \"The goal is a higher sale price, not just higher profit before it.\" Weak spots: the owner of the core customer fixes is only \"Named executives\", and the measures have no target levels."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 596,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2127,
+      "evidence": "wc -w board-plan.md"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One overstated research claim: \"Research on buyouts (Davis et al., NBER 2019) finds very different employment and productivity outcomes by deal type; the better ones come from operational improvement, not from cost-out timed before the exit.\" The first half matches the paper: employment falls about 13% after public-to-private buyouts and rises about 13% after private-to-private ones. The paper does not study cost cuts timed before an exit, so the second clause is the sample's own inference presented as a finding. This was checked against my knowledge of the paper's abstract. A live web check was not possible because the search budget was used up. Checked and correct: Trevor & Nyberg (a 1% downsizing goes with a 31% rise in voluntary turnover); a works council exists only if employees elected one; §§111-112 BetrVG; §87(1) no. 6 BetrVG; §17 KSchG, including that employer-initiated termination agreements count; §1(3) KSchG social selection, with performance rankings not a selection method."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'. Every 'skills' refers to people's skills."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "board-plan.md §2: \"Responsibility sits with this leadership team, not with the people who serve customers.\" §7: \"The leadership team, including the CEO, is responsible for the fall in NPS and the integration so far.\" reply.md: \"The paper says the NPS fall and integration so far are leadership's responsibility\"."
+    },
+    "best_insight": {
+      "value": "It treats the rebrand itself as a churn trigger: contracts, integrations, invoices and legal entities are each \"a chance to lose someone\". So it pairs the Q1 must-have with account owners telling each major account personally before any public announcement, and with interviews of the 20 largest accounts and the 20 largest recent churners.",
+      "evidence": "board-plan.md §4 'Why not Option A' and the §5 timeline"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "Both samples pass all six assertions, so the set does not separate them. The clearest real difference is that sample B plans to talk one by one with the CFO, each leader who agreed the three moves, and the owners' lead before the board. Sample A has no such step, although the prompt says the leadership team agreed the three moves. Add an assertion on aligning the leaders who agreed the moves before the board meeting."
+      },
+      {
+        "reason": "No assertion checks the German process: asking whether a works council exists, §§111-112 BetrVG reconciliation of interests and social plan, §17 KSchG notification, and social selection rather than performance ranking. Both samples cover it, but a sample that skipped it would still pass. Accuracy of cited research is not checked either: sample A attaches a conclusion to Davis et al. (2019) that the paper does not draw."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "This assertion bundles direction, a short list, owners, measures, dates and the owners' terms. Vague owners such as 'Named executives' and measures without targets still pass. Consider requiring outcome-level owners and a stated trade-off in money terms, such as savings set against revenue lost to churn. Sample B illustrates this; sample A declines to size anything."
+      }
+    ],
+    "overall": "A strong, complete board paper with options, a steelman, missing data flagged and leadership owning the result. All six assertions pass. One research claim is overstated, and there is no step to bring the leaders who agreed the three moves along before the board."
+  }
+}

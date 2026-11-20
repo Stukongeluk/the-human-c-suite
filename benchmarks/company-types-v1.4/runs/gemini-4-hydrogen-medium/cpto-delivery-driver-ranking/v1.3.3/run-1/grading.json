@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opens: \"Say no to the live leaderboard and the weekly bottom-10% flag... and instead offer to chase the 8% through a 6-week route-and-depot bottleneck pilot.\""
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "\"Stops per hour depends heavily on route density, apartment blocks, traffic, and parcel mix.\" Safety: \"pushes drivers to skip safe parking... driving up redeliveries, claims, and road incidents\"; memo: \"road-safety and psychosocial stress impact of live pace pressure\"."
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "\"pull 90 days of telemetry grouped by route type and depot (not driver)\"; memo: \"late depot departures, mis-sequenced stops, missing gate/apartment codes, and bad geocodes\"; scorecard with \"First-time delivery success rate\" by route type/density."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": true,
+      "evidence": "\"Article 27(1)(l) WOR\" consent, Belgian works council and CPBW consultation, \"GDPR/DPIA hurdles\"; memo: \"EU AI Act (Annex III)... from 2 December 2027 (following the 2026 Digital Omnibus)... (Article 26(7))\"; \"verify with your employment counsel\"."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": false,
+      "evidence": "Legal risk is named: \"co-employer risk from managing subcontractor staff individually\". But the alternative is accountability, not working with subcontractors on conditions: \"Hold subcontractor partners accountable to depot-level SLAs (on-time delivery, first-time-right rate, complaints, and route completion), leaving individual driver coaching and management to their own employer.\" Nothing on what happens to flagged drivers down the chain, and nothing on routes, vans, training, hours or rates with subcontractors."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": false,
+      "evidence": "Subcontracted drivers are consulted: \"Ask a sample of own and subcontractor drivers where they lose 15–30 minutes a day\" and \"invite drivers to help identify the biggest time-wasters\". But drivers are never given their own data; the reply and memo only remove the leaderboard. Fails the own-data half."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 429,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 882,
+      "evidence": "wc -w operations-leaderboard-response.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked legal and research claims against the fact sheets and cited sources (WOR art. 27(1)(l), AI Act dates, Platform Work Directive date, Belgian Parcel Act, Belgian 1987 hiring-out law, AP DPIA list, Blanes i Vidal & Nossol, Barankay, Foodinho, Conseil d'Etat Amazon ruling, Labour Inspectorate depots, as applicable); none found wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (any 'skill' refers to drivers' skill)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome."
+    },
+    "best_insight": {
+      "value": "The memo's balanced scorecard pairs stops per hour with the 'not at home' scan rate, a concrete early signal of the gaming the leaderboard would cause.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+        "reason": "Bundles three legal elements; a generic nod to works councils and GDPR passes two of them in every sample, so only the AI-rules element discriminates (3 of 10 samples missed it). Consider requiring that the AI Act worker-monitoring duty be dated correctly (Article 26(7) from 2 December 2027, not yet in force) so a vague mention doesn't pass."
+      },
+      {
+        "assertion": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+        "reason": "Compound and ambiguous: 'works with subcontractors on conditions' is unclear about whether contract-level SLAs on outcomes count. Most samples propose 'manage subcontractors on SLAs, not names', which is a real improvement but not collaboration on routes, vans, training, hours or rates. Split into (a) flagging pushes consequences down the chain without fixing causes, (b) legal/reputational risk, (c) a collaborative alternative on causes or working conditions."
+      },
+      {
+        "assertion": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+        "reason": "Two independent behaviours (co-design including subcontracted drivers; private own-data feedback) in one check. Most samples do one but not the other, so the pass rate hides which part is missing. Split it."
+      },
+      {
+        "reason": "No assertion checks that the reply questions the evidence for the 8% or proposes a controlled pilot with quality and safety guardrails and a pre-agreed stop rule. Nearly every sample did this, so it may be table stakes, but the regression-to-the-mean trap (flagged drivers 'improve' next week by chance) appeared in only A and D and is worth rewarding."
+      },
+      {
+        "reason": "No length or concision check. Sample A's reply is 1,877 words with no document; others put the detail in a separate memo and kept the reply near 450 words."
+      }
+    ],
+    "overall": "Clear, legally accurate and well structured, but treats subcontractors only as SLA counterparties and gives drivers nothing in place of the leaderboard."
+  }
+}

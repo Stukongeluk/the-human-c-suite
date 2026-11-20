@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "'You have a retention and integration problem, not a pure headcount problem'; first sentence: 'with NPS down from +31 to +6 and churn rising, cutting delivery capacity now will compress your 18-month exit multiple faster than it lifts EBITDA'."
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": false,
+      "evidence": "The diagnosis is there ('Pull churn root causes' in Weeks 1–4; 'top 3 support/onboarding failure modes'; 'Churn root causes & NRR by entity ... CRM / Support'). But fixing them is never the first priority. The four board approvals are rebrand deferral, restructure freeze, a cost and contractor reset, and leaders' pay. The Months 2–4 phase lists only cost actions. Customer fixes appear only in passing ('targeted root-cause fixes on the top churn drivers')."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "'Defer the full Q1 rebrand until NPS recovers above +20 and core product/service workflows are unified (optional: low-cost \"Part of [Group]\" endorsement only where needed for cross-selling).'"
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "'A fourth restructure and a Q1 rebrand add disruption and cash burn without fixing a single customer defect'; 'Replace layer-cutting with removing duplicate reporting, unnecessary approval steps, and conflicting post-M&A processes'. Costs: 'loss of institutional knowledge', 'survivor attrition', 'productivity loss'."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "'Audit contractors by criticality (keep those on live customer delivery, wind down discretionary spend with fair notice), retain and pair juniors with senior leads'; cutting juniors means 'emptying the pipeline'; non-payroll consolidation and repricing come first."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": false,
+      "evidence": "Owners' terms ('exit valuation is driven by EBITDA × Multiple. Both depend on Net Revenue Retention (NRR)'), phases with dates and exit criteria ('NPS > +20'), but the only owner named is 'Decision owner: CEO'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 413,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1906,
+      "evidence": "wc -w of the board plan .md in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clearly wrong rule, but one company-specific claim is presented as fact: 'At ~900 employees, your Supervisory Board (Aufsichtsrat) includes one-third worker representation (DrittelbG)'. That depends on legal form and on whether employees are attributed across the group, so it should be 'verify'. The reply also says 'any major operational change triggers Betriebsrat reconciliation of interests' without conditioning it on a works council, though works council status is listed as a data gap."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep only matched 'Betriebsänderung')."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Acknowledge plainly that leadership owns the drop from +31 to +6 NPS.'"
+    },
+    "best_insight": {
+      "value": "It names the owners' own exit thesis as an assumption that could overturn the plan ('If the PE owners explicitly prefer a short-term cash-harvest exit over a growth/SaaS multiple'), which forces that conversation into the open.",
+      "evidence": "Not covered by the six assertions."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+        "reason": "Passed in all 12 samples: every sample opened by rejecting the three moves on churn grounds. As worded it can't separate 'leads with the customer problem' from 'leads with stopping the rebrand'. Consider requiring the first sentence or recommendation to name customer retention as the top priority."
+      },
+      {
+        "assertion": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+        "reason": "Passed in all 12 samples (all deferred the rebrand behind an endorsement line), so it doesn't discriminate on this case."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "Bundles four things (direction, owners/measures/dates, short list, owners' terms). Every sample made the case in the owners' terms; the verdict turned almost entirely on named owners. Splitting it would show which part fails."
+      },
+      {
+        "reason": "No assertion checks German labour-law accuracy, though most samples made specific claims, and several got rules wrong (the §111 BetrVG threshold, 'any targeted reduction needs a social plan', social-selection direction) or assumed a works council exists. Consider an assertion that the reply checks for a works council rather than assuming one, and states the consultation rules correctly or not at all."
+      },
+      {
+        "reason": "Leadership ownership of the NPS drop separated samples (B, C, E, G, I, J, L did it; A, D, F, H, K did not) and is central to the scenario, but it is only an extra check. Consider promoting it to an assertion."
+      }
+    ],
+    "overall": "Good framing and ownership, but customer fixes are diagnosed and then drop out of the action plan in favour of cost levers; no owners."
+  }
+}

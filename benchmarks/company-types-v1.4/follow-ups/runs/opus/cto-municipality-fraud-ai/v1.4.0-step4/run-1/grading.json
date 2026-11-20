@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "Opening: 'My advice: don't buy this system as specified. Give the alderman a plan that serves the same goal, investigators spending their time on real cases, and shows results in six months. Whether to use a model then becomes a later council decision, made with your own numbers.' The alderman is treated respectfully throughout: 'A line for the alderman: \"I share the goal: investigators spending their time on real cases...\"'"
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": true,
+      "evidence": "Names several precedents with what went wrong. 'The childcare benefits scandal: risk profiling helped wrongly accuse more than 20,000 families.' 'Rotterdam's welfare model, stopped in 2021, scored young mothers and people with weaker Dutch as higher risk.' 'DUO's student-grant checks led to a ministerial apology for indirect discrimination in 2024.' Amsterdam's 'Slimme Check'... was halted after its pilot still showed bias. 'In 2020 the Hague court stopped SyRI under Article 8 of the ECHR for this kind of opaque data linking.' It also explains the mechanism: 'A model trained on past investigations learns who was investigated before, not who committed fraud.' Bias and wrongful accusation are explicit. The lack of a human check is conveyed only through the safeguards ('a person decides, and the citizen can see why and challenge it'), not stated as a cause."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "Worked base-rate example: '250 households get a fraud investigation... About 60 of them have a real case and about 190 don't. At a 2% rate, nine in ten of the people investigated have done nothing wrong. A model that flags nobody would be 95–98% \"accurate\".' Asks the vendor in writing for 'its false-positive rates by gender, age, nationality, language and postcode' and 'the hit rate in its top 10%'. Calls for 'independent bias testing, including proxies such as postcode'. I checked the arithmetic and it is correct: with 90% accuracy and a 10% flag rate, TP = FN, so recall is 50% at any fraud rate."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": true,
+      "evidence": "GDPR: 'The GDPR already requires purpose limitation, a legal basis per data source and a DPIA.' Debt-counselling data is singled out: 'People gave it to get help, and it can include health information.' AI Act: 'AI that public bodies use to grant, cut or reclaim benefits is high-risk under Annex III. The Digital Omnibus moved those obligations to December 2027... but that delay isn't a window.' It also covers the social-scoring ban 'since February 2025' (Article 5(1)(c)) and routes everything to counsel: 'This isn't legal advice. Your data protection officer and legal team need to confirm it.' Gap: GDPR rules on automated decisions (Art. 22) are not named as such. Their substance appears only in the safeguards ('a person decides, and the citizen can see why and challenge it')."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": true,
+      "evidence": "'Review a random sample of about 200 files for the true overpayment rate and its causes... I expect, to be tested, mostly unreported income or household changes, not deliberate fraud.' 'Make changes easy to report, pre-fill income data, and write letters people understand.' It names an alternative option: 'C. No model, just better rules and process: cheapest, and possibly enough.' It also points to existing lawful Inlichtingenbureau and Suwinet signals."
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": true,
+      "evidence": "The criteria to fix 'before any vendor is scored' are 'independent bias testing, including proxies such as postcode', 'publication in the algorithm register', 'a person decides, and the citizen can see why and challenge it', and 'a shadow-mode test against random selection, with a stop criterion'. Also 'benefits data only, each source with a legal basis'. The independent audit appears as independent bias testing, plus 'an independent bias test' in the required work."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 978,
+      "evidence": "wc -w reply.md. This case has no length assertion, but the reply is long for a chat answer."
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-A."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Fact sheets confirm the childcare scandal figure, the high-risk classification for public benefits and the December 2027 date. I recomputed the arithmetic and it is correct. SyRI, Rotterdam, DUO, Amsterdam Slimme Check, the Article 5 timing and WOR art. 25 agree with my knowledge but could not be re-checked by web search (budget exhausted). No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/reference/cost ladder/rungs found nothing."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposed purchase, not a bad outcome that has happened."
+    },
+    "best_insight": {
+      "value": "It flags the AI Act's social-scoring ban (Article 5(1)(c), in force since February 2025) for cross-context data such as debt counselling and housing, and warns that using debt-counselling data teaches people in debt to avoid help. That makes this a present legal and social risk, not something the delayed high-risk rules leave until 2027.",
+      "evidence": "'The AI Act's ban on social scoring has applied since February 2025... That needs a legal opinion before any procurement.' and 'Using it for fraud selection teaches people in debt to avoid the help that prevents bigger problems.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+        "reason": "A reply with wrong worked numbers would still pass. Add 'any worked numbers are arithmetically correct and labelled as assumptions'. This sample's are correct, but the assertion doesn't check that."
+      },
+      {
+        "assertion": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+        "reason": "This bundles four GDPR items plus the AI Act. The sample covers three GDPR items explicitly and handles automated decisions only as a safeguard. It also omits the AI Act's Article 5 social-scoring prohibition, which is in force now and arguably more decisive for cross-context data than the delayed high-risk rules. Consider listing Article 5 and Art. 22 GDPR separately."
+      },
+      {
+        "reason": "This case has no length or format assertion, unlike the rebrand case. The reply is 978 words with a long options section. Add one if a short, actionable chat answer is the target."
+      },
+      {
+        "reason": "No assertion checks that the affected people and their representatives are involved (client council, works council) or that the six-month deadline is challenged with reasons. The sample does both, so the evals don't credit them."
+      }
+    ],
+    "overall": "Excellent, well-sourced reply that passes every assertion. Precise base-rate arithmetic, Dutch precedents, a present-tense legal analysis, cause-focused alternatives and concrete safeguards. Its main weakness is length."
+  }
+}

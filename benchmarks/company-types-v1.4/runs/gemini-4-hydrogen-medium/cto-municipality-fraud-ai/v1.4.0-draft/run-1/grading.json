@@ -1,0 +1,96 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "Opens: 'Advise **no** to buying this system as scoped, and **no** to the six-month deadline'. The alderman is protected: 'Speak privately with the Alderman first... so they aren't cornered in public.'"
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": false,
+      "evidence": "Only the toeslagenaffaire is named. The memo says 'risk profiling contributed to wrongly accusing more than 20,000 families of fraud' (presumed guilt). 'An opaque risk-scoring model is a political and legal minefield' describes the proposal, not what went wrong before. No bias tied to a case and no SyRI. One of three."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "'at a typical 3% fraud base rate, a \"90% accurate\" model still produces roughly 78% false positives', with a worked table; 'Require raw metrics from the vendor—precision at 10%, false-positive rate, and proxy-bias tests'; memo: 'proxies such as postcode or nationality'."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": false,
+      "evidence": "Has purpose limitation for schuldhulpverlening data, a mandatory DPIA and AI Act high-risk status ('full obligations apply from December 2027'). But it never asks whether there is a legal basis and says nothing on automated decisions or Art. 22. Two of the four GDPR items."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": true,
+      "evidence": "'fix the rules, forms, and life-change reporting gaps that cause most avoidable errors'; memo: 'simplify reporting forms and proactive outreach', 'Reduces avoidable citizen errors'."
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": false,
+      "evidence": "Option B has 'mandatory human review and no risk scores'. But there is no notification or objection route for residents (only investigators 'can verify and challenge'), no independent audit (just 'bias audit' in a timeline list), no algorithm register and no stop criteria."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 441,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1007,
+      "evidence": "welfare-fraud-ai-advice-memo.md (1,007 words)."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Checked: the 3% table (27 TP, 97 FP, 78.2%, 90.0% accuracy), Annex III and the December 2027 date, the toeslagenaffaire figures, and Art. 25/27 WOR. Calling 3% 'typical' is an assumption, and the memo labels it one."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon. The .md link is its own deliverable."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt asks for advice on a proposed purchase; no bad outcome has happened yet."
+    },
+    "best_insight": {
+      "value": "It notes that the works council has advice and consent rights (Art. 25 and 27 WOR) because the tool would shape and monitor investigators' own work, a staff angle most samples missed.",
+      "evidence": "See reply/documents"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "Concise and correct, but precedent, legal basis, Art. 22 and safeguards are thin. The assertions catch these gaps well."
+      },
+      {
+        "assertion": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+        "reason": "All ten samples pass. Every reply opened with 'advise against' and none attacked the alderman, so this check does not separate samples. A stronger check: the opening gives the alderman something to deliver within six months, not only a 'no'."
+      },
+      {
+        "assertion": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+        "reason": "The three failure mechanisms are joined by 'and', so it is unclear whether all three are required. I passed samples that tied at least two of the three to a named precedent and failed samples that only named a case or gave one mechanism. Either state that threshold or split the check."
+      },
+      {
+        "assertion": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+        "reason": "All ten samples pass, so it does not discriminate. Consider checking the arithmetic instead (one sample's '3 to 5 innocent per real case' contradicts its own 5% figures) or requiring named subgroups."
+      },
+      {
+        "assertion": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+        "reason": "This bundles six items. The 'with their timing' clause did most of the work: two otherwise excellent samples failed only because they did not state the current 2 December 2027 date. Consider splitting the AI Act timing into its own check."
+      },
+      {
+        "reason": "No assertion covers the AI Act Article 5(1)(c) social-scoring prohibition. Debt-counselling data used from an unrelated context is the Commission guidelines' own welfare-fraud example. Five samples raised it and five did not, and it is arguably the most important legal point in this case."
+      },
+      {
+        "reason": "No assertion checks the accuracy of precedent details or dates. For example, one sample put the Amsterdam Smart Check halt in 2025 when it was stopped in late November 2023, and two attributed Algoritmeregister publication to the AI Act."
+      }
+    ],
+    "overall": "Good maths and prevention alternative, thin on precedent, GDPR basis and safeguards: 3/6."
+  }
+}

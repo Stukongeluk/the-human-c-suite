@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "'Split the order loss into the part that is temporary and the part that is permanent... Size the permanent part from real numbers, and let the number of exits, if any, come out of that work.' Evidence: 'ask for a written outlook of its volumes for 2027–2029', ask the EV customer what e-drive equipment it needs, and 'Build a capacity bridge by department, in hours... new business with a credible pipeline. What remains is your real structural gap.' Revenue-share cases (40% gives ~14%, 70% gives ~25%) show the answer depends on the split."
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "'Kurzarbeit, for the temporary part only', with conditions: 'The 24-month special rule expires on 31 December 2026... Plan on 12 months', 'only allowed for a temporary loss of work', and employer social-security costs. Metal-agreement tools need IG Metall and employer-association approval, and regional lending needs works-council agreement. Structural plan: new markets (defence, aerospace, medtech), e-drive equipment for the EV customer, Qualifizierungsgeld and §82 SGB III retraining, regional staff deployment and a 'target picture: which markets, which products, which customers'."
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": true,
+      "evidence": "'a 13-week liquidity forecast, starting immediately', 'an integrated plan (P&L, balance sheet and cash) for 2027–2028, with a base case and a downside case', 'a list of measures with their € effect, timing and who is responsible', and 'propose a renewal with milestones and agreed financial targets (covenants)'. Measures are only loosely tied to scenarios ('If a structural gap remains, open talks...'), but the package is clearly in the bank's terms."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "'Owners and management first. Suspend distributions, cut management pay, and decide what capital or shareholder loan the family can put in.' Then 'External flexibility. End temp agency and contractor work, stop overtime, run down working-time accounts, and bring outsourced work back in-house', before hiring freeze, Kurzarbeit and any exits. Working capital, inventory and pricing are not mentioned, but contractor and outsourced spend come before jobs."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": false,
+      "evidence": "Apprentices: 'Keep training all 14 apprentices and plan to take them on.' Scarce skills: social selection 'often [takes] the younger skilled workers you will need' and a voluntary programme 'cap[ped] so that your best people don't all take the money'. Legal steps: §17 KSchG, §112a social plan, Interessenausgleich, Sozialauswahl, transfer company. Counsel: 'Have a labour lawyer check exactly how this applies to you'. But it never says to make any reduction once (no warning against repeated rounds), and it never flags its extensive legal content as not legal advice. Two named parts of the assertion are missing."
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": true,
+      "evidence": "Values: 'I would not promise \"no layoffs, ever\" unless you are certain you can keep that promise... What you can promise, and keep, is an order of measures', 'Your grandfather's principle and the bank's demand are less opposed than they look' and 'Breaking with a family tradition in order to save 165 jobs is not the same as breaking it to hit a cost target.' Family firm as an asset: 'A family owner who visibly contributes has negotiating credibility with the works council that an anonymous group headquarters never has'. Long view: cutting apprentices 'is the clearest signal that you've given up on the future'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 2074,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor error: 'State guarantees from the L-Bank and the Bürgschaftsbank can cover up to 50% of working-capital loans... and so are loans already granted and simple extensions'. The 50% cap is the L-Bank's general guarantee programme. The Bürgschaftsbank Baden-Württemberg can guarantee up to 80% (Förderdatenbank, L-Bank Liquiditätskredit), and the cited page excludes extensions only under Art. 17 AGVO, not generally. Also unsupported: 'Defence is the fastest-growing market' (the cited produktion.de article doesn't rank sectors). Verified correct: §17/§112a thresholds incl. counting of agreed exits, Alterssicherung kept in 2021 (StZ 24 Sep 2021), TV FlexÜ from 57 with 85–89% net top-up, TV BeSi 35→30 h with approval, T-ZUG A into six days, T-Geld, regional staff deployment agreement from 1 Mar 2025 with 6-month trial variant, Qualifizierungsgeld (10% under 250, >120 h, 60/67%), §82 SGB III 50%/100% ab 45/50% wage subsidy, KuG 24→12 months, §1 StaRUG."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder/rung jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "It names the cause ('an honest account of the cause, which is customer concentration') and puts owners first, but no leader says the responsibility for the outcome is leadership's."
+    },
+    "best_insight": {
+      "value": "Because German courts treat Kurzarbeit as evidence that a shortage is temporary, it says to keep 'temporary' and 'permanent' departments clearly separate in the plan. It also lists concrete Baden-Württemberg metal-agreement tools (30-hour week, T-ZUG A days, T-Geld, cross-company staff lending) that keep people employed.",
+      "evidence": "reply.md section 3, items 4–6"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "The four bank elements are listed without 'such as', so it is unclear whether all are required. Several samples give a cash forecast and a clean trigger but never mention covenants or headroom, while others list scenarios and covenants with no scenario-to-action mapping. Say which elements are required."
+      },
+      {
+        "assertion": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+        "reason": "This bundles about seven checks (apprentices, scarce skills, once, works council, social selection or §17, counsel, not-legal-advice flag). One missing item, such as the word 'once' or a disclaimer, fails an otherwise excellent answer. Split it into 'protects apprentices and scarce skills' and 'plans any remaining cuts once, with legal steps and counsel'."
+      },
+      {
+        "reason": "No assertion checks the German facts that drive the timing: Kurzarbeit's 24-month maximum falls back to 12 months on 1 January 2027, right before the February bank date, and dismissal savings land mid-2027 because of §17 KSchG, social-plan talks and notice periods of up to seven months. Most samples get these right; an assertion would catch the ones that are vague (G) or that overstate how much cash dismissals burn before February (D, I, J)."
+      }
+    ],
+    "overall": "The most detailed and deeply sourced sample, with one minor guarantee-percentage error; it falls short only on saying any cut is done once and on flagging the legal content as not legal advice."
+  }
+}

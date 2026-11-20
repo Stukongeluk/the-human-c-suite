@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "It does full arithmetic with growth: a break-even table at 4% a month by revenue coverage ('25% of costs | ~35' months ... '60% | ~13'), an illustrative SEK model (do nothing runs out Aug 2027; '30% cut, Swedish reality ... Sep 2027'; with non-payroll cuts Nov 2027), and the bridge needed through mid-2028 per mix. It sets the goal of having cash to mid-2028 'without counting on the B' and models 'three cases: the B closes summer 2027, the B closes in 2028, and no B at all'. I checked the break-even months and the cash-out dates and they are correct."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "It orders the levers 'fastest and least harmful first' (non-payroll, freeze, cash in faster, voluntary measures and leadership pay, new money) and then: 'Only then, size the redundancy to cover what's left'. It sizes non-payroll cuts (25%, about two months in the model) and the bridge per mix ('No changes | ~46 MSEK ... 30% headcount + 25% non-payroll | ~21 MSEK'). Leadership pay and the voluntary measures themselves are not sized."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'size it from the cash plan, design it around what gets you the B'; 'Make one cut, sized for the downside case. A second round six months later damages trust far more'; 'cut work along with people. Drop products, markets or projects'; avoid 'Choosing a cut because it's a round number'."
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "MBL 'with the union you have a collective agreement with, or if you have none, with the unions that have members affected'; varsel 'at least two months before the first person's employment ends'; LAS notice 'one month ... two months after two years, three after four, up to six'; turordning with three exemptions; nine-month rehiring priority; 'Hire an employment lawyer this week'."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": true,
+      "evidence": "Exits: 'Give fair packages, transition support (TRR or similar if you have a collective agreement, Kammarkollegiet's support if you don't), references, and introductions across your investors' portfolio companies', and it notes packages go beyond what 'the law doesn't require'. Communication: 'Tell the whole team the truth all at once: the runway, the plan and the reasons... Once MBL starts, it won't stay secret anyway', which comes before the decision, since MBL negotiation precedes it. A narrow pass on timing: the team hears at the plan stage, not the options stage."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": false,
+      "evidence": "Leadership pay is cut as lever 4 ('Cut leadership pay, starting with your own'), but the reply never says the runway gap, burn or hiring is leadership's responsibility. The closest is 'You're the CEO. You should be the one bringing the number', which is about agency, not ownership."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1781,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Verified: the varsel anchor (two months before the first person's employment ends) on Arbetsförmedlingen's page; the LAS §11 notice ladder; MBL with unions of affected members without an agreement; three exemptions; nine-month priority; Kammarkollegiet's basic transition support for employees not covered by a job security council; kontrollbalansräkning (Companies Act ch. 25) and director liability. The break-even table and the illustrative cash-out dates reproduce."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No ownership statement; only 'Cut leadership pay, starting with your own' as one lever among several."
+    },
+    "best_insight": {
+      "value": "It treats the size of the cut and the size of the bridge as one decision, with a table of the bridge needed per cut size, so the board trades people against money explicitly. It also briefs the board on kontrollbalansräkning liability early.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "Any one listed element passes it, so all ten samples passed, including one that anchored the Arbetsförmedlingen notice to the wrong date. Require that the stated rules are correct: the two months count back from the first person's last day of employment, and MBL applies to union members even without a collective agreement."
+      },
+      {
+        "assertion": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+        "reason": "No sample said that 'the burn and the hiring' were the founders' decisions. The ones that passed said the runway gap was leadership's responsibility. Either accept that wording explicitly, or keep the stricter version and expect almost every sample to fail."
+      },
+      {
+        "reason": "No assertion covers the investor conversation, which is the actual fork in the prompt. It would check whether the reply asks the two investors to fund a bridge if they want the cut, finds out why they want 30%, and checks whether they can force it under the shareholders' agreement or board composition. The best samples did this and the weaker ones only said 'meet them privately'."
+      },
+      {
+        "reason": "Assertion 1 mixes timeline arithmetic, which every sample did, with growth-inclusive modelling and funding scenarios, which only some did. Splitting it would separate 'nine months ends in August 2027, the B closes later' from 'on current burn and 4% growth, here is when you break even or run out under each funding case'."
+      }
+    ],
+    "overall": "The most rigorous model and Swedish detail of the set, but at 1,781 words it is long, and it never has the founder own the result."
+  }
+}

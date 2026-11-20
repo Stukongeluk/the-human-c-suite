@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "It builds an illustrative model with stated assumptions ('payroll is 70% of costs; gross profit covers 25% of costs and grows 4% a month') and runway per option: do nothing ~10 months; 30% cut ~13 (~12 at 2% growth); package ~14; package plus an insider bridge 22+. It tells the user to build 'an 18-month model with three cases: the B closes next summer, at year-end, or never'. I re-ran the model and got the same runway figures."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "It sizes the non-job levers before any cut: 'Spend cuts, leaders' pay, hiring freeze, voluntary hours and exits | ~14 months | 0' forced exits, with the package itemised ('spend down 20%, leadership pay down 25%, 4 leavers not replaced, 6 people on 80% hours, 3 voluntary exits'). It adds bridge financing and the R&D deduction, and says 'Neither reaches 18 months alone; financing closes the gap.'"
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'That model, not the 30%, should size any cut'; 'make one reduction sized to the remaining gap, and stop the work along with the roles'. The trigger option shows a smaller cut ('one cut of 5–7 roles in month 6 if triggers miss'). It also has the CTO and product lead 'stop the work that doesn't move the B metrics'."
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'MBL negotiations must finish before anyone gets notice. That means negotiating with your union if you have a collective agreement, otherwise with the union of each affected member'; 'Arbetsförmedlingen needs notice at least two months before the first person leaves'; 'Notice periods run one to six months by length of service. Selection follows last in, first out, with three exemptions.'; 'Confirm the process with employment counsel'."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": true,
+      "evidence": "Honest communication: 'share the real runway with your union or employee representatives and the team while they can still shape the plan. Offer voluntary 80% hours and exits'. Exits: 'give people a decent package plus TRR or similar support from the day of notice'."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": true,
+      "evidence": "'you and the leadership team take the first and largest pay cut, and drop bonuses... Tell the team and the board plainly that the runway gap is leadership's result, not theirs.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 901,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Verified against primary sources: Arbetsförmedlingen counts the two months back from the first affected person's last day; the Skatteverket R&D deduction is 20% of pay for staff spending at least 50% of their time on R&D, capped at SEK 3m a month; Carta Q3 2026 shows Series A bridge rounds at 32% in 2026; Skatteverket's short-time work support requires unforeseeable outside causes; Trevor & Nyberg's 1% to 31% finding matches the vetted sheet. Illustrative runway numbers reproduce."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Tell the team and the board plainly that the runway gap is leadership's result, not theirs.'"
+    },
+    "best_insight": {
+      "value": "It finds non-job money most samples miss: Sweden's R&D deduction on employer contributions, plus a base rate showing that bridges are normal (32% of Series A rounds on Carta). It also prices the cost of delay: 'delaying a 14-person cut by two months costs about a month of runway'.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "Any one listed element passes it, so all ten samples passed, including one that anchored the Arbetsförmedlingen notice to the wrong date. Require that the stated rules are correct: the two months count back from the first person's last day of employment, and MBL applies to union members even without a collective agreement."
+      },
+      {
+        "assertion": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+        "reason": "No sample said that 'the burn and the hiring' were the founders' decisions. The ones that passed said the runway gap was leadership's responsibility. Either accept that wording explicitly, or keep the stricter version and expect almost every sample to fail."
+      },
+      {
+        "reason": "No assertion covers the investor conversation, which is the actual fork in the prompt. It would check whether the reply asks the two investors to fund a bridge if they want the cut, finds out why they want 30%, and checks whether they can force it under the shareholders' agreement or board composition. The best samples did this and the weaker ones only said 'meet them privately'."
+      },
+      {
+        "reason": "Assertion 1 mixes timeline arithmetic, which every sample did, with growth-inclusive modelling and funding scenarios, which only some did. Splitting it would separate 'nine months ends in August 2027, the B closes later' from 'on current burn and 4% growth, here is when you break even or run out under each funding case'."
+      }
+    ],
+    "overall": "The strongest kind of answer: a quantified, assumption-stated model with funding scenarios, Swedish rules stated correctly, and a dated trigger instead of a refusal."
+  }
+}

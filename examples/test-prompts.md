@@ -292,3 +292,99 @@ What good looks like:
 - A blameless post-mortem on testing, rollback, change approval and staging, with an owner, a date and a measure for each fix
 - What to bring the board instead: facts, causes, changes and how they'll know it worked
 - A private conversation with the team lead and protection from public blame
+
+## 28. A rebrand before a sale (CEO)
+
+> I'm the new CEO of a 900-person logistics software and services group in Germany, formed over the last two years from four companies we acquired. Our private equity owners plan to sell in about 18 months and want profit up before then. The leadership team has agreed three moves: rebrand all four companies under one new name in Q1, a fourth restructure to remove management layers, and ending all contractor and junior roles. Our NPS fell from +31 to +6 this year and customer churn is rising. Write the plan I can take to the board next week.
+
+What good looks like:
+- Falling NPS and rising churn at the centre, as the main risk to profit and to the sale
+- Find and fix the top customer problems first, ranked by evidence
+- The rebrand kept to its must-have part and phased, not treated as the strategy
+- Asks what the first three restructures failed to solve before a fourth
+- No blanket end to contractor and junior roles; less harmful levers first
+- A few priorities with owners, measures and dates, argued in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams
+
+## 29. Everyone on the rebrand (CPTO, for a head of product)
+
+> I'm head of product at a 400-person SaaS company that merged with a competitor last year. Leadership has decided the whole product and engineering organisation will spend Q1 on the rebrand: the new name in the app, a new design system, a new domain and a new marketing site. Our top customer complaints (slow invoicing, a broken accounting integration, missing reports) have been open for months, and NPS fell from +28 to +4. The CEO's line is "leadership decides, teams execute" and "any decision beats no decision". How should I plan Q1?
+
+What good looks like:
+- Opens with the recommendation and protects capacity for the top customer problems
+- Splits the rebrand into a small must-have part and parts that can wait, with their cost
+- Ranks the customer problems by evidence and sets measures
+- Options with trade-offs, not a flat no
+- A private conversation with the CEO first; fast on decisions that are cheap to undo, careful on the rest
+- Short enough to act on: about 400 words, never more than 500
+
+## 30. A family manufacturer in a downturn (CEO)
+
+> I'm the third-generation owner and managing director of a family-owned machine builder near Stuttgart with 210 employees, 14 of them apprentices. Our two biggest customers, both automotive suppliers, cut their orders by 35% this year, and one says its volumes won't return to earlier levels as it moves to electric drivetrains. The bank wants a restructuring plan before it renews our credit line in February, and our adviser says to let 45 people go now. My grandfather never laid anyone off. What should I do?
+
+What good looks like:
+- Separates the temporary part of the drop from the structural part, with evidence
+- Short-time work only for the part that will pass, and a real plan for the rest
+- Gives the bank what it needs: a cash forecast, covenant headroom, scenarios and triggers
+- The owner and the non-people costs first; apprentices and scarce skills protected
+- Any remaining reductions once and decently, under German law, flagged for counsel
+- Honours the grandfather's principle honestly, without promising that no job will ever go
+
+## 31. AI rostering in 140 supermarkets (CTO)
+
+> I'm CTO of a Dutch supermarket chain with 140 stores and about 9,000 staff, many of them students on flexible contracts. Our COO wants to roll out an AI workforce-management tool that promises 12% fewer labour hours by matching staff to forecast demand in 15-minute slots, publishing schedules three days ahead and adjusting shifts on the day. The vendor wants all stores live by March. What should I recommend?
+
+What good looks like:
+- Rejects all stores by March and offers a phased roll-out
+- Warns about the hidden costs of unstable schedules, with evidence such as the Gap trial
+- A pilot against comparison stores, measured on more than labour hours
+- Guardrails: notice, minimum shifts, staff input and swaps, limits on same-day changes
+- The Dutch legal floor: works council consent and the on-call notice rules
+- Store or team measures, store staff and managers in the design, no ranking of individuals
+
+## 32. A budget gap in home care (CEO, non-profit)
+
+> I'm the director of a non-profit home-care organisation in the Netherlands with 650 nurses and carers. Next year's contracts with the health insurers and municipalities cover about 7% less than our costs. The supervisory board proposes three measures: replace 15% of our district nurses with lower-qualified carers, introduce an app that registers every client visit to the minute, and move all planning from the teams to one central office. What should I do?
+
+What good looks like:
+- Client safety and quality of care at the centre, and evidence before any skill-mix change, with monitoring
+- Questions minute-by-minute registration and offers a lighter alternative
+- Costs that don't touch care first: overhead, agency staff, absence, travel
+- Full-cost evidence to insurers and municipalities
+- Nurses, the works council and the client council involved before deciding
+- Options for the supervisory board in its own terms, the regulator included
+
+## 33. Nine months of runway (CEO, startup)
+
+> I'm the founder and CEO of a 48-person climate-tech startup in Stockholm. We have nine months of runway, our Series B has slipped to next summer at the earliest, and two of our investors want us to cut 30% of the team this month. Revenue is growing about 4% a month. What should I do?
+
+What good looks like:
+- Runway arithmetic with scenarios: no raise, a later raise, a bridge
+- The levers that don't cost jobs first, sized
+- Any cut sized to the plan, tied to the strategy and made once
+- The Swedish legal floor: MBL, the LAS order, notice, notification for five or more
+- Decent exits and honest communication with the team
+- Founders go first and own the result
+
+## 34. An AI fraud score for welfare (CTO, municipality)
+
+> I'm CIO of a mid-sized Dutch municipality. The council wants us to buy an AI system that scores everyone on welfare benefits for fraud risk, so investigators can focus on the top 10%. The vendor says the model is 90% accurate and would use data from our benefits, debt-counselling and housing systems. The alderman wants it live within six months. What should I advise?
+
+What good looks like:
+- A clear recommendation the council can act on, without attacking the alderman
+- The childcare benefits scandal and similar cases, and what went wrong
+- Why "90% accurate" misleads at low base rates; false positives and bias tests
+- The GDPR and the AI Act's high-risk rules for public benefits, with their timing
+- Alternatives that fix the causes of errors
+- Safeguards for anything that goes ahead: a human decides, people can object, audit, register, stop criteria
+
+## 35. A leaderboard for delivery drivers (CPTO)
+
+> I'm CPTO of a parcel delivery company in the Netherlands and Belgium with about 2,400 drivers, two thirds of them employed by subcontractors. Operations wants the driver app to show a live leaderboard of stops per hour and to flag the bottom 10% of drivers to their subcontractor every week. They say it will lift productivity 8%. How should I respond?
+
+What good looks like:
+- No individual leaderboard or automatic bottom-10% flags; another route to the productivity goal
+- Why stops per hour mostly measures the route, and the safety risk of pace pressure
+- System causes and route- or team-level measures
+- The legal floor: representatives' rights over monitoring, data protection, AI rules
+- The subcontractor chain: flagging names shifts responsibility and risk; work on conditions instead
+- Drivers, including subcontracted ones, help design any tool and see their own data privately

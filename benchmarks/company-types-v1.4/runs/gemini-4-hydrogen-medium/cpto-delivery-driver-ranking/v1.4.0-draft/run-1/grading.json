@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opens: \"Say no to the live leaderboard and weekly bottom-10% flagging, and counter-propose a two-week diagnostic on aggregated route and depot data to find where the 8% productivity gain is actually hiding.\""
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "\"Raw stops per hour measures the route (city apartments vs. rural stops, traffic, late depot waves), not driver effort. Live cab rankings push drivers to speed... raising accidents\"."
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "\"Run a 2-week aggregated diagnostic (by depot and route type...): late morning wave departures, poor stop clustering, address/geofence errors, or failed first-time deliveries\"; \"route sequencing, pre-arrival customer notifications\"."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": true,
+      "evidence": "\"Article 27(1)(l) WOR\" consent; \"Belgium has similar worker-representative consultation\"; \"GDPR data-minimisation and triggers DPIA/automated-decision checks\"; brief: \"Under the EU AI Act, worker monitoring and task-allocation systems are classified as high-risk; mandatory worker-representative notice under Art. 26(7) applies from 2 December 2027\"; \"verify with NL/BE employment counsel\"."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": false,
+      "evidence": "Legal risk named (\"looks like direct employer authority\"), but labelled with the wrong doctrine (see factual errors). The alternative is accountability only: \"manage subcontractors on route-level SLAs (first-time delivery, on-time, damage rate)\", \"leaving individual coaching to the subcontractor\". It never says what flagged drivers face down the chain, and doesn't work with subcontractors on routes, conditions or causes."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": false,
+      "evidence": "Own data: \"Private in-app route progress for the driver only (vs. plan, never vs. peers)\". Involvement is thin: \"Co-design with drivers and Ops (Week 3): Shadow a handful of routes... to validate what slows drivers down\" is observation, not design, and subcontracted drivers aren't mentioned."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 417,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 675,
+      "evidence": "wc -w driver-productivity-response.md"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Calls the risk of exercising authority over subcontractors' employees 'schijnzelfstandigheid' (bogus self-employment) liability. The prompt says these drivers are employed by subcontractors; the relevant rules are disguised labour hire / illegal provision of workers (NL WAADI/case law, BE law of 24 July 1987) and chain liability, not bogus self-employment."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (any 'skill' refers to drivers' skill)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome."
+    },
+    "best_insight": {
+      "value": "The options table includes a reversibility column, making explicit that the leaderboard is hard to undo once trust and legal damage are done while the diagnostic is not.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+        "reason": "Bundles three legal elements; a generic nod to works councils and GDPR passes two of them in every sample, so only the AI-rules element discriminates (3 of 10 samples missed it). Consider requiring that the AI Act worker-monitoring duty be dated correctly (Article 26(7) from 2 December 2027, not yet in force) so a vague mention doesn't pass."
+      },
+      {
+        "assertion": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+        "reason": "Compound and ambiguous: 'works with subcontractors on conditions' is unclear about whether contract-level SLAs on outcomes count. Most samples propose 'manage subcontractors on SLAs, not names', which is a real improvement but not collaboration on routes, vans, training, hours or rates. Split into (a) flagging pushes consequences down the chain without fixing causes, (b) legal/reputational risk, (c) a collaborative alternative on causes or working conditions."
+      },
+      {
+        "assertion": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+        "reason": "Two independent behaviours (co-design including subcontracted drivers; private own-data feedback) in one check. Most samples do one but not the other, so the pass rate hides which part is missing. Split it."
+      },
+      {
+        "reason": "No assertion checks that the reply questions the evidence for the 8% or proposes a controlled pilot with quality and safety guardrails and a pre-agreed stop rule. Nearly every sample did this, so it may be table stakes, but the regression-to-the-mean trap (flagged drivers 'improve' next week by chance) appeared in only A and D and is worth rewarding."
+      },
+      {
+        "reason": "No length or concision check. Sample A's reply is 1,877 words with no document; others put the detail in a separate memo and kept the reply near 450 words."
+      }
+    ],
+    "overall": "Clear and well-paced with a useful brief, but names the wrong legal doctrine for subcontractor risk, offers subcontractors only SLAs, and drivers' 'co-design' is shadowing."
+  }
+}

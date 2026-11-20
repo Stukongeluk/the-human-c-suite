@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "'Plan Q1 around the three customer problems first, and shrink the rebrand to the part the merger genuinely needs: the name in the app, legal entities, redirects and a basic marketing page.'"
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "A must-have list ('Name in the app, legal and billing entities, domain redirects and email, and a minimal marketing page. Everything else (the new design system, the full site, deep UI restyling) is phased later, with a decision date'). Cost: 'What does the must-have rebrand actually cost? Teams often find this is far smaller than the full programme', and options with 'the cost and risk of each'."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": false,
+      "evidence": "Sets per-fix measures ('invoice generation time at p95, integration failure rate and support tickets about it, and the number of customers who asked for each report'), but the impact evidence is only aggregate ('What is the revenue at risk behind those three complaints') and the three problems are never ranked or sized against each other. Each simply gets 'One team or squad'."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "'two or three options (full rebrand in Q1; must-have rebrand plus customer fixes; customer fixes only), the cost and risk of each, and what would change your mind.'"
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "Covers every element: 'Ask in a private conversation first, then in writing'; 'Find the real reason for the Q1 deadline too'; 'a decision beats drift on things that are cheap to undo. The rebrand's scope is cheap to adjust... churn and regretted leavers are hard to reverse'; 'Bring a one-page decision record' and 'Ask for a short window, a week or so, for the teams' input'; no labelling ('Don't open with \"the rebrand is wrong\"', 'say so gently')."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": false,
+      "evidence": "reply.md is 758 words (wc -w), above the 550 ceiling, and no separate document was attached."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 758,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "'works council (mandatory in the Netherlands from 50 employees)' is correct under the WOR. The suggestion that a quarter's priority shift 'may also need its advice' is a stretch for article 25 WOR, but it is hedged ('may', 'worth checking with HR'). The prompt doesn't say the company is Dutch."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader says the responsibility for the NPS fall or the long-open complaints is leadership's."
+    },
+    "best_insight": {
+      "value": "It turns the CEO's slogan around on reversibility: the rebrand's scope is cheap to adjust (phasing it costs a quarter), while churn and regretted leavers from a rushed quarter are the parts that are hard to undo.",
+      "evidence": "from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+        "reason": "'Ranks' is ambiguous. Most replies ask for evidence on the three complaints together and set measures, but few put them in order. I passed a sample only when it broke the evidence down per complaint (ARR, tickets or detractor comments per issue) or gave an explicit order. Consider rewording to 'sizes each complaint with its own evidence and puts them in order'."
+      },
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This assertion bundles four required behaviours plus a tone check. Several strong samples met three of the four and failed on one (usually asking for the reasons, or splitting reversible from irreversible decisions). Splitting it into two assertions would give a clearer signal."
+      },
+      {
+        "reason": "No assertion checks the technical link between the new domain and the broken accounting integration (OAuth redirect URIs, webhooks, sending-domain reputation, customer allowlists). Most samples raised it, and it is the most practical sequencing argument. Capacity realism (no overtime, slack for incidents) and committing to the decision once it is made also go unchecked."
+      }
+    ],
+    "overall": "The best handling of the CEO's slogans, but over length, and the complaints get measures without being sized or ranked against each other."
+  }
+}

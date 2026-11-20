@@ -30,9 +30,12 @@ RUNS = 2
 # Headless mode can't ask for permission, and an agent whose first move is to list its folder
 # otherwise ends the run with no answer. Allow read-only folder listings and nothing else.
 # On Windows, commands with arguments need a regex rule (each token is matched separately).
-SETTINGS = {"permissions": {"allow": [
-    "command(Get-ChildItem)", "command(regex:Get-ChildItem .*)", "command(ls)", "command(regex:ls .*)",
-    "command(dir)", "command(regex:dir .*)", "command(pwd)", "command(Get-Location)"]}}
+# Read-only commands only. Headless mode can't ask for permission, so a denied command ends the run
+# without an answer. Version 1.3 runs used the listing commands; from version 1.4 the search and read
+# commands were added, because the skill asks the agent to search its evidence file.
+READ_ONLY = ["Get-ChildItem", "ls", "dir", "rg", "grep", "findstr", "Select-String", "Get-Content", "cat", "type"]
+SETTINGS = {"permissions": {"allow": [r for c in READ_ONLY for r in (f"command({c})", f"command(regex:{c} .*)")]
+                            + ["command(pwd)", "command(Get-Location)"]}}
 NOTE = ("\n\n(Answer as you would to this person. Don't ask clarifying questions first. "
         "If you also write a separate document for them, save it as a .md file in the current folder.)")
 

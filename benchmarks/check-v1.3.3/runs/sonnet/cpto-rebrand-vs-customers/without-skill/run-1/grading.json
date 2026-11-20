@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": false,
+      "evidence": "The opening paragraph agrees with the CEO and only says 'What is still open is how Q1 capacity is split, in what order... I'd plan it as follows.' The actual recommendation ('Ring-fence a customer-fix squad. Roughly 30 to 40% of product and engineering capacity stays on the three complaints') first appears in section 3, about 350 words in. The reply protects capacity but doesn't open with that recommendation."
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "'Name in the app, domain and marketing site: do these, they are mostly low engineering cost. Design system: ship tokens, colour, typography and logo as a skin on the existing components. Defer the full component rebuild and any screen-by-screen redesign to Q2 and Q3'. Cost is shown per part ('The expensive parts are the design system migration and the domain change'), but only qualitatively, and the domain is called both expensive and low cost."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "Evidence per complaint: 'Which accounts raised slow invoicing, the broken accounting integration and the missing reports? Pull ARR, renewal dates and churn or contraction since the merger'; 'Read the verbatims'. Explicit order: 'invoicing performance, then the integration. Reports go in a staged plan, with the top two or three reports by usage first'. Targets: 'Invoicing p95 latency', 'Accounting integration: success rate and open tickets', 'A pulse NPS or CSAT on affected accounts mid-quarter'."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "'Offer the CEO two or three explicit options and a recommendation... Present the alternatives honestly: all-in rebrand (what leadership asked for), the split above, and fixes first with a rebrand in Q2. Say what each costs in churn risk, NPS and rebrand dates.'"
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": false,
+      "evidence": "Section 7, 'Take it at face value and use it', is constructive and non-attacking, and it advises writing down the risk and agreeing 'a clear record and an agreed trigger to rebalance'. But there's no private conversation first, no asking leadership for its reasons (only 'find out which dates are real'), and no split between cheap-to-reverse and hard-to-reverse decisions. It opens by endorsing the slogan: 'The CEO is right that a decision beats no decision.'"
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": false,
+      "evidence": "reply.md is 1,255 words (wc -w), far above the 550 ceiling, and no separate document was attached."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1255,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong claims found. The domain-change effects listed (OAuth redirect URIs, webhooks, SSO/SAML, SPF/DKIM, API base URLs) are accurate. Two weaknesses that aren't factual errors: an internal inconsistency (the domain is called one of 'the expensive parts' and later 'mostly low engineering cost'), and 'Most CEOs will pick the middle option', an unsupported generalisation."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "A bad outcome is in the prompt (NPS +28 to +4, complaints open for months), but no leader in the advice says the responsibility for it is leadership's."
+    },
+    "best_insight": {
+      "value": "It treats the domain cutover's coupling to the already-broken accounting integration (OAuth redirect URIs, webhooks, customer allow-lists) as a technical dependency, 'your strongest practical argument for sequencing', with a freeze window and no cutover in the same week as an invoicing release.",
+      "evidence": "from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+        "reason": "'Ranks' is ambiguous. Most replies ask for evidence on the three complaints together and set measures, but few put them in order. I passed a sample only when it broke the evidence down per complaint (ARR, tickets or detractor comments per issue) or gave an explicit order. Consider rewording to 'sizes each complaint with its own evidence and puts them in order'."
+      },
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This assertion bundles four required behaviours plus a tone check. Several strong samples met three of the four and failed on one (usually asking for the reasons, or splitting reversible from irreversible decisions). Splitting it into two assertions would give a clearer signal."
+      },
+      {
+        "reason": "No assertion checks the technical link between the new domain and the broken accounting integration (OAuth redirect URIs, webhooks, sending-domain reputation, customer allowlists). Most samples raised it, and it is the most practical sequencing argument. Capacity realism (no overtime, slack for incidents) and committing to the decision once it is made also go unchecked."
+      }
+    ],
+    "overall": "Thorough and technically sharp, but too long, it doesn't open with the recommendation, and it accepts the CEO's slogans without the private conversation, the questions or the reversibility split."
+  }
+}

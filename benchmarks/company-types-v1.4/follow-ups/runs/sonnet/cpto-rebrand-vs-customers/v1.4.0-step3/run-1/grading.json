@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "Opening: 'Plan Q1 around the three customer problems, and shrink the rebrand to its must-have core instead of making it the whole quarter.' Capacity: 'roughly 60-70% on the customer problems, 15-20% on the must-have rebrand, and the rest on reliability and slack.'"
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "Must-have: 'the name in the app, the legal and billing entities, a holding marketing page, and redirects. Phase the rest: roll out the new design system gradually through tokens, logo and colours'. The domain move's cost is spelled out: 'It touches SSO, email deliverability, API endpoints, webhooks, customer IP and domain allow-lists and SEO.' Cost visibility: 'Each team estimates its own work, then you see what fits. Whatever doesn't fit moves to Q2 with a date, and you show leadership that trade-off in plain numbers.'"
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": false,
+      "evidence": "It sets measures ('p95 time to generate an invoice', 'accounting-integration success rate', 'report usage, support tickets on the three issues, NPS and churn among affected accounts') and attaches evidence for the CEO ('revenue at risk, churn reasons, support volume'). But it never ranks the three problems or says to rank them by that evidence; the only ordering is 'the top two or three [reports] that customers actually asked for'."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Not a flat no: 'Offer him the rebrand as a decision, with a smaller scope, instead of a reversal.' Explicit trade-offs on both sides: 'Steelman his side: after a merger, two brands and two products confuse customers and sales... That is a real argument for the must-have scope, just not for all of it', against '...puts the customers we're already losing at risk', and 'you show leadership that trade-off in plain numbers.'"
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": false,
+      "evidence": "It has a private conversation first ('Go privately first, before any wider meeting'), separates reversible from irreversible ('\"Any decision beats no decision\" is right for choices that are cheap to undo. Moving the entire org onto the rebrand for a quarter is a big, hard-to-reverse bet'), a light process (one page; 'Ask for their analysis before the plan is final, then tell them what you changed because of it') and no labelling. But it never asks the CEO for his reasons; it supplies them itself ('Steelman his side')."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": false,
+      "evidence": "wc -w reply.md = 736, above the 550-word ceiling for 'roughly 500 words or less'. A one-pager is offered ('I can draft the one-pager for the CEO'), but the reply itself is too long."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 736,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found (few checkable claims; the 24-point NPS fall is correct). Two unsupported details, not counted as errors: 'Two-thirds of the org on it' in the line for the CEO, although the prompt says the whole product and engineering organisation; and the works council '(ondernemingsraad)' check, which assumes a Dutch company the prompt doesn't name (it is hedged with 'check whether')."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The prompt has a bad outcome (NPS +28 to +4, complaints open for months), but no leader in the advice says that the responsibility is leadership's."
+    },
+    "best_insight": {
+      "value": "It treats the domain move as the riskiest rebrand item (SSO, email deliverability, webhooks, allow-lists, SEO): run old and new in parallel, and don't cut over in the same quarter as the accounting-integration fix.",
+      "evidence": "Point 3, 'Treat the domain move as the risky piece.'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+        "reason": "Neither sample ranks the three complaints or says to rank them. Both attach evidence (revenue at risk, churn reasons, tickets) and concrete measures to each, so both fail only on the verb 'ranks'. If ranking matters even when all three are fixed in Q1, keep it; otherwise reword to 'attaches evidence and a measure to each problem'."
+      },
+      {
+        "reason": "No assertion rewards spotting that the domain move can break the accounting integration (callback URLs, auth, customer allow-lists). Both samples flagged it, and it is the most practical planning insight here: the rebrand and the top complaint are technically coupled."
+      },
+      {
+        "reason": "No assertion checks whether anyone owns the result. NPS fell from +28 to +4 with complaints open for months, and neither sample has leadership say that the outcome is theirs."
+      }
+    ],
+    "overall": "The assertions split the samples on different points (A on reasons and length, B on options with trade-offs). A3 fails both on the same verb and doesn't discriminate."
+  }
+}

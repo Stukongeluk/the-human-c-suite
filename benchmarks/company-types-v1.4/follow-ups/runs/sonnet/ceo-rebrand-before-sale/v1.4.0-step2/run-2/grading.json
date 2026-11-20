@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "reply.md opens: \"I wouldn't take the three moves to the board as agreed: take a plan that fixes customers first, keeps the rebrand but halves its Q1 scope... The reason is the buyer: in 18 months they will price churn, NPS and key-person risk, and an NPS drop from +31 to +6 with rising churn is the first thing they will find.\" board-plan.md §1, item 1: \"Fix the customer problems first... A buyer will test exactly this in due diligence, so it comes before everything else.\" "
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "reply.md: \"Rank the top churn and NPS causes with evidence, give each an owner and a date from January, and gate every other change on those measures.\" board-plan.md §2 lists the evidence to gather: \"the top reasons customers give for leaving (survey comments, cancellation notes, support tickets)\". It states testable hypotheses: \"Each can be tested against churn and support data within two weeks\". §8: \"Stop the churn | Gross churn back to [●]%; red accounts halved | CCO | Q3 2027\"."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "reply.md: \"Rebrand in two steps. In Q1 only the essentials: name, legal entities, invoices, redirects, and a clear customer letter on what stays the same. Visual identity, product names and portals follow in waves, each only when that segment's red accounts are under control.\" board-plan.md §5.1: \"No wave starts while that segment's top issues are open\", and \"Cost: €[●]m, of which the must-have part €[●]m\"."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "reply.md: \"This would be your fourth. Before it, write down what the first three failed to solve.\" and \"Don't run it alongside the rebrand rollout, because the same managers carry both.\" board-plan.md §5.2: \"we write down what the first three set out to solve and why they did not\". It names the cost of the earlier reorganisations, framed as hypotheses for the NPS fall: \"Customers of the acquired companies lost their familiar contacts after the reorganisations; ... people who knew the accounts have left\". It also collects data on \"how many experienced people left after each reorganisation\". This is specific, though less directly stated as a general cost than in sample A."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "reply.md: \"Juniors stay, redesigned. Contractors end one by one where the work has gone, with proper notice, not as a blanket rule. Juniors are among your cheapest people and the source of the seniors a buyer will ask about.\" board-plan.md §5.3: \"for each, we record the work, rate, end date, what only they know and whether the work still has to be done.\" Other levers come first. Reply: \"duplicated tools, licences, offices and vendors..., one price book, stopping low-value work, a hiring freeze with exceptions, then redeployment and voluntary exits. Involuntary cuts only if a gap remains, once.\" The §6 table puts the levers in that order."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": true,
+      "evidence": "board-plan.md §8, \"Outcomes, owners and dates\": six outcomes, each with a measure, an owner and a date. Owners: CCO, COO, CMO, CEO/CPO, CTO and CFO. Dates run from Q3 2027 to Q1 2028. Target values are left as [●] for finance. §3, in the owners' terms: \"In 18 months a buyer pays for retained customers, recurring revenue and a team that can run the business without a few key people\", and \"A cost cut that lifts this year's profit but shows up as churn in the data room gets discounted, or questioned.\" reply.md: \"A new name does not fix an unhappy customer.\" "
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 592,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2171,
+      "evidence": "wc -w board-plan.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. The German law matches the fact sheet: a works council only \"if there is one\"; §§111-112 BetrVG reconciliation of interests and social plan; §17 KSchG thresholds; social selection, with performance rankings not a replacement. Ausbildung contracts are protected after probation (§22 BBiG). The arithmetic is correct: 60 × €70k = €4.2m; 1% of €120m at a 60% margin = €0.72m; €4.2m ÷ €0.72m ≈ 5.8%, matching \"about 6%\"; 8-10% of 900 = 72-90. Two minor imprecisions are not counted: \"halves its Q1 scope\" is a loose figure, and not every dual-study contract falls under BBiG, though the sample says to ask counsel."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "board-plan.md §7: \"The NPS fall and the churn happened under the leadership of this group, and the responsibility is ours, not the teams'.\" reply.md: \"The NPS fall happened on this leadership group's watch, and the paper says so.\" "
+    },
+    "best_insight": {
+      "value": "It puts the junior and contractor argument in the owners' own maths with a worked break-even: 60 roles × €70k saves €4.2m, and about 6% revenue loss at a 60% contribution margin erases that. It also plans to talk one by one with the CFO, each leader who agreed the three moves and the owners' lead before the board.",
+      "evidence": "reply.md 'Illustration, not your data' and 'Before the board'; board-plan.md §5.3 and §11"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "Both samples pass all six assertions, so the set does not separate them. The clearest real difference is that sample B plans to talk one by one with the CFO, each leader who agreed the three moves, and the owners' lead before the board. Sample A has no such step, although the prompt says the leadership team agreed the three moves. Add an assertion on aligning the leaders who agreed the moves before the board meeting."
+      },
+      {
+        "reason": "No assertion checks the German process: asking whether a works council exists, §§111-112 BetrVG reconciliation of interests and social plan, §17 KSchG notification, and social selection rather than performance ranking. Both samples cover it, but a sample that skipped it would still pass. Accuracy of cited research is not checked either: sample A attaches a conclusion to Davis et al. (2019) that the paper does not draw."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "This assertion bundles direction, a short list, owners, measures, dates and the owners' terms. Vague owners such as 'Named executives' and measures without targets still pass. Consider requiring outcome-level owners and a stated trade-off in money terms, such as savings set against revenue lost to churn. Sample B illustrates this; sample A declines to size anything."
+      }
+    ],
+    "overall": "A strong, complete board paper with outcome owners and dates, a break-even example in the owners' terms, and talks with the leaders before the board. All six assertions pass and no factual errors were found."
+  }
+}

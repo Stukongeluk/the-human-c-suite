@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "Reply opens: \"I wouldn't take the three agreed moves to the board as they stand\" and gives the reason: \"NPS fell from +31 to +6 in a year, and churn is rising. With a sale in 18 months, that's the biggest threat to the price, bigger than the cost base.\" Board paper summary: \"The most important fact in the business today is that NPS has fallen from +31 to +6 in a year and customer churn is rising.\""
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "Section 6 is titled \"Customer recovery programme (priority one)\": \"Close the loop with every detractor from the last survey wave\", \"Interview churned customers from the last 12 months; root-cause report to the board\", \"Fix the top three root causes, each with a named owner\". Appendix B asks for NPS \"with response rates and the main themes in verbatim comments\"."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "\"Decide the name in Q1 and use it straight away for the group... Move each company's customers across in stages (\\\"X, a NewName company\\\"), and only once that company's NPS and retention have recovered. No product, domain or API renames before the sale.\" Budget capped and a customer gate (NPS >= +20 twice)."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "\"Don't do a fourth broad one. Do one final, targeted fix where the acquisitions left duplicate layers\"; \"Design once by end of Q1 2027, only where the data shows real duplication\"; Appendix B requests \"The three restructures so far: dates, scope, cost, and savings achieved against plan.\" Costs named: downsizing \"raises later voluntary turnover among the people who stay (Trevor & Nyberg, 2008)... After three rounds, that trust is thin\" and \"often removes the people who hold customer relationships and integration knowledge.\""
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "\"Review contractors one by one: keep or convert the critical ones... Keep the junior roles\"; contractor group (a) \"Critical knowledge or customer delivery. Retain, or convert\"; \"Juniors are tomorrow's seniors.\" Profit levers are \"ordered by customer risk, lowest first\" (non-people cost, pricing, services margin, hiring discipline) with delayering last."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": true,
+      "evidence": "Customer recovery table has Owner and By columns (e.g. \"Renewal desk... | CRO | Live by [January]\"); proposed targets \"NPS: no further fall by end of Q1 2027; +15 or higher by end of Q3 2027; +20 or higher by end of Q1 2028\"; timeline and Q2 2027 gate. Owners' terms: \"A buyer pays EBITDA times a multiple, and the multiple depends on how safe the revenue looks\", with a worked example where cost-first (EUR 183m) beats customers-first (EUR 220m) only on paper."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 733,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4365,
+      "evidence": "wc -w board-plan.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found; checked claims are listed under 'claims'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference files, cost ladder, rungs found nothing (only 'skills pyramid'/'critical skills' and 'Betriebsänderung')."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No plain statement that leadership is responsible; closest is \"My working hypothesis is that much of it is self-inflicted.\""
+    },
+    "best_insight": {
+      "value": "The worked EBITDA-times-multiple example shows a cost-first path producing a lower sale price (EUR 183m vs EUR 220m) even though it saves more cost, which turns the argument into the owners' own arithmetic.",
+      "evidence": "Not covered by the assertions."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+        "reason": "Passed by all 12 samples, so it does not discriminate. Consider requiring a named must-have scope (name, legal entities, redirects) plus a customer-metric gate, or a statement that technical identifiers and contracts stay fixed."
+      },
+      {
+        "assertion": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+        "reason": "Passed by all 12 samples. Consider requiring the reply to size the junior saving against the cost of seniors absorbing the work, or to flag contractor status risk (false self-employment) that a buyer's diligence will find."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "Bundles three checks (direction, priorities with owners/measures/dates, owners' terms). The 'owners' element alone decided half the verdicts; splitting it would show which part a sample misses."
+      },
+      {
+        "assertion": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+        "reason": "'Asks which problem it would solve' is ambiguous: several samples make the change conditional on spans/duplication data without asking what the earlier three rounds failed to fix. State which of these counts."
+      },
+      {
+        "reason": "No assertion checks leadership accountability (saying the NPS fall is leadership's result, leaders' pay first) or accuracy of the German process (works councils exist only if elected, §§111-112 BetrVG, §17 KSchG, notice periods). Both separated samples here."
+      }
+    ],
+    "overall": "Strongest-structured paper: customer-first, revised moves, owners and targets, German law appendix; lacks an explicit leadership-accountability statement."
+  }
+}

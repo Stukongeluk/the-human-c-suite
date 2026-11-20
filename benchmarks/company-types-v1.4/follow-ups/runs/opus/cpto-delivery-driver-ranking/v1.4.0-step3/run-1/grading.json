@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opening: 'Don't approve the leaderboard or the weekly bottom-10% list as designed. Back the goal instead: go after the 8% with route, depot and app fixes, tested in a few depots after peak.'"
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "'Stops per hour mostly measures the route: stop density, flats versus houses, parcels per stop, van loading order, route familiarity.' Safety: '\"not home\" scans, parcels left at doors and faster driving lift the number and raise failed deliveries, complaints and accidents'. The note sets 'road incidents and harsh-driving events (aggregated), injuries' as guardrails."
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "'Find where the minutes go, from the app's scan and GPS data aggregated by depot and route type: time at the stop, searching the van, failed attempts, taps per delivery. Fix the top three.' The note lists 'loading sequence that doesn't match stop order, address and access data for flats, app friction at the door, route sequencing, not-home rates', and the outcomes per route and depot include 'first-time delivery'."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": false,
+      "evidence": "It flags works council consent ('article 27(1)(l) WOR'), 'likely a DPIA', Belgian consultation (CAO/CCT no. 39 in the note) and the subcontracting risks, all 'to be confirmed by employment counsel and our DPO'. But it never mentions AI or algorithmic-management rules (the AI Act's high-risk category for monitoring or allocating work, or the Platform Work Directive)."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": true,
+      "evidence": "Legal and contractual risk: 'Named lists for subcontractors to act on look like you exercising employer authority over their staff, which can turn subcontracting into labour hire (NL) or make you the deemed employer (BE).' It doesn't fix causes: 'Either way you rank routes and luck, not effort.' Instead: 'Subcontractors get outcomes per route and depot (on-time, first-time delivery, complaints), not names. They manage their own people.' The note adds management 'through the contract', subcontractor representatives in the design, and turnover 'at our depots and subcontractors' as a guardrail."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": true,
+      "evidence": "Own data: 'A private view for drivers of their own trend, designed with drivers and the works council.' The note adds 'Each driver sees their own day and trend on comparable routes; no ranking... Designed with drivers, our works councils and subcontractor representatives' and 'Ride along on 10-15 routes, own and subcontracted'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 465,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 900,
+      "evidence": "wc -w note-to-operations.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: 240/160 arithmetic; 1 - 0.9^52 = 99.6% flagged at least once a year if rank is noise; WOR art. 27(1)(l); DPIA for systematic employee monitoring; CCT 39; Belgian Law of 24 July 1987 (deemed employment); Dutch risk of requalification as labour hire when the client exercises authority."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files, and no jargon, in the reply or the note."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "It shows the list is mostly luck: if weekly rank is noise, 99.6% of drivers get flagged at least once a year, and if it is route, the same rural routes and new drivers get flagged every week. It pairs this with a pre-agreed depot test that Operations' version could also win.",
+      "evidence": "Reply 'Two numbers for the table'; note 'How we'll know it worked'."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+        "reason": "Both samples fail only on 'AI rules'. But a stops-per-hour leaderboard with a bottom-10% cut-off isn't obviously an AI system under the AI Act, and a parcel carrier with its own and subcontracted drivers isn't obviously a digital labour platform. The assertion may penalise a correct omission. Consider 'AI or algorithmic-management rules where they apply', or accept a sentence on why they don't."
+      },
+      {
+        "assertion": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+        "reason": "Good discriminator. Sample A explicitly brings in subcontracted routes and subcontractor representatives; Sample B says only 'designed with drivers'."
+      },
+      {
+        "reason": "Nothing rewards the safety point that a live leaderboard is read in traffic (Sample B: 'glances at the screen', 'never while driving') or not releasing app changes during peak (Sample A). Both are concrete and matter to drivers' safety and operations."
+      }
+    ],
+    "overall": "The assertions mostly discriminate; the AI-rules element may not fit a non-AI leaderboard and fails both samples."
+  }
+}

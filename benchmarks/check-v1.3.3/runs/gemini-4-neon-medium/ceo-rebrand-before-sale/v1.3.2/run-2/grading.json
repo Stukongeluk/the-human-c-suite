@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "First sentence: 'Pause the fourth restructure, defer the Q1 rebrand, and take a 90-day Stabilization and Margin Capture Plan to the board instead. With NPS down 25 points (+31 to +6), churn rising... those three moves now will hurt your exit multiple'. Problem statement: 'we must stop our customer decline'. The trap: 'treating profit as a payroll problem when you have a customer and integration-fatigue problem'."
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "Recommendation item '(1) stops customer churn'; Phase 1: '90-day Churn & NPS Turnaround: Identify the top 20 at-risk accounts and the top 5 operational/product causes of the NPS drop... dedicate engineering/service capacity to fixing root causes'. Evidence: 'First 30 days of customer interviews and churn root-cause analysis by Product/CTO'; reply: 'CRM / Product: Exact GRR/NRR, churned ARR, and the top 5 causes of the NPS drop'."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "'Keep the four operating brand names through stabilization (add a low-cost endorsement line such as \"A [Group] Company\" only where helpful for cross-selling). Revisit full rebranding only once NPS is back above +25'."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "It says the current plan 'solves the wrong problem at the wrong time', notes that 'three restructures in 24 months have pulled attention inward', and tests the restructure's purpose: 'Where management spans are genuinely too narrow, adjust through natural attrition'. Costs: 'deepens change fatigue and drives out high performers' (Trevor & Nyberg, 1% → 31% more voluntary turnover), 'Survivor attrition, lost legacy knowledge'."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "'Map every contractor to customer delivery and legacy system risk'; contractors may be 'people who hold undocumented knowledge across our four legacy codebases'. Juniors are 'the most affordable, tool-fluent part of the future talent pipeline'. Non-headcount synergies and pricing come first, with a Day-90 gate before any structural headcount move."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": false,
+      "evidence": "Owners' terms are strong: 'Protects Gross and Net Revenue Retention (the primary driver of software/services multiples)'; 'Low regretted attrition and an intact talent pipeline, giving buyers confidence'. Dates and measures exist too: 'Stop churn rise by Day 90; NPS back toward +20–25+ by Month 9'. But the priorities have no owners. There is only 'Decision owner: CEO' and a pre-mortem promise of 'named owners for every euro' that names nobody. And a 3,000-word paper is not a short list."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 719,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3001,
+      "evidence": "wc -w of the board plan .md in the sample folder"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Wrong rule: 'operational changes above 20 people require negotiating an Interessenausgleich and Sozialplan' (reply) and 'operational restructures affecting more than 20 employees require negotiating...' (paper). Under §111 BetrVG, the 20 is the company's size (more than 20 employees). Whether a staff cut counts as a Betriebsänderung depends on §17 KSchG-style thresholds, not on more than 20 people being affected. Correct elsewhere: Trevor & Nyberg 1% → 31%; §622 BGB up to seven months; DrittelbG from 500; §17 KSchG errors can void dismissals; KSchG >10 employees and >6 months' service. The Garman (AWS, August 2025) remark on juniors matches the public record as far as I know; web search was unavailable to re-check it."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep only matched 'Betriebsänderung')."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Leadership owns the fact that three restructures in 24 months have pulled attention inward while customer satisfaction dropped 25 NPS points'; 'Acknowledge plainly to the organization that leadership is responsible for the pace of past restructures and the resulting customer strain.'"
+    },
+    "best_insight": {
+      "value": "A Day-90 financial gate with a pre-defined contingency (one properly consulted, voluntary-first programme, sized to the verified gap) gives the PE board a credible fallback, so 'not now' doesn't read as 'never'.",
+      "evidence": "Not covered by the six assertions."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+        "reason": "Passed in all 12 samples: every sample opened by rejecting the three moves on churn grounds. As worded it can't separate 'leads with the customer problem' from 'leads with stopping the rebrand'. Consider requiring the first sentence or recommendation to name customer retention as the top priority."
+      },
+      {
+        "assertion": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+        "reason": "Passed in all 12 samples (all deferred the rebrand behind an endorsement line), so it doesn't discriminate on this case."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "Bundles four things (direction, owners/measures/dates, short list, owners' terms). Every sample made the case in the owners' terms; the verdict turned almost entirely on named owners. Splitting it would show which part fails."
+      },
+      {
+        "reason": "No assertion checks German labour-law accuracy, though most samples made specific claims, and several got rules wrong (the §111 BetrVG threshold, 'any targeted reduction needs a social plan', social-selection direction) or assumed a works council exists. Consider an assertion that the reply checks for a works council rather than assuming one, and states the consultation rules correctly or not at all."
+      },
+      {
+        "reason": "Leadership ownership of the NPS drop separated samples (B, C, E, G, I, J, L did it; A, D, F, H, K did not) and is central to the scenario, but it is only an extra check. Consider promoting it to an assertion."
+      }
+    ],
+    "overall": "One of the most complete plans, with customer-first priority, a fair process and leadership ownership; it falls short on named owners and misstates the §111 BetrVG threshold."
+  }
+}

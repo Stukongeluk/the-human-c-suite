@@ -1,0 +1,22 @@
+I've written the board paper (**board-plan.md**). One thing first, because it isn't quite the plan you asked for: **I wouldn't take the three agreed moves to the board as they stand.** I'd keep what each one is for (one company, a leaner management structure, a lower cost base) and change how and when it's done.
+
+The reason is the last thing you mentioned. NPS fell from +31 to +6 in a year, and churn is rising. With a sale in 18 months, that's the biggest threat to the price, bigger than the cost base. A buyer pays EBITDA times a multiple, and the multiple depends on how safe the revenue looks. Their due diligence will look at churn by cohort and will talk to your customers. All three moves, as agreed, add disruption for customers in exactly the next nine months, and those months become the trailing numbers a buyer underwrites. The paper has a worked example (illustrative, not your numbers) where cutting €3m of cost lowers the sale price because churn continues.
+
+**What the paper proposes for each move:**
+
+- **Rebrand.** Decide the name in Q1 and use it straight away for the group, the employer brand and the sale story. Move each company's customers across in stages ("X, a NewName company"), and only once that company's NPS and retention have recovered. No product, domain or API renames before the sale. A strategic buyer may retire the name anyway.
+- **Fourth restructure.** Don't do a fourth broad one. Do one final, targeted fix where the acquisitions left duplicate layers. Negotiate it once with the works councils, carry it out mostly through vacancies, attrition and voluntary agreements, then commit publicly to no more restructures before the exit. In Germany, an Interessenausgleich and Sozialplan often take several months, plus notice periods. A Q1 restructure brings disruption now and its full savings only late in the sale window.
+- **Contractors and juniors.** Review contractors one by one: keep or convert the critical ones, end the rest, and fix any false self-employment, which a buyer's due diligence will find anyway. Keep the junior roles. They're your cheapest capacity, in services they're where the margin comes from, and you're likely to need them on the customer recovery work. You also can't end "juniors" as a category under German law: dismissals need social selection and a works council hearing, and apprentices past probation are protected.
+
+**Where the profit comes from instead:** stopping churn, pricing discipline at renewal (healthy accounts only), the non-people cost of running four of everything, services margin, hiring discipline, and the contractor review. These come first; back-office system changes and the final delayering come later. The paper includes an EBITDA bridge template, a timeline to the sale, a board dashboard with proposed targets, a Q2 2027 gate where the board can revisit scope if results lag, and the decisions you're asking the board for.
+
+**Before the board meeting, I'd do four things:**
+
+1. **Take your leadership team through it first.** They agreed the three moves and shouldn't hear the change for the first time in the boardroom. The paper is written as testing our moves against the exit goal, not as overruling them.
+2. **Brief the PE deal partner or operating partner beforehand.** Lead with the value arithmetic, not with objections to the moves.
+3. **Fill in the [bracketed] numbers.** The ones that matter most are retention (GRR/NRR) and churn by company, where the NPS drop is concentrated, and whether it lines up with the integration events.
+4. **Get an hour with labour counsel on Appendix C,** and decide when to bring in the works councils. Early is better, and it's legally required once plans are concrete.
+
+**What I couldn't do.** I have none of your data, so every figure is a placeholder or a labelled illustration, and the targets are proposals to calibrate. The legal points are for counsel to confirm, not legal advice. The diagnosis may also prove me wrong: if the NPS fall has nothing to do with the integration, the emphasis shifts to product and service. The order stays the same: customers first, then cost.
+
+**Where I'd most like your pushback:** whether your owners will accept a less dramatic cost story, and whether you've seen something in the management layers that makes a broader delayering unavoidable. If the board insists on the original moves, Appendix A sets out the minimum safeguards.

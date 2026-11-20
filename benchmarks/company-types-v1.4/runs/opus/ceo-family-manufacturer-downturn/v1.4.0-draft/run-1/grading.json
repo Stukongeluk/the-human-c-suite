@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "Separates the two parts: 'build the plan the bank needs, separating the dip that will pass from the volume that is gone. Decide on job cuts only for the part that is truly gone'. It names customer evidence: 'Split the 35%. Ask the other customer how much comes back, and when. Ask the one moving to electric drivetrains what it will buy for those new lines.' It also says the answer turns on it: '45 people is 21%... That only matches your drop if those two customers made up about 60% of your sales and none of the volume ever comes back' and 'Two answers would change my advice: what share of sales those two customers make up...'."
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "Hours for the temporary part, with conditions: 'Use working-time accounts, then short-time work (Kurzarbeit) for the share that will come back. It needs the works council's agreement and only covers a temporary loss... The 24-month maximum applies only until 31 December 2026'. It adds the metal-agreement 30-hour week with dismissals excluded. Structural plan: 'Put spare engineering hours on service, retrofits and growing sectors like defence, aerospace and medical technology' and asking the EV customer what it will buy. The options table includes 'New revenue: e-drive, service, new sectors'."
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": false,
+      "evidence": "Partial. There is a cash forecast ('Bring a 13-week cash forecast in December'), the IDW S 6 concept, and one conditional trigger ('If the lost electric-drivetrain volume is confirmed gone and new orders haven't reached X by [date], we cut capacity by up to N roles, once'). But there are no covenants or headroom in the bank package and no set of scenarios. Weeks of cash appear only as a question to the owner ('how many weeks of cash you have without the renewal'). Two of the four named elements are missing."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "Owner first: 'Stop your own draw and dividend and cut management pay first.' Non-job levers come before hours and exits: 'Free up cash that isn't people: stock and work in progress, down payments on new orders, capex that can wait, outside spend and overtime.' The options table puts owner and spend rows above hours, voluntary exits and cuts."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": false,
+      "evidence": "Apprentices are well covered ('Keep all 14 apprentices... §22 BBiG') and so is the reduction process: 'cutting them once', §17 KSchG notification, §112a social plan, 'a social plan and a transfer company... (§111 SGB III)', Sozialauswahl, and 'This is not legal advice... see an employment lawyer or Südwestmetall'. But nothing protects scarce skills beyond the apprentices. No sentence addresses keeping skilled machinists, engineers or key know-how, or exempting key people under social selection. The assertion names both apprentices and scarce skills."
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": false,
+      "evidence": "The values part is handled well and honestly: 'Your grandfather protected a company that keeps its people through bad years... are the modern version of that. If some jobs truly can't be saved, cutting them once... is no betrayal.' No promise of zero cuts, no dismissal of the principle. But the reply never treats the family firm's long horizon or reputation as an asset. There is no mention of reputation, regional standing, the family-firm resilience advantage, or the family name's credibility with the bank or staff."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1020,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: §17 KSchG threshold, §112a BetrVG (≥37 in 60–249 makes a social plan enforceable), §622 BGB 7 months, §22 BBiG, §111 SGB III transfer-KuG 12 months, KuG 24-month rule to 31 Dec 2026, IG Metall 30-hour week with approval and FlexÜ from 57 (IG Metall page), VDMA −2%/+3% forecast (produktion.de, 18 Sep 2026), defence/aerospace/medtech momentum (produktion.de, 14 Oct 2026). The savings arithmetic (45×€75k≈€3.4m, ≈€0.5m net in 2027) is consistent with its stated assumptions. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Depending this heavily on two automotive customers is a leadership outcome, so say so to the bank and your staff' and the staff line 'Depending so much on them is my responsibility, and I'm taking the first cut.'"
+    },
+    "best_insight": {
+      "value": "It shows that 45 cuts only match the drop if the two customers were ~60% of sales and none of the volume returns, and costs the cut at ~€0.5m net in 2027 against €3.4m a year from 2028, so the owner can see when savings really land.",
+      "evidence": "reply.md 'Two numbers behind that'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "The four bank elements are listed without 'such as', so it is unclear whether all are required. Several samples give a cash forecast and a clean trigger but never mention covenants or headroom, while others list scenarios and covenants with no scenario-to-action mapping. Say which elements are required."
+      },
+      {
+        "assertion": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+        "reason": "This bundles about seven checks (apprentices, scarce skills, once, works council, social selection or §17, counsel, not-legal-advice flag). One missing item, such as the word 'once' or a disclaimer, fails an otherwise excellent answer. Split it into 'protects apprentices and scarce skills' and 'plans any remaining cuts once, with legal steps and counsel'."
+      },
+      {
+        "reason": "No assertion checks the German facts that drive the timing: Kurzarbeit's 24-month maximum falls back to 12 months on 1 January 2027, right before the February bank date, and dismissal savings land mid-2027 because of §17 KSchG, social-plan talks and notice periods of up to seven months. Most samples get these right; an assertion would catch the ones that are vague (G) or that overstate how much cash dismissals burn before February (D, I, J)."
+      }
+    ],
+    "overall": "Strong, well-sourced and accurate; it misses the bank's covenant and scenario language, protection of scarce skills beyond apprentices, and framing the family firm's long view or reputation as an asset."
+  }
+}

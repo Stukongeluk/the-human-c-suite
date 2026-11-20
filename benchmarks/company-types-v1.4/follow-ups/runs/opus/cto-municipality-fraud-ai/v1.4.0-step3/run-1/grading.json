@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "'My advice: don't buy this system as specified, and don't commit to going live in six months. Instead, offer the alderman a six-month plan that makes fraud enforcement measurably better now.' It acknowledges that 'The council's goal is legitimate', and its line to the alderman is cooperative."
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": true,
+      "evidence": "Reply: in the SyRI case, the court 'struck down risk scoring of benefit recipients for lack of transparency and safeguards'; Rotterdam's score 'used language, gender and age'; 'Something has to give, and it will be the safeguards. The childcare benefits scandal shows where that ends.' Note §3.5: the childcare scandal 'wrongly treated tens of thousands of families as fraudsters', with the AP fine 'for processing nationality'; DUO's checks flagged students with a migration background; and §3.2 'Mistakes counted as fraud'."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "Reply: 'Suppose 5% of recipients commit fraud. Then a \"model\" that clears everyone is 95% accurate' and '...two in three of the people flagged did nothing wrong'. The note's table gives 68%/84% innocent among those flagged. Vendor questions: 'Of the people in the top 10%, what share had a confirmed violation?', 'What are the error rates by gender, age, household type, nationality or migration background, language and neighbourhood?', and which variables 'could act as stand-ins for protected characteristics?'"
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": true,
+      "evidence": "Legal basis: 'needs its own legal basis'. Purpose limitation: 'articles 5(1)(b) and 6(4)'. DPIA: 'required before processing starts (article 35)'. Automated decisions: 'Under the SCHUFA judgment, a score that largely determines what happens to a person can count as an automated decision (article 22)'. AI Act: 'high-risk (Annex III, point 5(a))... From December 2027, following the 2026 Digital Omnibus'. For counsel: 'not legal advice, so have your data protection officer and lawyers confirm'."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": true,
+      "evidence": "Reply: '\"fraud\" as the Participatiewet records it: any unreported change, deliberate or not... vulnerability, not dishonesty' and 'fix the main causes of mistakes at the source: income reporting and changes in the household'. Note: 'Much of what the data records as \"fraud\" is therefore a mistake', 'offset income automatically using the income data we already receive', 'Contact the resident about a signal before treating it as fraud.'"
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": true,
+      "evidence": "Note §5 'Conditions for any pilot'. A human decides: 'There are no automated decisions about benefits. Investigators can override the score.' People are told and can object: 'Residents are told that a model may be used in selection, and how to object.' Independent audit: 'Independent bias test: before the start and every quarter' and 'access to the model, its documentation and its logs for an independent audit'. Register: 'publish them in the algorithm register' and 'the system is registered'. Stopping: 'Stop criteria, agreed in advance'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 948,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2472,
+      "evidence": "wc -w advice-note.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: SyRI (Rechtbank Den Haag, 5 February 2020, ECLI:NL:RBDHA:2020:865, art. 8 ECHR); AI Act art. 5(1)(c) since 2 February 2025; Annex III 5(a) and arts. 26, 27, 49 and 86; December 2027 per the Digital Omnibus (fact sheet); GDPR arts. 5(1)(b), 6(4), 22 and 35; SCHUFA C-634/21 (7 December 2023); 'Ongekend onrecht' (December 2020) and the cabinet's resignation in January 2021; the AP fine on the Tax Administration over nationality (December 2021); Rekenkamer Rotterdam 'Gekleurde technologie' (2021); Lighthouse/WIRED (March 2023); the DUO apology in 2024; WOR art. 25 on technological systems; MCC-AI (2023); IAMA; Participatiewet art. 17. All arithmetic in the reply and the note checks out (135/285, 54/294, 68%, 84%, at least 150/240)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "It explains why the model would be biased even without protected fields: the training labels reflect whom investigators chose to check, and the Participatiewet records any unreported change as a violation, so the model learns vulnerability rather than dishonesty. It turns this into a vendor question about what counted as 'fraud' in the labels.",
+      "evidence": "Reply 'What it learns' and note §3.2, vendor question 2."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+        "reason": "Sample A came close: it proposes making it easy to report changes and asks to measure 'intent versus mistakes', but it never says that many errors are mistakes. Say whether asking to measure the split counts, so graders apply this the same way."
+      },
+      {
+        "reason": "Nothing checks length or usability. A 484-word reply is graded against a 948-word reply plus a 2,472-word advice note. Sample B wins on coverage because the note holds the safeguards, legal table and vendor questions. If a concise reply is wanted, add a word limit or say that safeguards may sit in an attached document."
+      },
+      {
+        "reason": "No assertion checks whether the six-month deadline is realistic. Both samples addressed it (about 12-18 months to do it lawfully), and it is the political crux for the alderman."
+      }
+    ],
+    "overall": "The assertions discriminate well: the full advice note covers every named safeguard and legal point, while the short reply misses the algorithm register, stop criteria and most GDPR elements."
+  }
+}

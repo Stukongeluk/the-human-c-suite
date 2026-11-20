@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opening: 'Say no to the live leaderboard and the weekly bottom-10% list, and yes to the productivity goal by another route.' The alternatives are set out under 'What to offer instead'."
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "'stops per hour depends heavily on the route: density, parcels per stop, depot loading'; 'It ranks routes, not effort.' Safety: 'A live ranking in an app used in traffic rewards speeding, skipped breaks and glances at the screen. One serious accident outweighs the gain.'"
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "'Split each route's time from TMS and scan data: driving, doorstep, failed deliveries, depot waiting, time in our app.' 'Fix our share first: route sequencing, loading, address quality, scan steps in the app.' Reports per depot pair stops per hour 'with first-time delivery, damage, incidents and complaints'."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": false,
+      "evidence": "It flags 'a consent right on systems that monitor performance (art. 27(1)(l) WOR)', Belgian consultation '(CAO 39)', 'a DPIA under the GDPR' and the hiring-out risk, and says to 'check this with employment counsel in both countries'. But it never mentions AI or algorithmic-management rules."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": true,
+      "evidence": "It names who carries the cost: 'subcontracted drivers with the thinnest buffer, who can't see or challenge your data'. It names the misplaced cause: 'The trap is treating a route and depot problem as driver effort.' Legal risk: 'Sending named flags to subcontractors means directing their staff, which in Belgium can count as prohibited hiring-out of workers and make you their employer.' Instead: 'Report to subcontractors per depot... Individual concerns stay with the driver's own manager.' Working with subcontractors on conditions is thin (depot-level reporting only), but the chain is addressed."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": false,
+      "evidence": "Drivers get their own data: 'Give drivers their own route-adjusted numbers against their own past, visible only to them and never while driving, designed with drivers.' But nothing says that subcontracted drivers, two thirds of the fleet and outside the company's own works council, will be involved in designing it."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 474,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: 240/160 arithmetic; WOR art. 27(1)(l); CCT 39; DPIA for monitoring; Belgian prohibited hiring-out leading to deemed employment (Law of 24 July 1987, art. 31)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "It sees that a live leaderboard in an app used in traffic invites glances at the screen as well as speeding, and limits drivers' private view to 'never while driving'.",
+      "evidence": "'A live ranking in an app used in traffic rewards speeding, skipped breaks and glances at the screen.'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+        "reason": "Both samples fail only on 'AI rules'. But a stops-per-hour leaderboard with a bottom-10% cut-off isn't obviously an AI system under the AI Act, and a parcel carrier with its own and subcontracted drivers isn't obviously a digital labour platform. The assertion may penalise a correct omission. Consider 'AI or algorithmic-management rules where they apply', or accept a sentence on why they don't."
+      },
+      {
+        "assertion": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+        "reason": "Good discriminator. Sample A explicitly brings in subcontracted routes and subcontractor representatives; Sample B says only 'designed with drivers'."
+      },
+      {
+        "reason": "Nothing rewards the safety point that a live leaderboard is read in traffic (Sample B: 'glances at the screen', 'never while driving') or not releasing app changes during peak (Sample A). Both are concrete and matter to drivers' safety and operations."
+      }
+    ],
+    "overall": "The assertions mostly discriminate; the AI-rules element may not fit a non-AI leaderboard and fails both samples."
+  }
+}

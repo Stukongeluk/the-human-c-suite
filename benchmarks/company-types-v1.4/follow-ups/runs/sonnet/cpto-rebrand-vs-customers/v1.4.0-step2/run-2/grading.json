@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "The opening sentence is the recommendation: \"Plan Q1 in two tracks: a small, must-have rebrand slice, and the three customer problems (slow invoicing, the broken accounting integration, missing reports) as the first priority. Don't plan it as 'everyone on the rebrand'.\" "
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "\"Split the rebrand into must-have and phase-later... The must-have part is the name in the app, legal entities, domain and redirects. The new design system and full marketing site can follow in phases. Ask each team to estimate its own part; don't assign a number from above.\" The options are to \"Show cost, customer risk and reversibility\". Cost is made visible through team estimates and option costs. No figures or relative sizes are given."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "\"Name the top three customer problems with evidence. For each: NPS comments, churn reasons, tickets and revenue at risk. Give each an owner, a measure and a date. For example: invoice time to p95 under X seconds, integration error rate, the top missing reports shipped.\" It picks the top three on evidence, including revenue at risk, but does not say to order the three among themselves. The measures are the most concrete of the two samples."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "\"Bring two or three options: (A) rebrand-only, (B) must-have rebrand plus customer fixes, (C) fixes first, rebrand in Q2. Show cost, customer risk and reversibility.\" Not a flat no: \"Don't open with 'no'.\" "
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "Private first: \"This week, talk to the CEO privately, before any wider forum.\" Reasons: \"ask for the reasons to be written down: What problem does the all-hands rebrand solve, and by when? What happens to the customer complaints in the meantime? What would change the plan?\" Reversibility: \"The second line is right for choices that are cheap to undo. A phased rebrand is one of those. Whether the whole org spends the whole quarter on it is expensive to undo.\" Light process: written reasons, a one-page option memo and \"Review monthly\". No labelling: \"So don't oppose the decision\". \"Leadership decides\" is met with \"Ask each team to estimate its own part; don't assign a number from above.\" One small gloss: it calls the phased rebrand cheap to undo, although its must-have includes the domain move, which is not."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "reply.md is 495 words (wc -w) and practical, with first steps this week, a CEO line and indicators. Longer material is offered: \"I can draft the one-page option memo for the CEO if that helps.\" "
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 495,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. NPS figures are restated correctly, and the sample makes no legal, study or product claims."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The prompt contains a bad outcome: NPS fell from +28 to +4 and complaints were open for months. No leader in the advice says the responsibility is leadership's. \"Customers told us what they need\" is the closest line, and it is not ownership."
+    },
+    "best_insight": {
+      "value": "It turns \"plan to real capacity\" into a method: headcount minus leave, incidents, on-call, debt and meetings, no team planned at 100%, and \"Overtime is not a plan\". It also gives concrete fix measures such as p95 invoice time.",
+      "evidence": "'Build the plan from real capacity' and 'Keep reliability and debt visible'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This assertion bundles five checks: private conversation, asking for reasons, two-way versus one-way doors, a light process, and no labelling. Sample A passes on a single \"ask what would change their mind\". Sample B asks for written reasons with three questions (\"What problem does the all-hands rebrand solve, and by when?...\"). Splitting it would let that difference show."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "\"Makes the cost of each visible\" is met by a promise of team estimates. Neither sample sizes the parts, even relatively; for example, it could say the full design system is the largest piece. Consider asking for a relative size, or an explicit ask to size the must-have and the phased parts separately."
+      },
+      {
+        "reason": "Three things are not checked. No assertion asks whether the head of product, or leadership, owns the 24-point NPS fall and the complaints left open for months; neither sample does. None checks planning to real capacity, as in B's \"headcount minus leave, incidents, on-call, debt and meetings ... Overtime is not a plan\". None checks asking about hard external deadlines for the rebrand, which both samples raise."
+      }
+    ],
+    "overall": "A practical plan under 500 words with a clear A/B/C option set, written reasons asked of the CEO and a real-capacity method. All six assertions pass. Nobody owns the NPS fall, and calling a phased rebrand cheap to undo glosses over the domain move."
+  }
+}

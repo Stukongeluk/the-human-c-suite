@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "Its illustrative model has growth cases: 'Runway, growth 4% / 2% a month' for waiting (9/8), a 30% cut (13/10), savings without layoffs (13/10), and savings plus a 15% cut ('Reaches break-even / 13 months'). A second table shows the cuts needed to reach 18 months by revenue coverage and growth. It covers default alive, 'monthly for 18 months at 4%, 2% and 0% growth', and a bridge sized in months of costs."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "'Savings without layoffs (step 2) | 13 / 10 months', itemised as 'non-payroll spend down 25%, leaders' pay cut, a few people on voluntary reduced hours, hiring freeze with 10% yearly attrition'. It adds the R&D deduction ('about SEK 275,000 a month for 25 engineers'), then 'People you'd need to cut on top of those savings'."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'let the size of any cut come out of that plan'; 'Depending on your numbers, 30% could be too much or not enough'; 'make one cut, sized to the conservative case and tied to work you stop'; 'Protect the 4%... stop them; stopping work is what makes any cut survivable'."
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'MBL negotiation before you decide, even without a collective agreement if affected staff are union members; notice to Arbetsförmedlingen at least two months before reductions take effect for 5–25 people; one to six months' notice by length of service; selection by length of service per unit, with three exemptions, unless you agree a list with the union; nine months' re-employment priority' ('not legal advice; use employment counsel')."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": true,
+      "evidence": "'Tell the team before any cut is decided. Share the runway and options at an all-hands, ask for ideas, and update the runway monthly.' Package: 'TRR if your agreement covers it (bought outplacement if not), pay on top of notice, generous vested-equity terms and placement help, as in Airbnb's 2020 package'."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": true,
+      "evidence": "'Own it and go first. Tell the board and the team plainly that the gap is leadership's: the plan depended on a Series B that has slipped. You and the exec team take the first and largest pay cut (20–30%), and bonuses go to zero.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1034,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Verified on Skatteverket: the R&D deduction is 20% of pay for staff spending at least 50% of their time on R&D; short-time work support needs temporary, serious, unforeseeable outside causes. Also verified: the varsel anchor on Arbetsförmedlingen, MBL §13 for union members, Airbnb 2020 (pay plus a waived equity cliff and placement team), Trevor & Nyberg, Graham's 'default alive'. SEK 275,000 = 25 × 55,000 × 20%. The illustrative runway table is plausible on a re-run, and conservative on the savings row."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'Default alive' is cited to Graham (public). No mention of skills or reference files."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Tell the board and the team plainly that the gap is leadership's: the plan depended on a Series B that has slipped.'"
+    },
+    "best_insight": {
+      "value": "'Check who that would actually pick before agreeing any number': running the LAS selection order before agreeing a headcount reveals that a 30% cut would mostly remove the newest, growth-critical hires.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "Any one listed element passes it, so all ten samples passed, including one that anchored the Arbetsförmedlingen notice to the wrong date. Require that the stated rules are correct: the two months count back from the first person's last day of employment, and MBL applies to union members even without a collective agreement."
+      },
+      {
+        "assertion": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+        "reason": "No sample said that 'the burn and the hiring' were the founders' decisions. The ones that passed said the runway gap was leadership's responsibility. Either accept that wording explicitly, or keep the stricter version and expect almost every sample to fail."
+      },
+      {
+        "reason": "No assertion covers the investor conversation, which is the actual fork in the prompt. It would check whether the reply asks the two investors to fund a bridge if they want the cut, finds out why they want 30%, and checks whether they can force it under the shareholders' agreement or board composition. The best samples did this and the weaker ones only said 'meet them privately'."
+      },
+      {
+        "reason": "Assertion 1 mixes timeline arithmetic, which every sample did, with growth-inclusive modelling and funding scenarios, which only some did. Splitting it would separate 'nine months ends in August 2027, the B closes later' from 'on current burn and 4% growth, here is when you break even or run out under each funding case'."
+      }
+    ],
+    "overall": "Meets every assertion with tight, checked numbers, correct Swedish law and an honest, staged plan. The best of the set on substance per word."
+  }
+}

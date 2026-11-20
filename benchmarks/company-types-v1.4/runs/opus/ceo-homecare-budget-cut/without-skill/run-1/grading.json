@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+      "passed": false,
+      "evidence": "Evidence and safety are present: 'It adds quality and safety risk ... In hospitals, a richer skill mix (more registered nurses relative to assistants) goes with lower mortality and better quality (Aiken et al., BMJ Quality & Safety). That is hospital evidence, not home care.' But it doesn't say what would be monitored if a skill-mix change goes ahead. 'What to keep' only says 'Do this team by team, as people leave naturally', and 'quality and safety' appears only as an evaluation criterion for the board."
+    },
+    {
+      "text": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+      "passed": true,
+      "evidence": "'It goes against where the sector has deliberately moved' (2018 agreement); 'One in four VVT staff report low autonomy ... Tracking visits to the minute takes autonomy away'; 'It costs licence fees, implementation and extra admin time.' Alternative: 'Report it per team, not per person. Register only deviations from the plan, and design the approach with your nurses.'"
+    },
+    {
+      "text": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+      "passed": true,
+      "evidence": "The lever table covers sickness absence (1–1.5%), agency staff and freelancers (1–1.5%), and overhead and admin (1–1.5%). 'cutting care staff belongs at the bottom of the list, not the top.'"
+    },
+    {
+      "text": "The reply works the income side: it brings full-cost evidence to the insurers and municipalities and is prepared to renegotiate, or to decline work that can't be delivered safely.",
+      "passed": true,
+      "evidence": "'Hand in a substantiated cost price. If a contract still falls short, use the formal routes and the political one'; with insurers 'Negotiate on your own cost price'; 'decide your walk-away point: which contract you will not sign at what price'; 'drop that contract, hand over that area'."
+    },
+    {
+      "text": "The reply involves nurses and carers, the works council and the client council before deciding.",
+      "passed": true,
+      "evidence": "'Involve people early: the works council, the client council and, if you have one, your nurses' advisory council (VAR) ... Frontline teams usually know exactly where time and money are wasted, so give them the numbers and ask where they would find their share.'"
+    },
+    {
+      "text": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+      "passed": false,
+      "evidence": "Strong board framing: one set of criteria for every measure ('financial effect and when it arrives', 'billable capacity and contract compliance', 'staff retention and absence', 'quality and safety', 'whether it can be reversed'), a lever table, a recommendation and continuity ('Continuity of care is a contract condition'). But the regulator (IGJ, or the NZa as supervisor) is never part of the case; the NZa appears only as a party to the 2018 agreement."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 2043,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor error: the 8% vs 25% Buurtzorg overhead figure is attributed to 'a 2015 KPMG study', but the primary case study attributes it to Ernst & Young (2009). D relied on a secondary source and added a caveat. Everything else checked out (CZ 2027 terms, V&VN normenkader, IZZ/Intrakoop absence, art. 5.4 Uitvoeringsbesluit Wmo, ActiZ, Aiken BMJ QS, WOR). The VNG €3.2bn figure is youth-care-specific (imprecise, not counted)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill or reference-file mentions."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Take charge of the gap yourself' and 'Take ownership' are about owning the plan. No leader says the gap is leadership's responsibility, and no leader pay cut is proposed."
+    },
+    "best_insight": {
+      "value": "It shows the cuts could breach funders' own 2027 terms and choke revenue: only hbo/master BIG nurses may do the needs assessment, and CZ requires enough level-6 nurses and a fixed team per client. It also suggests invoicing care already delivered and setting a walk-away point for each contract.",
+      "evidence": "'Fewer nurses means slower intake, weaker coordination and possibly a breach of contract'; 'Care you deliver but don't invoice'; 'decide your walk-away point'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+        "reason": "Passed by all ten samples, so it doesn't discriminate. Tighten it, e.g. require the works council's consent right on monitoring systems (art. 27(1)(l) WOR) or the 2018 sector agreement to end minute registration in district nursing."
+      },
+      {
+        "assertion": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+        "reason": "Passed by all ten samples. Consider requiring that these levers are sized or sequenced before any frontline change, not just listed."
+      },
+      {
+        "assertion": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+        "reason": "Bundles three tests (care at the centre, outcome evidence, monitoring). Samples with the best evidence (D, G) failed only on monitoring, and samples with good monitoring (A, F, H) failed only on evidence. Splitting it would show which part is missing."
+      },
+      {
+        "assertion": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+        "reason": "'The regulator' (IGJ/NZa) is the only element most samples missed (B, D, E, H, I, J all gave options and trade-offs). Consider splitting it, or saying explicitly that the care inspectorate must be named."
+      },
+      {
+        "reason": "No assertion checks the strongest argument some samples found: funders' own 2027 terms (CZ requires enough hbo-bachelor nurses and a fixed team per client; only hbo/master BIG-registered nurses may do the needs assessment), so the skill-mix and planning cuts could breach contracts. None checks Year-1 timing of savings (notice, transition payments) or factual accuracy either."
+      }
+    ],
+    "overall": "The most thorough and best-sourced reply, with strong revenue and contract work. It names no monitoring for skill mix, leaves out the regulator, makes no leadership-ownership statement, and misattributes one overhead figure."
+  }
+}

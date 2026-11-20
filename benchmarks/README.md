@@ -7,6 +7,8 @@ Every reply, grade and token count behind the results in the main [README](../RE
 | [`claude-v1.3/`](claude-v1.3/benchmark.md) | Version 1.3 against version 1.2.1 | Claude Sonnet 5.5, Claude Opus 5.5 | 56 |
 | [`gemini-v1.3/`](gemini-v1.3/benchmark.md) | With and without the skill (version 1.3), plus a version 1.3.1 check | Gemini 4 Neon, Gemini 4 Hydrogen | 56 + 4 |
 | [`check-v1.3.2/`](check-v1.3.2/benchmark.md) | The "push back privately first" rule, on the two cases it affects | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 16 |
+| [`check-v1.3.3/`](check-v1.3.3/benchmark.md) | Clear direction: version 1.3.3 against version 1.3.2 and no skill, on a rebrand-before-a-sale case and a rebrand-against-customers case | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 48 |
+| [`company-types-v1.4/`](company-types-v1.4/benchmark.md) | Every kind of organisation: the version 1.4 draft against version 1.3.3 (and no skill on Claude) on six cases outside software, plus the [follow-ups](company-types-v1.4/follow-ups.md) that led to version 1.4.0 | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 60 + 17 |
 
 ## Method
 
@@ -24,6 +26,7 @@ Each run folder holds `reply.md`, any document the agent wrote, `grading.json` (
 - **The grader is a Claude model.** It grades without knowing the source, and the comparisons that matter are within one model (with against without, or old against new version). Still, compare models with each other cautiously.
 - **Gemini loaded the skill by name.** Invoking `/<seat>` tests what the skill's content does, not whether Gemini picks the skill up on its own from its description.
 - **Token counts aren't comparable across vendors.** Claude counts are a subagent's total tokens; Gemini counts are `agy`'s `total_tokens`. Compare within one model only.
+- **Six more Gemini runs were rerun for version 1.4.** The skill tells the agent to search its evidence file, and Gemini Hydrogen used `rg` for that; headless mode couldn't ask permission and the run ended empty. The harness now also allows read-only search and read commands (`rg`, `grep`, `findstr`, `Select-String`, `Get-Content`, `cat`, `type`).
 - **Seven Gemini runs were rerun.** In those runs the agent first tried to list its folder (`Get-ChildItem`, `ls`). Headless mode can't ask for that permission, so the run ended with no answer. The harness now allows read-only folder listings and nothing else, and those seven runs were repeated with it; the empty first attempts are not graded.
 - **The checks have known gaps.** The graders' notes in each `grading.json` list them, for example checks that every reply passes and checks that bundle two things. They are the starting point for the next round of test cases.
 

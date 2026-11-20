@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "'Separate the two customers' numbers: Quantify exactly how much of your total revenue and contribution margin came from each of the two suppliers, and how much of that gap is permanent (the EV transition) versus cyclical.' The roadmap's data list includes '2025 vs. 2026 YTD vs. 2027 order book' and 'Exact backlog in non-automotive, aftermarket/service, and EV-compatible machine-building segments'. Dependence: 'use the next eight weeks to size only the permanent revenue gap'. (The headline's 'put the cyclical 35% drop on Kurzarbeit' is sloppy, but the body separates the two clearly.)"
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "'Bridge the cyclical dip with Kurzarbeit, not the structural one: Apply for Kurzarbeit (... the 24-month maximum applies until 31 December 2026, reverting to 12 months from 1 January 2027 unless extended)... it cannot solve a permanent EV-driven loss', and the roadmap says it 'Requires Betriebsrat agreement (§87(1) no. 3 BetrVG) or individual consent'. Structural part: 'Push hard on aftermarket service, retrofits, spare parts, and non-ICE machine-building work', 'redeployment to service/retrofit/non-automotive work', paid upskilling."
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": false,
+      "evidence": "It offers a '13-week cash-flow forecast showing you will not breach liquidity before spring', a '2027 P&L/liquidity bridge', leadership concessions and a costed headcount plan if needed, and lists 'credit-line headroom' among the data to pull. But there are no scenarios and no actions tied to scenarios or triggers. The package is one plan, not cases with what each would set off."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "'Leaders go first, this week: Pause or cut your own owner's draw, dividends, and management bonuses, alongside non-essential capex, external consultants, and discretionary spend.' The roadmap's option 2 adds 'Working capital, pricing & commercial pivot' with inventory and receivables release, all ahead of hiring freeze, Kurzarbeit and exits."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": true,
+      "evidence": "Apprentices: 'Keep your apprentices (they are heavily protected by law after probation and are your future skilled workforce)'. Skills: 'strips out the Facharbeiter and apprentices you cannot rehire', 'experienced CNC machinists, mechatronics technicians, and application engineers take years to replace', 'watch for losing scarce skills'. Process: 'If a permanent gap remains, cut once and decently... design one clean reduction—starting with voluntary exits and Altersteilzeit... compulsory dismissals... with proper Sozialauswahl', Betriebsrat with §§111–112, §17 KSchG, and '(Note: This is management counsel, not legal advice; confirm... with a German Fachanwalt für Arbeitsrecht or your Arbeitgeberverband.)'"
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": true,
+      "evidence": "Reputation as an asset: 'In a family firm, your name and your willingness to take the first hit buy credibility with both the bank and the shop floor.' Values: 'Your grandfather's rule—never laying anyone off—was built for a world where downturns were cyclical. Keeping that spirit today means never treating people as the first cost to cut, while being honest enough to adapt the business so the other 165+ jobs survive.' This honours the principle without promising zero cuts. The roadmap adds 'builds long-term resilience' for keeping skilled trades employed."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 687,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 989,
+      "evidence": "wc -w bank-restructuring-roadmap.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: §622 BGB up to 7 months, §17 KSchG for >25 in 60–499, §§111–112 BetrVG (>20 staff), §87(1) no. 3 BetrVG or individual consent, §1(3) KSchG, KuG 24→12 months, IAB 2026, employer-initiated Aufhebungsverträge counting towards §17. No clear errors. Overstated, not counted: 'It drains Q1 cash through notice pay and severance'. Notice-period pay is not extra cost, and severance is normally paid at exit, after Q1. Unverifiable: that the grandfather's rule 'was built for a world where downturns were cyclical'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder/rung jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders take the first hit, but no leader says the responsibility for the outcome is leadership's."
+    },
+    "best_insight": {
+      "value": "It asks for the age and tenure profile in aggregate to model notice-period cash and Altersteilzeit, explicitly not individual performance rankings, which ties the people data to the cash timing the bank cares about.",
+      "evidence": "bank-restructuring-roadmap.md section 5"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "The four bank elements are listed without 'such as', so it is unclear whether all are required. Several samples give a cash forecast and a clean trigger but never mention covenants or headroom, while others list scenarios and covenants with no scenario-to-action mapping. Say which elements are required."
+      },
+      {
+        "assertion": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+        "reason": "This bundles about seven checks (apprentices, scarce skills, once, works council, social selection or §17, counsel, not-legal-advice flag). One missing item, such as the word 'once' or a disclaimer, fails an otherwise excellent answer. Split it into 'protects apprentices and scarce skills' and 'plans any remaining cuts once, with legal steps and counsel'."
+      },
+      {
+        "reason": "No assertion checks the German facts that drive the timing: Kurzarbeit's 24-month maximum falls back to 12 months on 1 January 2027, right before the February bank date, and dismissal savings land mid-2027 because of §17 KSchG, social-plan talks and notice periods of up to seven months. Most samples get these right; an assertion would catch the ones that are vague (G) or that overstate how much cash dismissals burn before February (D, I, J)."
+      }
+    ],
+    "overall": "Compact and accurate with good legal and apprentice handling; the bank package lacks scenarios and triggered actions, and the headline loosely calls the whole 35% drop cyclical."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "'Two different problems are mixed together: A dip that will pass... A structural loss'. 'I can't size either one yet. I'm missing what share of revenue and margin these two customers are, and your 13-week cash forecast and covenant position. The adviser's 45 only makes sense once those are known.' Evidence for the split: order intake as the test ('if order intake from customer B is not above X by 31 March') and three volume scenarios. Dependence: 'if the two customers are most of your revenue and the structural loss is large, the final number could end up near the adviser's'."
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "'Bridge the dip with hours, not exits... If you have a Betriebsrat, it needs its agreement (§87 BetrVG)'. Kurzarbeit is called 'the wrong tool' for the structural loss, citing IAB 2026. Structural plan: 'For the structural part, ask about qualification support and a transfer arrangement, so that any later exits are funded retraining', 'Put real effort into new sectors that use your skills (energy, rail, medical, automation, service and retrofit work)', plus redeployment and internal moves."
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": true,
+      "evidence": "'Write the bank plan around triggers, not a headcount. Three scenarios (customers recover, stay down 35%, one stays lower for good), monthly cash for each, the levers above with dates and euro amounts, and a clear decision point. Example: \"if order intake from customer B is not above X by 31 March, we start the capacity reduction in Q2.\"' Covenants: it asks for the 'covenant position' and 'how many months of cash and covenant headroom do you have'."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "'Leaders go first... Cut your own pay, the dividend and the management bonuses before anyone else's job.' Then 'Take the cost of waste and spend out. Energy, scrap, rework, overtime, subcontractors, stock and tooling for lost volumes', ahead of Kurzarbeit and any reduction."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": true,
+      "evidence": "Apprentices: 'Keep the 14 apprentices. You cannot buy this skill pipeline back later.' Skills: 'Social selection... tends to remove your younger, scarcer skills' and 'Rehiring skilled machine-builders takes years'. Process: 'do it once, deep enough that you don't have to repeat it, and cut work along with roles', voluntary exits and internal moves first, support 'from the day of notice', Betriebsrat, §§111–112 BetrVG, §17 KSchG, and 'Your employment lawyer has to confirm all of this; I am not giving legal advice.'"
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": false,
+      "evidence": "It treats the long view as an asset ('Family firms that plan for the next generation tend to avoid layoffs and hold up better in downturns (Kachaner, Stalk and Bloch, HBR 2012)'; 'In a family firm this is the strongest signal you have'). But it dismisses the grandfather's principle: 'Your grandfather's rule is not the test.' It then says such firms hold up because they keep their skills, 'not that they never cut', without saying how the owner can still honour the principle. It does avoid promising zero cuts."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1034,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor error: '§17 KSchG also requires notifying the employment agency in advance when 25+ people or 10% of an establishment of this size are dismissed'. The statute says more than 25 (26+), not 25+. This doesn't matter at 45 people. Correct: §87 BetrVG for Kurzarbeit, §§111–112 BetrVG, notice periods up to seven months, Trevor & Nyberg 31%, Kachaner et al. 2012, IAB 2026 warning."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder/rung jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Say in writing that the loss of two customers is a leadership and concentration risk, and that it is yours to own.'"
+    },
+    "best_insight": {
+      "value": "It anticipates the adviser's and bank's pushback and concedes honestly that the final number could end up near 45 if the facts say so: what should differ is how it was reached and who carries it.",
+      "evidence": "reply.md 'Pushback I'd expect'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "The four bank elements are listed without 'such as', so it is unclear whether all are required. Several samples give a cash forecast and a clean trigger but never mention covenants or headroom, while others list scenarios and covenants with no scenario-to-action mapping. Say which elements are required."
+      },
+      {
+        "assertion": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+        "reason": "This bundles about seven checks (apprentices, scarce skills, once, works council, social selection or §17, counsel, not-legal-advice flag). One missing item, such as the word 'once' or a disclaimer, fails an otherwise excellent answer. Split it into 'protects apprentices and scarce skills' and 'plans any remaining cuts once, with legal steps and counsel'."
+      },
+      {
+        "reason": "No assertion checks the German facts that drive the timing: Kurzarbeit's 24-month maximum falls back to 12 months on 1 January 2027, right before the February bank date, and dismissal savings land mid-2027 because of §17 KSchG, social-plan talks and notice periods of up to seven months. Most samples get these right; an assertion would catch the ones that are vague (G) or that overstate how much cash dismissals burn before February (D, I, J)."
+      }
+    ],
+    "overall": "Concise and strong on the split, the bank triggers and the legal process; it loses the values assertion by calling the grandfather's rule 'not the test' instead of showing how to honour it."
+  }
+}

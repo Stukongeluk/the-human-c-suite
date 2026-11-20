@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "Opening line: 'Advise against buying this system, and offer the alderman a six-month plan for the same, legitimate goal: fewer wrongful payments, and investigators working where they find something.' It doesn't label the alderman, and the suggested line is cooperative: 'I want to help you show the council less fraud and a safety net people trust.'"
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": false,
+      "evidence": "It names the precedents: SyRI ('struck down'), Rotterdam ('score women, parents and people with weaker Dutch as riskier') and the childcare scandal ('wrongly accused more than 20,000 families'). So bias and wrongful accusation are there. But it never says what failed in the process: no mention of the missing human check, the lack of transparency or legal safeguards, or why SyRI was struck down."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "'\"90% accurate\" says almost nothing... A model that flags nobody is 97% accurate. A model that is 91% accurate can still send investigators to 300 households of whom 237, four in five, did nothing wrong.' It asks the vendor for 'the hit rate in the top 10%, results per group and which variables', and requires 'bias tests including proxies like postcode'."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": false,
+      "evidence": "It covers the AI Act ('high-risk under the AI Act (obligations from December 2027...)' and the social-scoring ban since February 2025), a DPIA, and 'Bring in your data protection officer and legal counsel now; this isn't legal advice'. But of the GDPR points it names only the DPIA. There is no legal basis, no purpose limitation framed as a GDPR rule (the debt-data point is argued on trust: 'People gave that data to get help'), and no automated-decision rule."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": false,
+      "evidence": "It offers an alternative that addresses causes: 'Fix the front door: make changes in income or household easy to report, and act on the signals you already receive with explainable rules about a fact, not a score about a person.' But it treats the cause as unknown ('how much recovered money was intent versus mistakes') rather than noting that many errors are mistakes rather than fraud."
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": false,
+      "evidence": "The conditions at the decision gate include 'an independent audit, and a person deciding, with reasons residents can challenge'. But there is no publication in the algorithm register and no criteria for stopping. That residents are told is only implied by 'reasons residents can challenge'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 484,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: the base-rate example (90 fraud cases in 3,000; 63 true and 237 false positives in a top 300 gives 91.2% accuracy and 79% innocent); the SyRI judgment in February 2020; Rotterdam's model stopped in 2021, which scored women, parents and weaker Dutch speakers higher (Suspicion Machines); more than 20,000 families (company-types.md); AI Act high-risk obligations from December 2027 and the social-scoring ban since February 2025 (fact sheets)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "It proposes a small random sample of files to learn the real base rate, which gives the council a benchmark in six months that any future model would have to beat.",
+      "evidence": "'A small random sample gives the real base rate.'"
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+        "reason": "Sample A came close: it proposes making it easy to report changes and asks to measure 'intent versus mistakes', but it never says that many errors are mistakes. Say whether asking to measure the split counts, so graders apply this the same way."
+      },
+      {
+        "reason": "Nothing checks length or usability. A 484-word reply is graded against a 948-word reply plus a 2,472-word advice note. Sample B wins on coverage because the note holds the safeguards, legal table and vendor questions. If a concise reply is wanted, add a word limit or say that safeguards may sit in an attached document."
+      },
+      {
+        "reason": "No assertion checks whether the six-month deadline is realistic. Both samples addressed it (about 12-18 months to do it lawfully), and it is the political crux for the alderman."
+      }
+    ],
+    "overall": "The assertions discriminate well: the full advice note covers every named safeguard and legal point, while the short reply misses the algorithm register, stop criteria and most GDPR elements."
+  }
+}

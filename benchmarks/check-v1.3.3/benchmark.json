@@ -1,0 +1,889 @@
+[
+ {
+  "model": "opus",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 766,
+  "document_words": 4901,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 200313,
+  "duration_seconds": 682.1
+ },
+ {
+  "model": "opus",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 693,
+  "document_words": 3968,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 194132,
+  "duration_seconds": 726.2
+ },
+ {
+  "model": "opus",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 736,
+  "document_words": 4228,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 200608,
+  "duration_seconds": 628.9
+ },
+ {
+  "model": "opus",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 908,
+  "document_words": 5037,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 202712,
+  "duration_seconds": 814.7
+ },
+ {
+  "model": "opus",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 733,
+  "document_words": 4365,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 139047,
+  "duration_seconds": 484.0
+ },
+ {
+  "model": "opus",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 682,
+  "document_words": 4706,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 158430,
+  "duration_seconds": 667.1
+ },
+ {
+  "model": "opus",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 457,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 118067,
+  "duration_seconds": 155.1
+ },
+ {
+  "model": "opus",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 469,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 118146,
+  "duration_seconds": 133.7
+ },
+ {
+  "model": "opus",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 452,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 119368,
+  "duration_seconds": 163.9
+ },
+ {
+  "model": "opus",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 445,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 115763,
+  "duration_seconds": 131.3
+ },
+ {
+  "model": "opus",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 1349,
+  "document_words": 522,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 101395,
+  "duration_seconds": 166.8
+ },
+ {
+  "model": "opus",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 1460,
+  "document_words": 490,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 99654,
+  "duration_seconds": 147.1
+ },
+ {
+  "model": "sonnet",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 518,
+  "document_words": 2129,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 120187,
+  "duration_seconds": 83.6
+ },
+ {
+  "model": "sonnet",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 468,
+  "document_words": 1655,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 120041,
+  "duration_seconds": 78.0
+ },
+ {
+  "model": "sonnet",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 785,
+  "document_words": 2373,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 124167,
+  "duration_seconds": 98.9
+ },
+ {
+  "model": "sonnet",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 562,
+  "document_words": 2018,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 119602,
+  "duration_seconds": 80.9
+ },
+ {
+  "model": "sonnet",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 1801,
+  "document_words": 0,
+  "factual_errors": true,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 91602,
+  "duration_seconds": 44.9
+ },
+ {
+  "model": "sonnet",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 2392,
+  "document_words": 0,
+  "factual_errors": true,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 92953,
+  "duration_seconds": 55.7
+ },
+ {
+  "model": "sonnet",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 593,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 105647,
+  "duration_seconds": 22.5
+ },
+ {
+  "model": "sonnet",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 758,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 101225,
+  "duration_seconds": 25.6
+ },
+ {
+  "model": "sonnet",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 2,
+  "total": 6,
+  "failed": [
+   "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 496,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 100350,
+  "duration_seconds": 23.2
+ },
+ {
+  "model": "sonnet",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them."
+  ],
+  "reply_words": 477,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 100772,
+  "duration_seconds": 26.6
+ },
+ {
+  "model": "sonnet",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 3,
+  "total": 6,
+  "failed": [
+   "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 1255,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 90464,
+  "duration_seconds": 33.8
+ },
+ {
+  "model": "sonnet",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 2,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 1252,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 90350,
+  "duration_seconds": 31.1
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 533,
+  "document_words": 1548,
+  "factual_errors": true,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 42021,
+  "duration_seconds": 66.2477342
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 706,
+  "document_words": 1585,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 44821,
+  "duration_seconds": 59.309011
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 638,
+  "document_words": 1532,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 40101,
+  "duration_seconds": 69.3137513
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 413,
+  "document_words": 1906,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 42639,
+  "duration_seconds": 64.0104519
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 710,
+  "document_words": 1370,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 25268,
+  "duration_seconds": 57.5532684
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 444,
+  "document_words": 1360,
+  "factual_errors": true,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 21535,
+  "duration_seconds": 51.0814941
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 389,
+  "document_words": 693,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 32771,
+  "duration_seconds": 54.1577884
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them."
+  ],
+  "reply_words": 403,
+  "document_words": 1025,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 30394,
+  "duration_seconds": 38.2902194
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 380,
+  "document_words": 641,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 28967,
+  "duration_seconds": 42.6869675
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 410,
+  "document_words": 655,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 31006,
+  "duration_seconds": 40.8032426
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 1,
+  "total": 6,
+  "failed": [
+   "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+   "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 957,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 14986,
+  "duration_seconds": 39.0264393
+ },
+ {
+  "model": "gemini-4-hydrogen-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 1,
+  "total": 6,
+  "failed": [
+   "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+   "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 1170,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 14451,
+  "duration_seconds": 36.1935654
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "reply_words": 754,
+  "document_words": 2445,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 49836,
+  "duration_seconds": 148.7836228
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 792,
+  "document_words": 2192,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 50911,
+  "duration_seconds": 132.0381979
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 758,
+  "document_words": 2299,
+  "factual_errors": false,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 53318,
+  "duration_seconds": 150.9737173
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 719,
+  "document_words": 3001,
+  "factual_errors": true,
+  "owns_result": true,
+  "skill_leak": false,
+  "total_tokens": 57352,
+  "duration_seconds": 151.2844403
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 3,
+  "total": 6,
+  "failed": [
+   "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+   "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 831,
+  "document_words": 1343,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 21398,
+  "duration_seconds": 107.7555558
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "ceo-rebrand-before-sale",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+   "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name."
+  ],
+  "reply_words": 794,
+  "document_words": 1837,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 25070,
+  "duration_seconds": 111.8598517
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 1,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them."
+  ],
+  "reply_words": 435,
+  "document_words": 1111,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 39495,
+  "duration_seconds": 96.2941259
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.3",
+  "run": 2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them."
+  ],
+  "reply_words": 456,
+  "document_words": 845,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 34991,
+  "duration_seconds": 87.6323225
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 1,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 437,
+  "document_words": 986,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 36720,
+  "duration_seconds": 98.8684787
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "v1.3.2",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders."
+  ],
+  "reply_words": 449,
+  "document_words": 728,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 31933,
+  "duration_seconds": 81.1912081
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 1,
+  "passed": 2,
+  "total": 6,
+  "failed": [
+   "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+   "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 1070,
+  "document_words": 1208,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 22509,
+  "duration_seconds": 105.8915312
+ },
+ {
+  "model": "gemini-4-neon-medium",
+  "case": "cpto-rebrand-vs-customers",
+  "config": "without-skill",
+  "run": 2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+   "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document."
+  ],
+  "reply_words": 1038,
+  "document_words": 0,
+  "factual_errors": false,
+  "owns_result": false,
+  "skill_leak": false,
+  "total_tokens": 14733,
+  "duration_seconds": 67.423905
+ }
+]

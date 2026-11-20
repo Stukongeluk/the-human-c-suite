@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+      "passed": false,
+      "evidence": "It questions the cut on savings ('saves about €0.2 million, under a tenth of the gap') and on assessments ('Your district nurses do the needs assessments insurers expect from level-5 nurses'). But it cites no evidence that staffing levels or qualifications affect client outcomes; the KPMG/Buurtzorg point is about hours per client. It also never says what would be monitored if a skill-mix change goes ahead. Monitoring appears only for the planning pilot ('measure travel time and continuity')."
+    },
+    {
+      "text": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+      "passed": true,
+      "evidence": "'Timing every visit and reading it per nurse is something else: it rushes visits and pushes people out. A system that can monitor staff needs your works council's consent (art. 27(1)(l) WOR). If care goes unbilled, fix that at team level.' It questions the app on professional judgement and staff trust and offers a team-level alternative. Administrative burden isn't named."
+    },
+    {
+      "text": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+      "passed": true,
+      "evidence": "'Split the 7% into price..., volume... and your own costs (absence, agency cover, turnover, overhead). Ask the teams too; they know where time leaks.' Also 'Leadership goes first: management layers and overhead, starting with your own pay, before any frontline role.'"
+    },
+    {
+      "text": "The reply works the income side: it brings full-cost evidence to the insurers and municipalities and is prepared to renegotiate, or to decline work that can't be delivered safely.",
+      "passed": true,
+      "evidence": "'Negotiate with your full cost price. Municipalities must pay a fair price that reflects collective-agreement wages (Wmo 2015, art. 2.6.6); work with ActiZ or Zorgthuisnl on the insurers.' It also looks at 'care delivered but not billed'."
+    },
+    {
+      "text": "The reply involves nurses and carers, the works council and the client council before deciding.",
+      "passed": true,
+      "evidence": "'Bring in the works council and client council now, with the real numbers, while they can still change the plan.' And 'Ask the teams too; they know where time leaks.'"
+    },
+    {
+      "text": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+      "passed": false,
+      "evidence": "It critiques each board proposal and recommends an alternative, touching continuity ('more strange faces at a client's door'), retention ('Scarce nurses you push out are hard to win back') and finances. But the options with trade-offs are only offered ('I can draft the board note with the options side by side'), and the regulator is never mentioned."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 464,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: Wmo 2015 art. 2.6.6 (fair price); WOR art. 27(1)(l); level-5 district nurses doing the needs assessments; KPMG 2015 Buurtzorg; ActiZ and Zorgthuisnl as sector associations; the supervisory board's role. The savings arithmetic (15 × €15-20k ≈ €0.2-0.3M) is labelled as an estimate."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Line for the chair: 'This gap is ours as leadership, and I'll close it.'"
+    },
+    "best_insight": {
+      "value": "It gets the governance right: talk to the supervisory board chair privately before the meeting, and remember that the director runs the organisation while the board supervises. It also gives a ready line asking for six weeks to diagnose the 7%.",
+      "evidence": "'Talk to the board chair privately first... You run the organisation; the board supervises and approves.'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+        "reason": "Both samples fail only on 'the regulator': neither mentions the IGJ (Health and Youth Care Inspectorate) or the NZa. That hides a real difference. Sample A gives the board a full options table (saving, risks, better version) with monitoring, while Sample B only offers to draft one. Consider putting the regulator in its own assertion."
+      },
+      {
+        "reason": "No assertion checks the numbers: both samples showed the skill-mix cut closes only about a tenth of a roughly €2.4-3M gap. That is the most persuasive point for this board, and a reply could pass every assertion without it."
+      },
+      {
+        "reason": "No assertion covers the governance relationship (the director runs the organisation, the supervisory board supervises; talk to the chair first), which Sample B handled well and Sample A did not address."
+      }
+    ],
+    "overall": "A1 discriminates well (outcome evidence and a monitoring plan for skill mix); A6 fails both samples on the same single element."
+  }
+}

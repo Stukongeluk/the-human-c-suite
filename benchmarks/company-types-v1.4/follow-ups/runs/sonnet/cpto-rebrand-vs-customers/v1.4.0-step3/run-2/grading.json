@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "Opening: 'Plan Q1 with the customer problems first and the rebrand cut to its must-have part: the new name, legal entities and domain redirects.' It also has 'Protected time for reliability and debt. Don't plan any team at 100%.'"
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "Must-have: 'Rebrand, minimum slice: the name in the app, legal and contract changes, and domain redirects. A short, fixed list.' Phased: 'the full design system, adopted screen by screen as teams touch them anyway, and the marketing site, which can run on a lean version first.' Costs: 'Ask each team for a capacity estimate based on its own past throughput... Then fill the split' and 'Here's the capacity model'. It also shows the domain change's cost to the integration."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": false,
+      "evidence": "'Three customer outcomes, each with an owner, a measure and a date... Attach revenue at risk to each, from churn reasons, support tickets and renewal dates.' So there is evidence and a measure per problem, but the problems are never ranked and the reply doesn't say to rank them."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": false,
+      "evidence": "Not a flat no ('I'm not asking to drop the rebrand. I'm asking to ship the part we must have in Q1'), but it brings a single sequencing proposal. The trade-offs of leadership's full-rebrand option are never set out (no steelman or benefits), and the options side by side are only offered later ('I can draft the one-page decision record')."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "Private conversation first: 'Take this to the CEO privately, before any wider forum.' Asks for the reasons: 'Is any rebrand date contractual or legal (merger terms, a sunset of the old brand), or is it a preference?' and 'What would change your mind?' Reversible vs irreversible: '\"Any decision beats no decision\" is true for choices that are cheap to undo, and sequencing is one of those. A domain migration is harder to undo.' Light process: 'ask the teams for their analysis first, then decide. It costs a week' and an offered one-page decision record. No labelling: 'Leadership deciding is fine'."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "wc -w reply.md = 494, under 550. It is practical (a 'this week' list and a line to use) and offers longer documents separately: 'I can draft the one-page decision record for the CEO or a Q1 capacity sheet next.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 494,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found (few checkable claims). Not counted: the line for the CEO says the three problems 'moved NPS by 24 points', stating as fact what the reply later lists as an assumption ('the complaints are the main driver of the NPS drop')."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The prompt has a bad outcome (NPS +28 to +4), but no leader in the advice says that the responsibility is leadership's."
+    },
+    "best_insight": {
+      "value": "It sees that the domain change can break the accounting integration (callback URLs, authentication, customers' allow-lists), so the integration team needs a seat in the domain plan. It also asks whether the rebrand date is contractual or just a preference.",
+      "evidence": "'Two things to check this week' and 'Two questions that would change my answer'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+        "reason": "Neither sample ranks the three complaints or says to rank them. Both attach evidence (revenue at risk, churn reasons, tickets) and concrete measures to each, so both fail only on the verb 'ranks'. If ranking matters even when all three are fixed in Q1, keep it; otherwise reword to 'attaches evidence and a measure to each problem'."
+      },
+      {
+        "reason": "No assertion rewards spotting that the domain move can break the accounting integration (callback URLs, auth, customer allow-lists). Both samples flagged it, and it is the most practical planning insight here: the rebrand and the top complaint are technically coupled."
+      },
+      {
+        "reason": "No assertion checks whether anyone owns the result. NPS fell from +28 to +4 with complaints open for months, and neither sample has leadership say that the outcome is theirs."
+      }
+    ],
+    "overall": "The assertions split the samples on different points (A on reasons and length, B on options with trade-offs). A3 fails both on the same verb and doesn't discriminate."
+  }
+}

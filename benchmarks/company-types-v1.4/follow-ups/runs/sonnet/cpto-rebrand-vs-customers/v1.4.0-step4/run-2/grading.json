@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "First sentence: 'Plan Q1 around the three customer problems, and shrink the rebrand to its must-have part instead of making it the whole quarter.' The plan puts 'Customer fixes first, with owners and measures.'"
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "Must-have: 'The new name in the app, legal entities, domain with redirects. Size it with the teams that will build it.' Phased: 'The new design system and the full marketing site move to Q2 or later, or run as a thin slice. They need the most capacity and are the least urgent for customers.' Cost made visible: 'show the CEO the trade-off in plain numbers: what is in, what is out, and the cost of each.'"
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": false,
+      "evidence": "It attaches evidence to each problem ('Each gets a named owner, the evidence behind it (NPS comments, tickets, churn reasons, revenue at risk) and a target date'). It never ranks them, though, and even treats 'the order of the fixes' as a cheap choice to 'decide those fast', not one to rank by evidence. The measures stay open: only 'a target date' and 'Set the targets with the teams; I don't know your numbers yet', with no measure named for any problem."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Not a flat no ('Don't open with \"this is wrong\"... Then offer something concrete.'). It makes the trade-off explicit: 'show the CEO the trade-off in plain numbers: what is in, what is out, and the cost of each', and 'you make the trade-off visible so they decide well'. It offers 'the one-page options note for the CEO, with the three plans side by side'. Weakness: the three plans are never named in the reply."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "Private first: 'Before anything goes to the whole organisation, talk to the CEO privately.' Reasons: 'Ask: \"What problem is the rebrand solving by end of Q1...\" Ask what is fixed... and what is open.' Reversibility: 'right for choices that are cheap to undo, such as the order of the fixes... The name, domain and design system are harder to reverse'. Light process: 'write the decision down: problem, options, reasons, what would change your mind, review date.' No labelling: \"Don't fight the line. Take it at its word\" and 'Steelman the CEO.'"
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "wc -w = 487 words (limit 550). Numbered Q1 shape, capacity check and a CEO question script. The longer material is offered: 'I can draft the one-page options note for the CEO, with the three plans side by side.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 487,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-B."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No claims about laws, schemes or studies. The NPS arithmetic is correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/reference/cost ladder/rungs found nothing. 'Steelman' is ordinary language, not skill jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The prompt includes a bad outcome (NPS +28 to +4, complaints open for months). No leader in the advice says the responsibility for it is leadership's."
+    },
+    "best_insight": {
+      "value": "It steelmans the CEO: after a merger, two names confuse customers and sales. It uses that to explain why the rebrand core stays in Q1, which makes the pushback easier for the CEO to accept.",
+      "evidence": "'Steelman the CEO. After a merger, two names confuse customers and sales, and a fast rebrand ends that. That is why the core stays in Q1.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+        "reason": "This bundles three things: ranking, evidence and measures. Neither sample ranks. This one attaches evidence per problem but names no measure, the other names measures but uses evidence only to persuade, and both fail for different reasons. Split it."
+      },
+      {
+        "assertion": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+        "reason": "This sample passes on explicit trade-off framing and an offered 'three plans side by side' note, but it never names the three plans. Consider requiring the options to be named in the reply."
+      },
+      {
+        "reason": "No assertion checks that the reversible/irreversible split is drawn correctly. The two samples put the name and domain on opposite sides."
+      },
+      {
+        "reason": "No assertion checks whether the reply finds allies with a stake (customer success, sales, finance) who hold the churn and revenue evidence. Neither sample does."
+      }
+    ],
+    "overall": "Strong, compact reply: clear split with costs, explicit trade-offs, a decision record and a steelman. Its only miss is that the customer problems are not ranked and have no named measures."
+  }
+}

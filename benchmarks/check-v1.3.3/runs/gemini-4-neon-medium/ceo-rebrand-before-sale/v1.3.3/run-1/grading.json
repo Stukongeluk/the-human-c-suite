@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "'With NPS down 25 points (from +31 to +6) and churn rising, your exit value in 18 months is threatened far more by a compressed valuation multiple than by today's payroll. Take a customer-first stabilization and non-headcount synergy plan to the board instead.'"
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "Reply: 'Days 1–14: Pull the top 5 churn drivers and NPS verbatims'. Paper's first action: 'Customer rescue: Product, Engineering, and Customer Success diagnose the top 5 drivers of churn and the NPS drop within 14 days, and dedicate Q1 capacity to fixing them'. Sources: 'CRM / ticketing / NPS verbatims', 'Customer interviews and win/loss data'."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "'Keep brand unification minimal now (legal/endorsement line) and phase the rest once NPS recovers'; 'execute only minimal legal/commercial unification (e.g., master group endorsement line) now, and defer full rebranding until Q3/Q4'."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "'Three restructures have not prevented a 25-point NPS drop. Each reorganisation creates a productivity trough, new hand-offs, and regretted attrition of people who hold institutional knowledge. Changing the org chart again without diagnosing why the first three failed treats a symptom, not the cause.'"
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "'Before ending contractor roles, your CTO must map which contractors hold undocumented knowledge of the four legacy logistics platforms'; for juniors, 'the pipeline damage is permanent'. 'Cut non-headcount waste first'; at the Month 6 gate, 'evaluate voluntary exits first, and only as a last resort a single lawful restructure'."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": true,
+      "evidence": "A short 90-day list with dates (Days 1–14, 1–30, 1–90, Month 6 gate), with owners in the paper ('Product, Engineering, and Customer Success diagnose ... within 14 days'; 'CFO and CTO audit and consolidate'; 'HR & CTO to map in 14 days'). Measures: exit criteria 'NPS trending back toward +20+', 'NRR >100%', and a '>25%' savings-miss trigger. Owners' terms: 'lifting EBITDA 10% while churn compresses the multiple from 10x to 7x still cuts exit value by 23%'. Minor gap: the hiring freeze and executive-pay items have no named owner."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 754,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2445,
+      "evidence": "wc -w of the board plan .md in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 1.10 × 7 = 7.7 vs 10.0 gives −23%; KSchG >10 employees and >6 months' service; DrittelbG from 500; §17 KSchG. Loose wording, not counted: 'Any future operational change requires early negotiation of Interessenausgleich and Sozialplan'. That applies to major operational changes where a works council exists, which the same row asks to verify."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep only matched 'Betriebsänderung')."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'leadership owns the current position... That is a leadership and integration failure, not a failure of frontline teams'; reply: 'leadership is responsible for three restructures in two years and a 25-point NPS drop, not frontline staff'."
+    },
+    "best_insight": {
+      "value": "Before any role changes, it says to 'measure savings in real hours freed' from automating toil, so AI or automation claims must prove themselves before anyone's job is touched.",
+      "evidence": "Not covered by the six assertions."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+        "reason": "Passed in all 12 samples: every sample opened by rejecting the three moves on churn grounds. As worded it can't separate 'leads with the customer problem' from 'leads with stopping the rebrand'. Consider requiring the first sentence or recommendation to name customer retention as the top priority."
+      },
+      {
+        "assertion": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+        "reason": "Passed in all 12 samples (all deferred the rebrand behind an endorsement line), so it doesn't discriminate on this case."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "Bundles four things (direction, owners/measures/dates, short list, owners' terms). Every sample made the case in the owners' terms; the verdict turned almost entirely on named owners. Splitting it would show which part fails."
+      },
+      {
+        "reason": "No assertion checks German labour-law accuracy, though most samples made specific claims, and several got rules wrong (the §111 BetrVG threshold, 'any targeted reduction needs a social plan', social-selection direction) or assumed a works council exists. Consider an assertion that the reply checks for a works council rather than assuming one, and states the consultation rules correctly or not at all."
+      },
+      {
+        "reason": "Leadership ownership of the NPS drop separated samples (B, C, E, G, I, J, L did it; A, D, F, H, K did not) and is central to the scenario, but it is only an extra check. Consider promoting it to an assertion."
+      }
+    ],
+    "overall": "The most complete answer: customer-first with evidence, a reasoned challenge to the restructure, owners and dates on the main priorities, the owners' maths and plain leadership ownership."
+  }
+}

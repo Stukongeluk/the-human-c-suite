@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "\"With NPS at +6 and churn rising, a buyer will price your customers before your cost base.\" Paper: \"the multiple is what is most at risk right now. Our NPS fell from +31 to +6 this year, and customer churn is rising.\" It opens with that recommendation, not the rebrand."
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "Workstream \"1. Win customers back\": \"Code 12 months of detractor comments and name the top three causes per company\", leaders call churned or at-risk accounts, \"Protect support... capacity until retention turns\". Note: the summary bundles this with integration savings (\"Raise profit first from the integration... and from winning customers back\"), so customers lead the plan table but don't stand alone at the top."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "\"Choose the name in Q1 and become one company internally. Launch externally once service has recovered, with a gate at the end of Q2 2027\" (NPS >= +15 and improving GRR)."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "\"No fourth company-wide restructure now\"; data table asks to \"confirm the dates, and what each one changed for customers\"; Q2 gate decides \"whether one consulted structural change is still needed\"; costs: Gartner change fatigue, Trevor & Nyberg, Williams et al. on customer defection after downsizing."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "Contractor review (core: offer employment; duplicated: end with notice; specialist: keep); \"The CTO will check which systems have a contractor as one of their few maintainers\"; juniors kept as \"the seniors we would otherwise have to buy in at a premium by 2029\"; integration and pricing levers first."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": true,
+      "evidence": "Workstream table with Owner and \"Measured by\" columns (\"CFO and CTO\", \"[CRO] and CFO\", \"CHRO\", \"[CMO]\"); gate \"NPS is at least +15\", ambition \"+20\"; dated phases. Owners' terms: \"Exit value is EBITDA multiplied by what a buyer will pay per euro of EBITDA\", and a 20% EBITDA lift is cancelled by a 17% fall in the multiple."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 736,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4228,
+      "evidence": "wc -w board-paper.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found; checked claims are listed under 'claims'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference files, cost ladder, rungs found nothing (only 'skills pyramid'/'critical skills' and 'Betriebsänderung')."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"The fall in customer satisfaction and the rise in churn are leadership's result. I am new, but I now lead that team, so the result is mine to own and fix.\""
+    },
+    "best_insight": {
+      "value": "It asks Finance how much of the NPS drop happens within each company rather than coming from the mix as companies joined, a measurement check that could change the whole diagnosis.",
+      "evidence": "Not covered by the assertions."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+        "reason": "Passed by all 12 samples, so it does not discriminate. Consider requiring a named must-have scope (name, legal entities, redirects) plus a customer-metric gate, or a statement that technical identifiers and contracts stay fixed."
+      },
+      {
+        "assertion": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+        "reason": "Passed by all 12 samples. Consider requiring the reply to size the junior saving against the cost of seniors absorbing the work, or to flag contractor status risk (false self-employment) that a buyer's diligence will find."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "Bundles three checks (direction, priorities with owners/measures/dates, owners' terms). The 'owners' element alone decided half the verdicts; splitting it would show which part a sample misses."
+      },
+      {
+        "assertion": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+        "reason": "'Asks which problem it would solve' is ambiguous: several samples make the change conditional on spans/duplication data without asking what the earlier three rounds failed to fix. State which of these counts."
+      },
+      {
+        "reason": "No assertion checks leadership accountability (saying the NPS fall is leadership's result, leaders' pay first) or accuracy of the German process (works councils exist only if elected, §§111-112 BetrVG, §17 KSchG, notice periods). Both separated samples here."
+      }
+    ],
+    "overall": "Excellent, well-sourced paper with owners, gates and accountability; customer priority slightly diluted by leading with integration savings."
+  }
+}

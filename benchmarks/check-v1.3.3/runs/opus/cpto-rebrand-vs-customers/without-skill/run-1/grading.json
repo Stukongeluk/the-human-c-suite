@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "Opens: 'Short version: don't plan Q1 as \"rebrand versus customers\"... Size both pieces of work, put the revenue at risk next to them, and bring leadership one decision with a deadline', then 'The strongest plan has the rebrand launch *with* the fixes.' The recommended option ring-fences 'roughly 20-25% of capacity' for the fixes."
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "'Break the rebrand into workstreams, size each one and give each an owner' (in-app name, design system, domain, marketing site). The memo lists 'Sizing (team-weeks)' per workstream, and 'Not in Q1: moving every last screen to the new design system... Write that down'. Weakness: the Q1 must-have is most of the rebrand (about 60% of capacity), not a small core."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "The memo breaks evidence down per complaint ('Share of detractor comments by theme: invoicing [x]%, accounting integration [x]%, reports [x]%') and adds 'Revenue at risk: €[x] ARR renews in Q1-Q2' and 'Support load: [n] tickets and [h] hours'. Order: 'fixes the accounting integration first, since the domain move depends on it anyway'. Weekly measures: 'integration sync success rate, invoice generation time (p95), tickets on the three themes, renewal outcomes at the flagged accounts'."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Options table 'A: As decided | B: Recommended | C: Minimum' with a 'Main risk' row ('[€ ARR] renews on a broken product' / 'Rebrand scope held to what was sized' / 'Invoicing and reports wait until Q2'), repeated in the decision memo."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": false,
+      "evidence": "Constructive and partly private: 'Walk the CEO through it one-to-one before the group meeting so nothing surprises them'. It reuses the CEO's words ('those three complaints are the biggest *non*-decision'), offers a written decision with tripwires and a review date, and says 'Making the trade-off explicit isn't disloyalty'. But it never advises asking leadership for its reasons, and it doesn't separate cheap-to-reverse decisions from hard-to-reverse ones."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": false,
+      "evidence": "reply.md is 1,349 words (wc -w). A decision memo is attached separately (522 words), but the reply itself is far above 550."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1349,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 522,
+      "evidence": "wc -w of other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The domain-move claims (new OAuth redirect URIs and webhooks registered with the accounting providers, possible marketplace re-listing, a new sending domain with no reputation, SPF/DKIM/DMARC) are accurate. 'A 24-point NPS drop in the year after a merger usually means customers are asking whether the merger was good for them' is an unsupported generalisation, not a checkable fact."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'You'll likely be held responsible for NPS and retention either way' is a warning to the user. No leader takes responsibility for the NPS fall or the open complaints."
+    },
+    "best_insight": {
+      "value": "A design system can only use a small core team in its first weeks, so the customer fixes fit into that early stretch without moving the launch date, and building the missing reports on the new design system makes them its first real test.",
+      "evidence": "from reply.md and attached document"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This assertion bundles four required behaviours plus a tone check. Several strong samples met three of the four and failed on one (usually asking for the reasons, or splitting reversible from irreversible decisions). Splitting it into two assertions would give a clearer signal."
+      },
+      {
+        "reason": "No assertion checks the technical link between the new domain and the broken accounting integration (OAuth redirect URIs, webhooks, sending-domain reputation, customer allowlists). Most samples raised it, and it is the most practical sequencing argument. Capacity realism (no overtime, slack for incidents) and committing to the decision once it is made also go unchecked."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "'Small must-have part' isn't defined. Some samples keep most of the rebrand in Q1 (60-75% of capacity) and only phase part of the design system. I passed them on a clear split plus visible costs, but the assertion could say whether the size of the must-have part matters."
+      }
+    ],
+    "overall": "Strong substance and a ready-to-use decision memo, but the reply is more than twice the length limit and skips asking for the reasons and the reversibility split."
+  }
+}

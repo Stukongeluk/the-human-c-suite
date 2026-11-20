@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "Reply: 'build a numbers-backed turnaround plan that separates your permanent EV volume loss from your temporary dip'. Plan: 'map exact revenue and contribution margin from the two automotive customers (separate permanent EV loss from potentially recoverable volume)', 'Size the true structural gap: After deducting... realistic 12–18 month service/retrofit/new-sector orders, calculate the exact permanent capacity gap (in hours and euros, not a rough headcount guess)', and order intake as a monthly KPI with triggers. Dependence: involuntary exits 'only if the remaining structural gap proves unavoidable'."
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "'Kurzarbeit + paid upskilling (requires works-council agreement under § 87(1) no. 3 BetrVG; note 24-month cap reverts to 12 months on 1 Jan 2027 unless extended)... No—bridge only... Use only for recoverable/transition volume.' Structural part: 'push into EV/energy/medical', service and retrofits, 'paid retraining (Qualifizierung) for staff moving into service or new sectors', redeployment, and apprentices' training aligned 'toward service, automation, and non-ICE applications'."
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": true,
+      "evidence": "Bank pack: '13-week liquidity forecast & 24-month P&L/cash model: Three scenarios (Base, Downside, Severe Downside) with clear covenant headroom' and 'Pre-agreed milestones & triggers: Monthly KPIs (order intake, cash balance, utilisation, sick leave, and regretted attrition) with agreed actions if the downside scenario hits'. The reply adds that the bank needs '13-week and 24-month cash control... not a rushed headcount headline'."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "Option 1, 'Leaders go first & non-personnel cuts (cut MD salary/drawings, pause dividends, freeze non-essential capex, tighten receivables/WIP, review external contractors with fair notice)', and option 2 'reprice legacy ICE lines'. 'Cut your own pay and pause owner distributions before asking anyone else to sacrifice hours or roles.' The plan's week 1 documents the owner cuts and considers a subordinated shareholder loan."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": true,
+      "evidence": "Apprentices: 'Protect the 14 apprentices publicly... Make it clear their training continues'. Skills: 'trained machinists and mechatronics technicians are scarce' and 'keep employer veto (doppelte Freiwilligkeit) so key specialists don't all leave'. Process: 'Execute them once, with full legal compliance (§§ 111–112 BetrVG, § 17 KSchG, § 1(3) KSchG), fair transition support from day one of notice', Transfergesellschaft, works council 'at the problem stage', and '(Note: this is management advice, not legal advice. Engage a German employment lawyer...)'"
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": true,
+      "evidence": "Values: 'your grandfather's promise was built to protect people's livelihoods, and running out of cash breaks that promise for all 210 people at once' and 'Do not promise \"zero layoffs forever\" if the numbers cannot back it up. Promise that involuntary exits are the absolute last resort'. Reputation and long view: dismissals bring 'damage to trust and employer brand', and cutting apprenticeships 'starves the business of the exact skills needed for the next decade'. The framing is mostly about risk to the asset rather than the family firm's strength."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 923,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1759,
+      "evidence": "wc -w bank-restructuring-plan.md"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor error: the plan cites 'collective-dismissal waiting periods (§ 17 KSchG)', but the waiting period (Sperrfrist) after notification is in §18 KSchG; §17 sets the notification duty. Correct: §17 thresholds incl. termination agreements, §1(3) criteria, §622 BGB, §87(1) no. 3 BetrVG, employer social-security costs under Kurzarbeit, the 4th KugBeV 24-month rule to 31 Dec 2026, IAB 2026, BBiG protection, doppelte Freiwilligkeit. Overstated, not counted: dismissals 'will burn cash before February'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder/rung jargon (it has 'from least to most human harm' but no ladder or rung wording)."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Over-reliance on two ICE automotive suppliers is a leadership responsibility, not the shop floor's.' Plan: 'We grew too dependent on two automotive customers. That is my responsibility as managing director, not yours.'"
+    },
+    "best_insight": {
+      "value": "It keeps an employer veto in the voluntary programme (doppelte Freiwilligkeit) so key specialists don't all take the package, and aligns apprentices' training toward service, automation and non-ICE work.",
+      "evidence": "reply.md options 5; bank-restructuring-plan.md section 3"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "The four bank elements are listed without 'such as', so it is unclear whether all are required. Several samples give a cash forecast and a clean trigger but never mention covenants or headroom, while others list scenarios and covenants with no scenario-to-action mapping. Say which elements are required."
+      },
+      {
+        "assertion": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+        "reason": "This bundles about seven checks (apprentices, scarce skills, once, works council, social selection or §17, counsel, not-legal-advice flag). One missing item, such as the word 'once' or a disclaimer, fails an otherwise excellent answer. Split it into 'protects apprentices and scarce skills' and 'plans any remaining cuts once, with legal steps and counsel'."
+      },
+      {
+        "reason": "No assertion checks the German facts that drive the timing: Kurzarbeit's 24-month maximum falls back to 12 months on 1 January 2027, right before the February bank date, and dismissal savings land mid-2027 because of §17 KSchG, social-plan talks and notice periods of up to seven months. Most samples get these right; an assertion would catch the ones that are vague (G) or that overstate how much cash dismissals burn before February (D, I, J)."
+      }
+    ],
+    "overall": "Meets every assertion with a complete bank pack (scenarios, covenant headroom, triggers) and a humane, legally grounded plan; only a minor §17/§18 citation slip."
+  }
+}

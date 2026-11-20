@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "It splits the drop: 'bridge the part of the drop that will pass, shrink only the part that won't'. Evidence: 'only one calls its drop permanent', and the trigger is tied to 'order intake by mid-2027'. The answer depends on the split: 'Two questions that would change my answer: ... how much of the 35% won't come back?'"
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "'Bridge the temporary part with Kurzarbeit, for the work tied to the customer that should recover; the employment agency won't fund a permanent loss. It needs your works council's agreement (or each employee's, without one) and overtime accounts used first, and from 1 January the maximum falls back from 24 to 12 months.' For the structural part: retirements, voluntary exits, redeployment, Qualifizierungsgeld, and 'Replace the revenue... are you on that list? Then sectors that buy similar machines (energy, medical, rail, defence) and service on your installed base.'"
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": false,
+      "evidence": "It is strong on the trigger: 'Agree a trigger with the bank. If order intake by mid-2027 is below a level you set together, one round of redundancies...'. It also asks what the bank needs ('a full restructuring opinion (IDW S 6) or a forecast with measures'). But it doesn't build a cash-flow forecast; it only asks the user to 'send me ... a cash forecast'. It sets out no base or downside scenarios, and it never mentions covenants or covenant headroom."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "'Suspend owner distributions, cut your own pay and management bonuses, and decide what the family can put in (a shareholder loan, a sale-and-leaseback of the building).' And 'Cash now: down payments on new orders, inventory, receivables, outside spend. Bring subcontracted work back in-house, end overtime, freeze hiring.'"
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": true,
+      "evidence": "'Keep the 14 apprentices. They're your skilled workforce in 2030, and largely protected from dismissal after probation anyway.' Scarce skills: 'you need engineers and sales people to replace that revenue'. Any reductions happen once and decently: 'one round of redundancies sized to the remaining gap, done once and decently: a social plan above the minimum and a transfer company'. It names §17 KSchG, social selection and the reconciliation of interests, involves the works council, and says 'Check each legal step with an employment lawyer; this isn't legal advice'."
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": true,
+      "evidence": "'Your grandfather's record. What's worth keeping is the reason behind it: people trusted the firm to stand by them. Don't promise \"no layoffs\" unless you can keep it. Promise what you can keep: everything else first, the family first, and anyone who does leave gets real help to the next job.' Staff trust is treated as the asset, and so is the long term ('your skilled workforce in 2030'). The firm's name in the region isn't mentioned explicitly."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 920,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: the 4. KugBeV citation and date (17 December 2025, ends 31 December 2026); Kurzarbeit needing the works council's or each employee's agreement; overtime accounts used first; Qualifizierungsgeld at 60-67% of net pay with the employer paying the course; Transfer Kurzarbeitergeld up to 12 months; the IAB's 2026 warning; §17 KSchG; Trevor & Nyberg 31%; and 45/210 = 21% = 60% × 35%. Simplification, not counted: social selection 'not by who you need' ignores the key-performer exemption (§1(3) sentence 2 KSchG). The 2027 cash range (+€0.3m to -€1.6m) follows roughly from the stated assumptions."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'skill' appears only as 'skilled workforce', 'newest skills' and 'losing skills'; no talk of skills or reference files, and no jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Relying on two automotive customers was a leadership choice, the family's and now yours, not the shop floor's: say so plainly to the bank and your people.'"
+    },
+    "best_insight": {
+      "value": "It works out where the adviser's 45 probably comes from (21% of staff matches a 35% drop on customers worth about 60% of revenue), shows it is volume scaled to headcount rather than a diagnosis, and replaces it with a trigger agreed in advance with the bank.",
+      "evidence": "'If the two customers are about 60% of revenue, 35% off them is also 21%, so I suspect the 45 is volume scaled to headcount.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "Both samples fail this only because neither mentions covenants or covenant headroom, though both reject a headcount-only plan and Sample A explicitly builds a 13-week forecast with base and downside cases. If covenant headroom is the point, keep it; otherwise split it into its own assertion so this one can separate Sample A's explicit forecast-and-scenarios from Sample B's request for a forecast."
+      },
+      {
+        "reason": "No assertion checks when dismissal savings actually arrive. Both samples modelled that 45 dismissals save little or even cost cash in 2027, the year the bank looks at. That is the decisive argument here, and a reply that simply said 'don't fire anyone' would still pass the current set."
+      },
+      {
+        "reason": "No assertion checks that the reply asks what 'restructuring plan' the bank actually means (a full IDW S 6 opinion versus a forecast with measures). Both samples raised it, and it changes the timeline and the fees."
+      }
+    ],
+    "overall": "The assertions are well aimed but don't discriminate here: both samples pass 5/6 and fail the same covenant-headroom item, and the cash-timing argument isn't tested."
+  }
+}

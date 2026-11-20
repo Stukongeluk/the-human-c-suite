@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "Opens: 'Split Q1 instead of spending 100% of product and engineering on the rebrand: ship the must-have rebrand (new name in the app, domain/redirects, and a marketing-led website) while putting roughly two-thirds of roadmap capacity on the three open customer problems'."
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "Must-have: 'New brand name, logo, legal/billing strings in the app, new domain and redirects, and the new marketing site (led by marketing/web ...)'. Design system 'phased into Q2+'. Costs: 'Must-have rebrand ... 25%', 'Q2 design system foundations & discovery 10%', and Option A 'Absorbs 100% of product and engineering roadmap capacity'. The reply says 'Have engineering size the must-have rebrand vs. the full design system vs. the three customer fixes.'"
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": false,
+      "evidence": "Evidence placeholders per problem ('ARR at risk / Q1-Q2 renewals citing these issues', 'Support ticket volume from these 3 issues') and measures ('Support tickets on these 3 areas cut by >50%; invoicing p95 latency target met'), but the three are not ranked."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Three options (full rebrand, phased + fixes, fixes only), each with customer/revenue impact, capacity and reversibility."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "'Meet the CEO privately first—before any wider forum. Don't argue about authority or ask for a reversal ... let them own the choice.' On reversibility: '\"any decision beats no decision\" works well for reversible choices. Losing customers to months-old product failures is not cheaply reversible.' Asking for reasons: 'What would need to be true for you to back that split?' Light process: a decision memo with a named decision owner, 'Record the decision and the explicit trade-off in writing', monthly review, and 'Give your teams clear priorities and honest reasons, not \"just be flexible.\"' No labelling."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "reply.md is 435 words (wc -w), with the decision memo as a separate file."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 435,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1111,
+      "evidence": "wc -w of the other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None counted. 'Falling NPS typically surfaces as churn one to two quarters later' is an unsourced generalisation, plausible but not verifiable. 'Typically 30-40% of total engineering time' for baseline load is a labelled estimate to confirm."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'. Words like 'skill-mix'/'skillsets' (if present) refer to engineers' skills."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "A bad outcome is part of the prompt (NPS +28 to +4, complaints open for months), but no leader in the advice says the responsibility for it lies with leadership or product. The months-open complaints are treated only as a fact to fix."
+    },
+    "best_insight": {
+      "value": "The memo states 'What sales and CS can promise' (unified name and domain in Q1, plus fix windows once engineering has estimated them), which stops the field from overpromising.",
+      "evidence": "see sample text"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+        "reason": "Only 1 of 12 samples actually ranks the three problems. Most link each complaint to ARR/tickets and set measures but never say which comes first. Consider splitting this into (a) ties each complaint to evidence and sets a measure, and (b) puts them in an order backed by that evidence, so the two failure modes can be told apart."
+      },
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This is a compound of four separate behaviours (private first, asking for reasons, separating two-way from one-way doors, a light decision process) plus a no-labelling guard. Samples that do three of the four fail the same way as samples that do none. Splitting it would give a more useful signal."
+      },
+      {
+        "assertion": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+        "reason": "All 12 samples pass, so this doesn't discriminate. Requiring the recommended option's own downside to be stated (for example 'the design system takes two quarters instead of one') would separate honest trade-off tables from one-sided pitches (H, L, I)."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "'Small' is undefined. Samples range from 25% to 70% of capacity for the Q1 rebrand. A concrete test (for example 'the must-have takes less capacity than the customer fixes') would make grading reproducible."
+      },
+      {
+        "reason": "No assertion covers the fallback if the CEO still insists on 100% rebrand: record the trade-off in writing, protect teams from overtime, set a checkpoint. Several samples (B, D, E, I, J, K) handle this well, and it is central to the user's situation."
+      }
+    ],
+    "overall": "One of the strongest. It has a small, costed must-have, handles the slogans constructively and fits the word limit. The only miss is ranking the problems."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": false,
+      "evidence": "Timeline arithmetic only: 'you have 9 months of cash (to roughly August 2027)... Since a Series B takes 3–6 months to close, you need to extend runway from 9 months to 15–18 months'. Growth is never modelled and profitability is never checked. A later raise appears only in the steelman ('if Series B slips to autumn'), and the user is told to build the cash model."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": false,
+      "evidence": "The levers come first (Options A and B, with a 15–25% founder pay cut), but the sizing is thin and inconsistent. Option A 'Often cuts 10–20% of net burn', yet the reply then claims 'the Option A + B plan that gets you to 15+ months of runway now' without arithmetic. A 10–20% cut in net burn on nine months gives roughly 10–11 months, and the exact runway gain is left to the model it asks the user to build."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": false,
+      "evidence": "It rejects the reflex cut and has 'done once, decently, with real work cut alongside roles' and 'Reduce roles and permanently stop the matching work'. But the size never comes from the plan: Option C is listed as '10–15% or 30%', and the trigger is 'execute a single, pre-planned reduction' with no sizing logic."
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'notice periods run 1 to 6 months'; 'notifying Arbetsförmedlingen at least 2 months in advance' for 5–25 people; 'if you have a collective agreement, the Co-determination Act (MBL) requires union negotiation before decisions are final'; LAS 'seniority order per unit (with a 3-person exemption since 2022)'; 'verify ... with Swedish employment counsel'. The MBL point omits that negotiation is also owed to unions of affected members without an agreement, but the floor is flagged."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": false,
+      "evidence": "Exit support is present ('fund coaching/transition (e.g., via TRR if covered) from day one of notice'). But the communication goes only to 'your leadership team—and any union/employee representatives', not to the 48-person team, despite the heading 'Bring your team into the problem early'."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": true,
+      "evidence": "'Tell your leadership team plainly that the Series B slip is a leadership planning miss, and leadership will take the first cut'; 'founders/execs take a 15–25% pay cut first and pause bonuses'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 810,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clear factual errors. The Swedish rules are right: notice of 1–6 months, varsel for 5–25 people at two months, the 3-person LAS exemption since 2022, nine-month re-employment priority for people with more than 12 months in the last three years. The MBL sentence omits that negotiation is also required with unions of affected members without a collective agreement, an omission rather than a wrong rule. The gloss '15–18 months (late 2027 / early 2028)' is loose, since 15–18 months from now is February to May 2028, but it may refer to the close date."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Tell your leadership team plainly that the Series B slip is a leadership planning miss'."
+    },
+    "best_insight": {
+      "value": "It notes that LAS re-employment priority makes a hasty cut hard to reverse if the Series B closes on time, and that investors push for big cuts when they see no credible alternative or trigger.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "Any one listed element passes it, so all ten samples passed, including one that anchored the Arbetsförmedlingen notice to the wrong date. Require that the stated rules are correct: the two months count back from the first person's last day of employment, and MBL applies to union members even without a collective agreement."
+      },
+      {
+        "assertion": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+        "reason": "No sample said that 'the burn and the hiring' were the founders' decisions. The ones that passed said the runway gap was leadership's responsibility. Either accept that wording explicitly, or keep the stricter version and expect almost every sample to fail."
+      },
+      {
+        "reason": "No assertion covers the investor conversation, which is the actual fork in the prompt. It would check whether the reply asks the two investors to fund a bridge if they want the cut, finds out why they want 30%, and checks whether they can force it under the shareholders' agreement or board composition. The best samples did this and the weaker ones only said 'meet them privately'."
+      },
+      {
+        "reason": "Assertion 1 mixes timeline arithmetic, which every sample did, with growth-inclusive modelling and funding scenarios, which only some did. Splitting it would separate 'nine months ends in August 2027, the B closes later' from 'on current burn and 4% growth, here is when you break even or run out under each funding case'."
+      }
+    ],
+    "overall": "Sound instincts and correct Swedish rules, but no modelling, an unsupported '15+ months' claim, an unsized cut, and only leaders and reps are told."
+  }
+}

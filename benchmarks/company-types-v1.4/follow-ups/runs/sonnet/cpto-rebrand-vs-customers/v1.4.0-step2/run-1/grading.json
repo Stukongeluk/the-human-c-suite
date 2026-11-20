@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "The opening sentence is the recommendation: \"Plan Q1 as two tracks: a deliberately small rebrand (new name, legal entities, domain and redirects), and protected capacity for the three complaints that took NPS from +28 to +4.\" "
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "The split: \"Rebrand must-haves: name in the app, legal entities, domain with redirects and email continuity. Design system starts with tokens and the busiest screens. Marketing site: a light refresh now, the full version in Q2.\" Cost is made visible through team sizing: \"Ask each team for its own estimate of rebrand and fix work. Where they don't fit, cut scope or move items to Q2.\" The CEO line: \"just for the rebrand's must-have part to be sized so the three complaints still get a team\". It offers \"the capacity table for your team leads\". The cost is a method, not figures, and the estimates are per team rather than per rebrand part. That is acceptable without data, but it is the thinnest pass in this sample."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "\"Rank the complaints with evidence: NPS comments, churn reasons, support volume, ARR on accounts that raised each.\" Measures: \"Each gets a named team, a measure (latency, error rate, revenue at risk) and a date.\" "
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Not a flat no: \"Bring it to the CEO as help making the decision well, not as a protest.\" Two paths are set against each other with trade-offs. All-in: \"if the whole quarter goes to it, a 24-point NPS fall will likely reach renewals before it reaches a slide\". Two-track: \"Marketing site: a light refresh now, the full version in Q2\". The fallback is written down: \"what is deferred, which customers are exposed, and a mid-quarter date to review NPS, churn and open tickets\". This is one alternative against leadership's plan, not a set of two or three options, so it is weaker than sample B."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "Private first: \"Have it privately, before any wider meeting.\" Reasons: \"ask what would change their mind\", which is one of the standard questions for drawing out a leader's reasons. Reversibility: \"'Any decision beats no decision' holds for cheap-to-undo choices, so decide those fast. The design system and marketing site can be phased. The domain move is harder to reverse (email, SEO, integrations), so do it carefully, not first.\" Light process: \"Offer a two-week window for team estimates, so leadership still decides, with real numbers\", plus a written trade-off with a review date. No labelling: \"help making the decision well, not as a protest\". The weak spot is that it never asks what problem the all-hands rebrand is meant to solve."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "reply.md is 439 words (wc -w) and practical, with a Q1 shape, steps before proposing and a CEO script. Longer material is offered: \"I can draft the one-page CEO proposal or the capacity table for your team leads.\" "
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 439,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. \"a 24-point NPS fall\" is correct (+28 to +4). The sample makes no legal, study or product claims. The note that a domain move is hard to reverse (email, SEO, integrations) is sound."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The prompt contains a bad outcome: NPS fell from +28 to +4 and complaints were open for months. No leader in the advice says the responsibility is leadership's. The closest line is \"Then run it and report the numbers honestly.\" "
+    },
+    "best_insight": {
+      "value": "It picks out the domain move as the one must-have that is hard to reverse (email, SEO, integrations), so it is done carefully rather than first. It also flags the teams that carry both rebrand and fix work as the bottleneck to check before proposing a split.",
+      "evidence": "'Why this is the stronger case' and 'Before proposing a split'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "This assertion bundles five checks: private conversation, asking for reasons, two-way versus one-way doors, a light process, and no labelling. Sample A passes on a single \"ask what would change their mind\". Sample B asks for written reasons with three questions (\"What problem does the all-hands rebrand solve, and by when?...\"). Splitting it would let that difference show."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "\"Makes the cost of each visible\" is met by a promise of team estimates. Neither sample sizes the parts, even relatively; for example, it could say the full design system is the largest piece. Consider asking for a relative size, or an explicit ask to size the must-have and the phased parts separately."
+      },
+      {
+        "reason": "Three things are not checked. No assertion asks whether the head of product, or leadership, owns the 24-point NPS fall and the complaints left open for months; neither sample does. None checks planning to real capacity, as in B's \"headcount minus leave, incidents, on-call, debt and meetings ... Overtime is not a plan\". None checks asking about hard external deadlines for the rebrand, which both samples raise."
+      }
+    ],
+    "overall": "A concise, practical, well-sequenced two-track plan, and all six assertions pass. The option set and the questions about leadership's reasons are thinner than in sample B, and nobody owns the NPS fall."
+  }
+}

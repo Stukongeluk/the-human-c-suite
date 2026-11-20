@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "First sentence: 'Plan Q1 as a small rebrand plus a protected customer-fix stream, not a whole-organisation rebrand.' The plan gives the fixes the bulk of the capacity: 'Fix first (largest share of capacity): invoicing speed, the accounting integration and the top missing reports.'"
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": false,
+      "evidence": "The split is clear: 'The must-have part is small: the name in the app, legal entities, domain redirects. The design system and the full marketing site can be phased.' The costs are not shown, though. The only sizing is 'Rebrand core (a few dedicated people)' and 'Let the teams size both streams before you commit numbers'. Those two streams are the customer fixes and the rebrand core. The phased parts (design system, marketing site) are never costed, and the one-pager ('the NPS trend, the revenue or churn exposure, the two-stream plan and a review date') has no cost breakdown of the rebrand. So leadership can't see what the full rebrand would take."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": false,
+      "evidence": "It sets measures: 'Each gets one owner, one customer measure (invoice time, integration error rate, report usage or ticket volume) and a date.' It never ranks the three problems, though. They are listed in the user's order, and evidence appears only as material to persuade leadership ('Those, plus churn reasons and the revenue tied to the three complaints, are what will convince leadership'), not as a basis for deciding which problem comes first."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": false,
+      "evidence": "It is not a flat no ('I'm not questioning the rebrand. I want it to land.'). But it brings one counter-proposal, not options: 'here's a plan that delivers the rebrand's core in Q1 and fixes what customers are asking for. What would make you comfortable with that?' The only explicit trade-off is the risk of leadership's plan ('A one-quarter freeze on customer fixes is hard to undo, because churned customers don't come back with the new logo'). No alternatives are set side by side, and the reply never states what each would cost or risk."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "Private first: 'First step: talk to the CEO privately, before any wider forum.' Reasons: 'Ask what problem the full-scope rebrand is solving and what would change their mind. They may be under pressure from the merger, the board or an investor.' Reversibility: \"'any decision beats no decision' fits choices that are cheap to undo. A one-quarter freeze on customer fixes is hard to undo.\" Light process: 'give teams a week to bring their analysis on the expensive parts' plus 'a review date in week six'. No labelling: 'Don't argue with the slogan.' One weakness: it puts 'the name, the domain' among the 'cheap, reversible parts', which jars with its own 'Domain migrations produce surprises'. A public rename and a domain move are not cheap to undo."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "wc -w = 485 words (limit 550). Concrete first step, a one-page content list and a week-six review. The longer material is offered: 'I can draft the one-pager or the capacity model template.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 485,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-A."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No claims about laws, schemes or studies. The NPS arithmetic is correct. Not counted as an error: the judgment that the name and domain are 'cheap, reversible' is questionable."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/reference/cost ladder/rungs found nothing."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The prompt includes a bad outcome (NPS +28 to +4, complaints open for months). No leader in the advice says the responsibility for it is leadership's. The CEO script is 'I'm not questioning the rebrand. I want it to land.'"
+    },
+    "best_insight": {
+      "value": "It agrees a week-six review date in advance, where the split between rebrand and fixes is reopened if the churn numbers are bad. That gives the CEO a decision now and a face-saving way to change course later.",
+      "evidence": "'Bring one page: ... a review date in week six. If the churn numbers are bad, that review is where you reopen the split.'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+        "reason": "This bundles three things: ranking, evidence and measures. Neither sample ranks. This one names good measures, the other attaches evidence to each problem, and both fail for different reasons. Split it into 'attaches evidence per problem / ranks by it' and 'names a measure per problem' so the grade shows which part is missing."
+      },
+      {
+        "assertion": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+        "reason": "It's unclear whether a single counter-proposal next to leadership's plan counts as 'options'. State it outright, e.g. 'at least two options, each with what it costs and what it puts at risk'."
+      },
+      {
+        "reason": "No assertion checks that the reversible/irreversible split is drawn correctly. This sample puts 'the name, the domain' on the cheap-to-undo side and still passes the slogan assertion."
+      },
+      {
+        "reason": "The user is head of product, not the decider, and no assertion checks whether the reply finds allies with a stake (customer success, sales, finance) who own the churn and revenue evidence. Neither sample does."
+      }
+    ],
+    "overall": "Solid, well-structured reply that protects customer capacity and handles the CEO well. It loses points for a single counter-proposal instead of options, no cost view of the phased rebrand parts, and no ranking of the complaints."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+      "passed": false,
+      "evidence": "No evidence links staffing or qualifications to outcomes. 'keep total hours per client down' and 'pushes complex cases into crisis or hospital readmissions' are stated without support. The memo has monitoring ('Every financial target will be paired with a care-quality and people counter-metric (e.g., delivered vs. contracted hours paired with client satisfaction...)'), but the lead arguments are financial and legal ('Financial & legal reality'), not client safety."
+    },
+    {
+      "text": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+      "passed": true,
+      "evidence": "'When you measure minutes, people optimise for the clock (Goodhart's law)—rushing vulnerable clients, splitting visits, and burning out under surveillance'. Memo: 'increasing administrative burden' and 'Reject. Track team-level outcomes, contracted vs. delivered hours, and client satisfaction instead.'"
+    },
+    {
+      "text": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+      "passed": true,
+      "evidence": "'close the 7% through central overhead and agency cuts (leaders first), sickness-absence and admin reduction'. Levers 1 and 2 are overhead and agency (~2.0%) and absence and admin (~2.0%). Skill mix comes last, through attrition."
+    },
+    {
+      "text": "The reply works the income side: it brings full-cost evidence to the insurers and municipalities and is prepared to renegotiate, or to decline work that can't be delivered safely.",
+      "passed": true,
+      "evidence": "'Take audited cost data to municipalities with structurally loss-making Wmo contracts—renegotiate or decline renewal where tariffs don't cover direct care.' Cost evidence, renegotiation and declining are all there. Limitation: only municipalities are negotiated with. The insurers (Zvw) are only analysed ('Separate Zvw (insurer) and Wmo (municipality) margins')."
+    },
+    {
+      "text": "The reply involves nurses and carers, the works council and the client council before deciding.",
+      "passed": false,
+      "evidence": "Involves the works council and team leads ('Bring the Works Council (OR) and team leads into the problem early'), but there is no client council and no direct involvement of nurses and carers beyond team leads."
+    },
+    {
+      "text": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+      "passed": false,
+      "evidence": "The memo gives a recommendation and options (the board's package vs a four-lever plan) covering continuity ('fragments continuity of care'), finance and retention ('accelerating turnover and sickness absence in a tight labour market'). It never mentions the care regulator (IGJ/NZa): the legal points are only about the works council, UWV and the Enterprise Chamber."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 745,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 826,
+      "evidence": "wc -w board-response-memo.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Legal points (WOR 25, 27(1)(l), WMCO, notice periods, works council threshold) are correct. The '~6.5 FTE' figure assumes full-time staff (noted in claims, not counted)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or cost-ladder jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders freeze their own pay ('Signals shared sacrifice from the top'), but nowhere does a leader say the responsibility for the result is leadership's."
+    },
+    "best_insight": {
+      "value": "It advises meeting the supervisory board chair privately with the alternative before the formal meeting, so the board isn't pushed into defending its proposal in public.",
+      "evidence": "'Meet the Supervisory Board Chair privately first ... before a formal board meeting forces everyone into defensive positions.'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply questions minute-by-minute visit registration (administrative burden, trust, nurses' professional judgement) and offers a lighter alternative, such as team-level data or self-managing teams.",
+        "reason": "Passed by all ten samples, so it doesn't discriminate. Tighten it, e.g. require the works council's consent right on monitoring systems (art. 27(1)(l) WOR) or the 2018 sector agreement to end minute registration in district nursing."
+      },
+      {
+        "assertion": "The reply looks first at costs that don't touch care, such as overhead, agency and temporary staff, absence and turnover, travel or planning.",
+        "reason": "Passed by all ten samples. Consider requiring that these levers are sized or sequenced before any frontline change, not just listed."
+      },
+      {
+        "assertion": "The reply puts client safety and quality of care at the centre and questions the skill-mix cut with evidence that staffing levels or qualifications affect outcomes, saying what would be monitored if any change goes ahead.",
+        "reason": "Bundles three tests (care at the centre, outcome evidence, monitoring). Samples with the best evidence (D, G) failed only on monitoring, and samples with good monitoring (A, F, H) failed only on evidence. Splitting it would show which part is missing."
+      },
+      {
+        "assertion": "The reply gives the supervisory board options with trade-offs and a recommendation in its terms: continuity of care, financial sustainability, the regulator and staff retention.",
+        "reason": "'The regulator' (IGJ/NZa) is the only element most samples missed (B, D, E, H, I, J all gave options and trade-offs). Consider splitting it, or saying explicitly that the care inspectorate must be named."
+      },
+      {
+        "reason": "No assertion checks the strongest argument some samples found: funders' own 2027 terms (CZ requires enough hbo-bachelor nurses and a fixed team per client; only hbo/master BIG-registered nurses may do the needs assessment), so the skill-mix and planning cuts could breach contracts. None checks Year-1 timing of savings (notice, transition payments) or factual accuracy either."
+      },
+      {
+        "assertion": "The reply works the income side: it brings full-cost evidence to the insurers and municipalities and is prepared to renegotiate, or to decline work that can't be delivered safely.",
+        "reason": "This sample passed while negotiating only with municipalities, not insurers. If both funders matter, make that explicit."
+      }
+    ],
+    "overall": "Clear, confident pushback with a tidy 7% plan. It is light on care-quality evidence and leaves out the client council and the regulator."
+  }
+}

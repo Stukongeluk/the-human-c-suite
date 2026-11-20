@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply separates the temporary part of the drop from the structural part, using evidence such as the order book, customer forecasts or the quotes pipeline, and says the answer depends on that split.",
+      "passed": true,
+      "evidence": "'Pull the real numbers — not guesses. With your Steuerberater and ERP, split the 35% drop into temporary vs. permanent revenue and contribution margin'. The framework's fact base lists 'split of the 35% drop into temporary vs. permanent EV loss | ERP / Sales / Controlling' and 'Commercial pipeline: Non-ICE / non-automotive quotes... Tests how much capacity can be redeployed rather than cut', with the status line citing the order book. Dependence: 'Size the structural gap honestly... see what structural payroll gap actually remains'."
+    },
+    {
+      "text": "The reply matches the tool to the cause: short-time work or reduced hours only for the part that will pass, with its conditions flagged (such as works council agreement where there is one, or the maximum duration), and a real plan for the structural part, such as new sectors or customers, products, redeployment or retraining.",
+      "passed": true,
+      "evidence": "'Use Kurzarbeitergeld only for the cyclical/temporary part of the drop — and note the timing: ... the 24-month maximum duration runs until 31 December 2026 and falls back to 12 months from 1 January 2027' and 'Kurzarbeit needs their consent (§87(1) no. 3 BetrVG)'. Structural Track 2: 'commercial pivot targets (EV components, medical/industrial machinery, energy, defence/precision subcontracting)', 'Redeploy & reskill first: Map skills... offer internal transfers and paid retraining into growth lines and service/retrofit roles'."
+    },
+    {
+      "text": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+      "passed": true,
+      "evidence": "The fact base asks for a '13-week rolling cash forecast; current credit-line utilization; bank covenant thresholds' ('Liquidity & covenant runway'). The timeline delivers a 'stress-tested Two-Track Restructuring Plan... (showing conservative, base, and downside cash cases)' and a 'Renew credit line with agreed quarterly milestones'. Structural adjustment comes 'only if required by the verified gap'. The reply's option C is labelled as what the bank needs: 'liquidity and viability, not a headcount trophy'."
+    },
+    {
+      "text": "The reply works the levers that don't cost jobs first (for example spend, pricing, working capital or inventory) and puts the owner first, such as the owner's own draw or dividend, before jobs.",
+      "passed": true,
+      "evidence": "'Cut your own managing-director draw, freeze management bonuses, and suspend family dividends immediately. Put that on page 1 of the bank deck'. Non-job levers: 'overdue receivables, excess inventory, energy, scrap/rework, external machining you can bring back in-house, deferrable CapEx' and 'Review underpriced legacy parts', all before Kurzarbeit and any exits."
+    },
+    {
+      "text": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+      "passed": true,
+      "evidence": "Apprentices: 'Keep all 14 apprentices'. Scarce skills: 'Irreversible (scarce skilled trades take years to rebuild)', risk of 'losing younger machinists who can run new lines'. Process: 'one right-sized compulsory reduction — cutting the underlying product lines alongside the roles and funding day-one transition support (such as a Transfergesellschaft...)', §§111–112 BetrVG, §17 KSchG incl. termination agreements, Sozialauswahl, and '(This is management advice, not legal advice — retain a Fachanwalt für Arbeitsrecht this week.)'"
+    },
+    {
+      "text": "The reply treats the family firm's long-term view and reputation as assets and answers the owner's values honestly: it neither promises that no job will ever go nor dismisses his grandfather's principle.",
+      "passed": true,
+      "evidence": "Long view as an asset: 'family firms that avoid knee-jerk layoffs and run frugally weather downturns better (Kachaner, Stalk & Bloch, HBR 2012)'. Reputation: option A 'damages regional employer reputation in Stuttgart area', and apprentices are 'vital to the company's 5-year skill base and regional standing'. Values: 'Your grandfather's record matters... The real promise isn't \"never change headcount under any circumstance\" — it is never treating people as the first cost to cut... and if roles must end, doing it once'. (It calls this 'the family-legacy trap' but still affirms the principle.)"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1012,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1761,
+      "evidence": "wc -w restructuring-plan-framework.md"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor error: the reply gives the §17 KSchG threshold as '>10% or >25 people in 30 days for your size'. The statute is 10% (reaching it is enough) or more than 25; the framework states it correctly ('10% or more than 25'). Correct: §87(1) no. 3 and §§111–112 BetrVG (>20 employees), termination agreements counting towards §17, §1(3) KSchG criteria, §622 BGB, BBiG protection after probation, KuG 24→12 months, IAB 2026, Kachaner et al. 2012."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder/rung jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Letting two automotive suppliers dominate the order book is a leadership risk, not the shop floor's fault.' Framework: 'Leadership owns that exposure and takes the first financial cut'."
+    },
+    "best_insight": {
+      "value": "Its ten-day fact-base table lists each figure to pull, the system it comes from (ERP, MES, BWA/SuSa, payroll) and why it changes the plan, which turns 'get the numbers' into a concrete week-one task list.",
+      "evidence": "restructuring-plan-framework.md section 2"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the bank what it needs in its own terms: a cash-flow forecast, covenant headroom, scenarios and the actions each scenario would trigger, rather than only a headcount number.",
+        "reason": "The four bank elements are listed without 'such as', so it is unclear whether all are required. Several samples give a cash forecast and a clean trigger but never mention covenants or headroom, while others list scenarios and covenants with no scenario-to-action mapping. Say which elements are required."
+      },
+      {
+        "assertion": "The reply protects the apprentices and scarce skills, and if some reductions remain, plans them once and decently: works council, German legal steps such as social selection or mass-dismissal notification, and counsel, flagged as not legal advice.",
+        "reason": "This bundles about seven checks (apprentices, scarce skills, once, works council, social selection or §17, counsel, not-legal-advice flag). One missing item, such as the word 'once' or a disclaimer, fails an otherwise excellent answer. Split it into 'protects apprentices and scarce skills' and 'plans any remaining cuts once, with legal steps and counsel'."
+      },
+      {
+        "reason": "No assertion checks the German facts that drive the timing: Kurzarbeit's 24-month maximum falls back to 12 months on 1 January 2027, right before the February bank date, and dismissal savings land mid-2027 because of §17 KSchG, social-plan talks and notice periods of up to seven months. Most samples get these right; an assertion would catch the ones that are vague (G) or that overstate how much cash dismissals burn before February (D, I, J)."
+      }
+    ],
+    "overall": "Meets every assertion with specific evidence and a usable bank framework; the only flaw is a minor slip on the §17 threshold in the reply."
+  }
+}

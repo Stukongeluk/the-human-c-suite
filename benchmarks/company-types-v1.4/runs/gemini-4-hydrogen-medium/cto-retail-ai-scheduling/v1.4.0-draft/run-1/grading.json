@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that rejects the all-stores-by-March roll-out as specified and offers a phased alternative.",
+      "passed": true,
+      "evidence": "Opens: 'Recommend against a 140-store rollout by March, and reject the 3-day notice and on-the-day adjustment model. Propose a 12-week controlled pilot in 6–8 stores'. The memo adds 'If successful, roll out in waves of 20–25 stores'."
+    },
+    {
+      "text": "The reply warns that short-notice, unstable schedules carry hidden costs (such as turnover, absence, service, empty shelves or lost sales), with evidence such as the Gap stable scheduling study.",
+      "passed": true,
+      "evidence": "'3-day notice and fragmented shifts drive no-shows and turnover. Worse, cutting store hours without reducing store work shows up as empty shelves and long queues. In a randomised trial across 28 Gap stores ... more predictable schedules ... raised median sales by 7% and labour productivity by 5%.' (The intervention is misdescribed; see factual_errors.)"
+    },
+    {
+      "text": "The reply proposes a pilot against comparison stores, with success measures beyond labour hours: for example sales, availability, customer scores, staff turnover and absence, and how staff rate their schedules.",
+      "passed": true,
+      "evidence": "'Compare pilot stores against matched control stores on net paid labour cost (including cancelled-shift pay), sales and on-shelf availability, store-level turnover/absence, and store manager admin time.'"
+    },
+    {
+      "text": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+      "passed": false,
+      "evidence": "'publish rosters 14 days ahead in workable shift blocks, with a voluntary swap pool for same-week gaps', and the on-the-day model is rejected. But 'workable shift blocks' is a vague nod: there is no minimum shift length or minimum hours."
+    },
+    {
+      "text": "The reply flags the Dutch legal floor for counsel: the works council's consent right over working-hours rules or systems that can monitor staff, and the notice rules for on-call workers (at least four days unless a collective agreement shortens it, and pay when a shift is cancelled late).",
+      "passed": true,
+      "evidence": "'on-call workers must be called at least 4 days ahead (or no less than 24 hours if your CAO explicitly shortens it), and any shift cancelled or changed inside that window still has to be paid'; 'consent right (instemmingsrecht, Art. 27(1)(l) WOR) over systems suited to monitoring attendance, behaviour, or performance'; 'Have HR and employment counsel confirm your specific supermarket CAO rules'."
+    },
+    {
+      "text": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+      "passed": true,
+      "evidence": "Reply: 'Bring the OR and store managers in now ... (store- and team-level metrics only; no individual worker rankings)'. Memo: 'Bring the OR and 6–8 store managers into the problem definition. Agree data-privacy boundaries (store/team-level reporting only; no individual worker rankings)' and 'store manager sign-off on usability'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 548,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 900,
+      "evidence": "wc -w reply.md; workforce-management-recommendation.md = 900"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "'more predictable schedules (2 weeks' notice, no on-call shifts) raised median sales by 7%' (reply and memo). Per the WorkLife Law report, Gap rolled out two-week notice and the end of on-call shifts to all US stores on 1 Oct 2015, and both treatment and control stores kept them. The 7% came from the other practices (stable shift structure, core scheduling, shift swapping, part-time plus, targeted staffing). Also noted, not counted: the memo's 'Most of our 9,000 colleagues are students' overstates the prompt's 'many'. Confirmed correct: WAB rules, WOR 27(1)(l)/25, AI Act 2 Dec 2027, flex-work law 2028 with the student exception."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt asks for a recommendation on a proposed roll-out; no bad outcome has happened yet."
+    },
+    "best_insight": {
+      "value": "It points out that the vendor's 12% is probably modelled on scheduled rather than net paid hours and excludes turnover and onboarding costs, and makes net paid labour cost the primary pilot measure.",
+      "evidence": "'The vendor's 12% figure is modelled on scheduled hours rather than net paid hours and excludes turnover and onboarding costs.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+        "reason": "Four guardrails joined by 'and'. The 'minimum shift lengths or hours' element alone decided C, D, E and G. If the intent is 'a reasonable set of guardrails', say 'at least three of'; otherwise keep it strict on purpose."
+      },
+      {
+        "assertion": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+        "reason": "Three checks in one. Most samples meet store-level reporting and no ranking, and involve staff through the works council, but fail only because store managers have no part in the design (just an override). Splitting would show where samples really differ."
+      },
+      {
+        "reason": "No assertion checks the supermarket CAO's own roster rule (full roster at least one full week ahead, otherwise only structural hours can be required; art. 4.3f of both sector CAOs). It is the strongest argument against three-day publishing, and only B, C and F found it."
+      },
+      {
+        "reason": "No assertion checks factual accuracy of evidence used (e.g. G attributes the Gap 7% to two weeks' notice and no on-call shifts, which both arms had), or the youth working-time rules (9 h per shift incl. school, no overtime/on-call) that matter for a student workforce."
+      }
+    ],
+    "overall": "Compact and well-structured, with store managers in the problem definition. It misdescribes what the Gap trial tested and sets no minimum shift length."
+  }
+}
