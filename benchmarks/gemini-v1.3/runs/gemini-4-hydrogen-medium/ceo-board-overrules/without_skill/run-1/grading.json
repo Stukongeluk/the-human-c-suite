@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers the plan and announcement in the reply and in the document, with no re-arguing of the alternatives."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": false,
+      "evidence": "Day 0 has an all-hands announcing the cut, then '09:30–13:00 — 1-on-1s: Manager + HR meet privately with each impacted person'. Week 1: 'Issue VSO proposals'. Only then 'Weeks 2–4: Complete OR/WMCO steps'. The advice comes after people are told, and the plan states the rule as advice 'before a final irrevocable decision is implemented'."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'At 20+ economic dismissals within 3 months in one UWV region, you must notify the UWV and the relevant trade unions. A 1-month waiting period applies after notification...'. The timeline then treats it as '(if applicable)' and holds notices before it."
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'interchangeable roles in Operations and Support must be selected via the age-bracket reflection principle (afspiegelingsbeginsel), not performance or discretion.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": false,
+      "evidence": "On the day of notice people get 'the rest of the day/week off to process', which is not job-search support. Outplacement launches in 'Weeks 2–4', and the announcement offers only 'career/outplacement assistance' with no specifics."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": false,
+      "evidence": "'I'm writing to share a difficult decision... we need to reduce our team by 22 roles', which presents a final decision. 'HR and department leads will meet individually with everyone whose role is affected' after the all-hands, so people don't hear from their own manager first."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 925,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1186,
+      "evidence": "wc -w of the plan-and-announcement .md file"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "States that the works council must be asked for advice 'before a final irrevocable decision is implemented' / 'communicated externally or implemented'. The rule is that advice must be asked before the decision is taken, while it can still substantially influence it (art. 25(2) WOR). The plan then tells individuals on Day 0 and completes the OR steps only in Weeks 2–4."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/cost ladder/rungs/reference files: only 'highly skilled migrant' and links to the delivered document."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'given our current cost structure and the priorities set with the board, we have to make a structural adjustment'. No leader takes responsibility."
+    },
+    "best_insight": {
+      "value": "It checks minimum KYC/AML, transaction-monitoring and complaints coverage before naming roles, and gives affected people paid time off on the day, though the overall sequence is legally unsound.",
+      "evidence": "From the sample's plan/announcement."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+        "reason": "All eight samples flag the WMCO, but D and G then hold individual notices and issue settlement agreements before the one-month WMCO waiting period has run (and before works council advice). Add a check that the timeline holds individual notices or terminations until the waiting period has passed or the unions have waived it."
+      },
+      {
+        "assertion": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+        "reason": "Passed by all eight samples, so it doesn't discriminate in this set; consider also requiring that selection is not done before consultation ends."
+      },
+      {
+        "reason": "No assertion checks that the announcement or plan has leadership own the result, or that work is cut along with roles. Several samples (A, B, E, H) do both; C, D, F and G frame it as 'the board concluded' or 'a structural decision'."
+      },
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "This bundles two checks. Most failures come from the 'own manager first' half: the plan says it but the announcement doesn't. Splitting it would show which half fails."
+      }
+    ],
+    "overall": "Legally unsafe sequence: final-decision announcement and Day-0 dismissals before works council advice, and support starts weeks later."
+  }
+}

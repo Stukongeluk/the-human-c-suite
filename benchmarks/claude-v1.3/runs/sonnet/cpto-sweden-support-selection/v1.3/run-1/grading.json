@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "\"Under the Employment Protection Act (LAS), redundancies in Malmö follow length of service within the unit unless a collective agreement says otherwise, with up to three exemptions you can choose.\" This is correct: LAS s.22 gives one order per operational unit and three exemptions."
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "\"The Co-determination Act (MBL) also requires you to negotiate with the union before you decide.\""
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "It rejects the metrics: \"Don't select on tickets resolved and CSAT. In Sweden you probably can't, and the numbers wouldn't be fair anyway.\" It gives the legal reason (LAS order) and the metric flaw: \"Once AI takes the easy tickets, what's left is harder, so each person's resolved count and CSAT mostly reflect which queue they sit in, not how good they are.\""
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": true,
+      "evidence": "Step 6: \"coaching and paid training through the job security council (TRR, for white-collar staff), notice and severance, and the re-employment priority for nine months.\""
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "Before any selection, the approach checks the cut. Step 1: \"Confirm 21. Check it against the forecast of escalations and the AI quality-review work that remains.\" Step 3: \"Avoid dismissals first... redeploy or reskill people into escalations, AI quality review or other teams.\" The LAS order only comes in step 5, \"If cuts remain\"."
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": true,
+      "evidence": "292 words (wc -w). It opens with the answer in bold: \"Don't select on tickets resolved and CSAT. In Sweden you probably can't...\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 292,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: LAS order by length of service per unit unless a collective agreement says otherwise (correct); up to three exemptions (correct, LAS s.22 since 2022); MBL negotiation before the decision (correct); TRR covers white-collar staff (correct); nine-month re-employment priority (correct). 'Notice and severance' is listed as support offered, not as a legal requirement, so it isn't an error even though Sweden has no statutory severance pay. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'. 'skills' appears only in its ordinary sense (employee skills the remaining work needs)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned AI-driven reduction, not a failure that someone has to own. The sample does say 'Leaders take the first cut', but that is a gesture, not an admission of responsibility."
+    },
+    "best_insight": {
+      "value": "'Cut the work, then the roles': name the work that stops so the 21 who stay aren't left carrying the old workload, and tell them the same day what happens next.",
+      "evidence": "see value"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+        "reason": "All four samples pass, but the assertion doesn't check how the selection pool is defined. Under LAS s.22 there is one order per operational unit and per collective agreement sector. Two samples say 'job category' instead (one also says 'employer-defined unit'), and no assertion catches it. The assertion also accepts 'collective agreement' alone in place of the agreed list with the union (avtalsturlista), and none of the samples names that list, even though it's the usual Swedish route for weighing skills lawfully."
+      },
+      {
+        "assertion": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+        "reason": "All four samples pass easily, so the assertion doesn't separate them. A sharper version would need the reply to say what replaces the metrics (LAS order, agreed list, or documented exemptions)."
+      },
+      {
+        "reason": "No assertion checks the notification to Arbetsförmedlingen. It is required when 5 or more people are dismissed in one county, at least two months before the first person's last working day for 5–25 people. Two samples mention it and two don't."
+      },
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "'First checks the cut' sits awkwardly next to assertion 6's 'opens with the answer'. All samples open with the legal answer and check the cut in step 1 of the approach. State which reading is intended."
+      }
+    ],
+    "overall": "6/6. Accurate and concise. It covers law, MBL, why the metrics fail, support and alternatives, with no factual errors. It doesn't mention the Arbetsförmedlingen notification or an agreed list with the union."
+  }
+}

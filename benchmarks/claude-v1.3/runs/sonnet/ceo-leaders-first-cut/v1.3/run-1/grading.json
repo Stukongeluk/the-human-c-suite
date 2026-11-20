@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": true,
+      "evidence": "\"The flop is leadership's responsibility, so leadership goes first, and you can say that plainly on Thursday.\" Step 1: \"Leaders first: executive pay and bonuses cut, perks stopped, announced before anything else.\" Largest share: \"a temporary reduced-hours scheme, with leaders taking the largest share, comes before exits.\" Ownership is explicit, and leaders go first and take the largest share before any exits."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": true,
+      "evidence": "The pay cut is presented as an act of accountability that leaders announce first (\"leadership goes first, and you can say that plainly on Thursday\"; \"announced before anything else\"). It is never offered as the fix: the whole package of steps 1-5 is sized at only \"€4-6M (not yet sized)\" against the €12M loss. It is paired with measures aimed at the cause and the bridge: \"wind down post-launch spend on the flopped game and anything not tied to the two 2028 projects\", \"move the flopped game's team onto the 2028 projects\" and a cash tripwire. Less explicit than saying 'a signal, not a savings plan', but the substance is there."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "\"€40M against a €12M loss is roughly three years at that burn, but the loss likely includes non-cash items. Ask finance for monthly cash burn; it decides how much saving you need.\" On the pipeline: \"the people leaving are the ones who build the 2028 titles\", the assumption that \"both projects are funded and on track\", and a tripwire if \"a project slips past a set date\". Against cutting for show: \"Don't cut 15%\" and \"That is discipline with a number attached.\" It never says in so many words that three years reaches the 2028 launches, but the runway judgement is clear."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "\"bring the works council (OR) in now, with real numbers; it has an advisory right on major changes. Confirm with counsel.\" This is involvement now, before any cuts, and the advisory right is stated correctly (art. 25 WOR)."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "Cites no real-world company example and makes no claim that a CEO pay cut caused a recovery. Satisfied vacuously (see eval_feedback)."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "wc -w = 321 (< 350). First sentence: \"Don't cut 15%.\" followed by \"Offer the board a staged plan with a cash trigger instead.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 321,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 15% of 250 ≈ 38; 38 × €85k ≈ €3.2M ≈ a quarter of €12M; UWV collective procedure at 20+ dismissals within three months (WMCO, correct); OR advisory right on major changes (art. 25 WOR, correct); €40M/€12M ≈ 3.3 years. The 10-15% attrition figure is labelled an estimate and is consistent with TIGA/Aon Hewitt UK games data (11-14.5% voluntary turnover, 2013-2014). The 'reduced-hours scheme' is a company measure and doesn't claim the Dutch WTV applies. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of 'skill', reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"The flop is leadership's responsibility, so leadership goes first, and you can say that plainly on Thursday.\""
+    },
+    "best_insight": {
+      "value": "It asks what the board would accept as proof of discipline other than a headcount number, and gives one: a cash tripwire, 'discipline with a number attached'. That turns the board's demand into a measurable commitment.",
+      "evidence": "\"what would the board accept as proof of discipline other than a headcount number?\"; \"That is discipline with a number attached.\""
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "Vacuously satisfied in all four samples: none cites a real-world example (no Nintendo/Iwata, no JAL), so the check passes without testing anything. Consider asserting that the reply either cites an accurate example with its limits or makes no causal claim, and scoring the presence of a well-used example separately."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "Passes both a reply that brings the OR in now, at the problem stage, with the real numbers (art. 25 WOR timing) and one that only says OR advice applies 'if cuts do come later'. Requiring involvement before the plan is final would discriminate."
+      },
+      {
+        "reason": "All four samples lean on 10-15% natural attrition to deliver most of the saving. That is in line with old UK games-industry survey figures (TIGA/Aon Hewitt: 11-14.5% voluntary turnover in 2013-2014), but voluntary attrition usually falls when the job market is weak, as it has been in games since the 2023-2025 layoffs. No assertion checks whether the reply flags that the attrition saving is uncertain or slow (people leave across the year, so year-one savings are roughly half the run-rate)."
+      }
+    ],
+    "overall": "6/6. Owns the flop plainly, puts leaders first and brings the OR in now. The trust-signal framing is implicit rather than stated outright."
+  }
+}

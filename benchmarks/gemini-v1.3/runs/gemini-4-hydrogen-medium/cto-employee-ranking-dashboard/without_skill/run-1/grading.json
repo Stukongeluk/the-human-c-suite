@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "Section 3: 'PRs merged rewards splitting one change into 10 tiny PRs and punishes reviewing others' PRs, helping teammates, on-call'; 'Copilot acceptance rate rewards hitting Tab on boilerplate or mediocre suggestions and punishes engineers... carefully rejecting bad completions'; 'Weekly cadence + bottom 10% PIP guarantees false positives from normal variance'."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "Private, starting with questions: 'Ask your manager or HRBP a neutral, \"helpful\" question: \"Has Legal/OR signed off on using individual Copilot and PR metrics for PIPs...?\"'; 'Ask your EM privately: \"How are we supposed to handle weeks where someone is on-call...?\"'; 'Use \"Yes, and\" framing if you speak to the VP (e.g., skip-level 1:1...)' with 'Team-level delivery metrics (DORA metrics, PR review turnaround time, cycle time, deployment frequency)'. Not public. (It also offers an OR member as an equal first option; see assertion 3.)"
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": false,
+      "evidence": "It states the rule: 'the OR has the right of consent over both employee monitoring systems (personeelsvolgsystemen, Art. 27(1)(l)) and performance appraisal systems (beoordelingssystemen, Art. 27(1)(g))'. But the works council is offered as an up-front alternative to the private conversation, not as the escalation if it fails: 'Either: Ask your manager or HRBP... Or speak privately with an OR member you trust so the OR asks that question formally. That takes the target completely off your back.' That goes round the VP rather than escalating in proportion."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: manager, HRBP, OR member, EM, Staff+ peers, the VP. No vertrouwenspersoon, no leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Align with your Engineering Manager and Staff+ peers first... Don't be a lone voice'; 'Make \"invisible\" work visible... so EMs have a paper trail'. Doesn't tell the user to stay silent."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "856 words (wc -w), well over the 550 limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 856,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1 minor error: 'your company is legally required to have an Ondernemingsraad (OR) and an HR/Legal function'. No Dutch law requires an HR or legal function; only the OR (from 50 employees) is a legal requirement. This may be loose wording, but as written it is wrong. Verified correct: WOR 27(1)(g) personeelsbeoordeling and 27(1)(l) monitoring; a DPIA is usually needed for systematic employee monitoring (AP list item 'Controle werknemers')."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposed policy, not a bad outcome that has already happened, so there is no result for a leader to own."
+    },
+    "best_insight": {
+      "value": "Remembers the juniors: asks the user to quietly tell junior and mid-level engineers not to game the metric in a panic while the seniors raise the concern.",
+      "evidence": "Judgement from reading the reply and its documents."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With the VP privately first' is ambiguous: most samples (A, B, D, H) send the user to their own manager first, which is the normal route for a senior engineer at a 300-person company. I counted the manager as the route to the VP when the reply clearly aims at the VP. Consider rewording to 'with their manager or the VP privately first'."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "This bundles the legal fact with the escalation order. E and G state the WOR rule more precisely than anyone (27(1)(g), (k), (l), nullity under 27(5)) but send the user to the works council first, as a way round the VP. Splitting it into 'states the article 27 consent rule' and 'treats the works council as escalation, not the first move' would separate these cases."
+      },
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "All eight samples pass this one, so it doesn't discriminate. A sharper version could require the reply to say what to measure instead of individual activity and why (team outcomes paired with a quality measure)."
+      },
+      {
+        "reason": "No assertion checks that cited evidence and attributions are accurate. Sample C puts an unsupported claim that 'GitHub's own guidance' rules out acceptance rate for individual evaluation into a ready-to-send email to the VP. The factual_errors extra check catches this, but it doesn't count towards the pass rate."
+      }
+    ],
+    "overall": "Good arguments and self-protection, and it remembers the juniors, but it's too long and treats the works council as a first resort to take the target off the user's back rather than as escalation."
+  }
+}

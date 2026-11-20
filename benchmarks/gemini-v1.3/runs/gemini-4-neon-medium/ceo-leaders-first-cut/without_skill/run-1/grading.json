@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": false,
+      "evidence": "The only leadership measure is 'Visible executive skin in the game: Freeze leadership bonuses and raises until 2028 milestones are met', listed fourth under savings, not first. 'Own the post-mortem' asks for 'a blunt breakdown of why this year's launch failed', which explains the miss but never says leadership is responsible."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": false,
+      "evidence": "The exec bonus freeze sits inside 'Present a concrete cost-containment plan delivering comparable 2027 savings immediately', so it is counted as part of closing the gap, not framed as a signal of trust."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "'Year 1 net savings will be modest (~€1.5–2M)—barely moving a €40M runway—while risking delays to your 2028 launches, where the real value sits.' and 'prove that a 15% cut is *bad* discipline'."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "'Cutting ~38 people in Utrecht triggers the WMCO (collective redundancy), mandatory Works Council (OR) advice, union consultations...' Specific, but only as a cost of layoffs; its 'targeted cuts then' trigger doesn't mention the OR."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "No real-world company example is cited and nothing claims a CEO pay cut caused a recovery (passes vacuously)."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": false,
+      "evidence": "wc -w = 310 (<350), but the first sentence is context, not the recommendation: 'Boards ask for layoffs to \"show discipline\" when they fear leadership is in denial.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 310,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clear error. The '~€1.5–2M' year-one saving and 8–10% games attrition are unsourced estimates stated as fact ('will be'); 'zero severance or morale shock' overclaims.",
+      "errors": []
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep; 'reskilling' only in the ordinary sense)."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Own the post-mortem' explains why the launch failed but never says the responsibility is leadership's."
+    },
+    "best_insight": {
+      "value": "Quantifies how little a layoff saves in year one against the €40M runway and proposes objective go/no-go milestones (vertical slice, external playtest metrics) for both projects.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "No sample in this case cites a real-world company example, so this passes for every sample and discriminates nothing. Either require one accurate, relevant example used with its limits (for example Nintendo 2011/2014 with the Japan Airlines counterexample), or score it n/a when none is cited."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "This passes both replies that bring the works council in early as a partner and replies that only list 'OR advice' as a cost of layoffs. Consider requiring that the OR is involved before the decision, while its advice can still change the plan, including for any pre-agreed fallback cuts."
+      },
+      {
+        "reason": "No assertion checks whether the reply invites challenge (for example 'What am I missing?'), which separates coaching from dictating."
+      }
+    ],
+    "overall": "Solid runway logic and gates, but no leadership ownership, the exec measure is a bonus freeze counted in the savings plan, and the reply opens with context instead of the recommendation."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "Reply: \"In Sweden the Employment Protection Act (LAS) decides who stays: length of service within each priority group, unless you agree a different order with the union, plus up to three exemptions.\" Document section 5 adds the priority group per Malmö unit and agreement area, the age tie-break and \"up to three people of particular importance to continued operations\"."
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "Reply: \"Negotiate with the union under MBL before deciding, with the real numbers and alternatives.\" Document: \"Start MBL negotiations before any decision\" and \"draft for negotiation with the union (MBL §11). Nothing is decided yet.\""
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "Reply: \"Don't select on tickets resolved and CSAT. In Sweden the Employment Protection Act (LAS) decides who stays ... A ticket-and-CSAT ranking would be hard to defend, and with AI taking the easy tickets it marks down the agents handling the hardest cases.\" Document: \"people get very different case mixes, and CSAT mostly reflects the customer's issue.\" Both the law and the metric's flaws are covered."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": true,
+      "evidence": "Reply: \"Support from the day of notice: job security council, one to six months' notice, nine months' rehiring priority.\" Document adds TRR, or Kammarkollegiet's basic support if there is no collective agreement, and the 12-months-in-three-years condition."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "The first bullet is \"Check the 9 first: track escalations, reopens and CSAT on AI-handled contacts for a few weeks.\" Then: \"Avoid dismissals where you can: vacancies, redeployment (a legal duty), escalation and AI-quality roles, ending temp work, attrition, voluntary packages.\" Document: \"If the data supports fewer than 9 reductions, the number changes\" and \"Create roles for the new work: escalation specialists, knowledge-base upkeep, AI quality review.\""
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w reply.md = 258. It opens with the answer: \"Don't select on tickets resolved and CSAT. In Sweden the Employment Protection Act (LAS) decides who stays...\" (The 622-word document isn't counted, per the brief.)"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 258,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 622,
+      "evidence": "wc -w sample-A/selection-approach.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: LAS §22 priority group per operating unit and collective agreement area, order by total length of employment with the older employee taking priority on a tie, up to three exemptions with no further exemptions for notices within three months (English translation of §22). Also correct: the Arbetsförmedlingen notice at least two months before the first affected person's last day for up to 25 people (arbetsformedlingen.se), notice of 1-6 months (LAS §11), nine months' priority for people with more than 12 months in three years, TRR, and Kammarkollegiet's basic support under Lag 2022:850 for employers without a collective agreement. Klarna's 2025 move back to human agents after lower quality matches Bloomberg and Entrepreneur reporting. One ambiguity, not an error: 'with equal service, the older employee goes first' means first in the priority order (kept), but in a layoff context 'goes' could be misread as 'leaves'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'. 'skills' appears only as employee skills ('documented skills')."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned reduction, not a bad outcome that leadership caused."
+    },
+    "best_insight": {
+      "value": "The handed-over document is a negotiation-ready draft. It sets out the operative LAS §22 mechanics (priority group per Malmö unit and agreement area, age tie-break, the three-month bar on further exemptions), the varsel timing from the first last day, a Kammarkollegiet fallback if there is no collective agreement, and linked sources, so counsel and the union can check it line by line.",
+      "evidence": "selection-approach.md sections 5-6 and Sources"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "All four samples pass all six assertions, so the set does not separate them. The differences sit in things no assertion checks: the Arbetsförmedlingen notice (two months before the first last day for 5-25 people), defining the remaining roles and their qualification needs before anyone is assessed, ruling out leave, sickness and part-time as factors, and cutting work along with roles."
+      },
+      {
+        "assertion": "The reply stays short (under about 300 words) and opens with the answer.",
+        "reason": "Every reply is 258-270 words, so 'under about 300' doesn't discriminate. It also ignores that one sample adds a 622-word document after the user said 'Keep it short'. Consider an assertion on whether the whole hand-over respects that request, or a tighter cap."
+      },
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "This is a compound check (question the 9, then redeploy to new work), and all samples pass it easily. A sharper version would ask the reply to test the cut against measured AI quality (reopens, escalations), not vendor deflection figures, before anyone is selected."
+      },
+      {
+        "reason": "Consider an assertion that the reply turns HR's aim into something lawful, such as a union-agreed list on objective, role-based criteria fixed before scoring, instead of only rejecting it. Only some samples do this explicitly."
+      }
+    ],
+    "overall": "Passes all six. It is the most complete and legally precise sample, with a sourced draft document on top of a 258-word reply. The extra document stretches 'Keep it short', and 'the older employee goes first' is ambiguous wording."
+  }
+}

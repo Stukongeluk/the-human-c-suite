@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "Step 1: rankings 'penalise people who review code, mentor, fix incidents, or delete dead code, and invite engineers to split trivial PRs and accept noisy suggestions.' Backed by verified data: Faros (98% more PRs, 154% larger, review time +91%) and Uplevel (no throughput gain, 41% more bugs). The one-pager adds 'Accepting a suggestion only means a developer pressed Tab'."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Start with your manager, not a public stand-off. Keep it neutral and focused on the system, not the VP’s motives.' Step 2: 'Offer a concrete team-level alternative... DORA and flow metrics: change lead time, deployment frequency, change fail rate, deployment rework rate, review wait time, and PR size'. Script phrased as a question: 'Can we track team lead time, review wait time, and rework rate instead—and check with HR and the OR before turning on individual monitoring?' It assumes the VP's goals rather than suggesting the user ask about them, but the approach is private, phrased as a question and offers an alternative. It reaches the VP through the manager."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Under Article 27(1)(l) of the Works Councils Act (WOR), systems suited to monitoring employee behaviour or performance—including per-person Copilot and Git analytics used for PIPs—generally require prior OR consent (instemmingsrecht).' Escalation: 'If your manager won’t escalate, you can raise it quietly with HR, the OR...'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": false,
+      "evidence": "'If your manager won’t escalate, you can raise it quietly with HR, the OR, or your vertrouwenspersoon' sends a business disagreement to the confidential adviser, whose role is unwanted behaviour and integrity concerns. No leaks or sabotage suggested."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": false,
+      "evidence": "No self-protection advice. 'Using only records you’re allowed to keep' is a caution, not advice to keep a factual record; there is no advice to find allies; and 'as protection, not rebellion' refers to protecting the company, not the user."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "414 words (wc -w). Three steps, a line to use and a ready-to-share proposal. The opening sentence is dense with statistics, but the reply can be acted on."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 414,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 764,
+      "evidence": "wc -w of the other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Verified: Faros AI 2025 figures (faros.ai); Uplevel 2024 (~800 developers, 41% more bugs, no significant cycle-time or throughput gain; CIO.com); GitClear '623 million analyzed changes from 2023-2026', duplicated blocks up 81% and refactoring down (gitclear.com); WOR 27(1)(l) and OR threshold (fact sheet); AI Act art. 26(7) from 2 December 2027 after the Digital Omnibus (fact sheet); DORA five metrics (dora.dev)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposed policy, not a bad outcome that has already happened, so there is no result for a leader to own."
+    },
+    "best_insight": {
+      "value": "The one-pager turns the principle into a concrete configuration step (restrict individual-level views in the Copilot and Git analytics and report only team aggregates), and every statistic it cites checks out.",
+      "evidence": "Judgement from reading the reply and its documents."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With the VP privately first' is ambiguous: most samples (A, B, D, H) send the user to their own manager first, which is the normal route for a senior engineer at a 300-person company. I counted the manager as the route to the VP when the reply clearly aims at the VP. Consider rewording to 'with their manager or the VP privately first'."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "This bundles the legal fact with the escalation order. E and G state the WOR rule more precisely than anyone (27(1)(g), (k), (l), nullity under 27(5)) but send the user to the works council first, as a way round the VP. Splitting it into 'states the article 27 consent rule' and 'treats the works council as escalation, not the first move' would separate these cases."
+      },
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "All eight samples pass this one, so it doesn't discriminate. A sharper version could require the reply to say what to measure instead of individual activity and why (team outcomes paired with a quality measure)."
+      },
+      {
+        "reason": "No assertion checks that cited evidence and attributions are accurate. Sample C puts an unsupported claim that 'GitHub's own guidance' rules out acceptance rate for individual evaluation into a ready-to-send email to the VP. The factual_errors extra check catches this, but it doesn't count towards the pass rate."
+      }
+    ],
+    "overall": "Accurate, well evidenced and short. It fails on routing the concern to the vertrouwenspersoon and on giving no personal-protection advice."
+  }
+}

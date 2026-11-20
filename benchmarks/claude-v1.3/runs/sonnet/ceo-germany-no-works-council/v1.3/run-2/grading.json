@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": false,
+      "evidence": "Partly met: 'No works council means no social plan duty and no hearing'. But the reply never says employees could still elect a works council, which is half of the assertion, and it doesn't name the reconciliation of interests either."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "'Mass-dismissal notice (§17 KSchG): 15 of 140 is just over 10% (14), so notify the Agentur für Arbeit *before* giving notice.' It names the threshold correctly as 14 people and adds that employer-initiated exit agreements count too."
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "'Social selection (§1 KSchG) among comparable roles: tenure, age, dependants, disability. Performance rankings are not a valid method.'"
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "'Notice periods (§622 BGB) grow with service, up to seven months.' The savings block goes from '€1.35m a year' to 'about nine months saved, roughly €1.0m', then subtracts severance and legal costs to get 'roughly €0.65m'. The opening says: 'Realistic net saving this year is about €0.65m, not the €1.35m annual figure'."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": true,
+      "evidence": "'What is the actual gap, and is the dip temporary or structural? Cheaper first moves: a hiring freeze, vendor, cloud and licence review, voluntary exits, and executive pay and bonuses cut first.'"
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w gives 299. The first line is the answer: 'Realistic net saving this year is about €0.65m, not the €1.35m annual figure, and 31 March is tight.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 299,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "Only reply.md is in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "All the legal claims check out: the §17 threshold (14 people), agreements counting towards it, invalidity when notification is missing (CJEU C-134/24 and BAG 2026), §102 and §§111-112 BetrVG not applying, the special-approval groups, §622 BGB, and §4 KSchG's three weeks. The savings arithmetic holds."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'The board and leadership own this result, so say so in the announcement.'"
+    },
+    "best_insight": {
+      "value": "It warns that employer-initiated exit agreements count towards the §17 threshold and that miscounting can void the dismissals, which shuts off the common trick of moving people out 'voluntarily' to stay under the notification duty.",
+      "evidence": "'Miscounting can void dismissals; employer-initiated exit agreements count too.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+        "reason": "No sample names the reconciliation of interests. I graded on the spirit: the works-council negotiations don't apply, and employees could elect one. Here the missing election point decided the FAIL. Make clear whether naming the Interessenausgleich is required."
+      },
+      {
+        "assertion": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+        "reason": "This passes even when the rule itself is misstated (another sample says the duty triggers at 'more than 10%'). Require the threshold to be stated correctly: 10% of staff, so 14 people at 140, within 30 days. That catches replies that would let a board trim to 14 and skip the notification."
+      },
+      {
+        "reason": "No assertion checks that the savings estimate states its assumptions (loaded cost, tenure, exit date) and that its arithmetic holds. That is the core of 'what will it actually save us'. All samples did it here, but nothing would catch a wrong number."
+      },
+      {
+        "reason": "No assertion covers the special-protection groups that need authority approval before dismissal (pregnancy, parental leave, severe disability). This is a common practical trap that can delay the March date."
+      }
+    ],
+    "overall": "A strong, compact answer with correct law and arithmetic, and the clearest ownership line; it misses only the point that staff could still elect a works council."
+  }
+}

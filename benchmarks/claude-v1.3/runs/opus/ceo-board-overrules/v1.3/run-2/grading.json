@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers plan.md and staff-announcement.md (with FAQ). 'I haven't gone back over the alternatives.' The only caution is procedural: 'One trap to avoid is treating the works council round as a formality.' No alternatives are reopened with the user."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "Plan summary: 'Under Dutch law this is an intended decision until the works council has given its advice (article 25 WOR). All communication says \"intended\" until then.' s.2: 'Ask for its advice while that advice can still substantially change the decision, and discuss the matter in at least one consultation meeting'. Timeline: Day A 8 Dec, first consultation meeting by 15 Dec, consultation 8 Dec–22 Jan, advice about 22 Jan, final decision about 26 Jan with one-month wait if it departs, conversations 2–4 Feb. Reply: 'keep the number per team, the work redesign, the package and the dates genuinely open'."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "Plan s.2: 'Collective dismissal (WMCO). The rules apply when an employer plans to dismiss 20 or more employees within three months in one UWV work area. Settlement agreements count towards the 20. Notify UWV in advance, and notify and consult the unions with members in the company'. Adds: 'Don't spread exits over separate three-month windows to stay under 20.'"
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "Plan s.2: 'Selection: the reflection principle (afspiegelingsbeginsel). Within each category of interchangeable roles, apply it per age group (15–25, 25–35, 35–45, 45–55, 55+), with the shortest service going first within each group. Hired-in staff in those categories go first, then employees of state pension age, on-call workers and temporary contracts with at most 26 weeks left... Performance ratings, leave and having raised concerns are never criteria.' Also covers the whole-category and unique-role exceptions and dismissal bans."
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "Package: 'Transition budget | From the day of the individual conversation: €3,000 or one month's salary, whichever is higher, for coaching, training or outplacement that the person chooses'; 'Full notice paid. Released from work after a handover... with paid time for interviews'; '1.5 times the statutory amount, and at least 3 months' gross salary'."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "Subject 'An intended decision to reduce 22 roles'; 'This is an intended decision. Under Dutch law, the works council gives its advice first, while that advice can still change the plan, and I want it to.' 'If your role is affected, you'll hear it from your own manager, with HR present, in person or on a live call. Never by email'. Opening: 'the managers of the teams most affected spoke to their teams in person' before the all-staff session; manager script: 'I want you to hear this from me first'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 552,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4509,
+      "evidence": "wc -w plan.md (3235) + staff-announcement.md (1274)"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked WMCO threshold, settlements counting, waiting period and union exceptions, reflection principle order and exceptions, notice periods, cooling-off, transition payment cap and arithmetic, 26-week re-employment rule, PSD2 15 business days, HSM search period and weekdays; no errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement 'Whose responsibility this is': 'It is ours, the leadership team's, and mine in particular... That was our call. It is not the result of anything the people in operations and support did.'"
+    },
+    "best_insight": {
+      "value": "It makes the consultation real for all staff, not only the council: the announcement invites anyone to propose a better way and promises to report what changed because of their input and why, and a manager script ensures affected teams hear from their own manager before the all-staff session.",
+      "evidence": "Announcement 'If you see a better way to do any of this, tell your manager, the works council or me. When we decide, we'll tell you what we changed because of your input...'; plan appendix manager briefing."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "Moving Day A a week later (8 Dec) to allow proper preparation is a judgment no assertion captures; an assertion on realistic, dated sequencing (prep, advice window, waiting month, notice) would separate samples better than the current all-pass set."
+      },
+      {
+        "reason": "Documents run ~4,500 words; no assertion or limit checks whether the deliverable is usable in length for a CEO who asked to 'just write the plan'."
+      }
+    ],
+    "overall": "Thorough, accurate and well-sequenced, with the strongest staff-voice elements; all six assertions pass and no factual errors found."
+  }
+}

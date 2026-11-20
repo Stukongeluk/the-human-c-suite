@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "\"Having no works council saves you months of *Sozialplan* negotiations\" and \"if word leaks, employees can quickly initiate a works council election, granting organizers dismissal protection.\" It names the social plan, not the reconciliation of interests, and frames the election as a leak risk."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "\"Cutting ≥10% (14+ staff) within 30 days—including employer-initiated mutual terminations (*Aufhebungsverträge*)—requires filing a *Massenentlassungsanzeige* with the Berlin *Agentur für Arbeit* **before** serving notices.\""
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": false,
+      "evidence": "\"run a *Sozialauswahl* across comparable roles (ranking by tenure, age, dependents, and severe disability)\". It never says performance rankings are excluded."
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "\"Standard Berlin tech contracts carry 3-month notice periods ... otherwise, exits slip into Q2\", \"Less severance/settlements\" and \"Realistic net savings this year: ~€550k–€750k—roughly 50–70% of the headline Apr–Dec run-rate\". The annual figure (about €1.43M) is implied, not stated, and the statutory range under §622 BGB isn't cited."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": false,
+      "evidence": "No challenge to the 15 cuts, no question about whether the drop is temporary, and no earlier option is named."
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": false,
+      "evidence": "307 words, so under 350. But it opens with a \"### The Process\" heading and \"Having no works council saves you months of Sozialplan negotiations, but ... still triggers strict German dismissal rules:\", not the answer. The savings come at the end."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 307,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor error: \"Skipping or botching this risks invalidating every dismissal and triggers a 1-month waiting period before exits take effect.\" The one-month waiting period (§18(1) KSchG) runs from receipt of a notification that was filed. Skipping the filing doesn't trigger a waiting period; it makes the dismissals void (BAG, 1 April 2026). This is likely garbled wording rather than a wrong belief. Checked and correct: 13 or fewer in 30 days avoids the filing; special protection for the data protection officer; §623 BGB; §4 KSchG three weeks; savings arithmetic. Not counted as an error: the 'this year' figure is really for 2027 (exits land after March 2027) and the reply doesn't say that calendar 2026 saves nothing."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the revenue drop."
+    },
+    "best_insight": {
+      "value": "Lists the data protection officer among specially protected employees, and budgets a separate line for notice and litigation slippage if exits miss 31 March.",
+      "evidence": "Read from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion catches advice that treats the employees' right to elect a works council as a leak to prevent ('keep this airtight', 'so staff don't rush to form one'), or advice to stagger dismissals to stay under the §17 threshold. Both cut against fair process and should be checked by a negative assertion."
+      },
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "As graded it passes all eight samples, because each ties the delay to notice periods and severance. Only G and H cite the statutory range under §622 BGB (1 to 7 months); A to F assume a contractual 3 months. If the statutory, service-based notice is meant to be required, say so outside the parenthesis."
+      },
+      {
+        "reason": "No assertion checks the date. Today is 20 November 2026, so cuts that land in 2027 save nothing in calendar 2026. B, C, D and F say so. A, E, G and H give a 'this year' figure that really covers 2027 without naming the year. Consider an assertion that the reply separates 2026 from 2027, or states which year it means."
+      }
+    ],
+    "overall": "A detailed execution checklist with mostly accurate law. But it accepts the board's 15 without question, leaves out the rule against performance rankings, buries the savings answer and treats a works council election as a leak risk."
+  }
+}

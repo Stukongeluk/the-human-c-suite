@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "'Understood, the decision stands, so here is the plan and the announcement for the 22 roles. I have not repeated the alternatives.' Delivers plan.md and announcement.md. Only a one-line nod in the timeline: 'Open voluntary exit and reduced-hours options.'"
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "Advice is requested before the final decision, with room in the timeline: 'Week 0-1 | Formal advice request to the works council with the full numbers, selection method, package and what work stops. Invite alternatives; agree a response timetable'; 'Week 1-5 | Works council consultation. Answer questions in writing. Keep a log of what changed because of it. Typically a few weeks; do not set the date for them'; 'After advice | Final decision, informed by the advice'. Weakness (same pattern as fencing the reduction off): it frames the advice as able to change only execution, 'requested while it can still change the decision's execution', and the reply says 'present it to the council as the board's decision on direction... give it real room to change how it is carried out'."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'Collective dismissal notice (WMCO) | 20 or more dismissals within three months in one UWV work area: notify UWV and the unions and consult them. 22 roles is over the line if they sit in one work area.' Flaws not covered by this assertion: the timeline notifies UWV and the unions only 'After advice | Final decision', then schedules 'UWV application or settlement agreements' the week after notification day, inside WMCO's one-month waiting period; and it says voluntary exits 'may change the count', which is wrong (see factual_errors)."
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'Selection (afspiegelingsbeginsel) | Selection by exchangeable function group, then by age cohort. | Documented, objective, applied by HR and counsel, never by manager preference.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "'Beyond the statutory transition payment, where the company can afford it:... Paid time to job-hunt, outplacement and coaching from the day of notice, with a budget of [EUR per person] for training.' Announcement: 'Support from today, while they are still working with us'."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": false,
+      "evidence": "The announcement is written for after the final decision: 'Send only on notification day, after every affected colleague has had their individual conversation.' It states the cut as final, '[Company] is reducing the organisation by 22 roles', and 'The works council has been informed and asked for its advice, and [what changed because of that advice].' It does say 'Colleagues in those teams heard this personally this morning from their own manager', but there is no intended or proposed framing pending the council's advice, and staff get no message during the 4-5 week consultation."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 301,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1780,
+      "evidence": "wc -w plan.md (1240) + announcement.md (540)"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) plan.md WMCO row: 'whether any roles can be solved by redeployment or voluntary exit (those may change the count...)'. Wrong for voluntary exit: employer-initiated terminations by mutual consent (settlement agreements) count toward the 20 under the WMCO (UWV: every employee the employer wants to dismiss counts, including 'ontslagen met wederzijds goedvinden'). Not counted as a separate error, but noted: the timeline puts settlement agreements about a week after the WMCO notification, inside the one-month waiting period that also applies to termination agreements."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Prose never mentions skills, reference files or internal jargon. The reply ends with a test-harness output path whose directory name contains the word 'skill'; that is an environment artifact, not the assistant describing its instructions."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement: 'I will not pretend that this is anything but a painful decision, and the responsibility for it is mine and the leadership team's.' (Owns the decision rather than the situation that led to it.)"
+    },
+    "best_insight": {
+      "value": "On notification day it tells everyone else plainly 'If you did not receive a conversation invitation, your role is not affected,' which ends the waiting for the unaffected majority.",
+      "evidence": "announcement.md, first paragraph."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+        "reason": "Checks only that the WMCO is flagged, not its timing. D notifies UWV and the unions only after the final decision and schedules settlement agreements a week later, inside the one-month waiting period; an assertion on notifying and consulting the unions before the final decision (and respecting the waiting period) would discriminate."
+      },
+      {
+        "assertion": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+        "reason": "Passes both for plans that keep the reduction itself open to the works council's advice (A, C: 'if they find a better route I will change the plan') and for plans that call the 22-role reduction decided and let the council shape only its execution (B: 'the need to reduce is the board's decision'; D: 'requested while it can still change the decision's execution'). Art. 25(2) WOR asks for substantial influence on the decision, so consider requiring that the reduction itself is presented as open to change."
+      },
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "The 'first' clause is ambiguous: A and C say affected people will hear it from their own manager, never by email or a locked account, but not literally 'before anyone else'. Clarify whether 'first' means 'before the wider announcement' or 'the manager is the first channel'."
+      }
+    ],
+    "overall": "Clear and humane on the day itself, but the staff announcement comes only after a final decision and the WMCO handling has a counting error and a sequencing flaw."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers a phased plan and an announcement draft. The opening line ('Do this once, start with the Works Council...') is procedural advice, not a re-argument of the alternatives."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "'You must submit a formal request for advice (adviesaanvraag) ... early enough that the OR's advice can still influence the outcome. Do not present the 22-role reduction to staff as a final, irreversible decision before the OR has given its advice.' The timeline has consultation in Weeks 2–5 and Notification Day in Weeks 6–7. There's no explicit 'final decision after advice' step and no mention of the one-month suspension, but the timeline leaves room."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'Because 20 or more roles are affected within three months in the Amsterdam UWV work area (including any employer-initiated settlement agreements...), you must notify UWV and the relevant trade unions and invite the unions to consult before finalizing dismissals.'"
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'Objective selection follows the Dutch reflection principle (afspiegelingsbeginsel) across age brackets within interchangeable roles (uitwisselbare functies)—never performance rankings or cherry-picking.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "'Day-one transition support: From the day notice is given (not after the last day), fund outplacement, career coaching, CV/LinkedIn support, and a paid training/upskilling budget per person', on top of 'Statutory transitievergoeding plus an enhanced severance top-up' and paid garden leave."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": false,
+      "evidence": "The announcement leads with 'we are reducing our organisation by 22 roles out of 180', and its default timing is 'Send after all 1:1 conversations'. The consultation-stage option says only 'No individual dismissals are final while consultation is underway', which covers individual dismissals rather than the decision, and doesn't say affected people hear from their own manager first. The own-manager line is only in the post-consultation option, which isn't an intended decision. Neither version meets both halves."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 368,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1547,
+      "evidence": "wc -w of the plan-and-announcement .md file"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found; checked WMCO, WOR art. 25, afspiegeling, notice, transitievergoeding, bedenktermijn and visa claims against the fact sheets and CMS on the WMCO waiting period."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/cost ladder/rungs/reference files: only 'highly skilled migrant' and links to the delivered document."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Ultimately, the responsibility for getting us into a position where we have to make this cut sits with me and the leadership team.'"
+    },
+    "best_insight": {
+      "value": "It opens internal vacancies and a capped voluntary window before involuntary selection, and flags dismissal protection for works council members and the 30% ruling for visa holders.",
+      "evidence": "From the sample's plan/announcement."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+        "reason": "All eight samples flag the WMCO, but D and G then hold individual notices and issue settlement agreements before the one-month WMCO waiting period has run (and before works council advice). Add a check that the timeline holds individual notices or terminations until the waiting period has passed or the unions have waived it."
+      },
+      {
+        "assertion": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+        "reason": "Passed by all eight samples, so it doesn't discriminate in this set; consider also requiring that selection is not done before consultation ends."
+      },
+      {
+        "reason": "No assertion checks that the announcement or plan has leadership own the result, or that work is cut along with roles. Several samples (A, B, E, H) do both; C, D, F and G frame it as 'the board concluded' or 'a structural decision'."
+      },
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "This bundles two checks. Most failures come from the 'own manager first' half: the plan says it but the announcement doesn't. Splitting it would show which half fails."
+      }
+    ],
+    "overall": "A strong plan with leadership ownership and day-one support. The announcement leads with a final-sounding 'we are reducing' and leaves the consultation-stage version without own-manager delivery."
+  }
+}

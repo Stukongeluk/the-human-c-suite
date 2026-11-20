@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'Get a rough engineering range based on past throughput—not estimates made under pressure' and 'Show your team's real Q1 capacity (already accounting for unplanned work, support, and reliability...) alongside the existing roadmap and the three new items.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "'Swap: Build the three features (or their smallest viable versions) in Q1 and explicitly move specific roadmap items to Q2'; 'Phase: Ship the most urgent piece or a workaround in Q1'; 'Re-scope with the customer'. Opening: 'Don't tell the CEO no—bring him a clear trade-off instead.'"
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'never closing the gap with overtime or skipped testing'."
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Understand the real customer need first. Sit down with your engineering lead (and whoever was in the customer meeting) to get the three requests in writing. Find out the actual problem behind each feature'."
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": false,
+      "evidence": "Intent and process are there: 'he likely made that promise to protect or grow your biggest account, and his credibility is now on the line. Approach the conversation as an ally' and 'leadership and sales can promise discovery and a date for an answer, while delivery dates come after the team estimates the work.' But the conversation is never framed as private or one-to-one; there is only 'Align with engineering and your manager before the meeting.'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "421 words. Opens with the answer: 'Don't tell the CEO no—bring him a clear trade-off instead.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 421,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No specific claims about laws, schemes, deadlines, thresholds, products or studies; the advice is general practice. Example figures are clearly placeholders."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, or internal jargon such as 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a promise that has not yet gone wrong (no missed date, failure or cut has happened); the advice is for a PM managing up, so there is no bad outcome for a leader to own."
+    },
+    "best_insight": {
+      "value": "Getting the three requests in writing from 'whoever was in the customer meeting' before estimating, so the team sizes what was actually asked rather than a second-hand version.",
+      "evidence": "Not covered by any assertion."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "This assertion bundles three separate checks (private conversation first, assuming pressure not bad intent, a process for future promises). Samples C, E and H lose it only on the 'private conversation' part, while long playbooks pass it. Splitting it would show which part fails."
+      },
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "Two long samples (D, F) tell the PM not to argue about burnout or hours, and D has the PM concede 'we'll push hard'. The assertion catches this, but an explicit check that the reply does not have the PM concede extra effort or hours would make it sharper."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "Any 'get T-shirt sizes from your tech lead' line passes. Requiring capacity net of support, on-call, leave and unplanned work (as C, E and H do) would tell real capacity planning apart from a token estimate."
+      },
+      {
+        "reason": "No assertion checks two things that separated samples: telling the team what comes off their plate when the plan changes (F, G), and recording the CEO's decision and what slips in writing (A, D, F)."
+      }
+    ],
+    "overall": "Concise and humane, with real capacity and customer-problem discovery. It is missing only an explicit private one-to-one with the CEO."
+  }
+}

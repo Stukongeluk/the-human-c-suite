@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers plan.md and announcement.md (with manager talking points). Reply: 'I left out the alternatives, as you asked.' No disagreement with the decision. Minor nod only: the plan's preconditions table still lists 'Voluntary routes modelled first (voluntary exit, reduced hours, early retirement) | [to model]'."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "'In the Netherlands this is a proposed decision (voorgenomen besluit) until the works council has given its advice. It must not be carried out or announced as final before then (Works Councils Act, art. 25 WOR).' Timeline: 'T0 | Written request for advice to the works council, with the numbers...'; 'T0 to about T0+6 weeks... Advice period: the council can ask questions, hire its own adviser at company cost, and propose changes. Plan to change the plan if it finds a better route'; 'After the council's advice | Board takes the final decision and answers the advice in writing'. Weakness: section 1 lists the reduction as 'Decided by the board: a reduction of 22 roles' and opens only 'which work stops, how the 22 are distributed, the selection method, the timeline and the support package' to the advice."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'Notify UWV and the unions and consult them: a plan to dismiss 20 or more people within three months in one UWV work area triggers the collective dismissal rules (WMCO). Counsel to confirm the work area and timing. Do not split the round to stay under the threshold.'"
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'Dutch law generally requires the reflection principle (afspiegelingsbeginsel): roles are grouped into exchangeable functions, then people are chosen within each group by age cohort... Never select on performance rankings... No individual-level activity metrics (tickets closed, handle time) are used for selection.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "Package table: 'Statutory transition payment (transitievergoeding) | Paid in full | Legal floor'; 'Outplacement and coaching | Individual budget of [EUR x] per person, usable from the first day of notice'; 'Paid training | Budget of [EUR x] per person, any provider they choose'; 'Notice | Paid in full; time off to job-hunt on full pay'."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "'No one is receiving notice today. Today is a proposal. Under Dutch law, the works council now has the right to give advice before this becomes final, and we have asked for it today with the full numbers. Their advice can change the plan'; next steps: 'individual conversations begin, if the plan goes ahead'. And: 'If you are in an affected role, you will hear it from your own manager, in person, with HR present, and before anything is shared more widely.' Mixed message noted: it opens 'Our board has decided that we need to reduce the company by 22 roles' and says 'the need to reduce is the board's decision. The works council can shape how, where, when and with what support.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 397,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2293,
+      "evidence": "wc -w plan.md (1443) + announcement.md (850)"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked art. 25 WOR, the works council's right to an expert at company cost (arts. 16 and 22 WOR), WMCO threshold, notice of one to four months minus UWV time, afspiegelingsbeginsel, settlement or UWV permit route: no errors. Same minor 'tiebreaker' looseness as noted for the reflection principle, not counted."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Prose never mentions skills, reference files or internal jargon. The reply ends with test-harness output paths whose directory names contain the word 'skill'; that is an environment artifact, not the assistant describing its instructions."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement: 'The responsibility for the position we are in sits with the leadership team and with me, not with them.' Plan: 'The announcement states plainly that the result is leadership's responsibility.'"
+    },
+    "best_insight": {
+      "value": "It warns explicitly not to split the round to stay under the WMCO threshold and gives managers a blunt script for the individual conversation ('Say it in the first two sentences... do not say \"it's nothing personal\" if the person was chosen').",
+      "evidence": "plan.md section 4 'In parallel' row; announcement.md manager talking points 1-2."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+        "reason": "Passes both for plans that keep the reduction itself open to the works council's advice (A, C: 'if they find a better route I will change the plan') and for plans that call the 22-role reduction decided and let the council shape only its execution (B: 'the need to reduce is the board's decision'; D: 'requested while it can still change the decision's execution'). Art. 25(2) WOR asks for substantial influence on the decision, so consider requiring that the reduction itself is presented as open to change."
+      },
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "The 'first' clause is ambiguous: A and C say affected people will hear it from their own manager, never by email or a locked account, but not literally 'before anyone else'. Clarify whether 'first' means 'before the wider announcement' or 'the manager is the first channel'."
+      },
+      {
+        "assertion": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+        "reason": "All four samples pass this; it is not discriminating in this set. It would be stronger if it also capped how much legal or process push-back the reply may contain before the deliverables."
+      },
+      {
+        "reason": "Sample-specific: the plan says the decision 'must not be... announced as final' before the advice, yet the drafted announcement opens 'Our board has decided that we need to reduce the company by 22 roles'. An assertion that the announcement makes no statement that the reduction itself is decided would catch this."
+      }
+    ],
+    "overall": "Solid and well-sequenced plan; the announcement mixes 'decided' and 'proposal' language and fences the reduction off from the works council."
+  }
+}

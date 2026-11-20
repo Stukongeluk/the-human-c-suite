@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "\"Why it fails, in two lines\": \"Acceptance rate measures the tool, not the engineer... Accept-then-delete games it in a day.\" \"PR counts reward splitting work and punish the people who review, mentor and handle incidents. And a bottom 10% always exists, even when everyone is good.\" Brief and specific."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "Step 1: \"Ask about the problem first, privately. Assume pressure, not malice... 'What do you want this to tell you?'\" Step 2: \"Team-level measures: change lead time, review wait time, change fail rate, plus a short developer survey. For Copilot, compare teams before and after, against a group without it.\" The opening says \"don't argue against the VP, help them get what they want a better way.\""
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "\"At a 300-person Dutch company, a system suited to tracking individual performance needs the works council's consent (article 27(1)(l) WOR).\" Escalation: \"If it goes ahead unchanged, contacting the works council yourself is legitimate. That's what it's for.\""
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Routes to the VP privately, the OR, HR and the privacy officer. No mention of the vertrouwenspersoon, and no leaks or sabotage suggested. It passes on the right routes named and no wrong route offered."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "\"Find allies quietly: your manager, other seniors and EMs, HR, the privacy officer.\" \"Follow up in writing: a short, neutral note of what you discussed and proposed.\" (This is a follow-up note rather than a private log, but it creates the written record.) It also gives an honest warning that \"managers often rate people who challenge lower\" and says \"How far you take this is your call,\" without advising silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "wc -w reply.md = 456 (limit 550). Five steps and a ready-to-use line; practical."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 456,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: GitHub's Copilot metrics docs say acceptance rate 'helps you understand whether suggestions are relevant and trusted'; 27(1)(l) WOR consent for systems suited to monitoring performance; Burris (2012), cited via the Institute for PR, found managers rate employees who voice challenge as weaker performers (good-leadership.md and blocks/voice-and-fair-process.md). No numbers that could be wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference file, cost ladder, rung: no matches."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned policy, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "It cites research that managers rate employees who challenge them lower, and uses it to explain why questions plus an offer of work are safer than objections, which speaks directly to the user's fear of being seen as difficult.",
+      "evidence": "\"One honest caveat: managers often rate people who challenge lower...\""
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Passes trivially for any reply that never mentions the vertrouwenspersoon (B and C never do). Consider requiring that the reply names the right formal channel for this concern (works council, HR, privacy officer) rather than only checking for the absence of a wrong one."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "All four samples pass. No assertion checks the second Dutch angle that two samples raise: the Autoriteit Persoonsgegevens lists systematic monitoring of employees as needing a DPIA, and an improvement plan has to rest on concrete shortcomings in the work (7:669(3)(d) BW). Either would make the legal point more discriminating."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "This is the only assertion that separates the samples, and it does so on length alone. A and D give the most complete, well-sourced advice but fail here. Consider letting a handed-over document carry the detail (A moved its proposal into a document and still ran to 853 words in the reply)."
+      },
+      {
+        "reason": "No assertion checks for a ready-to-use line or message to the VP, which all four samples provide and which is the most actionable part of the advice. No assertion checks for unsupported assumptions either: B and D assume the VP is a man."
+      }
+    ],
+    "overall": "Concise, accurate and humane; meets every assertion. It's the lightest on evidence for why the metrics fail, and it offers the proposal and note only on request."
+  }
+}

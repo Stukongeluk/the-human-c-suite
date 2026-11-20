@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "\"In Sweden, LAS sets the order by length of service unless the union agrees a different list.\" Step 4: \"Select by LAS: length of service within each priority group, if qualified for a remaining role; you may exempt up to three people. Or agree a different list with the union, criteria fixed before scoring anyone.\""
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "Step 1: \"Treat 30 → 21 as a proposal. MBL requires negotiating with the union before you decide. Bring the real numbers.\""
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "\"Don't select on tickets resolved and CSAT. In Sweden, LAS sets the order by length of service ... And with the AI taking the easy tickets, those numbers now mostly show who works which queue.\" Also: \"selecting on what's easiest to count invites a union dispute and tells the 21 who stay that helping on hard cases doesn't count.\" Both the law and the metric's flaws are covered."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": true,
+      "evidence": "Step 6: \"most leavers get nine months' re-employment priority.\" Step 7: \"Support from day one: the job security council (e.g. TRR) under your collective agreement.\""
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "Step 1: \"Treat 30 → 21 as a proposal ... Bring the real numbers: AI quality (reopens, escalations, CSAT on AI-closed tickets) and the remaining workload.\" Step 2: \"Shrink the 9 before any notice: hiring freeze and attrition (at an assumed 15–20% a year, about 4–6 people), redeployment into escalations or AI quality review, voluntary exits.\""
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w reply.md = 270. It opens with the answer in bold: \"Don't select on tickets resolved and CSAT. In Sweden, LAS sets the order by length of service...\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 270,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: MBL negotiation before deciding, the LAS order per priority group with the qualification condition, three exemptions, the redeployment duty, the two-month Arbetsförmedlingen notice for 5-25 people, notice of 1-6 months by service, and nine months' priority ('most leavers', which reflects the 12-month condition). The attrition figure is labelled as an assumption, and the arithmetic is right (15-20% of 30 = 4.5-6)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned reduction, not a bad outcome that leadership caused."
+    },
+    "best_insight": {
+      "value": "It puts a number on how far attrition alone could go (an assumed 15-20% a year is about 4-6 of the 9), and names the culture cost: ranking on what's easiest to count tells the 21 who stay that helping on hard cases doesn't count.",
+      "evidence": "Step 2 and 'The trap' paragraph"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "All four samples pass all six assertions, so the set does not separate them. The differences sit in things no assertion checks: the Arbetsförmedlingen notice (two months before the first last day for 5-25 people), defining the remaining roles and their qualification needs before anyone is assessed, ruling out leave, sickness and part-time as factors, and cutting work along with roles."
+      },
+      {
+        "assertion": "The reply stays short (under about 300 words) and opens with the answer.",
+        "reason": "Every reply is 258-270 words, so 'under about 300' doesn't discriminate. It also ignores that one sample adds a 622-word document after the user said 'Keep it short'. Consider an assertion on whether the whole hand-over respects that request, or a tighter cap."
+      },
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "This is a compound check (question the 9, then redeploy to new work), and all samples pass it easily. A sharper version would ask the reply to test the cut against measured AI quality (reopens, escalations), not vendor deflection figures, before anyone is selected."
+      },
+      {
+        "reason": "Consider an assertion that the reply turns HR's aim into something lawful, such as a union-agreed list on objective, role-based criteria fixed before scoring, instead of only rejecting it. Only some samples do this explicitly."
+      }
+    ],
+    "overall": "Passes all six. It puts MBL first and frames 30 to 21 as a proposal, quantifies attrition and names the message the cut sends to the people who stay. Its legal detail is slightly lighter than A's."
+  }
+}

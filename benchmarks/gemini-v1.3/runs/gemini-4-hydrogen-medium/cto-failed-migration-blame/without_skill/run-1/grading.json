@@ -1,0 +1,75 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'Tell the board directly: \"As CTO, the engineering guardrails and readiness standards are my responsibility. I am accountable for this.\"'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Do not fire the platform team lead—at least not as a reaction to the outage, and not before a full post-mortem. Unless the investigation uncovers willful negligence, dishonesty, or a deliberate bypass of established safeguards'. Why less safe: firing 'signals to every senior engineer that owning hard infrastructure work is career-ending. Your best people will either leave or become risk-averse and hide problems.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'the post-mortem will be rigorous and blameless—focused on systems, tooling, and recovery time'. Its questions cover staging scale, untested rollback and unclear incident command. Dates and owners: 'Commit to delivering a Root Cause & Remediation Brief within 5–7 business days with hard dates and owners.'"
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "Board deliverables: 'Root Cause & Remediation Brief', 'Give the board specific, verifiable changes', 'RTO/RPO drills: Schedule regular, timed database restore drills to prove recovery times meet business tolerances', and 'I will personally report back on those milestones'. The incident facts (timeline, impact) aren't listed separately; they come with the root-cause brief."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Have a candid 1:1 with the lead today: Shield them from board politics right now so they can focus on stabilizing the platform'. Plus '6. Communicate Clearly to the Engineering Org... That you are owning the conversation with leadership and the board.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "It opens with the recommendation, but wc -w = 747, over 550."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 747,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The technical terms (expand-and-contract migrations, RTO/RPO) are used correctly. No legal or research claims."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'As CTO, the engineering guardrails and readiness standards are my responsibility. I am accountable for this.'"
+    },
+    "best_insight": {
+      "value": "It recommends expand-and-contract (backward-compatible, phased) schema changes, so a bad migration can be backed out without a multi-hour restore. That fixes the class of failure, not just this incident.",
+      "evidence": "'Zero-downtime migration standards: Enforce backward-compatible, phased schema changes (e.g., expand-and-contract) so a bad deploy doesn't require a multi-hour restore.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+        "reason": "Two checks are bundled: every long sample here opens with the recommendation, so this assertion only measures length. Split 'opens with the recommendation' and the word limit into separate assertions so each one discriminates."
+      }
+    ],
+    "overall": "Substantively complete and balanced; it fails only on length (747 words)."
+  }
+}

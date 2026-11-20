@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "'No works council means no social plan duty, but employees can elect one, and retaliating against organising is unlawful.' It doesn't name the reconciliation of interests, but it states the works-council negotiation duty doesn't apply and that employees can elect one."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "'Notify the employment agency before dismissing. Mass-dismissal rules (§17 KSchG) trigger at more than 10% of an establishment this size: 15 of 140 is 10.7%, so you're likely over.' It treats 15 as meeting the threshold and gets the timing right. The rule itself is misstated: the law says 10%, not more than 10%. That is recorded as a factual error below."
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "'Social selection (Sozialauswahl): within comparable roles, weigh tenure, age, dependants and severe disability. You can't pick by performance ranking.'"
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "'§622 BGB: one month, rising to seven after 20 years' and 'Notice periods push many exits past March, so 2027 captures roughly 70%: about €0.95M. Settlements ... about €0.2-0.3M. Net 2027: about €0.6-0.8M', against a 'Run-rate: 15 × €90k ≈ €1.35M a year.'"
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": false,
+      "evidence": "It names earlier options: '\"15 roles\" is a solution. What's the gap, in euros, and what closes it first? ... a hiring freeze, vendor and cloud spend, and pricing deserve numbers next to the cuts.' But it never asks or raises whether the revenue drop is temporary, and Kurzarbeit isn't mentioned. Half of the assertion is missing."
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w gives 321. It opens: 'Short answer: 15 dismissals by end of March is legally doable without a works council, but expect roughly €0.5-0.8M net saving in 2027 (my estimate), not the full run-rate.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 321,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "Only reply.md is in the sample folder."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) It says '§17 KSchG trigger[s] at more than 10%' for an establishment of 60-499 people. The statute requires notification once 10% (14 of 140) is reached within 30 days. Minor: the reply also lists 'long illness' among protected people, which isn't a statutory protection, but I didn't count that. The opening's '€0.5-0.8M' also doesn't match the body's '€0.6-0.8M'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Leadership should take the first and largest pay cut, and say plainly that the result is theirs.'"
+    },
+    "best_insight": {
+      "value": "It reframes the board's number as a solution in search of a problem ('\"15 roles\" is a solution. What's the gap, in euros...?'), which pushes the board to state the euro gap before choosing headcount as the tool.",
+      "evidence": "'\"15 roles\" is a solution. What's the gap, in euros, and what closes it first?'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+        "reason": "This sample passes although it misstates the rule as 'more than 10%'. The word 'correctly' should cover the rule as well as the result for 15. Require 10% of staff, i.e. 14 people at 140, within 30 days."
+      },
+      {
+        "assertion": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+        "reason": "This compound assertion is the main differentiator in this case. Two of four samples meet the earlier-option half but fail the temporariness half. Splitting it would make that visible."
+      }
+    ],
+    "overall": "A well-structured answer with a sharp reframe and a clear ownership line, but it misstates the §17 threshold, has a small inconsistency in its savings range, and never asks whether the revenue drop is temporary."
+  }
+}

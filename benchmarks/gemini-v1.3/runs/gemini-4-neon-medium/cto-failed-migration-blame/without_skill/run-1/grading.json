@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'Step in front of your lead: Tell the board, \"If you want accountability, hold me accountable. I own our operational controls and sign-off process.\"' Playbook: '\"Someone has to be held accountable for €2M.\" > \"I completely agree—and that person is me.\"'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Do not fire the platform team lead—unless a fast, fact-based investigation uncovers willful misconduct, dishonesty, or deliberate bypassing of mandatory safeguards.' Why less safe: 'Punishing an operational failure teaches your entire engineering org to hide risks, delay flagging near-misses, and avoid touching critical legacy systems—which increases future financial exposure.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": false,
+      "evidence": "The review is never framed as blameless. The reply warns 'don't lecture the board about \"blameless culture\"', and the review itself has two tracks, one of them 'Individual conduct—check objectively whether there are valid grounds for termination'. The playbook's Day 2 says 'Explicitly check for the only valid grounds for termination'. The system focus is good (why recovery took 9 hours, untested rollback, abort criteria), and the playbook table has owners and due dates. But the post-mortem doubles as a disciplinary inquiry into the lead, which is the opposite of blameless."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "The playbook memo's 'Preliminary Findings: Why It Took 9 Hours' covers 'Trigger', 'Why prevention failed' and 'Why recovery took 9 hours'. The executive summary states the incident facts. The controls table has a 'Verification' column (e.g. 'Recorded dry-run + CTO sign-off', 'Timed game-day report'), plus an external review 'shared with Board'."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk to the platform lead privately today. Be candid that the review will be thorough, and clear that you are owning executive accountability'. Also 'Step in front of your lead'. The playbook adds: 'Communicate clearly to the broader engineering org... without throwing anyone under the bus.' The message to the lead leads with 'the review will be thorough', which reassures less than the other samples."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "It opens with the recommendation ('**Do not fire the platform team lead**—unless...'), but wc -w = 711, over the 550-word limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 711,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1137,
+      "evidence": "wc -w board-response-playbook.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable legal or research claims. The playbook's 'the only valid grounds for termination' is a management standard, not a statement of law (it would be too strong as law), so it isn't counted."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'If you want accountability, hold me accountable. I own our operational controls and sign-off process.'"
+    },
+    "best_insight": {
+      "value": "It suggests offering the board an external SRE/database review that reports directly to them, which answers 'aren't you just protecting your team?' better than any argument can.",
+      "evidence": "'proactively offer to bring in an external SRE/database advisor to review your postmortem and remediation plan and report directly to the board'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+        "reason": "This assertion separates the samples well, but only on the word 'blameless'. Consider making the substance explicit: the post-mortem is kept separate from any conduct or disciplinary review of the person who ran the change."
+      },
+      {
+        "assertion": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+        "reason": "Two checks are bundled: every long sample here opens with the recommendation, so this assertion only measures length. Split 'opens with the recommendation' and the word limit into separate assertions so each one discriminates."
+      },
+      {
+        "reason": "No assertion catches over-promising to the board. Several samples promise that the fixes will 'prove this cannot happen again' (or 'never take 9 hours again'). A CTO can't honestly promise zero recurrence, and the board will hold them to it after the next incident. Consider an assertion that commitments are framed as measurable risk reduction (a recovery-time target, rehearsal results), not guarantees."
+      }
+    ],
+    "overall": "Strong on ownership, board handling and independent assurance, but it turns the review into a conduct investigation of the lead instead of a blameless post-mortem, and the reply is too long."
+  }
+}

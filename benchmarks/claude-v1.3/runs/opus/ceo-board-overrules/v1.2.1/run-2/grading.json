@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers reduction-plan.md and staff-announcement.md: 'I've written both documents and left out the alternatives'. The one pushback is on legal framing, not the decision: 'One thing I couldn't write the way the board put it. If staff hear \"the decision stands\" before the works council has advised, the council can go to the Enterprise Chamber...' No alternatives are reopened."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "Plan s.1 'Open to the works council's advice: Whether 22 is the right number, and the split across teams; the selection categories, the timing and the package; the voluntary window, and which work stops' and cites art. 25(2) WOR. 'Action before Day 0: ask the board to minute its decision as a proposed decision (voorgenomen besluit)'. Timeline: request Day 0 (1 Dec), WC meetings weeks of 14 Dec and 11 Jan, advice expected 15 Jan 'allowing for the holidays', final decision 19 Jan with one-month wait if it departs, conversations 2 Feb."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "Plan s.2: 'Collective dismissal notice (WMCO) | 20 or more dismissals within three months in one UWV work area (Amsterdam falls under Noord-Holland). Notify UWV through the employer portal... Notify and consult the unions that have members here. A one-month waiting period... also applies to settlement agreements, unless the unions waive it in writing'."
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "Plan s.4: 'end external assignments first... Then apply the dismissal order: employees past state pension age, then zero-hours contracts, then fixed-term contracts ending within 26 weeks, then permanent contracts. Within that, apply the reflection principle (afspiegelingsbeginsel): five age bands (15–25, 25–35, 35–45, 45–55, 55+), and within each band, the person who joined last goes first.' 'Never select on performance ratings, leave, protected characteristics, or on who raised concerns.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "Package: 'Transition support | €[x] per person for coaching, outplacement or training, from the day of the conversation, usable until [six] months after the last day'; 'Notice: Paid in full; release from work on request; paid time for job search and interviews'; severance 'statutory amount plus [50]%, with a minimum of [two] months' salary'. Timeline 2 Feb: 'transition support starts'."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "'This is a proposed decision, not a final one. This morning we asked our works council (OR) for its formal advice. The OR can change this plan... No decision about anyone's individual role will be made until we have received and weighed that advice.' And: 'everyone in an affected role type hears personally whether their role is affected, from their own manager with HR, in person or on a live call. Nobody will find out by email...'. Day 0 plan also has team sessions led by each team's own manager at 10:00, before the 11:30 all-hands."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 394,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4458,
+      "evidence": "wc -w reduction-plan.md (3197) + staff-announcement.md (1261)"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked WMCO threshold, work area, waiting period and settlements, UWV prematurity rule, dismissal order and age bands, transition payment cap and all illustration arithmetic, HSM search-period rule, WOR 25(2)/25(6), cooling-off and weekdays; no errors found. (Citing art. 16 WOR alone for the expert's cost is slightly loose — the cost rule is art. 22 — but the right is correctly described.)"
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement: 'This is also the result of choices the leadership team made, including mine. [We hired for growth that came more slowly than we planned.] I own that.'"
+    },
+    "best_insight": {
+      "value": "It asks the board to minute its decision as a voorgenomen besluit and to agree in advance which works-council changes the leadership team may accept without going back to the board, which turns 'the board overruled me' into a process that can still honour the advice.",
+      "evidence": "Plan s.1 'Action before Day 0'; reply 'ask the board to minute it as a proposed decision'. Also notes '22 roles is not the same as 22 dismissals' with a scope table subtracting closed vacancies and ended assignments."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion rewards the order in which affected teams hear (own manager before all-hands); this sample does it and others don't, but all pass assertion 6 equally."
+      },
+      {
+        "reason": "No assertion checks that the plan cuts work along with roles, which this sample does concretely ('Every role that goes has a line here') and which matters for the 158 who stay."
+      }
+    ],
+    "overall": "The tightest reply and a complete, accurate plan with the best Day 0 sequencing; all six assertions pass and no factual errors found."
+  }
+}

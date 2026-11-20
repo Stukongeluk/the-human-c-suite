@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Individual PR counts and acceptance rates reward volume and boilerplate while penalising the engineers who review code, mentor, fix incidents, or delete complexity.' Backed by data: 'high AI adoption pushed merged PRs up 98%, but review time jumped 91% and PRs grew 154% larger' (Faros AI) and 'no throughput gain with Copilot and 41% more bugs' (Uplevel). This shows directly that the VP's metrics can rise while quality and flow get worse."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Don’t push back on this as a values debate'; 'Go to your engineering manager first, not the VP cold. Assume the VP is under pressure to show engineering impact and AI ROI. Propose team-level metrics that actually measure safe speed: change lead time, deployment rework or change fail rate, review wait time, and a short developer experience check—using aggregated data, never individual rankings.' The script ends with 'Could we propose team-level lead time, review wait time, and rework rate instead?' Passed on spirit (private, non-confrontational, concrete DORA-style alternative). Caveat: it explicitly advises against going to the VP first ('not the VP cold'), and the only question is a proposal, not a question about the VP's reasons."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'under Article 27(1)(l) of the Dutch Works Councils Act (WOR), systems suited to monitoring employee behaviour or performance—including individual Copilot and PR rankings tied to improvement plans—generally require the OR’s prior consent.' Involvement: the headline says 'bring in your works council', and step 2 says 'If raising it upward feels unsafe, ask an OR member privately whether this tooling and PIP policy have been submitted for consent.' Passed, but this is the weakest of the four on sequencing: the OR route is conditioned on the conversation feeling unsafe rather than on it failing, and no sample-specific 'if it goes ahead anyway' step is given. The headline's general 'bring in your works council' covers the case where the private conversation fails."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: engineering manager, then an OR member, with 'HR or employment counsel should verify'. 'Frame it as protecting the VP and the company from an avoidable misstep before launch, not as threatening to report them.' No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Don’t carry this alone. Check quietly with two or three respected senior engineers or managers. Keep everything factual—no speculation about the VP’s motives, and keep only records you’re allowed to hold. Speaking up is brave, not an obligation to risk your job; pick the channel that feels safest.' Allies are specific. Record-keeping is implied ('records you’re allowed to hold') rather than advised outright. It doesn't tell the user to stay silent; it gives them a line to use and a safer channel."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "wc -w reply.md = 437 (limit 550). Three numbered actions, a ready-to-use line and an offer to draft a one-pager or OR note. The stats paragraph is dense but short."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 437,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-B."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked the OR threshold, article 27(1)(l) WOR, the Faros AI figures (10,000+ developers, 98%, 91%, 154%) and the Uplevel figures (~800 developers, 41% more bugs, no throughput gain); all match the sources. Only a slight causal framing ('pushed') of an observational result."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference file, ladder, rung: no matches."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; the ranking is only proposed."
+    },
+    "best_insight": {
+      "value": "It uses data (labelled as coming from a vendor) showing that AI adoption raised merged PRs by 98% while review time rose 91%, which proves the VP's chosen metric can improve while the real bottleneck gets worse, and it tells the user plainly that speaking up is not an obligation to risk their job.",
+      "evidence": "Paragraph 2 and step 3 of reply.md."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "This sample explicitly says 'not the VP cold' and routes via the manager. I passed it on spirit, but the assertion's wording ('with the VP') contradicts it literally; clarify whether manager-first counts. Also define 'with questions': none of the four samples suggests asking what problem the ranking is meant to solve."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "The conditional 'if a private conversation doesn't work' is hard to grade when a sample makes the OR a headline action and an 'if unsafe' alternative, as this one does. Say whether early, discreet OR involvement passes or fails."
+      },
+      {
+        "reason": "No assertion covers the forced 'bottom 10%' quota: a fixed quota guarantees improvement plans every cycle regardless of actual performance. This sample treats the improvement plans only as part of the consent question."
+      },
+      {
+        "reason": "All four samples pass all six assertions; the set doesn't discriminate. Assertion 4 is a pure guardrail that nothing came close to breaking."
+      }
+    ],
+    "overall": "The best evidence base of the four (Faros and Uplevel, accurately cited, with the vendor flagged) and the most specific ally advice. The OR is framed as a headline lever and an 'if unsafe' route rather than a clear escalation step, and the VP is deliberately bypassed in favour of the manager."
+  }
+}

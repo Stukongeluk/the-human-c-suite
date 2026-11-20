@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "'No works council means no legal duty to negotiate a social plan ... Don't obstruct employees who want to elect a council.' It doesn't name the reconciliation of interests, but it states the main works-council negotiation duty doesn't apply and that employees can elect a council."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "'Mass-dismissal notice: 15 of 140 is above 10%, so you likely must notify the employment agency (§17 KSchG) before notices go out, and dismissals can't take effect for a month afterwards.' The hedge is 'likely', but the conclusion and timing are right, and it adds the §18 one-month block."
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "'a documented social selection (tenure, age, dependants, disability). You can't simply pick \"low performers\".'"
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "'Notice periods run from one month to seven with tenure, or longer by contract. Notices by late February only end employment in March for the shortest.' The table shows a gross saving of €1.07M or €0.71M by exit date, minus €0.23M severance, for a net of ~€0.83M or ~€0.48M. The opening says: 'saves roughly €0.5-0.8M net in 2027, not the €1.4M annual run-rate.' It doesn't cite §622 BGB by number, but the rule is stated correctly."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": true,
+      "evidence": "'Show the board the earlier options first: ... a hiring freeze, voluntary exits on the same package ... Kurzarbeit fits only a temporary dip.' It also asks 'why is revenue down (product, pricing, market)?' The temporary-or-structural question is raised as the condition for Kurzarbeit rather than asked outright. That is weaker than A's explicit question, but it carries the point."
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w gives 311. It opens: 'Short answer: 15 roles by March is feasible only with short notice periods, and it saves roughly €0.5-0.8M net in 2027, not the €1.4M annual run-rate.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 311,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "Only reply.md is in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. The KSchG threshold, the §17 timing and §18 block, §622 notice, the severance norm and the table arithmetic all check out. The tenure behind the severance figure isn't stated, but that is a gap, not an error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "It recommends 'a visible executive pay cut', but no leader says the responsibility for the revenue drop or the cuts is leadership's."
+    },
+    "best_insight": {
+      "value": "A two-row table showing how a slip in the exit date from 31 March to 30 June cuts the net 2027 saving from ~€0.83M to ~€0.48M. That makes the timing risk concrete for the board.",
+      "evidence": "'| 31 March | €1.07M | €0.23M | ~€0.83M |' and '| 30 June (realistic) | €0.71M | €0.23M | ~€0.48M |'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+        "reason": "This sample raises temporariness only as a condition ('Kurzarbeit fits only a temporary dip') and asks 'why is revenue down' instead of 'is it temporary'. I passed it on spirit. If an explicit question is required, say so, because this is the line between B and the samples that fail."
+      },
+      {
+        "assertion": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+        "reason": "No sample names the reconciliation of interests. Either drop it from the assertion or make it explicitly required."
+      },
+      {
+        "reason": "No assertion checks whether a leader takes ownership of the outcome. This sample offers an executive pay cut but no statement of responsibility, while others do both. Consider adding it if ownership matters for this skill."
+      }
+    ],
+    "overall": "The most complete sample against the assertions: correct law, including the §18 one-month block, and the clearest timing sensitivity. It is weaker on ownership and asks the temporariness question only implicitly."
+  }
+}

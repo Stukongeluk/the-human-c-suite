@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Both are delivered in plan-and-announcement.md (Part 1: Implementation plan; Part 2: Staff announcement). Reply: 'I've left the alternatives out, as you asked.' The only pushback is on framing, not on the decision: 'Announce this as a proposed decision that goes to the works council for advice, not as a final one. That's the one change I'd make to how you frame it.' The mention of last week's work is practical (it belongs in the advice request), not a re-argument."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "Plan s.1: 'until the works council has given its advice, this is a proposed decision (voorgenomen besluit)... Still open, to be settled with the works council and the unions: the exact number per function group, the social plan and the timetable. The plan has to leave real room for them to improve it.' Timetable: advice request on Day 1, 'Weeks 1–6 Works council consultation', 'Final decision in writing, saying what changed because of the advice. If it departs from the advice, implementation waits one month (art. 25(6) WOR)', and the council chooses between conversations on 15 Dec (only 'if the works council has everything on Day 1 and agrees the time is enough') or 12 Jan. Minor flaw: flexible workers are given notice in weeks 1–2, before the advice."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "Plan s.3: 'Collective dismissal notification (WMCO) | 22 dismissals within three months in one UWV work area (Noord-Holland) is above the threshold of 20. Notify UWV via the employer portal and every union with members at the company, and invite the unions to consult. Settlements count toward the 20.' Also sets out the one-month waiting period and the union-declaration exception."
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "Plan s.3: 'Per category of interchangeable functions, the reflection principle (afspiegelingsbeginsel): employees are split into age groups (15–25, 25–35, 35–45, 45–55, 55+), the reduction is spread proportionally, and within each age group the shortest service goes first. Done and documented by HR and counsel, never by manager preference, performance ratings, leave status or who has raised concerns.' The announcement repeats: 'Managers do not choose who is affected.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "Social plan: 'Transition budget | €[4,000] per person for coaching, training or outplacement, available from the day the person hears and for [12] months, also after they leave'; 'Paid time for interviews and training during notice'; plus severance top-up above the transition payment, paid legal advice, counselling and rehiring priority."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "Subject 'A proposal to reduce our team by 22 roles'; 'This is a proposal. This morning our works council received a request for its advice... The works council can still change the details.' And: 'If you work in operations or support, you will hear personally from your own manager, with HR present, on [date]. Not by email, and your access will not change before that conversation.' (Note: affected teams first hear about the proposal at the all-hands, before their own managers.)"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 564,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3144,
+      "evidence": "wc -w plan-and-announcement.md"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) Reply and plan s.3 state flatly that 'highly skilled migrants have three months after their job ends to find a new sponsor'. Since 22 May 2026 the IND gives up to six months to people who have held the permit for two years or more (IND kennismigrant page); three months applies only to shorter holders. Outdated rule for a material group in an Amsterdam fintech."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'; file names mentioned are the delivered document only."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement: 'This is the result of choices the leadership team and I made. It is not about the performance of the people in these roles.' plus a bracketed leadership bonus/pay cut framed as 'our share of the responsibility'."
+    },
+    "best_insight": {
+      "value": "It lets the works council pick between two concrete calendars that keep all individual news out of 16 December–8 January, and states that the faster one only works if the council agrees the time is enough, so the holiday problem is solved without squeezing the advice.",
+      "evidence": "Plan s.6 'The holidays' options A and B; reply 'Let the works council choose between two dates'."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "Passes for samples that run the all-hands before the affected teams hear from their own managers (as here). A sharper check would require that affected teams hear from their own manager before the all-hands or the written announcement."
+      },
+      {
+        "reason": "No assertion checks that nothing is implemented before the advice; this sample gives agency and flexible workers notice in weeks 1–2, before the works council has advised, which partly pre-empts the advice."
+      },
+      {
+        "reason": "No assertion checks currency of secondary legal facts (e.g., the 2026 change to the highly skilled migrant search period), which is where this sample slipped."
+      }
+    ],
+    "overall": "Strong, compliant plan and announcement with fintech-specific compliance checks; passes all six assertions, with one outdated immigration fact and flexible workers given notice before the advice."
+  }
+}

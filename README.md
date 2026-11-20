@@ -102,6 +102,10 @@ cp -r the-human-c-suite/skills/the-human-cto .claude/skills/
 
 Zip a skill folder, for example `the-human-cto`, and upload it under **Customize > Skills** ("+", "Create skill", then "Upload a skill"). Code execution needs to be turned on. See [Use skills in Claude](https://support.claude.com/en/articles/12512180) for the current steps per plan.
 
+### Google Antigravity (app and CLI)
+
+Copy the seat folders from `skills/` into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Leave out the `evals/` folders. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too: see [On Gemini](#on-gemini).
+
 ### Other agents
 
 Copy the folders in `skills/` into your agent's skills folder. Any agent that supports the Agent Skills format can load them.
@@ -153,7 +157,7 @@ Start with one decision record on one upcoming decision, and build from there.
 
 ## Does it help?
 
-Every test case ran with and without the skill, on Claude Sonnet and Claude Opus; the version 1.2 and 1.3 cases compare against the previous version instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder.
+Every test case ran with and without the skill, on Claude Sonnet and Claude Opus; the version 1.2 and 1.3 cases compare against the previous version instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder. Every reply, grade and token count from the version 1.3 tests, and from the Gemini tests, is in [`benchmarks/`](benchmarks/).
 
 ### Version 1.3: leaders go first, shorter advice for individuals
 
@@ -167,14 +171,35 @@ Seven new cases, each run twice with version 1.3 and twice with version 1.2.1, o
 | | Claude Opus | 36 of 36 checks | 29 of 36 checks |
 
 **What version 1.3 added:**
-- where something had gone wrong, a leader in the advice said plainly that the result was theirs in 7 of 8 Sonnet runs (against 3 of 8) and 8 of 8 Opus runs (against 4 of 8);
+- where something had gone wrong, a leader in the advice said plainly that the result was theirs in 8 of 8 Sonnet runs (against 3 of 8) and 8 of 8 Opus runs (against 4 of 8);
 - after the flop, leadership owned the result and took the first and largest cut in 4 of 4 runs, against 0 of 4 with version 1.2.1, presented as a signal of trust rather than the savings plan;
 - advice to one person came in at 430 to 600 words with the first steps and a line they can use; version 1.2.1 wrote 770 to 1,060 words, and most of its missed checks were length;
-- runs with a factual error: Sonnet 2 of 14 (against 3), Opus 0 of 14 (against 2).
+- runs with a factual error: Opus 0 of 14 (against 2). Sonnet did worse here, 4 of 14 against 2, all minor slips such as saying Germany's notification duty starts above 10% of staff instead of at 10%.
 
-**What didn't separate:** the board that overrules the alternatives, cuts in Germany without a works council, and choosing who stays in a Swedish support team. Both versions wrote the plan when asked, used the right selection rules and flagged the notifications, so those checks barely moved. Version 1.3 costs about 1% (Sonnet) to 4% (Opus) more tokens than version 1.2.1.
+**What didn't separate:** the board that overrules the alternatives, cuts in Germany without a works council, and choosing who stays in a Swedish support team. Both versions wrote the plan when asked, used the right selection rules and flagged the notifications, so those checks barely moved. Token use stayed within about 4% of version 1.2.1.
 
 The first draft of the shorter-replies rule ("the first 300 to 500 words") still let Sonnet run to 600 to 800 words; the final wording ("about 400 words and never more than 500") fixed that, and those three cases were rerun.
+
+### On Gemini
+
+The skills follow the open Agent Skills format, so the seven version 1.3 cases also ran on Gemini through the Antigravity CLI, with and without the skill, two runs per setup, graded blind. Gemini loaded the seat by name (`/the-human-ceo`), so this tests what the skill's content does, not whether Gemini picks it up by itself.
+
+| Model | With the skill | Without the skill |
+|---|---|---|
+| Gemini 4 Neon (Medium) | 80 of 84 checks | 51 of 84 checks |
+| Gemini 4 Hydrogen (Medium) | 75 of 84 checks | 41 of 84 checks |
+
+The skill made a bigger difference on Gemini than on Claude. With the skill, Gemini:
+- had a leader own the bad result in 14 of 16 runs where something had gone wrong (against 4 of 16), and after the flop, had leadership take the first and largest cut in 4 of 4 runs (against 0 of 4);
+- got the country rules right: Germany's social selection (Sozialauswahl) instead of performance rankings in 4 of 4 runs (against 0 of 4), and Sweden's re-employment priority and transition support in 4 of 4 (against 0 of 4);
+- questioned the cut before planning it, in Germany and Sweden alike (8 of 8 against 0 of 8), and ruled out closing a capacity gap with overtime (4 of 4 against 0 of 4);
+- made no factual errors in 28 runs, against 6 in 28 without, and wrote replies about 40% shorter (360 words against 630 on average).
+
+**Where it fell short.** In all four runs of the ranking case, Gemini with the skill sent a disagreement about a business decision to the confidential adviser (vertrouwenspersoon). The cause was a channel list in a reference file that put the adviser next to the decision owner and the works council; Claude read it correctly, Gemini didn't. Version 1.3.1 says what the adviser is for, and the same four runs then passed 24 of 24 checks. In the PM case, three of four replies with the skill didn't say to talk to the CEO in private first, where all four without it did; that is open for the next version.
+
+**Cost.** On Gemini the skill roughly doubles the tokens per request (about 30,000 against 14,000 to 17,000), because the seat's instructions and the reference files it opens are read on every run.
+
+The harness, every reply and every grade are in [`benchmarks/gemini-v1.3/`](benchmarks/gemini-v1.3/benchmark.md).
 
 ### Version 1.2: European practice, connectors and good leadership
 

@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "\"No works council: You skip §§111–112 BetrVG social-plan negotiations, though staff can still initiate a works council election at any time.\" §§111–112 cover both the reconciliation of interests and the social plan, though only the social plan is named."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "\"At 140 staff, 10% is **14 people**. Dismissing 15 within 30 days (including employer-initiated termination agreements) triggers a mandatory **collective dismissal notification** to the *Agentur für Arbeit* *before* issuing any notice.\""
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "\"Under KSchG (>10 staff, >6 months' tenure), you cannot pick by performance. You must document the operational need and select among comparable roles by tenure, age, dependants, and severe disability.\""
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "\"€0 in 2026. Even if you issue notices in December for a 31 March 2027 exit, payroll continues through notice periods and legal/severance costs hit first. Over 2027, 15 exits might yield roughly 40–60% of the annualised run-rate\". It gives no statutory §622 range, only \"depends on salaries, tenure, and notice clauses\"."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": true,
+      "evidence": "\"Before you commit: A headcount target without a revenue diagnosis usually cuts what is easiest to count\"; \"freeze hiring\"; \"If the revenue dip is temporary, model **Kurzarbeit**\". The temporariness question is put as a condition to check rather than asked directly, but it comes before committing and names two earlier options."
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "283 words. It opens with the answer: \"What it saves this year: €0 in 2026.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 283,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: §17 threshold, counting termination agreements, voidness (BAG 2026); §§111–112 BetrVG; KSchG applicability (more than 10 staff, more than 6 months' service); Sozialauswahl criteria; serve-by date of 31 December for a 31 March exit; the Kurzarbeit cap change on 1 January 2027. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "\"take leadership pay/bonus cuts first\" is a cost step. Nowhere does a leader say the responsibility for the revenue drop is theirs."
+    },
+    "best_insight": {
+      "value": "\"Decide which work stops, not just which 15 people leave\": the remaining team isn't left with the same work and fewer people.",
+      "evidence": "Read from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "As graded it passes all eight samples, because each ties the delay to notice periods and severance. Only G and H cite the statutory range under §622 BGB (1 to 7 months); A to F assume a contractual 3 months. If the statutory, service-based notice is meant to be required, say so outside the parenthesis."
+      },
+      {
+        "reason": "No assertion checks the date. Today is 20 November 2026, so cuts that land in 2027 save nothing in calendar 2026. B, C, D and F say so. A, E, G and H give a 'this year' figure that really covers 2027 without naming the year. Consider an assertion that the reply separates 2026 from 2027, or states which year it means."
+      }
+    ],
+    "overall": "Passes every assertion with accurate, date-aware law in 283 words. The 2027 saving is given as a percentage range rather than euros, and leadership's own responsibility is implied but not stated."
+  }
+}

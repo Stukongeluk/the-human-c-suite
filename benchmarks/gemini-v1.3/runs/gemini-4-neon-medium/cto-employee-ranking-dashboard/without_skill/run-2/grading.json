@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "Section 2: 'Goodhart’s Law in week one: People will split trivial changes into 10 micro-PRs and blindly accept verbose/mediocre Copilot completions'; 'It punishes senior leverage: Code reviews, architecture, debugging hard production issues, on-call, and mentoring produce fewer PRs and lower Copilot acceptance'; 'Weekly cadence is pure noise'."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Don’t fight it in a public Slack channel or All-Hands.' 'Sound out your Engineering Manager (EM) privately first. Ask in your 1:1 whether leadership/HR/OR have reviewed it.' 'Give the VP a face-saving off-ramp... Team-level DORA metrics'. The kit adds a private note to the VP 'If You Have Direct Access' offering a 15-minute chat."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Under the Wet op de ondernemingsraden (WOR Art. 27(1)(g) and 27(1)(l)), the OR has instemmingsrecht (right of consent) over both employee appraisal systems... and systems capable of monitoring employee performance/behavior.' Escalation: 'If it’s still moving forward, tip off the OR confidentially.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: EM, VP (private note), OR, HR/Privacy (DPO). No vertrouwenspersoon. No leaks or sabotage: the confidential question goes to the OR, a statutory internal body, and the tone is 'neutral, factual'."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "Section 4: 'Keep receipts of high-leverage work (design docs, major reviews, incident leads, mentoring) in a simple weekly brag doc'; 'get the criteria in writing'; 'you never have to sign a PIP agreement or vaststellingsovereenkomst (VSO) on the spot'. Allies: 'Many EMs hate this too and are looking for senior-engineer backing'. Doesn't tell the user to stay silent."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "846 words (wc -w), well over the 550 limit, plus an 896-word kit. Four sections with AVG art. 22, art. 35 DPIA and BW 7:669(3)(d) detail read partly as a legal lecture."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 846,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 896,
+      "evidence": "wc -w of the other .md files"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1 error: 'Even GitHub’s own guidance explicitly advises against using Copilot acceptance rate as an individual performance metric', repeated in the email template to the VP ('GitHub's own guidance advises against using acceptance rate for individual evaluation'). Not supported. GitHub's Copilot usage-metrics docs, 'measure success' tutorial and metrics-interpretation page contain no such statement; the 'measure success' page calls acceptance rate a 'key indicator of value'; and GitHub's own research promoted acceptance rate as a productivity signal. The nearest GitHub text (Engineering System Success Playbook) says metrics shouldn't be used 'to punish individuals' and doesn't mention acceptance rate. Minor imprecision, not counted: it lists 'cycle time'/'PR cycle time' and 'MTTR' as DORA metrics (DORA uses change lead time and failed deployment recovery time). Verified correct: WOR 27(1)(g) personeelsbeoordeling and 27(1)(l); nullity if the OR invokes it within a month (art. 27(5)); art. 20 WOR confidentiality; BW 7:669(3)(d) for underperformance dismissal."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposed policy, not a bad outcome that has already happened, so there is no result for a leader to own."
+    },
+    "best_insight": {
+      "value": "Gives Dutch-specific personal protection (don't sign a PIP or settlement agreement on the spot, and check whether legal-expenses insurance covers employment disputes and how long its waiting period is) and adds art. 27(1)(g) on appraisal schemes alongside the monitoring clause.",
+      "evidence": "Judgement from reading the reply and its documents."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "C would pass every substantive assertion if it were shorter; its length is the only failure, which shows that assertion 6 is doing real work here."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With the VP privately first' is ambiguous: most samples (A, B, D, H) send the user to their own manager first, which is the normal route for a senior engineer at a 300-person company. I counted the manager as the route to the VP when the reply clearly aims at the VP. Consider rewording to 'with their manager or the VP privately first'."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "This bundles the legal fact with the escalation order. E and G state the WOR rule more precisely than anyone (27(1)(g), (k), (l), nullity under 27(5)) but send the user to the works council first, as a way round the VP. Splitting it into 'states the article 27 consent rule' and 'treats the works council as escalation, not the first move' would separate these cases."
+      },
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "All eight samples pass this one, so it doesn't discriminate. A sharper version could require the reply to say what to measure instead of individual activity and why (team outcomes paired with a quality measure)."
+      },
+      {
+        "reason": "No assertion checks that cited evidence and attributions are accurate. Sample C puts an unsupported claim that 'GitHub's own guidance' rules out acceptance rate for individual evaluation into a ready-to-send email to the VP. The factual_errors extra check catches this, but it doesn't count towards the pass rate."
+      }
+    ],
+    "overall": "Strong content and the best self-protection advice, but at more than 800 words it's too long, and it makes an unsupported claim about GitHub's guidance that it puts into a template email to the VP."
+  }
+}

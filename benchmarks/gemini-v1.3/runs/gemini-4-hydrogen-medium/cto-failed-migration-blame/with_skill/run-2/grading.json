@@ -1,0 +1,75 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'Tell the board plainly that as CTO you own the engineering system, the migration sign-off, and the recovery standards.' Board line: '\"...as CTO I own it. Firing the lead who ran the migration won't fix why our process allowed a 9-hour failure\"'. Memo: '**As CTO, I am accountable for this failure.**'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Unless there was deliberate misconduct or concealed risk, keep the lead in place.' Why less safe: 'scapegoating teaches every other engineer to hide risk rather than escalate it'. Memo: 'Blame destroys the early-warning system.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless post-mortem within 5 business days. Focus on how the system allowed a 9-hour outage. End with concrete fixes—each with an owner, a date, and a measurable test'. The memo table assigns owners and dates, e.g. 'Mandatory Rollback Drills | Platform Team | Within 14 days'."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "Board line: 'bring you the factual timeline, the system gaps behind the 9-hour recovery, and dated, testable controls'. The memo's 'Verification Measure' column lists e.g. 'Timed, end-to-end rollback rehearsal in staging proving recovery within our target RTO' and 'updated change-failure metrics'."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": false,
+      "evidence": "Neither the reply nor the memo has any action aimed at the lead or the team: no conversation with the lead, no reassurance, no recovery time for responders, no message to the team. The only protection is the board-level recommendation already counted under assertions 1–2."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "First line: 'Do not let the platform team lead go; take responsibility for the 9-hour, €2 million outage yourself...'. wc -w = 348."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 348,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 539,
+      "evidence": "wc -w board-accountability-note.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The DORA claims check out: DORA finds generative, high-trust culture predicts software delivery performance, which includes time to restore, and the 2022 report found generative culture 'predictive of higher reliability outcomes'. 'Consistently' is a mild overstatement."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'As CTO, I am accountable for this failure.'"
+    },
+    "best_insight": {
+      "value": "The memo asks the board to agree a target RTO for tier-1 database operations, so reliability investment is sized to the business risk and the board shares in setting the standard.",
+      "evidence": "'Alignment on our target Recovery Time Objective (RTO) for tier-1 database operations so engineering reliability investments are sized to the business risk.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "The example 'protection from public blame' is already covered by the board-level ownership in assertions 1-2, so this assertion can pass with no action aimed at the lead or the team. Consider requiring at least one concrete step toward them (a private conversation, recovery time for the weekend responders, a message to the wider team)."
+      }
+    ],
+    "overall": "Concise and board-ready, with an accurate DORA citation, but it never turns to the lead or the team as people. The lead is defended only as an argument to the board."
+  }
+}

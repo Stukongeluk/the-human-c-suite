@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'Don't absorb this quietly, and don't fight the promise head-on.' Step 2 'Get an estimate, not a guess. With your engineering lead, get rough ranges based on how long similar work took. Keep time for incidents, support and tech debt in'. Closes with 'does your engineering lead see capacity as you do?'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "'Build the options: A: all three by Q1, naming what slips and which customers and revenue that hits; B: the most important one by Q1, the other two dated in Q2 with early access; C: smaller first versions of all three by Q1, completed in Q2'."
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'Leave out \"the team works harder\": overtime and skipped testing come back as incidents and people leaving.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Find the real need. Ask the account owner what problem each feature solves and what \"end of Q1\" hinges on: a renewal, a launch? Often one feature is the must-have'."
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'Talk to him privately first, then confirm in writing.' Pressure: 'Assume pressure, not bad intent. He likely said yes to keep a big account happy.' Process: 'propose one rule: customers get an answer within two weeks, but feature dates only after the team has estimated. Pitch it as protecting his credibility.'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "432 words by wc -w (within 550). The first sentence is the answer: 'Don't absorb this quietly, and don't fight the promise head-on. Within a week, bring the CEO a one-page trade-off'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 432,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No specific checkable facts (laws, studies, dates) are stated; the advice is judgment, and none of it is wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of 'skill', reference files, 'cost ladder', 'rungs' or similar jargon (grep found none)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; it is a pending over-promise. (The advice does frame the trade-off as the CEO's open decision.)"
+    },
+    "best_insight": {
+      "value": "'Sort product from custom': a feature only this customer needs 'is maintained forever, so it deserves a harder look or a paid services option'. It also says the team must hear the decision, not 'find a way'.",
+      "evidence": "From reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+        "reason": "All four samples pass this, and A3 (no overtime) and A4 (problem behind the features) too, so they don't separate the samples. A sharper check: the PM recommends one option and says why instead of only laying out a menu. B and C do this ('recommend an option and ask him to choose'; 'Say which one you recommend and why'); A and D don't."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "'Real capacity' is loose. B estimates the features and maps them onto roadmap slips but takes 'at capacity' as given. A, C and D check what time is actually free (leave, on-call, support, incidents, tech debt). If that is the intent, require the free-capacity check explicitly."
+      },
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "This bundles three separate behaviours (private first, assume pressure, process for future promises). All four samples meet all three, but splitting them would make failures easier to diagnose."
+      },
+      {
+        "reason": "No assertion checks whether the PM separates product work from a one-customer custom build (A and D do: 'maintained forever'), or brings their own manager or engineering lead in before facing the CEO alone (all four do). Both are useful advice that the assertions don't reward."
+      }
+    ],
+    "overall": "Concise and complete; it covers every assertion in the fewest words, though unlike B and C it doesn't have the PM recommend one option."
+  }
+}

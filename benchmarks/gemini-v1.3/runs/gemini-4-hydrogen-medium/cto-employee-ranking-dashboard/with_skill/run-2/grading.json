@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "Step 2: 'Explain calmly that PR counts reward splitting trivial changes and Copilot acceptance rate measures clicks, not value—both can rise while code quality drops.' Opening: individual activity rankings 'punish your best engineers—the ones doing reviews, mentoring, and incident fixes.' Short and specific."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "Step 1: 'Start with your engineering manager in a 1:1. Frame it around helping the new VP succeed: ask what problem they are actually trying to solve (slow delivery, quality, or Copilot ROI).' Step 2: 'Offer a better dashboard before they build the bad one' with 'DORA metrics (change lead time, deployment frequency, change fail rate, rework rate) plus PR review wait time'. Script ends 'Could we propose a 6-week baseline of team DORA and review-wait metrics instead?' Private, starts with questions, concrete alternative. It reaches the VP through the manager rather than directly, which I accepted (see eval feedback)."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "Step 3: 'per-person monitoring for performance plans falls under the Works Council's consent right (instemmingsrecht, Art. 27(1)(l) WOR)'. Step 4 escalates: 'If it goes ahead anyway, use the right channels. Raise it factually with your skip-level, HR, the Works Council...'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": false,
+      "evidence": "Step 4 sends the disagreement to the confidential adviser: 'Raise it factually with your skip-level, HR, the Works Council, or your vertrouwenspersoon (confidential adviser).' The vertrouwenspersoon handles unwanted behaviour and integrity concerns, not a disagreement about a metrics policy. No leaks or sabotage are suggested ('Don't vent in public Slack channels or pull other people's private data'), but the misrouting fails the assertion."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": false,
+      "evidence": "No advice to keep a factual record and no advice to find allies or peers. The only self-protection is framing ('makes you look protective of the VP, not obstructive') and 'Don't vent in public Slack channels'. The reply doesn't tell the user to stay silent, but it doesn't help them protect themselves either."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "369 words (wc -w). Four numbered steps for 'this week', a ready-made line and a one-page proposal. Practical, not a lecture."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 369,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 456,
+      "evidence": "wc -w of the other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: OR mandatory from 50 employees and consent under art. 27(1)(l) WOR (fact sheet and WOR text); the five DORA metrics including rework rate (dora.dev); SPACE (Forsgren et al., ACM Queue 2021) and Orosz & Beck's 2023 response to McKinsey are real publications."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposed policy, not a bad outcome that has already happened, so there is no result for a leader to own."
+    },
+    "best_insight": {
+      "value": "Offers a low-commitment 6-week team baseline (DORA plus review wait time) that the VP can easily say yes to, and assumes the VP lacks visibility rather than acting in bad faith.",
+      "evidence": "Judgement from reading the reply and its documents."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With the VP privately first' is ambiguous: most samples (A, B, D, H) send the user to their own manager first, which is the normal route for a senior engineer at a 300-person company. I counted the manager as the route to the VP when the reply clearly aims at the VP. Consider rewording to 'with their manager or the VP privately first'."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "This bundles the legal fact with the escalation order. E and G state the WOR rule more precisely than anyone (27(1)(g), (k), (l), nullity under 27(5)) but send the user to the works council first, as a way round the VP. Splitting it into 'states the article 27 consent rule' and 'treats the works council as escalation, not the first move' would separate these cases."
+      },
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "All eight samples pass this one, so it doesn't discriminate. A sharper version could require the reply to say what to measure instead of individual activity and why (team outcomes paired with a quality measure)."
+      },
+      {
+        "reason": "No assertion checks that cited evidence and attributions are accurate. Sample C puts an unsupported claim that 'GitHub's own guidance' rules out acceptance rate for individual evaluation into a ready-to-send email to the VP. The factual_errors extra check catches this, but it doesn't count towards the pass rate."
+      }
+    ],
+    "overall": "Short, practical and legally right on WOR. It loses points for listing the vertrouwenspersoon as a channel for a business disagreement and for giving no self-protection advice (record, allies)."
+  }
+}

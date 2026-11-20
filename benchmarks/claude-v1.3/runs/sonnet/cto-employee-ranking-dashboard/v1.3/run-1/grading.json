@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "\"Acceptance rate measures tool usage, not value, and it can rise while quality falls. PRs merged rewards volume and punishes the people who review, mentor, fix incidents and delete code. AI makes volume cheap, so both numbers are easy to game.\" Brief and on point."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "Step 1: \"Ask what he is trying to fix... Ask privately and curiously, not in a meeting.\" Step 2: \"Team-level delivery and health: DORA metrics (lead time, deployment frequency, change failure rate, recovery time), review wait time, work in progress, unplanned work, plus a developer survey.\""
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "Step 3: \"A system suited to monitoring individual performance needs its consent under art. 27(1)(l) WOR... Ask your OR representative, or HR, whether it has been consulted.\" Sequenced after the private steps (\"in order\"), with an offer to draft \"the message to your OR representative\". It states 'At 300 people you have a works council' without hedging that one may not exist, but the assertion's content is met."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Concerns go to the VP privately, the OR/HR for consultation, and manager-led plans. The vertrouwenspersoon appears only conditionally: \"If things turn hostile, the vertrouwenspersoon or your OR is next.\" Hostile treatment is unwanted behaviour, which is in the vertrouwenspersoon's remit, so the business disagreement itself is not sent there. The pairing with the OR is loose, though. Also \"Don't gather other people's data to prove a point\" steers away from misconduct. No leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "\"That moves the objection from 'you' to 'the process', which is also the safest place for it\"; \"Write it down, neutrally. A half-page of facts and a proposal\"; \"On risk: raising this with data and an alternative is normal professional behaviour... If things turn hostile, the vertrouwenspersoon or your OR is next.\" Concrete self-protection and no advice to stay silent. Weaker than the others: no explicit 'find allies' and the written note is framed as persuasion rather than as a record."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "492 words (wc -w), at most 550. Five numbered actions, a usable line and an offer to draft: practical."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 492,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in folder"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor error: 'with 300 people, about 30 names land at the bottom every week by chance'. The company has 300 people but only engineers are ranked, so the bottom 10% is fewer than 30 unless everyone is an engineer. Checked and correct: METR's July 2025 RCT found experienced open-source developers 19% slower with AI tools while believing they were faster (metr.org); art. 27(1)(l) WOR consent right (vetted sheet). Overstatement not counted: 'At 300 people you have a works council' asserts existence, where the law only makes one mandatory."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned policy, not a bad outcome that has happened."
+    },
+    "best_insight": {
+      "value": "Warning the user not to gather colleagues' data to prove the point heads off a realistic misstep (a privacy/conduct breach) that would hand the VP a reason to treat them as the problem.",
+      "evidence": "'Don't gather other people's data to prove a point.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "Every sample cites art. 27(1)(l) WOR and the 50-employee threshold, so this does not discriminate. A sharper check: the reply does not assume a works council exists (many 50+ companies lack one) and says what to do if there is none (union, HR). Sample C states 'At 300 people you have a works council' as fact and would still pass."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Nearly trivially satisfied. A stricter version would require that any mention of the vertrouwenspersoon is limited to unwanted behaviour or integrity concerns. Sample C pairs 'the vertrouwenspersoon or your OR' as the next step 'if things turn hostile' without saying what each is for, and it passes only because 'hostile' plausibly means unwanted behaviour."
+      },
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "'Briefly' is not defined. Samples B and D spend 251 and 182 words on the critique (similar shares of their replies to A and C), so overall length is really tested by the last assertion. Either drop 'briefly' or give it a word cap."
+      },
+      {
+        "reason": "No assertion checks factual accuracy of cited evidence (Faros, METR, arithmetic) or the GDPR/AVG angle, which three of four samples raise. A 'cited figures are correct and caveated' assertion would separate careful samples from ones that misstate numbers (e.g. C's '300 people, about 30 names' when only engineers are ranked)."
+      }
+    ],
+    "overall": "6/6 within the limit, but one numeric slip (30 names from 300 employees) and loose vertrouwenspersoon wording, which the assertions don't catch."
+  }
+}

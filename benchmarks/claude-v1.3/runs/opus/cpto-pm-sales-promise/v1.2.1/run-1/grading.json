@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "Step 2 'Size it with your team': 'Give your engineers a few days to estimate the three features as ranges, and work out what Q1 capacity is really free after leave, on-call, support and unplanned work. Use their past pace on similar work'. It opens with 'Don't say no, and don't quietly absorb it.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "A table of options with a 'Cost' column: 'A. All three by end of Q1 ... Named roadmap items move to Q2, with who and what revenue they affect'; 'B. The most important one, or slim versions of all three, by Q1; the rest on a firm Q2 date ... A smaller roadmap slip'; 'C. Roadmap stays; alternatives now (configuration, a workaround, a services offer) ... He resets expectations with the customer'."
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'Say plainly what isn't an option: overtime, or skipping testing or security review.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Ask the CEO or the account lead, privately: What exactly did the customer ask for, and what problem are they trying to solve?' plus 'If you can, join a call with the customer, framed as \"making sure we build exactly what they need.\"'"
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'Meet the CEO one-on-one' and 'never correct him in front of others'. Pressure: 'Assume pressure, not bad intent: he probably did it to keep or grow your most important account'. Process: 'When a big customer asks, give me 48 hours and I'll get you a sized answer, so you can promise with confidence.' Pitched 'as protecting his credibility'."
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": false,
+      "evidence": "It opens with the answer (a bold first sentence: 'turn the promise into a sized, visible trade-off and let the CEO choose'), but reply.md is 808 words by wc -w, well over the 550-word limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 808,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong claims. The one checkable figure (19 weeks, about 17 working weeks to the end of March 2027) is correct: 131 days, 94 weekdays."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of 'skill', reference files, 'cost ladder', 'rungs' or similar jargon (grep found none)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; it is a pending over-promise. (The advice does frame the trade-off as the CEO's open decision.)"
+    },
+    "best_insight": {
+      "value": "It separates a feature many accounts need ('a product investment') from one only this customer uses ('a custom build you maintain forever'), which changes how the CEO should weigh the trade-off.",
+      "evidence": "From reply.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+        "reason": "All four samples pass this, and A3 (no overtime) and A4 (problem behind the features) too, so they don't separate the samples. A sharper check: the PM recommends one option and says why instead of only laying out a menu. B and C do this ('recommend an option and ask him to choose'; 'Say which one you recommend and why'); A and D don't."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "'Real capacity' is loose. B estimates the features and maps them onto roadmap slips but takes 'at capacity' as given. A, C and D check what time is actually free (leave, on-call, support, incidents, tech debt). If that is the intent, require the free-capacity check explicitly."
+      },
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "This bundles three separate behaviours (private first, assume pressure, process for future promises). All four samples meet all three, but splitting them would make failures easier to diagnose."
+      },
+      {
+        "reason": "No assertion checks whether the PM separates product work from a one-customer custom build (A and D do: 'maintained forever'), or brings their own manager or engineering lead in before facing the CEO alone (all four do). Both are useful advice that the assertions don't reward."
+      }
+    ],
+    "overall": "Strong, complete advice with a ready-to-send note and a clear options table, but at 808 words it is far too long to act on quickly."
+  }
+}

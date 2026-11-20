@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "Opening: 'a weekly individual ranking of PRs merged and Copilot acceptance rate will hurt delivery—punishing reviewers, mentors, and incident responders'. Step 1: 'without pushing people to game PR size or accept bad AI suggestions (in a 2025 METR randomised trial, experienced developers actually took 19% longer with AI tools while believing they were faster)'. Script: 'people will split trivial PRs and stop doing reviews or incident work'. Covers gaming, punished glue work and acceptance not equalling speed or quality, briefly. The reasons are spread over three places rather than stated once, but they are specific."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Don't argue against the VP's goal in public'; 'Go to your manager 1-on-1 first, framed as helping the VP succeed.' Concrete alternative: 'team-level DORA metrics (change lead time, deployment frequency, change fail rate, failed deployment recovery time) plus review wait time and rework rate'. The script ends with a question: 'Can we propose tracking team-level lead time, review wait time, and rework rate instead?' Passed on spirit (private, non-confrontational, concrete team-level alternative aimed at the VP's goal). Caveat: the private route is the user's manager, not the VP directly, and the only question is a proposal; it never suggests asking what problem the ranking is meant to solve."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'likely requires works council (ondernemingsraad) consent under Article 27(1)(l) of the Works Councils Act (WOR) before it can be used to monitor or evaluate performance'. Step 3: 'Check with your works council (OR) if it moves forward. ... they have a consent right over systems suited to monitoring employee behaviour or performance. Asking an OR member a factual process question (\"Has this dashboard gone through Article 27 consent?\") lets governance do the heavy lifting'."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels used: manager 1-on-1, then the OR, with 'HR or employment counsel should confirm' for the legal point. No mention of the vertrouwenspersoon, leaks or sabotage; it warns 'Avoid debating motives in group channels'."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Protect yourself. Keep a factual, dated note of what was announced (only records you're allowed to keep). Avoid debating motives in group channels, and don't carry the fight alone.' The OR route is framed so 'you don't have to be the lone objector'. It gives the user a line to use, so it doesn't tell them to stay silent. The factual-record advice is the most specific of the four samples. Allies get only a vague nod ('don't carry the fight alone'), with no named peers."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "wc -w reply.md = 424 (limit 550). Structured as 'What to do this week' with four numbered actions, a ready-to-use line and an offer to draft a one-pager or OR note."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 424,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-A."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked the OR threshold, article 27(1)(l) WOR, the DORA metric names and the METR 19% finding; all correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference file, ladder, rung: no matches."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; the ranking is only proposed."
+    },
+    "best_insight": {
+      "value": "It turns the works council route into a neutral factual question to an OR member ('Has this dashboard gone through Article 27 consent?'), so the process raises the objection and the user, who doesn't want to look difficult, isn't the lone objector.",
+      "evidence": "Step 3 of reply.md."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "The assertion names the VP, but this sample (like B and D) routes the private conversation through the user's manager, and only C mentions the VP as an option. I passed manager-first as meeting the spirit, but the assertion should say whether it counts. 'With questions' is also undefined: no sample suggests asking what problem the ranking is meant to solve; all four assume the VP's goal. A sharper assertion would require that question."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Trivially satisfied by all four samples: none came near the vertrouwenspersoon, leaks or sabotage. It's fine as a guardrail but doesn't discriminate."
+      },
+      {
+        "reason": "No assertion covers the forced 'bottom 10%' quota itself: a fixed quota puts someone on an improvement plan every cycle even if everyone performs well. This sample treats the improvement plans only as a WOR consent trigger and never addresses the quota's unfairness, and no assertion catches that."
+      },
+      {
+        "reason": "All four samples pass all six assertions, so the set doesn't separate them. The real differences were in the specifics: legal accuracy, named allies, ready-to-use artifacts. Consider an assertion on the accuracy of cited studies and law."
+      }
+    ],
+    "overall": "Solid, compact and accurate: private route via the manager, a DORA-based alternative, the OR as the fallback and the clearest record-keeping advice. It's weaker on naming allies and never addresses the forced 10% quota itself."
+  }
+}

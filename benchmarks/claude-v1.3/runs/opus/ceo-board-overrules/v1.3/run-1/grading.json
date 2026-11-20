@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers plan.md and staff-announcement.md. Reply explicitly avoids re-arguing: 'That order isn't me reopening the board's decision. It's Dutch law'. No alternatives are revisited; the bracketed leadership share is presented as something staff will ask about, not as an alternative to the cuts."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "Plan s.2 'Still open: The works council's advice, which may change how the 22 are spread, the timing and the package'. s.5: 'the request must come at a point where its advice can still substantially influence the decision'. Timeline: advice request Tue 1 Dec, 'Dec to mid-Jan Consultation meetings', 'Fri 15 Jan Works council advice (target)', 'Tue 19 Jan Final decision... If it departs from the advice, wait one month... and move the dates below', individual conversations 26 Jan. 'The works council's timing is agreed with the council, not imposed on it.' Minor flaw: agency and freelance contracts are flagged as ending from Day 1."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "Plan s.5: 'Collective dismissal (WMCO). Dismissing 20 or more people within three months in one UWV work area means notifying UWV in advance and the unions with members in the company, and consulting the unions. Settlement agreements count towards the 20.' Also the one-month wait and union-declaration exception."
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "Plan s.6 gives the UWV dismissal order (externals; AOW age; zero-hours; fixed-term ending within 26 weeks; permanent) and 'Groups 2 to 5 are split into five age bands (15–25, 25–35, 35–45, 45–55, 55+). Each band loses its proportional share, and within a band the most recent hire goes first.' 'Never used: performance ratings...'. Reply: 'drop any shortlist managers have made.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "Package: 'Career support | Coach or outplacement bureau from the day of the conversation, €[x] per person'; 'Training | A budget of one month's gross salary per person'; 'Full notice paid; released from work after handover so people can look for work'; severance at [1.5] × the transition payment. Summary: 'Support starts on the day people are told, not on their last day.'"
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "'This is an intended decision, not yet a final one. This morning we asked our works council for its formal advice... We will take the final decision only after we have the works council's advice.' Timeline row: 'Everyone whose role is affected hears it from their own manager, with HR, in person or on a live call. Nobody will find out by email or by a login that stops working. Everyone else hears the same day.' (Affected teams meet their managers only after the all-hands.)"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 481,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4089,
+      "evidence": "wc -w plan.md (3223) + staff-announcement.md (866)"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked WMCO threshold and waiting period, dismissal order, age bands, notice periods, transition payment cap and arithmetic, HSM search-period change of 22 May 2026, WOR 25(6)/26, 14-day cooling-off and all weekdays; no errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement 'Whose responsibility this is': 'This is the result of decisions the leadership team made, and that I made... It is not the result of anything you did'."
+    },
+    "best_insight": {
+      "value": "It tells the board directly that the saving lands later than the annual figure (most exits March–June 2027, one-off costs first) and sets a review trigger that re-plans the work rather than cutting further if regretted exits or service levels slip.",
+      "evidence": "Reply 'For the board: the saving arrives later...'; plan s.10 cost table with 'Net effect in 2027'; s.11 'we re-plan the work. We don't cut further.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "Also passes when the affected teams first hear about the proposal at the all-hands (as here); require that affected teams hear from their own manager before the all-hands or the email."
+      },
+      {
+        "reason": "No assertion checks that no part of the reorganisation is implemented before the works council advises; this sample ends agency and freelance contracts on Day 1."
+      }
+    ],
+    "overall": "Complete, accurate and well-sequenced; all six assertions pass, with only a minor process wrinkle on flexible workers and an all-hands-first order."
+  }
+}

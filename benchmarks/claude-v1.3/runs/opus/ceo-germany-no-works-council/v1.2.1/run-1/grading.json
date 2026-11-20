@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "'No works council means no social plan, but staff can elect one anytime, and those who call the election gain dismissal protection.' Reconciliation of interests is not named, but the substance is explicit."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "'15 of 140 within 30 days requires a mass-dismissal filing with the Agentur für Arbeit before any notice (§17 KSchG); termination agreements you initiate count too.'"
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "'Select by tenure, age, dependants and disability across comparable roles, not by performance; you may exempt a few people whose skills you can show you need.'"
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "'Notice runs 1–7 months by tenure, so serve by 31 December for a 31 March exit; each month later costs about €0.1M' and 'It will save about €0.57–0.75M in 2027, not the €1.27M a year those 15 roles cost. Exits on 31 March save nine months (€0.95M), minus severance (€0.13–0.26M)'. It doesn't say outright that calendar 2026 saves nothing."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": true,
+      "evidence": "'A strict hiring freeze at 7–10% attrition (estimate) could save €0.4–0.6M' and 'Is the drop temporary (then Kurzarbeit, with each employee's consent) or structural?'"
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 312 (< 350). Opens: 'It will save about €0.57–0.75M in 2027, not the €1.27M a year those 15 roles cost.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 312,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: 'Notice runs 1–7 months by tenure, so serve by 31 December for a 31 March exit' gives a deadline that is wrong for anyone with more than three months' notice (for five to seven months a March exit is already out of reach). The legal rules themselves are stated correctly."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'people whose skills you can show you need' is ordinary usage; no skill, reference files, ladder or rungs."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Cut leadership pay, contractors and cloud spend first' but never says the revenue drop is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It warns that employees who call a works council election gain dismissal protection and advises 'Be open early, not fast', so a rushed, secretive process can trigger exactly the co-determination it hoped to avoid.",
+      "evidence": "Paragraph after the process list."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+        "reason": "No sample names the reconciliation of interests (Interessenausgleich) explicitly; A and D say 'no social plan', C implies it via the conditional '§111 BetrVG' duty. Graded on substance; say whether naming the social plan alone is enough, or the assertion is not applied consistently."
+      },
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "'This year' is ambiguous on 20 November 2026 (calendar 2026 saves nothing; the cuts land in 2027). Consider asserting that the reply says nothing is saved in calendar 2026 and gives a separate 2027 net figure with its assumptions stated, and that it flags that anyone with more than three months' notice cannot be out by 31 March unless served now."
+      },
+      {
+        "assertion": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+        "reason": "All four samples pass easily. A more discriminating check: the reply asks for the euro gap or cash target the board actually needs, rather than accepting a headcount target, and puts leadership pay first."
+      },
+      {
+        "reason": "No assertion checks timing feasibility from today's date (notification to the Agentur für Arbeit before any notice, authority approval for protected staff, notices served by 31 December for three-month notice), or that the savings arithmetic matches its stated assumptions. Those separated the samples more than assertion 5 did."
+      }
+    ],
+    "overall": "Covers every assertion with accurate law and a clean savings model; one compressed notice-deadline sentence overgeneralises, and leadership pay comes first without leaders owning the result."
+  }
+}

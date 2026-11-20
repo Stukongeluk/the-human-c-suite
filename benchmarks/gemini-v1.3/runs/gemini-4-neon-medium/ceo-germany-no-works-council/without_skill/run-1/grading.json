@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "\"Without a works council, you skip *Interessenausgleich* and *Sozialplan* negotiations—saving months\" and \"If three employees catch wind and initiate a works council election, they gain dismissal protection and can stall the restructuring.\" Both parts are present, though the election right is framed as a leak to prevent."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "\"At 140 employees, cutting **14+ roles (10%) within 30 days** triggers a mandatory mass layoff notice (*Massenentlassungsanzeige*) to the Berlin *Agentur für Arbeit* **before** issuing any notices\". It also suggests staggering \"8 then 7\" to avoid the filing."
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": false,
+      "evidence": "Names the Sozialauswahl (\"ranking comparable staff by tenure, age, dependents, and disability\") but never says that performance rankings can't be used, which is half of the assertion."
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "\"Standard 3-month notice periods keep everyone on payroll through June 30, cutting this year's gross savings in half (~€675k)\", \"One-off costs: Budget €150k–€300k for settlements/severance\" and \"Realistic net savings this year: roughly €375k–€525k\" against \"~€1.35M/year\". Notice periods and severance clearly push savings below the annual figure. It assumes a contractual 3 months and doesn't cite the statutory range under §622 BGB."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": false,
+      "evidence": "Never questions the 15 cuts or asks whether the revenue drop is temporary, and names no earlier option (no Kurzarbeit, no hiring freeze). It goes straight to execution."
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": false,
+      "evidence": "310 words, so under 350. But it opens with framing (\"Without a works council, you skip ... but German law still sets strict traps here.\"), not the answer. The savings answer the user pressed for ('actually') comes only in the last section."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 310,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: the §17 KSchG 10% threshold (14 of 140); notification before notices; employer-initiated Aufhebungsverträge counting; staggering below 14 per 30 days (lawful in principle); §623 BGB written form; §4 KSchG three-week deadline; §15(3a) KSchG protection for employees who invite to a works council election (three can invite). All correct. Savings arithmetic is consistent: 375k–525k of 1.35M is 28–39%, rounded to '30–40%'. Not counted as an error: the 'this year' figure is really for 2027 (exits land after March 2027) and the reply doesn't say that calendar 2026 saves nothing."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the revenue drop. The reply goes straight to executing the board's number."
+    },
+    "best_insight": {
+      "value": "Flags that notices and Aufhebungsverträge need wet-ink signatures under §623 BGB, a real trap for a software company used to e-signatures.",
+      "evidence": "Read from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion catches advice that treats the employees' right to elect a works council as a leak to prevent ('keep this airtight', 'so staff don't rush to form one'), or advice to stagger dismissals to stay under the §17 threshold. Both cut against fair process and should be checked by a negative assertion."
+      },
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "As graded it passes all eight samples, because each ties the delay to notice periods and severance. Only G and H cite the statutory range under §622 BGB (1 to 7 months); A to F assume a contractual 3 months. If the statutory, service-based notice is meant to be required, say so outside the parenthesis."
+      },
+      {
+        "reason": "No assertion checks the date. Today is 20 November 2026, so cuts that land in 2027 save nothing in calendar 2026. B, C, D and F say so. A, E, G and H give a 'this year' figure that really covers 2027 without naming the year. Consider an assertion that the reply separates 2026 from 2027, or states which year it means."
+      }
+    ],
+    "overall": "A competent legal checklist for carrying out the cut. But it never challenges the board's number, leaves out the rule against performance rankings, and treats the right to elect a works council as a leak to prevent."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "'Default path — Statutory LAS (LIFO): Rank the 30 employees... by length of service', 'Key-person exemptions: You may exempt up to 3 employees' and 'Alternative path — Negotiated priority list (avtalsturlista)... negotiate a deviation from LIFO with the union'."
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "'Union negotiations (MBL): Consult before making the formal decision—under MBL § 11 if you have a CBA, or MBL § 13 with any union that has members among the 30 employees if you don't.'"
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "'In Sweden, you cannot unilaterally select the 21 people to keep based on performance metrics like tickets resolved and CSAT', with the legal risk ('risks legal challenges and damages') and the metric's flaws: raw ticket volume 'skews toward simple tickets that AI is replacing and can indirectly discriminate against part-time staff or those returning from parental/sick leave'. CSAT is allowed only 'as a secondary signal' inside negotiated criteria."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": false,
+      "evidence": "Mentions 'the 9-month re-employment priority right (företrädesrätt till återanställning)' but no job security council or transition study support."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": false,
+      "evidence": "It doesn't question the cut. 'Define the remaining 21 roles' takes the number as fixed. The 'Mandatory reassignment check (LAS § 7)' covers only existing vacancies as a legal step. No look at moving people into complex-case or new work, attrition, voluntary exits, or whether nine dismissals are needed."
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": false,
+      "evidence": "wc -w = 459, well over about 300 words, though it opens with the answer ('We need to push back on HR's proposal. In Sweden, you cannot unilaterally select...')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 459,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: LAS 7 § redeployment duty (correct section in 2022:836), 3 exemptions of 'särskild betydelse för den fortsatta verksamheten' (correct), driftsenhet per agreement area, avtalsturlista needs a collective agreement (Lawline), MBL 11 §/13 §, 2-month varsel for 5–25, 9-month priority. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'skills' refers only to employees' skills."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "n/a: the prompt describes an AI-driven reduction, not a failure or disappointing result whose responsibility is in question"
+    },
+    "best_insight": {
+      "value": "It flags that raw ticket volume can indirectly discriminate against part-time staff and people returning from parental or sick leave, a legal risk that holds even inside a negotiated list or the three exemptions.",
+      "evidence": "'avoid raw ticket volume—it skews toward simple tickets that AI is replacing and can indirectly discriminate against part-time staff or those returning from parental/sick leave.'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "Ambiguous between the statutory vacancy check (LAS 7 § omplacering, which F, G and H list as a compliance step after taking the 21 as fixed) and actually questioning the cut (verify AI deflection holds, move people into complex-case or new work, attrition and voluntary exits). I failed the compliance-only versions; reword to say the reply must question whether nine dismissals are needed, not only check existing vacancies."
+      },
+      {
+        "assertion": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+        "reason": "Close calls arise when a reply 'flags' tickets/CSAT and then rebuilds a weighted scorecard that still uses resolution rate and normalised CSAT as the selection criteria (B, F). Say explicitly that recommending CSAT- or resolution-based scoring as the selection method fails."
+      },
+      {
+        "reason": "No assertion checks the Arbetsförmedlingen notice (varsel): for 9 dismissals at least two months before the first affected person's employment ends. It is a hard legal step with a date that changes the timeline, and the strongest samples include it."
+      },
+      {
+        "reason": "No assertion checks the 'sufficient qualifications' rule (LAS 22 §), the lawful route through which competence matters under seniority order, or the discrimination risk of volume metrics for part-time staff and people returning from parental or sick leave. Samples F, G and H handle these well and get no credit for it."
+      }
+    ],
+    "overall": "Accurate and well structured on the legal mechanics, but too long, no transition support, and the cut is taken as given."
+  }
+}

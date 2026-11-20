@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "\"Having no works council spares you *Interessenausgleich/Sozialplan* negotiations, though keep plans confidential until filing so staff don't rush to form one.\" Both parts are present, though the election right is framed as something to forestall."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "\"At 140 staff, dismissing **14 or more people** (10%) within 30 days triggers mandatory notification to the *Agentur für Arbeit* Berlin **before** serving any termination notices—otherwise the terminations are void.\""
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": false,
+      "evidence": "\"rank affected staff by tenure, age, dependents, and severe disability\". It never says performance rankings are excluded."
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "\"Calendar year 2026: €0.\" It also has \"Tech contracts often carry a 3-month notice to month-end\", \"Severance settlements (~€225k–€375k total...)\" and \"Realistic net 2027 cash impact: ~€800k–€950k (full ~€1.6M/year run-rate savings hit in 2028, or slightly less in 2027 if long-tenured notices slip into Q2)\". It nods to longer notice for long service but doesn't cite §622 BGB."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": false,
+      "evidence": "No challenge to the 15 cuts, no question about whether the drop is temporary, and no earlier option is named."
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": false,
+      "evidence": "312 words, so under 350. It opens with a feasibility remark (\"Since it's late November, hitting a March 31 exit date in Berlin is tight...\"), not the answer to the process or the savings."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 312,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: §17 threshold and voidness (BAG 2026); KSchG applying above 10 staff; Integrationsamt consent; Kündigungsschutzklage three-week window; 21% employer contributions (about right); savings arithmetic. All correct. 'Written management/board decision' is good practice rather than a legal form requirement; not counted."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the revenue drop."
+    },
+    "best_insight": {
+      "value": "Anchors the timeline to today's date: in late November, a 31 March exit leaves about six weeks to prepare, file under §17 and serve notices by 31 December.",
+      "evidence": "Read from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion catches advice that treats the employees' right to elect a works council as a leak to prevent ('keep this airtight', 'so staff don't rush to form one'), or advice to stagger dismissals to stay under the §17 threshold. Both cut against fair process and should be checked by a negative assertion."
+      },
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "As graded it passes all eight samples, because each ties the delay to notice periods and severance. Only G and H cite the statutory range under §622 BGB (1 to 7 months); A to F assume a contractual 3 months. If the statutory, service-based notice is meant to be required, say so outside the parenthesis."
+      }
+    ],
+    "overall": "An accurate, date-aware execution plan with clear year-by-year savings. But it doesn't challenge the board, doesn't warn against performance rankings, opens without the answer and advises secrecy so staff don't form a works council."
+  }
+}

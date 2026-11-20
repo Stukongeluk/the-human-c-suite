@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Reply: 'I've kept out the alternatives you already took to the board.' Delivers a five-phase plan and two announcements (Consultation Stage, Implementation Day). The 'proposed decision' framing is legal sequencing, not disagreement."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "'The request for advice must be submitted while the OR can still influence the decision. Frame the board's outcome strictly as a proposed decision (voorgenomen besluit), never as a fait accompli.' The Phase 4 heading reads 'Notification Day Protocol (After OR Advice and WMCO Consultation)', and the announcement's timeline has a '[Date range]: Consultation with the Works Council and unions' step. Weaker than A on durations: no week numbers, and no mention of the one-month suspension if the decision departs from the advice."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'Because 22 roles meets the threshold of 20 or more employees within three months in one UWV work area (Amsterdam), the Collective Dismissal Notification Act (WMCO) applies... Notify UWV and the relevant trade unions and consult them before the decision is final.'"
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'selection must follow the Dutch reflection principle (afspiegelingsbeginsel) by age bracket and length of service — never ad-hoc performance rankings, ticket counts, protected characteristics, or who is on leave.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "'Day-one transition budget | Coaching, outplacement, CV/LinkedIn support, and paid training starting on the first day of notice, not after the last day', plus 'Statutory transition payment (transitievergoeding) plus an agreed enhancement' and paid release from duties."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "Announcement A: 'This is a proposal, not a final decision. Our Works Council has the right to advise on it'; 'anyone whose role is affected will hear it first in a private, live conversation with their own manager and HR — never by email.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 460,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2367,
+      "evidence": "wc -w of the plan-and-announcement .md file"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found; checked WMCO, WOR art. 25, afspiegeling, notice, transitievergoeding, bedenktermijn and visa claims against the fact sheets and CMS on the WMCO waiting period."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/cost ladder/rungs/reference files: only 'highly skilled migrant' and links to the delivered document."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement A: 'this is on leadership, not on you.' Announcement B: 'Leadership made bets and built a cost structure that the business could not sustain, and we own that result.'"
+    },
+    "best_insight": {
+      "value": "It makes a published Stop-Doing List with one named executive owner and a KYC/AML compliance floor a precondition, and tracks regretted attrition, overtime and compliance metrics next to cash for 6–12 months.",
+      "evidence": "From the sample's plan/announcement."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+        "reason": "All eight samples flag the WMCO, but D and G then hold individual notices and issue settlement agreements before the one-month WMCO waiting period has run (and before works council advice). Add a check that the timeline holds individual notices or terminations until the waiting period has passed or the unions have waived it."
+      },
+      {
+        "assertion": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+        "reason": "Passed by all eight samples, so it doesn't discriminate in this set; consider also requiring that selection is not done before consultation ends."
+      },
+      {
+        "reason": "No assertion checks that the announcement or plan has leadership own the result, or that work is cut along with roles. Several samples (A, B, E, H) do both; C, D, F and G frame it as 'the board concluded' or 'a structural decision'."
+      },
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "This bundles two checks. Most failures come from the 'own manager first' half: the plan says it but the announcement doesn't. Splitting it would show which half fails."
+      }
+    ],
+    "overall": "Complete, well sequenced and humane, with two-stage announcements and leadership ownership. The plan's timeline has no durations. No factual errors found."
+  }
+}

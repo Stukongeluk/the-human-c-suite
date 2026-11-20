@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers a phased plan and announcement. 'Run this as a proposed reorganisation' is legal sequencing; voluntary exits sit inside the 22, not as an alternative."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "'Ask for advice on the intended decision (voorgenomen besluit) early enough that the OR can still influence it. Do not treat or announce the decision as final before OR advice is received.' Request in Week 2; consultation in Weeks 3–5 ('adjust the plan where a better route is found'); Week 6: 'Once OR advice and WMCO waiting/consultation steps are complete, confirm the final decision.'"
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'Collective Dismissal (WMCO) | 20+ dismissals in one UWV work area within 3 months | Notify UWV and the relevant trade unions and consult them before the decision is final.'"
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'Where roles are interchangeable, selection follows the reflection principle (afspiegelingsbeginsel), not individual performance rankings.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "'Day-one transition budget: A per-person budget for outplacement, coaching, or accredited retraining—usable from the first day of notice', on top of 'Statutory transitievergoeding plus a fixed top-up... plus full paid statutory/contractual notice'."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": false,
+      "evidence": "The proposed-decision half is met: 'we are proposing a reorganisation'; 'Nothing is final until consultation is complete... a proposed decision (voorgenomen besluit). We have submitted our formal request for advice to the Works Council'. But the announcement doesn't say affected people hear from their own manager first. It says 'We will update everyone as soon as that process concludes and before any individual conversations take place'; own-manager delivery appears only in the plan."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 312,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1424,
+      "evidence": "wc -w of the plan-and-announcement .md file"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found; checked WMCO, WOR art. 25, afspiegeling, notice, transitievergoeding, bedenktermijn and visa claims against the fact sheets and CMS on the WMCO waiting period."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/cost ladder/rungs/reference files: only 'highly skilled migrant' and links to the delivered document."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Reaching a point where we have to propose cutting roles is a leadership failure, not the fault of the people in Operations, Support, or any other team.'"
+    },
+    "best_insight": {
+      "value": "It puts the leadership pay cut into the works council advice request itself and opens voluntary exits and redeployment before afspiegeling, which can reduce involuntary dismissals within the 22.",
+      "evidence": "From the sample's plan/announcement."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+        "reason": "All eight samples flag the WMCO, but D and G then hold individual notices and issue settlement agreements before the one-month WMCO waiting period has run (and before works council advice). Add a check that the timeline holds individual notices or terminations until the waiting period has passed or the unions have waived it."
+      },
+      {
+        "assertion": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+        "reason": "Passed by all eight samples, so it doesn't discriminate in this set; consider also requiring that selection is not done before consultation ends."
+      },
+      {
+        "reason": "No assertion checks that the announcement or plan has leadership own the result, or that work is cut along with roles. Several samples (A, B, E, H) do both; C, D, F and G frame it as 'the board concluded' or 'a structural decision'."
+      },
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "This bundles two checks. Most failures come from the 'own manager first' half: the plan says it but the announcement doesn't. Splitting it would show which half fails."
+      }
+    ],
+    "overall": "Concise, well sequenced and humane, with day-one support and leadership ownership. Only gap: the announcement doesn't promise own-manager delivery."
+  }
+}

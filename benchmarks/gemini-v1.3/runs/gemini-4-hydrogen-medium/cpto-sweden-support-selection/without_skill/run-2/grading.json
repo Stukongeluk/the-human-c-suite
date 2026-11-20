@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "'redundancy (arbetsbrist) follows seniority (turordning / last-in, first-out), not pure performance ranking... either via the limited LAS exemptions (up to 3 key employees) or a union-negotiated avtalsturlista.'"
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "'You must consult the union under MBL first' and step 2 'Initiate MBL union consultations'. Says it comes first, though it calls it consultation rather than negotiation before a decision."
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": false,
+      "evidence": "It doesn't reject the method. It raises 'Two Quick Flags Before Using Tickets + CSAT' and then proposes 'calibrated criteria (instead of raw volume + CSAT)': a weighted scorecard with 'resolution rate on Tier 2/escalated tickets' (40%) and 'CSAT normalized by ticket category/tier' (25%) for 'Where competence/performance selection applies'. Performance metrics, CSAT included, stay the selection method."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": false,
+      "evidence": "Neither the 9-month re-employment priority nor a job security council or transition study support is mentioned."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": false,
+      "evidence": "No check of the cut. It goes straight to 'Define the post-AI role' for 'the 21 remaining seats'. No redeployment, attrition or voluntary-exit option is raised to avoid any of the nine dismissals."
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": false,
+      "evidence": "wc -w = 330, right at the limit of 'under about 300'. It also doesn't open with the answer: 'Here is a short draft you can share with HR, along with two critical adjustments...' is a preamble."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 330,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Statements of law (seniority order, 3 exemptions, avtalsturlista, MBL) are correct. The problem is the advice, not the facts: it builds a performance scorecard as the selection method."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "n/a: the prompt describes an AI-driven reduction, not a failure or disappointing result whose responsibility is in question"
+    },
+    "best_insight": {
+      "value": "It says to prorate volume metrics for part-time staff and leave and to exclude protected absences such as parental or sick leave, which guards against indirect discrimination.",
+      "evidence": "'Prorate/normalize all volume metrics for part-time schedules and leave' and 'strictly excluding protected absences like parental or sick leave'."
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "Ambiguous between the statutory vacancy check (LAS 7 § omplacering, which F, G and H list as a compliance step after taking the 21 as fixed) and actually questioning the cut (verify AI deflection holds, move people into complex-case or new work, attrition and voluntary exits). I failed the compliance-only versions; reword to say the reply must question whether nine dismissals are needed, not only check existing vacancies."
+      },
+      {
+        "assertion": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+        "reason": "Close calls arise when a reply 'flags' tickets/CSAT and then rebuilds a weighted scorecard that still uses resolution rate and normalised CSAT as the selection criteria (B, F). Say explicitly that recommending CSAT- or resolution-based scoring as the selection method fails."
+      },
+      {
+        "reason": "No assertion checks the Arbetsförmedlingen notice (varsel): for 9 dismissals at least two months before the first affected person's employment ends. It is a hard legal step with a date that changes the timeline, and the strongest samples include it."
+      },
+      {
+        "reason": "No assertion checks the 'sufficient qualifications' rule (LAS 22 §), the lawful route through which competence matters under seniority order, or the discrimination risk of volume metrics for part-time staff and people returning from parental or sick leave. Samples F, G and H handle these well and get no credit for it."
+      }
+    ],
+    "overall": "Gets the law right in the flags, then hands HR a refined performance scorecard as the method. It also leaves out the alternatives to the cut, transition support and re-employment priority."
+  }
+}

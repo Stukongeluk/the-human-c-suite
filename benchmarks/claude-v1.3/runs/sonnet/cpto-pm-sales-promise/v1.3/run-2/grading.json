@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "Under 'Your first steps, this week', before the CEO conversation: '3. Have engineering estimate the three features as ranges. No commitment is real until the team that builds it has sized it. Use your team's past throughput, not numbers made up under pressure.' and '4. Build a one-page capacity picture. Include how much is already committed, the share lost to unplanned work, on-call and tech debt, and what is left.' Opens with 'Don't absorb this quietly and don't refuse it.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "'Write up 2 or 3 options with trade-offs: Swap: the three features go in, and named items come out. Show the revenue or customers affected by each. / Shrink and sequence: the smallest version of each, one per month, with a pilot or design-partner date for the customer. / Add capacity: contractors or a temporary team move, with ramp-up cost counted. This only works if funded.' Framed as 'Take it to the CEO as a decision, not an objection'."
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'Rule out overtime, skipped testing and skipped security review. That debt returns as incidents and attrition.' Also the opener warns against 'silent overtime, which ends in a missed date'."
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'2. Find the customer's actual problem behind each feature. Sometimes a smaller version, a configuration, an integration or a pilot meets the need. Ask the customer's own team what they are trying to achieve.' Step 1 also has the PM ask 'the CEO, or the account owner, exactly what was said'."
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'Meet him privately and early, before anyone repeats the date to the customer.' Good faith: 'Start from his goal: keep and grow this account.' and 'Don't litigate why nobody was consulted.' Process: 'Offer a habit going forward: \"Give me 48 hours for a rough estimate before we give customers dates.\" It protects his credibility.'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 491 (limit 550). First line gives the answer: 'Don't absorb this quietly and don't refuse it. Take the CEO a trade-off he can decide on'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 491,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No claims about laws, studies or thresholds. 'a worse conversation in March' correctly places the end of Q1 (31 March 2027). 'It won't land before Q1' about contractors is a judgement, not a checkable fact."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon (grep for skill/reference/ladder/rung found nothing)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; it is a risky promise. The reply does make the CEO own the trade-off: 'ask him to choose what slips. That is his call, made visibly.'"
+    },
+    "best_insight": {
+      "value": "Its fallback for a CEO who insists on all three anyway, 'put the trade-off in writing and ask him to choose what slips. That is his call, made visibly', plus the urgency of meeting him 'before anyone repeats the date to the customer'.",
+      "evidence": "Lines 18 and 26 of reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks whether the PM tells or protects their own team while this is decided. This sample says nothing about the team, while the other samples do; the gap goes uncaught."
+      },
+      {
+        "reason": "No assertion checks the fallback if the CEO still insists on all three after seeing the trade-off. This sample covers it ('put the trade-off in writing and ask him to choose what slips'), and it is a real differentiator."
+      },
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Three checks in one assertion; splitting them would make the grade more informative."
+      }
+    ],
+    "overall": "Strong, compact reply that meets every assertion inside the word limit; the only omission is any word about the PM's own team."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "Header: 'The process (no works council means no social plan; the rest still applies)'; and 'A works council elected before notices go out (staff's right) must be consulted and heard first, adding weeks.' It does not assume one exists and notes the right to elect one. Reconciliation of interests is not named, but the substance (no works-council negotiation now, one could still be elected) is clear."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "'15 of 140 crosses the mass-dismissal threshold (10% within 30 days, §17 KSchG; employer-prompted exit agreements count). Notify the Agentur für Arbeit before any notice'."
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "'select among comparable roles by tenure, age, dependants and disability (§1 KSchG). You can't simply pick.' All four criteria are named; performance is not named, but 'You can't simply pick' clearly rules out management choice, ranking included. This is the least explicit of the four samples on this point."
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": false,
+      "evidence": "Severance is costed ('Severance, 0.5–1.0 month per year −€0.19–0.38M') and the net is put well below the run rate ('€0.4–0.6M, not the €1.35M run rate'). But statutory notice periods are never explained: the only reference is 'Anyone on three months' notice must have it by 31 December.' Nothing says notice is statutory, grows with tenure or reaches seven months (§622 BGB), and the model assumes all 15 are off payroll from 1 April. The named core element is missing."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": true,
+      "evidence": "'Before committing: leaders take the first pay cut, freeze hiring, offer a decent voluntary package. If the dip is temporary, Kurzarbeit bridges it' and 'is the drop temporary or structural?'"
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 331 (< 350). Opens with the answer: 'On a calendar year, this saves nothing in 2026. In 2027, 15 exits by 31 March net roughly €0.4–0.6M'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 331,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date found. Minor imprecision only: 'since the ... 1 April 2026 ruling' suggests the void rule is new, but the 2026 BAG ruling confirmed earlier case law."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Says 'leaders take the first pay cut' but never says the revenue drop is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "The itemised net-savings table includes the cost of people you'd want to keep quitting too ('Three people you'd keep also quit −€0.11M'), a hidden cost the board's run-rate number leaves out.",
+      "evidence": "Table row in reply.md."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+        "reason": "No sample names the reconciliation of interests (Interessenausgleich) explicitly; A and D say 'no social plan', C implies it via the conditional '§111 BetrVG' duty. Graded on substance; say whether naming the social plan alone is enough, or the assertion is not applied consistently."
+      },
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "'This year' is ambiguous on 20 November 2026 (calendar 2026 saves nothing; the cuts land in 2027). Consider asserting that the reply says nothing is saved in calendar 2026 and gives a separate 2027 net figure with its assumptions stated, and that it flags that anyone with more than three months' notice cannot be out by 31 March unless served now."
+      },
+      {
+        "assertion": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+        "reason": "All four samples pass easily. A more discriminating check: the reply asks for the euro gap or cash target the board actually needs, rather than accepting a headcount target, and puts leadership pay first."
+      },
+      {
+        "reason": "No assertion checks timing feasibility from today's date (notification to the Agentur für Arbeit before any notice, authority approval for protected staff, notices served by 31 December for three-month notice), or that the savings arithmetic matches its stated assumptions. Those separated the samples more than assertion 5 did."
+      }
+    ],
+    "overall": "Strong on process and an honest itemised savings model, but it never explains Germany's tenure-based statutory notice periods and assumes everyone is off payroll by April."
+  }
+}

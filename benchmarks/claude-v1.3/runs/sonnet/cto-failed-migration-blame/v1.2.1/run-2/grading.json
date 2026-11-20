@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'You approved this... Accountability sits with the person who owns the decision, and that is you before it is the team lead. The board should hear that from you, not discover it.' It also offers the board 'a public account of your own decisions in this'. There is no scripted line, but the instruction is plain. It states 'The migration ran with your sign-off' as fact, then lists it as an assumption later."
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't fire the platform team lead now.' Why it makes things less safe: 'If the person who ran the migration is fired, nobody will report a risk before the next risky change. Your next incident will then be both harder to see and harder to recover from.' Exception: 'If the review finds that someone ignored explicit warnings, hid a known risk, or skipped agreed safeguards knowingly, then a conversation about individual consequences is fair.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Open a review with a fixed date. Two to three weeks, led by someone who was not on the migration... why the safeguards (rehearsal, rollback, abort criteria) didn't hold.' The review is 'blameless'. Fixes: 'named owners for every fix' and 'Fix the system, with dates. Likely actions: mandatory rollback rehearsal..., written abort criteria, an independent go/no-go'."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": false,
+      "evidence": "Covers facts and causes ('findings on a set date'), changes ('named owners for every fix') and the CTO's own decisions. It never says how the board will know the fixes worked: no measure, test or follow-up check. 'The next large change has a visible gate' describes a control, not evidence that it works."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": false,
+      "evidence": "Lead: 'Keep them in role, tell them directly that the review is blameless, and make sure they hear the plan from you before anyone else does. They also carry nine hours of stress. Check how they are doing.' The wider team gets no care step. 'Capacity reserved for migrations instead of being squeezed in' is a scheduling fix, not looking after the people who worked the outage."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "Opens with the recommendation ('Don't fire the platform team lead now.'), but at 767 words by wc -w it is well over the 550 limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 767,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clear wrong rule, number or date. The works-council remark is loosely worded and hedged; see claims."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files. 'Steelmanning them' is ordinary English. 'Connect the incident tooling and the repository history' is an offer, not a leak."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Accountability sits with the person who owns the decision, and that is you before it is the team lead.'"
+    },
+    "best_insight": {
+      "value": "It has the CTO ask the board, before the findings, 'If the review shows a process or planning failure rather than negligence, would a dismissal still be the right outcome?', which makes the board commit to a standard before it has a name.",
+      "evidence": "'What to do this week', step 3"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "The examples (private conversation, protection from public blame) both concern the lead, but the text also says 'and the team'. That clause decided two samples that were strong on the lead but said nothing about the wider team that worked the 9-hour outage. Say whether wider-team care is required and what counts (rest after the incident, telling the team, keeping them out of the board's blame)."
+      },
+      {
+        "assertion": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+        "reason": "'How they will know it worked' is the element samples most often miss: they offer monthly progress reports or 'a visible gate', which show the fixes were done, not that they work. Name what counts (a timed rollback rehearsal, change failure rate, no migration without a tested fallback) or make it a separate assertion."
+      },
+      {
+        "reason": "No assertion checks whether the leader offers a tangible consequence of their own (bonus, formal review of their own role), which answers the board's wish for visible accountability head-on and follows the 'take the first cut yourself' principle. Only one sample did this."
+      },
+      {
+        "reason": "Assertions 2 and 3 passed for all four samples here; they guard the core of the answer but did not separate samples. Factual accuracy on Dutch dismissal law is also unchecked by any assertion, though every sample made claims about it."
+      }
+    ],
+    "overall": "Sound reasoning, with a sharp question for the board and a proportionate set of steps short of dismissal, but long (767 words), with no success measure for the board and nothing for the wider team."
+  }
+}

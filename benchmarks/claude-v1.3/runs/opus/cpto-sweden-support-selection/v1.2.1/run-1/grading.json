@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "\"In Sweden, LAS sets the order by length of service unless you agree a different list with the union\" and step 4: \"apply the LAS order among those qualified, with up to three exemptions, or a union-agreed list on objective, skills-based criteria.\""
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "Step 2: \"Negotiate under MBL before deciding. Give the union the numbers and the proposal while it can still change.\""
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "\"I wouldn't select on tickets resolved and CSAT. In Sweden, LAS sets the order by length of service ... and those numbers reward easy tickets and penalise anyone on parental leave, sick leave or part-time, a discrimination risk.\" Step 4: \"No activity rankings.\" Both the law and the metric's flaws are covered."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": true,
+      "evidence": "Step 5: \"Job security council support (TRR, via your collective agreement) from day one; nine months' re-employment priority.\""
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "Opening: \"This approach holds up and may need fewer than nine dismissals.\" Step 1: \"Size the team from the remaining work ... If hard tickets now land on fewer people, 21 may be too few.\" Step 3: \"Shrink the number first. Hiring freeze, attrition, moves into the new work (AI quality review, knowledge base, second line), reduced hours, then voluntary exits.\""
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w reply.md = 263. It opens with the answer: \"I wouldn't select on tickets resolved and CSAT. In Sweden, LAS sets the order...\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 263,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: the LAS order by length of service unless a different list is agreed, three exemptions, MBL negotiation before deciding, Arbetsförmedlingen notice at least two months ahead (right for 5-25 people), nine months' re-employment priority, and TRR via collective agreement (white-collar, private sector). The Klarna claim ('rehired agents in 2025 after admitting service quality suffered') matches May 2025 reporting of the CEO's comments on lower quality."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'. 'skills-based criteria' refers to employee skills."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned reduction, not a bad outcome that leadership caused."
+    },
+    "best_insight": {
+      "value": "It asks whether the 21 comes from workload or budget, and flags that ticket and CSAT rankings penalise people on parental leave, sick leave or part-time, which is a second, discrimination-law reason to drop HR's method.",
+      "evidence": "Opening paragraph and closing questions"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "All four samples pass all six assertions, so the set does not separate them. The differences sit in things no assertion checks: the Arbetsförmedlingen notice (two months before the first last day for 5-25 people), defining the remaining roles and their qualification needs before anyone is assessed, ruling out leave, sickness and part-time as factors, and cutting work along with roles."
+      },
+      {
+        "assertion": "The reply stays short (under about 300 words) and opens with the answer.",
+        "reason": "Every reply is 258-270 words, so 'under about 300' doesn't discriminate. It also ignores that one sample adds a 622-word document after the user said 'Keep it short'. Consider an assertion on whether the whole hand-over respects that request, or a tighter cap."
+      },
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "This is a compound check (question the 9, then redeploy to new work), and all samples pass it easily. A sharper version would ask the reply to test the cut against measured AI quality (reopens, escalations), not vendor deflection figures, before anyone is selected."
+      },
+      {
+        "reason": "Consider an assertion that the reply turns HR's aim into something lawful, such as a union-agreed list on objective, role-based criteria fixed before scoring, instead of only rejecting it. Only some samples do this explicitly."
+      }
+    ],
+    "overall": "Passes all six. A tight, well-ordered plan (size the work, MBL, shrink, then a lawful selection) with a discrimination angle and sensible phasing. It gives less legal detail than A, for example no qualification rule or exemption mechanics beyond 'up to three'."
+  }
+}

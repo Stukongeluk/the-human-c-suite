@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "Suggested line: '\"This outage is on my organization and ultimately on me. Firing the person who executed the migration won't prevent the next €2M outage...\"' plus 'Owning the failure publicly—without making excuses'."
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't fire the platform team lead—at least not as a reaction to the outage.' 'Only if the investigation reveals willful negligence or misconduct'. Why less safe: firing will 'ensure that the next time something goes wrong, people hide it instead of escalating early.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": false,
+      "evidence": "The post-mortem is 'rigorous, fact-based' and serves as the basis for 'any personnel decision'. It is never framed as blameless. The system-focused questions are good ('Why couldn't you roll back in under 30 minutes?', 'Was there schedule pressure?'). But the 'Structural guardrails (with dates)' list gives no dates, and no fix has an owner anywhere."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": false,
+      "evidence": "Facts, causes and changes are there: 'Unvarnished facts: Timeline of what failed, why recovery took 9 hours, and the verified financial/customer impact', plus guardrails. Nothing says how they will know the changes worked: only a '30/60/90-day remediation tracker' (progress tracking), with no drill result, test or metric for the board."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk to the platform lead 1:1 immediately. They are almost certainly rattled and expecting to be fired... tell them you are not looking for a scapegoat'. Also 'Set the tone for the rest of engineering.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "It opens with the recommendation, but wc -w = 825, far over 550."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 825,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable legal, research or numeric claims."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'This outage is on my organization and ultimately on me.'"
+    },
+    "best_insight": {
+      "value": "It asks the CTO to audit their own role (did they review the runbook, verify the rollback drill, or 'implicitly reward speed over safety'?) and whether leadership's schedule pressure encouraged cutting corners.",
+      "evidence": "'Audit your own role. Ask yourself honestly whether you reviewed the runbook, verified the rollback drill, or implicitly rewarded speed over safety.'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+        "reason": "This assertion separates the samples well, but only on the word 'blameless'. Consider making the substance explicit: the post-mortem is kept separate from any conduct or disciplinary review of the person who ran the change."
+      },
+      {
+        "assertion": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+        "reason": "Two checks are bundled: every long sample here opens with the recommendation, so this assertion only measures length. Split 'opens with the recommendation' and the word limit into separate assertions so each one discriminates."
+      },
+      {
+        "reason": "No assertion catches over-promising to the board. Several samples promise that the fixes will 'prove this cannot happen again' (or 'never take 9 hours again'). A CTO can't honestly promise zero recurrence, and the board will hold them to it after the next incident. Consider an assertion that commitments are framed as measurable risk reduction (a recovery-time target, rehearsal results), not guarantees."
+      }
+    ],
+    "overall": "Good on the core stance and on caring for the lead, but there's no blameless framing, no owners for fixes, no proof-it-worked measure for the board, and it runs 825 words."
+  }
+}

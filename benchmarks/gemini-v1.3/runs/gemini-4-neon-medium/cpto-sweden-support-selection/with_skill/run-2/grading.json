@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "Reply: 'under LAS, selection follows seniority (turordningsregler) per unit and collective-agreement area unless a union-agreed list (avtalsturlista) sets another order' and 'LAS allows exempting up to 3 critical employees'. Document: 'Unless a collective agreement or a union-negotiated list (avtalsturlista) specifies otherwise'."
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "Reply: 'Under MBL, negotiate with unions before deciding'. Document: 'Open formal consultations with the relevant unions before any final decision'."
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "Opening line: 'Do not use tickets resolved and CSAT to select the 9 people leaving Malmö: in Sweden you cannot pick who stays by performance ranking, and individual ticket counts select against the complex-support skills you now need most.' Plus: 'a first-line activity metric that rewards easy tickets and penalizes escalations and mentoring.'"
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": true,
+      "evidence": "Reply: '9 months' re-employment priority' and 'Engage your job security council (e.g., TRR, if covered) immediately on notice and flag Sweden's transition study support (omställningsstudiestöd).'"
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "First bullet: 'Verify before cutting: Check whether AI resolution is holding up on escalations and churn, and test attrition, internal redeployment/reskilling (second-line, customer success, QA, AI tuning), and voluntary exits first.'"
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 249. Opens with the answer: 'Do not use tickets resolved and CSAT to select the 9 people leaving Malmö...'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 249,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 536,
+      "evidence": "wc -w malmo-support-selection-approach.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 3 exemptions of 'particular importance to continued operations' (still the LAS 22 § wording after 2022, per Företagarna and the 2022:836 text), 2-month varsel 'before the first termination takes effect' (Arbetsförmedlingen counts to the first person's last day), 1–6 months' notice, 9-month priority, omställningsstudiestöd ~80% for ~1 year, TRR only if covered. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'skills' refers only to employees' skills."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "n/a: the prompt describes an AI-driven reduction, not a failure or disappointing result whose responsibility is in question"
+    },
+    "best_insight": {
+      "value": "It tests the AI premise before cutting (repeat-contact rate, escalations, churn) and ends with the two facts that would change the plan: whether Malmö has a collective agreement and whether internal roles have been mapped.",
+      "evidence": "Reply: 'Check whether AI resolution is holding up on escalations and churn' and 'do you have a collective agreement in Malmö, and have you mapped internal roles for redeployment?'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "Ambiguous between the statutory vacancy check (LAS 7 § omplacering, which F, G and H list as a compliance step after taking the 21 as fixed) and actually questioning the cut (verify AI deflection holds, move people into complex-case or new work, attrition and voluntary exits). I failed the compliance-only versions; reword to say the reply must question whether nine dismissals are needed, not only check existing vacancies."
+      },
+      {
+        "assertion": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+        "reason": "Close calls arise when a reply 'flags' tickets/CSAT and then rebuilds a weighted scorecard that still uses resolution rate and normalised CSAT as the selection criteria (B, F). Say explicitly that recommending CSAT- or resolution-based scoring as the selection method fails."
+      },
+      {
+        "reason": "No assertion checks the Arbetsförmedlingen notice (varsel): for 9 dismissals at least two months before the first affected person's employment ends. It is a hard legal step with a date that changes the timeline, and the strongest samples include it."
+      },
+      {
+        "reason": "No assertion checks the 'sufficient qualifications' rule (LAS 22 §), the lawful route through which competence matters under seniority order, or the discrimination risk of volume metrics for part-time staff and people returning from parental or sick leave. Samples F, G and H handle these well and get no credit for it."
+      }
+    ],
+    "overall": "Strong: all assertions met, accurate law, tests the AI premise, and the document is ready for counsel."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "\"No works council: You skip *Interessenausgleich* and *Sozialplan*, though staff can still trigger a council election once rumours start.\""
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "\"At 140 staff, 15 roles exceeds the 10% (14-person) 30-day threshold. You must notify the *Agentur für Arbeit* in advance; employer-initiated settlement agreements (*Aufhebungsverträge*) count too\"."
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "\"statutory social selection (*Sozialauswahl*—tenure, age, dependants, disability; never performance rankings) under §1(3) KSchG\"."
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "\"plus 1–7 months' notice (§622 BGB; often 3 months contractually)\"; \"Notices by 31 March plus ~3-month notice means payroll runs through June ... Subtract severance, unused leave, legal fees, and transition support (~€300k–€400k): ~€350k–€600k net\" against \"€1.5M–€1.8M/year\"."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": true,
+      "evidence": "\"if the dip is temporary—using *Kurzarbeit*\", \"freeze hiring\" and \"Is the revenue drop temporary or structural, and what exact cash gap must you close by when?\""
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "322 words. It opens with the answer: \"Don't start with 15 layoffs—in Berlin, end-of-March dismissals will likely save only ~€350k–€600k net this year (estimate)\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 322,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: §17 threshold, counting Aufhebungsverträge, voidness; Interessenausgleich and Sozialplan; §1(3) criteria; §622 BGB 1–7 months; Kurzarbeit needing individual agreements without a works council; the 12-month cap from January 2027. All correct, and the arithmetic is consistent. Not counted as an error: the 'this year' figure is really for 2027 (exits land after March 2027) and the reply doesn't say that calendar 2026 saves nothing."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"with leadership owning the revenue miss and taking the first pay/bonus cut\""
+    },
+    "best_insight": {
+      "value": "Points out that without a works council Kurzarbeit needs individual agreements with each employee, the practical catch in the main alternative.",
+      "evidence": "Read from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks the date. Today is 20 November 2026, so cuts that land in 2027 save nothing in calendar 2026. B, C, D and F say so. A, E, G and H give a 'this year' figure that really covers 2027 without naming the year. Consider an assertion that the reply separates 2026 from 2027, or states which year it means."
+      },
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "As graded it passes all eight samples, because each ties the delay to notice periods and severance. Only G and H cite the statutory range under §622 BGB (1 to 7 months); A to F assume a contractual 3 months. If the statutory, service-based notice is meant to be required, say so outside the parenthesis."
+      }
+    ],
+    "overall": "Passes every assertion with correct §17, §1(3) and §622 law, and challenges the board's target with a better sequence. Its 'this year' figure silently means 2027."
+  }
+}

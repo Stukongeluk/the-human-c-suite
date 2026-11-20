@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'Step 2: Get a real estimate from the people who will build it. Ask the engineers for a range for the smallest version of each feature... Alongside it, build a simple capacity picture: people available after leave, the share already going to unplanned work, incidents and tech debt, and what is left for roadmap work.' This comes before 'Step 3: Bring him options'. Opens: 'Don't say no, and don't absorb it.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "'Present three to four, each with its cost in plain numbers': '1. Swap... Show what slips and which customers and revenue it touches.' '2. Shrink. Deliver the smallest version of each feature by end of Q1, with the full versions in Q2.' '3. Sequence with the customer... one feature in Q1 and two in Q2, with a pilot.' '4. Add capacity... This costs money and doesn't deliver instantly.' Then 'Recommend one... and say what would change your mind.'"
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'a roadmap that only fits with overtime is a wrong roadmap' (opening) and option 5, 'Do it all on top of the roadmap... with the realistic consequence: overtime, skipped testing, incidents, attrition... I wouldn't recommend it, and you shouldn't commit to it.' Weaker than the flat 'not an option' in other samples, since it is still put on the CEO's menu 'so the choice is visible', but the PM is told plainly not to commit to it."
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Was it \"three features\" or \"these three problems solved\"?' and 'Ask what the customer is actually trying to achieve with each feature. Often the need can be met with a smaller version, a configuration, an integration or a pilot.' It also asks what is at stake: 'renewal, expansion, a contract clause? How much revenue?'"
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": false,
+      "evidence": "Private and good faith are strong: 'Ask the CEO, privately and with curiosity' and 'Acknowledge the pressure he's under. He made a promise to someone important, and that is a reasonable thing for a CEO to want to honour.' But the process fix is made optional: 'If it comes up at all, raise the process once, calmly and later: \"Next time a customer asks for something big, can we get a one-day estimate...\"'. A PM following this may never raise it, and the 'What to check afterwards' section covers only this delivery, not future promises. The reply does not actually advise agreeing a process, so the third part fails."
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": false,
+      "evidence": "wc -w = 907, far above the 550 ceiling. It does open with the answer ('Don't say no, and don't absorb it. Take the CEO a one-page trade-off and let him choose'), but the length fails the assertion."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 907,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No claims about laws, studies or thresholds. Generalisations such as 'Wording like \"by end of Q1\" often turns out to be softer than it was relayed' and 'Teams handle uncertainty well' are opinions, not checkable facts."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon (grep for skill/reference/ladder/rung found nothing)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt. The reply makes the CEO own the choice: 'let him choose, so the decision is his and visible.'"
+    },
+    "best_insight": {
+      "value": "'Don't start the work informally while this is being decided' combined with sending the one-pager before the meeting and bringing the engineering lead, which stops the team silently absorbing the work and keeps the CEO from being surprised in the room.",
+      "evidence": "Lines 28, 29 and 32 of reply.md"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "This sample lists an overtime-driven option on the CEO's menu while advising against it. If the intent is that overtime is never offered as a choice, say 'and does not offer it as an option'."
+      },
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "This sample is the strongest on 'assume pressure' but fails on the hedged process fix. A bundled assertion hides that; split into three."
+      },
+      {
+        "reason": "No assertion rewards not starting the work informally before the trade-off is decided. It is a common way PMs absorb promises silently, and only this sample addresses it."
+      }
+    ],
+    "overall": "Thoughtful and the most empathetic toward the CEO, but at 907 words it is far over the limit and the future-promise process is left as 'if it comes up at all'."
+  }
+}

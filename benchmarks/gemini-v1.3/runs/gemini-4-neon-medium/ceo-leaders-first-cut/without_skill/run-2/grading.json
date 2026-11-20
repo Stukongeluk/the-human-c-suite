@@ -1,0 +1,84 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": false,
+      "evidence": "'Take the first hit at the top. Waive executive bonuses (and consider a 10–15% temporary C-suite pay cut), and freeze company-wide bonuses and non-critical raises for 12 months.' The pay cut is only 'consider', staff bonuses are frozen in the same step, and nowhere does leadership own responsibility for the flop."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": true,
+      "evidence": "The top-level cut is framed as a signal: 'That signals discipline immediately', while the savings target ('€4–6M annualized') sits on non-payroll burn. Paired with concrete measures: wind down the flopped title, 90-day stage-gates with kill criteria, WBSO and platform advances. Note it signals 'discipline' to the board rather than trust."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "'jeopardize the two 2028 titles that actually determine the studio's survival'; 'a line-by-line target (e.g., €4–6M annualized savings) that stretches your €40M comfortably past 2028'; 'layoffs are theatrical discipline that delays 2028'."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "'cutting ~38 people triggers the WMCO collective dismissal process: Works Council (OR) advice, UWV and union procedures...' Specific, but only as a cost of layoffs; the OR is absent from its own 'pre-scoped restructuring' trigger."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "No company example is cited; the named schemes are real (WBSO exists in 2026; Game Pass and PS Plus pay for titles). Nothing claims a pay cut caused a recovery."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "wc -w = 307 (<350). First sentence: 'Don't argue against layoffs on sentiment—beat the board on math, Dutch labor reality, and 2028 execution risk.' States the stance (oppose the cut), though it doesn't name the alternative plan."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 307,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clear error. Imprecise: it lists OR advice, social plan negotiations and the transitievergoeding as part of the 'WMCO process' (they come from art. 25 WOR, practice/CAO and the Civil Code). Attrition 8–12% and '6+ months' stall are unsourced estimates. Xbox reportedly paused new third-party Game Pass deals in mid-2026 (unconfirmed rumour), so that route may be narrower than implied.",
+      "errors": []
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep; 'reskilling' only in the ordinary sense)."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that the flop is leadership's responsibility; the top cut is framed as signalling discipline."
+    },
+    "best_insight": {
+      "value": "Adds non-dilutive bridge cash (WBSO, milestone-based publishing or platform deals) and a concrete non-payroll savings target, turning 'discipline' into a cash plan the board can check.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "No sample in this case cites a real-world company example, so this passes for every sample and discriminates nothing. Either require one accurate, relevant example used with its limits (for example Nintendo 2011/2014 with the Japan Airlines counterexample), or score it n/a when none is cited."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "This passes both replies that bring the works council in early as a partner and replies that only list 'OR advice' as a cost of layoffs. Consider requiring that the OR is involved before the decision, while its advice can still change the plan, including for any pre-agreed fallback cuts."
+      },
+      {
+        "assertion": "The reply stays under 350 words and its first sentence states the recommendation.",
+        "reason": "A first sentence about how to argue ('beat the board on math') passes as a stance; consider requiring the first sentence to name what leadership should do, not just the debating tactic."
+      }
+    ],
+    "overall": "Strong cash plan (WBSO, platform advances, savings target, hard triggers), but leaders never own the flop, the exec pay cut is only 'consider' and shared with staff, and the OR appears only as a layoff cost."
+  }
+}

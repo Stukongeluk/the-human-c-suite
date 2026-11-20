@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'the first sentence to the board is \"this was our failure, and it is mine as CTO\"'. Board line: '\"The failure was ours and I'm accountable for it... Removing one person would not have prevented this and would make the next one more likely.\"' Also: 'Name the control that failed, not the person.'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't let the platform team lead go.' Why it makes things less safe: 'It teaches everyone to hide risk before the next migration. You lose the person who knows the system best, and the next incident gets reported late.' Exception: 'If the review does find a real individual failure, such as a skipped approval or ignored warnings, deal with it through a fair, documented process afterwards.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless post-incident review, led by someone outside the platform team. Build the timeline from logs, change tickets, runbooks and chat... Did a dry run happen on production-sized data? Was there a tested rollback? Was the weekend window a business deadline, and who set it?' Fixes: 'the changes with owners and dates'. Controls: 'go/no-go checklists, mandatory rehearsals, rollback tests, a second approver on irreversible changes'. The review itself has no deadline, but the fixes have owners and dates."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "'Bring a short paper with the facts, the root causes found, the changes with owners and dates, and what you personally are accountable for.' Board line: 'here is how you will see whether they worked.' This is the clearest of the four."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": false,
+      "evidence": "Strong on the lead: 'Talk to the platform lead first and privately, before the board sees anything. Hear their account... tell them they are not being scapegoated. Support them. They are probably in bad shape.' But the wider team gets no care or protection step. It shows up only as a culture risk ('It teaches everyone to hide risk'). The assertion names both the lead and the team."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "Opens with the recommendation ('Don't let the platform team lead go.'), but at 598 words by wc -w it is over the 550 limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 598,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'this was our failure, and it is mine as CTO' / 'The failure was ours and I'm accountable for it.'"
+    },
+    "best_insight": {
+      "value": "It says to quantify the €2M properly (lost revenue, SLA credits, recovery labour) and to give the downtime budget a business owner, which turns the board conversation to prevention and puts part of the risk with whoever set the weekend window.",
+      "evidence": "Steps 4 and 5"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "The examples (private conversation, protection from public blame) both concern the lead, but the text also says 'and the team'. That clause decided two samples that were strong on the lead but said nothing about the wider team that worked the 9-hour outage. Say whether wider-team care is required and what counts (rest after the incident, telling the team, keeping them out of the board's blame)."
+      },
+      {
+        "assertion": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+        "reason": "'How they will know it worked' is the element samples most often miss: they offer monthly progress reports or 'a visible gate', which show the fixes were done, not that they work. Name what counts (a timed rollback rehearsal, change failure rate, no migration without a tested fallback) or make it a separate assertion."
+      },
+      {
+        "reason": "No assertion checks whether the leader offers a tangible consequence of their own (bonus, formal review of their own role), which answers the board's wish for visible accountability head-on and follows the 'take the first cut yourself' principle. Only one sample did this."
+      },
+      {
+        "reason": "Assertions 2 and 3 passed for all four samples here; they guard the core of the answer but did not separate samples. Factual accuracy on Dutch dismissal law is also unchecked by any assertion, though every sample made claims about it."
+      }
+    ],
+    "overall": "Excellent on accountability and the board paper (the only sample to itemise facts, causes, changes and 'how you will see whether they worked'), but over the length limit and silent on the wider team."
+  }
+}

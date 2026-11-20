@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": true,
+      "evidence": "Move 1: 'Own the flop and go first. Open by taking responsibility for the launch—leadership made the bets, not the teams. Propose executive pay, bonus, and perk cuts first.'"
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": true,
+      "evidence": "'State plainly this is a signal of accountability, not a savings plan.' Paired with a 2027–2028 cash plan (non-people spend, stop side projects, hiring freeze, redeploy onto the 2028 games), 'a blunt post-mortem on why the launch missed' and quarterly milestone gates."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "'With €40M in cash against a €12M loss, you are not in an immediate liquidity crisis—and cutting staff to \"show discipline\" risks delaying the two 2028 titles that will actually recover the money.' Opens with 'Push back on the 15% cut'."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "Move 5: 'Involve your Works Council early. Share the real numbers and options with the OR before anything is decided so they help shape the plan, not fight an ambush.' Also cites art. 25 WOR."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "No real-world company example is cited and nothing claims a CEO pay cut caused a recovery (passes vacuously)."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "wc -w = 304 (<350). First sentence: 'Push back on the 15% cut (~38 people) and bring the board a cash-and-delivery plan to reach 2028 with your teams intact.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 304,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date found. Art. 25 WOR, WMCO, 1–4 months' notice and transition payments match the fact sheet.",
+      "errors": []
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep; 'reskilling' only in the ordinary sense)."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Open by taking responsibility for the launch—leadership made the bets, not the teams.'"
+    },
+    "best_insight": {
+      "value": "Names monthly burn and lender covenants as the facts that could overturn the advice, and puts voluntary exits or reduced hours ahead of dismissals in the fallback trigger.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "No sample in this case cites a real-world company example, so this passes for every sample and discriminates nothing. Either require one accurate, relevant example used with its limits (for example Nintendo 2011/2014 with the Japan Airlines counterexample), or score it n/a when none is cited."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "This passes both replies that bring the works council in early as a partner and replies that only list 'OR advice' as a cost of layoffs. Consider requiring that the OR is involved before the decision, while its advice can still change the plan, including for any pre-agreed fallback cuts."
+      },
+      {
+        "reason": "No assertion catches pre-committed 'automatic' or 'without further debate' headcount cuts, which clash with the art. 25 WOR advice right and the WMCO/UWV procedure in the Netherlands."
+      }
+    ],
+    "overall": "All six pass, with the clearest 'signal of accountability, not a savings plan' framing and the OR treated as a partner; no factual errors."
+  }
+}

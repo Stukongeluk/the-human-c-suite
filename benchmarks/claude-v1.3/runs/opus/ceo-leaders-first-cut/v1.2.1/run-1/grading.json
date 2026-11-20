@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": false,
+      "evidence": "Leaders go first ('**Leaders first.** You and the exec team take a visible pay cut and no 2026–27 bonuses.'), but the reply never says the flop is leadership's responsibility. The nearest line is 'The board is right that a flop needs a visible response', which is not ownership. Nothing says the leaders' cut is the largest either. The ownership half of the assertion is missing, so FAIL."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": true,
+      "evidence": "'A signal, not the savings plan.' It is paired with concrete measures: 'Spend before people' (marketing, co-development, outsourcing, tools, office), 'Focus. Move the launch team onto the 2028 projects', a hiring freeze ('20–25 fewer roles in a year, no dismissals'), 'Fix why it flopped. Stage gates for both projects, with playtest milestones and kill criteria', and a quarterly cash trigger."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "'Don't cut 15% now. If the €12 million loss is mostly cash and doesn't grow, €40 million covers over three years of it, and the 2028 projects are your recovery.' It also asks 'How much of the €12 million is cash rather than a write-down, and what's the 2027–28 burn?' and shows the cut saves 'under a quarter of the loss'."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "'20+ dismissals is a collective dismissal (WMCO) needing works council advice (article 25 WOR). Check with counsel.' and 'Bring the works council in now with the real numbers.'"
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "'After the 3DS flopped in 2011, Satoru Iwata halved his salary and kept Nintendo's teams; they built the Switch. A signal, not the savings plan.' This matches the fact sheet (halved fixed salary in July 2011; teams kept; the Switch followed). The reply credits the kept teams, not the pay cut, with the Switch. Trevor & Nyberg (2008), '1% downsizing ... 31% more voluntary leavers', is also accurate."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "wc -w = 325 (< 350). First sentence: 'Don't cut 15% now.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 325,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-A"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 38 people x €75k = €2.85M (<25% of €12M); €40M/€12M > 3 years; 8–10% of 250 = 20–25; Trevor & Nyberg 1% -> 31%; Iwata halved salary 2011 and kept teams; WMCO 20+ dismissals, art. 25 WOR advice right. Minor imprecision only: '20+ dismissals' leaves out the 'within three months in one UWV work area' condition and the UWV/union notification, but the rule as stated isn't wrong for a one-off 38-person cut."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The flop is the bad outcome in the prompt. No leader says the responsibility is leadership's. 'Leaders first' pay cut, but only 'The board is right that a flop needs a visible response'."
+    },
+    "best_insight": {
+      "value": "It moves the launch team onto the 2028 projects and puts both projects behind stage gates with playtest milestones and kill criteria, so 'discipline' targets why the launch flopped rather than headcount.",
+      "evidence": "Items 3 and 5 of 'The alternative for Thursday'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+        "reason": "Two checks in one: leaders cutting their own pay first, and leadership openly owning the flop. Here the ownership part alone split the samples. A and B both put 'Leaders first' pay cuts in the plan but never said the flop was leadership's responsibility. Splitting it would show why a sample failed."
+      },
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "Didn't tell the samples apart: all four cited the same Iwata/Nintendo 2011 example accurately and called it 'a signal'. A sharper check would ask whether the reply names the example's limit (Nintendo's cash carried the teams; the pay cut saved little). Only D did ('Nintendo used its cash to keep its teams')."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "Passes on one line ('involve the works council now'). It could require the timing point: advice while it can still change the decision (art. 25 WOR), or the WMCO/UWV step for 20+ dismissals. Only C tied the works council to 'while it can shape the plan (article 25 WOR)'."
+      },
+      {
+        "reason": "No assertion checks for a pre-agreed trigger or tripwire (cash floor, milestone gates) that brings headcount back only if the numbers demand it. That is what makes a no-layoff alternative credible to a board asking for 'discipline'. All four had one, but it should be checked. Also unchecked: whether the reply shows that the layoff's first-year saving is below the annual figure once notice, UWV and transition payments are counted."
+      }
+    ],
+    "overall": "5/6. A numerate, focused alternative with stage gates, kill criteria and a cash trigger. It fails because leadership never openly owns the flop."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "Section '1. Before you talk to him': 'Get engineering to size the three features. Ask for rough ranges, not single numbers' and 'Build a one-page capacity picture. For each affected team: headcount minus leave, the usual share of unplanned work and incidents, on-call... Then put the three features beside it. \"We're at capacity\" is an opinion; \"we have about X engineer-weeks, the roadmap needs X, and these three need Y to Z\" is a fact.' Opens: 'Don't say no, and don't absorb it.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "Table with a Cost column: 'A. Smallest version of all three by end of Q1 ... Lower scope. Needs the customer to agree what \"delivered\" means.' / 'B. All three, in full, and X and Y slip ... Names who is affected and what revenue or customers those items serve. His call.' / 'C. Phase it ... the rest on a dated plan'. Plus contractors, hiring or 'a paid services engagement' as other levers."
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'Overtime, cutting testing and skipping security review are not options. That debt comes back later as incidents and attrition.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Find out what the customer actually needs. What problem is each feature meant to solve? Is the promise tied to a renewal, an expansion or a risk of churn... Often one of the three is the real need and the other two are nice to have. Talk to the account owner or the customer's own contact if you can.'"
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'Have the conversation privately first. Don't challenge him for the first time in a leadership meeting.' Good faith: 'I'm assuming he made the promise because he wants to protect your biggest account. If so, you are on the same side.' and 'Don't blame.' Process: section '3. The process fix': 'a feature date is only given after the building team has estimated it... a 24-hour \"can we promise this?\" check with product and engineering for deal-critical requests.'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": false,
+      "evidence": "wc -w = 922, far above the 550 ceiling. It does open with the answer ('Don't say no, and don't absorb it...'), but the length fails the assertion."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 922,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No claims about laws, studies, schemes or thresholds; the content is process advice. Nothing checkable is wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon (grep for skill/reference/ladder/rung found nothing)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt. The reply makes the CEO own the trade-off: 'Let him own the decision. He chooses the trade-off, with full information.'"
+    },
+    "best_insight": {
+      "value": "'Rank the three by evidence': a feature that serves only one customer is a custom build 'you will maintain forever, and that changes how you price and plan them', which opens up a paid services engagement as a lever, alongside the rule that sales 'can promise discovery and a date for an answer' but not a feature date.",
+      "evidence": "Lines 10, 27 and 42 of reply.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+        "reason": "Combining length with 'opens with the answer' hides that this sample does open with the answer; splitting would show length is the only miss."
+      },
+      {
+        "reason": "No assertion checks treating one-customer features as custom builds with lasting maintenance cost (or pricing them as services). This sample does it, and it matters for a 'biggest customer' promise."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "All four samples pass easily; it does not discriminate. Requiring capacity to subtract unplanned work and on-call, or to use past throughput, would test depth."
+      }
+    ],
+    "overall": "The most thorough content of the four (team, process fix, deal context), but at 922 words it is nearly twice the limit."
+  }
+}

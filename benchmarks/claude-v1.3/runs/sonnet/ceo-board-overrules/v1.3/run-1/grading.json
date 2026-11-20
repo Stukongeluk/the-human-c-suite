@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "Delivers plan-and-announcement.md with 'Part 1. Plan', 'Part 2. Staff announcement' and 'Part 3. Manager brief'. Reply: 'The board's decision stands and I am not reopening the alternatives.' No disagreement with the decision itself; the only change is the legally required order ('announce 22 roles as the board's intended decision, not a final one, until your works council has given its advice')."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "'Under article 25 WOR it must be asked for advice at a moment when its advice can still influence the decision... If the final decision departs from its advice, implementation waits one month (art. 25(6) WOR).' Timeline: 'Day 4 | Request for advice sent to the works council with the full numbers, the reasons, the function groups affected, the package and the timetable'; 'Weeks 2-4 | Works council consultation: share the real numbers, answer its questions, and change the plan where it finds a better route'; 'After the advice | Final decision and a written reply to the works council'. Header: 'target dates; the works council's own timetable governs'. The window (about three weeks) is on the short side but explicitly yields to the council's timetable."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'22 dismissals within three months in one UWV work area is above the 20 threshold of the Collective Dismissal Notification Act (WMCO). That means consulting the unions and notifying UWV.' Timeline Day 4: 'Notify the unions as counsel directs.'"
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'Use the legally required method for business-economic dismissals in the Netherlands, the reflection principle (afspiegelingsbeginsel): roles are grouped into interchangeable functions, and within each group the people to go are chosen proportionally across age brackets... No performance rankings, no velocity or activity metrics, no choices made by individual managers.'"
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "'Statutory floor: notice period by length of service, and the transition payment (transitievergoeding). On top, proposed:' ... 'Support from the day of notice, not the last day: outplacement and coaching, CV and LinkedIn review, paid training with a budget of [€] per person, financial and psychological support'; 'Paid notice with freedom to job-hunt during working hours'."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "'We intend to reduce the company by 22 roles out of 180... The decision to reduce roles is the board's intended decision. It is not final until we have received the advice of our works council... If the works council finds a better route to our goals, we will change the plan.' And: 'If your role is affected, you will hear it from your own manager, with HR present, in person or on a call, never by email and never by a login that stops working.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 379,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2323,
+      "evidence": "wc -w plan-and-announcement.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked art. 25(2) and 25(6) WOR, the WMCO threshold, afspiegelingsbeginsel, transition payment, UWV permission or settlement route, special dismissal protection and the short search period for highly skilled migrants against the fact sheets: no errors. Minor looseness not counted: length of service is called a 'tie-breaker' within age groups, where it is the deciding criterion inside each age cohort."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon; only the deliverable file name."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Announcement: 'the responsibility for this situation is mine and the leadership team's, not that of the people in Operations and Support, who have done their jobs well.' Plan section 6: 'The announcement says plainly that leadership is responsible for the situation'."
+    },
+    "best_insight": {
+      "value": "It dates the plan against the calendar: if the works council's advice lands after mid-December, hold the individual conversations in early January and say so openly instead of delivering news just before Christmas.",
+      "evidence": "Plan section 3, paragraph after the timeline table."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+        "reason": "Passes both for plans that keep the reduction itself open to the works council's advice (A, C: 'if they find a better route I will change the plan') and for plans that call the 22-role reduction decided and let the council shape only its execution (B: 'the need to reduce is the board's decision'; D: 'requested while it can still change the decision's execution'). Art. 25(2) WOR asks for substantial influence on the decision, so consider requiring that the reduction itself is presented as open to change."
+      },
+      {
+        "assertion": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+        "reason": "Checks only that the WMCO is flagged, not its timing. D notifies UWV and the unions only after the final decision and schedules settlement agreements a week later, inside the one-month waiting period; an assertion on notifying and consulting the unions before the final decision (and respecting the waiting period) would discriminate."
+      },
+      {
+        "reason": "No assertion checks that a leader takes responsibility and leadership takes the first cut; three samples do it in the announcement, one leaves it as a blank placeholder and never owns the outcome."
+      },
+      {
+        "reason": "Sample-specific: the timeline does not build in the one-month wait of art. 25(6) WOR that the plan itself cites, and the three-week advice window may be tight; both are hedged ('the works council's own timetable governs')."
+      }
+    ],
+    "overall": "Strongest sample: keeps the decision itself open to the works council, owns responsibility, plans around Christmas; minor gap is the short advice window in the timeline."
+  }
+}

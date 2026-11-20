@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "'redundancies must follow last in, first out (LIFO / turordning)', 'Up to 3 statutory exemptions (undantag): Under LAS, you may exempt up to 3 employees of particular importance for continued operations' and 'Agreed priority list (avtalsturlista): Only if you have a CBA, you can negotiate a custom selection list with the union'."
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "'MBL consultation: Consult the union(s) before deciding on the reorganization or redundancies (under MBL § 11 if you have a CBA; under MBL § 13 with any union that has members in the team if you don't).'"
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "Opening: 'in Sweden, you cannot select who to keep in a redundancy (arbetsbrist) based on performance metrics like tickets resolved and CSAT.' Note: 'they are a weak fit here... historical ticket volume rewards speed on easy work rather than complex escalation handling—and raw volume can create discrimination risks'."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": false,
+      "evidence": "Mentions the 9-month priority ('terminated staff with >12 months' tenure will generally have a 9-month priority right to be rehired') but no job security council or transition study support."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": false,
+      "evidence": "It doesn't question the cut. It sets 'baseline qualifications needed for the 21 remaining roles' and checks only existing 'vacant roles across the entire Swedish legal entity' as the legal omplacering step. Voluntary severance comes later as a lever. Nothing on whether nine dismissals are needed, whether AI deflection holds, or moving people into complex-case or new work."
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": false,
+      "evidence": "wc -w = 490, well over about 300 words, though it does open with the answer ('We need to pause on HR's proposal: in Sweden, you cannot select...')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 490,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 3 exemptions of 'particular importance' (correct LAS 22 § wording), turordning per agreement area, sufficient qualifications, MBL 11 § vs 13 § (13 § second paragraph applies 11 § to redundancy for employers without any CBA), varsel 2 months before the first termination takes effect (Arbetsförmedlingen), 9-month priority. All correct; '>12 months' tenure' simplifies 'more than 12 months in the last three years'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'retain key skills' refers to employees' skills."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "n/a: the prompt describes an AI-driven reduction, not a failure or disappointing result whose responsibility is in question"
+    },
+    "best_insight": {
+      "value": "It explains that senior employees stay as long as they have sufficient qualifications after a reasonable onboarding period, so they don't have to be top performers, and it separates the MBL 11 § and 13 § routes depending on whether Malmö has a collective agreement.",
+      "evidence": "'they do not need to be the top performers' and 'under MBL § 11 if you have a CBA; under MBL § 13 with any union that has members in the team if you don't'."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "Ambiguous between the statutory vacancy check (LAS 7 § omplacering, which F, G and H list as a compliance step after taking the 21 as fixed) and actually questioning the cut (verify AI deflection holds, move people into complex-case or new work, attrition and voluntary exits). I failed the compliance-only versions; reword to say the reply must question whether nine dismissals are needed, not only check existing vacancies."
+      },
+      {
+        "assertion": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+        "reason": "Close calls arise when a reply 'flags' tickets/CSAT and then rebuilds a weighted scorecard that still uses resolution rate and normalised CSAT as the selection criteria (B, F). Say explicitly that recommending CSAT- or resolution-based scoring as the selection method fails."
+      },
+      {
+        "reason": "No assertion checks the Arbetsförmedlingen notice (varsel): for 9 dismissals at least two months before the first affected person's employment ends. It is a hard legal step with a date that changes the timeline, and the strongest samples include it."
+      },
+      {
+        "reason": "No assertion checks the 'sufficient qualifications' rule (LAS 22 §), the lawful route through which competence matters under seniority order, or the discrimination risk of volume metrics for part-time staff and people returning from parental or sick leave. Samples F, G and H handle these well and get no credit for it."
+      }
+    ],
+    "overall": "The most legally detailed and accurate sample, but at 490 words it's too long, leaves out transition support, and treats the 21 as fixed."
+  }
+}

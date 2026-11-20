@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "Step 1: 'tell the board plainly that the release gates, testing standards, and operational readiness belong to you—not to the engineer who ran the runbook.' Board line: 'The 9-hour outage and €2 million loss are on me—our migration controls and rollback path failed.'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "Opens '**Don't let the platform team lead go.**' Carve-out: 'Verify there was no deliberate bypass of agreed controls—if there was, that's a separate conduct issue, handled through HR after the facts are in.' Why it makes systems less safe: firing 'teaches every remaining engineer to hide bad news and stay away from risky work' and 'makes the team afraid to surface risks.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless post-mortem with hard outputs. Focus on how the system allowed a 9-hour failure. End with 3–5 specific actions—such as a timed rollback rehearsal on production-scale data, automated pre-flight checks, or phased cutovers—each with an owner, a date, and a measurable pass/fail test.' It adds '14-day and 30-day review' dates."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "'give the board real accountability: the raw incident timeline and concrete system fixes, each with an owner, a deadline, and a test that proves it works.' Causes appear in the board line ('our migration controls and rollback path failed'). Proof that it worked: 'a 14-day and 30-day review to show completed fixes and rehearsal results.' The causes are stated in the script rather than listed as a separate deliverable, but all four parts are present."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk to the platform lead today. Tell them directly you aren't looking for a scapegoat and you need them to help fix the system. Check their fatigue after a 9-hour recovery.' The CTO also takes the blame at board level. Nothing is aimed at the wider team beyond that."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "First line: '**Don't let the platform team lead go.** Own the 9-hour, €2 million outage yourself as CTO...'. wc -w = 463 (≤ 550)."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 463,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The one legal claim ('In most European jurisdictions, dismissing someone over a single operational incident without prior process or misconduct also creates employment-law exposure') is hedged and broadly accurate: the NL 'reasonable ground' requirement, German KSchG and warning practice. No other checkable claims."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'The 9-hour outage and €2 million loss are on me'"
+    },
+    "best_insight": {
+      "value": "Before the meeting, it has the CTO check the approval history for any deliberate bypass of controls, so the defence of the lead rests on checked facts rather than assumption.",
+      "evidence": "Step 2: 'Review the incident timeline, migration plan, staging and rollback test logs, and approval history. Verify there was no deliberate bypass of agreed controls'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion catches over-promising to the board. Several samples promise that the fixes will 'prove this cannot happen again' (or 'never take 9 hours again'). A CTO can't honestly promise zero recurrence, and the board will hold them to it after the next incident. Consider an assertion that commitments are framed as measurable risk reduction (a recovery-time target, rehearsal results), not guarantees."
+      },
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "The example 'protection from public blame' is already covered by the board-level ownership in assertions 1-2, so this assertion can pass with no action aimed at the lead or the team. Consider requiring at least one concrete step toward them (a private conversation, recovery time for the weekend responders, a message to the wider team)."
+      }
+    ],
+    "overall": "Strong, concise and complete: it owns the outcome plainly, gives a blameless post-mortem with owners, dates and tests, and protects the lead. The weak spot is promising the board 'this can't happen again'."
+  }
+}

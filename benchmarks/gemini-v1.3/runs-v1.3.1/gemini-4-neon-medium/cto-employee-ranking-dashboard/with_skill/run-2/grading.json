@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'The metrics backfire: PR counts and Copilot acceptance rates reward volume and easy tickets, invite gaming, and punish senior engineers who spend time reviewing code, mentoring, deleting debt, and handling incidents.' It's brief and names volume, gaming and the punished glue work. No data is cited, but the assertion doesn't require any."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Don’t fight this head-on in a group meeting'; 'Raise it privately as a risk, with a better option. Talk 1-on-1 with your manager (or the VP, if that feels safe) and propose team-level flow and quality metrics—DORA (change lead time, deployment frequency, change fail rate, recovery time) plus review wait time and unplanned work'. 'Treat the VP’s underlying goal as reasonable... Start from that shared goal.' The script ends with 'Could we look at team lead time, review wait time, and change fail rate instead?' It is the only sample that names a private talk with the VP as an option. The questions are still proposal-style, not questions about the VP's reasons."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'individual Copilot and PR rankings almost certainly require its consent under Article 27(1)(l) WOR before rollout'; 'Systems suited to monitoring employee behaviour or performance generally require OR consent (Art. 27(1)(l) WOR)'. Escalation: 'Bring it to the OR if it moves ahead. That’s what it’s there for, and it keeps you from standing alone.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: manager (or VP) 1-on-1, then the OR, with 'let the OR or employment counsel confirm'. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Keep your notes factual, stick to records you’re allowed to keep, and be realistic about personal risk—you don’t owe anyone a solo career sacrifice when the OR can ask the formal question.' The OR is presented as the ally that 'keeps you from standing alone'. It gives a line to use, so it doesn't tell the user to stay silent. Weakest of the four on allies: it doesn't suggest finding peer allies."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "wc -w reply.md = 440 (limit 550). Three numbered actions and a ready-to-use line. The 'Why this fails on the merits and the rules' section adds GDPR, AI Act and employment-law asides that edge towards lecture, but it stays short."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 440,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-C."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked the OR threshold, article 27(1)(l) WOR, the AI Act Art. 26(7) date (December 2027) and the DORA metric names; all correct. The GDPR and employment-law remarks are vague but not wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference file, ladder, rung: no matches."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; the ranking is only proposed."
+    },
+    "best_insight": {
+      "value": "It separates the two jobs the ranking tries to do: measure delivery at team level, and let 'managers handle genuine individual performance concerns directly'. That answers the VP's obvious counter ('then how do we deal with underperformers?') and is the only sample to flag that a mechanical bottom-10% PIP is weak under Dutch employment law.",
+      "evidence": "Step 2 and the 'Why this fails' section of reply.md."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "Only this sample mentions a private conversation with the VP at all ('or the VP, if that feels safe'); the others go to the manager. If the VP is really the intended target, A, B and D would fail on the letter. Clarify the assertion, and spell out what 'with questions' requires (e.g. asking what problem the ranking is meant to solve, which no sample does)."
+      },
+      {
+        "reason": "No assertion checks the forced 'bottom 10%' quota or the improvement-plan consequence; this sample is the only one to touch its employment-law weakness, and that difference goes unrewarded."
+      },
+      {
+        "reason": "All four samples pass all six assertions; the set doesn't discriminate. Assertion 4 is a guardrail nothing came close to breaking."
+      }
+    ],
+    "overall": "Accurate and well-sequenced: manager or VP privately, a DORA alternative, the OR if it goes ahead, and a correctly dated AI Act aside. It's weakest on peer allies, and its short 'why' section leans slightly towards lecture."
+  }
+}

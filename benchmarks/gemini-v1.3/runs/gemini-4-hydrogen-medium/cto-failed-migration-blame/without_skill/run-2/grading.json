@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": false,
+      "evidence": "The board line is '\"ultimate accountability for our engineering standards and risk controls sits with me as CTO—not just the person at the keyboard.\"' 'Not just' keeps the lead in the blame frame as a co-owner. It doesn't say the responsibility is the CTO's rather than the lead's."
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": false,
+      "evidence": "It explains well why scapegoating makes systems less safe ('It destroys psychological safety and guarantees future cover-ups'), but the recommendation is hedged: 'Do not fire the platform team lead—at least not right now, and almost certainly not as the primary response to this incident.' The board package then includes an 'Honest Talent Assessment': 'If they genuinely lack the judgment or rigor for the role, manage that through a structured transition or performance plan'. So an exit stays on the table as a response to this incident on capability grounds, not only for misconduct or recklessness."
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": false,
+      "evidence": "'Run a rigorous, two-part postmortem' with 'Every finding needs a specific control, an owner, and a date'. System focus, owners and dates are all present. But it is never framed as blameless, and the same 7-day process ends with an 'Honest Talent Assessment' of the lead for the board, which mixes individual judgment into the incident review."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "Days 5–7 package: '1. Plain-English Root Cause: What happened, without hiding behind jargon. 2. RTO/RPO Commitment... 3. 30/60/90-Day Guardrail Roadmap: Concrete milestones with verification dates (e.g., \"By [Date], we will execute a live restore drill proving <45 min recovery\")'."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk to the platform lead privately. Make it clear you are not looking for a scapegoat (assuming no misconduct), that you need their full candor to understand what happened, and that you will handle the board.' Nothing is aimed at the wider team."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "It opens with the recommendation (hedged), but wc -w = 831, far over 550."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 831,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No legal or research claims. 'bring Recovery Time Objective (RTO) down from 9 hours' confuses the actual recovery time with the objective. That's a terminology slip, not counted as a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'owning the failure as CTO' and 'ultimate accountability ... sits with me as CTO', though hedged with 'not just the person at the keyboard'."
+    },
+    "best_insight": {
+      "value": "It tells the CTO to say so to the board if the lead was set up to fail by under-resourcing or missing org-wide standards, which puts leadership's resourcing choices into the root cause.",
+      "evidence": "'If the platform lead was set up to fail by under-resourcing or missing org-wide standards, say so.'"
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+        "reason": "Consider stating explicitly that a capability-based exit triggered by this incident ('structured transition', 'not right now') counts as firing in response to the incident. Otherwise hedged answers can pass on the letter of the misconduct carve-out."
+      },
+      {
+        "assertion": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+        "reason": "This assertion separates the samples well, but only on the word 'blameless'. Consider making the substance explicit: the post-mortem is kept separate from any conduct or disciplinary review of the person who ran the change."
+      },
+      {
+        "reason": "No assertion catches over-promising to the board. Several samples promise that the fixes will 'prove this cannot happen again' (or 'never take 9 hours again'). A CTO can't honestly promise zero recurrence, and the board will hold them to it after the next incident. Consider an assertion that commitments are framed as measurable risk reduction (a recovery-time target, rehearsal results), not guarantees."
+      },
+      {
+        "assertion": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+        "reason": "Two checks are bundled: every long sample here opens with the recommendation, so this assertion only measures length. Split 'opens with the recommendation' and the word limit into separate assertions so each one discriminates."
+      }
+    ],
+    "overall": "The weakest sample: ownership is shared ('not just the person at the keyboard'), firing stays open ('not right now', 'structured transition'), the post-mortem isn't blameless, it promises a failure 'will never take 9 hours' again, and it runs 831 words."
+  }
+}

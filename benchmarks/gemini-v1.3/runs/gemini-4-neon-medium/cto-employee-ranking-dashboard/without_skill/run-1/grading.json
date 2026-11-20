@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "Section 4: 'Goodhart's Law: PR counts incentivize splitting 1-line changes into 10 tiny PRs and rubber-stamping reviews. Copilot acceptance rate incentivizes accepting verbose, buggy, or insecure suggestions'; 'It punishes senior engineering work'; 'Weekly cadence is pure noise'."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": false,
+      "evidence": "The first action is to go to the works council, not a private conversation with the VP or manager: '2. Quietly alert your Ondernemingsraad... Have a quiet 1-on-1 coffee or send a confidential note to an OR member you trust... Let the OR be the \"bad guy\"... That keeps the target completely off your back.' The EM/HR heads-up (step 3) and the DORA off-ramp shared 'privately with your EM' (step 4) only come afterwards, in an order the reply calls 'lowest personal risk to highest leverage'."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": false,
+      "evidence": "It states the rule in detail and correctly: 'Under WOR Article 27(1), management cannot introduce this without the OR's prior consent', listing (g), (k) and (l) and nullity under art. 27(5). But the works council is the first move, not the escalation if a private conversation doesn't work."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: OR, EM, HR, union (FNV/CNV), legal-expenses insurance. No vertrouwenspersoon, no leaks or sabotage; 'Don't panic-game the metrics'."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "Section 5: 'Keep a lightweight weekly brag/impact doc'; 'Save copies of any written announcements about the ranking policy'; 'if you are ever handed an unfair PIP... don't sign it on the spot—ask for time to review and consult your OR, union... or rechtsbijstandverzekering'. Allies: 'align on with a couple of respected Senior/Staff peers'."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "791 words (wc -w), well over the 550 limit, plus an 867-word templates document."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 791,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 867,
+      "evidence": "wc -w of the other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Verified against the WOR text: 27(1)(g) personeelsbeoordeling, (k) processing and protection of personal data, (l) monitoring facilities; 27(5) nullity invoked within one month. The AP's mandatory-DPIA list includes 'Controle werknemers' (systematic monitoring of employees). Employee consent is generally not a valid GDPR basis because of the power imbalance (EDPB). BW 7:669(3)(d) is the underperformance ground."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposed policy, not a bad outcome that has already happened, so there is no result for a leader to own."
+    },
+    "best_insight": {
+      "value": "Points to the AP's mandatory-DPIA list for systematic employee monitoring, which gives a second, privacy-based checkpoint that doesn't depend on the works council.",
+      "evidence": "Judgement from reading the reply and its documents."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With the VP privately first' is ambiguous: most samples (A, B, D, H) send the user to their own manager first, which is the normal route for a senior engineer at a 300-person company. I counted the manager as the route to the VP when the reply clearly aims at the VP. Consider rewording to 'with their manager or the VP privately first'."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "This bundles the legal fact with the escalation order. E and G state the WOR rule more precisely than anyone (27(1)(g), (k), (l), nullity under 27(5)) but send the user to the works council first, as a way round the VP. Splitting it into 'states the article 27 consent rule' and 'treats the works council as escalation, not the first move' would separate these cases."
+      },
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "All eight samples pass this one, so it doesn't discriminate. A sharper version could require the reply to say what to measure instead of individual activity and why (team outcomes paired with a quality measure)."
+      },
+      {
+        "reason": "No assertion checks that cited evidence and attributions are accurate. Sample C puts an unsupported claim that 'GitHub's own guidance' rules out acceptance rate for individual evaluation into a ready-to-send email to the VP. The factual_errors extra check catches this, but it doesn't count towards the pass rate."
+      }
+    ],
+    "overall": "Legally the most precise sample, but it sends the user to the works council first as a way round the VP, and the reply is too long to act on."
+  }
+}

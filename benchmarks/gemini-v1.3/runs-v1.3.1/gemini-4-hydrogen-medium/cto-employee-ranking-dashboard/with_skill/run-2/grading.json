@@ -1,0 +1,84 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'They punish glue work: Engineers who review PRs, mentor, fix incidents, or delete dead code merge fewer PRs.' 'They measure usage, not speed: Accepting AI suggestions blindly raises rework. In a 2025 METR randomised trial, experienced open-source developers took 19% longer with AI tools even though they felt faster.' The document adds 'It rewards volume over quality' and 'it's easy to game with tiny PRs'."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Don't fight the VP head-on'; 'Start 1-on-1 with your manager or skip-level, not in a group channel. Frame yourself as helping the VP get real visibility'; 'Offer a concrete alternative. Propose a team-level view: DORA metrics (change lead time, deployment frequency, change fail rate, recovery time) plus PR review wait time and unplanned work'; 'Ask the governance question neutrally... ask if HR and the OR have signed off.' The script ends with 'Could we show them a team-level DORA and review-bottleneck view instead?' The document adds a full question-to-metric table. Passed on spirit. The private route is the manager or skip-level, not the VP by name, but this sample makes the best use of questions in the private conversation."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'using per-person Copilot and PR data to put the bottom 10% on improvement plans likely requires OR consent under Article 27(1)(l) of the Works Councils Act (WOR)'. Escalation: '(If leadership pushes ahead anyway, quietly flag it to an OR representative—sticking strictly to facts, with no speculation about motives.)' The document repeats the consent right under 'Governance in the Netherlands'."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: manager or skip-level 1-on-1, HR, then an OR representative. 'Quietly flag it to an OR representative' uses the legitimate co-determination channel; it isn't a leak. No vertrouwenspersoon or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Don't carry it alone. Align with one or two other senior engineers or engineering managers before raising it, and keep any notes factual and within data-protection rules.' It also frames the move so the user is 'helping the VP get real visibility, not blocking accountability', with the OR as 'a neutral, process-based way to pause it without looking \"difficult.\"' It gives a line to use, so it doesn't tell the user to stay silent."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "wc -w reply.md = 412 (limit 550). Four numbered actions, a ready-to-use line and an attached one-pager (719 words, not counted toward the limit) with a metrics table and an adaptable message."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 412,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 719,
+      "evidence": "wc -w sample-D/engineering-metrics-alternative.md"
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor error, in the document: 'Automated systems used to monitor or evaluate workers are classified as high-risk under Annex III of the EU AI Act' overstates the rule; Annex III covers AI systems, not automated systems generally. Everything else checked out: the OR threshold, article 27(1)(l) WOR, METR 19%, the five DORA metrics, the Art. 26(7) date of 2 December 2027 and the cited sources."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference file, ladder, rung: no matches. (The reply links a local file path, file:///G:/agy-bench/..., which is an environment artefact, not a skill leak.)"
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; the ranking is only proposed."
+    },
+    "best_insight": {
+      "value": "The attached one-pager maps each question the VP probably has (are we shipping fast and safely, where is work stuck, how much goes to unplanned work, is AI actually helping) to team metrics, including a before-and-after-rollout way to judge Copilot ROI, so the user can hand over a ready-made alternative instead of just an objection.",
+      "evidence": "Section 2 table of engineering-metrics-alternative.md."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "The private route here is 'manager or skip-level', not the VP by name; I passed it on spirit. Clarify whether manager-first counts, and what 'with questions' requires: this sample has a real process question ('ask if HR and the OR have signed off'), but none asks the VP what problem the ranking is meant to solve."
+      },
+      {
+        "reason": "No assertion checks the accuracy of legal claims in attached documents. Here the document overstates the AI Act's Annex III scope ('automated systems'), and the assertions can't catch it."
+      },
+      {
+        "reason": "No assertion covers the forced 'bottom 10%' quota itself (someone lands on a PIP every cycle regardless of actual performance). The document touches the trust and retention cost, but no assertion rewards it."
+      },
+      {
+        "reason": "All four samples pass all six assertions; the set doesn't discriminate."
+      }
+    ],
+    "overall": "The most complete package: a tight reply with the best private-conversation questions, specific allies, the OR as a clear fallback, and a useful forwardable one-pager. Marred by one overstated AI Act claim in the document."
+  }
+}

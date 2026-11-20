@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": false,
+      "evidence": "Leaders go first (\"Leaders first: executive and board pay and bonuses cut visibly, before anyone else.\") but the reply never has leadership own responsibility for the flop, and never says leaders take the largest cut. The assertion requires both."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": false,
+      "evidence": "Strong pairing measures are present (\"Stop the bleeding: end spend on the flop beyond break-even\"; \"Fund the bridge: work-for-hire, ports, or publisher milestone funding for the 2028 titles\"). But the pay cut is framed only by the one word \"visibly\". Nothing says it is a signal of trust rather than savings, and with no ownership of the flop there is no trust message for it to carry. That is a vague nod, so it fails."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "\"€40m cash, minus a €12m loss, is not a €28m runway. How much of the loss is cash and how much is write-off? That decides everything.\" and \"Is the flop still costing money (live-ops, marketing, support)?\" These test whether the loss recurs. The trigger is tied to the pipeline: \"if cash runway to 2028 drops below an agreed level, say 18 months\". On the cut: \"don't cut 15% on Thursday... It signals discipline without closing the gap, and it hits the people who must ship the two 2028 projects.\""
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "\"you move to involuntary reductions, once, decently, with the works council involved early and UWV procedures followed. Check with employment counsel.\" The OR is mentioned only for the fallback. It is not mentioned for the redeployment or the voluntary exits."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "Cites no real-world company example and makes no claim that a CEO pay cut caused a recovery. Satisfied vacuously (see eval_feedback)."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "wc -w = 312 (< 350). First sentence: \"Recommendation: don't cut 15% on Thursday.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 312,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 38 × €80k ≈ €3.04M; 10-15% of 250 = 25-37 (reply says 25-35, labelled estimate; consistent with TIGA/Aon Hewitt 11-14.5%); works council and UWV procedures for involuntary reductions (correct). 'Rehiring and lost knowledge usually cost more than the saving' is an unsupported generalisation but states no wrong rule or number. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of 'skill', reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that the flop is leadership's responsibility. Leaders cut pay 'visibly' but don't own the result."
+    },
+    "best_insight": {
+      "value": "It steelmans the board's best objection ('cuts are certain; attrition and new funding are not') and answers it with a pre-agreed trigger. It is also the only sample to put revenue first as a way to bridge to 2028 (work-for-hire, ports, publisher milestone funding).",
+      "evidence": "\"Steelman for the board: cuts are certain; attrition and new funding are not. Answer: the trigger makes the fallback explicit\""
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "Vacuously satisfied in all four samples: none cites a real-world example (no Nintendo/Iwata, no JAL), so the check passes without testing anything. Consider asserting that the reply either cites an accurate example with its limits or makes no causal claim, and scoring the presence of a well-used example separately."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "Passes both a reply that brings the OR in now, at the problem stage, with the real numbers (art. 25 WOR timing) and one that only says OR advice applies 'if cuts do come later'. Requiring involvement before the plan is final would discriminate."
+      },
+      {
+        "reason": "All four samples lean on 10-15% natural attrition to deliver most of the saving. That is in line with old UK games-industry survey figures (TIGA/Aon Hewitt: 11-14.5% voluntary turnover in 2013-2014), but voluntary attrition usually falls when the job market is weak, as it has been in games since the 2023-2025 layoffs. No assertion checks whether the reply flags that the attrition saving is uncertain or slow (people leave across the year, so year-one savings are roughly half the run-rate)."
+      }
+    ],
+    "overall": "4/6. Good financial reasoning, a steelman and a revenue bridge, but leadership never owns the flop and the pay cut isn't framed as a trust signal."
+  }
+}

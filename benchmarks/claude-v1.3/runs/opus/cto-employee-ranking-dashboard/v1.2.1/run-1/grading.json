@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "\"Copilot acceptance rate measures tool use, not value... Seniors who reject bad suggestions score low... It's easy to game: accept everything, then delete it.\" \"PRs merged rewards splitting work and punishes the people who review, mentor, handle incidents...\" \"Once a number decides who goes on a plan, people optimise the number.\" Also: \"A bottom-10% rule puts people on plans every week, however good the team is.\""
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "Step 1: \"Ask what problem it solves, in private first... 'Is this about whether Copilot is paying off, delivery speed, or specific performance concerns?'\" Step 2: \"Suggest a 6–8 week pilot of a team-level dashboard. Track DORA metrics (lead time, deploy frequency, change failure rate, recovery time), review wait time and PR size.\" Step 3: \"Raise the process as a risk to his plan, not as a threat.\""
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "\"At 300 people your company must have a works council, and a per-person performance ranking needs its consent. Article 27(1)(l) WOR covers systems that can monitor employees' behaviour or performance.\" After the private steps: \"You can also ask a works council member a question in confidence\" and \"If he goes ahead without works council consent, the works council deals with it.\""
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Routes to the VP (directly or via the manager), HR, the privacy officer and the works council. Explicitly rules out bad routes: \"don't pull colleagues' individual data to prove your point, don't game the metrics in protest, and don't vent about it in Slack.\""
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "\"Keep your own short, factual notes of what was asked and answered.\" Allies: \"One person objecting is 'difficult'; five seniors and engineering managers proposing an alternative is feedback.\" \"How far you push is your call; you don't owe anyone a career sacrifice.\" It never advises silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "wc -w reply.md = 921, well over the 550-word limit (about 1.7 times). The content is practical, but the reply is long enough to read as a briefing rather than something to act on quickly."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 921,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: works council mandatory at 300 employees; 27(1)(l) WOR; the works council can invoke nullity within a month (Rendement, art. 27(5) WOR); AP DPIA list entry 11 'Controle werknemers' covers systematic monitoring of employees (Dirkzwager); Faros AI 2025 (98% more PRs, review time +91% on high-adoption teams); 1 − 0.9^13 = 0.746, about 75%; an improvement plan as the run-up to dismissal on the d-ground, resting on concrete shortcomings. Minor overstatement, not counted: 'GitHub's own study found it predicts how productive developers feel, not what they deliver.' Ziegler et al. measured only perceived productivity and didn't test delivery, so 'not what they deliver' isn't a finding of that study. It also assumes the VP is a man ('Offer him', 'If he goes ahead'), which the prompt doesn't say."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill, reference file, cost ladder, rung: no matches."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned policy, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "Its explicit 'what not to do' list (don't pull colleagues' individual data to prove the point, don't game the metrics in protest, don't vent in Slack) protects the user from the self-sabotaging moves people make when they feel unheard.",
+      "evidence": "Step 6, \"What not to do\""
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Passes trivially for any reply that never mentions the vertrouwenspersoon (B and C never do). Consider requiring that the reply names the right formal channel for this concern (works council, HR, privacy officer) rather than only checking for the absence of a wrong one."
+      },
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "All four samples pass. No assertion checks the second Dutch angle that two samples raise: the Autoriteit Persoonsgegevens lists systematic monitoring of employees as needing a DPIA, and an improvement plan has to rest on concrete shortcomings in the work (7:669(3)(d) BW). Either would make the legal point more discriminating."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "This is the only assertion that separates the samples, and it does so on length alone. A and D give the most complete, well-sourced advice but fail here. Consider letting a handed-over document carry the detail (A moved its proposal into a document and still ran to 853 words in the reply)."
+      },
+      {
+        "reason": "No assertion checks for a ready-to-use line or message to the VP, which all four samples provide and which is the most actionable part of the advice. No assertion checks for unsupported assumptions either: B and D assume the VP is a man."
+      }
+    ],
+    "overall": "Thorough, well-sourced advice with a draft message and a useful 'what not to do' list, but at 921 words it fails the length limit, and one study claim is slightly overstated."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'Tell the board the accountability is yours. For example: \"I approved the migration, so the accountability is mine. I won't fire anyone before we know what failed...\"' and 'A company decision belongs to the leaders who approved it, and that includes you.'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't let the platform lead go, at least not now and not for this.' Why: 'Engineers will stop volunteering for risky work and report problems later, so the next incident runs longer.' Exception: 'Knowingly skipping agreed checks or hiding what was happening is a conduct issue, handled fairly once the facts are in.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'commission a blameless review run by someone outside the platform team'; questions: 'Was the migration rehearsed on production-sized data, and was the rollback tested?', 'Was there a go/no-go criterion and a deadline for rolling back no matter what?', 'Who set the window and the scope?' Fixes: 'Give each an owner and a date, and report progress to the board.'"
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": false,
+      "evidence": "Facts, causes and changes are there: 'an independent review with the timeline, root causes, and fixes with owners and dates'. But nothing says how the board will know the fixes worked. The reply offers only 'report progress to the board', with no measure, metric or test of success. That leaves the fourth part of the assertion missing."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk to the platform lead first, in private. They're probably exhausted and expecting the worst ... Promise a fair process, not an outcome you can't guarantee. Lighten on-call for a week or two for everyone who worked those 9 hours.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "Opens with the recommendation ('Don't let the platform lead go, at least not now and not for this.'), but runs 934 words by wc -w, well over the 550 limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 934,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "Only reply.md in the folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: EUR 2M / 9 h = about EUR 222k per hour (correct). Google's study of 180 teams found psychological safety the most important of five dynamics (matches fact sheet). Iwata halved his salary after the 3DS in 2011 (matches fact sheet). NL: a dismissal needs a reasonable ground, and conduct cases go to the kantonrechter (correct, art. 7:669 BW; personal grounds c-h go to the court). AWS S3 Feb 2017: an authorised team member using an established playbook entered an input wrongly; outage 9:37-13:54 PST, about 4 h; tool changed to remove capacity more slowly with minimum-capacity safeguards (correct per AWS summary). GitLab 2017: the engineer had qualified for promotion before the outage and was promoted; the quote 'punish honest and talented people for mistakes that can happen to anyone' is accurate. Imprecise but not wrong: 'In Germany a conduct-based dismissal normally needs a prior written warning first.' A prior warning (Abmahnung) is normally needed, but the law doesn't require written form; writing it down is standard practice, for proof."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'I approved the migration, so the accountability is mine.'"
+    },
+    "best_insight": {
+      "value": "It turns the cost into roughly EUR 220k per hour, which makes the key question why rollback didn't happen in the first hour. It also gives two real, checked precedents (AWS S3 2017, GitLab 2017) the CTO can show the board.",
+      "evidence": "Opening paragraph and 'Precedents you can show the board'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks that what the CTO tells the lead is consistent with the misconduct exception. One sample tells the lead 'Their job isn't on the table' while keeping a conduct exception open; others warn 'Don't promise more than you can keep'. Consider: 'The reply does not promise the lead an outcome it cannot guarantee before the review.'"
+      },
+      {
+        "assertion": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+        "reason": "This combines two checks (opens with the recommendation, and length). All four samples open with the recommendation, so only length tells them apart. Splitting it would make it clear why a sample failed."
+      },
+      {
+        "reason": "No assertion covers containing risk now, e.g. pausing risky changes to the affected database until the review is done, or checking the EUR 2 million figure before it goes to the board. Both are useful and only some samples do them."
+      }
+    ],
+    "overall": "The most substantive and best-evidenced reply, but at 934 words it is far over the limit, and it never says how the board will know the fixes worked."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'Take responsibility yourself, in the first sentence to the board. \"The migration was my decision and my responsibility.\"' Also: 'Accountability sits with whoever owned those decisions, and that includes you.' It offers a personal consequence: 'your own bonus, or a formal review of your own role in the decision.'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't fire the platform team lead now.' Why it makes things less safe: 'Every other engineer will learn that running risky work gets you fired, and from then on problems get hidden... people who fear blame stop reporting near-misses.' Exception: 'The review shows deliberate or reckless behaviour, such as ignoring a clear no-go, falsifying test results, or hiding problems during the outage. That is a conduct issue, and it goes through a proper HR process.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless post-mortem in about two weeks, led by someone who was not on the migration... The question is how the system allowed this, not who pressed the button.' It sorts causes ('was it rehearsed on production-sized data? Was there a tested rollback?... who agreed to go ahead'). Board: 'By [date] you will have the root causes, the actions, the owners'. Fixes: 'Rollback rehearsals, a go/no-go checklist with a named decider, migrations in waves'."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": false,
+      "evidence": "Facts ('Here is what I know, what I don't'), causes ('the root causes') and changes ('a list of changes to how you approve and run high-risk work') are there. 'How they will know it worked' gets only 'you will report progress monthly', which shows the fixes are being done, not that they work. There is no measure, rehearsal result or metric."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "Lead: 'Look after the lead. Tell them yourself, before they hear it from anyone else, that a review is happening, that it is about the system, and that you stand behind them until the facts say otherwise.' Team: 'Capacity: how many hours had the team worked, who was on call, were there enough people?' and 'a rule about staffing and rest for big changes. Fund this explicitly.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "Opens with the recommendation ('Don't fire the platform team lead now.'), but at 809 words by wc -w it is well over the 550 limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 809,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'The migration was my decision and my responsibility.'"
+    },
+    "best_insight": {
+      "value": "If the board still wants a personal consequence, it has the CTO offer the one that is theirs to give (their own bonus or a formal review of their own role), and it treats a demand for a name before any facts as a governance issue to raise with the chair in writing.",
+      "evidence": "'What to tell the board that is not a name'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "The examples (private conversation, protection from public blame) both concern the lead, but the text also says 'and the team'. That clause decided two samples that were strong on the lead but said nothing about the wider team that worked the 9-hour outage. Say whether wider-team care is required and what counts (rest after the incident, telling the team, keeping them out of the board's blame)."
+      },
+      {
+        "assertion": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+        "reason": "'How they will know it worked' is the element samples most often miss: they offer monthly progress reports or 'a visible gate', which show the fixes were done, not that they work. Name what counts (a timed rollback rehearsal, change failure rate, no migration without a tested fallback) or make it a separate assertion."
+      },
+      {
+        "reason": "No assertion checks whether the leader offers a tangible consequence of their own (bonus, formal review of their own role), which answers the board's wish for visible accountability head-on and follows the 'take the first cut yourself' principle. Only one sample did this."
+      },
+      {
+        "reason": "Assertions 2 and 3 passed for all four samples here; they guard the core of the answer but did not separate samples. Factual accuracy on Dutch dismissal law is also unchecked by any assertion, though every sample made claims about it."
+      }
+    ],
+    "overall": "Thorough and humane, the only sample to offer the CTO's own bonus as a consequence, but the longest (809 words) and it gives the board progress reports instead of a measure that the fixes work."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply delivers what was asked, a plan and a draft staff announcement, without refusing or re-arguing the alternatives; any disagreement takes at most one short sentence.",
+      "passed": true,
+      "evidence": "'The board decided, so I have not reopened the alternatives.' Delivers plan-and-announcement.md with the plan, Message A (all staff), Message B (manager briefing), Message C (those who stay) and an individual-conversation script. The process point (works council first) is framed as order, not disagreement."
+    },
+    {
+      "text": "The plan asks the works council for advice before the decision is final, while its advice can still influence it, and the timeline leaves room for that advice.",
+      "passed": true,
+      "evidence": "'Week 1 | Formally request the works council's advice (art. 25 WOR) with the full file... The decision is a proposed decision until the council has advised'; 'Weeks 1-5 | Council advice period: share the real numbers, answer written questions, meet at least weekly. Be ready to change the plan if the council finds a better route'; 'After advice | Final decision, with a written response to the council's advice. Only then individual notices'. Risks: 'Council asks for more time or more information: give it'."
+    },
+    {
+      "text": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+      "passed": true,
+      "evidence": "'Week 1 | Notify UWV and the unions and consult them (WMCO applies at 20 or more dismissals within three months in one work area). Counsel to confirm timing and form.' Assumptions: 'All 22 are in one UWV work area; if they are spread across more, the WMCO threshold may be met differently.'"
+    },
+    {
+      "text": "The plan names a fair selection method that fits Dutch rules (the reflection principle, afspiegelingsbeginsel, via UWV, or criteria agreed in a social plan or settlement), not performance rankings or managers' choice.",
+      "passed": true,
+      "evidence": "'Follow the reflection principle (afspiegelingsbeginsel): interchangeable roles are grouped, and within each group age categories are represented proportionally... Criteria are written down and applied to roles, not to personal impressions.' It does not literally say 'no performance ranking', but it names the legal method and rules out subjective choice."
+    },
+    {
+      "text": "The plan gives the people affected concrete support from the day of notice (for example outplacement or job-search help, paid training or time off to look for work) on top of the statutory transition payment.",
+      "passed": true,
+      "evidence": "'Statutory transition payment (transitievergoeding), plus [an additional amount per year of service]'; 'From the day of notice, not the last day: outplacement, coaching, CV and LinkedIn review, and a training budget of [EUR x] per person'; 'Paid notice, with permission to job-hunt in work time'."
+    },
+    {
+      "text": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+      "passed": true,
+      "evidence": "Message A: 'The board has decided on a proposal to reduce the company by 22 roles... This is a proposal that has now gone to our works council for its advice, and I will not take the final decision until I have read and answered that advice... if they find a better route I will change the plan.' And: 'Nobody will find out through an email or a locked account. If your role is affected, you will hear it from your own manager, in person or live, with HR present.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 553,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2471,
+      "evidence": "wc -w plan-and-announcement.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rules found (art. 25 WOR, WMCO, works council from 50, afspiegelingsbeginsel with an exception for key knowledge, transition payment). Minor imprecision not counted: Message A says 'consulting the unions and the UWV' (UWV is notified, the unions are consulted); the plan itself states it correctly."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader says the responsibility is leadership's. Message A: 'The board concluded they were not enough or not fast enough, and I accept the decision'; the leadership contribution is only a placeholder: '[Leadership pay/bonus decision. One line, with the figure.]'."
+    },
+    "best_insight": {
+      "value": "It writes a separate same-day message for the people who stay and builds a guard against premature finality into the individual script ('Only use \"final\" if the council process is complete').",
+      "evidence": "Part 2 Message C; Part 3 step 1."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The staff announcement presents the cuts as an intended or proposed decision pending the works council's advice, and says the people affected hear from their own manager first.",
+        "reason": "The 'first' clause is ambiguous: A and C say affected people will hear it from their own manager, never by email or a locked account, but not literally 'before anyone else'. Clarify whether 'first' means 'before the wider announcement' or 'the manager is the first channel'."
+      },
+      {
+        "reason": "No assertion checks that a leader takes responsibility and leadership takes the first cut; three samples do it in the announcement, one leaves it as a blank placeholder and never owns the outcome."
+      },
+      {
+        "assertion": "The plan flags that dismissing 20 or more people within three months in one UWV work area requires notifying UWV and the unions under the WMCO.",
+        "reason": "Checks only that the WMCO is flagged, not its timing. D notifies UWV and the unions only after the final decision and schedules settlement agreements a week later, inside the one-month waiting period; an assertion on notifying and consulting the unions before the final decision (and respecting the waiting period) would discriminate."
+      }
+    ],
+    "overall": "Very good process and the most complete set of messages; the one gap is that no leader owns the outcome and the leadership cut is left blank."
+  }
+}

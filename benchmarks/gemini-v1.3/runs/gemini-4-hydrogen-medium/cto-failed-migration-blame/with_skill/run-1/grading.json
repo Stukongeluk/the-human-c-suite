@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "Step 1: 'State plainly that the migration, its sign-off, and the risk controls sat under your remit as CTO.' Board line: 'This outage happened on my watch, and I am accountable for it.' Memo: 'I am accountable for this outcome... I recommend against letting go of the platform team lead.'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Unless the post-mortem uncovers deliberate policy violation or gross negligence (which belongs in a separate HR process), keep them in place.' Why less safe: firing 'teaches the rest of engineering that running high-risk work ends careers, and leaves the actual failure modes... untouched'. The memo adds that it 'leads teams to hide problems rather than surface them early.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless post-mortem within 48 hours... answer why staging didn't catch the failure, why rollback took 9 hours, and which readiness gates were missing.' The memo's table gives each fix an owner and date, e.g. 'Enforce timed rollback rehearsal for all schema/DB migrations | Platform Lead | +2 weeks'."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "Memo section 2 lists what the post-mortem answers, including 'What was the exact business and customer impact? (Reconciling the ~€2M estimate with Finance...)'. The table includes 'Publish full incident timeline and root-cause analysis' and a 'Verification Measure' column, e.g. 'Documented drill proving rollback completes within agreed RTO'."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Support the platform lead and team. Thank them for the recovery effort, shield them from blame, and involve them directly in building the safeguards.' It names no private conversation, but it covers the lead and the team."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "First line: 'Push back on firing the platform team lead, own the 9-hour, €2 million outage yourself as CTO...'. wc -w = 364."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 364,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 640,
+      "evidence": "wc -w board-incident-response.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The memo says DORA research across 'thousands of software organisations' shows blameless cultures 'surface risks earlier and recover faster'. That overstates DORA: it surveys individual professionals, and 'surface risks earlier' is part of how a generative culture is defined, not a measured outcome. But the direction is right: DORA links generative culture to delivery performance, which includes time to restore, and in 2022 to higher reliability. The hedged jurisdiction / works-council remark is accurate; Germany's §102 BetrVG hearing applies to individual dismissals."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'This outage happened on my watch, and I am accountable for it.'"
+    },
+    "best_insight": {
+      "value": "The memo reconciles the ~€2M estimate with Finance and separates the go/no-go sign-off from the person who executes the migration, so the board gets a verified number and a structural control rather than a promise.",
+      "evidence": "Memo: 'Reconciling the ~€2M estimate with Finance across lost revenue, SLA credits, and recovery cost' and 'Separate \"go/no-go\" sign-off from migration execution'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion catches over-promising to the board. Several samples promise that the fixes will 'prove this cannot happen again' (or 'never take 9 hours again'). A CTO can't honestly promise zero recurrence, and the board will hold them to it after the next incident. Consider an assertion that commitments are framed as measurable risk reduction (a recovery-time target, rehearsal results), not guarantees."
+      },
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "The example 'protection from public blame' is already covered by the board-level ownership in assertions 1-2, so this assertion can pass with no action aimed at the lead or the team. Consider requiring at least one concrete step toward them (a private conversation, recovery time for the weekend responders, a message to the wider team)."
+      }
+    ],
+    "overall": "Complete and concise, and the memo is board-ready with owners, dates and verification. It slightly overstates DORA and promises 'this cannot happen again'."
+  }
+}

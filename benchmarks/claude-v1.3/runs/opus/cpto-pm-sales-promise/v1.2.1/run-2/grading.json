@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'Let the team estimate, and make \"at capacity\" a number': ranges 'based on how long similar work took before', 'Show where the team's time already goes: current roadmap, unplanned work and incidents, support, tech debt', and 'We have no spare team-weeks this quarter. These three need 8 to 12, so 8 to 12 weeks of something else moves.' It opens with 'Don't say yes and don't say no yet.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "A four-option table: 'A. All three, roadmap slips ... Name exactly which items move and who that affects'; 'B. Smallest version that meets their goal'; 'C. Sequence ... the rest in Q2 on a date the team has estimated'; 'D. Not all of it in code ... Configuration, an integration, a workaround or a services offer'. Plus 'Say which one you recommend and why, then let him choose.'"
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'Explicitly rule out overtime, cut testing and skipped security review: that debt comes back as incidents, bugs at this very customer and people leaving.' Again in the caveats: 'Still no overtime, and still his call, made openly.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Find the problem behind the three features. Ask the CEO or account manager, and the customer if you can: what are they trying to achieve, and what happens if it isn't there by Q1?'"
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'Private and one-on-one first, not in a leadership meeting.' Pressure: 'Assume pressure, not disregard. He may know things about the account that you don't'. Process: 'propose a simple rule: before anyone commits features to a customer, product and engineering get a few working days to estimate ... Pitch it as protecting him from walking back promises.'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": false,
+      "evidence": "It opens with the answer ('Don't say yes and don't say no yet. Within a week, bring the CEO a one-page choice'), but reply.md is 846 words by wc -w, well over the 550-word limit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 846,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong claims. 'About 18 weeks' to the end of March 2027 is close to the actual 18.7; the contractor point is a sound judgment, not a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of 'skill', reference files, 'cost ladder', 'rungs' or similar jargon (grep found none)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt; it is a pending over-promise. (The advice does frame the trade-off as the CEO's open decision.)"
+    },
+    "best_insight": {
+      "value": "It warns that 'Contractors rarely help within one quarter, because onboarding them eats the same team's time', and that if the promise is contractual the balance tilts towards option A with people moved from other teams 'with their agreement'. That closes off the two tempting shortcuts besides overtime.",
+      "evidence": "From reply.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+        "reason": "All four samples pass this, and A3 (no overtime) and A4 (problem behind the features) too, so they don't separate the samples. A sharper check: the PM recommends one option and says why instead of only laying out a menu. B and C do this ('recommend an option and ask him to choose'; 'Say which one you recommend and why'); A and D don't."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "'Real capacity' is loose. B estimates the features and maps them onto roadmap slips but takes 'at capacity' as given. A, C and D check what time is actually free (leave, on-call, support, incidents, tech debt). If that is the intent, require the free-capacity check explicitly."
+      },
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "This bundles three separate behaviours (private first, assume pressure, process for future promises). All four samples meet all three, but splitting them would make failures easier to diagnose."
+      },
+      {
+        "reason": "No assertion checks whether the PM separates product work from a one-customer custom build (A and D do: 'maintained forever'), or brings their own manager or engineering lead in before facing the CEO alone (all four do). Both are useful advice that the assertions don't reward."
+      }
+    ],
+    "overall": "The most thorough and nuanced sample (an immediate holding reply, written decision, contract caveat), but at 846 words it fails the length test badly."
+  }
+}

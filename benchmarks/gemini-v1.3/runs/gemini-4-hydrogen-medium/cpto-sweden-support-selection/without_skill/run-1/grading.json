@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "'redundancies (arbetsbrist) default to last-in, first-out (LIFO)—not performance ranking', 'Under LAS, you can exempt up to 3 key employees from the seniority order' and 'Going beyond 3 requires negotiating an agreed list (avtalsturlista) with the union.'"
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "'negotiate with the union (MBL) before finalizing decisions'. Step 4: 'Consult the union (MBL)... before making individual selections final.'"
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": false,
+      "evidence": "It never rejects the metrics as the method. It opens 'Before using tickets resolved + CSAT to pick the 21 people, two important flags', explains the law and the metric's flaw, then for exemptions or an avtalsturlista tells the user to 'replace raw volume with' 'resolution rate on tier-2 / escalated tickets' and 'CSAT segmented by ticket complexity/category'. So refined tickets and CSAT stay as criteria. Meets the letter, not the spirit."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": false,
+      "evidence": "No mention of the 9-month re-employment priority, a job security council or transition study support."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": false,
+      "evidence": "It doesn't question the cut. Step 1 takes the 21 as fixed ('Document what the remaining 21 roles require'). Redeployment shows up only as a compliance item under 'Build the legal baseline': 'Check if any of the 9 affected staff can be redeployed elsewhere in the company.' Nothing on moving people into complex-case or new work, attrition or voluntary exits to avoid dismissals."
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": false,
+      "evidence": "wc -w = 313, within the tolerance for 'about 300'. But it doesn't open with the answer: 'Before using tickets resolved + CSAT to pick the 21 people, two important flags:' accepts HR's premise instead of leading with the bottom line."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 313,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "LIFO default, 3 exemptions, avtalsturlista beyond that, sufficient qualifications (tillräckliga kvalifikationer), omplacering and MBL are all stated correctly."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "n/a: the prompt describes an AI-driven reduction, not a failure or disappointing result whose responsibility is in question"
+    },
+    "best_insight": {
+      "value": "It points out that under LAS a senior employee keeps a place only if they have sufficient qualifications for the redefined post-AI role, so defining that role profile first is the lawful way competence enters selection.",
+      "evidence": "'Under LAS, anyone kept must have sufficient qualifications (tillräckliga kvalifikationer) for this updated role.'"
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "Ambiguous between the statutory vacancy check (LAS 7 § omplacering, which F, G and H list as a compliance step after taking the 21 as fixed) and actually questioning the cut (verify AI deflection holds, move people into complex-case or new work, attrition and voluntary exits). I failed the compliance-only versions; reword to say the reply must question whether nine dismissals are needed, not only check existing vacancies."
+      },
+      {
+        "assertion": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+        "reason": "Close calls arise when a reply 'flags' tickets/CSAT and then rebuilds a weighted scorecard that still uses resolution rate and normalised CSAT as the selection criteria (B, F). Say explicitly that recommending CSAT- or resolution-based scoring as the selection method fails."
+      },
+      {
+        "reason": "No assertion checks the Arbetsförmedlingen notice (varsel): for 9 dismissals at least two months before the first affected person's employment ends. It is a hard legal step with a date that changes the timeline, and the strongest samples include it."
+      },
+      {
+        "reason": "No assertion checks the 'sufficient qualifications' rule (LAS 22 §), the lawful route through which competence matters under seniority order, or the discrimination risk of volume metrics for part-time staff and people returning from parental or sick leave. Samples F, G and H handle these well and get no credit for it."
+      }
+    ],
+    "overall": "The law is correct, but the reply frames itself as caveats to HR's metric plan, keeps refined CSAT as a criterion, and leaves out transition support and any challenge to the cut."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": false,
+      "evidence": "'Leadership skin in the game: Announce an immediate 10–15% executive pay cut and zero management bonuses until a 2028 title ships profitably' is the third bullet of a savings list, not first, and leadership never owns responsibility for the flop."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": false,
+      "evidence": "The exec pay cut is listed under 'Present a line-item OpEx plan targeting equivalent annual savings (~€3–4M)', so it is counted towards closing the gap rather than framed as a signal of trust."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "'With €40M in cash against a €12M loss, you have runway—provided you tighten burn immediately'; cutting ~38 staff 'risks delaying your two 2028 titles'; proposes 'smarter discipline' instead of headcount cuts."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": false,
+      "evidence": "Only 'likely Works Council (OR) consultation' as a layoff cost. At 250 staff an OR is mandatory and its advice is required, and the reply's fallback ('execute targeted reductions without further debate') contradicts involving it. A hedged nod."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "No company example is cited; WBSO is a real Dutch R&D scheme in 2026. Nothing claims a pay cut caused a recovery."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": false,
+      "evidence": "wc -w = 299 (<350), but the first sentence is context: 'Boards ask for headcount cuts after a flop because they want proof of control, not because they love layoffs.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 299,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clear error. 'likely Works Council consultation' understates a mandatory step and the WMCO isn't mentioned; '~€3–4M' equivalent savings is an unsourced, somewhat high estimate. 'Without further debate' pre-commits to cuts in a way that conflicts with the art. 25 WOR advice right (advice, not a fact claim).",
+      "errors": []
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep; 'reskilling' only in the ordinary sense)."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that leadership is responsible for the flop; the pay cut is 'skin in the game' within a savings plan."
+    },
+    "best_insight": {
+      "value": "Sets objective vertical-slice and external playtest gates for H1 2027 and a concrete cash floor (e.g., €25M), giving the board a verifiable commitment.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "No sample in this case cites a real-world company example, so this passes for every sample and discriminates nothing. Either require one accurate, relevant example used with its limits (for example Nintendo 2011/2014 with the Japan Airlines counterexample), or score it n/a when none is cited."
+      },
+      {
+        "reason": "No assertion catches pre-committed 'automatic' or 'without further debate' headcount cuts, which clash with the art. 25 WOR advice right and the WMCO/UWV procedure in the Netherlands."
+      },
+      {
+        "reason": "No assertion checks whether the reply invites challenge (for example 'What am I missing?'), which separates coaching from dictating."
+      }
+    ],
+    "overall": "Concrete gates and cash floor, but no ownership, the exec pay cut is counted as savings, the OR is only 'likely', and a 'without further debate' fallback sidesteps the works council."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'Tell the chair plainly that the 9 hours and €2 million are on you as CTO, not the platform lead.' Board line: 'The 9-hour outage and the €2 million loss are on me'."
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't let the platform lead go.' 'Only treat this as a conduct issue if evidence shows someone deliberately bypassed agreed safeguards.' Why less safe: firing 'teaches every engineer to hide risk instead of escalating it—making the next outage more likely.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless post-mortem from the incident timeline, migration logs, runbook, rollback tests, and approval trail to see how the system allowed a 9-hour recovery.' Fixes: 'every action has an owner, a deadline, and proof it worked', due 'Within a week'."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "'give the board real accountability: a factual root-cause review and a remediation plan with owners, dates, and verifiable tests'. Proof: 'a timed rollback rehearsal in a production-like environment, stricter migration gates, and a hard recovery-time target. Report progress at the next two board meetings.'"
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Protect the lead and the team. Tell the lead privately that you have their back, involve them in the post-mortem and fixes, and give the weekend responders recovery time.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "First line: '**Don't let the platform lead go.** Take accountability yourself as CTO...'. wc -w = 458."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 458,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The one legal claim ('In most European jurisdictions, dismissing someone over an operational incident without gross negligence also carries real employment-law risk') is hedged and broadly accurate."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'the 9 hours and €2 million are on you as CTO, not the platform lead'"
+    },
+    "best_insight": {
+      "value": "If the board wants a visible executive consequence, it has the CTO put their own bonus on the line before anyone else's job: a concrete, leader-first answer to the board's demand.",
+      "evidence": "'If the board wants a visible executive consequence, put your own bonus on the line before anyone else's job.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "The example 'protection from public blame' is already covered by the board-level ownership in assertions 1-2, so this assertion can pass with no action aimed at the lead or the team. Consider requiring at least one concrete step toward them (a private conversation, recovery time for the weekend responders, a message to the wider team)."
+      }
+    ],
+    "overall": "The clearest sample: it puts ownership on the CTO and not the lead in so many words, gives a blameless post-mortem with proof points, protects the lead and the responders, and offers a leader-first consequence, all in 458 words."
+  }
+}

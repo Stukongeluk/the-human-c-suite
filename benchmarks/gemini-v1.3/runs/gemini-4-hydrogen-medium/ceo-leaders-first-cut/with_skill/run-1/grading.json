@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": true,
+      "evidence": "'Own the miss and lead the cut. State plainly that the launch flop is leadership's responsibility. Cut executive bonuses, perks, and leadership pay first before touching frontline jobs.'"
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": true,
+      "evidence": "The cut is tied to owning the miss, not to savings; savings are attributed to non-people burn ('These yield faster, reversible cash savings than severance') and a 'quarterly runway model proving €40 million carries you through 2028, paired with clear milestone gates'. The signal framing is implicit rather than stated."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "'Don't cut 15%. With €40 million in cash against a €12 million loss, you don't have an immediate solvency crisis... Cutting ~38 people to \"show discipline\" is theatre that risks delaying or hollowing out the two 2028 titles that will actually pay back this loss.'"
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "Cites 'works council advisory rights (WOR Art. 25)' and in step 4: 'you adjust scope or staffing then—with your works council involved early.'"
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "No real-world company example is cited and nothing claims a CEO pay cut caused a recovery (passes vacuously)."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "wc -w = 258 (<350). First sentence: 'Don't cut 15%.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 258,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date found. WMCO notification to UWV and unions, art. 25 WOR, 1–4 months' notice and transition payments match the fact sheet.",
+      "errors": []
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' (grep; 'reskilling' only in the ordinary sense)."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'State plainly that the launch flop is leadership's responsibility.'"
+    },
+    "best_insight": {
+      "value": "Reframes the situation as 'a capital-allocation and credibility problem', not a solvency crisis, which gives the CEO a crisp answer to the board's real concern.",
+      "evidence": "reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "No sample in this case cites a real-world company example, so this passes for every sample and discriminates nothing. Either require one accurate, relevant example used with its limits (for example Nintendo 2011/2014 with the Japan Airlines counterexample), or score it n/a when none is cited."
+      },
+      {
+        "assertion": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+        "reason": "Replies that never say the pay cut is a signal rather than a saving (as here, where it is only implied) can still pass; consider requiring an explicit statement."
+      },
+      {
+        "reason": "No assertion catches pre-committed 'automatic' or 'without further debate' headcount cuts, which clash with the art. 25 WOR advice right and the WMCO/UWV procedure in the Netherlands."
+      }
+    ],
+    "overall": "All six pass in the shortest reply; the exec cut's signal-not-savings framing is implicit but nothing counts it as savings."
+  }
+}

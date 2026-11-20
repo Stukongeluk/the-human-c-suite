@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": true,
+      "evidence": "Item 1: \"Leadership first. Say plainly the launch was leadership's call and result. Executives take the largest pay cut and forgo bonuses.\" The opening also says the plan \"owns the flop at the top\". Exits come only later: \"Voluntary exits only if the numbers still fall short.\""
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": true,
+      "evidence": "\"This is a trust signal, not a savings plan.\" It is paired with measures on the cause and the bridge: \"Focus. Pause work not tied to the two 2028 projects.\", \"Redeploy launch-team people onto the 2028 projects, with paid learning time\", non-people spend and a cash floor. Its framing: \"The problem is runway to 2028 and the board's confidence in you.\""
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "\"The loss is mostly a one-off launch result, and €40M covers it. The real risk is cash on the day the 2028 games ship.\" Follow-up: \"What is monthly burn once launch costs fall away? How much cash do the two projects need to reach release?\" Against the cut: \"Don't cut 15%\" and \"'Cut 15%' is a solution, not the problem.\" (The 'one-off' judgement is stated a little too confidently before the burn is known, but it is a reasoned judgement from the cash and the pipeline.)"
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "\"If cuts do come later, Dutch rules apply: works council advice and collective redundancy notification. Take counsel; this is not legal advice.\" It also counts the \"works council and UWV process\" among the costs of a cut. This is the weakest of the four: OR advice is a compliance step if cuts come, not involvement now at the problem stage. But it does mention OR advice before any job cuts."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "Cites no real-world company example and makes no claim that a CEO pay cut caused a recovery. It explicitly calls the leadership cut \"a trust signal, not a savings plan\". Satisfied, though vacuously as far as examples go (see eval_feedback)."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "wc -w = 331 (< 350). First sentence: \"Don't cut 15%.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 331,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 38 × €80-90k = €3.0-3.4M ≈ 'about a quarter of the loss'; 25-37 leavers × €80-90k ≈ €2-3M; €1M + €2-3M ≈ €3-4M run-rate; works council advice and collective redundancy notification for Dutch cuts (correct). Figures are labelled as estimates. 'The loss is mostly a one-off launch result' is an inference from the prompt, not a factual error, and the reply asks for the burn to confirm it. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of 'skill', reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"Say plainly the launch was leadership's call and result.\""
+    },
+    "best_insight": {
+      "value": "It reframes the board's ask ('Cut 15%' is a solution, not the problem; the problem is runway to 2028 and the board's confidence in you), and it sizes the alternative at the same run-rate as the cut while pointing out that only the alternative can be reversed.",
+      "evidence": "\"That targets about €3-4M run-rate, comparable to the cut, and it is reversible. The cut is not.\""
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "Vacuously satisfied in all four samples: none cites a real-world example (no Nintendo/Iwata, no JAL), so the check passes without testing anything. Consider asserting that the reply either cites an accurate example with its limits or makes no causal claim, and scoring the presence of a well-used example separately."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "Passes both a reply that brings the OR in now, at the problem stage, with the real numbers (art. 25 WOR timing) and one that only says OR advice applies 'if cuts do come later'. Requiring involvement before the plan is final would discriminate."
+      },
+      {
+        "reason": "All four samples lean on 10-15% natural attrition to deliver most of the saving. That is in line with old UK games-industry survey figures (TIGA/Aon Hewitt: 11-14.5% voluntary turnover in 2013-2014), but voluntary attrition usually falls when the job market is weak, as it has been in games since the 2023-2025 layoffs. No assertion checks whether the reply flags that the attrition saving is uncertain or slow (people leave across the year, so year-one savings are roughly half the run-rate)."
+      }
+    ],
+    "overall": "6/6. The clearest on ownership and on 'trust signal, not savings plan'. Its works council point is only a compliance step if cuts come."
+  }
+}

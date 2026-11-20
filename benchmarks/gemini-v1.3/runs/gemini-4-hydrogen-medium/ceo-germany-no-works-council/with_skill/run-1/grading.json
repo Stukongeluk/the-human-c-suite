@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": false,
+      "evidence": "Never addresses the no-works-council premise the user raised. Nothing on the reconciliation of interests or the social plan not applying, and nothing on employees being able to elect a works council. The process list covers levers, the KSchG justification, the Sozialauswahl, §17 and delivery only."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "\"File §17 KSchG notice: At 140 staff, 15 roles hits the **10% threshold** (14+), requiring advance notification to the *Agentur für Arbeit* before issuing notices or termination agreements.\""
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "\"Run *Sozialauswahl* (§1(3) KSchG): Select among comparable roles by tenure, age, dependants, and disability—never performance rankings.\" It says 'disability' rather than 'severe disability', but the four criteria and the exclusion are there."
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "\"Cutting 15 roles saves **€0 in 2026**\". It also has \"With typical 3-month notice periods, payroll drops only from **April 2027**\" and \"Upfront costs: Severance (*Abfindung*...)\", and \"Net 2027 saving: Roughly €650k–€850k, not €1.4M.\" It doesn't cite the statutory range under §622 BGB."
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": true,
+      "evidence": "\"A board target of \\\"15 roles by March\\\" is a solution before a diagnosis\"; \"Exhaust faster levers first: ... freeze hiring ... If the dip is temporary, consider *Kurzarbeit*\"; and it closes with \"is this revenue dip temporary or structural?\""
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "320 words. It opens with the answer: \"Start with the cash reality: Cutting 15 roles saves €0 in 2026 and roughly 45–55% of annualized payroll in 2027 (estimate)\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 320,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: §17 threshold; the §1(3) KSchG criteria; the Kurzarbeit maximum falling from 24 to 12 months on 1 January 2027 (fact sheet); severance of about 0.5 months per year. All correct. Not counted: the modelling is a little loose. Notices 'around January' with three months' notice give exits in April or May, so '~9 months' of 2027 savings is slightly optimistic."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "\"cut leadership bonuses/pay before frontline roles\" is a cost step. Nowhere does a leader say the responsibility for the revenue drop is theirs."
+    },
+    "best_insight": {
+      "value": "Asks for the actual cash/EBITDA gap by Q2, and tells leaders to say to survivors what work is stopping, so the cut is sized to a real number and the remaining team isn't left with the same work.",
+      "evidence": "Read from reply.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+        "reason": "C shows the assertion works: an otherwise strong reply misses the premise the user flagged."
+      },
+      {
+        "assertion": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+        "reason": "As graded it passes all eight samples, because each ties the delay to notice periods and severance. Only G and H cite the statutory range under §622 BGB (1 to 7 months); A to F assume a contractual 3 months. If the statutory, service-based notice is meant to be required, say so outside the parenthesis."
+      }
+    ],
+    "overall": "A strong challenge to the board, accurate law and an answer-first opening. But it never addresses the no-works-council premise the user flagged."
+  }
+}

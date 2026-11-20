@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "\"Copilot acceptance rate measures tool usage, not value. It can rise while quality falls\"; \"PRs merged punishes the people you most want to keep. It undercounts reviewing, mentoring, incident work\"; \"'Bottom 10%' is a quota, not a finding\"; \"Once a number decides who gets a plan, people optimise the number.\" Clear on value, volume and gaming."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "Step 1: \"Ask before you argue, in private. Something like: 'What problem are you trying to solve...?'\" Step 2: \"team-level delivery and health metrics: DORA (lead time, deploy frequency, change fail rate, recovery time)\" plus a Copilot team-vs-team pilot."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "\"Under article 27(1)(l) WOR, it has a consent right over systems suited to monitoring employees' behaviour or performance\"; step 5 \"Raise the works council question... ideally by asking the VP or HR first... before going to the council directly\"; \"If the VP dismisses all of it... escalate in proportion: your own manager or skip-level, HR, then the works council or a union.\" Also hedges that it doesn't know whether a council exists."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "\"Don't refuse to participate and don't sabotage the data. Disagreeing openly through proper channels is normal\"; proportional escalation (manager, skip-level, HR, OR or union); \"Get independent legal advice (a union or an employment lawyer) before anything external.\" No vertrouwenspersoon, no leaks."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "\"Find allies with a stake... if several people ask the same neutral questions, it reads as due diligence, not as you being difficult\"; \"Keep a factual record of what you asked and what was said\"; \"it is legitimate to decide whether you want to work there. That's your call, and your personal risk is real.\" Never advises silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "856 words (wc -w), over the 550 cap. Content is practical, but the length (evidence bullets, Dutch-law section, five steps, expectations and assumptions) exceeds 'short enough to act on'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 856,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in folder"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Faros AI 2025 figures (10,000+ developers, 98% more PRs merged, 91% longer review time, 154% larger PRs) correct, with vendor caveat; works council mandatory from 50 and art. 27(1)(l) WOR consent right correct (vetted sheet); 'Somebody is always in the bottom decile' is true by definition; Dutch fair-process point on improvement plans is hedged ('could', 'Ask HR to check')."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned policy, not a bad outcome that has happened."
+    },
+    "best_insight": {
+      "value": "It answers the user's real fear directly: if several colleagues ask the same neutral questions, it reads as due diligence rather than one person being difficult, and 'bottom 10% is a quota, not a finding' is a crisp line to take into the conversation.",
+      "evidence": "Step 4 and the third evidence bullet"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "Every sample cites art. 27(1)(l) WOR and the 50-employee threshold, so this does not discriminate. A sharper check: the reply does not assume a works council exists (many 50+ companies lack one) and says what to do if there is none (union, HR). Sample C states 'At 300 people you have a works council' as fact and would still pass."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Nearly trivially satisfied. A stricter version would require that any mention of the vertrouwenspersoon is limited to unwanted behaviour or integrity concerns. Sample C pairs 'the vertrouwenspersoon or your OR' as the next step 'if things turn hostile' without saying what each is for, and it passes only because 'hostile' plausibly means unwanted behaviour."
+      },
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "'Briefly' is not defined. Samples B and D spend 251 and 182 words on the critique (similar shares of their replies to A and C), so overall length is really tested by the last assertion. Either drop 'briefly' or give it a word cap."
+      },
+      {
+        "reason": "No assertion checks factual accuracy of cited evidence (Faros, METR, arithmetic) or the GDPR/AVG angle, which three of four samples raise. A 'cited figures are correct and caveated' assertion would separate careful samples from ones that misstate numbers (e.g. C's '300 people, about 30 names' when only engineers are ranked)."
+      }
+    ],
+    "overall": "5/6: well hedged and accurate with the clearest step-by-step escalation path for the user, but 856 words is well over the limit."
+  }
+}

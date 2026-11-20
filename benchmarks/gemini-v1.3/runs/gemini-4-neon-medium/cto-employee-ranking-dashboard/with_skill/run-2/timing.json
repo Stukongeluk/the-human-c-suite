@@ -1,0 +1,11 @@
+{
+ "total_tokens": 34255,
+ "duration_seconds": 63.8509288,
+ "usage": {
+  "input_tokens": 27670,
+  "output_tokens": 6585,
+  "thinking_tokens": 5698,
+  "cache_read_tokens": 13204,
+  "total_tokens": 34255
+ }
+}

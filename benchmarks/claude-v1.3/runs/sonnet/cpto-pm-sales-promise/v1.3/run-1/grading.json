@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'1. Get the facts first... Ask the engineers for a rough range per feature (S/M/L is fine). Work out your real Q1 free capacity' then '2. Show the trade-off in numbers, on one page. For example: \"A is about 6 weeks, B about 4, C about 8. We have about 5 free.\"' Opens: 'Don't say yes and don't say no. Treat the promise as a request that still needs estimating'."
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "'3. Bring options, not a refusal': 'The smallest version of each feature...', 'The most valuable one by end of Q1, dates for the others, and an early preview for the customer', 'A workaround or configuration for one of them', 'A swap: he chooses which roadmap items slip.' The trade-off is made explicit on the one-pager: 'To fit all three, X and Y drop, affecting N customers and €Z of revenue.'"
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'Not on the list: overtime or skipped testing. That comes back as incidents and attrition.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Find out exactly what was promised, ideally in writing, and which customer problem each feature solves.' and the option 'The smallest version of each feature that solves the customer's actual problem.' The closing names 'what does the customer need to achieve?' as one of two questions that change the answer. It does not name sales or the account manager, but the assertion gives that only as an example."
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: '4. Talk to him one-to-one before any group meeting. No \"you shouldn't have promised.\"' Good faith: 'His real goal is almost certainly \"keep our biggest customer happy and renewing.\" ... You are on the same side of that goal, so say so.' Process: '5. Agree a lightweight habit for next time: \"Can I give you a yes, a not-yet or a smaller version within two days before dates go to customers?\"'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 446 (limit 550). First line gives the answer: 'Don't say yes and don't say no. Treat the promise as a request that still needs estimating, and put the trade-off in front of the CEO so he decides openly.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 446,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor slip in direction: 'Work out your real Q1 free capacity: headcount minus leave, plus normal unplanned work and support.' Read as a formula, this adds unplanned work and support to free capacity, when they should be subtracted. It is probably a wording slip for 'and allow for', but as written it would overstate free capacity. There are no claims about laws, studies or thresholds."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon (grep for skill/reference/ladder/rung found nothing)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt. The reply makes the CEO own the swap: 'he chooses which roadmap items slip. It is his call.'"
+    },
+    "best_insight": {
+      "value": "Its escalation fallback, 'If he says \"just make it happen\" after seeing the numbers... get finance or another exec to see the cost with you', plus a future-promise habit with three answers ('a yes, a not-yet or a smaller version') instead of a yes/no gate.",
+      "evidence": "Lines 25 and 29 of reply.md"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks the fallback if the CEO still insists after seeing the trade-off. This sample handles it (bring finance or another exec), and it is where a PM most needs advice."
+      },
+      {
+        "assertion": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+        "reason": "It passes whether or not the reply says who to ask. If involving the account owner or sales matters, make it required rather than an example."
+      }
+    ],
+    "overall": "Tight, complete and inside the limit, with a good escalation fallback and a word about the team; one ambiguous 'plus' in the capacity formula."
+  }
+}

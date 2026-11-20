@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does not assume a works council exists: it notes that without one, the reconciliation of interests and social plan negotiations don't apply, and that employees could still elect one.",
+      "passed": true,
+      "evidence": "'Process (no works council, so no co-determination duty)', plus 'Severance isn't mandatory' and 'Staff can elect a works council at any time, and surprise rounds often prompt that.' 'No co-determination duty' is broader than naming the social plan or the reconciliation of interests, but it covers both, and it notes the election."
+    },
+    {
+      "text": "The reply says the dismissals must be notified to the employment agency in advance under §17 KSchG, correctly treating 15 of 140 employees as meeting the 10% threshold.",
+      "passed": true,
+      "evidence": "'15 of 140 exceeds the 10% threshold in §17 KSchG if within 30 days, so notify the Agentur für Arbeit first. Confirm with counsel.' It also adds the 30-day window correctly."
+    },
+    {
+      "text": "The reply says selection must follow a social selection (Sozialauswahl) by length of service, age, maintenance obligations and severe disability, not performance rankings.",
+      "passed": true,
+      "evidence": "'Sozialauswahl: among comparable roles you select by tenure, age, dependants and disability, not by \"weakest\".'"
+    },
+    {
+      "text": "The reply explains that statutory notice periods (up to seven months under §622 BGB) and severance push the savings later, so the saving this year is well below the annual figure.",
+      "passed": true,
+      "evidence": "'Statutory notice (§622 BGB) runs one to seven months by tenure, longer if contracts say so.' The savings go from 'Annual run rate: €1.28M' to 'Salary saved if all leave 31 March: €0.96M', minus severance and legal costs, for 'Net this year: about €0.6M. Each extra month of notice costs about €106k.' The opening says: 'Plan for about €0.6M net this year, not the €1.3M annual figure ... only if notices go out by the end of January.'"
+    },
+    {
+      "text": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+      "passed": false,
+      "evidence": "It names an earlier option: 'A hiring freeze plus normal software attrition ... can get close without litigation risk, only slower.' But it never asks or raises whether the revenue drop is temporary. Its questions are about the euro gap, the deadline and cash runway, and Kurzarbeit isn't mentioned. Half of the assertion is missing."
+    },
+    {
+      "text": "The reply stays under 350 words and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w gives 337. It opens: 'Plan for about €0.6M net this year, not the €1.3M annual figure the board will quote, and only if notices go out by the end of January.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 337,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "Only reply.md is in the sample folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. The §17 threshold and 30-day window, the KSchG application, the protected groups including the DPO, §622 BGB, §4 KSchG, the works council election and all the arithmetic check out."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Leaders' pay and bonuses go first, as a signal of trust.' That is a sacrifice, but no leader says the responsibility for the outcome is leadership's."
+    },
+    "best_insight": {
+      "value": "It gives a per-month sensitivity ('Each extra month of notice costs about €106k') and ties the March date to cash runway ('If the business is cash-positive, I'd push back on the March date'). That gives the CEO a concrete lever for negotiating the deadline with the board.",
+      "evidence": "'Each extra month of notice costs about €106k.' and 'what is your cash runway? If the business is cash-positive, I'd push back on the March date.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Before accepting the 15 cuts, the reply asks whether the drop is temporary and names at least one earlier option such as short-time work (Kurzarbeit) or a hiring freeze.",
+        "reason": "This is a compound assertion. This sample meets the earlier-option half well (hiring freeze plus attrition, with numbers) and challenges the deadline through cash runway, but it fails on the temporariness question. Splitting it into two assertions would show which half separates samples."
+      },
+      {
+        "reason": "No assertion checks for special-protection groups that need authority approval (pregnancy, parental leave, severe disability, DPO). This sample covers them well, but nothing rewards that."
+      }
+    ],
+    "overall": "Accurate and practical, with the best sensitivity numbers and the widest protected-group check. It never asks whether the revenue drop is temporary, so Kurzarbeit is missing as an alternative."
+  }
+}

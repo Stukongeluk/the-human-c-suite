@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "Step 1: 'Tell the board the result is yours'; board line: 'This migration failed on my watch, and the accountability is mine.' Not the lead's: 'don't offer anyone's job as the answer to the board' and 'offer one from your side ... not someone else's job.'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "Opens 'Don't let the platform lead go'; why: 'Firing the person who knows most about what went wrong loses that knowledge and teaches every engineer to hide the next problem' and 'would make the next migration less safe.' Exception: 'If the review shows the lead skipped agreed steps, ignored warnings or hid information, that is a separate, fair performance conversation.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless review within two weeks, led by someone outside the platform team ... Ask how the system made this possible: was the rollback tested on production-sized data? Was there a go/no-go point and an abort time? Who set the window, under what pressure?' Fixes: 'Report back with actions, each with an owner, a date and a measure.'"
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "Facts: 'Build the timeline from the incident channel, change ticket, deploy logs and monitoring' and 'Break down the EUR 2 million ... the board will ask.' Causes: 'a fixed date for the review's findings'. Changes and proof: 'actions, each with an owner, a date and a measure that shows it worked, such as a timed rollback rehearsal before every migration'; board line: 'the fixes with owners and dates, and how we'll prove they work.'"
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk to the lead yourself, today, in private. They are probably devastated. Tell them no decision about them follows from the board's suggestion, and ask for their help finding the causes. Give the team recovery time after that weekend, not more heroics.' Shields them from blame: give the board accountability, 'just not a name.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "445 words by wc -w (limit 550). First sentence is the recommendation: 'Don't let the platform lead go, and don't offer anyone's job as the answer to the board.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 445,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "Only reply.md in the folder."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The only legal claim, 'In most of Europe, dismissing someone over one failed change without a prior process is also hard to defend legally', is hedged and right in direction (e.g. NL needs a reasonable ground and an improvement process for underperformance). No other checkable facts."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'This migration failed on my watch, and the accountability is mine.'"
+    },
+    "best_insight": {
+      "value": "It contains the risk now ('Pause risky changes to that database until the review is done') and asks the most useful diagnostic question: 'Why did recovery take 9 hours, not one?'",
+      "evidence": "Steps 3 and 4."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks that what the CTO tells the lead is consistent with the misconduct exception. One sample tells the lead 'Their job isn't on the table' while keeping a conduct exception open; others warn 'Don't promise more than you can keep'. Consider: 'The reply does not promise the lead an outcome it cannot guarantee before the review.'"
+      },
+      {
+        "assertion": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+        "reason": "This combines two checks (opens with the recommendation, and length). All four samples open with the recommendation, so only length tells them apart. Splitting it would make it clear why a sample failed."
+      },
+      {
+        "reason": "No assertion covers containing risk now, e.g. pausing risky changes to the affected database until the review is done, or checking the EUR 2 million figure before it goes to the board. Both are useful and only some samples do them."
+      }
+    ],
+    "overall": "Meets every assertion in 445 words. It gives a board line, a containment step and a clear exception. It cites no precedents or evidence."
+  }
+}
