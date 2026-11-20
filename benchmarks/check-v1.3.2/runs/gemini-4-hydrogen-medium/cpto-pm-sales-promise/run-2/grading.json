@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "\"bring rough effort estimates from your engineering lead\"; \"Align with your engineering lead today. Get rough-order estimates for the three features\"; the brief's capacity snapshot has \"Available team capacity [X] | Headcount minus planned leave, holidays, and support/on-call\" and \"Total estimated effort for all three as requested\". The PM asks the CEO to choose, not accept or refuse. (The opening states \"100% capacity with 0% buffer\" as a given before the sizing.)"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "Swap: \"defer specific existing Q1 items of equal effort (naming the customers and revenue affected)\"; Phase: \"Ship the smallest viable version or workaround in Q1, and move the rest to Q2\"; Hold Q1: \"jointly reset a firm Q2 date with the customer\". The brief lists In/Out/Impact for each option."
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "\"do not absorb the work quietly with overtime; that turns one awkward conversation into missed commitments across the board, incidents, and attrition.\" Brief: \"Attempting both ... without adding capacity or cutting scope will result in ... team burnout.\" Overtime never appears as an option."
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "\"identify what the customer actually needs to achieve by end of Q1. Often one feature is urgent, one can be a configuration or workaround, and one can wait for Q2.\" Brief column \"Underlying Customer Problem | [What they actually need to achieve]\". This is done with the engineering lead, not sales, but sales is only an example in the assertion."
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: \"Meet the CEO privately before any leadership or team forum. Never put him on the spot in public.\" Good faith: \"he was in front of your biggest customer protecting renewal or expansion revenue, and he likely did not see the full Q1 queue in that moment. Treating him as an ally\". Process: \"Set one simple rule for next time: Leadership and sales can promise discovery and a date for an answer, never a delivery date before engineering estimates it.\""
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 389. Opens with the answer: \"Book a private 1:1 with your CEO within 48 hours, bring rough effort estimates from your engineering lead, and ask him to choose between three concrete trade-offs\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 389,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 452,
+      "evidence": "wc -w ceo-q1-tradeoff-brief.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No external facts cited. \"100% capacity with 0% buffer\" is an assumption taken from 'at capacity' and presented as fact, but it is not a wrong claim about the world."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill or jargon mentions. The document link is a local benchmark path (file:///G:/agy-bench/...) that the user probably can't open. That is a delivery problem, not a skill leak."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Offering 'Hold Q1' (keep the roadmap and reset the date jointly with the customer) as a legitimate option, and putting an unplanned-work and reliability buffer in the capacity snapshot so the 'at capacity' claim is backed by numbers.",
+      "evidence": "reply step 3 and brief section 1"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate checks (private first, good-faith reading, future process). One sample passes two and fails on the process alone; splitting it would show which behaviour is missing."
+      },
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "Almost every sample passes on one warning line. A sharper check is whether the reply still keeps overtime out when the CEO insists on everything. Only two samples deal with an override, and they handle it in opposite ways."
+      },
+      {
+        "assertion": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+        "reason": "Passes for all eight samples. Counting only reply.md ignores attached documents, so a reply plus a 664-word brief counts as 'short'. Consider a cap on total reading or on the reply's first screen."
+      },
+      {
+        "reason": "No assertion covers what the PM does if the CEO still says 'do it all' (write down what slips, escalate, protect the team). That is the real test of protecting the team without damaging the relationship."
+      }
+    ],
+    "overall": "Complete and well structured, with a usable fill-in brief; minor issues are asserting 0% buffer before sizing and a document link the user likely can't open."
+  }
+}

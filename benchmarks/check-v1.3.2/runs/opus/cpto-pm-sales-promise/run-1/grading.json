@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "\"Size the three features with your team this week ... One comparison decides it: the weeks the three features need against the weeks free in Q1.\" and \"Get a rough estimate from the team. Ranges, in a day or two. Then list the roadmap items that would slip to fit all three, and who each one affects.\""
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "\"All three by end of Q1, and these named roadmap items move to Q2.\" \"The most important one by Q1, the others on a dated plan he shares with the customer now.\" \"Smaller first versions of all three, tried out with the customer.\" The line ends with \"which roadmap items are you comfortable moving?\""
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "\"Not on the list: all three on top of the current roadmap. That only fits with overtime or skipped testing, and it comes back as bugs at your biggest customer and a slower Q2.\""
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "\"Find the real need. Ask the account owner or the CEO what the customer is trying to achieve, why Q1, and what's at stake: a renewal, an expansion, a contract clause?\""
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: \"Talk to the CEO one to one, before any roadmap meeting.\" Good faith: \"He probably promised under pressure to keep the account. Your job is to help him keep his word, not to prove him wrong.\" Process: \"suggest one habit. Before a date goes to a customer, you give him a rough sizing within 48 hours. It protects his credibility.\""
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 444. Opens with the answer: \"Don't absorb it quietly, and don't refuse it. Size the three features with your team this week, then take the CEO a private choice instead of a complaint\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 444,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No external facts cited. The claims are qualitative."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Telling the team that 'nothing is added until the trade-off is decided', and asking whether the features would help other customers, because then some may belong on the roadmap anyway.",
+      "evidence": "step 5 and the closing questions"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate checks (private first, good-faith reading, future process). One sample passes two and fails on the process alone; splitting it would show which behaviour is missing."
+      },
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "Almost every sample passes on one warning line. A sharper check is whether the reply still keeps overtime out when the CEO insists on everything. Only two samples deal with an override, and they handle it in opposite ways."
+      },
+      {
+        "assertion": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+        "reason": "Passes for all eight samples. Counting only reply.md ignores attached documents, so a reply plus a 664-word brief counts as 'short'. Consider a cap on total reading or on the reply's first screen."
+      },
+      {
+        "reason": "No assertion covers what the PM does if the CEO still says 'do it all' (write down what slips, escalate, protect the team). That is the real test of protecting the team without damaging the relationship."
+      }
+    ],
+    "overall": "Complete and tight: concrete sizing comparison, need discovery with the account owner, overtime explicitly off the list, good-faith framing and a 48-hour sizing habit."
+  }
+}

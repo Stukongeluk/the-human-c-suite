@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'individual PR and Copilot acceptance rankings hurt delivery (Faros... 98% more PRs while review time jumped 91%, and Uplevel found 41% more bugs with no cycle-time gain)' and 'Individual rankings punish the people who review code, mentor, and fix incidents—and get gamed immediately by splitting PRs and accepting poor suggestions.'"
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": false,
+      "evidence": "Private first ('Have a private 1:1 first—don't debate this in Slack or an all-hands') and a concrete alternative ('team-level DORA/flow metrics (change lead time, review wait time, change fail rate)') are present, but no questions to the VP: the goal is assumed ('Assume the VP wants visibility into delivery speed and AI ROI') and the line only proposes 'Can we run a 6-week team-level DORA and aggregated Copilot view instead?'. The proposal document has no questions either."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Under Article 27(1)(l) of the Dutch Works Councils Act (WOR), systems suited to monitoring employee performance generally require OR consent (instemmingsrecht) before rollout.' and 'Escalate only if the private conversation fails... take the facts to the OR'."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Engineering manager or VP privately, then the OR via 'the formal co-determination process'. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": false,
+      "evidence": "Nothing helps the user protect themselves: no advice to keep a factual record (only the caution 'using only records you are allowed to share'), no allies, and no acknowledgement of the personal risk the user raised ('I don't want to be seen as difficult'). The protection offered is for the VP ('Raising this neutrally protects the VP from a stalled initiative'). The proposal document is silent on this too."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "349 words in reply.md (wc -w); four steps and a ready line. The 568-word proposal is a separate hand-over document."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 349,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 568,
+      "evidence": "wc -w engineering-metrics-proposal.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Faros 2025 figures (10,000+ developers, 98% more PRs, +154% PR size, +91% review time); Uplevel 2024 (~800 developers, no significant cycle-time or throughput gain, 41% more bugs); OR mandatory at 300; art. 27(1)(l) WOR; DORA's four classic metrics; 'DORA, 2025 State of AI-assisted Software Development' is the real report title. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It hands over a ready-to-share one-page proposal with a question-to-metric-to-source table and a 6-8 week baseline, which the user can give the VP as the 'better way' rather than an objection.",
+      "evidence": "engineering-metrics-proposal.md sections 3-4"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+        "reason": "This sample shows the assertion discriminates: a reply can be private-first and constructive yet still ignore the user's own exposure. Keep it."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Accurate and gives a useful hand-over proposal, but it skips asking the VP anything and does nothing to protect the user personally."
+  }
+}

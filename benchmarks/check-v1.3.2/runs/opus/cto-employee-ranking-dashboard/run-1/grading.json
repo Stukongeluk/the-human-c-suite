@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Both metrics count activity, not results.' Cites Faros (98% more PRs, review time +91%, PRs 154% larger) and Uplevel (41% more bugs), 'It hits the people who review, mentor, fix incidents and delete code. Within weeks you're measuring gaming.' Also: 'A bottom 10% exists every week by definition, even if everyone does well'."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Ask the VP for 20 minutes, one-on-one. Not in a team meeting or Slack. Ask what they're trying to fix: slow delivery, quality, whether Copilot pays off, or one specific person.' Alternative: 'Team-level flow and quality: lead time, review wait time, change fail rate, plus a short developer survey.'"
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'a consent right on systems suited to monitoring performance (article 27(1)(l) WOR)' and 'If nothing changes, bring in your own manager, other seniors and an OR member, the formal channel for exactly this.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Routes VP privately, then own manager, other seniors and an OR member ('the formal channel for exactly this'); OR framed 'as a heads-up, not a threat'. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Then recap it in a short, neutral email.' 'Keep a factual record.' Allies: 'bring in your own manager, other seniors and an OR member'. Addresses the risk directly with Burris (2012) and 'How far you take this is your call.' Never advises silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "443 words (wc -w). Numbered actions, a ready line to use and a closing offer; practical, not a lecture."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 443,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Faros 2025 figures, Uplevel 2024 (~800 devs, 41% more bugs, no throughput gain), art. 27(1)(l) WOR consent right, Burris (2012) on managers rating challengers lower. All correct; Faros flagged as a vendor."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It makes the forced-distribution flaw concrete ('with, say, 80 engineers, that's 8 names each week') and reframes volunteering to build the alternative as 'the opposite of difficult', which speaks directly to the user's fear.",
+      "evidence": "reply.md, opening paragraph and step 2"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Passes all six; strongest on asking before proposing and on self-protection, with correctly sourced and caveated evidence."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Acceptance rate shows how much someone uses Copilot, not whether the code is good. PR counts reward splitting work and punish reviewing, mentoring and incident work.' Faros 98% more PRs / review +91%, and 'A fixed bottom 10% always exists... People soon work the numbers, not the product.'"
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Ask for 20 minutes alone with the VP. Start with questions, then make an offer: \"What problem should the ranking solve? What would show it's working? Could we try team-level measures for one quarter instead (lead time, review wait time and change failure rate, before and after Copilot)...\"'"
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'a system that tracks individual performance needs the works council's consent before use (article 27(1)(l) WOR)' and 'If it goes ahead anyway, ask a works council member whether the council has given consent. That's their job, so you aren't making trouble.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "VP privately, then allies (senior engineers, manager, HR), then a works council member. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Follow up with a short, friendly email about what you agreed. That's a record, without drama.' 'Find allies quietly: other senior engineers, your manager, HR.' Plus a 'personal risk' paragraph: 'asking for reasons isn't disloyalty. How far you take it is still your call.'"
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "448 words (wc -w). Ordered five-step plan, a line for the meeting and an offer to draft follow-ups."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 448,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: art. 27(1)(l) WOR consent; art. 27(5) WOR: a decision without consent 'is nietig, indien de ondernemingsraad ... schriftelijk een beroep op de nietigheid heeft gedaan' within one month (wetten.overheid.nl; Dirkzwager article confirms); Faros 2025 figures; Dutch underperformance dismissal needs real shortcomings and an opportunity to improve. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It gives HR its own reason to care (a Dutch improvement plan must rest on real shortcomings and a fair chance to improve, which a relative ranking shows neither) and states the real consequence of skipping the OR (the decision is void if the council invokes that in writing within a month).",
+      "evidence": "reply.md steps 4 and 5"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Passes all six; the most legally precise reply, with question-first framing and a record that 'isn't drama'."
+  }
+}

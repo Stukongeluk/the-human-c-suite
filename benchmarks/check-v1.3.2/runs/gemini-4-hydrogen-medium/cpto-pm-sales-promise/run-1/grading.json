@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "\"your first step is a 30-minute check with your engineering lead to get those two numbers\"; \"calculate your remaining Q1 capacity (after leave, on-call, support, and committed reliability work) and get a rough size for the three features\". The brief has a table of available, committed and remaining capacity plus estimates for features 1 to 3. (The opening states \"100% of your Q1 capacity is already committed\" as a given.)"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "Reply: \"Option A (Swap): Build the smallest viable version of the three features in Q1, and explicitly defer specific Q1 roadmap items to Q2.\" \"Option B (Phase): Ship the highest-impact feature (or a workaround) in Q1, keep the current roadmap mostly intact, and give the customer firm Q2 dates for the other two.\" The brief adds Option C (Add Capacity) and a Risk / Trade-off column. Small inconsistency: the brief heading says three options, but its script offers \"two ways\"."
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "\"Hold the line on pace: Never absorb the gap with overtime or by skipping testing and security reviews\". Brief: \"What is off the table: Absorbing all three on top of Q1 via overtime or skipping testing/security reviews.\""
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "\"Also check what problem the customer actually needs solved—sometimes a smaller v1 or configuration change covers 80% of the need in a fraction of the time.\" Brief: \"Also check what the customer actually needs to achieve with each feature.\""
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: \"Request a private 1:1 with your CEO—before any wider roadmap meeting\"; \"Don't challenge him in a group forum.\" Good faith: \"Your CEO isn't trying to break the team; he's protecting your biggest account and likely didn't see the full Q1 commitment when he said yes.\" Process (in the attached brief only, which is graded with the reply): \"can we do a quick 24-hour sizing check with engineering before we lock a date with the customer? That way you can promise a firm answer date on the call\"."
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 410. Opens with the answer: \"Request a private 1:1 with your CEO—before any wider roadmap meeting—and put a clear trade-off on the table\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 410,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 664,
+      "evidence": "wc -w ceo-q1-tradeoff-brief.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No external facts cited. '80% of the need' is a hedged rule of thumb ('sometimes'), not a factual claim. 'Onboarding still takes time, so it rarely saves Q1 alone' is consistent with established practice."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill or jargon mentions. The document link is a local benchmark path (file:///G:/agy-bench/...), which is a delivery problem, not a skill leak."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Warning that moving engineers in from another team 'rarely saves Q1 alone' because onboarding takes time, and giving the CEO a 'firm answer date' he can still promise customers on the spot.",
+      "evidence": "brief section 3 Option C and section 4"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate checks (private first, good-faith reading, future process). One sample passes two and fails on the process alone; splitting it would show which behaviour is missing."
+      },
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "Almost every sample passes on one warning line. A sharper check is whether the reply still keeps overtime out when the CEO insists on everything. Only two samples deal with an override, and they handle it in opposite ways."
+      },
+      {
+        "assertion": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+        "reason": "Passes for all eight samples. Counting only reply.md ignores attached documents, so a reply plus a 664-word brief counts as 'short'. Consider a cap on total reading or on the reply's first screen."
+      },
+      {
+        "reason": "No assertion covers what the PM does if the CEO still says 'do it all' (write down what slips, escalate, protect the team). That is the real test of protecting the team without damaging the relationship."
+      }
+    ],
+    "overall": "Complete when reply and brief are read together; the future-process step lives only in the 664-word brief, and the reply and brief disagree on two vs three options."
+  }
+}

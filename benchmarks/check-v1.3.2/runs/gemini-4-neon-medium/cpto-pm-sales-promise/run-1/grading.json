@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "\"Talk to your engineering lead first (today). Don't commit to a date the building team hasn't estimated. Ask for a rough range on the three features\" and \"List what is already committed in Q1, which customers or revenue each item serves, and what would have to slip or shrink to fit the three features.\""
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "\"Swap: Build all three features in Q1 and explicitly defer specific roadmap items (with their customer impact named).\" \"Scope down: Ship a smaller v1 or workaround for Q1 ... and schedule the full build for Q2.\" \"Sequence: Deliver the highest-impact feature in Q1 and agree on dates for the other two with the customer now.\""
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "\"Trying to squeeze everything in with overtime or skipped testing is the real trap—it leads to missed dates, bugs, and a damaged relationship with both the customer and the CEO.\""
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "\"check what the customer is actually trying to achieve—often a smaller version, configuration, or workaround covers the Q1 need at a fraction of the cost.\""
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": false,
+      "evidence": "Private first (\"a short, private 1:1 before it reaches any wider forum\") and good faith (\"he made that promise to protect your biggest customer and the revenue tied to them\") are both there. But there is no process for future promises. The only follow-up is \"send a short written recap so the trade-off stays visible\", which covers this one decision, not checking future customer commitments with product first."
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 432. Opens with the answer: \"Take this to the CEO in a short, private 1:1 before it reaches any wider forum—not to say no, and not to absorb the extra work quietly, but to put the trade-off in front of him\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 432,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No external facts cited. The claims are qualitative."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Keeping the one-page trade-off to 'weeks and customer impact, no adjectives', and sending a written recap after the decision so the team 'isn't left holding the bag'.",
+      "evidence": "step 2 and the closing paragraph"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate checks (private first, good-faith reading, future process). One sample passes two and fails on the process alone; splitting it would show which behaviour is missing."
+      },
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "Almost every sample passes on one warning line. A sharper check is whether the reply still keeps overtime out when the CEO insists on everything. Only two samples deal with an override, and they handle it in opposite ways."
+      },
+      {
+        "assertion": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+        "reason": "Passes for all eight samples. Counting only reply.md ignores attached documents, so a reply plus a 664-word brief counts as 'short'. Consider a cap on total reading or on the reply's first screen."
+      },
+      {
+        "reason": "No assertion covers what the PM does if the CEO still says 'do it all' (write down what slips, escalate, protect the team). That is the real test of protecting the team without damaging the relationship."
+      }
+    ],
+    "overall": "Good handling of the immediate conversation, but it never proposes a rule so the next promise is checked with product first, so the root cause stays in place."
+  }
+}

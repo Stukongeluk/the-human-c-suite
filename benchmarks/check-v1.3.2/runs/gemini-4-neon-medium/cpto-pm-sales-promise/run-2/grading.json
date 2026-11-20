@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "\"Get the real numbers with your engineering lead (today). Walk in with capacity, not feelings. Check your team's real Q1 availability (minus leave, on-call, and recent unplanned work) and get rough sizes for the three features.\""
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "Option A: \"Deliver all three features in Q1 and defer specific roadmap items of equal size, naming the customers and revenue affected.\" Option B: \"Deliver the highest-impact feature (or a smaller first version of all three) in Q1 and sequence the rest into Q2\". Option C: \"Shift temporary capacity from another team—only if leadership agrees on what that team drops.\""
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "\"Never close the gap with overtime or skipped testing—that debt comes back as incidents and slower delivery.\""
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": false,
+      "evidence": "The closest is \"check whether any of the three can be met faster with a smaller version, configuration, or a workaround\". That is the PM and engineering lead scoping solutions. The reply never suggests finding out what problem the customer is trying to solve, or asking sales, the account manager or the customer. \"Discovery\" appears only in the rule for future promises."
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: \"Take this to the CEO in a private 1-on-1 before it goes to any wider forum\". Good faith: \"reading his intent generously: he was protecting your biggest customer, not trying to burn out your team.\" Process: \"agree on a simple habit for next time: executives and sales can promise discovery and a 48-hour sizing check, rather than firm dates, before engineering has estimated the work.\""
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "wc -w = 436. Opens with the answer: \"Take this to the CEO in a private 1-on-1 before it goes to any wider forum—not to say \\\"no,\\\" but to put a clear set of trade-offs in front of him\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 436,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No external facts cited. The claims are qualitative."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Giving your own manager a heads-up before the CEO 1:1 so they aren't surprised and can back you, and borrowing another team's capacity only if leadership also decides what that team drops.",
+      "evidence": "steps 2 and 3 (Option C)"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate checks (private first, good-faith reading, future process). One sample passes two and fails on the process alone; splitting it would show which behaviour is missing."
+      },
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "Almost every sample passes on one warning line. A sharper check is whether the reply still keeps overtime out when the CEO insists on everything. Only two samples deal with an override, and they handle it in opposite ways."
+      },
+      {
+        "assertion": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+        "reason": "Passes for all eight samples. Counting only reply.md ignores attached documents, so a reply plus a 664-word brief counts as 'short'. Consider a cap on total reading or on the reply's first screen."
+      },
+      {
+        "reason": "No assertion covers what the PM does if the CEO still says 'do it all' (write down what slips, escalate, protect the team). That is the real test of protecting the team without damaging the relationship."
+      }
+    ],
+    "overall": "Solid on capacity, options, overtime and relationship; misses the most leverage-giving step, finding the customer's real need behind the three features."
+  }
+}

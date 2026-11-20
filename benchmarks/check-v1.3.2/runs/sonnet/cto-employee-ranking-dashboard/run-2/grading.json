@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Copilot acceptance rate measures tool usage, not value. It can rise while quality falls.' 'PRs merged per person rewards volume, and AI makes volume cheap. It punishes the people who review, mentor, fix incidents and delete code.' 'A forced bottom 10% always has someone in it, even on a strong team.'"
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Ask first, in a 1:1. \"What problem are we trying to solve: delivery speed, quality, or specific people's performance?\"' Then 'Offer a team-level option. Cycle time, review wait time, change failure rate and recovery time... plus a short developer-experience survey' and 'Propose a six-week trial.'"
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Under art. 27(1)(l) WOR it has a consent right over systems suited to monitoring employees' performance, and a weekly individual ranking looks like one.' and 'If the VP won't move... talk to your manager and HR, and let the works council know.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Private 1:1, then manager, HR and the works council; 'Don't start in a team channel or by going over their head' and 'Don't rally colleagues behind the VP's back.' No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Write your concerns down in neutral language, then talk to your manager and HR, and let the works council know.' 'How far you go is your choice, and you don't owe your career as a sacrifice.' Never advises silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "497 words (wc -w). Short sections, numbered steps, a line to use; close to the limit but practical."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 497,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: 'Cycle time, review wait time, change failure rate and recovery time (the DORA metrics)' labels review wait time and cycle time as DORA metrics. DORA's metrics are change lead time, deployment frequency, change fail rate, failed deployment recovery time and deployment rework rate (dora.dev). The WOR claims (OR from 50, art. 27(1)(l) consent) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It proposes a reversible six-week trial so the VP can change course without losing face, and turns the OR point into a neutral process question ('Has this been through the OR and HR/privacy?').",
+      "evidence": "reply.md step 4 and 'The Dutch angle'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Passes all six with question-first framing and a face-saving trial; one minor mislabelling of review wait time as a DORA metric."
+  }
+}

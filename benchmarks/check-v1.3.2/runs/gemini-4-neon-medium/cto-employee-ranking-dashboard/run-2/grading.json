@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Copilot acceptance rate and PRs merged measure activity, not value.' Cites Faros (98% more PRs, 91% longer review, 154% larger PRs) and GitClear (81% more duplication). 'Tying those numbers to PIPs rewards bloated PRs and punishes the engineers who review, mentor, fix incidents, and delete code.'"
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": false,
+      "evidence": "Private first and a concrete alternative are present ('Start with a private 1:1 with the VP'; 'DORA: lead time, deployment frequency, change fail rate, rework'). But it never suggests asking the VP questions about the goal: the scripted line is 'Two quick heads-ups before this goes live...' followed only by the proposal 'Could we track team-level lead time...instead?'. It assumes the VP's goal ('A new VP is usually under pressure...') instead of asking. The 'with questions' part is missing in spirit."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Under Article 27(1)(l) WOR, rolling out a system suited to monitoring employee behaviour or performance requires the OR's prior consent.' and 'Use the OR if they push ahead... bring the facts—neutrally, in writing—to your works council or HR.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Routes to the VP privately (or via manager), then the works council or HR: 'That is what the OR exists for'. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'bring the facts—neutrally, in writing' to the OR, 'it takes the target off your back', and 'If a direct 1:1 feels unsafe, going quietly to an OR member first is a reasonable choice; you don't have to risk your standing to fix this.' No advice to stay silent."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "415 words (wc -w). Three numbered steps, a ready line and an offer to draft notes."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 415,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: OR mandatory from 50; art. 27(1)(l) WOR prior consent; Faros 2025 figures; GitClear 2023-2026 report: block duplication 40.3 -> 73.0 per million changed lines, 'an 81% increase over 2023'; DORA metrics list including rework rate. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It offers a lower-risk route for a user worried about standing: if a direct 1:1 feels unsafe, going quietly to an OR member first is legitimate.",
+      "evidence": "reply.md step 3, parenthetical"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Accurate and well-routed, but it tells the VP about two 'traps' instead of first asking what problem the ranking should solve."
+  }
+}

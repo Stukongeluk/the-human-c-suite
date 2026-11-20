@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Copilot acceptance rate measures tool usage, not value. It can rise while quality falls.' 'PRs merged rewards volume, which AI makes cheap.' 'Once a number decides who gets a plan, people optimise the number. A fixed \"bottom 10%\" also means someone is always bottom'."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Ask for a 30-minute one-to-one with the VP. Don't start with \"this is wrong\". Start with the goal: \"...What problem are you trying to solve: speed, quality, or whether the Copilot spend pays off?\"' Then: 'team-level delivery trends instead? Lead time, review wait time, change failure rate, plus a short developer survey.'"
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'It has a consent right (art. 27 WOR) on systems suited to monitoring employees' performance.' and 'If there is one, talking to a member is a safe, legitimate step.' Borderline: the explicit fallback 'If the VP won't move' names only manager or HR, but the OR member step comes in the ordered sequence after the 1:1 and is clearly recommended."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "'If the VP won't move, go one step up, not around. Talk to your own manager or HR about the process (who decides, who was consulted), not about the VP.' Plus OR member as 'a safe, legitimate step'. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Write down dates and facts in neutral language.' 'Honest risk: speaking up carries some personal cost. A private, solution-first approach keeps it low, and the choice is yours.' Never advises silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "467 words (wc -w). Four ordered steps, a line to use, an offer to draft."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 467,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: a 300-person Dutch company must have an OR; art. 27 WOR consent right on performance-monitoring systems; Dutch improvement plans need fair process and real feedback before an underperformance dismissal. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It phrases the OR point as help, not a threat ('Has the OR been involved? I'd hate for this to get blocked after launch.') and says to escalate about the process, 'not about the VP'.",
+      "evidence": "reply.md steps 3 and 4"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+        "reason": "This sample recommends talking to an OR member but not as the explicit fallback step. If the sequencing matters, say 'names the works council as the next step if the VP won't change course'."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Passes all six; question-first and protective, though its explicit 'VP won't move' step leaves the works council out."
+  }
+}

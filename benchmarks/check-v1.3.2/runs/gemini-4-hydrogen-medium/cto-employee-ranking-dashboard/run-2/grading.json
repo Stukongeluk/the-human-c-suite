@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'PRs merged punishes the engineers who review code, mentor juniors, handle incidents, and delete dead code, while rewarding anyone who splits one change into five tiny PRs.' 'Copilot acceptance rate measures tool usage, not value.'"
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": false,
+      "evidence": "Private first ('book a private 15-minute chat with the VP') and a concrete alternative ('DORA lead time, deployment frequency, change fail rate, rework rate, plus review wait time') are present, but no questions to the VP. The reply's line and the document's script are statements followed by an offer ('Can I help you put together a team-level lead-time and quality view instead?'; 'If your real goal is to see where delivery is slow...'). The VP's goal is assumed, not asked."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'likely require Works Council (OR) consent under Article 27(1)(l) of the Works Councils Act (WOR)' and 'If they push ahead anyway... Raise the WOR/monitoring question neutrally with HR or your OR representative and let formal governance carry the weight.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Document lists channels 'in order': manager or skip-level, HR, Works Council. 'Don't debate it in public channels or speculate about the VP's motives.' No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "Reply: 'or your manager first, if that's safer' and 'don't fight it alone'. Document: 'Keep notes on what was proposed, when, and what you raised' and 'Protect yourself: Only keep records you are entitled to keep'. Never advises silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "389 words in reply.md (wc -w); the 672-word talking points are a separate hand-over document."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 389,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 672,
+      "evidence": "wc -w vp-metrics-talking-points.md"
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: METR July 2025 RCT (16 experienced developers, 246 issues): 19% slower, while believing AI sped them up by 20%; OR mandatory from 50; art. 27(1)(l) WOR; DORA lists deployment rework rate (dora.dev); Orosz & Beck, Pragmatic Engineer 2023. All correct. The METR study didn't measure acceptance rate, so using it to argue acceptance rate doesn't track value is a loose inference, not a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It explains how to measure Copilot honestly (team delivery and quality before and after adoption, or with a voluntary comparison group) and gives a ready 1-on-1 script with an ordered escalation path.",
+      "evidence": "vp-metrics-talking-points.md sections 2-3"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Accurate, well-routed and protective, with a useful script document, but it tells the VP rather than asking what problem the ranking should solve."
+  }
+}

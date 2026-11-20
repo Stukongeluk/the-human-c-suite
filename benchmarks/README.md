@@ -6,6 +6,7 @@ Every reply, grade and token count behind the results in the main [README](../RE
 |---|---|---|---|
 | [`claude-v1.3/`](claude-v1.3/benchmark.md) | Version 1.3 against version 1.2.1 | Claude Sonnet 5.5, Claude Opus 5.5 | 56 |
 | [`gemini-v1.3/`](gemini-v1.3/benchmark.md) | With and without the skill (version 1.3), plus a version 1.3.1 check | Gemini 4 Neon, Gemini 4 Hydrogen | 56 + 4 |
+| [`check-v1.3.2/`](check-v1.3.2/benchmark.md) | The "push back privately first" rule, on the two cases it affects | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 16 |
 
 ## Method
 

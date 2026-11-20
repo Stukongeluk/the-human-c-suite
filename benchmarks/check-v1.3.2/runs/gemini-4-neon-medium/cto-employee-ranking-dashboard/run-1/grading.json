@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Ranking by PRs merged and Copilot acceptance rate rewards tiny, noisy PRs and blindly accepting AI suggestions, while punishing the engineers who review code, mentor, handle incidents, and delete complexity.'"
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": false,
+      "evidence": "Private first and an alternative are there ('Talk to the VP privately first'; 'change lead time, review wait time, change fail rate, and aggregated team-level trends before and after Copilot'). But no questions to the VP: it says 'Keep it factual and about the system' and the scripted line explains risks, then only proposes 'Could we look at team lead time... instead?'. The VP's goal is assumed ('A new VP usually asks for numbers like these because...'), not asked. The 'with questions' part is missing."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Using GitHub and Copilot data to monitor and rank individual performance normally requires OR consent (instemmingsrecht) under Article 27(1)(l) WOR' and 'If they push ahead anyway... take it to the OR, whose consent right exists for exactly this.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "'If they push ahead anyway, use safe channels—not Slack. Flag the WOR risk quietly to your manager or HR... or take it to the OR'. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "Offers 'ask your manager to raise it quietly', 'use safe channels—not Slack', 'Keep only records you're allowed to keep, and weigh your own risk honestly: speaking up is brave, not an obligation to put your job on the line.' Weaker than others on allies, but explicit on personal risk and never advises silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "459 words (wc -w). Three steps, a ready line, an offer to draft a proposal."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 459,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: OR mandatory from 50; art. 27(1)(l) WOR consent; AI Act Article 26(7) duty to inform worker representatives applies from 2 December 2027 after the Digital Omnibus (european-and-nordic-practice.md). All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder', 'rungs' or similar jargon (grep checked)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt; the VP's plan has not yet been rolled out."
+    },
+    "best_insight": {
+      "value": "It correctly says the AI Act's duty to inform worker representatives doesn't apply until 2 December 2027, so the user leans on the WOR and GDPR that bite today rather than overclaiming EU law.",
+      "evidence": "reply.md step 1, legal bullet"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Non-discriminating across all eight samples: none mentions the vertrouwenspersoon, leaks or sabotage, so it passes on absence alone. Consider requiring the positive routing order (VP privately, then manager/HR, then works council) instead."
+      },
+      {
+        "assertion": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+        "reason": "Every reply is 349-497 words, so the limit never bites. A tighter limit (about 400 words) or a check that the first two sentences already give the action would discriminate more."
+      },
+      {
+        "assertion": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+        "reason": "'With questions' is the only part that separated samples: four samples script 'heads-ups' plus a proposal and never ask the VP what problem the ranking should solve. Making that explicit ('asks the VP what problem the ranking is meant to solve') would make grading less of a judgement call."
+      },
+      {
+        "reason": "No assertion checks the forced-distribution point (a fixed bottom 10% always exists, so someone goes on a plan every week even if everyone performs well). It is the strongest argument against the improvement-plan part and only four of eight samples make it."
+      },
+      {
+        "reason": "No assertion checks that genuine individual performance concerns are handed back to managers using real work and feedback, rather than a dashboard. Several samples do this; it answers the VP's likely real worry."
+      }
+    ],
+    "overall": "Accurate and well-routed with good legal dating, but it explains risks to the VP instead of asking questions first."
+  }
+}
