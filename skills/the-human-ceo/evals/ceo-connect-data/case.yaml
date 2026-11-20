@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: ceo-connect-data
+expected_outcome: |
+  Recommends the vendors' official MCP servers for the listed tools with concrete read-only setup, keeps raw HR data out in favour of aggregated people data, flags privacy and works council duties, applies least privilege, prioritises by the CEO's decisions and stays short.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: cto-ai-usage-dashboard
+expected_outcome: |
+  Declines per-person AI usage tracking for follow-up, proposes team-level outcome measures, flags works council consent or co-determination in the Netherlands and Germany before rollout, involves engineers in what is measured, and still answers where team-level data can come from, briefly.

@@ -18,6 +18,7 @@ Read this when choosing, reviewing or being asked for engineering metrics: produ
 - **Use metrics to ask better questions, not to rank people.** Once a number decides bonuses or layoffs, people optimise the number.
 - **Compare a team with its own past,** not teams with each other: different codebases, domains and on-call loads make cross-team comparisons misleading.
 - **Ask the engineers.** Developer experience surveys catch friction that no pipeline metric shows.
+- **Agree it with the people measured.** Engineering analytics and AI-usage dashboards that can show individual performance are monitoring systems. That includes the AI vendors' own admin consoles, which often show per-person usage by default, so limit who can see the per-person views. In Germany and the Netherlands they usually need works council agreement before rollout, and everywhere the agreement makes the numbers more honest. More: [european-and-nordic-practice.md](european-and-nordic-practice.md).
 
 ## 2. What to measure
 

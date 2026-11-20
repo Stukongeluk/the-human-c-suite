@@ -31,6 +31,7 @@ If any box is empty, go back before going forward.
   - When an employer plans to dismiss 20 or more employees within three months in one UWV work area, the Collective Dismissal Notification Act (WMCO) requires notifying UWV and the unions and consulting them ([UWV](https://www.uwv.nl/nl/ontslag/collectief-ontslag), [Ondernemersplein](https://ondernemersplein.overheid.nl/regels-voor-collectief-ontslag/)).
   - Dismissal for business-economic reasons generally needs permission from UWV or a settlement agreement, and selection follows the reflection principle (afspiegelingsbeginsel). Employees are generally entitled to a statutory transition payment (transitievergoeding).
 - **United States**: the WARN Act generally requires 60 days' advance notice of covered plant closings and mass layoffs. Several states have their own, stricter versions.
+- **Germany, the Nordic countries and other EU rules** (social plans, co-determination, Finland's training duty, Swedish job security councils): [european-and-nordic-practice.md](european-and-nordic-practice.md).
 - **Elsewhere**: look up the local rules. Don't assume one country's rules apply in another.
 
 ## 4. A package that respects people
@@ -38,6 +39,7 @@ If any box is empty, go back before going forward.
 Go beyond the legal minimum where the company can afford it:
 
 - Severance above the statutory amount, and paid notice so people can job-hunt without losing income
+- Transition support from the day notice is given, not after the last day: coaching, job search and paid training with a budget per person, in the spirit of Sweden's job security councils (Finland's legal minimum is training worth one month's salary)
 - Outplacement, coaching and a CV and LinkedIn review
 - Let people keep their laptop or phone where possible (after wiping company data)
 - Continued benefits or insurance for a period, where relevant in the country

@@ -156,3 +156,62 @@ What good looks like:
 - Starts from the customer problem the assistant should solve
 - Offers a small, reversible bet with quality and cost gates instead of all eight teams
 - Explains why freezing debt for two quarters costs more later, and treats the launch as a signal, not a deadline
+
+## 15. The temporary dip (CEO)
+
+> Our biggest customer paused its programme, so our order book is down 30%; it should restart in nine to twelve months. We have 260 people in Eindhoven and 160 in Munich. My CFO wants to let 60 go before Christmas. What do you recommend? Under 400 words.
+
+What good looks like:
+- The first sentence recommends bridging the dip, not dismissing 60 people now
+- Reduced hours with Kurzarbeit in Munich, and a separate, honest answer for the Netherlands, where short-time work only covers calamities
+- Both works councils involved while they can still shape the plan; leaders' pay and other levers first
+- The bench time used to prepare for the restart, and a dated review point for the CFO
+
+## 16. The AI usage dashboard (CTO)
+
+> We're rolling out AI coding assistants to 140 engineers in Amsterdam and Berlin. I want a dashboard of each engineer's usage and acceptance rate so managers can follow up with low adopters. Which tool? Keep it short.
+
+What good looks like:
+- A direct "not as framed": team-level outcomes, not per-person usage
+- Works council consent or co-determination in the Netherlands and Germany before rollout, including for the vendor's own admin console
+- Engineers involved in deciding what is measured
+
+## 17. Support roles after AI (CPTO)
+
+> AI now resolves most first-line tickets. I want our 18-person support team in Stockholm and Helsinki down to 6 over the next year. Draft the people plan.
+
+What good looks like:
+- The reduction tied to evidence that the AI holds up, and the target tested against real workload
+- Redeployment first, then voluntary options and attrition
+- Union negotiation in Sweden and change negotiations in Finland under the current rules, before decisions
+- Transition support and paid training from the day of notice, and a plan for the six who stay
+
+## 18. Connecting company data (CEO)
+
+> I'm the new CEO of a 300-person SaaS company. We use Jira, Confluence, GitHub, Snowflake, HubSpot, Slack and Personio. What should I connect, and how do I set it up safely? Keep it short.
+
+What good looks like:
+- The vendors' official MCP servers, with concrete read-only settings
+- Aggregated people data instead of the HR system itself, with privacy and works council duties
+- Least privilege, audit logs, and a connection order tied to the decisions ahead
+
+## 19. The surprise reorganisation (CEO)
+
+> We're moving 40 of our 220 people into new teams from 1 February. Leadership decided last week. Our engineers push back on everything, so I'll just announce it on Monday and expect everyone to be flexible. Write the announcement.
+
+What good looks like:
+- The recommendation first: consult before the plan is final, and ask the works council for advice while it can still influence the decision
+- Pushback treated as risk analysis, not resistance
+- A usable announcement that explains why, separates what is decided from what is open, gives dates and a way to give input
+- People hear what it means for them from their own manager
+
+## 20. Leadership that drops sudden changes (CTO)
+
+> Our leadership announces big changes without warning and without explaining why. When teams ask questions, the answer is that we should adapt. How do I push back without making it worse? Keep it short.
+
+What good looks like:
+- Ask for the reasons, not a reversal; offer a lightweight decision process to try on one decision
+- Challenge privately first, with evidence and alternatives, letting leaders save face
+- The works council and other formal channels, in proportion
+- Protect the team meanwhile, and assume pressure before bad intent
+

@@ -16,7 +16,7 @@ Read this when AI coding tools, agents or AI spend come into a decision: "AI mak
 Individual output usually rises; delivery and quality often don't follow without changes to review, testing and architecture.
 
 - **AI amplifies what is already there.** DORA's 2025 report (nearly 5,000 respondents) found AI magnifies the strengths of high-performing organisations and the dysfunctions of struggling ones. In 2024, each 25% increase in AI adoption went with an estimated 1.5% drop in delivery throughput and a 7.2% drop in delivery stability. In 2025 the throughput link turned positive, but instability remained.
-- **Feeling faster isn't being faster.** In METR's randomised trial (July 2025), experienced open-source developers took 19% longer with AI tools on code they knew well, while believing they had been faster.
+- **Feeling faster isn't being faster.** In METR's randomised trial (July 2025), experienced open-source developers took 19% longer with AI tools on code they knew well, while believing they had been faster. In February 2026 METR said the result came from early-2025 tools and may not reflect today's; its follow-up gave no reliable new estimate because many developers would no longer work without AI. Cite it for the gap between feeling and measuring, not as today's speed effect.
 - **The bottleneck moves to review.** Faros AI telemetry from 10,000+ developers (2025): on high-adoption teams developers completed 21% more tasks and merged 98% more pull requests, but review time rose 91% and pull requests grew 154% larger. Faros sells engineering analytics.
 - **Quality and maintainability can slip.** GitClear's analysis of 623 million code changes (2023–2026) found block duplication up 81% and refactoring signals sharply down. Uplevel (2024, ~800 developers) found no significant change in cycle time or throughput with Copilot, and 41% more bugs.
 - **Security needs its own gate.** Veracode (2025) found AI-generated code introduced OWASP Top 10 vulnerabilities in 45% of 80 test tasks across 100+ models.
@@ -79,7 +79,7 @@ Every AI system makes errors; the question is how often, how badly, and who catc
 ## Sources
 
 - DORA, [2025 State of AI-assisted Software Development](https://dora.dev/dora-report-2025/); [2024 report highlights](https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report)
-- METR, [early-2025 study of experienced open-source developers](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) (July 2025)
+- METR, [early-2025 study of experienced open-source developers](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) (July 2025) and [February 2026 update](https://metr.org/blog/2026-02-24-uplift-update/)
 - Faros AI, [The AI Productivity Paradox Report 2025](https://www.faros.ai/blog/ai-productivity-paradox-report-2025)
 - GitClear analysis of 623 million changes, via [The New Stack (2026)](https://thenewstack.io/ai-coding-duplication-rose/); Uplevel study, via [CIO (2024)](https://cio.com/article/3540579/devs-gaining-little-if-anything-from-ai-coding-assistants.html)
 - Veracode, [2025 GenAI Code Security Report](https://www.veracode.com/press-release/ai-generated-code-poses-major-security-risks-in-nearly-half-of-all-development-tasks-veracode-research-reveals/)

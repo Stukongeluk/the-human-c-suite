@@ -27,4 +27,4 @@ Restructuring runs on a human clock, not a sprint clock. People need time to und
 - People hear news that affects them from their own manager or leader, in person or live, before it becomes rumour. Never by mass email, never by a login that suddenly stops working.
 - Explain the why with the real numbers, what is decided, what is still open and what happens next, with dates.
 - Tell people what you are doing for them, not only what is happening to them.
-- Involve works councils, unions or employee representatives early, while they can still shape the plan.
+- Involve works councils, unions or employee representatives early, while they can still shape the plan. Treat them as co-designers, not an audience: share the real numbers, give them time, and change the plan when they find a better route. More: [european-and-nordic-practice.md](european-and-nordic-practice.md).

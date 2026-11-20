@@ -94,7 +94,7 @@ Typical case: several options are compared, such as platforms, vendors or tools,
 
 **The facts**
 - Current AI systems make confident mistakes, and the company stays responsible for what its AI says. In Moffatt v. Air Canada (February 2024), a Canadian tribunal held Air Canada liable for wrong refund information given by its website chatbot.
-- Productivity gains are real in some tasks but not automatic. In a 2025 randomised trial by METR, experienced open-source developers took 19% longer on tasks when they could use AI tools, while believing the tools had made them faster.
+- Productivity gains are real in some tasks but not automatic. In a 2025 randomised trial by METR, experienced open-source developers took 19% longer on tasks when they could use AI tools, while believing the tools had made them faster. METR noted in 2026 that newer tools may do better, which makes the point: measure on your own work.
 - Fewer people checking the work means more errors reach customers.
 
 **What to do**
@@ -137,5 +137,6 @@ Most people who spot these problems are not the CEO. When the user is an employe
 - Keep only records they are allowed to keep, and never break confidentiality or data protection rules to "prove" a point
 - Recommend independent legal advice before any external report
 - Be honest about the personal risk, and respect their choice. Speaking up is brave; it is not an obligation to sacrifice their career
+- When the problem is how leaders decide (surprise changes, no reasons given, challenge treated as disloyalty) rather than one rigged decision, see [good-leadership.md](good-leadership.md)
 
 Sources for the facts in this file are listed in [evidence.md](evidence.md).

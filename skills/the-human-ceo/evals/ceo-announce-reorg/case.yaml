@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: ceo-announce-reorg
+expected_outcome: |
+  Recommends consulting before the plan is final instead of a surprise announcement, asks the works council for advice while it can still influence the decision, treats pushback as risk analysis, and delivers an announcement that explains why, separates decided from open, gives dates and a way to give input, with people hearing the impact from their own manager.

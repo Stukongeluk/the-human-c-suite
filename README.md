@@ -35,12 +35,14 @@ Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the
 - **Follows the IKEA pattern for AI.** When AI takes over tasks, it looks for the valuable work people can do next, and reskills them for it.
 - **Measures AI before it banks on it.** It uses a baseline, a comparison group, quality and security gates, and the company's own results before any vendor's claim.
 - **Plans change at human speed**, with phased rollouts, paid learning time and capacity planned without overtime.
+- **Borrows what works in Europe and the Nordics.** Trust instead of control. Decisions made with employee representatives, not about them. Transition support from the first day of notice, as Sweden's job security councils give it. Reduced hours instead of layoffs for a dip that will pass. It knows the rules that matter, such as works councils in the Netherlands and Germany, Kurzarbeit, Finland's training duty and the EU AI Act's duties at work, and where the evidence has limits.
 - **Knows the people.** It uses career conversations and skills to steer people toward where they want to grow, and protects the juniors who become tomorrow's seniors.
 - **Coaches leaders instead of handing them the shortcut.** Ask for "40% more productivity by Q2", "drop code review so we get the AI speed-up" or "all eight teams on our AI assistant" and it still gives a usable answer, in the format you asked for. It also does three things:
   - names the trap in one sentence;
   - asks the one or two questions that would change the answer;
   - models the habits that make decisions hold: problem before solution, more than one option, slow on one-way doors and fast on two-way doors.
 - **Wants pushback.** It states its assumptions, steelmans the other side, verifies challenges against the data and updates visibly.
+- **Leads with reasons, not rank.** A title doesn't win an argument, its own included. Changes reach the people affected while they can still shape them, with the reasons, what's decided and what's open; "be flexible" is never the plan. It treats challenge as free risk analysis, and it helps people who face leadership that drops sudden changes push back constructively.
 - **Stays honest when things get political.** It handles tilted evaluations, conflicts of interest and "AI is never wrong" claims as decision-quality problems: back to the evidence, a fair process and the proper channels. Documents state the process, not the person.
 - **Is honest when cuts are unavoidable**, and then helps do them once, fairly and decently.
 
@@ -65,7 +67,7 @@ the-human-c-suite/
 └── examples/test-prompts.md            # more prompts to check behaviour by hand
 ```
 
-Every skill is self-contained, so you can install one seat on its own. The files the seats share live once in `shared/`. Examples are coaching, people and change, company context, data sources, hard situations, AI in engineering and tech evaluations. `scripts/sync_shared.py` copies them into each skill, so a fix lands everywhere.
+Every skill is self-contained, so you can install one seat on its own. The files the seats share live once in `shared/`. Examples are coaching, people and change, good leadership, European and Nordic practice, company context, data sources, hard situations, AI in engineering and tech evaluations. `scripts/sync_shared.py` copies them into each skill, so a fix lands everywhere.
 
 Each skill folder holds:
 - `SKILL.md`: the skill itself, with non-negotiables, a way of working, coaching, and a routing table for its reference files;
@@ -114,7 +116,23 @@ The skills load automatically when a request matches, for example:
 
 You can also call one directly: `/the-human-cto` (plain skill) or `/the-human-c-suite:the-human-cto` (plugin).
 
-They work best with your company's tools connected, such as MCP servers for Jira and Confluence, your repos and CI/CD, your data warehouse, Grafana, product analytics, cloud and AI billing data and your HR system. Without them, each seat tells you which data it needs.
+### Connect your company's tools
+
+The seats work best when they can read your real systems. Without them, each seat tells you which data it needs and which connector would reach it. Official, vendor-maintained MCP servers and Claude connectors worth connecting (checked November 2026):
+
+| Area | Connectors |
+|---|---|
+| Work tracking and wiki | Atlassian Rovo MCP server (Jira, Confluence), Linear, Notion, Azure DevOps |
+| Code and pipelines | GitHub MCP server, GitLab MCP server, Azure DevOps |
+| Documents, mail and chat | Claude's Microsoft 365 and Google Workspace connectors, Slack MCP server |
+| Data warehouse and BI | Snowflake, Databricks, BigQuery, Power BI and Fabric, dbt |
+| Observability and incidents | Grafana, Datadog, Sentry, PagerDuty |
+| Cloud and AI spend | AWS Billing and Cost Management MCP server, billing exports, AI vendors' usage and cost reports |
+| Product analytics | Amplitude, Mixpanel, PostHog |
+| Customers and revenue | HubSpot, Salesforce, Intercom, Stripe, your ERP |
+| People data | An aggregated, anonymised view in your warehouse rather than the HR system itself |
+
+Connect them read-only and with the user's own permissions, and add write access per tool only when a task needs it. The seats' `references/data-sources.md` has the read-only setting for each one.
 
 ## What it is not
 
@@ -124,7 +142,27 @@ They work best with your company's tools connected, such as MCP servers for Jira
 
 ## Does it help?
 
-Every test case ran three times with and three times without the skill, on Claude Sonnet and Claude Opus. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder.
+Every test case ran three times with and three times without the skill, on Claude Sonnet and Claude Opus; the version 1.2 cases compare against version 1.1 instead. The skill-creator grader then checked each answer against the statements in the case's `graders/` folder.
+
+### Version 1.2: European practice, connectors and good leadership
+
+Six new cases, each run three times with version 1.2 and three times with version 1.1, on Claude Sonnet and Claude Opus, graded blind. The cases cover a temporary drop in demand, an AI usage dashboard, a support team shrinking after AI, connecting company data, a surprise reorganisation, and a team lead facing leadership that drops sudden changes. Where the first draft still failed checks, the skills were fixed and those cases rerun.
+
+| Model | Version 1.2 | Version 1.1 |
+|---|---|---|
+| Claude Sonnet | 147 of 150 checks | 128 of 150 checks |
+| Claude Opus | 149 of 150 checks | 136 of 150 checks |
+
+Runs with a factual error dropped from 6 of 36 to 1 of 36. Version 1.2 costs about 3% (Opus) to 9% (Sonnet) more tokens.
+
+**What version 1.2 added:**
+- it named the vendors' official MCP servers with their read-only settings, in 12 of 12 runs against 0 of 12, and kept "short" replies short;
+- it gave people transition support and paid training from the first day of notice, in 12 of 12 support-team plans against 0 of 12;
+- it got the country rules right, where version 1.1 twice treated Dutch short-time work as a general scheme and used Finland's pre-2025 consultation threshold in all three Opus plans;
+- it brought both works councils in during the temporary dip while they could still shape the plan;
+- it helped a team lead push back on sudden changes constructively: ask for the reasons, offer a simple decision process, challenge in private first (Sonnet 24 of 24 checks against 19 of 24).
+
+**What both versions already did:** refuse per-person AI usage tracking and flag works council consent, and turn a surprise reorganisation into a consultation with a usable announcement. Those checks barely separate the versions.
 
 ### The CTO and CPTO
 

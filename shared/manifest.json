@@ -45,6 +45,16 @@
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto"
+    ],
+    "european-and-nordic-practice.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
+    ],
+    "good-leadership.md": [
+      "the-human-ceo",
+      "the-human-cto",
+      "the-human-cpto"
     ]
   },
   "blocks": {
@@ -71,6 +81,16 @@
     "tech-templates": [
       "the-human-cto/references/templates.md",
       "the-human-cpto/references/templates.md"
+    ],
+    "european-social-practice": [
+      "the-human-ceo/references/evidence.md",
+      "the-human-cto/references/evidence.md",
+      "the-human-cpto/references/evidence.md"
+    ],
+    "voice-and-fair-process": [
+      "the-human-ceo/references/evidence.md",
+      "the-human-cto/references/evidence.md",
+      "the-human-cpto/references/evidence.md"
     ]
   }
 }
