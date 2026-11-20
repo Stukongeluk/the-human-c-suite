@@ -6,6 +6,51 @@
 
 **AI just makes the bad decisions faster.**
 
+<p align="center">
+  <a href="https://jimmynguyen.nl/projects/the-human-c-suite">
+    <img src="media/the-human-c-suite-preview.gif" width="270" alt="Animated preview: the CEO, CTO and CPTO agents get a memo to cut 20% of jobs with AI, push back on each other and agree on a plan with no layoffs">
+  </a>
+  <br>
+  <em>The three seats get a "use AI, cut 20% of jobs" memo and land on a plan with no layoffs.<br>
+  <a href="https://jimmynguyen.nl/projects/the-human-c-suite">Watch the full 44-second video with sound</a>.</em>
+</p>
+
+## Install
+
+### Claude Code (as a plugin)
+
+```bash
+/plugin marketplace add Stukongeluk/the-human-c-suite
+/plugin install the-human-c-suite@the-human-c-suite
+```
+
+Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. The plugin installs all three seats.
+
+### Claude Code (as plain skills)
+
+Copy the seats you want into your personal or project skills directory:
+
+```bash
+git clone https://github.com/Stukongeluk/the-human-c-suite.git
+cp -r the-human-c-suite/skills/the-human-* ~/.claude/skills/      # all seats, for you, in every project
+# or one seat, for one project:
+cp -r the-human-c-suite/skills/the-human-cto .claude/skills/
+```
+
+### Claude apps (web, desktop, mobile)
+
+Zip a skill folder, for example `the-human-cto`, and upload it under **Customize > Skills** ("+", "Create skill", then "Upload a skill"). Code execution needs to be turned on. See [Use skills in Claude](https://support.claude.com/en/articles/12512180) for the current steps per plan.
+
+### Google Antigravity (app and CLI)
+
+Copy the seat folders from `skills/` into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Leave out the `evals/` folders. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too: see [On Gemini](#on-gemini).
+
+### Other agents
+
+Copy the folders in `skills/` into your agent's skills folder. Any agent that supports the Agent Skills format can load them.
+
+## Why we built it
+
 Through October 2026, US employers blamed AI for [121,401 announced job cuts](https://www.hcamag.com/us/specialization/transformation/ai-blamed-for-121401-job-cuts-but-the-labor-data-isnt-buying-it/594129), more than double the total for all of 2025. Most bad calls aren't made by bad people. They're made under pressure: in one survey, [78% of financial executives](https://www.nber.org/papers/w10550) said they would give up long-term value to report smoother earnings.
 
 A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehiring, lost know-how, the people who quit next, and the health of the people let go.
@@ -44,15 +89,6 @@ Each seat is commercially sharp and technical enough to find the real data. Each
 They fit any kind of organisation: a startup on a tight runway, a family business, a listed or fund-owned company, a cooperative, a non-profit or a public body, and frontline work in factories, stores, care, warehouses and public services as well as offices.
 
 Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the-human-c-suite).
-
-<p align="center">
-  <a href="https://jimmynguyen.nl/projects/the-human-c-suite">
-    <img src="media/the-human-c-suite-preview.gif" width="270" alt="Animated preview: the CEO, CTO and CPTO agents get a memo to cut 20% of jobs with AI, push back on each other and agree on a plan with no layoffs">
-  </a>
-  <br>
-  <em>The three seats get a "use AI, cut 20% of jobs" memo and land on a plan with no layoffs.<br>
-  <a href="https://jimmynguyen.nl/projects/the-human-c-suite">Watch the full 44-second video with sound</a>.</em>
-</p>
 
 ## What every seat does
 
@@ -105,40 +141,6 @@ Each skill folder holds:
 - `evals/`: skill-creator test cases (prompt plus graders), runnable with `claude plugin eval`.
 
 The skills follow the open [Agent Skills](https://agentskills.io/specification) format, so they work in any agent that supports it.
-
-## Install
-
-### Claude Code (as a plugin)
-
-```bash
-/plugin marketplace add Stukongeluk/the-human-c-suite
-/plugin install the-human-c-suite@the-human-c-suite
-```
-
-Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. The plugin installs all three seats.
-
-### Claude Code (as plain skills)
-
-Copy the seats you want into your personal or project skills directory:
-
-```bash
-git clone https://github.com/Stukongeluk/the-human-c-suite.git
-cp -r the-human-c-suite/skills/the-human-* ~/.claude/skills/      # all seats, for you, in every project
-# or one seat, for one project:
-cp -r the-human-c-suite/skills/the-human-cto .claude/skills/
-```
-
-### Claude apps (web, desktop, mobile)
-
-Zip a skill folder, for example `the-human-cto`, and upload it under **Customize > Skills** ("+", "Create skill", then "Upload a skill"). Code execution needs to be turned on. See [Use skills in Claude](https://support.claude.com/en/articles/12512180) for the current steps per plan.
-
-### Google Antigravity (app and CLI)
-
-Copy the seat folders from `skills/` into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Leave out the `evals/` folders. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too: see [On Gemini](#on-gemini).
-
-### Other agents
-
-Copy the folders in `skills/` into your agent's skills folder. Any agent that supports the Agent Skills format can load them.
 
 ## Use
 
