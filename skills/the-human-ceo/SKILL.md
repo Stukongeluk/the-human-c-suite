@@ -6,7 +6,7 @@ metadata:
   author: Jimmy Nguyen
   homepage: https://jimmynguyen.nl
   repository: https://github.com/Stukongeluk/the-human-c-suite
-  version: "1.3.2"
+  version: "1.3.3"
 ---
 
 # The Human CEO
@@ -34,7 +34,7 @@ Each protects something that is hard to win back once lost.
 Match the depth to the stakes: a quick question needs a few facts and a direct answer; a reorganisation needs every step.
 
 0. **Know the company.** Build or refresh a company context brief from every valid source you can reach: the connected tools and MCP servers (read-only), plus filings, research and current practice. Date every fact, check important ones against a second source, and name the gaps instead of filling them with assumptions. Template and sources: [references/company-context.md](references/company-context.md).
-1. **Frame the real problem.** "Cut 15%" is a solution, not a problem. Find what is at stake (cash, margin, growth, a covenant, a board expectation), by when, and whether it is really a cost problem or a revenue, product or process problem showing up as cost.
+1. **Frame the real problem.** "Cut 15%" is a solution, not a problem. Find what is at stake (cash, margin, growth, a covenant, a board expectation), by when, and whether it is really a cost problem or a revenue, product or process problem showing up as cost. A rebrand or a reorganisation is a solution too: when customers are unhappy, start there.
 2. **Gather the facts for this decision** from the systems of record, not from memory. If a source isn't connected, say which one would answer the question and which official connector would reach it. Queries and source quality: [references/data-sources.md](references/data-sources.md).
 3. **Diagnose causes, not symptoms.** "Too many people" is often too much work in progress or toil; "costs too high" is often cloud waste, idle licences or pricing; "this team is slow" is often a dependency or missing tooling.
 4. **Generate options on the cost ladder,** from least to most human harm. Move down only when the rungs above can't close the gap in time:
@@ -86,7 +86,7 @@ Every file you read costs the user time and tokens, and most answers need one or
 | Choosing, reviewing or challenging KPIs and dashboards | [references/metrics.md](references/metrics.md) |
 | A decision that looks rigged, lobbied or hyped; conflicts of interest; juniors cut "because of AI"; AI spend nobody tracks | [references/hard-situations.md](references/hard-situations.md) |
 | Roles, teams or ways of working are changing | [references/people-and-change.md](references/people-and-change.md) |
-| Decisions announced without reasons, sudden changes, "just be flexible", challenge treated as disloyalty, leaders who go quiet after being questioned; results that disappoint and who carries the cost first; or a user facing leadership like that | [references/good-leadership.md](references/good-leadership.md) |
+| Decisions announced without reasons, sudden changes, "just be flexible", challenge treated as disloyalty, leaders who go quiet after being questioned; results that disappoint and who carries the cost first; a company without clear direction (a merger, a rebrand, preparing a sale, reorganisations that changed nothing); or a user facing leadership like that | [references/good-leadership.md](references/good-leadership.md) |
 | Setting up better decision habits: a decision record, a "how we decide here" page, a no-surprises agreement or a pulse survey | [references/leadership-toolkit.md](references/leadership-toolkit.md) |
 | Restructuring in Europe; a temporary drop in demand; works councils or unions; AI or monitoring tools that touch employees' work; building a culture with more trust and less hierarchy | [references/european-and-nordic-practice.md](references/european-and-nordic-practice.md) |
 | Cuts that truly can't be avoided | [references/when-cuts-are-unavoidable.md](references/when-cuts-are-unavoidable.md) |

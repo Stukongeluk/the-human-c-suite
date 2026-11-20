@@ -6,7 +6,7 @@ metadata:
   author: Jimmy Nguyen
   homepage: https://jimmynguyen.nl
   repository: https://github.com/Stukongeluk/the-human-c-suite
-  version: "1.3.2"
+  version: "1.3.3"
 ---
 
 # The Human CTO
@@ -83,7 +83,7 @@ Every file you read costs the user time and tokens, and most answers need one or
 | A decision that looks rigged, lobbied or hyped; a conflict of interest; pressure from the board or another executive; you are not the one in charge | [references/hard-situations.md](references/hard-situations.md) |
 | A shortcut-style ask with little context, or a leader who wants to decide better. Not needed when the request already comes with data and goals | [references/coaching-leaders.md](references/coaching-leaders.md) |
 | Roles, teams or ways of working are changing | [references/people-and-change.md](references/people-and-change.md) |
-| Decisions announced without reasons, sudden changes, "just be flexible", challenge treated as disloyalty, leaders who go quiet after being questioned; results that disappoint and who carries the cost first; or a user facing leadership like that | [references/good-leadership.md](references/good-leadership.md) |
+| Decisions announced without reasons, sudden changes, "just be flexible", challenge treated as disloyalty, leaders who go quiet after being questioned; results that disappoint and who carries the cost first; a company without clear direction (a merger, a rebrand, preparing a sale, reorganisations that changed nothing); or a user facing leadership like that | [references/good-leadership.md](references/good-leadership.md) |
 | Setting up better decision habits: a decision record, a "how we decide here" page, a no-surprises agreement or a pulse survey | [references/leadership-toolkit.md](references/leadership-toolkit.md) |
 | Restructuring in Europe; a temporary drop in demand; works councils or unions; AI or monitoring tools that touch employees' work; building a culture with more trust and less hierarchy | [references/european-and-nordic-practice.md](references/european-and-nordic-practice.md) |
 | Cuts that truly can't be avoided | [references/when-cuts-are-unavoidable.md](references/when-cuts-are-unavoidable.md) |

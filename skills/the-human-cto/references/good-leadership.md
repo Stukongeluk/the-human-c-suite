@@ -1,6 +1,6 @@
 # Good leadership: reasons over rank, and no surprises
 
-Read this when a decision arrives without its reasons, a change lands as a surprise, people are told to "be flexible" instead of being given a plan, challenge is treated as disloyalty, leaders go quiet after being questioned, or a leader asks how to handle a team that pushes back. Also read it when the user faces leadership like that and asks how to respond. And read it when results disappoint and the question is who carries the cost first.
+Read this when a decision arrives without its reasons, a change lands as a surprise, people are told to "be flexible" instead of being given a plan, challenge is treated as disloyalty, leaders go quiet after being questioned, or a leader asks how to handle a team that pushes back. Also read it when the user faces leadership like that and asks how to respond. And read it when results disappoint and the question is who carries the cost first, or when a company has lost its direction: after a merger, during a rebrand or a sale process, or after reorganisations that changed nothing.
 
 Good leaders don't need rank to win an argument. They want the best outcome for the people doing the work and for the company, so they share their reasoning, ask to be challenged and change course when someone finds a better route. Rank decides who is accountable for a decision, not who is right about it.
 
@@ -9,9 +9,10 @@ Good leaders don't need rank to win an argument. They want the best outcome for 
 - 1. Six principles
 - 2. In practice, when you lead
 - 3. Warning signs: decision by ambush
-- 4. When you face leadership like this
-- 5. Culture without stereotypes
-- 6. Sources
+- 4. Clear direction
+- 5. When you face leadership like this
+- 6. Culture without stereotypes
+- 7. Sources
 
 ## 1. Six principles
 
@@ -44,8 +45,23 @@ Good leaders don't need rank to win an argument. They want the best outcome for 
 | People who challenge are called negative or disloyal | The best people go quiet or leave. Managers tend to rate employees who challenge lower than those who support, even when the challenge is useful | Judge people on outcomes; thank useful challenge in public |
 | Decisions justified by title, seniority or "the board wants it" | Weak decisions survive because nobody can examine them | State the actual reasons and evidence |
 | Information kept within an inner circle | Teams plan on guesses, and trust between groups erodes | Share by default; keep confidential only what must be, and say that it is |
+| A rebrand or a reorganisation while the top customer problems stay open | Customers leave, and teams lose sight of what matters | Fix the top customer problems first; keep the rebrand's must-have part small |
+| A third reorganisation with nothing to show for the first two | Lost knowledge, productivity dips and leavers each time, with no direction | Name the problem the last one failed to solve before changing the structure again |
+| "Leadership decides, teams execute" or "any decision beats no decision" | The people who see the problems stop saying so; irreversible moves get made in a hurry | Ask the teams for their analysis first; decide fast only where a decision is cheap to undo |
 
-## 4. When you face leadership like this
+## 4. Clear direction
+
+Direction is the first thing people need from leaders, and the first thing they lose in a merger, a sale process or a crisis. Without it, every team works to its own guess and the loudest priority wins.
+
+- **Start from the customer problem.** Before a rebrand, a reorganisation or a cost programme, name the top customer problems with evidence (NPS comments, churn reasons, support tickets, revenue at risk) and make fixing them the first priority. Falling customer satisfaction becomes lost revenue later, even when it isn't on the slide yet.
+- **A rebrand is a means, not a strategy.** After a merger, one name and one story can be right. Size it, keep the must-have part small (the name, legal entities, redirects) and phase the rest, so it doesn't take the capacity the customer problems need. A new name doesn't fix an unhappy customer.
+- **Few priorities, written down.** Three to five outcomes, each with an owner, a measure and a date, and a short list of what stops or waits. If everything is a priority, nothing is.
+- **Speed on two-way doors, care on one-way doors.** "Any decision beats no decision" is right for choices that are cheap to undo: decide fast and review. Reorganisations, layoffs and ending juniors' or contractors' roles are one-way doors: decide them on evidence, with the people affected, and once.
+- **One reorganisation, then stability.** Each reorganisation brings a dip in productivity, new hand-offs and departures of people who know how things work. Before another one, ask which problem the last one failed to solve and why this one will. Reorganisations that change nothing are a sign the problem was never defined.
+- **Leaders decide; teams know.** "Leadership decides, teams execute" throws away what the people closest to customers and systems can see. Ask for their analysis before deciding, share the reasons after, and keep the decision record where everyone can read it.
+- **Preparing a sale.** A buyer pays for retained customers, recurring revenue and capable teams, and looks at churn, customer satisfaction and key-person risk in due diligence. Falling satisfaction and a hollowed-out team show up there. Make the case in the owners' own terms: protect what a buyer values instead of decorating one year's profit.
+
+## 5. When you face leadership like this
 
 Most people who notice this pattern are not in charge. When the user is an engineer, manager or adviser:
 
@@ -58,13 +74,13 @@ Most people who notice this pattern are not in charge. When the user is an engin
 - **Protect your team meanwhile.** Turn surprises into clear priorities, keep the promises you can keep, and don't feed cynicism.
 - **Know when it's enough.** If real attempts change nothing, it is legitimate to escalate or to leave. Keep a factual record of what was asked and what happened.
 
-## 5. Culture without stereotypes
+## 6. Culture without stereotypes
 
 People bring different expectations about hierarchy from their countries, sectors and past employers. Someone used to formal hierarchy may hear public challenge as an attack. Someone used to Dutch directness may read silence as agreement. Both are understandable.
 
 So make the norms explicit for everyone: how decisions are made here, how people disagree, and when the people affected are told. Then hold everyone to those norms. Judge behaviour, never a person's background. Withholding reasons and punishing challenge are the problem, wherever they come from. Country scores such as Hofstede's describe averages, not individuals ([european-and-nordic-practice.md](european-and-nordic-practice.md)).
 
-## 6. Sources
+## 7. Sources
 
 - Fair process: W. Chan Kim and Renée Mauborgne, "Fair Process: Managing in the Knowledge Economy", *Harvard Business Review*, July–August 1997
 - Leader openness and voice: [Detert & Burris, "Leadership Behavior and Employee Voice: Is the Door Really Open?", *Academy of Management Journal* 50(4), 2007](https://doi.org/10.5465/amj.2007.26279183)
