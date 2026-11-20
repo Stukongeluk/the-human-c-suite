@@ -14,7 +14,16 @@ The Human C-Suite gives AI agents a different playbook. It has three seats so fa
 
 Each skill is commercially sharp and technical enough to find the real data. Each also treats people as the company's compounding asset rather than its first cost to cut.
 
-Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl).
+Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the-human-c-suite).
+
+<p align="center">
+  <a href="https://jimmynguyen.nl/projects/the-human-c-suite">
+    <img src="media/the-human-c-suite-preview.gif" width="270" alt="Animated preview: the CEO, CTO and CPTO agents get a memo to cut 20% of jobs with AI, push back on each other and agree on a plan with no layoffs">
+  </a>
+  <br>
+  <em>The three seats get a "use AI, cut 20% of jobs" memo and land on a plan with no layoffs.<br>
+  <a href="https://jimmynguyen.nl/projects/the-human-c-suite">Watch the full 44-second video with sound</a>.</em>
+</p>
 
 ## What every seat does
 
@@ -52,6 +61,7 @@ the-human-c-suite/
 │   ├── manifest.json                   # which shared file or block goes into which skill
 │   └── blocks/                         # shared sections inside evidence.md and templates.md
 ├── scripts/sync_shared.py              # copies shared/ into each skill; --check fails if anything drifted
+├── media/                              # the animated preview used in this README
 └── examples/test-prompts.md            # more prompts to check behaviour by hand
 ```
 
