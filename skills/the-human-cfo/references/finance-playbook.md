@@ -33,7 +33,7 @@ Then show:
 - **break-even**: how much lost revenue or extra attrition would wipe out the saving;
 - the same table for each alternative on the cost ladder, and for "do nothing".
 
-Evidence to keep in mind: downsizing has been associated with lower subsequent profitability, most strongly in R&D-intensive, growing and low-capital-intensity industries (Guthrie & Datta, 2008). Cost programmes rarely stick: one line of research found only 10% of cost reduction programmes showed sustained results three years later (cited by McKinsey), and a Bain study of 470 companies found only 12% of transformations delivered sustainable performance improvement, while two-thirds of executives had run three or more transformations in five years.
+Evidence to keep in mind: downsizing has been associated with lower subsequent profitability, most strongly in R&D-intensive, growing and low-capital-intensity industries (Guthrie & Datta, 2008). Cost programmes rarely stick: one line of research found only 10% of cost reduction programmes showed sustained results three years later (cited by McKinsey), and a Bain study of 470 companies found only 12% of transformations (of every kind, not only cost programmes) delivered sustainable performance improvement, while two-thirds of executives had run three or more transformations in five years.
 
 ## 2. Cash before cuts
 
@@ -62,7 +62,7 @@ Instead:
 ## 4. Honest numbers: adjusted figures and one-off charges
 
 - **"One-off" means once.** Restructuring that happens every year is a cost of running the business. Adjusted measures that exclude it overstate profit and make cuts look free.
-- **Rules agree.** For US-listed companies, SEC rules forbid adjusting a non-GAAP performance measure to remove items labelled non-recurring, infrequent or unusual when a similar charge is reasonably likely within two years or occurred in the prior two. Elsewhere, treat that as good practice.
+- **Rules agree.** For US-listed companies, SEC rules forbid calling a charge non-recurring, infrequent or unusual in a non-GAAP performance measure when a similar charge is reasonably likely within two years or occurred in the prior two. The adjustment itself may still be made, as long as it isn't labelled that way (SEC interpretation C&DI 102.03). Elsewhere, treat the same test as good practice.
 - **Reconcile everything:** every adjusted figure next to the reported one, with each adjustment named and explained.
 - **Show what the P&L hides:** the cost of attrition and rehiring, training as an investment, and the people indicators (regretted attrition, time to fill, engagement) next to the financials in board packs.
 - **Label estimates,** state assumptions, and show sensitivities on the two or three numbers that matter most.
