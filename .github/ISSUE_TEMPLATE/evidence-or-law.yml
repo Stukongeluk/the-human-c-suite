@@ -1,0 +1,31 @@
+name: Add evidence, company example, or legal touchpoint
+description: Contribute a primary-source study, real company case, or country-specific workplace rule.
+title: "[Evidence]: "
+labels: ["evidence"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Type of contribution
+      options:
+        - Research or data point
+        - Company example (positive or cautionary)
+        - Country legal / works council / social practice touchpoint
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the finding, example, or rule, and where in the seats does it apply?
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources (required)
+      description: Link to the original study, filing, statute, or reporting — include publication year.
+    validations:
+      required: true

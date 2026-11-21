@@ -1,0 +1,28 @@
+name: Bug report
+description: Report an install, packaging, plugin, sync script, or broken-link issue.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Tool, OS, and version / install method (Claude Code plugin, Claude apps zip, Antigravity, etc.)
+      placeholder: e.g. Claude Desktop on macOS, installed v1.5.0 zip
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue and include any error message or broken link.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: false

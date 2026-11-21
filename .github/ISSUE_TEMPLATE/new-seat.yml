@@ -1,0 +1,28 @@
+name: Propose a new seat at the table
+description: Suggest a new C-Suite skill (for example, CHRO, COO, or General Counsel).
+title: "[New seat]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: seat_name
+    attributes:
+      label: Proposed seat
+      placeholder: e.g. the-human-chro, the-human-coo
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Decisions this seat owns
+      description: What concrete prompts should trigger this seat that the existing CEO, CFO, CTO, and CPTO seats don't already cover deeply enough?
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_negotiables
+    attributes:
+      label: Draft non-negotiables & blind-test ideas
+      description: What are 3–5 rules this seat won't bend on, and what real-world scenarios would test whether the skill actually changes model behaviour?
+    validations:
+      required: true

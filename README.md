@@ -2,6 +2,11 @@
 
 **Agent skills for running a company without losing your humanity.**
 
+[![Latest Release](https://img.shields.io/github/v/release/Stukongeluk/the-human-c-suite)](https://github.com/Stukongeluk/the-human-c-suite/releases/latest)
+[![CI](https://github.com/Stukongeluk/the-human-c-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/Stukongeluk/the-human-c-suite/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/github/license/Stukongeluk/the-human-c-suite)](LICENSE)
+[![Agent Skills](https://img.shields.io/badge/Agent_Skills-spec-black)](https://agentskills.io/specification)
+
 ## We don't have an AI problem. We have a leadership problem.
 
 **AI just makes the bad decisions faster.**
@@ -39,11 +44,11 @@ cp -r the-human-c-suite/skills/the-human-cto .claude/skills/
 
 ### Claude apps (web, desktop, mobile)
 
-Zip a skill folder, for example `the-human-cto`, and upload it under **Customize > Skills** ("+", "Create skill", then "Upload a skill"). Code execution needs to be turned on. See [Use skills in Claude](https://support.claude.com/en/articles/12512180) for the current steps per plan.
+Download the ready-to-upload `.zip` for any seat (for example `the-human-cto-v*.zip`) from the [Latest Release](https://github.com/Stukongeluk/the-human-c-suite/releases/latest) and upload it under **Customize > Skills** ("+", "Create skill", then "Upload a skill"). Code execution needs to be turned on. See [Use skills in Claude](https://support.claude.com/en/articles/12512180) for the current steps per plan.
 
 ### Google Antigravity (app and CLI)
 
-Copy the seat folders from `skills/` into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Leave out the `evals/` folders. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too: see [On Gemini](#on-gemini).
+Download `the-human-c-suite-v*.zip` from the [Latest Release](https://github.com/Stukongeluk/the-human-c-suite/releases/latest) (already packaged without `evals/`) and unzip it into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too: see [On Gemini](#on-gemini).
 
 ### Other agents
 
@@ -382,13 +387,13 @@ Pushback is the point, so issues and pull requests are welcome. Useful contribut
 - better evidence;
 - more examples from companies that chose people over the quick cut;
 - other countries' legal touchpoints;
-- new seats at the table, such as a human CFO or CHRO skill.
+- new seats at the table, such as a human CHRO or COO skill.
 
 To change a file the seats share, edit it in `shared/` (or `shared/blocks/`), then sync and check:
 
 ```bash
 python3 scripts/sync_shared.py          # copy shared files into every skill
-python3 scripts/sync_shared.py --check  # exits 1 if any skill has drifted (use in CI)
+python3 scripts/validate.py             # checks sync, JSON manifests, and skill versions (runs in CI)
 ```
 
 Before opening a pull request, run the test cases and check the skill still behaves as described. If you add a fact, add its source.
@@ -400,7 +405,7 @@ cd skills/the-human-cto
 claude plugin eval . --allow-tools Write,Edit,Bash
 ```
 
-More prompts to try by hand are in [examples/test-prompts.md](examples/test-prompts.md).
+More prompts to try by hand are in [examples/test-prompts.md](examples/test-prompts.md). See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide and [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License
 

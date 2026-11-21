@@ -1,0 +1,52 @@
+name: Pushback / challenge an advice pattern
+description: A seat gave weak, unrealistic, overly soft, or harmful advice. Pushback is the point.
+title: "[Pushback]: "
+labels: ["pushback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every seat ends with *"what am I missing?"* — use this form to tell us what it missed.
+
+  - type: dropdown
+    id: seat
+    attributes:
+      label: Which seat?
+      options:
+        - the-human-ceo
+        - the-human-cfo
+        - the-human-cto
+        - the-human-cpto
+        - All seats / shared guidance
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Model and tool used
+      placeholder: e.g. Claude Sonnet in Claude Code, Gemini 4 Neon in Antigravity, Claude Desktop
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt or scenario
+      description: What did you ask the seat to advise on? (Anonymise company details.)
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What the seat did wrong
+      description: Where was the advice unrealistic, too slow, too soft, missing a trade-off, or ignoring the numbers?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What a sharp, humane leader should do instead
+      description: What check, question, or constraint would have made the answer hold up?
+    validations:
+      required: true

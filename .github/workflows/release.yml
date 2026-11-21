@@ -1,0 +1,80 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build skill bundles and publish GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate repository and tag version
+        run: python3 scripts/validate.py --tag "${GITHUB_REF_NAME}"
+
+      - name: Package skill archives
+        run: python3 scripts/package_skills.py --out dist
+
+      - name: Build release notes
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import os, re
+          from pathlib import Path
+
+          tag = os.environ["TAG"]
+          ver = tag.lstrip("v")
+          changelog = Path("CHANGELOG.md").read_text(encoding="utf-8") if Path("CHANGELOG.md").exists() else ""
+
+          match = re.search(
+              rf"^## \[{re.escape(ver)}\][^\n]*\n(.*?)(?=^## \[|\Z)",
+              changelog,
+              re.MULTILINE | re.DOTALL,
+          )
+          body = match.group(1).strip() if match else f"Release {tag}."
+
+          seats = sorted(p.name for p in Path("skills").iterdir() if p.is_dir())
+          seat_rows = "\n".join(
+              f"| `{seat}-{tag}.zip` | Upload to Claude apps (**Customize > Skills > Upload a skill**) |"
+              for seat in seats
+          )
+
+          downloads = (
+              "### Downloads\n\n"
+              "All archives exclude `evals/` and are ready to install directly.\n\n"
+              "| File | Use it for |\n"
+              "|---|---|\n"
+              f"| `the-human-c-suite-{tag}.zip` | All {len(seats)} seats — unzip into `.agents/skills/` (Antigravity) or `~/.claude/skills/` (Claude Code) |\n"
+              f"{seat_rows}\n"
+              "| `SHA256SUMS.txt` | SHA-256 checksums for all archives |\n\n"
+              "For Claude Code plugin installation, run:\n"
+              "```bash\n"
+              "/plugin marketplace add Stukongeluk/the-human-c-suite\n"
+              "/plugin install the-human-c-suite@the-human-c-suite\n"
+              "```\n"
+          )
+
+          Path("release_notes.md").write_text(body + "\n\n" + downloads, encoding="utf-8")
+          PY
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            dist/*.zip dist/SHA256SUMS.txt \
+            --title "The Human C-Suite ${GITHUB_REF_NAME}" \
+            --notes-file release_notes.md

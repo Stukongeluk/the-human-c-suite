@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the project story
+    url: https://jimmynguyen.nl/projects/the-human-c-suite
+    about: Background, video walkthrough, and why The Human C-Suite was built.
