@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+      "passed": true,
+      "evidence": "'I'd draft the plan so that restructuring costs stay inside the bonus EBITDA, and I'd put EBITDA at 50% of the scorecard instead of 100%... A plan that pays 100% on EBITDA with that excluded rewards the next cut and leaves the bill (churn, attrition, security debt) for the buyer's due diligence to find.'"
+    },
+    {
+      "text": "The reply proposes a balanced scorecard with customer, people and quality or risk measures (patient safety or product quality in this sector) alongside honest financial measures, with weights.",
+      "passed": true,
+      "evidence": "Scorecard: Bonus EBITDA 50%, GRR/NRR 15%, cash conversion 10%, 'Product quality, security and clinical-safety record' 15% (target includes 'zero reportable safety/data incidents'), 'Regretted attrition and engagement' 10%, each with threshold, target and stretch."
+    },
+    {
+      "text": "The reply challenges excluding restructuring costs as one-off after three years of restructuring, and defines the profit measure honestly.",
+      "passed": true,
+      "evidence": "'Restructuring costs stay in... calling them one-off would overstate profit and make each cut look free'; 'A charge similar to one in the prior two years cannot be excluded'; capitalisation frozen at the 2026 basis; reconciliation to reported EBITDA. The first-of-its-kind exception is labelled a fallback ('Three consecutive years of restructuring would not qualify')."
+    },
+    {
+      "text": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+      "passed": true,
+      "evidence": "'25% deferred and vesting in equal parts over the following 2 years'; 'Malus and clawback ... Look-back: 3 years', including 'a cut that produced churn in the following two years'. Every measure has a 'How it could be gamed, and the guard' column, and at an exit unvested amounts accelerate only if the retention and quality gates were met."
+    },
+    {
+      "text": "The reply puts leaders' accountability first: no bonus for headcount reduction as such, and leadership bonuses cut first when results disappoint.",
+      "passed": true,
+      "evidence": "'No payment is made for headcount reduction as such.' And: 'if EBITDA is below threshold, executive bonuses are zero before any involuntary reduction is proposed; if the company ever has to cut jobs, the executive team takes the first and largest cut in pay and bonus, and says so.'"
+    },
+    {
+      "text": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+      "passed": true,
+      "evidence": "Purpose: 'a profitable, durable business that a buyer will pay for: retained customers, recurring revenue, safe and reliable software, and a team that stays'; 'A buyer pays for retained recurring revenue; diligence tests churn'. A usable draft with scorecard, EBITDA definition, deferral, restructuring governance and open items."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 564,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1168,
+      "evidence": "wc -w bonus-plan-2027.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Concise, complete and honest; it covers everything a CFO needs. It has no worked example, and the fallback exception sits in the plan text as a permitted exclusion without saying whether that programme's savings come out too."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No law, study or number cited that is wrong; the thresholds are labelled placeholders."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs' in reply or documents."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt asks for a plan design. It reports no disappointing result for a leader to own; the three restructurings are a pattern, not a stated failure."
+    },
+    "best_insight": {
+      "value": "At an exit, deferred amounts accelerate only if the retention and quality gates were met, so a pre-sale cost cut isn't rewarded, and a leader's payout falls if a programme's 12-month net saving is below its cost.",
+      "evidence": "From the reply and its plan document."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply adds a multi-year element, malus or clawback, and guards against gaming the measures.",
+        "reason": "Ambiguous parse: 'a multi-year element, malus or clawback' can be read as needing any one of the three. I graded it as needing a multi-year element (deferral or a multi-year measure) plus malus or clawback plus gaming guards. Say so explicitly, or the 100%-EBITDA samples with only a two-year clawback (H, I, J) could pass."
+      },
+      {
+        "assertion": "The reply makes the case in the owners' terms (value at exit: retained customers, recurring revenue, capable teams) and delivers a usable draft plan.",
+        "reason": "Bundles two checks: the owners'-terms case and a usable draft. Every sample delivers a usable draft, so the verdict rests on the parenthetical. Split it, and say whether an exit argument about add-backs alone counts, or whether it has to say that a buyer pays for retained customers, recurring revenue and capable teams (the bar applied here)."
+      },
+      {
+        "reason": "No assertion checks savings/cost symmetry: an excluded restructuring should also have its savings removed or the target raised. That was the technical point separating honest designs (A, D, H, I, J) from ones that still credit savings while excluding costs (B, F, G). No assertion checks the arithmetic of the worked examples either, though eight samples include one. All checked out except where noted."
+      },
+      {
+        "assertion": "The reply opens with a recommendation not to pay the bonus 100% on adjusted EBITDA and explains what that would reward, such as cutting people, training, maintenance or quality.",
+        "reason": "Assertions 1 and 2 move together. Any sample that keeps 100% EBITDA fails both, even with an honest definition and hard gates (H, J). If that design is acceptable, consider a separate assertion. If it isn't, the pair double-counts one choice."
+      }
+    ],
+    "overall": "Meets all six assertions in the shortest complete package."
+  }
+}

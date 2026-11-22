@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Action 1: 'Run base, bear and bull cases'; bank pack: 'Covenant forecast by quarter to Q2 2028... base/bear/bull' and 'Liquidity: 13-week cash flow and revolving credit headroom by month'; bear-case table (25% delivery -> 3.54x; with the EUR 0.5M owner loan -> 3.41x); a 3.2x headroom target."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Call the relationship manager before the review... Owner + CFO -> Fri 27 Nov'; the ask: 'agree now what happens if Q2 lands between 3.5x and 4.0x: a one-off reset for the Q2 and Q4 2027 tests, or an equity cure right. In return we offer monthly reporting'; 'The bank is weighing credibility and shareholder support, not a headcount number'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Section 3 table sizes each lever (inventory 10 days -> EUR 0.60M, DSO 5 days -> EUR 0.50M, capex EUR 0.30M, flex EUR 0.275M, hiring freeze EUR 0.05M, price and procurement EUR 0.20M) and leverage by delivery: 100% 2.76x, 50% 3.15x, 25% 3.37x. All recomputed and correct."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'the one-off cost of about EUR 0.5M... is booked when you announce... the test captures 0-2 months of savings. Result at Q2: 3.6-4.1x. It only gets you under 3.5x if your facility allows restructuring add-backs and people are gone by the end of April'; section 2 table by exit month with and without add-back (recomputed correctly); section 7: 'Are restructuring and one-off costs added back, and is that capped?'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Secure the owner's commitment. No dividend or management fee until headroom is at least 0.3x, plus a standby subordinated shareholder loan (e.g. EUR 0.5M) to use as a cure. He attends the review'; bank pack item 7 'Shareholder support: dividend stop, standby loan'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Long term is a single risk line ('Skilled staff also tend to leave first'), with no family-name argument. A capacity cut is to be 'sized to the order book rather than to a signal' through the works council, with the employment lawyer and cao checked, but nothing about one round or decent terms (package, social plan, support); the only people-care note is 'Cutting agency hours still means people losing work. Do it deliberately'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1157,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2224,
+      "evidence": "wc -w bank-review-plan.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Financially the most rigorous treatment (dated actions, a sourced Dutch timeline, delivery-weighted lever scenarios, a pre-agreed fallback and triggers), but thin on protecting skills and the firm's name and silent on how to treat people if cuts come."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Checked: transition payment cap EUR 102,000 in 2026 (Rendement), the WMCO one-month wait also blocks settlement agreements unless the unions agree (CMS), UWV part A with 14 + 14 days and then about 4 weeks (KHN), notice 1-4 months less procedure time with at least one month remaining, agency workers first under the afspiegelingsbeginsel, aanzegging for fixed-term contracts."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon; [Verified]/[Medium]/[Assumed] tags only."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader is shown saying the outcome is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It asks the bank to pre-agree the fallback for a 3.5-4.0x outcome before any breach and sets dated triggers (draw the owner's standby loan if the end-March forecast is above 3.4x; file a formal reset by 30 April).",
+      "evidence": "From the sample's reply and files."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+        "reason": "Passed in all ten samples: almost any competent answer says 'talk to the bank and ask for a waiver'. To make it discriminate, require contact with the relationship manager before the review plus a specific ask (reset level and period, or waiver) and what the company offers in return."
+      },
+      {
+        "assertion": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+        "reason": "Also passed in all ten. Consider requiring the cut's effect on the Q2 ratio to be quantified with and without a restructuring add-back, which only some samples did."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "Bundles four checks (skilled people, the family name, one round, decent terms) plus counsel; samples fail it for different reasons. Splitting it would make grades more informative."
+      },
+      {
+        "reason": "No assertion checks the works-council point that drives the 'don't announce' answer (art. 25 WOR advice must be sought while it can still change the decision; Enterprise Chamber risk). Every sample made it, but an answer without it could still pass all six assertions."
+      },
+      {
+        "reason": "No assertion checks the arithmetic (3.6x to 3.5x needs about 2.9% more EBITDA or 2.8% less net debt) or the internal consistency of the models, although several samples build full covenant models where a slip would matter."
+      }
+    ],
+    "overall": "Excellent finance, but the long-term and decency assertion fails."
+  }
+}

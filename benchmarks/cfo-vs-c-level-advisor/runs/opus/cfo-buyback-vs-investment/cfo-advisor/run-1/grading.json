@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that funds investments clearing the hurdle rate before any buyback, and does not use a buyback to meet the EPS guidance.",
+      "passed": true,
+      "evidence": "Bottom line: 'Fund the €120M programme in stage-gated phases. Return the cash that is actually surplus through a buyback, starting with a €100M first tranche now. Reset EPS guidance instead of buying shares to hit it.' Paper: 'fund the programme first, then return the cash that is genuinely surplus... We should not use a buyback to close a few cents of EPS gap.' The hurdle test follows in the 'What' list."
+    },
+    {
+      "text": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+      "passed": true,
+      "evidence": "'The €120M has to earn its place too. At a 9% hurdle rate it needs about €24M a year of extra after-tax cash flow for 7 years, or about €31M a year if the benefit only lasts 5. The COO's case must show that against a do-nothing case' (annuity recomputed: 23.8 and 30.9). Gates with kill criteria, a 15% contingency, KPIs against control stores, and the risks of overruns and trained staff leaving."
+    },
+    {
+      "text": "The reply backs the point with evidence or reasoning about EPS-driven buybacks and short-termism, such as buybacks that coincide with cuts in employment and investment.",
+      "passed": true,
+      "evidence": "Reasoning, no external research: 'A €300M buyback is permanent. A few cents of EPS matter for one reporting period'; 'Approving the programme means resetting guidance, unless the programme gets quietly cut back to save a few cents, which is the worse outcome'; 'A few cents of EPS shouldn't decide a permanent €300M move.' A specific short-termism argument."
+    },
+    {
+      "text": "The reply sets out a capital allocation framework: commitments and minimum cash first, then investment, then returning genuine excess cash (for example a smaller buyback or a dividend).",
+      "passed": true,
+      "evidence": "Paper section 7, a policy for publication: '1. Liquidity floor... 2. Ordinary dividend... 3. Organic investment that clears the hurdle rate... 4. Surplus above the floor returned'. A surplus waterfall (400 - 100 swing - 50 headroom - 120 - 20 contingency = 110) with sensitivities, leases, and undrawn facilities 'not counted on purpose'."
+    },
+    {
+      "text": "The reply handles the activist and other shareholders constructively, in their terms: long-term returns and honest guidance rather than a few cents of EPS.",
+      "passed": true,
+      "evidence": "'Meet the activist with the framework and the numbers before anything is announced. Then reset guidance at the next trading update'; 'they get real money now, a policy in writing, and if free cash flow holds, a credible path to their €300M over about two years'. Paper: 'We negotiate on the timing of returns, not on the floor. The board's duty is to the company and all its shareholders.'"
+    },
+    {
+      "text": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+      "passed": true,
+      "evidence": "'Trained staff leave. Store turnover erodes the value of the training. Pair the new service model with pay and progression for the people who are trained, or the money walks out of the door.' The paper's 'People' section says the budget should include that cost explicitly. It warns against the programme being 'quietly cut back to save a few cents'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1325,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2408,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The most rigorously quantified sample: a surplus waterfall with sensitivities, an annuity hurdle, correct in-year EPS and volume maths, authorisation limits, credit-insurer risk and the people side. It cites no research on EPS-driven buybacks."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Recomputed €1.465/1.495/1.472/1.543 EPS, the 14%/4% run-rate, 7.5c per €10M expensed, €9.6M/3.2M daily volume, 5% -> 5.9% stake and the surplus sensitivities; IAS 38.69(b), the IFRIC 2021 decision, 2016/1052 Arts. 3-4 and the capital-reduction safe-harbour purpose are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Confidence tags such as '[Verified: your numbers. High]', but no mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "It asks the remuneration committee to take the buyback out of incentive EPS '(yours included)' but never says the miss is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It notes that a buyback raises the activist's percentage stake (5% becomes 5.9% after a 15% buyback) and asks for a check against disclosure thresholds, a governance consequence of giving the activist what it wants.",
+      "evidence": "Board paper section 6, 'Ownership effect'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+        "reason": "Passes samples that only ask the COO for a case 'above the hurdle' as easily as samples that work out what the €120m must earn (e.g. about €24m a year over 7 years at 9%). Consider requiring an explicit hurdle or break-even figure."
+      },
+      {
+        "reason": "No assertion tests the EPS mechanics (weighted-average share count, time left in the year, the 25% daily-volume cap), which decide whether the activist's 'gets us to guidance' claim is even true. Some samples checked this properly; others used full-year run-rate accretion and overstated what a buyback does to this year's EPS."
+      },
+      {
+        "reason": "No assertion covers the market-abuse risk of buying back shares while management knows guidance will be missed (possible inside information, MAR Art. 17 and the safe-harbour trading restrictions), the main legal flag in this scenario."
+      },
+      {
+        "assertion": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+        "reason": "The first half is met by silence, since no sample proposed cuts, so the second half does all the work. Consider wording it as 'explicitly protects store-staff training and the people side of the service model'."
+      }
+    ],
+    "overall": "6/6. Excellent quantification; it would be stronger still with the research evidence."
+  }
+}

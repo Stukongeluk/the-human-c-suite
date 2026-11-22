@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"Don't take a flat 8% per cost centre to the board. At 68% payroll it works out as roughly a 8% headcount reduction (about 48 people) done as a restructuring\"; \"It punishes efficient teams and rewards padded ones. Everyone gets the same percentage whatever their return.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": false,
+      "evidence": "Sizes the target (EUR 6.0m) and flags the baseline (\"closer to 11-12% of today's run-rate\") and timing (\"The board must say whether -8% means full-year average or exit run-rate\"), but never asks whether the board's underlying need is margin, cash or a covenant."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Tier 1, non-payroll first (-12%, about EUR 2.9m). Procurement renegotiation and vendor consolidation, software and licence audit, travel, external hiring agencies, facilities, discretionary marketing and events\"; revenue side \"A 1-point utilisation gain ... is worth about EUR 0.5m\", plus rate indexation and write-offs."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"Tier 2, hiring freeze and managed attrition ... retire 35-40 roles in roughly six months with no dismissals. Backfill only roles with a business case, mainly billable roles where utilisation is above target\"; \"Tier 4 ... Only start the formal OR and UWV process if Tiers 1-3 miss the target\"; \"Protect: billable delivery capacity, key account owners, and sales or delivery roles with a proven return.\" No internal moves, and the attrition yield is optimistic."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": false,
+      "evidence": "Only \"set the bonus pool to results\" under Tier 3; no leaders' pay, bonus or perks first."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "Only Tier 1 has an amount; confidence is given for Tiers 1-2; owners appear only in the 'How to act' tasks; no timing per lever and no stop list; the gap appears only as a risk (\"If Tiers 1-3 only deliver about 70% of plan, the gap is about EUR 1.8m\")."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1305,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "Right on the main argument with a sensible least-damage order and a trigger, but thin on sizing, no leaders-first measure, and the attrition lever is optimistic (35-40 roles in six months while still backfilling billable roles)."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: \"The afspiegelingsbeginsel ... works across the company, not per cost centre\" - afspiegeling applies per business location (bedrijfsvestiging) within categories of interchangeable functions, not company-wide. Other claims (UWV permit or court route, 1-4 months' notice, WMCO at 20+ in one UWV region, works council advice) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon such as 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt sets a cost target with a thin but positive margin; no bad outcome is described."
+    },
+    "best_insight": {
+      "value": "Pointing out that a per-cost-centre headcount number cannot be executed as designed because Dutch selection rules do not follow cost-centre lines, and naming the recommendation's own weakest point (attrition and procurement data not yet seen).",
+      "evidence": "'Why the blanket cut' point 3 and 'Weakest point of my recommendation'."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+        "reason": "Passed in all ten samples; every reply opened against the flat cut. It does not discriminate. Consider requiring the 'efficient vs wasteful' point to be shown with the user's own numbers or an example."
+      },
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Also passed in all ten samples. A sharper version would require the no-job levers to be sized in money with a range and shown against the gap, and pricing/leakage kept separate from the opex figure."
+      },
+      {
+        "reason": "No assertion checks in-year versus run-rate phasing of savings and one-off costs under Dutch process (works council advice, WMCO, notice periods). That drove most of the difference in financial soundness between samples."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "Compound assertion (amount, timing, owner, confidence, stop list, remaining gap). Several strong samples missed only one element; consider splitting it so partial structure is visible."
+      }
+    ],
+    "overall": "Concise and directionally right; fails on the board's real objective, leaders first and lever-level structure."
+  }
+}

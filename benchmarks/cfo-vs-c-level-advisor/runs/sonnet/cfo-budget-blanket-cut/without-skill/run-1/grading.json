@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"My recommendation is to take the 8% target to the board, but not to deliver it as a flat 8% per cost centre.\" Then \"It is mostly a headcount decision ... A flat cut therefore takes about 5.4 points of the 8% out of payroll\" and \"A flat cut also rewards the cost centres that padded their budgets and penalises the ones that already run lean.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"Ask the CEO and the board what problem the 8% is solving. If it is margin, a combination of cost and revenue or pricing levers may do better than cost alone. If it is cash or covenant compliance, the timing of savings matters more than the annual total.\" Baseline question (\"8% below this year's actual opex or 8% below next year's baseline ... closer to 10 to 12%\") and board pack item \"what 8% means in euros, and against what\" show how to size it; phasing addressed."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Track 1: Non-payroll ... Target about 10 to 12% savings ... Vendors, software licences and SaaS consolidation, subcontractors and freelancers, travel, office space ... Start with zero-based review of the top 20 vendors ... 10 to 12% of 32% is roughly 3.2 to 3.8 points of the 8%.\""
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Marginal pass. \"Hiring freeze or selective approval for non-revenue roles, and not replacing leavers where capacity allows. Natural attrition ... Temporary measures such as hours reduction on a voluntary basis ... Redundancies only as a last resort\". Protection: \"Name the cost centres that are protected ... (typically billable delivery and sales) ... every cut is tested against its effect on billable capacity and on retention of key staff.\" No internal moves, and protection is by category rather than specific investments."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": false,
+      "evidence": "Only \"review variable pay and bonus design\" as a general payroll item; nothing puts leaders' pay, bonuses or perks first."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "Tracks carry placeholder percentages and one owner (\"owned by finance and procurement\"); no timing, owner or confidence per lever, no list of what stops or waits, and the gap is only \"7.3 to 8.6 points ... That brackets 8%\" on placeholders."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1252,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "Correct reasoning and a useful 'what problem does the 8% solve' question, but no euros, no model, no leaders-first measure and only placeholder percentages, so the CFO still has the real work to do."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: 8/32 = 25%; UWV route with afspiegeling; WMCO at 20+ in one UWV region within three months with union consultation; art. 25 WOR advice before the decision. 'With more than 50 employees you have a works council' is loosely phrased (the duty starts at 50) but not wrong for this company."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon such as 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt sets a cost target with a thin but positive margin; no bad outcome is described."
+    },
+    "best_insight": {
+      "value": "Telling the CFO to show the CEO the comparison on net margin rather than opex, with a downside scenario of revenue 3-5% below plan, so the discussion stays factual.",
+      "evidence": "'Week 2: Build' and 'Week 3: Board pack and alignment'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+        "reason": "'Named investments with explicit criteria' is hard to grade when a sample tells the user to name them; consider saying whether naming categories (delivery, sales) is enough."
+      },
+      {
+        "assertion": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+        "reason": "Passed in all ten samples; every reply opened against the flat cut. It does not discriminate. Consider requiring the 'efficient vs wasteful' point to be shown with the user's own numbers or an example."
+      },
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Also passed in all ten samples. A sharper version would require the no-job levers to be sized in money with a range and shown against the gap, and pricing/leakage kept separate from the opex figure."
+      },
+      {
+        "reason": "No assertion checks in-year versus run-rate phasing of savings and one-off costs under Dutch process (works council advice, WMCO, notice periods). That drove most of the difference in financial soundness between samples."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "Compound assertion (amount, timing, owner, confidence, stop list, remaining gap). Several strong samples missed only one element; consider splitting it so partial structure is visible."
+      }
+    ],
+    "overall": "A sound but generic outline; it passes the reasoning assertions and fails the leaders-first and board-structure ones."
+  }
+}

@@ -4,6 +4,11 @@ All notable changes to **The Human C-Suite** are documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Head-to-head benchmark against another open-source CFO skill, `cfo-advisor` from alirezarezvani/claude-skills (`benchmarks/cfo-vs-c-level-advisor/`): 141 of 144 checks against 85 of 144 across Claude Sonnet and Opus, graded blind, with the caveats in the benchmark.
+
 ## [1.5.0] - 2026-11-20
 
 ### Added

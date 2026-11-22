@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Section 5 table by process: 'What AI and automation can take | What stays human | Share of team hours freed' (AP 15/30/45% by end-2027, reconciliations 8/20/35%, reporting 0/5/10%). 'All capacity percentages are [Assumed] ... Gate 0 exists to replace them with measurements.' Gate 0: 'AP at least 60% touchless on 3 months of our own invoices ... Error rate no worse than today. Baseline time study complete.'"
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Section 6.1 itemises 'AP automation implementation and integration', 'reconciliation platform', 'reporting data layer and GenAI tooling', 'process redesign and data clean-up', 'compliance and assurance (DORA ..., DPIA, auditor review of automated controls, AI literacy training)', 'backfill for internal experts seconded', 'change management and training', 'Running: licences and AI usage' and '3 automation and controls roles'. All are tagged '[Assumed: replace with vendor quotes]'. The base-case rows add up within the stated rounding."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'Set the target as capacity, not as a headcount cut in 12 months.' 'Reskill and redeploy first. Fill the 3 automation and controls roles internally. Offer vacancies in claims, finance analytics and compliance before any package.' 'Make teams accountable for both the time they save and where that time goes.' Weakness: it converts 75-90% of freed capacity into role removals and lists 'Freed time not converted into savings' as a risk, so little capacity is kept for backlog or quality."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "AP: 'supplier master-data changes (a fraud control), payment approval (segregation of duties)' stay human; reconciliations and reporting keep 'sign-off'. 'auditor review of automated controls'; 'No reductions in the reporting team before the FY2027 annual cycle is complete'. It flags DORA (register, contract clauses, exit plan, keeping FI informed), Solvency II governance, AI Act Article 4 and GDPR."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "'MBL negotiation must come first, then at least 4 months' notice to Arbetsförmedlingen ... then 1-6 months' individual notice under LAS. Selection is last in, first out (LIFO), with at most three exemptions. Laid-off staff have priority for re-employment for 9 months'. Attrition: 'Natural capacity is 90 × 8% attrition × 75% non-replaceable + 2 redeployments = 7.4 exits per year'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "Gate 0 (end Feb 2027), Gate 1 (Jul 2027) and Gate 2 (Apr 2028) have pass criteria and stop rules ('Below 50% of plan: cancel wave 2 and keep AP'). 'My recommendation is Option B. Restate the 30% as a capacity target for end-2029'. Weakness: it still sets '2027 hard targets ... 8-9 roles removed' before Gate 0, mainly through non-backfill."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1201,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4602,
+      "evidence": "wc -w of the other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Thorough and well sourced, with a sensible gated plan and good Swedish and DORA detail. But it fixes a 2027 role target before measuring anything, treats unconverted capacity mainly as a risk, uses internal-process headings, and points to a model that wasn't delivered."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) The reply says 'Re-run the attached model with real figures and take Option B to the board', but no model file was delivered: the sample holds only reply.md and business-case.md, whose Appendix A gives formulas, not a model. The external facts check out: Ardent Partners 2025 touchless 32.6% / 49.2% and cost per invoice USD 9.40 / 2.78; the Gartner November 2026 survey; Gartner 2024 '<10% headcount reductions'; CBA's reversal of 45 cuts; 24.26% special payroll tax; LAS §§11, 22 and 25."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "The reply opens with '**CFO Advisor: Business case for AI ...**' and has a section '**Critic pre-screen** (this affects about 30% of the team, so I stress-tested my own case)'. These are internal process headings, not advice to the user."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome (no missed result or failure), so there is nothing for a leader to own."
+    },
+    "best_insight": {
+      "value": "It warns that bringing in consultants to do the same tasks after redundancies invites a union challenge that the shortage of work wasn't genuine, and it bars reporting-team cuts until the first full FY2027 annual cycle has run on the new tools.",
+      "evidence": "business-case.md sections 5 and 6.3"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "Every sample passed this one: naming MBL, LAS selection order and attrition is easy. A sharper version would check that the Swedish timing (MBL first, four months' notice to Arbetsförmedlingen for 26-100 people, notice of one to six months) actually moves the cash flow of the redundancy option in the model."
+      },
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "It is unclear whether a reply that asks the board to approve a smaller headcount cut up front (15%, or 9-12 FTE in year 1) passes. Consider 'commits to no headcount number until a gate has measured the capacity' so the test is about when the commitment is made, not about whether the number is 30%."
+      },
+      {
+        "reason": "No assertion checks whether the redundancy option is costed for the work that is still there when people leave before the AI works (contractors, rehiring, backlog). That gap is what separated the strongest samples from the weaker ones."
+      },
+      {
+        "reason": "No assertion checks that the numbers add up or that a model the reply mentions was actually delivered. Most samples were internally consistent, but one referred to an 'attached model' that wasn't there and one couldn't be reproduced from its own stated assumptions."
+      }
+    ],
+    "overall": "Passes all six, but its 2027 role target and missing model are weaknesses the assertions don't catch."
+  }
+}

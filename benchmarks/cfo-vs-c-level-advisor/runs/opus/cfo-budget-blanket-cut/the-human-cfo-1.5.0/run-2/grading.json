@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"Recommendation: don't take '8% per cost centre' to the board. Take a ranked plan instead.\" \"With payroll at 68% of opex, 8% everywhere comes to about 48 roles, mostly in delivery, and delivery hours are what you sell\"; \"Training gets cut 8% too\". The paper protects training (\"Cutting it 8% would save EUR 0.08m, at a lasting cost\") while cutting consultants 25% and software 18%, showing why equal cuts are wrong."
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"What is the 8% protecting, and against what base? 8% below a do-nothing 2027 is EUR 5.5m. 8% below this year's actual is EUR 7.6m ... If the real target is a margin, EBITDA or a covenant, put that on the slide instead.\" Paper decision 1: \"Confirm what the 8% protects (a margin percentage, an EBITDA amount, cash or a covenant) and its base\"; targets for both the year and the run-rate."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "Ranked plan: \"1. Zero-base third-party spend: external hires, software and cloud, consultants, travel and events, office and lease cars. About EUR 2.9m (range EUR 1.6-4.3m)\" with a line-by-line table; \"2. Pricing and billing: index contracts ..., chase unbilled hours and unapproved discounts ... About EUR 0.7m of margin\"; receivables \"about EUR 1.9m of cash once\"."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"Hiring freeze with exceptions, internal moves first: refill only roles carrying sold work, security roles, single points of failure and the junior intake ... about 22 fewer roles through normal attrition\"; \"5b. Internal moves before external recruitment\"; section 4 protects \"Delivery capacity with sold work\", \"Training (EUR 1.02m), in full\", \"The graduate and junior intake\", \"Information security, compliance\" with reasons; \"No compulsory redundancies are planned.\""
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders first: budget the leadership bonus at half, paid only on a balanced scorecard ... The MT, CEO and you included, offers 10% of base pay for 2027. About EUR 0.5m: small, but it makes the freeze credible.\" Listed before the freeze; paper section 7 sizes it (EUR 0.33m + EUR 0.18m)."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "Paper section 3 table per measure: \"2027 (mid; range) | Lands in | Owner | Confidence | Human impact\"; section 5 \"What stops or waits\"; section 8 \"The gap that remains\" (EUR 1.34m on opex, EUR 0.80m on margin) with how to close it and a July checkpoint."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1024,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3745,
+      "evidence": "wc -w budget-2027-board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Board-ready: reconciled figures, a like-for-like test against the blanket cut, leaders first, pricing and cash, a stop list, an honest gap and correct Dutch process; only the illustrative base limits it."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: CPB cao 3.8% and CPI 2.7% for 2027 and the higher Aof premium (AWVN, 18 Sep 2026); art. 31a WOR budget information; art. 25 WOR timing; WMCO incl. employer-initiated settlements; afspiegeling by age group within interchangeable roles; transition payment one-third month per year; Trevor & Nyberg 1% -> 31%; McKinsey 10% sustained after three years; Guthrie & Datta 2008. Tables reconcile (e.g. third-party savings sum to 2.92; plan B 4.68; Option A payroll part -0.64)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon such as 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt. The plan does put leaders first ('it makes the freeze credible') but frames it as credibility, not responsibility."
+    },
+    "best_insight": {
+      "value": "The 'A+' fair-test row gives the blanket cut every same spend, pricing and leadership measure, isolating that cutting 48 roles instead of freezing 22 still costs about EUR 1.2m of 2027 profit; plus the timely point that indexation notices often must go out before 1 January.",
+      "evidence": "Reply table row 3 and paper section 2 'A fair test'; reply plan item 2."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+        "reason": "Passed in all ten samples; every reply opened against the flat cut. It does not discriminate. Consider requiring the 'efficient vs wasteful' point to be shown with the user's own numbers or an example."
+      },
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Also passed in all ten samples. A sharper version would require the no-job levers to be sized in money with a range and shown against the gap, and pricing/leakage kept separate from the opex figure."
+      },
+      {
+        "reason": "No assertion checks in-year versus run-rate phasing of savings and one-off costs under Dutch process (works council advice, WMCO, notice periods). That drove most of the difference in financial soundness between samples."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "Compound assertion (amount, timing, owner, confidence, stop list, remaining gap). Several strong samples missed only one element; consider splitting it so partial structure is visible."
+      }
+    ],
+    "overall": "Meets every assertion with substance; the assertions could not separate it from sample I or F."
+  }
+}

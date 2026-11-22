@@ -10,6 +10,7 @@ Every reply, grade and token count behind the results in the main [README](../RE
 | [`check-v1.3.3/`](check-v1.3.3/benchmark.md) | Clear direction: version 1.3.3 against version 1.3.2 and no skill, on a rebrand-before-a-sale case and a rebrand-against-customers case | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 48 |
 | [`company-types-v1.4/`](company-types-v1.4/benchmark.md) | Every kind of organisation: the version 1.4 draft against version 1.3.3 (and no skill on Claude) on six cases outside software, plus the [follow-ups](company-types-v1.4/follow-ups.md) that led to version 1.4.0 | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 60 + 17 |
 | [`cfo-v1.5/`](cfo-v1.5/benchmark.md) | A humane CFO seat: the draft against the CEO seat (and no skill on Claude) on six finance cases, plus the [follow-ups](cfo-v1.5/follow-ups/) that led to version 1.5.0 | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 60 + 8 |
+| [`cfo-vs-c-level-advisor/`](cfo-vs-c-level-advisor/benchmark.md) | `the-human-cfo` 1.5.0 against another open-source CFO skill, `cfo-advisor` from alirezarezvani/claude-skills (and no skill), on the six finance cases | Claude Sonnet 5.5, Claude Opus 5.5 | 48 + 12 |
 
 ## Method
 

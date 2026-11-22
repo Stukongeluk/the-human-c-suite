@@ -214,6 +214,17 @@ Quality is the grader's overall score from 1 to 10, given apart from the checks.
 
 It was weakest on the AI back-office case, where it sometimes costed only the board's option, and on the covenant case, where it sometimes left the levers as blanks. Version 1.5.0 costs every option on the same basis and sizes each lever with a labelled estimate. Rerun on those two cases, it passed 44 of 48 checks against 35 for the draft and 40 for the CEO seat. Details: [`benchmarks/cfo-v1.5/`](benchmarks/cfo-v1.5/benchmark.md).
 
+### Against another CFO skill
+
+How does the CFO seat compare with the closest open-source skill we found, `cfo-advisor` from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills)? Same six finance cases, same brief for both, two runs per skill per model, graded blind in one pool with the no-skill runs.
+
+| Model | the-human-cfo 1.5.0 | cfo-advisor | Without a skill |
+|---|---|---|---|
+| Claude Sonnet | 69 of 72 checks (quality 7.4) | 28 of 72 (5.0) | 21 of 36 (5.7) |
+| Claude Opus | 72 of 72 (9.0) | 57 of 72 (7.8) | 26 of 36 (7.2) |
+
+Read it with care: the checks were written with our seat and test its stance, and `cfo-advisor` is built for startup finance (runway, burn, unit economics, fundraising), while these cases are established companies. On Opus, `cfo-advisor` matched our seat's checks on three cases and came within one check on a fourth; the gap was widest on the bonus plan and the blanket budget cut. Quality is the grader's overall score from 1 to 10, given apart from the checks. Details and every run: [`benchmarks/cfo-vs-c-level-advisor/`](benchmarks/cfo-vs-c-level-advisor/benchmark.md).
+
 ### Version 1.4: every kind of organisation
 
 Six new cases outside software, on Claude and Gemini, one run per setup, graded blind: a family machine builder in a downturn, a non-profit home-care organisation with a budget gap, a startup with nine months of runway, AI rostering for a supermarket chain, an AI fraud score for a municipality's welfare benefits, and a leaderboard for parcel drivers employed by subcontractors.

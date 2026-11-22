@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Section 3 'Where the hours are (task sizing, E)': AP 40%, reconciliations 30%, reporting 12%, management 5%, giving net 20 FTE (range 13-27). 'These shares are to be replaced by measured results from the pilot, against a baseline from our own volumes and error rates.' Gate 1: 'touchless rate, error rate vs baseline, review hours per 1,000 items, audit trail accepted by the auditors and Risk'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "'AI programme cost (non-staff): 6.0 in 2027, 4.0 in 2028, 3.5 a year after (E: licences and usage, ERP integration, data work, controls, monitoring, audit trail)'; 'Less review, exception handling and monitoring of the AI itself | -1.3'; 'Reskilling and redeployment' is costed. Every number is marked '(E)'. The rows add up (A -17.4 / -3.5 / +9.4 = -11.5; B -6.6 / +1.2 / +11.4 = +5.9, within the stated 0.1 rounding)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'A headcount saving is booked only after the gate shows the hours are freed. Until then the benefit is reported as capacity: hours freed, and where they go (backlog, controls, IFRS 17 and DORA work, better service).' Order: 'Hiring freeze with exceptions, then attrition, then redeployment and reskilling'. 'Involuntary reductions only after the above, once, with proper support'."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Controls: segregation of duties, audit trail on every AI-touched posting, and a named human who signs off anything that moves money or affects a person. No AI posting or payment without approval.' Also 'Finansinspektionen expectations on internal control, outsourcing and ICT/operational resilience (including DORA)' and the AI Act duties from '2 December 2027 per the 2026 Digital Omnibus'."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "'negotiation with the unions under the Co-determination Act (MBL)'; 'selection follows length of service within each operational unit and collective-agreement area ... with an exemption for three employees ... Management cannot choose'; nine-month priority. Attrition: 'assumed natural attrition of about 10% a year ... (about 9 people)'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "Gate 1 'Pilot' (end Q2 2027), Gate 2 'Scale' (end Q4 2027), Gate 3 'Commit a headcount number' (mid 2028): 'Board sets the number from evidence: a range, not 30% by decree'. 'Do not approve 27 redundancies in 2027.' Reply: 'A decision on the headcount number at mid-2028, from 12 months of production data, not by decree.' The headline is phrased as 'targets a 15-30% reduction', but no number is committed before the gate."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 970,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2734,
+      "evidence": "wc -w of the other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Clear, consistent and well sequenced: no-AI fixes first, capacity reported before any saving is booked, a headcount decision only after 12 months of data, and leaders' bonuses at risk first. Its cost detail is lighter than the strongest papers', and the review overhead (1.3 FTE) looks low."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. The Swedish rules, the AI Act 2 December 2027 date, and the Careerminds (two in three rehiring, 30.9%), MIT NANDA, Gartner 40% and Trevor & Nyberg figures match the fact sheets."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Board paper section 9: 'a hard external constraint such as a regulatory capital or covenant event that needs cash sooner (revisit the ladder, not just payroll)'. 'The ladder' is unexplained framework jargon (cost ladder)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome (no missed result or failure), so there is nothing for a leader to own."
+    },
+    "best_insight": {
+      "value": "It puts plain process fixes (e-invoicing, matching rules already in the ERP, fewer approvals) ahead of the AI spend, and ties executive bonuses to underdelivery before any frontline role is touched.",
+      "evidence": "Section 7 'What goes first, before any job'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "Every sample passed this one: naming MBL, LAS selection order and attrition is easy. A sharper version would check that the Swedish timing (MBL first, four months' notice to Arbetsförmedlingen for 26-100 people, notice of one to six months) actually moves the cash flow of the redundancy option in the model."
+      },
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "It is unclear whether a reply that asks the board to approve a smaller headcount cut up front (15%, or 9-12 FTE in year 1) passes. Consider 'commits to no headcount number until a gate has measured the capacity' so the test is about when the commitment is made, not about whether the number is 30%."
+      },
+      {
+        "reason": "No assertion checks whether the redundancy option is costed for the work that is still there when people leave before the AI works (contractors, rehiring, backlog). That gap is what separated the strongest samples from the weaker ones."
+      },
+      {
+        "reason": "No assertion checks that the numbers add up or that a model the reply mentions was actually delivered. Most samples were internally consistent, but one referred to an 'attached model' that wasn't there and one couldn't be reproduced from its own stated assumptions."
+      }
+    ],
+    "overall": "Passes all six; the one blemish is a jargon leak."
+  }
+}

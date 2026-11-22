@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that funds investments clearing the hurdle rate before any buyback, and does not use a buyback to meet the EPS guidance.",
+      "passed": true,
+      "evidence": "Opening line: 'Recommend to the board: fund the COO's €120 million, in gated tranches. Do not run a €300 million buyback. Take the EPS miss to the market openly, and return only genuinely excess cash, sized on its own merits and not to close the EPS gap.' Hurdle: 'I need the COO's payback and return against our hurdle rate before the board votes.'"
+    },
+    {
+      "text": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+      "passed": true,
+      "evidence": "'Cash shouldn't be the first thing returned if the business can use it at a return above its cost of capital'; 'Cost the programme like every alternative: its one-off costs, run costs, delivery risk and a downside case where benefits arrive a year late. I need the COO's payback and return against our hurdle rate'; tranches 'release on evidence: conversion and availability for the platform, plus service scores, staff retention and repair/attach revenue'; risk: 'A blank cheque for a platform rebuild is how retailers lose €120m and two years.' The hurdle is never put in figures, but the test, the risks and the measures are all specific."
+    },
+    {
+      "text": "The reply backs the point with evidence or reasoning about EPS-driven buybacks and short-termism, such as buybacks that coincide with cuts in employment and investment.",
+      "passed": true,
+      "evidence": "'Firms that would just have missed analysts' EPS forecasts were sharply more likely to buy back shares, and those EPS-driven buybacks went with cuts in employment and investment (Almeida, Fos & Kronlund, 2016). Your service-model plan is exactly the kind of spend that gets cut next.' Checked against the JFE abstract."
+    },
+    {
+      "text": "The reply sets out a capital allocation framework: commitments and minimum cash first, then investment, then returning genuine excess cash (for example a smaller buyback or a dividend).",
+      "passed": true,
+      "evidence": "'Net cash is not free cash. Before anything is called excess, deduct minimum operating cash, the seasonal working-capital peak..., lease and supplier commitments, and any covenant or rating buffer' and 'Set the capital-return framework before the number. After investment, minimum cash and commitments, publish a policy: an ordinary dividend plus buybacks from excess cash... Its size must stand on the excess-cash calculation.'"
+    },
+    {
+      "text": "The reply handles the activist and other shareholders constructively, in their terms: long-term returns and honest guidance rather than a few cents of EPS.",
+      "passed": true,
+      "evidence": "Steelman: 'The activist is right that a net-cash balance sheet this size costs shareholders something, and that guidance misses erode credibility. A plan with no capital return at all will not survive the AGM.' To the activist: 'we'll return excess capital on a published policy, and we won't buy a few cents of EPS with money the business needs. Over three to five years the platform and service model supports higher earnings...' Plus 'Reset guidance honestly. Tell the market the miss, the investment and the timeline for returns.'"
+    },
+    {
+      "text": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+      "passed": true,
+      "evidence": "'Nothing funded by cuts or borrowing. No store-staff cuts, training cuts or debt to close the cents gap.' and 'Protect the store-staff training line explicitly; it is the first thing to be squeezed when the quarter is tight.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1045,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A clear, honest recommendation with correct research and a sound excess-cash test, but it never puts figures on the hurdle, the EPS timing effect or the floor, so the board gets the logic without much of the arithmetic."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Almeida, Fos & Kronlund (2016) is described correctly, and the €300m x 2.5% = €7.5m interest illustration and the cash table (100 / 280 / -20 / 400) add up."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Management pay carries the miss. The EPS shortfall lands on executive bonuses before anyone else's job. That is also the strongest signal to the activist that we take the miss seriously.'"
+    },
+    "best_insight": {
+      "value": "It applies honesty to the guidance reset itself: reconcile adjusted EPS to reported, and don't label programme costs 'one-off' if a similar charge is likely again within two years.",
+      "evidence": "Point 4 of 'How I'd structure the recommendation'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+        "reason": "Passes samples that only ask the COO for a case 'above the hurdle' as easily as samples that work out what the €120m must earn (e.g. about €24m a year over 7 years at 9%). Consider requiring an explicit hurdle or break-even figure."
+      },
+      {
+        "reason": "No assertion tests the EPS mechanics (weighted-average share count, time left in the year, the 25% daily-volume cap), which decide whether the activist's 'gets us to guidance' claim is even true. Some samples checked this properly; others used full-year run-rate accretion and overstated what a buyback does to this year's EPS."
+      },
+      {
+        "reason": "No assertion covers the market-abuse risk of buying back shares while management knows guidance will be missed (possible inside information, MAR Art. 17 and the safe-harbour trading restrictions), the main legal flag in this scenario."
+      },
+      {
+        "assertion": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+        "reason": "The first half is met by silence, since no sample proposed cuts, so the second half does all the work. Consider wording it as 'explicitly protects store-staff training and the people side of the service model'."
+      }
+    ],
+    "overall": "6/6. A sound, honest recommendation; the assertions don't penalise its lack of figures."
+  }
+}

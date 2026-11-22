@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that funds investments clearing the hurdle rate before any buyback, and does not use a buyback to meet the EPS guidance.",
+      "passed": true,
+      "evidence": "Bottom line: 'approve the €120m investment, staged and gated, and approve a smaller buyback of about €100-150m. Do not approve €300m, and do not size the buyback to hit EPS guidance.' Later: 'a priority order (reinvest where returns beat the hurdle, then return surplus)'. Its illustration says €100m 'closes' the gap, but it explicitly refuses to size the buyback on EPS ('If EPS is still a few cents short, say so')."
+    },
+    {
+      "text": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+      "passed": true,
+      "evidence": "'Hurdle: a return above your cost of capital. At an assumed ~9% WACC... it needs about €11m a year of after-tax incremental profit, or roughly €14-15m pre-tax'; 'payback (I would want 4 years or less), and the downside if the platform migration slips'; gates on 'platform milestones on time and on budget, conversion and attach-rate targets'; a downside test with a ~20% overrun; and 'The cost of not investing also belongs in the case.'"
+    },
+    {
+      "text": "The reply backs the point with evidence or reasoning about EPS-driven buybacks and short-termism, such as buybacks that coincide with cuts in employment and investment.",
+      "passed": false,
+      "evidence": "Only one line of reasoning: 'buying back stock to cover an operating miss improves the number and does nothing for the business. Analysts and the activist will see that.' No evidence, and nothing on EPS-driven buybacks crowding out investment or employment, or on short-termism. A nod, not backing."
+    },
+    {
+      "text": "The reply sets out a capital allocation framework: commitments and minimum cash first, then investment, then returning genuine excess cash (for example a smaller buyback or a dividend).",
+      "passed": true,
+      "evidence": "'Set a capital-allocation framework the board can state publicly: a minimum liquidity floor, a priority order (reinvest where returns beat the hurdle, then return surplus), and a commitment to review excess cash again after the investment gates are passed.' Floor to include 'leases, pensions and covenants'. (The top of its buyback range breaches its own floor; see factual_errors.)"
+    },
+    {
+      "text": "The reply handles the activist and other shareholders constructively, in their terms: long-term returns and honest guidance rather than a few cents of EPS.",
+      "passed": true,
+      "evidence": "'The activist's real interest is returns, and you can meet it. €120m reinvested plus ~€130m returned... a credible capital-allocation story'; 'Offer that to the activist as the path to further returns.' 'Reset guidance deliberately. If EPS is still a few cents short, say so and explain the investment. Do not paper over it.'"
+    },
+    {
+      "text": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+      "passed": false,
+      "evidence": "No cuts are proposed, but training appears only as 'expensed immediately'. Nothing treats store-staff training as an investment in people or protects it."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1158,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "The right direction with a hurdle in figures, but inconsistent on the floor it sets, a claim that €100m 'closes' the gap without weighted-average timing, a questionable capitalisation claim, and no attention to the store staff."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) Option A 'breaches the floor if the investment follows': €400m - 300m = €100m already breaches its own €150m floor without the investment. 2) The recommended €100-150m buyback leaves 'Cash left after both ~130-180' against a €150m floor, so the top of the range breaches the floor it says to defend. 3) 'A buyback of about €100m therefore closes it' uses full-year run-rate accretion (+3.3%, recomputed) and ignores the weighted-average share count for this year. 4) 'The platform build is mostly capitalised and amortised' is stated as fact, but for a cloud/SaaS platform, configuration and customisation costs are usually expensed (IFRIC agenda decision, 2021)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Emoji tags, but no mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the miss, and executive pay is never mentioned."
+    },
+    "best_insight": {
+      "value": "If the COO's case doesn't clear the hurdle, trim the investment to the part that does, rather than funding it in full or dropping it.",
+      "evidence": "'Your Decision', point 3"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+        "reason": "Passes samples that only ask the COO for a case 'above the hurdle' as easily as samples that work out what the €120m must earn (e.g. about €24m a year over 7 years at 9%). Consider requiring an explicit hurdle or break-even figure."
+      },
+      {
+        "reason": "No assertion tests the EPS mechanics (weighted-average share count, time left in the year, the 25% daily-volume cap), which decide whether the activist's 'gets us to guidance' claim is even true. Some samples checked this properly; others used full-year run-rate accretion and overstated what a buyback does to this year's EPS."
+      },
+      {
+        "reason": "No assertion covers the market-abuse risk of buying back shares while management knows guidance will be missed (possible inside information, MAR Art. 17 and the safe-harbour trading restrictions), the main legal flag in this scenario."
+      },
+      {
+        "assertion": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+        "reason": "The first half is met by silence, since no sample proposed cuts, so the second half does all the work. Consider wording it as 'explicitly protects store-staff training and the people side of the service model'."
+      }
+    ],
+    "overall": "4/6. Fails on evidence about EPS-driven buybacks and on treating training as an investment; also internally inconsistent on the floor."
+  }
+}

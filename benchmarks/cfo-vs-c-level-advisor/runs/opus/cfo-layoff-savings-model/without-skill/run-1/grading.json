@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": true,
+      "evidence": "Workbook 'Phasing (monthly, Jan-27 to Dec-28)' gives net saving by month per scenario (Base row 39: Jul-27 €137,602, Sep-27 €366,455, Dec-27 €640,209; FY2027 €2.43m) plus exit-cost cash by month. Exit dates follow the process: 'NL off payroll Jul-Aug 27; DE Sep-Dec 27'. The reply leads with 'The €9m is a full-year run-rate... It is not what 2027 will deliver.' Monthly rather than quarterly, but fully time-phased."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Reply: 'Netherlands: works council advice, the collective-dismissal notification with its one-month waiting period, then UWV permits or settlement agreements, then notice... Germany: negotiating the Interessenausgleich and Sozialplan usually takes several months. Then come the mass-dismissal notification, a works-council hearing before each notice, and notice periods of 1–7 months'. Placeholders: 'German and Dutch employment counsel's view of the timeline'. Process sheet: 'Confirm every step and duration with German and Dutch counsel'."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": true,
+      "evidence": "One-offs sheet: Sozialplan severance (0.75 months/year), NL social plan 1.5x transition payment, outplacement €4,000, litigation allowance, legal €0.7m, retention €0.3m, temporary cover and knowledge transfer €0.4m, 10% contingency (total €5.9m). Hidden: 'Net run-rate saving (after 10% leakage: re-hires, contractors, overtime)'; revenue at risk via Inputs section 4 (placeholder 0%, flagged 'If some are, revenue capacity leaves with them'); regretted attrition listed under 'Not in the numbers'. Inputs marked 'Assumption'/yellow placeholders. Revenue and attrition are not sized, which is a weakness."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'The €9m is a full-year run-rate (120 × €75k). It is not what 2027 will deliver.' Bridge: '€9.0m + €0.3m 2027 pay rise − €0.7m leaver mix = €8.5m ... Less €0.9m leakage = €7.7m ... Less €5.3m for exit timing = €2.4m ... Less €5.9m one-off costs = (€3.5m).' Matches workbook (Summary D22 2.426, D23 -5.907, D24 -3.481); Checks sheet all TRUE."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": true,
+      "evidence": "Scenario table on the same basis includes 'E. Attrition and redeployment first, rest on base timing | 2.8 | (4.5) | (1.7) | 6.2 | 81' and 'D. Voluntary-first programme'; recommendation point 4: 'Show the board scenario E... cuts compulsory redundancies to ~81, lowers one-off costs by €1.4m and improves 2027 by €1.8m' (verified 5.91-4.49, -1.71 vs -3.48). Caveat: every scenario still removes 120 roles and no non-headcount lever or leaders' pay is modelled."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "Placeholders listed with values; 'Across the sensitivity grids, 2027 in-year savings range from €0.4m to €3.7m and one-off costs from €4.8m to €9.0m' (verified in Sensitivity sheet); payback ~9 months; One-offs sheet splits provisionable items from costs expensed as incurred. Restructuring costs stay in the 2027 net P&L rather than being stripped out; recurrence itself is not discussed."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1086,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files (workbook only)."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A board-ready, formula-driven monthly model with five scenarios, accurate German and Dutch process detail and an honest bridge. Revenue at risk is set to zero for an industrial services group, and the alternatives only vary how the same 120 roles go."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked transition payment 1/3 month per year and €102,000 cap for 2026 (Rendement), §1a KSchG 0.5, §113 BetrVG with §10 KSchG 12-18 months, §17/§18 KSchG one-month block, art. 25(6)/26 WOR, WMCO one-month wait, EWC thresholds (1,000+ EU, 150+ in two states), IAS 37 split: all correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "n/a: the prompt states no bad outcome (no missed results or failure), only a savings target."
+    },
+    "best_insight": {
+      "value": "It quantifies that banking €9m net in 2027 on base timing would take about 445 roles (a third of the workforce), and it models the leaver-mix effect: social selection pushes exits towards cheaper, shorter-tenure staff, so the per-head saving is below €75k.",
+      "evidence": "reply.md scenarios paragraph; Summary row 37; Inputs row 11"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+        "reason": "Seven samples pass with monthly phasing in a workbook rather than a quarterly table in the reply; the wording 'by quarter' should say 'time-phased (monthly or quarterly)' if that is intended, or require the phased table in the reply itself."
+      },
+      {
+        "assertion": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+        "reason": "The 'such as' lists let a model with one leakage percentage and revenue at risk set to zero pass. For an industrial services group, consider requiring revenue at risk to be sized or given a break-even, and extra attrition to be costed."
+      },
+      {
+        "assertion": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+        "reason": "Samples that only re-route the same 120 roles through attrition (B, C, J) pass on the same footing as samples that size non-headcount levers and leaders' pay on the same basis (A, D, F, H). A separate assertion on non-headcount levers and leaders going first would discriminate better."
+      },
+      {
+        "assertion": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+        "reason": "The prompt gives no restructuring history, so 'not presented as one-off when it recurs' can only be tested where a sample addresses it explicitly (A, F, H); most samples pass on the other two clauses alone."
+      },
+      {
+        "reason": "No assertion checks that the December announcement is reframed as a proposal opened for consultation (art. 25 WOR, §113 BetrVG exposure) or that the IAS 37 provision timing (FY2026 vs FY2027) is shown separately from cash; both separated strong from weak samples."
+      }
+    ],
+    "overall": "Passes all six, but the assertions do not penalise the narrow alternatives or the zero revenue-at-risk placeholder."
+  }
+}

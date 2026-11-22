@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Bank pack: 'A quarterly covenant forecast for the next 4-6 quarters, base and downside cases, with headroom' and 'Liquidity: a 13-week cash flow and 12 months of headroom on the facilities'; 'Pressure-test the forecast. If 3.6x is the base case, what's the downside?'; bridge to 3.3x 'where you have some room'."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Call your relationship manager this week... Your manager needs time to prepare the case for the credit committee'; 'A credit committee wants answers to five questions: Is liquidity safe? Is the forecast credible? Is the breach temporary or structural? Is management in control? Will the shareholder back the company?'; the ask: 'resetting the covenant for Q2-Q4 and stepping it back down to 3.5x; a one-off waiver for Q2; using the cure right... Expect a waiver fee, possibly a higher margin and a block on dividends'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "It sizes the gap (-EUR 0.45m net debt or +EUR 0.13m EBITDA; -EUR 1.35m or +EUR 0.4m for 3.3x) and one lever ('If you carry EUR 6m of stock, taking 10% out is worth ~0.13x on its own'), but capex, family payments, pricing, purchasing, labour and asset sales are unsized; it only asks for 'each lever quantified' in the pack."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "Table: Q2 forecast 3.60x against cuts at 4.10x (costs not added back) or 3.50x (added back), recomputed correctly; 'maybe two months of savings (~EUR 0.26m)... One-off costs are ~EUR 0.7m'; 'announcing the main features of a restructuring plan to the people affected is usually what triggers the reorganisation provision'; the facility check covers 'add-backs for exceptional or restructuring costs and any caps'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Payments to the family. Suspend dividends, management fees and other payments to the family until there's headroom again'; 'The owner's own money... a subordinated shareholder loan or new equity, or at least a written standby commitment to cure the breach'; bank pack item 6 'The owner's commitment'; 'Bring the owner'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Long term is strong: 'skilled production staff are slow and expensive to replace' and 'In a family company, your reputation as an employer is part of what the company is worth, and you can't reverse cuts that turn out to have been unnecessary'. Legal steps go to a Dutch employment lawyer. But if cuts remain it says only 'decide that on its own merits and run it properly'; nothing on one round or decent terms (a social plan appears only as a cost)."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1815,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Excellent bank-side framing (credit-committee questions, special assets, credit insurers), a correct add-back table and the provision-trigger point; let down by unsized levers and no plan for treating people decently if cuts come."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Checked: IAS 37 / Dutch GAAP provision on announcing a plan's main features, one-month suspension under art. 25(6) WOR, Enterprise Chamber powers, WMCO one-month wait waivable by the unions, notice 1-4 months, and that both WTV and the Wet personeelsbehoud bij crisis cover only circumstances outside normal business risk (CMS)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader is shown saying the outcome is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Rumours of restructuring can make credit insurers cut suppliers' limits on the company, shrinking payables and raising net debt, so the announcement can worsen the very ratio it is meant to fix.",
+      "evidence": "From the sample's reply and files."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+        "reason": "Passed in all ten samples: almost any competent answer says 'talk to the bank and ask for a waiver'. To make it discriminate, require contact with the relationship manager before the review plus a specific ask (reset level and period, or waiver) and what the company offers in return."
+      },
+      {
+        "assertion": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+        "reason": "Also passed in all ten. Consider requiring the cut's effect on the Q2 ratio to be quantified with and without a restructuring add-back, which only some samples did."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "Bundles four checks (skilled people, the family name, one round, decent terms) plus counsel; samples fail it for different reasons. Splitting it would make grades more informative."
+      },
+      {
+        "reason": "No assertion checks the works-council point that drives the 'don't announce' answer (art. 25 WOR advice must be sought while it can still change the decision; Enterprise Chamber risk). Every sample made it, but an answer without it could still pass all six assertions."
+      },
+      {
+        "reason": "No assertion checks the arithmetic (3.6x to 3.5x needs about 2.9% more EBITDA or 2.8% less net debt) or the internal consistency of the models, although several samples build full covenant models where a slip would matter."
+      }
+    ],
+    "overall": "High-quality advice that misses on lever sizing and on once-and-decent planning."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that funds investments clearing the hurdle rate before any buyback, and does not use a buyback to meet the EPS guidance.",
+      "passed": true,
+      "evidence": "Bottom line: 'Approve the COO's €120m programme in gated tranches. Authorise a buyback of up to €150m, paced over about 12 months under a published cash-return policy. Take this year's few-cent EPS miss openly rather than buying shares to cover it.' It is framed as 'a split', but the paper's waterfall (floor, then the programme, then what is available to return), 'Release the first tranche once the business case clears the hurdle rate' and 'Don't size or time the buyback to meet this year's EPS guidance' put the investment first."
+    },
+    {
+      "text": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+      "passed": true,
+      "evidence": "'The case for Option B therefore rests entirely on the programme's returns. If the business case can't show a return above the cost of capital, the board should return more cash and invest less.' It also asks for 'Payback, and return against the cost of capital' and 'The cost of not investing'; a gate table with KPIs; an EPS drag table; and a contingency drawn from McKinsey/Oxford overrun base rates ('an average overrun would add ~€36m')."
+    },
+    {
+      "text": "The reply backs the point with evidence or reasoning about EPS-driven buybacks and short-termism, such as buybacks that coincide with cuts in employment and investment.",
+      "passed": true,
+      "evidence": "'Firms that would just miss their EPS forecast are significantly more likely to buy back shares. In the four quarters afterwards they cut employment, capex and R&D, by about 5% of employees, 10% of mean capex and 3% of mean R&D... (Almeida, Fos & Kronlund, 2016)'. The figures match the Harvard Law School Forum summary."
+    },
+    {
+      "text": "The reply sets out a capital allocation framework: commitments and minimum cash first, then investment, then returning genuine excess cash (for example a smaller buyback or a dividend).",
+      "passed": true,
+      "evidence": "'Adopt and publish a capital allocation policy. It sets a liquidity floor, applies one hurdle rate to investment, and returns any cash above the floor at each full-year result.' A waterfall table (400 - 130 floor - 120 = 150) with sensitivities, plus leases and covenants ('Show lease-adjusted net debt (IFRS 16)... along with any rating or covenant thresholds')."
+    },
+    {
+      "text": "The reply handles the activist and other shareholders constructively, in their terms: long-term returns and honest guidance rather than a few cents of EPS.",
+      "passed": true,
+      "evidence": "'Their point about idle cash is fair. Saying so is part of a credible response.' 'The Chair should meet the activist... sound out the top ~10 holders'. 'The offer: €150m now, plus a published policy...' 'Precedent: If the board sets this year's buyback to close an EPS gap, the activist learns how to get the next one.' On guidance: 'a single message: this year slightly below guidance, next year an investment year'."
+    },
+    {
+      "text": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+      "passed": true,
+      "evidence": "No cuts proposed; overruns 'should come out of the buyback envelope, never out of the floor'. 'People. The service model only works if trained staff stay. The plan should include: time on the sales floor set aside for training; pay and progression for the new service roles; store staff retention as a gate KPI.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1288,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2652,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Thorough and numerically correct (EPS timing, the volume cap, the programme's EPS drag, an overrun contingency), with the sharp point that the investment's own expensing dwarfs the few-cent miss. Slightly marred by the shortcut 'idle cash... against a ~7% earnings yield destroys value', which its own paper contradicts ('Accretion is not value creation'), and by internal-process labels."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No factual errors found. EPS figures recomputed (+24c/+11c run-rate; 11.1/5.4/2.6/1.1c in-year; drag of 17/22/28c); daily-volume figures check; Almeida percentages, the McKinsey 45%/56% overrun figures, the IFRIC 2021 decision, MAR Art. 17 and 2016/1052 Arts. 3-4 are correct. The 'idle cash destroys value' line is a reasoning shortcut, not a factual error."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Borderline. The board paper has a section titled '10. Critic screen' and a 'Not yet peer-checked' list, internal review-process labels that wouldn't appear in a CFO's board paper. The [GIVEN]/[VERIFIED]/[ASSUMED] tags are explained to the user. No mention of skills or reference files."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'Take this year's few-cent EPS miss openly' is about disclosure. No leader says the responsibility is leadership's, and executive pay is never tied to the miss."
+    },
+    "best_insight": {
+      "value": "It shows the programme's expensed share (training, SaaS configuration) would cut EPS by roughly 17-28c a year, several times the few-cent miss, so buying this year's cents only moves a bigger guidance conversation to next year with €300m less cash.",
+      "evidence": "Reply 'What' and paper section 5"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply evaluates the €120 million investment on its return against the cost of capital, with its risks and how it would be measured.",
+        "reason": "Passes samples that only ask the COO for a case 'above the hurdle' as easily as samples that work out what the €120m must earn (e.g. about €24m a year over 7 years at 9%). Consider requiring an explicit hurdle or break-even figure."
+      },
+      {
+        "reason": "No assertion tests the EPS mechanics (weighted-average share count, time left in the year, the 25% daily-volume cap), which decide whether the activist's 'gets us to guidance' claim is even true. Some samples checked this properly; others used full-year run-rate accretion and overstated what a buyback does to this year's EPS."
+      },
+      {
+        "reason": "No assertion covers the market-abuse risk of buying back shares while management knows guidance will be missed (possible inside information, MAR Art. 17 and the safe-harbour trading restrictions), the main legal flag in this scenario."
+      },
+      {
+        "assertion": "The reply funds no payout by cutting jobs, training or maintenance, and treats training store staff for the new service model as an investment.",
+        "reason": "The first half is met by silence, since no sample proposed cuts, so the second half does all the work. Consider wording it as 'explicitly protects store-staff training and the people side of the service model'."
+      }
+    ],
+    "overall": "6/6. Strong, quantified work; the one blemish is the 'destroys value' shortcut."
+  }
+}

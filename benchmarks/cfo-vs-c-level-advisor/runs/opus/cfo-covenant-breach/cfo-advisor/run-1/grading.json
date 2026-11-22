@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Reply step 4: the bank pack contains 'the covenant forecast for each test date, downside first' and 'a 13-week cash flow and the room left on your facilities'. Plan section 1 gives a downside-first sensitivity (EBITDA -10% -> 4.00x, -5% -> 3.79x, +5% -> 3.43x) and headroom targets (3.25x about 7%, 3.2x about 9%). Section 6 item 3: 'Covenant forecast for each test date over the next 4-6 quarters, in downside, base and upside cases, each with and without the actions'. Arithmetic recomputed and correct."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Call your relationship manager to flag the forecast and put the covenant on the review agenda... end of week 1'. The ask: 'a covenant reset calibrated on your downside case, for example 4.0x for Q2 and Q3 2027, 3.75x for Q4 and 3.5x from Q1 2028. Fallback: a one-off waiver. Expect a fee, possibly a higher margin, tighter reporting'. Bank's terms: 'What a bank reads as serious: telling them early, a covenant forecast that shows the downside, enough room left on your facilities, a costed plan with owners, and the shareholder sharing the pain'; 'To a credit committee, serious means a plan it can test'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Section 2 table sizes each lever with a rule of thumb and euro effect (inventory: 1 day of COGS about EUR 82k, 4 days -EUR 0.33m; receivables 2 days -EUR 0.27m; capex -EUR 0.20m; surcharge +EUR 0.08m; flex +EUR 0.08m; procurement +EUR 0.02m) and converts the packages into leverage (cautious 3.37x, mid 3.09x). Recomputed: 17.2/5.1 = 3.37 and 16.39/5.3 = 3.09. Also 'Every EUR 0.5m of distributions not paid... lowers leverage by about 0.1x'."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'Cuts barely reach the Q2 test... In the best case you reach about 3.48x, with no headroom. If your facility agreement doesn't add back restructuring costs, the provision falls in the test period and you end up at 3.8-4.0x'. Section 3 four-case table (3.48x / 3.80x / 3.60x / 3.96x), all recomputed correctly; the facility checklist asks 'Are restructuring costs added back?' and the provision timing goes to the auditor."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'the owner visibly sharing the burden'; plan section 2: 'Every EUR 0.5m of distributions not paid before 30 June lowers leverage by about 0.1x... Subordinated shareholder support, or an equity cure if the agreement allows one, is stronger still'; bank pack item 6 'The shareholder's contribution'; owner script: 'The strongest signal comes from you: pause distributions and, if the family can afford it, offer subordinated support'. No management pay sacrifice is mentioned, but the owner's contribution comes before any cut and goes into the bank pack."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "'Skilled makers and upholsterers can go, and they are hard to rehire when demand returns'; 'Our name in the region matters. Staff and dealers will read a sudden 10% cut as distress'; 'size one restructuring properly, once. Two rounds do more damage than one well-judged one. Take it through the OR's advice, the collective-dismissal notification and union consultation, and a social plan'; 'Flex workers are people too, so give notice early and treat them fairly'; 'Not yet checked by your employment lawyer (the dismissal and OR points)'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1137,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2294,
+      "evidence": "wc -w bank-review-plan.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Rigorous and correctly computed covenant arithmetic, lever sizing, add-back scenarios, a facility checklist and a dated three-week bank plan; the only gaps are no management pay sacrifice and some length."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Checked: transition payment of one-third of a month per year of service, notice 1-4 months, WMCO 20-in-3-months with a one-month wait that also covers settlement agreements (CMS), works council mandatory from 50, Enterprise Chamber can order the decision withdrawn, afspiegelingsbeginsel by age group and service. All arithmetic recomputed."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'. A 'Critic's pre-screen' heading in the plan and [VERIFIED]/[ASSUMED]/[MEDIUM] tags read as house format, not skill jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Nobody says the forecast miss is leadership's responsibility; the owner is asked to share the burden, not to own the result."
+    },
+    "best_insight": {
+      "value": "It shows that only December to June of the LTM window can still move and that an EBITDA lever counts only for the months it is live (a EUR 100k-a-year saving from 1 February adds EUR 42k), which is why net-debt levers do most of the work.",
+      "evidence": "From the sample's reply and files."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+        "reason": "Passed in all ten samples: almost any competent answer says 'talk to the bank and ask for a waiver'. To make it discriminate, require contact with the relationship manager before the review plus a specific ask (reset level and period, or waiver) and what the company offers in return."
+      },
+      {
+        "assertion": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+        "reason": "Also passed in all ten. Consider requiring the cut's effect on the Q2 ratio to be quantified with and without a restructuring add-back, which only some samples did."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "Bundles four checks (skilled people, the family name, one round, decent terms) plus counsel; samples fail it for different reasons. Splitting it would make grades more informative."
+      },
+      {
+        "reason": "No assertion checks the works-council point that drives the 'don't announce' answer (art. 25 WOR advice must be sought while it can still change the decision; Enterprise Chamber risk). Every sample made it, but an answer without it could still pass all six assertions."
+      },
+      {
+        "reason": "No assertion checks the arithmetic (3.6x to 3.5x needs about 2.9% more EBITDA or 2.8% less net debt) or the internal consistency of the models, although several samples build full covenant models where a slip would matter."
+      }
+    ],
+    "overall": "Strong sample that passes everything; assertions 2 and 4 passed for every sample, so they add little signal."
+  }
+}

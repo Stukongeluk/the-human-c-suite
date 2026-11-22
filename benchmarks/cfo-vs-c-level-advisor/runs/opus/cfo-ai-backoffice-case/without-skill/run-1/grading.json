@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "'Bottom-up by process ... share of work automation can remove at full effect, and how fast it ramps up', with a table by process (AP 40/55/65% with 'What automates well | What does not'). 'Capacity is not headcount.' An 8-week baseline: 'time study, process mining, volumes, current touchless and match rates'. 'Rule throughout: a role comes out only when the work it did has measurably gone, as shown by KPI evidence and verified hours, not by vendor claims.'"
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "The xlsx one-off lines are 'AP automation implementation', 'Reconciliation & close platform', 'Reporting automation & GenAI', 'Data, integration & ERP changes', 'Programme team, backfill & parallel running', 'Change, training & AI literacy' and 'Risk, compliance & audit (DORA, outsourcing, DPIA, controls redesign)', plus 15% contingency (total 28.2). Run costs are 'licences, AI usage, vendor support, monitoring', and 3 FTE run and control roles are netted. 'Every figure in this paper comes from planning assumptions'. The rows add up (A -36.5, B -20.8; 5-year totals -4.8 and +15.9)."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'Capacity is not headcount. A role is only saved once its work has actually gone.' Freed reporting capacity is pointed at new work: 'Part of any capacity freed in reporting during 2027-28 will go to this new work' (amended Solvency II). 'map open roles across the group (claims, risk and compliance including DORA, data, customer operations) and offer reskilling into them'. 'Reductions will come first through attrition, retirements and internal moves ... voluntary options will come before any compulsory steps.'"
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Bots and agents need their own identities, least-privilege access and segregation of duties. Set posting and payment thresholds that require human approval, and keep full audit trails and change control over rules and prompts. AI drafts narrative reporting, and named people sign it.' It also covers FI and Solvency II outsourcing notification, DORA (register, advance notice), the AI Act and GDPR."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "'MBL §11: you must negotiate with the unions before deciding'; 'Turordning: selection goes by length of service, and you can exempt only 3 people'; 'MBL §38 requires negotiation before you bring in contractors'. Attrition: '7.5 people leaving naturally per year'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": false,
+      "evidence": "It has dated gates (Gate 0 to Gate 4), but the recommendation keeps the board's 30% headcount number and only moves the date: 'The 30% is about the right size' and 'Set the target at 27 roles by end-2029, with a checkpoint in Q3 2028'. Gate 4 asks the board to 'confirm 27 roles'. Its own mid case nets only 23.5 roles, so it sets a target above its own evidence."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 895,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4239,
+      "evidence": "wc -w of the other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Strong analysis, a sound model and useful insurer-specific detail (the amended Solvency II rules, MBL §38). But it anchors on the board's 27 roles as the target despite its own 23.5 mid case, and it contradicts itself on who leaves and their notice periods."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) 'A long-tenured back office means most leavers will be at the long end' of the notice range (up to 6 months), and the reply says something similar. Under the LAS selection order the paper itself describes ('a cut of 27 removes the shortest-tenured people'), the leavers are the shortest-serving, with the shortest notice. The other claims check out: Ardent USD 9.40 / 2.78; CFO Dive September 2026 (nine to 10 months to value for AP automation); Gartner May 2026 (63% slower than expected); amended Solvency II from 30 January 2027; MBL §38; LAS §25 priority; AI Act Art. 4."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome (no missed result or failure), so there is nothing for a leader to own."
+    },
+    "best_insight": {
+      "value": "It notes that the amended Solvency II Directive applies from 30 January 2027 (SFCR split, balance-sheet audit), so part of any freed reporting capacity will be needed for new work, which is a real reason to ramp reporting slowly.",
+      "evidence": "business-case.md section 4"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+        "reason": "Every sample passed this one: naming MBL, LAS selection order and attrition is easy. A sharper version would check that the Swedish timing (MBL first, four months' notice to Arbetsförmedlingen for 26-100 people, notice of one to six months) actually moves the cash flow of the redundancy option in the model."
+      },
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "It is unclear whether a reply that asks the board to approve a smaller headcount cut up front (15%, or 9-12 FTE in year 1) passes. Consider 'commits to no headcount number until a gate has measured the capacity' so the test is about when the commitment is made, not about whether the number is 30%."
+      },
+      {
+        "reason": "No assertion checks whether the redundancy option is costed for the work that is still there when people leave before the AI works (contractors, rehiring, backlog). That gap is what separated the strongest samples from the weaker ones."
+      },
+      {
+        "reason": "No assertion checks that the numbers add up or that a model the reply mentions was actually delivered. Most samples were internally consistent, but one referred to an 'attached model' that wasn't there and one couldn't be reproduced from its own stated assumptions."
+      }
+    ],
+    "overall": "Fails the plan assertion because it recommends the board's 27-role target on a later date."
+  }
+}

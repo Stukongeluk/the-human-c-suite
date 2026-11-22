@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Opens: \"Don't take '8% per cost centre' to the board. Take a ranked plan instead.\" \"The trap is that with payroll at 68% of opex, a flat 8% lands on people, and in a services firm the people are the revenue.\" Paper: \"It cuts the efficient and the bloated alike, training included\"; \"A flat cut takes a cross-section of busy and idle people alike\"."
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"Fix the target's purpose. Ask the board to confirm what the 8% is for: margin, cash, a covenant or the owners' return. Propose a target of EUR 6.2m run-rate profit improvement (the value of 8% of opex), with 2027 opex at or below 2026.\" Paper table: 6.21 vs 8.59 needed under the two readings."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "Paper: \"The levers are listed in order, starting with the ones that cost no jobs.\" Zero-based non-payroll \"1.76 (1.18-2.42)\" in 2027, 2.71 run-rate (vendors, licences, cloud, office, consultants, travel; own bench instead of contractors); pricing and leakage 0.88; cash \"five fewer debtor days is worth about EUR 1.1m\"."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "\"Manage headcount through flows. Expect about 72 leavers. Refill billable roles against signed demand, internal candidates first. Leave about 20 overhead roles unfilled, and stop their work\"; \"A weekly exceptions panel approves critical hires\"; decision 4 \"Approve the list of protected investments\" with section 6 reasons (training, junior intake, quality and security, capacity in growing accounts); \"No dismissals are in this plan.\""
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders first. The executive team, the CEO and you included, takes 10% off fixed pay and skips 2027 indexation; senior leaders skip indexation too ... About EUR 0.35m\"; first row of the lever table."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "Lever table columns \"2027 | Run-rate | Lands in | Owner | Confidence | Human impact\"; section 7 \"What stops or waits\"; \"Remaining gap at run-rate (mid): EUR 1.6m on the literal opex measure and EUR 0.3m against the profit value of the target.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 982,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3220,
+      "evidence": "wc -w board-paper.md (budget_model.py not counted)"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The most honest sample: a reconciled model with ranges that admits the blanket cut earns about EUR 0.3m more run-rate profit from 2028 and still shows the ranked plan ahead over two years, with leaders first, protected investments, a stop list and an April evidence review."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Ran budget_model.py: all tables reconcile ('All totals reconcile'). CPB 3.8%/2.7%, transition payment one-third month per year with EUR 102,000 cap in 2026, WMCO incl. settlements, art. 25 WOR, afspiegeling within interchangeable roles and age groups, Trevor & Nyberg and McKinsey citations all check out."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon such as 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt; the paper does say \"The result is the executive team's responsibility, so the executive team moves first.\""
+    },
+    "best_insight": {
+      "value": "Openly conceding that the blanket cut yields about EUR 0.3m a year more profit from 2028 and showing the two-year view, which makes the recommendation credible to a sceptical board.",
+      "evidence": "Reply point 3; paper section 4 '2027 + 2028 profit 9.27 vs 9.65'."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+        "reason": "Passed in all ten samples; every reply opened against the flat cut. It does not discriminate. Consider requiring the 'efficient vs wasteful' point to be shown with the user's own numbers or an example."
+      },
+      {
+        "assertion": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+        "reason": "Also passed in all ten samples. A sharper version would require the no-job levers to be sized in money with a range and shown against the gap, and pricing/leakage kept separate from the opex figure."
+      },
+      {
+        "reason": "No assertion checks in-year versus run-rate phasing of savings and one-off costs under Dutch process (works council advice, WMCO, notice periods). That drove most of the difference in financial soundness between samples."
+      },
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "Compound assertion (amount, timing, owner, confidence, stop list, remaining gap). Several strong samples missed only one element; consider splitting it so partial structure is visible."
+      }
+    ],
+    "overall": "Meets every assertion with full evidence; the best-reasoned trade-off of the set."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": false,
+      "evidence": "It has 'Build the covenant model on your real numbers. Base, downside and upside to Q2, plus Q3 and Q4 headroom', but no 13-week cash forecast anywhere (only 'track them weekly'). The assertion names both."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Pre-wire the bank. Call your relationship manager before the review, not at it. Present the forecast, the 0.1x gap, the levers already in motion, and a request: a waiver or reset of the Q2 and Q3 tests, or a headroom amendment, plus agreed monthly reporting'; 'Relationship banks want a credible plan and early notice'; 'The bank cares about covenant headroom and credibility'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "Levers are listed (working capital, capex, dividends, hiring freeze, equity cure, sale-and-leaseback, pricing) but only one is sized: 'A 5-day improvement in the cash conversion cycle on EUR 60-80m revenue frees roughly EUR 0.8-1.1m'. The rest carry '[ASSUMED: applicability to your business]' and a generic 'target of EUR (net debt cut needed x 1.5)'."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'Layoffs fix the wrong period... At best you bank 1-2 months of savings by the test date, roughly EUR 0.1-0.25m... Severance and notice costs hit first... Unless your agreement lets you add back restructuring costs, that lowers LTM EBITDA. Paid in cash, it also raises net debt'; risk: 'Your lawyer may find that restructuring costs are not an add-back'; action 1 pulls the 'add-backs'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'a hold on dividends, owner draws and discretionary spend'; 'Owner equity cure or a subordinated shareholder loan... A family owner who wants to show we're serious can do it with money, which the bank will value more than headcount'; 'Ask what he or she will put up'; Option A: 'Go to the bank with a waiver request, the cash levers and an owner equity cure'. Leaders' pay isn't mentioned."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Only passing long-term points ('your best people, who are the ones with other options'; 'Trust is the real asset') and no family-name argument. The contingent restructuring is mapped by an employment lawyer, but nothing says do it once or decently (no package, social plan or support)."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1585,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A sound, well-sequenced plan with deadlines, facility checks and a contingent restructuring, but most levers are unsized, there is no 13-week liquidity view and little on the people side."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: it calls the collective dismissal act the 'WMCD'; it is the Wet melding collectief ontslag (WMCO). The other legal points (art. 25 WOR, 20-in-3-months, afspiegelingsbeginsel, transition payment of one-third of a month per year) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon; [VERIFIED]/[ASSUMED] tags only."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader is shown saying the outcome is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It flags that if the facility has a duty to notify an anticipated breach, staying quiet until the review is itself a default risk, so the agreement must be read first.",
+      "evidence": "From the sample's reply and files."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+        "reason": "Passed in all ten samples: almost any competent answer says 'talk to the bank and ask for a waiver'. To make it discriminate, require contact with the relationship manager before the review plus a specific ask (reset level and period, or waiver) and what the company offers in return."
+      },
+      {
+        "assertion": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+        "reason": "Also passed in all ten. Consider requiring the cut's effect on the Q2 ratio to be quantified with and without a restructuring add-back, which only some samples did."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "Bundles four checks (skilled people, the family name, one round, decent terms) plus counsel; samples fail it for different reasons. Splitting it would make grades more informative."
+      },
+      {
+        "reason": "No assertion checks the works-council point that drives the 'don't announce' answer (art. 25 WOR advice must be sought while it can still change the decision; Enterprise Chamber risk). Every sample made it, but an answer without it could still pass all six assertions."
+      },
+      {
+        "reason": "No assertion checks the arithmetic (3.6x to 3.5x needs about 2.9% more EBITDA or 2.8% less net debt) or the internal consistency of the models, although several samples build full covenant models where a slip would matter."
+      }
+    ],
+    "overall": "Good financial instincts, but it misses the 13-week forecast, lever sizing and decent-terms planning."
+  }
+}

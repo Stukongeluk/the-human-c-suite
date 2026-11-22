@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Week 1: 'Rebuild the forecast. Run a base case, a downside case and a management case. Show which assumptions drive the 3.6x and how sensitive it is to them' and 'Build a 13-week cash flow and a quarterly bridge to the end of Q2'; the bank pack has 'the forecast with sensitivities'. Headroom is shown only through the covenant bridge, not as numbers, but the deliverables are specified."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'Call your relationship manager this week. Banks hate surprises far more than they hate bad news'; 'Ask for... a covenant waiver, a reset of the test level or the test date, or a covenant holiday for one or two quarters. Expect an amendment fee, perhaps a margin step-up, and tighter reporting'; the bank's three questions: 'Do you understand the problem? Do you have a credible plan? Will the owners stand behind it?'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": false,
+      "evidence": "Levers are listed cheapest first (working capital, capex, hiring freeze, pricing, owner support) but none is sized; the only quantity is 'A few percent of net debt can often be found here quickly'."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "'The saving comes late and costs cash first. Notice periods, the transition payment, any social plan, and advisers' fees all land before the savings do... Restructuring costs are only excluded from covenant EBITDA if your facility agreement says so'; week 1 checks 'the permitted add-backs'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'Owner support. This is the strongest signal you can send. Options are a subordinated shareholder loan, an equity injection or cure, deferring dividends and owner withdrawals'; the bank pack includes 'the owner's commitment'; to the owner: 'a visible owner commitment, such as a subordinated loan, no dividends, or an equity cure, together with a credible plan'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "If cuts are justified: 'do it properly. Brief the OR early, ask for its advice before deciding, apply the selection criteria, and negotiate a social plan', sized to the real gap, with employment counsel flagged. But long-term protection is one line ('lose you the people you most want to keep'), there is no family-name argument, and nothing about doing it once."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1283,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Clear, correct and practical, with good bank asks and owner support, but no numbers for any lever or for the cut's effect on the test, so the CFO still has to do all the sizing."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Checked: art. 25 WOR, Enterprise Chamber, 20-in-3-months, afspiegelingsbeginsel and the redeployment duty, the NOW scheme having ended."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No skill, reference-file or ladder jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader is shown saying the outcome is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It asks whether the breach is real or definitional: one-offs or IFRS 16 lease treatment could move the ratio by the whole 0.1x.",
+      "evidence": "From the sample's reply and files."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+        "reason": "Passed in all ten samples: almost any competent answer says 'talk to the bank and ask for a waiver'. To make it discriminate, require contact with the relationship manager before the review plus a specific ask (reset level and period, or waiver) and what the company offers in return."
+      },
+      {
+        "assertion": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+        "reason": "Also passed in all ten. Consider requiring the cut's effect on the Q2 ratio to be quantified with and without a restructuring add-back, which only some samples did."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "Bundles four checks (skilled people, the family name, one round, decent terms) plus counsel; samples fail it for different reasons. Splitting it would make grades more informative."
+      },
+      {
+        "reason": "No assertion checks the works-council point that drives the 'don't announce' answer (art. 25 WOR advice must be sought while it can still change the decision; Enterprise Chamber risk). Every sample made it, but an answer without it could still pass all six assertions."
+      },
+      {
+        "reason": "No assertion checks the arithmetic (3.6x to 3.5x needs about 2.9% more EBITDA or 2.8% less net debt) or the internal consistency of the models, although several samples build full covenant models where a slip would matter."
+      }
+    ],
+    "overall": "Covers the process well but sizes nothing; fails the lever-sizing and long-term assertions."
+  }
+}

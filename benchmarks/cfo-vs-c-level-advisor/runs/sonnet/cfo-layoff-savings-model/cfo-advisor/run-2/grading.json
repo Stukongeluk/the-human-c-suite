@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+      "passed": false,
+      "evidence": "No quarterly or monthly phasing: each scenario uses one 'Average exit date | 1 Apr 2027 | 1 Jul 2027 | 1 Oct 2027' and annual totals only. The base average exit of 1 July with 60% in Germany, and a 'Fast' case of 1 April, are optimistic for a December announcement. Net is shown only as a 2027 total ('2027 net effect (cash) -€0.4M')."
+    },
+    {
+      "text": "The reply includes the delays from consultation, notice periods and notification duties in Germany and the Netherlands, flagged for counsel.",
+      "passed": true,
+      "evidence": "Section 3 '(to confirm with counsel)': 'Germany: works council (Betriebsrat) consultation and an Interessenausgleich / Sozialplan negotiation, mass-dismissal notification to the employment agency where thresholds are met, and statutory notice periods that lengthen with tenure... Netherlands: works council advice right under the WOR, then a collective redundancy filing and dismissal permit from the UWV, then notice periods.' Tied to the base exit: 'three to four months of consultation and then notice. It could easily be later in Germany.' No durations or thresholds."
+    },
+    {
+      "text": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+      "passed": false,
+      "evidence": "One-off costs are included (severance DE/NL months, 'Other one-offs per head (advisers, legal, outplacement, accrued leave)'). Hidden costs are not in the base case: 'Backfill / contractor leakage | 0% | 0% | 10%' (0% in base); revenue at risk '[ASSUMED risk, not quantified]'; extra attrition only in Risks; rehiring not estimated."
+    },
+    {
+      "text": "The reply says plainly whether the €9 million arrives in 2027, with arithmetic that adds up.",
+      "passed": true,
+      "evidence": "'The model does not support \"€9 million of savings in 2027\". €9.0M is the annualised run-rate (120 x €75,000)... base case gives about €4.3M of gross in-year saving, against about €4.7M of one-off cost, so roughly break-even in 2027 (-€0.4M)'. Verified: 4.5 x 0.95 = 4.28; one-off 120 x (0.6x36,060 + 0.4x28,848 + 6,000) = 4.70; net -0.43."
+    },
+    {
+      "text": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+      "passed": false,
+      "evidence": "Alternatives are only listed: 'The three levers that close the gap to €9M in 2027, with their own sizing, rather than a bigger headcount number' (freeze, contractors, non-people cost), but none is sized. 'Your decision' Options A and B both keep the 120 roles. No fewer-jobs option on the same basis."
+    },
+    {
+      "text": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+      "passed": true,
+      "evidence": "Assumptions table with every input 'ASSUMED'; one-at-a-time sensitivities ('Each month of delay ... about €0.75M', 'Each extra month of severance ... about €0.58M', verified); payback per scenario; P&L and cash shown separately for the FY2026 provision. Costs not stripped out as one-off."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1479,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other files."
+    },
+    "overall_quality": {
+      "value": 4,
+      "evidence": "Honest headline and clear formulas, but no file, no phasing, an optimistic base case (1 July average exit, 0% leakage) that makes 2027 look near break-even, unsized alternatives, and an Option B that keeps the €9M headline."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Internal contradiction: 'the programme pays for itself roughly one year after the exit date' while its own table says 'Payback after exit date ... 7 months' (4.70 / 0.71 a month = 6.6 months). Legal and IAS 37 statements checked and correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'Reporting framework (IFRS or local GAAP)' only; no skill or ladder jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "n/a: the prompt states no bad outcome (no missed results or failure), only a savings target."
+    },
+    "best_insight": {
+      "value": "It proposes decision triggers agreed in advance (if the average exit slips beyond 1 September or one-off cost exceeds €5.5M, the plan returns to the board), and a heads-needed table (160/240/480 roles by exit date) that makes the target's impossibility concrete.",
+      "evidence": "reply.md sections 1 and 5"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply shows the saving net and by quarter, starting from realistic exit dates, rather than presenting 120 × €75,000 as the 2027 saving.",
+        "reason": "Seven samples pass with monthly phasing in a workbook rather than a quarterly table in the reply; the wording 'by quarter' should say 'time-phased (monthly or quarterly)' if that is intended, or require the phased table in the reply itself."
+      },
+      {
+        "assertion": "The reply includes one-off costs (such as severance, transition payments or a social plan, and outplacement) and hidden costs (such as work still to be done, revenue at risk, rehiring and extra attrition), with estimates labelled.",
+        "reason": "The 'such as' lists let a model with one leakage percentage and revenue at risk set to zero pass. For an industrial services group, consider requiring revenue at risk to be sized or given a break-even, and extra attrition to be costed."
+      },
+      {
+        "assertion": "The reply compares the redundancy plan with alternatives that cost fewer jobs, on the same basis, before recommending.",
+        "reason": "Samples that only re-route the same 120 roles through attrition (B, C, J) pass on the same footing as samples that size non-headcount levers and leaders' pay on the same basis (A, D, F, H). A separate assertion on non-headcount levers and leaders going first would discriminate better."
+      },
+      {
+        "assertion": "The reply keeps the numbers honest: restructuring is not presented as one-off when it recurs, assumptions are stated, and it shows sensitivities or a break-even.",
+        "reason": "The prompt gives no restructuring history, so 'not presented as one-off when it recurs' can only be tested where a sample addresses it explicitly (A, F, H); most samples pass on the other two clauses alone."
+      },
+      {
+        "reason": "No assertion checks that the December announcement is reframed as a proposal opened for consultation (art. 25 WOR, §113 BetrVG exposure) or that the IAS 37 provision timing (FY2026 vs FY2027) is shown separately from cash; both separated strong from weak samples."
+      }
+    ],
+    "overall": "Fails on phasing, hidden costs and alternatives; the assertions catch this sample's main weaknesses."
+  }
+}
