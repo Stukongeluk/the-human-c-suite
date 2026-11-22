@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Bank item 1: \"A 13-week cash forecast with a base case and a downside case (EBITDA -5% and -10%), showing headroom at each test date.\" It works out headroom itself: \"Result: 3.33x (low) to 3.01x (high) in the base case. If EBITDA is 5% below forecast before these levers, it is 3.50x to 3.16x.\" (checked 17.35/5.21 = 3.33; 17.35/4.96 = 3.50). No forecast is built."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "\"A request: either a reset to about 4.0x for the next two test dates, or confirmation of an equity-cure right. Expect a fee and a margin step-up. That is usually cheaper than a breach. Check whether your facility requires you to notify the bank when a breach becomes likely, and ask your auditor about the going-concern wording.\" It also tells the bank about the redundancy trigger 'now'."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Lever table with an effect and basis per line, e.g. \"Receivables, 2-3 days faster | net debt -€0.25m to -€0.37m | 45m revenue; do not stretch small suppliers\", \"Inventory 3-6% lower | -€0.20m to -€0.40m | assumes stock at 15% of revenue\", \"Price rises and discount leakage, from 1 March | EBITDA +€0.08m to +€0.15m | 0.5-1% price, four months in the 12-month window\". \"I have not counted unsized levers as closing anything.\""
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "\"Even if exits start 1 May, which is optimistic, you save about €0.26m gross by 30 June.\" \"Transition payments ... about €0.30m, plus about €0.15m for legal and support. That is cash going out, and it raises net debt.\" \"3.51x if your agreement lets you add back restructuring costs (still a breach), and 3.85x if it doesn't.\" Question 1: \"How does the agreement define EBITDA and net debt (restructuring add-backs and caps, cash netting, shareholder loans)\"."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "\"Tell the owner that the signal banks and employees both respect is leaders going first: pause the dividend, cut owner and management pay, and commit capital.\" Bank item 4: \"The owner's contribution. A dividend stop and a subordinated shareholder loan of about €0.5m would, depending on the definitions, fix the net-debt side alone.\" Lever: \"Management pay cut of 10% (owner first)\"."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "\"A family firm's asset is its name in the region and the skills that take years to rebuild. Announcing 26 redundancies to look serious spends both.\" \"If it comes to that, do it once, decently, with the works council involved at the problem stage and support from the day of notice. Brief the works council now, in confidence, with the figures.\" \"Dutch dismissal procedure, the works council steps and the loan terms need your employment counsel and lawyers.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 926,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Concise and well judged, with sized levers, base and downside headroom, the family-name argument, a dated trigger and works council briefing. It has one contradictory line on 'do-nothing is the worst case', and its simplified net-debt treatment makes the 'still a breach' finding fragile."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor internal contradiction: \"Do-nothing is the worst case (3.6x, and 4.0x if EBITDA slips 10%)\". Its own figure for cuts without add-back is 3.85x, which is worse than 3.6x. Separately, the cuts calculation doesn't credit the €0.26m saved salaries against net debt. Done consistently, the add-back case would be about 3.46x rather than 3.51x 'still a breach'; the lever case uses the same simplification. Legal points (WMCO, WOR art. 25, Enterprise Chamber, werktijdverkorting) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'Treat their input as free risk analysis' is plain language; no mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'leaders going first' is advised, but no leader says the breach is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It makes the seriousness a commitment the bank hears now: a dated trigger (forecast above 3.4x after the 31 March numbers opens works council consultation), told to the bank at the review, plus a confidential works council briefing today. An announcement does neither.",
+      "evidence": "reply.md 'What shows the owner is serious'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' passes both samples that built a dated 13-week forecast (B, D, E) and samples that only list one as something to bring (C, G). A 13-week forecast from late November also ends in February, well before the 30 June test. Only E said so. Consider requiring that the forecast or covenant bridge reaches the Q2 test date."
+      },
+      {
+        "reason": "No assertion checks that the illustrative numbers add up. Several samples have internal inconsistencies that change a conclusion: B's exits-slip row, C's 3.68x sensitivity and F's 'do-nothing is the worst case'. Consider an assertion that the covenant arithmetic is internally consistent."
+      },
+      {
+        "reason": "No assertion checks how the sample reads the test date. Calendar Q2 ends on 30 June 2027, about 31 weeks away. D assumed 13 weeks, and that assumption shaped its whole model without being caught."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This assertion bundles four things: long-term protection, doing it once, doing it decently, and Dutch legal steps for counsel. Samples mostly fail on 'decently' (no package or support from notice). Splitting it would make the failures easier to see."
+      },
+      {
+        "reason": "No sample has a leader say plainly that the forecast breach is leadership's responsibility, and no assertion asks for it, although owning the result is central to the owner-goes-first argument."
+      }
+    ],
+    "overall": "Passes all six. Its one contradiction is the kind of arithmetic slip no assertion checks."
+  }
+}

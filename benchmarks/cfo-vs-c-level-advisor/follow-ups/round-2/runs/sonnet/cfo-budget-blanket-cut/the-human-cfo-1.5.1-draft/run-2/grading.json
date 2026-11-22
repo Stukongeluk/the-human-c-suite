@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": false,
+      "evidence": "It opens with a recommendation against the flat cut (\"I'd take a different budget to the board than the flat 8%\") and explains the payroll effect (\"Payroll is 68% of opex, so an equal percentage lands on people: about 48 jobs\"). It adds a strong billable-margin argument: \"any delivery role billed above roughly 77% loses more margin than it saves. Spread evenly, the cut will hit billable people.\" But neither the reply nor the paper says that an equal cut treats efficient and wasteful areas alike. The closest is setting targets \"from its actual spend instead of an equal percentage\", which is a remedy without the reason. The second named reason is missing, so the burden of proof isn't met."
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"Is the 8% a 2027 in-year saving or a run-rate by year-end, and off which baseline? If 2027 already carries about 1.8m of pay indexation, the gap is nearer 7.8m\" (correct direction) and \"What is the 8% for: margin, a covenant, an owner's return?\" The paper adds: \"6.0m of savings is twice the entire operating profit.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Zero-base every non-payroll line (24m): subcontractor rates, licences, cloud, travel, premises, advisers. Target 10%, which is 2.4m run-rate and 1.8m in 2027.\" Pricing: \"Two percent from Q2 is about 0.8m in 2027.\" The paper adds \"price indexation and revenue leakage (unbilled work, unapproved discounts). Each 1% on 78m revenue is 0.78m\", with the non-payroll range 1.9-2.9 and its sensitivity."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Flows: \"Hiring freeze with exceptions. Of about 72 expected leavers, leave about 30 unfilled, chosen from work we explicitly stop.\" Paper section 6: \"freeze with exceptions for billable and critical roles ... internal moves first.\" Protection with criteria (section 4): \"Billable delivery capacity, account management and customer success: this is where revenue is made; each role is worth about 130k of revenue against about 85k of cost\"; training, security and quality are \"cut only with the future cost written next to the saving\". Trigger: \"Utilisation of delivery staff above 85% → Release refills in those teams.\""
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders first. Cut the leadership bonus pool 50% and ask the management team for a voluntary 10% pay reduction: about 0.7m in 2027.\" Paper section 7: \"the bonus pool is cut before anyone else's pay is touched, and the executive team's voluntary pay reduction is announced before anything else.\" Exits are reserve-only and voluntary."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "Option B table: \"Amount, run-rate | In 2027 | Lands in | Owner | Confidence | Human impact\". The numbers add up (5.37 run-rate, 3.43 in 2027; quarterly 0.29+0.78+1.11+1.25 = 3.43). Section 5's stop list has criteria: \"internal projects without a customer or revenue case, duplicate reporting, low-value subscriptions and tools, discretionary events and travel, non-critical premises costs\", each with \"an owner, a date and a measure\". The gap is shown against 8% (\"about 7.2-7.7%\"; \"Neither option delivers 6.0m inside 2027\"), with a reserve lever and a trigger table. Weaknesses: the euro gap is left implicit and the stop list is still to be agreed."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 560,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2285,
+      "evidence": "wc -w board-budget-paper.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Rigorous, well-sourced modelling (billable break-even, cover cost, lost margin, operating profit after indexation for each option) and an honest admission that neither option delivers 6.0m in 2027. It counts the leadership bonus cut in the run-rate and leaves the euro gap implicit."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: Guthrie & Datta, Organization Science 19(1) 2008; McKinsey 'Five ways CFOs can make cost cuts stick' (10% sustained after three years); Gallup's 'This Fixable Problem Costs U.S. Businesses $1 Trillion' (0.5-2x); WMCO at 20+ in one UWV area within three months, with employer-initiated settlements counting; art. 25 WOR advice and art. 27 consent (pay and bonus rules 'can' need it); notice of 1-4 months; Dutch short-time work limited to calamities. 'the board can approve the approach but not individual measures' is loose wording, not a wrong rule. The arithmetic checks out."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt: the margin is thin but positive and the board has set a target, so this check doesn't apply. C says 'If results disappoint, leadership variable pay is reduced first' but doesn't say the responsibility is leadership's."
+    },
+    "best_insight": {
+      "value": "The billable break-even (130k revenue x 85% margin = 110k against 85k cost, so any role billed above ~77% loses more margin than it saves) turns 'don't cut billable people' into a rule the board can test against the utilisation report.",
+      "evidence": "Reply and paper section 3, Option A sensitivity."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+        "reason": "Every sample passes by asking 'what is the 8% for?' and 'in-year or run-rate?'. Asking the question is enough to pass, so the assertion doesn't separate the samples. It never checks whether the baseline/indexation effect is stated in the right direction (sample A gets it backwards) or whether the plan shows how it changes under each answer."
+      },
+      {
+        "reason": "No assertion checks whether temporary savings (leader pay or bonus cuts, a delayed pay review) are kept out of the exit run-rate. B, C and E count leader cuts in the run-rate to get close to 8%, while A and D exclude them correctly. That difference matters to a board."
+      },
+      {
+        "reason": "No assertion checks that lever amounts, quarterly timing and the stated gap agree with each other. Sample E's largest lever shows the same figure in-year and at exit while ramping quarterly; only arithmetic checking catches that."
+      },
+      {
+        "assertion": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+        "reason": "This bundles two tests (flows instead of cuts, and protected investments with criteria). Splitting them would make failures easier to read; 'explicit criteria' is also loose enough that naming categories plus 'book the future cost' passes."
+      },
+      {
+        "assertion": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+        "reason": "Sample C gives a sharper, quantified reason (the billable break-even) but fails because it never says 'efficient and wasteful alike'. Consider accepting any specific, correct reason why an equal cut misallocates."
+      }
+    ],
+    "overall": "Fails only assertion 1, on the missing efficient-vs-wasteful reason. Its billable-margin argument is arguably stronger, which suggests assertion 1 is too prescriptive about which reason must appear."
+  }
+}

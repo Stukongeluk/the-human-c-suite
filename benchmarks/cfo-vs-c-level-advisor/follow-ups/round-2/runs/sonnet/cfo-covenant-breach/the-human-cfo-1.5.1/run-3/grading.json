@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "covenant-plan.md section 4 is a 13-week table with close cash and net debt per week for base, downside and plan: \"the covenant is tested only at the end of week 13, where the base case reaches 21,600, 600 above the 21,000 maximum for 3.5x. Minimum liquidity I assumed: 1,000\". Section 2 gives leverage by scenario: base 3.60x, downside 3.78x, plan 2.99x / downside 3.13x (checked: 18,877/6,320 = 2.99; 19,102/6,095 = 3.13). Caveat: the 13-week horizon only matches the test because D assumed the test is 13 weeks away (see factual_errors)."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "Headline: \"and ask for covenant headroom now.\" Item 5: \"A request for a reset or waiver covering the next two tests, as insurance. Ask while the breach is still a forecast. Also check whether your agreement requires early notice of an expected breach, and what the auditor needs for going concern.\" Item 2: \"Covenant headroom by scenario, calculated the way the agreement defines it.\" \"The bank will look for a credible forecast and for what the owners are putting in.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Each lever is sized: \"Collect receivables 4 days faster (without stretching small suppliers) | €0.49m net debt\", \"Cut finished-goods and WIP stock by 5% | €0.45m\", \"Defer non-safety capex; maintenance and safety stay funded | €0.25m\". The plan adds confidence and owner per lever (totals checked: 2,543 net debt, 320 EBITDA). \"Every lever is reversible and no job is lost.\""
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "\"Costs come first, savings later. I estimate €0.49m one-off... Payback is about five months after the last exit.\" \"At the test, leverage is 3.61x with the provision added back and about 3.94x without. Doing nothing is 3.60x.\" (checked 21.685/6.0 = 3.61; 21.685/5.506 = 3.94). Question: \"How does the agreement define net debt and EBITDA (leases, add-backs, subordinated loans, equity cure rights)?\" The plan notes \"the restructuring provision is booked when the plan is announced\"."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "Levers: \"Stop dividend and owner drawings this year | €0.35m\", \"Owner's subordinated loan, if the agreement does not count it as debt | €1.0m\", \"Leadership and owner pay down 15% for six months, the owner first\". Bank pack item 4: \"The owner and leadership contributing first.\""
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "Long term: \"An announcement can also read to the bank, your credit insurers and your best craftspeople as distress\", \"Hiring freeze, with exceptions for skilled trades and apprentices\", \"maintenance and safety stay funded\". Fallback: \"Work through attrition, redeployment, voluntary exits and then involuntary reductions, once, with a proper package and support from the day of notice.\" Plan section 7, \"Employment-law flags (take counsel; I am not giving legal advice)\", covers WOR art. 25, WMCO, the UWV permit, transition payment, notice and afspiegeling."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 807,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1922,
+      "evidence": "wc -w covenant-plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Thorough, internally consistent model with the best bank-side checks (early-notice clause, going concern, credit insurers). But it rests on a test date 13 weeks out when calendar Q2 is about seven months away, and its 2.99x headline leans on a €1.0m owner loan."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Date error: it assumes \"test date about 13 weeks away\" (reply and plan). From 22 November 2026, the end of calendar Q2 is 30 June 2027, about 31 weeks away. It doesn't explain the assumption with a non-calendar year. This drives the 13-week forecast ending on the test date and the lever effects 'by the test date'. Legal points (WOR art. 25, WMCO, settlement agreements counting, notice, transition payment at one third of a month per year, werktijdverkorting) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Owner pay cut 'the owner first', but no statement that the breach is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It flags the second-order readers of an announcement and the facility: credit insurers and the best craftspeople may read it as distress, the agreement may require early notice of an expected breach, and the auditor will need a going-concern view.",
+      "evidence": "reply.md bullets and 'What shows the bank you're serious' item 5"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' passes both samples that built a dated 13-week forecast (B, D, E) and samples that only list one as something to bring (C, G). A 13-week forecast from late November also ends in February, well before the 30 June test. Only E said so. Consider requiring that the forecast or covenant bridge reaches the Q2 test date."
+      },
+      {
+        "reason": "No assertion checks that the illustrative numbers add up. Several samples have internal inconsistencies that change a conclusion: B's exits-slip row, C's 3.68x sensitivity and F's 'do-nothing is the worst case'. Consider an assertion that the covenant arithmetic is internally consistent."
+      },
+      {
+        "reason": "No assertion checks how the sample reads the test date. Calendar Q2 ends on 30 June 2027, about 31 weeks away. D assumed 13 weeks, and that assumption shaped its whole model without being caught."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This assertion bundles four things: long-term protection, doing it once, doing it decently, and Dutch legal steps for counsel. Samples mostly fail on 'decently' (no package or support from notice). Splitting it would make the failures easier to see."
+      },
+      {
+        "reason": "No sample has a leader say plainly that the forecast breach is leadership's responsibility, and no assertion asks for it, although owning the result is central to the owner-goes-first argument."
+      }
+    ],
+    "overall": "Passes all six, though its core timing rests on a wrong test date that no assertion checks."
+  }
+}

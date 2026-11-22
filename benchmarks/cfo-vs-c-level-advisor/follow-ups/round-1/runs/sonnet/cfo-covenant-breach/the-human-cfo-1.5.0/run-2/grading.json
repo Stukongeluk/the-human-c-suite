@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Bank list item 1: 'A 13-week cash forecast and a monthly covenant bridge to June, base and downside.' Item 2: 'The actions behind each scenario, each with an owner and a date.'"
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "'4. A request, before any breach: a covenant holiday or reset, or an equity cure right. Expect a fee (an estimate is 0.1–0.25% of the facility) and possibly tighter reporting. Check whether your facility obliges you to notify an expected breach.' Framed in the bank's terms: 'A bank cares about whether the covenant plan is credible and the owners are standing behind it. A hasty announcement without a cash forecast can read as panic.'"
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "The options table gives each lever's 'Effect by 30 June' and 'Jobs affected: none': inventory/receivables €0.3–0.8M, capex €0.2–0.4M, owner €0.2–0.5M, procurement €0.1–0.2M EBITDA, price €0.05–0.15M, hiring freeze €0.1–0.2M. 'The low ends alone come to about €0.95M against a €0.4M gap' (sum verified), with the caveat that 'EBITDA levers are worth less than they look, because covenant EBITDA is usually a trailing twelve months'."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "Timing: 'most exits land around the test date. Savings counted in the trailing twelve months by 30 June are close to zero.' One-offs: '€20–30k per person, about €0.65M.' Definition: 'If your facility agreement adds back restructuring costs, leverage is about 3.76x. If it doesn't, ... about 4.5x' (both verified on its inputs). Question (1): 'How does the facility define EBITDA and net debt (add-backs ...)'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "Bank list item 3: 'What the family contributes, and first: dividend off, owner pay and management bonuses cut before anyone else's work is touched.' Lever table: 'Owner: stop dividend and drawings; shareholder loan or equity if the definition allows'. 'the most visible proof of seriousness is the family going first'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "'In a family firm, the name in the region and scarce craft skills that take years to rebuild are assets the bank also values.' If needed: 'reduction becomes honest, done once, with the works council from the start', costed with 'a decent package'. WOR art. 25 and WMCO are named, and 'have employment counsel ... checked before anything is announced'. Decency rests only on 'a decent package' in the costing, so this is a borderline pass."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 909,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "wc -w of other .md files: none"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A tight, well-ordered bank plan with add-back sensitivity, a trailing-twelve-month caveat on EBITDA levers, a family-first contribution and a dated trigger. The cut scenario charges all the one-off cash to Q2 although the exits fall around the test date, and the lever total mixes EBITDA and debt effects."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Says the €0.65M of one-offs is 'cash out before the test' and adds all of it to Q2 net debt (3.76x), while placing 'most exits ... around the test date' with savings 'close to zero'. Transition payments fall due within a month after employment ends, so most of that cash would land after 30 June. The net-debt effect is overstated, though the 'cuts don't help Q2' conclusion stands."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'; 'skills' appears only in the sense of workers' skills."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The forecast breach is a bad outcome in the prompt, but no leader in the advice says plainly that responsibility for it is leadership's; 'leaders first' appears only as a cost contribution or signal."
+    },
+    "best_insight": {
+      "value": "It points out that covenant EBITDA is a trailing-twelve-month figure, so profit levers count only for the months already saved by 30 June, and it warns to check whether the facility requires notice of an expected breach.",
+      "evidence": "See reply"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "Bundles four checks (skilled people, the family firm's name, once-and-decently, Dutch steps flagged for counsel), and it isn't clear whether the parenthetical lists examples or requirements. Read strictly, the most complete sample (D) fails only because it never mentions the family's name. Consider splitting it into two or three assertions."
+      },
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' is ambiguous: only one sample actually built a 13-week forecast, while the others listed it as a deliverable for the bank. State whether recommending it is enough or whether the reply must sketch it."
+      },
+      {
+        "reason": "No assertion checks whether the leverage effect of the cuts is computed consistently. Several samples charge the full one-off cash to Q2 net debt while placing the exits at or after 30 June (the transition payment falls due after employment ends), and two samples mis-compute their own cut scenario. An assertion such as 'the cut scenario's timing and leverage arithmetic follow from its stated inputs' would discriminate."
+      },
+      {
+        "reason": "No assertion checks the facility-agreement housekeeping a CFO would expect: any duty to notify the bank of an expected breach, cross-default, and the definition of net debt (for example whether a shareholder loan counts). The stronger samples raised these points unprompted."
+      }
+    ],
+    "overall": "6/6. The assertions don't catch the optimistic-in-the-wrong-direction timing of the one-off cash."
+  }
+}

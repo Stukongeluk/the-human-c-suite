@@ -112,6 +112,10 @@ Cells show checks passed, with the mean overall quality score in brackets.
 
 Two Sonnet runs used the seat's own words in a board paper ("revisit the ladder", "summarised in the playbook").
 
+## Fixed in version 1.5.1
+
+Version 1.5.1 fixes these misses. The rule against the seat's own words now covers every document, and the seat builds the 13-week forecast itself. The shared fact sheet explains the Dutch selection rule. Rerun on Sonnet, no run used the seat's words (0 of 10, against 2 of 6 for 1.5.0), and every covenant run passed the forecast check. One more change, dating each cash flow when it is paid, made no measurable difference. Details: [`follow-ups/`](follow-ups/README.md).
+
 ## Files
 
 `runs/<model>/<case>/<setup>/run-<n>/` holds `reply.md`, any document, spreadsheet or script the agent wrote, `grading.json` (every check with its evidence, the extra checks and the grader's notes on the checks) and `timing.json`. `benchmark.json` lists every run. The `cfo-advisor` skill itself is not copied here; it is available at the commit linked above.

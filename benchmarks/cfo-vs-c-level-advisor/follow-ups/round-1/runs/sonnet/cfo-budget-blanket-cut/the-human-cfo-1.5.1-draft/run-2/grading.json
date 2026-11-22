@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": false,
+      "evidence": "Opens against the flat cut (\"I'd take a different budget to the board than the flat 8%\") and makes the payroll point (\"Payroll is 68% of opex, so an equal percentage lands on people: about 48 jobs\"). The second half is only partly made: it says \"Spread evenly, the cut will hit billable people\" and \"If the cut falls on busy teams, Option A destroys margin\", but nowhere says the flat cut treats wasteful or low-value areas the same as lean ones. The closest is s.13's \"set from its spend instead of an equal percentage\", which is the alternative, not the critique. Close call; the burden of proof isn't met on 'efficient and wasteful areas alike'."
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "Reply Q2: \"What is the 8% for: margin, a covenant, an owner's return? If it is margin, pricing and revenue count\". Q1: \"Is the 8% a 2027 in-year saving or a run-rate by year-end, and off which baseline? If 2027 already carries about 1.8m of pay indexation, the gap is nearer 7.8m.\" Paper s.2: \"6.0m of savings is twice the entire operating profit.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "Lever 1: \"Zero-base every non-payroll line (vendors, subcontractor rates, licences, cloud, travel, premises, advisers): target 10% of 24.0m\", 2.40 run-rate / 1.80 in 2027, range 1.9-2.9. Pricing and revenue leakage (\"unbilled work, unapproved discounts\") sized at 0.78m per 1%, about 0.8m in 2027."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Paper s.6: \"Flows, not lists: freeze with exceptions for billable and critical roles, an expected 72 leavers, about 42 roles refilled and 30 not, internal moves first.\" Unfilled roles are \"chosen from non-billable work we have stopped\". S.4 protects \"Billable delivery capacity, account management and customer success: this is where revenue is made; each role is worth about 130k of revenue against about 85k of cost\" and \"Training and the learning budget, security and quality work: cut only with the future cost written next to the saving.\""
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "Lever 4: \"Leaders first: leadership bonus pool cut 50% in 2027 (about 0.6m) and a voluntary 10% pay reduction for the management team (about 0.2m)\". S.7: \"the bonus pool is cut before anyone else's pay is touched, and the executive team's voluntary pay reduction is announced before anything else.\""
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "Option B table has columns Amount run-rate, In 2027, Lands in, Owner, Confidence, Human impact for every lever. S.5 \"What stops or waits\". The gap is shown: 3.43m in 2027 against a 6.0m target (\"Neither route delivers 6.0m inside 2027\") and a 7.2% net run-rate against 8%, with Q2 reserve and triggers in s.10. No single 'gap = X' line, but the shortfall is explicit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 560,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2285,
+      "evidence": "wc -w board-budget-paper.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A usable paper with a proper lever table (owner, confidence, timing), a sharp billable break-even test and honest 'neither route delivers 6.0m in 2027', but the 7.2-7.7% headline leans on a 2027-only bonus cut and a gross-before-cover figure, and two numbers don't follow from their stated basis."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) The 2028 run-rate of about 5.4m counts the leadership bonus pool cut described as '50% in 2027'. (2) Pricing: '2% from Q2, so about 0.8m in 2027' on 78m revenue should be about 1.2m. Legal claims check out."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt (forward target, thin but positive margin). S.7 commits that 'if results disappoint, leadership variable pay is reduced first', which is close but not a statement of responsibility."
+    },
+    "best_insight": {
+      "value": "The billable break-even test (a delivery role billed above about 77% loses more margin than it saves) turns 'payroll is the product' into a rule the board can check team by team.",
+      "evidence": "Reply and paper s.3 sensitivity."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+        "reason": "Two-part assertion; this sample makes the payroll half strongly and the 'efficient and wasteful alike' half only by implication. Consider splitting so the graded difference is visible."
+      },
+      {
+        "reason": "No assertion checks that run-rate claims exclude temporary measures; this sample's 7.2% run-rate includes a bonus cut stated as 2027-only."
+      }
+    ],
+    "overall": "Assertions are reasonable; add a run-rate honesty check."
+  }
+}

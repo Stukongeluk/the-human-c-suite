@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Bank package: \"1. A 13-week cash forecast, with base and downside cases.\" \"2. Covenant headroom by quarter to Q2 2027 and beyond.\" The options table works out base and downside: \"Do nothing | 3.6x (3.8x if EBITDA is 5% lower)\", \"Mid case with EBITDA 5% lower | 3.2x | Still inside the limit\", and \"The low case fails if EBITDA drops 10% (about 3.6x)\" (checked 16.5/5.15 = 3.20; 17.1/4.7 = 3.64). No forecast is built."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "\"Ask the bank now, not after the breach: a covenant reset to about 4.0x for two to three quarters, or an equity cure right, agreed in advance. It costs a fee, but it is cheaper than a default or a repricing.\" Framed in bank terms: \"Banks look at cash, headroom and a credible plan, not headcount.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Each lever has a range: \"Working capital: inventory and receivables, €0.4–1.0m\", \"Capex timing: defer growth capex only, €0.2–0.5m\", \"Owner: hold the dividend and drawings... €0.3–0.7m\", \"Spend... €0.1–0.3m EBITDA\", \"Pricing and discount leakage: €0.1–0.4m EBITDA\". It shows the resulting leverage: low 3.3x, mid 3.1x (checked 17.1/5.2 = 3.29; 16.5/5.4 = 3.06). It then calls them \"unsized until your data confirms them\", which is confusing but they are sized."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "\"It arrives too late... Exits realistically fall in June to August. The Q2 test gets almost no saving.\" \"The cost lands first... about €0.46m\". \"Net debt rises about €0.46m, so leverage goes to about 3.7x even if the bank allows the charge as an add-back. If your definition doesn't allow it, it is about 4.1x. Check your covenant definitions.\" Question: \"which EBITDA add-backs\"."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "\"Leaders first. Management and owner pay cut visibly for six months. I haven't counted it as a saving. Its value is as a signal to the bank, which is what the owner wants to show.\" \"Owner: hold the dividend and drawings, and consider a subordinated shareholder loan\". Bank package item 4: \"What the owner and leadership are contributing.\""
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "The long-term part and legal flags are present: \"loses you the people you need. In a tight labour market the skilled workers leave first\", \"Keep scarce skills and apprentices\", the WOR/WMCO/UWV steps and \"Have employment counsel confirm the procedure and timing.\" But if reductions remain, it only says \"start voluntary exits first and a properly consulted reduction only if needed.\" There is nothing about doing it once and nothing about decent treatment (no package, no support from notice). That is a vague nod, so it fails."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 887,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Sound, sized and bank-literate, with correct arithmetic. It is thinner than the best: no built forecast, it calls its own levers 'unsized', and the fallback reduction has no plan for doing it once and decently."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Ratio arithmetic checks (3.3x, 3.1x, 3.2x, ~3.6x, ~3.7x/4.1x within rounding), and the WMCO, WOR, Enterprise Chamber and UWV points are correct. 'mandatory above 50 employees' should strictly be 'from 50', which is immaterial at 260 staff. The 6-8% attrition figure is plausible and hedged with 'often'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon; 'skills' refers to workers."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Leaders' pay cut is 'a signal', but no leader says the breach is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It points out that natural attrition (often 6-8% a year in manufacturing) would remove 15-20 roles within a year without a dismissal. A hiring freeze with exceptions gets close to the owner's 26 by a gentler route if demand really has fallen.",
+      "evidence": "reply.md 'Also do' bullet on hiring freeze"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' passes both samples that built a dated 13-week forecast (B, D, E) and samples that only list one as something to bring (C, G). A 13-week forecast from late November also ends in February, well before the 30 June test. Only E said so. Consider requiring that the forecast or covenant bridge reaches the Q2 test date."
+      },
+      {
+        "reason": "No assertion checks that the illustrative numbers add up. Several samples have internal inconsistencies that change a conclusion: B's exits-slip row, C's 3.68x sensitivity and F's 'do-nothing is the worst case'. Consider an assertion that the covenant arithmetic is internally consistent."
+      },
+      {
+        "reason": "No assertion checks how the sample reads the test date. Calendar Q2 ends on 30 June 2027, about 31 weeks away. D assumed 13 weeks, and that assumption shaped its whole model without being caught."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This assertion bundles four things: long-term protection, doing it once, doing it decently, and Dutch legal steps for counsel. Samples mostly fail on 'decently' (no package or support from notice). Splitting it would make the failures easier to see."
+      },
+      {
+        "reason": "No sample has a leader say plainly that the forecast breach is leadership's responsibility, and no assertion asks for it, although owning the result is central to the owner-goes-first argument."
+      }
+    ],
+    "overall": "Fails only on the once-and-decently half of assertion 6."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Board paper section 3, 'Task sizing (estimate, to be replaced by a pilot baseline)', sizes freed capacity per work area and names the tasks: AP 'Invoice capture, coding, matching; exceptions and supplier queries stay human'. Capacity is 'net of the review and exception handling that people still do'. Gate 0 is a 'Pilot baseline for AP and reconciliations: volumes, handling time, error rate, exception rate'. Gate 1 requires an 'error rate no worse than the human baseline'. 'Let the pilots, not the target, set the number.' The result is 20 FTE (range 12-29), not an assumed 27."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Section 7 itemises the cost, labelled 'estimates, range plus or minus 40%': 'Build, integration, data clean-up 8.0', 'Licences, usage, monitoring, AI operations team 6.5', 'Controls, model-risk validation, external assurance 1.9', 'Reskilling and change 2.0', total 18.4. Review and exception handling are netted out of capacity, and the dismissal route adds contractor cover, packages and replacement of leavers. Every line is marked 'Estimate'."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "'Freed hours are booked first as capacity (backlog, faster close, better data for claims and underwriting), and only then as headcount.' 'Offer redeployment into growing work: claims accounting, data quality, control testing, AI oversight and exception handling.' 'Paid learning time for everyone whose work changes.' The staged plan reduces headcount by attrition 'never faster than capacity is freed' (83 at end-2027 against 7 FTE of capacity), with 'no payroll saving booked' before Gate 1."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Segregation of duties (no model that both codes and approves a payment), complete audit trails, and a named human who signs off anything that moves money or affects a person.' It also covers 'the reporting, solvency and internal-control framework supervised by Finansinspektionen', DORA for the AI vendor as an ICT third party, and 'AI Act classification and outsourcing notification'."
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "'The Co-determination Act (MBL) requires negotiation with the unions before major changes. Under the Employment Protection Act (LAS), redundancy selection follows length of service ... with three exemptions per employer.' It also gives notice of one to six months, nine months' re-employment priority and four months' notification for 26-100 people. Attrition is central: 'Let attrition and redeployment reduce headcount (to about 72 by end 2028)' and 'attrition alone caps the reduction at about 18 roles over two years'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "'Approve a staged programme, not a 30% headcount commitment for 2027.' Four gates (0-3) with dates, evidence and decisions. Gate 3 at mid-2028 is where the paper will 'Fix the 2028-2029 headcount path; decide whether any involuntary step is still needed'. The headline is a 20 FTE range, gated."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 663,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2281,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The tables tie out (17 checked: task sizing 19.8, AI programme 18.4, both options' yearly nets and the sensitivities), costs are itemised, headcount is capped by capacity, and it asks what target the board actually needs, so a CFO could take it almost as is."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found in the Swedish rules (MBL, LAS order and three exemptions, 1-6 months' notice, four months' notification for 26-100, nine months' priority, no statutory severance) or in the cited studies. Minor imprecision: DORA is called 'in force since January 2025'; it entered into force in January 2023 and has applied since 17 January 2025. Small internal nit: 'cash-positive in Q2 2028', where the Q2 net is 0.0 and Q3 is the first positive quarter."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt has no bad outcome; it is a board request for a business case."
+    },
+    "best_insight": {
+      "value": "Redeployment 'counts as a saving only where it fills a vacancy we would otherwise have hired for', and the dismissal route stays cash-negative in 2027 even before AI costs (about -4.1m), because work the AI can't yet do must be bought back.",
+      "evidence": "Board paper sections 5 and 9"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "All six samples pass all six assertions, so the set doesn't separate the samples. Add one that checks the money: the recommended option's headcount reduction is capped by measured capacity, and the recommended option gets a low-capacity sensitivity. Sample D's gated plan books attrition savings whatever the AI delivers, and no assertion caught it."
+      },
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "This passes a reply that anchors the board on a headcount percentage close to 30% at a later date (for example '27-30% by end of year 3' or 'targets a 15-30% reduction'). Consider requiring that the number the board commits to is set at a gate from measured results, not a target range given today."
+      },
+      {
+        "assertion": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+        "reason": "A single lump-sum 'AI programme' line with a list of what it covers passes as easily as an itemised build. Consider requiring that review and exception time is netted out of capacity or costed explicitly, and that the cost lines are itemised."
+      }
+    ],
+    "overall": "All assertions pass with strong, specific evidence. This is the most rigorous sample: costs are itemised, the arithmetic checks out and the staged plan is capacity-capped."
+  }
+}

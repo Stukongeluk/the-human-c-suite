@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply sizes tasks rather than jobs: which tasks AI does today at the required quality, measured in a pilot against a baseline, rather than assuming 30%.",
+      "passed": true,
+      "evidence": "Section 2 'What AI can honestly do here (hypotheses until the pilot measures them)' lists tasks per area ('invoice capture, coding, matching, exceptions triage'; 'matching, break classification, proposed entries') with effort ranges. It cuts a 28-45% technical ceiling to 8-18 FTE 'after review, exceptions, month-end peaks, controls and ... fragments'. 'The only way to know is a pilot against a baseline.' Gate 1: 'pilot results on AP and reconciliations against a baseline taken before the pilot. Measures: touchless rate, error and rework rate, hours freed ...'."
+    },
+    {
+      "text": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+      "passed": true,
+      "evidence": "Assumptions table: 'AI one-off (integration, data work, control build) 5.0' and 'AI run cost (licences, usage, monitoring, model and control operation) 3.5 / year ... excludes the human review time, which is netted inside the capacity figures'. Redeployment/reskilling and consultation are costed. A adds severance/transition/legal 7.6, contractors at 1.3x, rehiring and extra attrition, and counts unmet work. All labelled 'ESTIMATES'."
+    },
+    {
+      "text": "The reply books the benefit as capacity first, says where freed hours go (such as backlog, controls, better service or new work), and puts redeployment and reskilling before any headcount effect.",
+      "passed": true,
+      "evidence": "Recommendation: 'freeze hiring and use natural attrition and redeployment to bank the capacity that is proven. Commit to a number only at a gate in mid-2027.' 'redeployment into claims, controls and finance data roles, with paid reskilling time.' Unbooked upside: 'a smaller backlog, better service to claims and customers, capacity redeployed to controls, data and analysis'. Voluntary and then involuntary exits come 'Only if ... a saving beyond this is still needed after the gate'. The model caps reductions near capacity (+0.5)."
+    },
+    {
+      "text": "The reply keeps financial controls (segregation of duties, audit trail, human sign-off) and flags the insurer's supervision or AI rules where relevant.",
+      "passed": true,
+      "evidence": "'Humans sign off on anything touching money or people; audit trail on every AI-posted entry.' 'Insurer-specific: reporting deadlines (Solvency II, IFRS 17, Finansinspektionen), internal control and segregation of duties, DORA for ICT third parties, GDPR, and the EU AI Act duties on tools used at work.'"
+    },
+    {
+      "text": "The reply flags the Swedish rules if roles are affected (such as negotiation under the Co-determination Act and the LAS order of selection), and the role of natural attrition.",
+      "passed": true,
+      "evidence": "'MBL: negotiate with the unions before the decision'; 'LAS: selection by length of service within each unit and agreement area, with three exemptions per employer; we cannot choose who stays.' Notification bands (two months for 5-25, four for 26-100) and nine months' re-hire priority. Attrition: 'Hiring freeze and attrition (about 9 a year)'."
+    },
+    {
+      "text": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+      "passed": true,
+      "evidence": "'Do not commit to a 30% (27 FTE) reduction in 2027. Approve a gated programme.' 'Gate 1 (end Q2 2027): ... Commitment is set here, from measured hours. Gate 2 (end Q4 2027): scale or stop.' The planning range is 8-18 FTE, base 13."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 746,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1845,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "The model reproduces the paper, the break-even capacity and uncosted unmet work are sharp CFO points, and B wins in every case. But the cut from a 25-40 FTE ceiling to 8-18 isn't quantified, the AI cost (5.0 one-off) looks light, the horizon stops at 2028, and an unexplained 'playbook' reference leaks into the paper."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found in MBL, LAS and three exemptions, 2/4-month notification bands, nine months' re-hire priority, TRR, the 31.42% employer charges, or the MIT NANDA, Gartner and Careerminds (two in three, 8.4%) figures."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Board paper assumptions table: 'Swedish rules summarised in the playbook; counsel to confirm', which refers to a reference document the user never saw."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt has no bad outcome."
+    },
+    "best_insight": {
+      "value": "It quantifies the work left undone under the cut (about 6-10 FTE-equivalent, uncosted) as a close and control risk, and gives the break-even capacity: 4.4 FTE just to pay AI run costs, 6.5 including the one-off.",
+      "evidence": "Board paper section 4"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "All six samples pass all six assertions, so the set doesn't separate the samples. Add one that checks the money: the recommended option's headcount reduction is capped by measured capacity, and the recommended option gets a low-capacity sensitivity. Sample D's gated plan books attrition savings whatever the AI delivers, and no assertion caught it."
+      },
+      {
+        "assertion": "The reply gives the board a staged plan with decision points and a recommendation, not a 30% headcount number.",
+        "reason": "This passes a reply that anchors the board on a headcount percentage close to 30% at a later date (for example '27-30% by end of year 3' or 'targets a 15-30% reduction'). Consider requiring that the number the board commits to is set at a gate from measured results, not a target range given today."
+      },
+      {
+        "assertion": "The reply counts the full cost (such as licences or usage, integration, data work, controls, review and error handling), with estimates labelled.",
+        "reason": "A single lump-sum 'AI programme' line with a list of what it covers passes as easily as an itemised build. Consider requiring that review and exception time is netted out of capacity or costed explicitly, and that the cost lines are itemised."
+      }
+    ],
+    "overall": "All assertions pass. The model is consistent; one reference leak ('the playbook')."
+  }
+}

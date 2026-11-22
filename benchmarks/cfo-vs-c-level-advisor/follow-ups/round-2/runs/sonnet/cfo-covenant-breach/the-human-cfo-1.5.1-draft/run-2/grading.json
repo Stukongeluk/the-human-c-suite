@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "The bank pack includes \"1. A 13-week cash forecast, base and downside, with weekly headroom against the covenant and the minimum cash\" and \"2. The path of the ratio at each quarter end through Q2, with and without the levers, and the one or two inputs that move it most (volume, material prices).\" It specifies the forecast but builds none and works out no downside ratio itself. This is the thinnest pass."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "\"Ask for a conversation, not a verdict.\" Item 5: \"A request, only if needed, for a covenant holiday, reset or waiver for the Q2 test. Early and prepared is usually cheaper than a breach discovered later.\" In the bank's terms: headroom against the covenant and minimum cash, triggers, and \"a willingness to discuss a subordinated shareholder loan or equity cure if the facility has that right.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Table sizes each lever with its basis and timing, e.g. \"Inventory and WIP down 3–5% (assume about €6m held) | 0.18–0.30 | Q1–Q2 | none\", \"Receivables: 2 days faster (assume €44m revenue) | about 0.24\", \"Capex timing (defer, don't cancel maintenance or safety) | 0.2–0.4\". \"Total | about 1.1–2.0\" (checked 1.07-1.99), and \"Even the low end is about three times the €0.35m gap.\""
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "\"Realistically the first exits land around the end of Q2, so the savings arrive after the test date.\" \"Cost: transition payments, paid notice and advisers come first... about €0.55m in cash\". \"the ratio goes from 3.6x to about 3.76x if the facility lets you add back restructuring costs, and to about 4.5x if it does not... Check how your facility defines EBITDA and one-off items.\" (The main figures check: 13.15/3.5 = 3.76 and 13.15/2.95 = 4.46. The 'two months of savings' sensitivity is wrong; see factual_errors.)"
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "\"The owner and management waive bonuses this year and the owner takes the first and largest sacrifice. Dividends and drawings stop first. That is the visible seriousness the owner wants, and it is more credible to the bank\". Bank item 4: \"What the owner contributes: dividend stop, bonus waiver, and a willingness to discuss a subordinated shareholder loan or equity cure\"."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "The long-term part is strong: \"For a family firm, the name in the region, the next generation and customer trust are the assets\". So are 'once' and the legal steps: \"do it once, with the works council involved from the start, and follow the selection rules (afspiegelingsbeginsel)\" and \"the works council, WMCO and UWV steps with employment counsel.\" But nothing says how the people affected would be treated: no package above the statutory minimum, no support from the day of notice, no outplacement. 'Decently' is missing, and the burden of proof is on the assertion."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1024,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Sound direction with sized levers and the best framing for the family owner. But it works out no downside, one cut sensitivity is wrong (it would actually pass the covenant), and it gives no plan for treating people decently if cuts come."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Arithmetic error: \"With two months of savings it is still 3.68x to 4.0x.\" Take its own figures: EBITDA €3.5m, net debt €12.6m, one-off €0.55m, savings €1.69m a year, so two months is about €0.28m. With add-back that gives (12.6+0.55-0.28)/(3.5+0.28) ≈ 3.40x, inside the 3.5x limit, not 3.68x. The 3.68x leaves the savings out of EBITDA, while the 4.0x end includes them. Legal points (WOR art. 25, WMCO, notice, werktijdverkorting, afspiegeling) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'The owner takes the first and largest sacrifice' is a contribution, not a statement that the breach is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It argues in the owner's own terms: for a family firm, 'the name in the region, the next generation and customer trust are the assets', and a cut announced to impress a lender spends them to fix a gap that working capital can close.",
+      "evidence": "reply.md 'What to tell the owner'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' passes both samples that built a dated 13-week forecast (B, D, E) and samples that only list one as something to bring (C, G). A 13-week forecast from late November also ends in February, well before the 30 June test. Only E said so. Consider requiring that the forecast or covenant bridge reaches the Q2 test date."
+      },
+      {
+        "reason": "No assertion checks that the illustrative numbers add up. Several samples have internal inconsistencies that change a conclusion: B's exits-slip row, C's 3.68x sensitivity and F's 'do-nothing is the worst case'. Consider an assertion that the covenant arithmetic is internally consistent."
+      },
+      {
+        "reason": "No assertion checks how the sample reads the test date. Calendar Q2 ends on 30 June 2027, about 31 weeks away. D assumed 13 weeks, and that assumption shaped its whole model without being caught."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This assertion bundles four things: long-term protection, doing it once, doing it decently, and Dutch legal steps for counsel. Samples mostly fail on 'decently' (no package or support from notice). Splitting it would make the failures easier to see."
+      },
+      {
+        "reason": "No sample has a leader say plainly that the forecast breach is leadership's responsibility, and no assertion asks for it, although owning the result is central to the owner-goes-first argument."
+      }
+    ],
+    "overall": "Fails only on 'decently'. Assertion 1 passed on specification alone, which is a weak bar."
+  }
+}

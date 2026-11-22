@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "The reply opens: \"I recommend we do not apply 8% to every cost centre.\" Then: \"Payroll is 68% of the base, so 8% there is about 48 roles.\" Memo section 2: \"An even percentage lands on payroll because payroll is 68% of the base ... It also protects nobody who is inefficient and punishes everybody who is lean.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"Which number does the board protect (margin, covenant, dividend), and by when?\" and \"Is 8% against the 2026 forecast or budget, in-year or run-rate?\" The memo adds: \"These three answers move the plan by about €1.7m.\" Gap: \"An 8% cut is €5.29m\" (8% of 66.2m) and \"In-year gap: about €1.7m (2.5% of opex)\". Indexation is in the correct direction: \"€1.6m of extra cost that the 8% does not cover unless the board's 8% is measured after it.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Zero-base vendors, licences, cloud, consultants, facilities and travel: 2.2\"; \"Stop list of low-value internal projects and events: 0.5\"; \"pricing and revenue leakage, about €0.7m per 1% of rates (margin, not opex, so the board must say whether it counts)\". The memo adds \"unbilled or unapproved discounted work\". These levers come before any exits."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Flows: \"Hiring freeze with attrition: not refilling 25 overhead roles out of about 80 expected leavers: 1.9\". The memo section 7 flows table covers \"Backfilled (billable roles with demand, critical roles) about 55\" and \"Internal moves from the bench or shrinking teams ... before any external hire\". Protection with criteria (section 5): training, because \"10 extra leavers cost about €0.4m, more than the €0.3m (E) a 30% training cut would save\"; security and QA, because \"an incident costs more than the saving\"; \"Customer-facing capacity in the top accounts, until the account plans are reviewed\"; sales and account management, \"since pricing is a lever\"."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders first: leadership variable pay and perks at 50%, management team fixed pay at -10%: 0.8\". The memo adds: \"The board's own fees are part of the same conversation.\" Voluntary and forced exits come only after the checkpoint: \"Forced reductions only if 1 to 4 cannot close the gap.\""
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "Memo section 4 table: \"Run-rate € m | 2027 € m | Lands in | Owner | Confidence | Human impact\". The figures check out: gross 5.38 / 3.84, net 3.64, and the quarterly profile 0.47+0.83+1.08+1.26 = 3.64. Section 6 gives separate Stop and Wait lists (\"Wait: new office fit-outs, non-urgent IT upgrades, new management roles\"). The remaining gap is explicit (\"In-year gap: about €1.7m\") with ordered ways to close it, plus a three-week path in section 12."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 557,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2039,
+      "evidence": "wc -w board_budget_memo.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A complete, arithmetically sound board paper with an honest in-year gap, protections backed by numbers and a realistic three-week path. It slightly flatters the exit run-rate by counting leadership pay cuts, which are likely temporary, as permanent savings."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: Trevor & Nyberg (1% downsizing, 31% more voluntary turnover); Guthrie & Datta 2008 (Organization Science, downsizing and lower later profitability); the McKinsey 10% figure (stated in 'Five ways CFOs can make cost cuts stick'); Gallup's 0.5-2x replacement range; Dutch short-time work limited to calamities; works council at 50+, art. 25 advice and consent on social policy; WMCO at 20 in one UWV area within three months; notice of 1-4 months. Minor: 'the supervisory board decides executive pay' is a generalisation that depends on the articles, and it's hedged. The leader line (0.80) is below what its stated inputs seem to give (~0.88), but the inputs are ambiguous."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'. 'future skills' refers to staff."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt: the margin is thin but positive and the board has set a target, so this check doesn't apply. B's memo does say 'Message to the company: the result is the leadership's responsibility, and they carry it first.'"
+    },
+    "best_insight": {
+      "value": "It asks outright whether any saving funds a dividend or payout ('I would not cut jobs to fund one') and gives protected spend hard break-evens: a 30% training cut saves €0.3m, but 10 extra leavers cost €0.4m.",
+      "evidence": "Reply and memo sections 5, 9 and 13."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+        "reason": "Every sample passes by asking 'what is the 8% for?' and 'in-year or run-rate?'. Asking the question is enough to pass, so the assertion doesn't separate the samples. It never checks whether the baseline/indexation effect is stated in the right direction (sample A gets it backwards) or whether the plan shows how it changes under each answer."
+      },
+      {
+        "reason": "No assertion checks whether temporary savings (leader pay or bonus cuts, a delayed pay review) are kept out of the exit run-rate. B, C and E count leader cuts in the run-rate to get close to 8%, while A and D exclude them correctly. That difference matters to a board."
+      },
+      {
+        "reason": "No assertion checks that lever amounts, quarterly timing and the stated gap agree with each other. Sample E's largest lever shows the same figure in-year and at exit while ramping quarterly; only arithmetic checking catches that."
+      },
+      {
+        "assertion": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+        "reason": "This bundles two tests (flows instead of cuts, and protected investments with criteria). Splitting them would make failures easier to read; 'explicit criteria' is also loose enough that naming categories plus 'book the future cost' passes."
+      }
+    ],
+    "overall": "Passes all six. It's a strong sample, but the assertions don't notice that its 8% run-rate claim relies on counting leader pay cuts as permanent."
+  }
+}

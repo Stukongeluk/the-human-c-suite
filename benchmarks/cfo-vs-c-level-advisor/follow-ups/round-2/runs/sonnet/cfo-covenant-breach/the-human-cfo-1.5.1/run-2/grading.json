@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "Week 1 of the plan: \"Build the 13-week forecast with base and downside cases.\" It also gives covenant headroom for both cases: \"Mid-range, this takes you to about 3.3x with EBITDA on forecast\" and \"If EBITDA comes in 10% lower (€4.5m), the same levers still leave you at about 3.7x, and with no levers you would be at 4.0x.\" It brings \"the 13-week cash forecast and quarterly covenant bridge\" to the bank. Checked: 16.55/5.0 = 3.31x and 16.55/4.5 = 3.68x."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "\"Call the bank now rather than at the review.\" It asks for \"a covenant reset or waiver (for example 4.0x for three quarters, stepping down)\", with \"Expect a fee and a margin step-up.\" It frames the request in the bank's terms (equity cure, covenant bridge, facility definitions) and says \"Cuts announced three weeks before a review can look like panic, or like a demand problem you haven't mentioned.\""
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "A seven-lever table sizes each lever against the €0.5m net-debt gap, e.g. \"Inventory down 4-6% (raw materials, finished goods) | €0.28-0.42m | None\", \"Receivables 2-3 days faster | €0.22-0.33m\", \"Phase non-safety, non-maintenance capex | €0.20-0.40m\", \"Price rise of 0.5% on part of the volume | €0.03-0.08m\". Total €1.0-1.9m (checked: 1.04-1.86). It adds \"Don't pay suppliers later to get there.\""
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "Timing: \"Realistically people leave around April to June, so Q2's LTM EBITDA gets almost none of the saving.\" One-offs: \"about €0.4m, paid around Q2 and Q3.\" Covenant definition: \"If your facility doesn't let you add them back to EBITDA, you test at about 4.0x. If it does, about 3.7x.\" (checked 18.4/4.6 = 4.0, 18.4/5.0 = 3.68). Week 1: \"Check the EBITDA and net debt definitions, add-back caps\"."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "\"Put on the table that the owner pauses the dividend, the owner considers a subordinated shareholder loan or an equity cure (check how your facility defines them), and directors' bonuses are frozen and directors take the first and largest pay cut. This is more credible than a cut announced for show.\" The dividend pause is also a sized lever (€0.20-0.40m)."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "Long term: \"Furniture skills such as upholsterers, CNC operators and finishers take years to rebuild\", plus Trevor & Nyberg on later voluntary quits. Fallback: \"Then do them once, properly: works council involved early, voluntary exits first, full support from the day of notice, and with employment counsel.\" Dutch steps: art. 25 WOR advice before the decision, the 20-in-three-months UWV/union notification, one to four months' notice. It does not mention the family's name, but skills are covered specifically."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 910,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Tight, arithmetically sound and honest that the forecast error is the real risk, with a concrete three-week plan; it builds no forecast itself and doesn't caveat that a dividend pause only moves net debt if a payout was planned before 30 June."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked the WOR art. 25, WMCO 20-in-three-months, one to four months' notice, werktijdverkorting (calamities only, crisis bill 2026), Trevor & Nyberg (1% → 31%) and all ratio arithmetic; no errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon; 'skills' only refers to furniture trades."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Directors 'take the first and largest pay cut', but no leader says the responsibility for the forecast breach is leadership's."
+    },
+    "best_insight": {
+      "value": "It says plainly that 'the honest risk is the forecast, not the 0.1x': a 10% EBITDA miss leaves 3.7x even after every lever. That is why the reset request matters as much as the levers.",
+      "evidence": "reply.md, 'The honest risk is the forecast' paragraph"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' passes both samples that built a dated 13-week forecast (B, D, E) and samples that only list one as something to bring (C, G). A 13-week forecast from late November also ends in February, well before the 30 June test. Only E said so. Consider requiring that the forecast or covenant bridge reaches the Q2 test date."
+      },
+      {
+        "reason": "No assertion checks that the illustrative numbers add up. Several samples have internal inconsistencies that change a conclusion: B's exits-slip row, C's 3.68x sensitivity and F's 'do-nothing is the worst case'. Consider an assertion that the covenant arithmetic is internally consistent."
+      },
+      {
+        "reason": "No assertion checks how the sample reads the test date. Calendar Q2 ends on 30 June 2027, about 31 weeks away. D assumed 13 weeks, and that assumption shaped its whole model without being caught."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This assertion bundles four things: long-term protection, doing it once, doing it decently, and Dutch legal steps for counsel. Samples mostly fail on 'decently' (no package or support from notice). Splitting it would make the failures easier to see."
+      },
+      {
+        "reason": "No sample has a leader say plainly that the forecast breach is leadership's responsibility, and no assertion asks for it, although owning the result is central to the owner-goes-first argument."
+      }
+    ],
+    "overall": "Strong on all six assertions. The assertions don't separate a sample that builds the forecast from one that only names it."
+  }
+}

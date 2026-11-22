@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "bank-review-plan-draft.md section 5 builds a 13-week cash forecast (w/c 23 Nov 2026 to 15 Feb 2027) in base and downside versions (receipts -5%), and section 4 gives the 30 June leverage for base, -5% and -10% EBITDA with and without the plan (e.g. 'Plan, low case ... 3.47x' at -5%). The row and column arithmetic checks, and it honestly notes the 13 weeks 'cover the 31 December test, not the Q2 test' and need extending to 30 June."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "Plan section 6: '1. Early dialogue now, before the review, with this plan, rather than a surprise after the Q2 numbers. 2. A covenant reset or holiday for the 30 June and 30 September tests (for example 4.0x for two tests), or a waiver agreed in advance'; '3. ... monthly reporting of net debt, stock and receivables'; '4. Confirmation of the covenant definition'. Reply: 'Talking early is worth more than a headcount number.'"
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Plan section 3 sizes each lever with low, high and basis: inventory 300–650 ('5 to 10% of about 6,500 stock'), receivables 250–490 ('2 to 4 days of DSO'), capex 200–400, distributions 300–600, purchasing 50–150, pricing 60–150, attrition 40–120, leadership pay 50–100. Totals (net debt 1,050–2,140; EBITDA 200–520) and the resulting 3.26x/2.82x all verified."
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "Two routes modelled: '10% cut, statutory UWV route | 3.60x | ... The roughly €780k one-off cost comes after the test' and 'settlement agreements, exits 31 March | about 3.50x, or 4.6x if the loan agreement doesn't allow restructuring costs as an add-back' (17,012/4,858=3.50; 17,012/3,688=4.61). 'In 2027 itself, either cut costs more than it saves.' Question 1 asks about 'restructuring add-backs'."
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "'The strongest signal available is the owner going first: no dividend, drawings or subordinated loan if needed, and a visible pay cut for leaders.' 'What I'd take to the bank: ... what the owner and leadership are putting in.' Action table: 'Suspend distributions; leadership pay reduction announced by the owner first | Owner, CEO | Before the review'."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": false,
+      "evidence": "Meets most of it: skilled people ('you could lose the newest people with the skills you can't easily rebuild'), once and decently ('once, with a package above the statutory minimum, support from the day of notice, leaders' pay cut first, and the work reduced'), and the Dutch steps flagged for counsel (WOR art. 25, WMCO, afspiegelingsbeginsel, 'check with employment counsel'). But it never raises the family firm's name or regional reputation; the only family-firm point is that it 'doesn't want to look passive'. It fails on that named element alone."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 883,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2382,
+      "evidence": "wc -w of other .md files (bank-review-plan-draft.md)"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A near bank-ready draft whose numbers are internally consistent throughout: both dismissal routes are modelled correctly, there is a 13-week base and downside, a scenario grid, actions with owners and dates, facility notice and cross-default checks, and a holiday-allowance catch. It misses only the family-reputation argument, and its 13 weeks stop short of the Q2 test (which it says)."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Rounding in the 13-week tables is within €1–4k. The line to the owner ('costs about €1M in cash and saves nothing by June') simplifies the settlement-route case (€358k saved by June), but it is a rhetorical summary that is consistent with the statutory route."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'; 'skills' appears only in the sense of workers' skills."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The forecast breach is a bad outcome in the prompt, but no leader in the advice says plainly that responsibility for it is leadership's; 'leaders first' appears only as a cost contribution or signal."
+    },
+    "best_insight": {
+      "value": "It catches that the Dutch holiday allowance (about €870k at 8% on 260 staff) is paid in May, just before the 30 June test, and must be in the forecast. It also models the settlement and statutory dismissal routes separately to show that neither helps June.",
+      "evidence": "See reply and bank-review-plan-draft.md"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "Bundles four checks (skilled people, the family firm's name, once-and-decently, Dutch steps flagged for counsel), and it isn't clear whether the parenthetical lists examples or requirements. Read strictly, the most complete sample (D) fails only because it never mentions the family's name. Consider splitting it into two or three assertions."
+      },
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' is ambiguous: only one sample actually built a 13-week forecast, while the others listed it as a deliverable for the bank. State whether recommending it is enough or whether the reply must sketch it."
+      },
+      {
+        "reason": "No assertion checks whether the leverage effect of the cuts is computed consistently. Several samples charge the full one-off cash to Q2 net debt while placing the exits at or after 30 June (the transition payment falls due after employment ends), and two samples mis-compute their own cut scenario. An assertion such as 'the cut scenario's timing and leverage arithmetic follow from its stated inputs' would discriminate."
+      },
+      {
+        "reason": "No assertion checks the facility-agreement housekeeping a CFO would expect: any duty to notify the bank of an expected breach, cross-default, and the definition of net debt (for example whether a shareholder loan counts). The stronger samples raised these points unprompted."
+      }
+    ],
+    "overall": "5/6. It failed only on the family-name element of a bundled assertion, despite the best plan and the most accurate numbers of the set."
+  }
+}

@@ -4,10 +4,15 @@ All notable changes to **The Human C-Suite** are documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.5.1] - 2026-11-22
 
 ### Added
 - Head-to-head benchmark against another open-source CFO skill, `cfo-advisor` from alirezarezvani/claude-skills (`benchmarks/cfo-vs-c-level-advisor/`): 141 of 144 checks against 85 of 144 across Claude Sonnet and Opus, graded blind, with the caveats in the benchmark.
+- Follow-up runs for this release (`benchmarks/cfo-vs-c-level-advisor/follow-ups/`).
+
+### Changed
+- `the-human-cfo`: the rule against the seat's own terms now covers the reply and every document (including "the playbook" and "the templates"); for cash, runway and covenant problems the seat builds the 13-week cash forecast with base and downside headroom itself; each cash flow is dated when it is paid and temporary measures stay out of run-rates; involuntary reductions come with a fair package and support from the day of notice.
+- Shared fact sheet (all seats): explains the Dutch selection rule for redundancies (afspiegelingsbeginsel) per group of interchangeable jobs, with sources.
 
 ## [1.5.0] - 2026-11-20
 

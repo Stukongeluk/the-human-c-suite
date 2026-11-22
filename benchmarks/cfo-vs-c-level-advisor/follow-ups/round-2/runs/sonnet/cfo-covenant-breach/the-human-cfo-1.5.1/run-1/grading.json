@@ -1,0 +1,95 @@
+{
+  "expectations": [
+    {
+      "text": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+      "passed": true,
+      "evidence": "covenant_plan.md section 7 contains three week-by-week 13-week tables: \"Base case, no action (closing cash week 13: EUR 1,045k)\", \"Downside, no action (closing cash week 13: EUR 544k)\" and \"Downside with measures (closing cash week 13: EUR 990k)\" (rows checked: +318k a week, payroll weeks 5/9/13). Section 2 gives covenant headroom at 30 June by scenario, e.g. \"Measures without job cuts, central case, 50% of estimate delivered | 10.06 | 3.19 | 3.15x\" and \"Same, downside (EBITDA 5% lower), 50% delivered | 10.21 | 3.04 | 3.35x\". The reply says to bring \"a 13-week cash forecast with base and downside cases, the headroom for each, the actions each case triggers\"."
+    },
+    {
+      "text": "The reply goes to the bank early to discuss a waiver, amendment or reset, framed in the bank's own terms.",
+      "passed": true,
+      "evidence": "\"That is why you also ask the bank for a headroom safety net, such as a reset to 4.0x for two test dates or an equity cure right. I'd budget EUR 30k to 60k for that\". It is framed in the bank's terms: \"the bank's question is whether leverage is heading below 3.5x with margin\", and the plan says \"Offer monthly reporting and defined triggers.\" The request comes at the review, seven months before the test, not before it."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as working capital, inventory, capex timing, pricing or spend) and sizes how much headroom each buys.",
+      "passed": true,
+      "evidence": "Lever table with ranges and what each hits, e.g. \"Collect receivables 4 days faster, stock down 6% | 0.3 to 0.9 | Net debt\", \"Defer capex that isn't safety or maintenance | 0.2 to 0.4\". The plan gives a point estimate, owner and date per lever. It works out the ratio at 50% and 100% delivery and in the downside (checked: 10.06/3.19 = 3.15, 9.26/3.39 = 2.73, 10.56/2.965 = 3.56). Also \"don't cut maintenance, safety or training to make June.\""
+    },
+    {
+      "text": "The reply explains that job cuts announced now may not fix a Q2 covenant (timing of savings, one-off costs) and checks how restructuring costs are treated in the covenant definition.",
+      "passed": true,
+      "evidence": "\"Savings arrive late... Exits before 30 June are optimistic.\" \"Costs arrive early... roughly EUR 0.8m, paid when people leave.\" \"If the bank doesn't add back restructuring costs, it is 4.9x or worse.\" It also says \"Also ask whether restructuring costs are added back in the covenant EBITDA\". (The exits-slip figure of 3.9x is internally inconsistent; see factual_errors. The core argument holds.)"
+    },
+    {
+      "text": "The reply has the owner and leaders contribute first (such as stopping dividends or drawings, or putting in equity or a loan) and presents that to the bank.",
+      "passed": true,
+      "evidence": "To the bank: \"what the owner is putting in: the dividend pause first, leaders' pay next.\" \"Better proof of seriousness: the owner stops the dividend, takes a pay cut first, and signs up to defined triggers.\" It asks \"will the family contribute equity if needed?\" and the plan adds a \"Leadership bonus pool paused, management pay cut 10% for six months\" lever."
+    },
+    {
+      "text": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+      "passed": true,
+      "evidence": "Long term: \"don't cut maintenance, safety or training to make June\", and under afspiegeling \"you may lose your youngest craftspeople\". Fallback: \"It would be done once, properly, with the works council, counsel and a fair package. Prepare it now with counsel, but don't announce it.\" Plan section 6 lists the Dutch steps (WOR art. 25, WMCO, UWV permit or settlement, transition payment, afspiegeling, werktijdverkorting) and ends \"Employment counsel to confirm all of this.\" The family's name is not mentioned."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 890,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2155,
+      "evidence": "wc -w covenant_plan.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A very complete bank pack: options at 30 June, three worked 13-week forecasts and measurable triggers. One scenario row is internally inconsistent, and the forecast ends in February without saying it doesn't reach the test."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor modelling error. The row 'Same, exits July to September... 11.58 | 3.00 | 3.86x (5.22x without add-back)' puts the full €0.78m one-off cash into net debt at 30 June. The same plan says that cost is 'paid when people leave', and in this row people leave after the test. On its own assumptions net debt would be about €10.8-10.9m, giving about 3.6x with add-back, not 3.9x. Legal statements (WOR, WMCO, afspiegeling, notice, werktijdverkorting) are correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The owner 'takes a pay cut first', but no leader says the breach is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Measurable triggers (order intake 8% below plan for two months, forecast leverage above 3.4x at end of March, working-capital measures under half by March) turn the owner's wish to 'show we're serious' into a pre-agreed contingency the bank can rely on, without announcing anything.",
+      "evidence": "reply.md 'Meeting the owner's real point'; covenant_plan.md section 5"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "B's 13-week forecast has no payroll in week 1 (w/c 23 November), although Dutch monthly payroll usually falls around the 25th. No assertion looks at whether a built forecast is plausible."
+      },
+      {
+        "assertion": "The reply prepares a 13-week cash forecast and base and downside scenarios with covenant headroom.",
+        "reason": "'Prepares' passes both samples that built a dated 13-week forecast (B, D, E) and samples that only list one as something to bring (C, G). A 13-week forecast from late November also ends in February, well before the 30 June test. Only E said so. Consider requiring that the forecast or covenant bridge reaches the Q2 test date."
+      },
+      {
+        "reason": "No assertion checks that the illustrative numbers add up. Several samples have internal inconsistencies that change a conclusion: B's exits-slip row, C's 3.68x sensitivity and F's 'do-nothing is the worst case'. Consider an assertion that the covenant arithmetic is internally consistent."
+      },
+      {
+        "reason": "No assertion checks how the sample reads the test date. Calendar Q2 ends on 30 June 2027, about 31 weeks away. D assumed 13 weeks, and that assumption shaped its whole model without being caught."
+      },
+      {
+        "assertion": "The reply protects the long term (skilled people, the family firm's name), and if reductions remain, plans them once and decently with the Dutch legal steps flagged for counsel.",
+        "reason": "This assertion bundles four things: long-term protection, doing it once, doing it decently, and Dutch legal steps for counsel. Samples mostly fail on 'decently' (no package or support from notice). Splitting it would make the failures easier to see."
+      },
+      {
+        "reason": "No sample has a leader say plainly that the forecast breach is leadership's responsibility, and no assertion asks for it, although owning the result is central to the owner-goes-first argument."
+      }
+    ],
+    "overall": "Passes all six. The assertions don't catch the modelling inconsistency in one scenario row."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Reply line 1: \"I recommend we do not apply 8% to every cost centre.\" Reply: \"Payroll is 68% of the base, so 8% there is about 48 roles.\" Memo s.2: \"An even percentage lands on payroll because payroll is 68% of the base... It also protects nobody who is inefficient and punishes everybody who is lean.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "Memo s.1: \"which number the board is really protecting (a margin percentage, a bank covenant, a dividend, an investor expectation), whether '8% lower' is against the 2026 forecast or the 2026 budget, and whether it is an in-year result or the run-rate... These three answers move the plan by about €1.7m.\" Reply Q1: \"Which number does the board protect (margin, covenant, dividend), and by when?\" Gap sized: target €5.29m, in-year gap €1.7m, wage drift \"3.5% is about €1.6m\"."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "First lever: \"Zero-base vendors, licences, cloud, consultants, facilities and travel: 2.2\" (€1.65m in 2027), then \"Stop list... 0.5\". Pricing/leakage sized: \"Rate indexation... and unbilled or unapproved discounted work. About €0.7m per 1% of rates\". Bench redeployment named as a further no-job lever."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Memo s.7 \"Headcount: flows, not cuts\": about 80 leavers, about 55 backfilled (\"billable roles with demand, critical roles... approved by CFO and COO weekly\"), about 25 overhead roles not backfilled \"after a work review\", \"Internal moves from the bench or shrinking teams... before any external hire\". S.5 protects training (\"10 extra leavers cost about €0.4m, more than the €0.3m (E) a 30% training cut would save\"), security/compliance/QA (\"an incident costs more than the saving\"), customer-facing capacity in top accounts, and sales (\"since pricing is a lever\")."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "Lever: \"Leaders first: leadership variable pay and perks at 50%, management team fixed pay at -10%: 0.8\". Memo s.8: \"The board's own fees are part of the same conversation. Message to the company: the result is the leadership's responsibility, and they carry it first.\" Forced reductions only after levers 1-4."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "Memo s.4 table: each lever with run-rate, 2027 amount, \"Lands in\", Owner (\"CFO with budget holders\", \"CEO\", \"COO and HR\", \"CEO and board\"), Confidence (Medium/Medium/Medium/High if agreed in December) and human impact. S.6 \"What stops or waits\" (stop and wait lists). Gap: \"In-year gap: about €1.7m (2.5% of opex)\" with an ordered list of ways to close it."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 557,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2039,
+      "evidence": "wc -w board_budget_memo.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Concise and board-usable: a clean lever table with owner, confidence and human impact, a costed blanket-vs-plan comparison, a sized in-year gap and sound Dutch process, though the leaders' lever is counted in the run-rate without saying whether it lasts and one basis does not quite add up."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: the leaders' lever basis (50% of a €1.4m pool plus 10% of 8 x €220k) gives about €0.88m, not the €0.80m stated. Legal and research claims check out."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs' ('skills' appears only as staff skills)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt (forward target, thin but positive margin). For reference, memo s.8 does say: 'the result is the leadership's responsibility, and they carry it first.'"
+    },
+    "best_insight": {
+      "value": "It gives the CEO a replacement rule as simple as '8% everywhere' ('no cost centre gets a percentage, every one gets a challenge, and leadership goes first') and asks whether the saving funds a dividend, saying it would not cut jobs for that.",
+      "evidence": "Reply 'For the CEO' and 'Two things to check'; memo s.13 Q3."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks whether temporary levers (leaders' pay or bonus cuts) are excluded from the run-rate used to claim the 8%; this sample counts the leaders' lever in its 5.4m exit run-rate without saying it is permanent."
+      },
+      {
+        "assertion": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+        "reason": "Passes on any mention of leaders' pay; consider requiring that it is sequenced before any job measure and framed as a signal, not the main saving."
+      }
+    ],
+    "overall": "Assertions fit the case; they don't test run-rate honesty or arithmetic consistency of the lever table."
+  }
+}

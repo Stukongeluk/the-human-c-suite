@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Reply line 1: \"I'd take the board one company-wide 8% target, reached as a run-rate by Q4 through four named levers, instead of 8% off every cost centre.\" Then: \"Payroll is 68% of opex, so about €4.1m of a flat cut is people, roughly 48 FTE. The other €1.9m is cut without asking which spend is worth keeping.\" Paper s.2: \"Cutting delivery capacity by the same 8% as a back-office team cuts revenue, not only cost.\" Both halves (lands on payroll; indiscriminate between valuable and wasteful spend) are made."
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "Reply: \"What is the 8% for? On my numbers it is twice today's operating profit and would lift margin from about 4% to about 11%. If it is a covenant, a cash target or a valuation, the plan should be built for that.\" Timing: proposes the target as \"a Q4 run-rate\" vs in-year, and asks \"What is the 8% meant to deliver, and by when?\" Gap sized: 8% = €6.0m, in-year gap €1.7m, and \"wage indexation (my estimate is €2.4m) widens the gap to about €8.4m\" if the baseline is this year's actual. It cannot know the answer, so it puts the question first and sizes each case."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "Lever 1, listed first: \"Zero-base non-payroll lines (vendors, licences, subcontractors, travel, office): 12.5% of the €24m ... 3,000 run-rate\" (1,875 in year 1, range 10-15%), plus a stop list (412 / 750). Pricing sized: \"each 1% net rate increase is worth about €0.8m\"; paper also names \"unbilled hours and unapproved discounts\" as revenue leakage to check."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Paper s.7: \"Flows, not a percentage: expected leavers about 72 (est.); 35 not backfilled, 37 refilled. Freeze exceptions for billable roles with signed demand, security, and legal or regulatory roles. Redeployment first for anyone in a stopped activity.\" Paper s.5 protects \"Client-facing delivery capacity (it is the revenue), training and certification budgets, security and tooling that keeps delivery running, and onboarding capacity\" with the criterion \"Cutting any of these carries a future cost (lost revenue, rehiring at 0.5x to 2x salary per Gallup, security incidents); if the board wants any of them cut, the future cost goes next to the saving.\""
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "Reply lever 4: \"Leaders first: all variable pay for about 15 leaders suspended, plus 10% off fixed pay from Q2 by consent: 858 in year 1.\" Paper s.8: \"The CFO and CEO are in the 15.\" Base plan has \"no one is made redundant\"; involuntary exits are kept out of the base plan."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": true,
+      "evidence": "Paper Option B table gives each lever with owner and confidence (e.g. \"CFO with budget owners; medium\", \"COO and HR; medium\", \"CEO and ExCo; low\", \"Remuneration committee; high, but temporary\"), quarterly timing Q1-Q4, year-1 amount and run-rate. S.6 \"What stops or waits\" lists items. Gap: \"The in-year gap is about 1,720\", with s.4 ordering how to close it and s.10 triggers."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 822,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2230,
+      "evidence": "wc -w board_paper.md (model.py not counted)"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A CFO would find this the most board-ready: a runnable model whose numbers reproduce, a costed comparison that shows the blanket cut nets ~€1.0m in year 1, temporary leader cuts kept out of the run-rate, sensitivities, triggers and a week-by-week path, all honestly labelled as estimates."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor only: reply labels the zero-base lever '1,875 net of fees in year 1' when 1,875 is gross (net 1,725; the -150 fee is netted elsewhere and the 4,280 total is correct). Legal and research claims check out. Cosmetic: paper section numbers run 10, 13, 11, 12."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt sets a forward budget target with a thin but positive margin; no bad outcome is described. The sample does put leaders' pay first (s.8) but does not frame it as owning a result."
+    },
+    "best_insight": {
+      "value": "It keeps the temporary leaders' pay cut out of the run-rate and shows the 8% is still reached as a Q4 exit run-rate (6,319k), so the board's 8% claim is not propped up by a one-off sacrifice; it also shows the blanket cut breaks even at zero if ~65% of lost billable capacity becomes lost revenue.",
+      "evidence": "Paper s.3 Option B note and break-even line under Option A."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+        "reason": "No sample could 'establish' the number; all pass by asking the question and sizing the gap. Reword to 'asks or states which number... and shows how the plan changes with the answer' so the bar is explicit."
+      },
+      {
+        "reason": "No assertion checks whether temporary levers (a one-year leaders' pay or bonus cut) are kept out of the run-rate claim. Samples differ sharply here: this one excludes it, others count a 2027-only bonus cut in the 2028 run-rate."
+      },
+      {
+        "reason": "No assertion checks that year-1 savings from dismissals are modelled after Dutch consultation, WMCO and notice, with one-off costs first. All samples did it, but it is the core financial reason a blanket cut fails and should be tested."
+      }
+    ],
+    "overall": "Assertions cover the right themes; add checks on run-rate honesty (temporary levers) and on year-1 timing of dismissal savings."
+  }
+}

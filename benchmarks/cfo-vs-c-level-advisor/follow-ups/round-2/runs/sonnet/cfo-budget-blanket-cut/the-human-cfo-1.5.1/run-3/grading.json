@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "The reply opens: \"I would not take a flat 8% per cost centre to the board ... A flat cut lands mostly on payroll and, on my estimates, nets only about EUR 0.8m in 2027.\" Paper section 2, point 6: \"It treats the efficient and the bloated alike.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "\"8% of what: this year's actual, or next year's baseline including wage indexation (about EUR 1.6m on its own)?\" and \"What is the 8% for: margin, a covenant, valuation? The answer decides whether pricing, cash or financing belong in the mix.\" The paper gives the gap as \"8% = EUR 5.5m\" and states \"Gap to 8% in the year: about EUR 0.8m. Gap to 8% at exit run-rate: about EUR 0.4m\", with a row \"Meets 8% in 2027?\" Weaker than the others on timing: it never asks the board to choose between in-year and run-rate, but it sizes both."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "\"Zero-base non-payroll (EUR 22m, about 10%): vendors, licences, subcontractors, travel, consultants, office | 2.2\"; \"each point of utilisation is worth about EUR 0.5m of revenue\"; the paper's reserve covers \"rate indexation on contracts that allow it, unbilled work and unapproved discounts\" and working capital."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Flows: \"Hiring freeze: do not refill about 30 of about 66 expected leavers, sold-work capacity protected.\" Paper section 7: \"Refilled about 36 (sold-work capacity, critical roles) ... Every refill above the freeze needs a business case signed by the COO.\" Section 5 protects, with criteria, \"Billable and customer-facing capacity for sold work: each billable FTE brings about EUR 120k of revenue for about EUR 78k of cost\" and \"Training, security, quality and maintenance: cut only with the future cost written next to the saving. None is cut in this plan.\" It never mentions internal moves or redeployment."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "\"Leaders first: management bonus pool and perks cut by about EUR 0.5m, board and directors included.\" Paper section 8: \"cut first and deepest\" and \"No bonus for headcount reduction.\" Involuntary exits come only last. Note: the base plan also delays everyone's pay review, but that isn't a job cut."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "The lever table has the right columns (amount in 2027, exit run-rate, quarterly lands, owner, confidence, human impact) and states the gaps, but its numbers don't hold. Lever 1 shows \"2.2\" in 2027 and \"2.2\" exit run-rate while its own profile \"Q1 0.35, Q2 0.55, Q3 0.65, Q4 0.65\" implies a 2.6 exit run-rate, so either the in-year 4.7 or the 0.4 exit gap is wrong. The levers also sum to about 5.0, not 5.1. \"What stops or waits\" is a placeholder: \"To be filled with budget holders in the next two weeks: an explicit list of low-value programmes, reports, tools, trips and vendors\". Stopping work otherwise appears only as an uncounted reserve lever. That is the letter of the assertion, not the spirit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 682,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1769,
+      "evidence": "wc -w board-budget-approach.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "The direction is right and the structure clear, but the in-year and run-rate figures for its biggest lever contradict each other, it puts a company-wide pay-review delay into the base plan without checking whether a collective agreement allows it, and the stop list is left blank."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) Lever 1 (zero-base) is shown as 2.2 in 2027 and 2.2 exit run-rate, but its quarterly profile (0.35/0.55/0.65/0.65) implies a 2.6 exit run-rate. The in-year total (4.7, 6.8%) and the stated gaps can't both be right. Minor: the exit run-rate total of 5.1 is more than the levers' ~5.0, and the WMCO rule is stated without its three-month window. Checked and correct: art. 25 WOR, works council at 50+, Trevor & Nyberg, Gallup's 0.5-2x, UWV permission for business-economic dismissals, Dutch short-time work limited to calamities."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt: the margin is thin but positive and the board has set a target, so this check doesn't apply. E has leaders cut 'first and deepest' but doesn't say the responsibility is leadership's."
+    },
+    "best_insight": {
+      "value": "It gives its own riskiest lever a break-even (the pay-review delay pays off only if it causes fewer than ~20 extra leavers) and ties the 2027 leadership bonus to a balanced scorecard with 'no bonus for headcount reduction'.",
+      "evidence": "Paper sections 8 and 9."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+        "reason": "Every sample passes by asking 'what is the 8% for?' and 'in-year or run-rate?'. Asking the question is enough to pass, so the assertion doesn't separate the samples. It never checks whether the baseline/indexation effect is stated in the right direction (sample A gets it backwards) or whether the plan shows how it changes under each answer."
+      },
+      {
+        "reason": "No assertion checks whether temporary savings (leader pay or bonus cuts, a delayed pay review) are kept out of the exit run-rate. B, C and E count leader cuts in the run-rate to get close to 8%, while A and D exclude them correctly. That difference matters to a board."
+      },
+      {
+        "reason": "No assertion checks that lever amounts, quarterly timing and the stated gap agree with each other. Sample E's largest lever shows the same figure in-year and at exit while ramping quarterly; only arithmetic checking catches that."
+      },
+      {
+        "assertion": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+        "reason": "This bundles two tests (flows instead of cuts, and protected investments with criteria). Splitting them would make failures easier to read; 'explicit criteria' is also loose enough that naming categories plus 'book the future cost' passes."
+      },
+      {
+        "reason": "No assertion tests whether broad-based sacrifices (a company-wide pay-review delay, as in sample E) are kept behind leaders-first and job-free levers, or whether CAO constraints on such a delay are checked."
+      }
+    ],
+    "overall": "Fails assertion 6 on internally inconsistent lever figures and an unfilled stop list. Its main weakness, a broad pay-review delay in the base plan, isn't tested by any assertion."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against cutting every cost centre by 8% and explains why a blanket cut lands mostly on payroll and cuts efficient and wasteful areas alike.",
+      "passed": true,
+      "evidence": "Reply line 1: \"My recommendation is not to run 8% per cost centre.\" Reply: \"With payroll at 68% of opex, 8% in every cost centre means about 48 of your 600 jobs go... Otherwise non-payroll spend would have to fall about 25%.\" Paper s.2: \"It also cuts equally in the places that earn revenue (delivery, sales), the places that protect the company (security, compliance, finance controls, training) and the places with real waste.\""
+    },
+    {
+      "text": "The reply establishes which number the board actually needs (cash, margin or a covenant) and by when, and sizes the gap in money or shows how to.",
+      "passed": true,
+      "evidence": "Paper s.1 table maps each aim to its number: Margin -> \"Operating result as % of revenue\"; Cash or covenant -> \"Cash and covenant ratio by quarter\"; fixed opex -> \"Savings that land after the year do not count\". Reply Q1: \"Is the board's real aim a margin, a cash or covenant figure, or opex as such? Does the 8% include restructuring costs?\" Gap sized: 8% = EUR 5.3m, \"B leaves about EUR 2.0m (3 points) short in the budget year\"; margin would move from about 4% to about 12%."
+    },
+    {
+      "text": "The reply works the levers that cost no jobs first (such as vendors, licences, cloud, office, consultants, pricing or revenue leakage) and estimates what they close or shows how to size them.",
+      "passed": true,
+      "evidence": "First lever: \"Zero-based non-payroll (about EUR 21m): about 10% (range 8-12%). That is EUR 1.7m in-year and EUR 2.1m at run-rate\" covering \"vendors, subcontractors, licences, travel, office, consultants\". Paper s.4 sizes no-job margin/cash levers: receivables 5 days faster EUR 0.9m cash, rate indexation about EUR 0.8m, utilisation +1 point about EUR 0.5m."
+    },
+    {
+      "text": "The reply handles headcount through flows (a hiring freeze with exceptions, natural attrition, internal moves) rather than cuts, and protects named investments with explicit criteria.",
+      "passed": true,
+      "evidence": "Reply: \"Hiring freeze: about 47 of roughly 78 expected leavers not replaced... Exceptions cover roles with signed demand and regulated roles.\" Paper s.6: \"Internal moves first: a vacancy is offered to people on the bench or in over-supplied teams before external hiring.\" S.5 protects training and certification, security and compliance, finance controls, customer-facing delivery capacity, works council and HR capacity; s.2 gives the criterion (places that earn revenue and places that protect the company); freeze exceptions add \"critical single points of knowledge\". Criteria are thinner than in other samples (\"with the cost of cutting written next to it\" is stated but the costs are not written), but present."
+    },
+    {
+      "text": "The reply puts leaders' pay, bonuses or perks on the table before other people's jobs.",
+      "passed": true,
+      "evidence": "Reply: \"Leaders first: 10% pay reduction for about 12 leaders and the profit-linked bonus suspended, EUR 0.5m. Leaders go first, and the bonus scheme should move to profit, customers, people and quality with part deferred.\" Involuntary reductions come last behind a Q2 gate."
+    },
+    {
+      "text": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+      "passed": false,
+      "evidence": "The Option B table gives amounts by quarter and a source/assumption column, s.5 lists what stops or waits, and the gap is stated (\"In-year gap to 8%: about EUR 2.0m\"). But no lever has a named owner or a confidence rating: the table has no owner or confidence column, and owners appear only generically (\"named owners... a number each owner signs\", freeze exceptions \"approved by the CFO and the delivery director\"). Ranges exist only for non-payroll (8-12%) and in the sensitivity table. Two of the four required elements per lever are missing."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 754,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2306,
+      "evidence": "wc -w board-budget-paper.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Strong diagnosis, a quarterly same-basis comparison that adds up, a clear Q1/Q2 gate and sized cash levers, but the lever table has no owners or confidence, it misstates how the Dutch selection rule works, and not backfilling 47 of 78 leavers while assuming only 20% are billable is a stretch for a services firm."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Says the afspiegelingsbeginsel's 'cohort mix tends to remove younger, cheaper people first'; in fact it keeps the age mix constant across five age bands, with shortest service first only within each band."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs' ('skills' appears only as staff skills)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt (forward target, thin but positive margin). The sample says 'leaders take the first and the largest cut' but does not frame it as owning a result."
+    },
+    "best_insight": {
+      "value": "Its 'what is the 8% for' table shows which levers count under each aim (margin, cash/covenant, fixed opex), and it sizes cash and margin levers outside opex (5 days of DSO is about EUR 0.9m), which matters if the board's real worry is liquidity.",
+      "evidence": "Paper s.1 table and s.4."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives the board a usable structure: levers with amount, timing, owner and confidence, what stops or waits, and any gap that remains.",
+        "reason": "Bundles five elements; it discriminated here (missing owner and confidence), which is useful. Keep it, but consider splitting so a sample that nails the gap but omits owners is visible in the score."
+      },
+      {
+        "reason": "No assertion checks the accuracy of Dutch dismissal-law claims; this sample misstates the afspiegelingsbeginsel and that would go unnoticed without the factual check."
+      }
+    ],
+    "overall": "Assertions fit; add an accuracy check on legal process claims."
+  }
+}
