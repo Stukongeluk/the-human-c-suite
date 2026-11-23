@@ -4,6 +4,11 @@ All notable changes to **The Human C-Suite** are documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- README: the results section now shows only the benchmark comparisons; the version-by-version results moved to `benchmarks/HISTORY.md`.
+
 ## [1.5.1] - 2026-11-22
 
 ### Added

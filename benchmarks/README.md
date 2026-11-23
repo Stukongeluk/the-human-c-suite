@@ -1,6 +1,6 @@
 # Benchmarks
 
-Every reply, grade and token count behind the results in the main [README](../README.md#does-it-help), so you can check the work or rerun it.
+Every reply, grade and token count behind the results in the main [README](../README.md#does-it-help), so you can check the work or rerun it. What each version was tested on and what the tests changed is in [HISTORY.md](HISTORY.md).
 
 | Folder | What it compares | Models | Runs |
 |---|---|---|---|
