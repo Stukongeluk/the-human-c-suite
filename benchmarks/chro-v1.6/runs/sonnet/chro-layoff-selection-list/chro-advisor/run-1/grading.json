@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply declines to finalise the list on those criteria and says why in its first lines (sick days and part-time hours are discrimination risks, and the legal selection rules decide), while still giving a usable next step.",
+      "passed": true,
+      "evidence": "Bottom line: \"I can't finalise this list, and you shouldn't announce on the 15th. The selection method would fail legally in both countries... I can set up the lawful selection process so the 40 roles can still go.\" The first section then says \"Ranking on sick days is the biggest problem\" (disability, the illness dismissal ban, GDPR) and \"Ranking on part-time status is direct discrimination\" with indirect sex discrimination. The specific reasons come just after the generic opening, so this only just passes."
+    },
+    {
+      "text": "The reply sets out the Dutch selection rule correctly: the reflection principle (afspiegelingsbeginsel) per group of interchangeable jobs, across age bands, not performance ratings or manager preference.",
+      "passed": true,
+      "evidence": "\"Netherlands: selection runs by the proportionality principle (afspiegelingsbeginsel). Within each group of interchangeable roles, employees are sorted into age bands, and the last in are the first out within each band. Individual performance and manager preference are not criteria.\" (The translation 'proportionality principle' is unusual, but the rule is right.)"
+    },
+    {
+      "text": "The reply sets out the German rule correctly: social selection (Sozialauswahl) among comparable employees weighing length of service, age, maintenance obligations and severe disability, with narrow exceptions, plus at least one works council right or the collective dismissal notification (§17 KSchG).",
+      "passed": true,
+      "evidence": "\"Germany: section 1 KSchG requires a social selection (Sozialauswahl) by length of service, age, dependants and severe disability. A small group of genuinely essential performers can be excluded, but you must document the business need.\" Also: \"negotiate the reconciliation of interests and social plan... The mass-dismissal notification to the employment agency must be filed before the dismissals, and the works council must be heard on each dismissal.\" Pools: \"Group interchangeable roles in each office.\""
+    },
+    {
+      "text": "The reply says the timeline has to fit consultation and the legal route in both countries (for example works council advice and the collective dismissal notification in the Netherlands, works council steps in Germany), and that names aren't announced before that.",
+      "passed": true,
+      "evidence": "\"The timeline does not work... you have to notify the unions and UWV, consult the works council (OR) before the decision is final, and obtain a UWV dismissal permit\", plus the German consultation steps, and \"Announcement: only after consultation is complete and, in Rotterdam, the permit is granted.\" The assertion is met, but the advice overshoots: it delays even a plan announcement until after the permits and claims telling people before the permit loses the case."
+    },
+    {
+      "text": "The reply includes an equality check of the result and treats manager nominations as needing a written, job-related justification within the legal exceptions.",
+      "passed": true,
+      "evidence": "Step 5: \"Check the result for adverse impact (age, sex, disability, part-time, parental leave, pregnancy, works council members, who have special protection) before it goes to anyone.\" Step 3: \"For each person, write down the specific skill or responsibility that makes them indispensable. Expect to defend each one.\" Also: \"A manager may name someone as indispensable, but you have to justify that to UWV with specific, documented skills or role needs.\""
+    },
+    {
+      "text": "The reply plans support from the day of notice and says people are told personally by their manager, not by a mass email.",
+      "passed": false,
+      "evidence": "No support plan beyond \"voluntary exits with a settlement agreement\" and redeployment. Nothing on support from the day of notice, and nothing on who tells people or how."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 942,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "The legal diagnosis is right, but the timing advice is unworkable and partly wrong: no announcement until permits are granted, and 'telling people before the permit is the usual way to lose the case'. It also has no support or communication plan for the people affected."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) \"Telling people before the permit is the usual way to lose the case\": wrong. In the UWV procedure the employee is sent the application and can respond, so they must know before the permit. What's barred is giving notice before the permit, not informing people. (2) \"Announcement: only after consultation is complete and, in Rotterdam, the permit is granted\" follows from that error and contradicts how works council advice, union consultation and the UWV procedure work. (3) \"Netherlands: this is a collective redundancy\" is stated as fact without knowing the Rotterdam split; WMCO applies only at 20 or more in one UWV work area."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Uses its own [confidence: high] tags. No skill or reference-file mentions."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that leadership is responsible."
+    },
+    "best_insight": {
+      "value": "If the board has fixed the 15th, it needs to hear now that the date carries real legal risk, so the risk goes to the decision-makers rather than being absorbed by HR.",
+      "evidence": "reply.md 'Your decision'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply plans support from the day of notice and says people are told personally by their manager, not by a mass email.",
+        "reason": "Two separate requirements in one assertion; samples that cover only one (e.g. in-person conversations with HR but no manager, or a support list with no timing) fail outright. Splitting would show which half is missing."
+      },
+      {
+        "reason": "No assertion penalises wrong procedural claims. One sample told the user that telling employees before the UWV permit 'is the usual way to lose the case' (the employee is heard in the UWV procedure) and still passed the timeline assertion. Consider an assertion that the reply makes no incorrect legal claim about the procedure."
+      }
+    ],
+    "overall": "The assertions catch the missing support plan, but the incorrect timing claim passed assertion 4. An accuracy check on procedural claims would separate this sample from the stronger ones."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against a fixed quota of low ratings and says why (it labels a fixed share of every team whatever its actual performance), while taking the CEO's underlying concern seriously.",
+      "passed": true,
+      "evidence": "Opening: \"I'd recommend against the forced version, and I've drafted a process that gives your CEO what he wants without it. The reason is legal as much as fair: a bottom 10% quota is not evidence of poor performance, so it won't carry a dismissal in either country...\" and \"10% of 1,200 is about 120 people on plans, whether or not 120 are underperforming.\" CEO's concern: \"His underlying aim, dealing faster with real underperformance, is fair, and the 30-day rule and manager indicators answer it.\" The opening leans on the legal reason; the fairness reason comes later but is explicit."
+    },
+    {
+      "text": "The reply cites at least one real piece of evidence on forced or stack ranking, or on what drives performance differences between teams, with its source (for example Microsoft dropping stack ranking in 2013, simulation research on forced distribution, or research on managers' effect on teams).",
+      "passed": true,
+      "evidence": "\"In simulations of this kind of system the gains come mostly in the first years and then shrink (Scullen et al., 2005). Microsoft dropped stack ranking in 2013 because it worked against teamwork.\" Document adds \"they depended on reliable ratings (Scullen, Bergey & Aiman-Smith, 2005)\"."
+    },
+    {
+      "text": "The reply flags that the works council must consent to the appraisal system in both countries (Netherlands: article 27(1)(g) WOR or its consent right on staff appraisal; Germany: §94 BetrVG appraisal principles), and that a plan starting from a ranking is weak ground for a later dismissal (the Dutch court expects timely notice, support and a real chance to improve; in Germany a low-performance dismissal usually needs a warning and proof).",
+      "passed": true,
+      "evidence": "\"In the Netherlands an appraisal system needs works council consent (art. 27(1)(g) WOR). In Germany, ratings made without the works council's consent (section 94(2) BetrVG) can't be used for personnel decisions.\" \"The court expects the employee to have been told in good time, supported and given a real chance to improve (art. 7:669(3)(d) BW). A quota and a fixed exit date show the opposite. In Germany you usually need a prior written warning and proof of sustained underperformance.\""
+    },
+    {
+      "text": "The reply delivers a usable alternative process: clear expectations per role, calibration that aligns standards and checks for bias without forcing a distribution, and individual handling of real underperformance with support and a realistic period.",
+      "passed": true,
+      "evidence": "Document Steps 1-7: \"Each role family has written expectations and four rating levels... published to all staff before the cycle opens\"; \"Step 3: calibration without a shape... Nobody may move a rating to fit a distribution\"; Step 6 plan with HR cause review, \"a period of up to 90 days, check-ins every two weeks and a mid-point review\", open outcomes; \"Step 7: exits are individual. No list, no date.\""
+    },
+    {
+      "text": "The reply includes a check of ratings by group (such as gender, age, part-time or people on leave) before ratings are used for pay, plans or exits.",
+      "passed": true,
+      "evidence": "Document Step 4: \"equality check before ratings are used. HR looks at ratings by gender, age, part-time, leave, location and manager... A pattern is a finding to explain before ratings touch pay or consequences. Results go to the works councils.\""
+    },
+    {
+      "text": "The reply gives the user a line or approach for a private conversation with the CEO first, and a usable manager briefing or its outline.",
+      "passed": true,
+      "evidence": "Reply: \"Talk to him privately first. Two questions will help: what exactly did he see work at his last company, and what happened after year three (attrition, who replaced the people, how teams cooperated)?\" Document section 6 lists three questions for the CEO; section 4 is a manager briefing with steps, must-nots, likely questions and manager support. It is an approach rather than a scripted line, which the assertion allows; the briefing has no conversation scripts for managers."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 461,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 1455,
+      "evidence": "wc -w performance-process-and-manager-briefing.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Legally sound and concise, with a clever 30-day action rule that answers the CEO's worry, but the manager briefing is thin (no conversation lines), the CEO approach is two questions rather than an opening, and the reply ends with a stray internal file path."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: art. 27(1)(g) and 27(1)(e) WOR, art. 7:669(3)(d) BW, §94(2) BetrVG, Abmahnung plus proof, cantonal court or settlement route, Scullen et al. 2005, Microsoft 2013, replacement cost half to two times salary. \"Two to four months is the usual range\" for a Dutch improvement plan sits at the short end of what is commonly cited (often two to six months) but is not wrong; \"can't be used for personnel decisions\" is stated a little more firmly than German law settles. No clear error. Web search budget was exhausted, so non-fact-sheet items were checked against established knowledge."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or jargon. The reply does end with an internal absolute path (\"Files: /home/claude/c-suite-workspace/round-14b/.../outputs/performance-process-and-manager-briefing.md\"), a presentation flaw rather than a skill leak."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome. (The briefing says \"Responsibility for the process sits with HR and leadership, not with you alone.\")"
+    },
+    "best_insight": {
+      "value": "It replaces the quota with a manager-accountability rule (act within 30 days of a \"does not meet\" rating, tracked by manager), which gives the CEO a visible lever against tolerated underperformance without labelling anyone in advance.",
+      "evidence": "Reply: \"A new rule that managers must act within 30 days of a 'does not meet' rating, so the CEO can see where underperformance is going unaddressed.\""
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply cites at least one real piece of evidence on forced or stack ranking, or on what drives performance differences between teams, with its source (for example Microsoft dropping stack ranking in 2013, simulation research on forced distribution, or research on managers' effect on teams).",
+        "reason": "All three samples cite the same two items (Scullen et al. 2005 and Microsoft 2013), so this assertion doesn't separate them. Consider requiring that the evidence be described accurately, including its limits (e.g. Scullen is a simulation whose gains fade and depend on rating validity)."
+      },
+      {
+        "assertion": "The reply gives the user a line or approach for a private conversation with the CEO first, and a usable manager briefing or its outline.",
+        "reason": "'A line or approach' passes a sample that only lists two questions to ask the CEO as readily as one that scripts the opening and names a measure the CEO can show the board. Consider asking for a concrete opening line plus an offer that meets the CEO's goal (a measure or rule he can point to)."
+      },
+      {
+        "reason": "No assertion checks how the process answers the CEO's real worry (managers tolerating weak work or inflated ratings) with a concrete mechanism, such as an evidence requirement when nobody is rated low, a 30-day action rule, or a plan-outcome metric. That was the main thing that separated the samples in usefulness."
+      },
+      {
+        "reason": "No assertion checks the timing problem: works council consent must come before 'this year's reviews' can use the new system, which affects whether the CEO's Q3 date is feasible at all. Samples handled this with different depth."
+      }
+    ],
+    "overall": "Passes all six, though A1 and A6 pass on the lighter side; the assertions don't penalise its thin manager briefing or the stray file path."
+  }
+}

@@ -16,7 +16,7 @@
     <img src="media/the-human-c-suite-preview.gif" width="270" alt="Animated preview: the CEO, CFO, CTO and CPTO agents get a memo to cut 20% of jobs with AI, push back on each other and agree on a plan with no layoffs">
   </a>
   <br>
-  <em>The four seats get a "use AI, cut 20% of jobs" memo and land on a plan with no layoffs.<br>
+  <em>The CEO, CFO, CTO and CPTO seats get a "use AI, cut 20% of jobs" memo and land on a plan with no layoffs.<br>
   <a href="https://jimmynguyen.nl/projects/the-human-c-suite">Watch the full video with sound</a>.</em>
 </p>
 
@@ -29,7 +29,7 @@
 /plugin install the-human-c-suite@the-human-c-suite
 ```
 
-Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. The plugin installs all four seats.
+Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. The plugin installs all five seats.
 
 ### Claude Code (as plain skills)
 
@@ -48,7 +48,7 @@ Download the ready-to-upload `.zip` for any seat (for example `the-human-cto-v*.
 
 ### Google Antigravity (app and CLI)
 
-Download `the-human-c-suite-v*.zip` from the [Latest Release](https://github.com/Stukongeluk/the-human-c-suite/releases/latest) (already packaged without `evals/`) and unzip it into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too: see [Does it help?](#does-it-help).
+Download `the-human-c-suite-v*.zip` from the [Latest Release](https://github.com/Stukongeluk/the-human-c-suite/releases/latest) (already packaged without `evals/`) and unzip it into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too (the CHRO seat so far only on Claude): see [Does it help?](#does-it-help).
 
 ### Other agents
 
@@ -69,7 +69,7 @@ A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehirin
 
 **The opposite costs everyone.** In the six years leading up to the 737 MAX crisis, Boeing spent [$43.4 billion on share buybacks and $15.7 billion](https://fortune.com/longform/boeing-737-max-crisis-shareholder-first-culture) on research and development for commercial airplanes.
 
-**So we built the leaders we wish we had, as AI agents.** Four seats, a CEO, a CFO, a CTO and a CPTO, that run in Claude, in Gemini through Antigravity, or in any agent that supports [Agent Skills](https://agentskills.io/specification). They:
+**So we built the leaders we wish we had, as AI agents.** Five seats, a CEO, a CFO, a CTO, a CPTO and a CHRO, that run in Claude, in Gemini through Antigravity, or in any agent that supports [Agent Skills](https://agentskills.io/specification). They:
 
 - treat layoffs as the last rung, never the first;
 - have leaders take the first cut and own the result;
@@ -77,11 +77,11 @@ A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehirin
 - bring people in while the plan can still change;
 - end every answer with: **what am I missing?**
 
-**It changes what agents do.** In blind tests, Gemini 4 Neon passed 80 of 84 checks with the skill against 51 without, and Gemini 4 Hydrogen 75 against 41. On Claude, the CTO seat took Sonnet from 59 to 83 of 84. On six finance cases, the CFO seat beat the CEO seat on all four models. [Every run and grade is public](benchmarks/).
+**It changes what agents do.** In blind tests, Gemini 4 Neon passed 80 of 84 checks with the skill against 51 without, and Gemini 4 Hydrogen 75 against 41. On Claude, the CTO seat took Sonnet from 59 to 83 of 84. On six finance cases, the CFO seat beat the CEO seat on all four models, and on six people cases the CHRO seat beat it on both Claude models. [Every run and grade is public](benchmarks/).
 
 **Run it on your next budget round, reorg or AI rollout.** If it gets something wrong, open an issue: pushback is the point. And if you think leaders should work like this, star the repo and send it to one person who signs off on budgets.
 
-## The four seats
+## The five seats
 
 | Skill | Use it for | What it adds |
 |---|---|---|
@@ -89,6 +89,7 @@ A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehirin
 | [`the-human-cfo`](skills/the-human-cfo/SKILL.md) | Budgets and opex targets, savings and layoff business cases, cash, covenants and the bank, buybacks and capital allocation, bonus plans, adjusted EBITDA, AI business cases | Every saving net of its costs and by quarter, honest numbers, the levers that cost no jobs first, and incentives that reward the long term, with leaders' pay first. |
 | [`the-human-cto`](skills/the-human-cto/SKILL.md) | AI coding tools and spend, engineering metrics, platform and vendor choices, tech debt, on-call, juniors and AI | Measured AI gains rather than vendor claims, fair technical evaluations, and the system measured instead of the person. |
 | [`the-human-cpto`](skills/the-human-cpto/SKILL.md) | Roadmaps, features promised by sales, the AI story for the board, AI features, capacity planning | Outcomes over output, plans that fit real capacity, and saying no with evidence. |
+| [`the-human-chro`](skills/the-human-chro/SKILL.md) | Reviews and forced ranking, layoff selection, return to office, pay gaps and pay transparency, AI in hiring, monitoring, surveys and burnout | Fair process before speed: people judged on their work, not a curve; selection by the law, never by sick days or part-time hours; pay gaps fixed on a dated plan; and announcements that stay proposals until employee representatives agree. |
 
 Each seat is commercially sharp and technical enough to find the real data. Each also treats people as the company's compounding asset rather than its first cost to cut.
 
@@ -120,18 +121,19 @@ Read the story behind it on [jimmynguyen.nl](https://jimmynguyen.nl/projects/the
 
 ### The seats work together
 
-Each skill knows the others. When a question crosses seats, it brings in their view: what the CEO would ask about strategy and people, what the CFO would check in the numbers, what the CTO would ask about the system, and what product would ask about customers. If the other skills are installed, it uses them. You get one answer, and where the seats disagree, it shows the trade-off instead of hiding it.
+Each skill knows the others. When a question crosses seats, it brings in their view: what the CEO would ask about strategy and people, what the CFO would check in the numbers, what the CTO would ask about the system, what product would ask about customers, and what the CHRO would check about fair process and people law. If the other skills are installed, it uses them. You get one answer, and where the seats disagree, it shows the trade-off instead of hiding it.
 
 ## What's inside
 
 ```
 the-human-c-suite/
-├── .claude-plugin/marketplace.json     # Claude Code plugin marketplace (installs all four skills)
+├── .claude-plugin/marketplace.json     # Claude Code plugin marketplace (installs all five skills)
 ├── skills/
 │   ├── the-human-ceo/                  # SKILL.md, references/, evals/
 │   ├── the-human-cfo/                  # SKILL.md, references/, evals/
 │   ├── the-human-cto/                  # SKILL.md, references/, evals/
-│   └── the-human-cpto/                 # SKILL.md, references/, evals/
+│   ├── the-human-cpto/                 # SKILL.md, references/, evals/
+│   └── the-human-chro/                 # SKILL.md, references/, evals/
 ├── shared/                             # canonical copies of the reference files the seats share
 │   ├── manifest.json                   # which shared file or block goes into which skill
 │   └── blocks/                         # shared sections inside evidence.md and templates.md
@@ -157,6 +159,7 @@ The skills load automatically when a request matches, for example:
 - CFO: "We'll breach our leverage covenant at Q2 and the owner wants to announce 10% job cuts before the bank meeting. What should we do?"
 - CTO: "The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs."
 - CPTO: "Sales needs these five features by March to close their pipeline. Build the Q1 roadmap."
+- CHRO: "Our CEO wants forced ranking: 10% of every team in the bottom category and out by Q3. Design the process."
 
 You can also call one directly: `/the-human-cto` (plain skill) or `/the-human-c-suite:the-human-cto` (plugin).
 
@@ -213,13 +216,14 @@ Checks passed with the seat against without a skill, on the same cases.
 | A company without direction, two cases | 18 vs 14 of 24 | 23 vs 20 of 24 | 21 vs 13 of 24 | 18 vs 10 of 24 |
 | Organisations outside software, six cases (first draft) | 32 vs 20 of 36 | 24 vs 29 of 36 | – | – |
 | CFO, six finance cases (first draft) | 33 vs 21 of 36 | 36 vs 26 of 36 | – | – |
+| CHRO, six people cases (first draft) | 34 vs 23 of 36 | 36 vs 32 of 36 | – | – |
 | Pushback, four conversations of four turns | 21 vs 14 of 24 | 22 vs 16 of 24 | – | – |
 
 A dash means that comparison wasn't run. The CTO and CPTO rows share six cases between them. Opus did worse with the first draft for organisations outside software, because it kept formal advice to a board or council too short; version 1.4.0 fixed that, and on a rerun of four of those cases it passed 21 of 24 checks against 15 for the draft.
 
 ### Against another skill
 
-Each seat against the matching advisor from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills), the closest open-source set we found: `ceo-advisor`, `cto-advisor`, `cpo-advisor` and `cfo-advisor`. Same cases and same brief for both, graded blind. Cells show checks passed, ours against theirs, with the grader's overall quality score from 1 to 10 in brackets.
+Each seat against the matching advisor from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills), the closest open-source set we found: `ceo-advisor`, `cto-advisor`, `cpo-advisor`, `cfo-advisor` and `chro-advisor`. Same cases and same brief for both, graded blind. Cells show checks passed, ours against theirs, with the grader's overall quality score from 1 to 10 in brackets.
 
 | Seat and cases | Claude Sonnet | Claude Opus |
 |---|---|---|
@@ -227,6 +231,7 @@ Each seat against the matching advisor from [alirezarezvani/claude-skills](https
 | CTO, six cases | 36 vs 29 of 39 (7.5 vs 6.2) | 38 vs 34 of 39 (8.3 vs 7.8) |
 | CPTO, six cases | 39 vs 26 of 40 (7.7 vs 6.0) | 37 vs 35 of 40 (8.3 vs 7.2) |
 | CFO, six finance cases, two runs each | 69 vs 28 of 72 (7.4 vs 5.0) | 72 vs 57 of 72 (9.0 vs 7.8) |
+| CHRO, six people cases (first draft) | 34 vs 24 of 36 (7.5 vs 5.5) | 36 vs 29 of 36 (9.0 vs 7.5) |
 | Pushback, four conversations of four turns | 21 vs 20 of 24 (6.8 vs 6.0) | 22 vs 20 of 24 (8.5 vs 6.8) |
 
 Weigh the quality score as much as the checks:
@@ -234,7 +239,7 @@ Weigh the quality score as much as the checks:
 - **Much of the CEO, CTO and CPTO gap is length.** Many of those checks are word limits on prompts that asked for something short. Without them, Opus is close to a tie: 102 against 99 of 108.
 - **Picking the right skill.** Given all twelve skills at once, an agent loaded the right seat on all 16 runs where one fitted. On the 8 runs where none did, it loaded nothing or the other set's matching skill.
 
-Details: [`benchmarks/c-suite-vs-claude-skills/`](benchmarks/c-suite-vs-claude-skills/benchmark.md) and [`benchmarks/cfo-vs-c-level-advisor/`](benchmarks/cfo-vs-c-level-advisor/benchmark.md).
+Details: [`benchmarks/c-suite-vs-claude-skills/`](benchmarks/c-suite-vs-claude-skills/benchmark.md), [`benchmarks/cfo-vs-c-level-advisor/`](benchmarks/cfo-vs-c-level-advisor/benchmark.md) and [`benchmarks/chro-v1.6/`](benchmarks/chro-v1.6/benchmark.md), which also compares the CHRO seat with the CEO seat (34 against 27 of 36 on Sonnet, 36 against 33 on Opus).
 
 ### How to read this
 

@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": true,
+      "evidence": "Bottom line: \"The CEO's version ('everyone in five days a week from 1 March, decided') would very likely be void in Utrecht ... So the draft keeps five days, but as the CEO's intended decision. It also takes out 'fix our culture', protects the agreements people were hired on, and sets out a real process.\" It gives a full sendable email plus an Option B paragraph (three anchor days), and recommends 'argue for B this week'."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": true,
+      "evidence": "'Ding et al. studied 54 large US tech and finance firms ... Turnover beyond the normal rate rose by 13–14% ... roles took 23% longer to fill. In a randomised trial published in Nature (2024), Bloom et al. found that two home days a week cut resignations by a third'. Both are linked in Sources and verified."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "'Culture is behaviour, so the email needs the two or three concrete problems the CEO wants to solve'; CEO question: 'Which behaviour do you want to change, and how will we measure it in six months?'. Option B is matched to it: 'anchor days each team chooses for the work that's best done in person ... New colleagues will spend their first [four] weeks in the office'. 'Where I could be wrong' names onboarding and Utrecht–Berlin stalls."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": false,
+      "evidence": "Contracts ('you need either the employee's agreement or an Änderungskündigung') and Germany ('How it's organised is something the Betriebsrat co-decides (§ 87(1) no. 14 BetrVG)', plus §99 transfer) are covered well. But the Wet flexibel werken is missing. It says only 'Neither country gives employees a general legal right to work from home. The Dutch Senate rejected the Wet werken waar je wilt in 2023', leaving out that employees can already file place-of-work requests under the Wfw."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": true,
+      "evidence": "A weak pass. The email goes out in the week of 30 November for an intended 1 March start (about three months), and says 'If they need more time, we'll move the date rather than rush it'. Recommended Option B is 'phased in from 1 March and reviewed after six months', building up 'over [three] months'. Individual: 'We'll look at every situation individually, and the final policy will include a clear way to ask for an exception.' Weaknesses: the final policy arrives 29 January, only about 4.5 weeks before the start, and the Option A email has no review date."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "'Take Option A vs. B (below) to the CEO ... Owner: you. Deadline: Wed 2 Dec'; 'If he can't name them, have that conversation before anything is sent.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1911,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Strong legal analysis in both countries, a clear A/B decision with a recommendation, owners and deadlines, and a cost estimate. But the main draft still proposes five days, the timeline is slightly inconsistent (email week of 30 Nov, counsel review by 4 Dec), and it misdates the Booking.com ruling."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) 'Booking.com, November 2026': the Rechtbank Amsterdam ruling was published on 28 October 2026 (Rechtspraak news; DutchNews 29 Oct), so November is the wrong month. Everything else checked out: Caterpillar 15 Sept 2025; WWJW rejected by the Senate on 26 Sept 2023; BAG 20.10.2021, 7 ABR 34/20; §87(1) no. 14 'how', not 'whether'; Ding 13-14%/23%; Bloom one third; the OR appealed Booking (10 Nov 2026); 15% of ~265 ≈ 40 roles × €50k ≈ €2m."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon. It uses confidence labels ('Verified', 'Medium'), which is not a leak."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'This is not a judgement on anyone who works remotely' avoids blaming staff, but no leader says the culture problem is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "In Berlin, ordering a mainly home-based employee back full-time is a transfer that needs Betriebsrat consent person by person (BAG 7 ABR 34/20), so a mandate can be blocked individually even after the policy itself is settled.",
+      "evidence": "reply.md, point 3."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+        "reason": "It's ambiguous whether notice is measured from the first announcement or from the final decision. This sample gives ~3 months from the announcement but only ~4.5 weeks from the final policy. State which counts."
+      }
+    ],
+    "overall": "Strong sample. The one assertion fail is a genuine omission (Wfw)."
+  }
+}

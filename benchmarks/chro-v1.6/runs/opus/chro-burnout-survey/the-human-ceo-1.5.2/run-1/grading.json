@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+      "passed": true,
+      "evidence": "Opens: \"Don't call it 'stable' or lead with resilience training. See your CEO privately first, then give the board the real numbers, owned by leadership, with a plan aimed at the causes.\""
+    },
+    {
+      "text": "The reply explains with evidence why resilience training alone is not the fix (for example the 2024 Oxford study of individual-level wellbeing interventions, or the WHO's description of burnout as an occupational phenomenon) and points to workload and working conditions in Claims and Customer Service.",
+      "passed": true,
+      "evidence": "\"Resilience training alone tells exhausted people they're the problem; in a UK study of 46,336 workers, participants were no better off (Fleming, 2024). The Arbowet (art. 3) also requires tackling psychosocial workload at the source.\" Points to the work: \"Fix the work, not the people... check caseloads, backlog, overtime and absence... then fix what drives the load.\""
+    },
+    {
+      "text": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+      "passed": true,
+      "evidence": "\"The Arbowet (art. 3) also requires tackling psychosocial workload at the source\" and \"Works council now: share results and plan; new arbo measures likely need its consent (art. 27(1)(d) WOR; check with counsel).\""
+    },
+    {
+      "text": "The reply treats the trust score as a result for leadership to own, with a first response from the leaders themselves.",
+      "passed": false,
+      "evidence": "Ownership is clear: \"trust in leadership is a verdict on us, not on staff\" and the board headline \"We own them; here's the plan.\" But there is no first response from the leaders themselves. No step has the CEO or senior team telling staff what they heard or will change. The plan is HR-led (team sessions, works council, re-measure), and the only 'response' is the board headline the user presents."
+    },
+    {
+      "text": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+      "passed": true,
+      "evidence": "\"This week, privately with your CEO. Try: 'Burnout up sharply and trust at 41% isn't stable, and the works council will see these figures too. If the board finds out later, we lose its trust as well. Let's bring it as ours, with a plan.'\""
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and gives the first steps for next week.",
+      "passed": true,
+      "evidence": "wc -w = 275. Step 1 is \"This week, privately with your CEO\", then the board content, a four-week team review, the works council now, and a re-measure in three months."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 275,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Covers the essentials (evidence, law, CEO line, ownership) in very few words. It is thin on what leaders themselves will do for staff to rebuild trust, and on what to do if the CEO refuses."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Fleming 2024 figures correct; Arbowet art. 3 source approach and 3(2) PSA duty correct; WOR 27(1)(d) consent right correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"trust in leadership is a verdict on us, not on staff\"; \"We own them\"."
+    },
+    "best_insight": {
+      "value": "It puts ownership into a single board headline the user can say aloud: \"Two serious signals... We own them; here's the plan\". It also limits the workload data to team level to protect individuals.",
+      "evidence": "Steps 2 and 3"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+        "reason": "An 'or' between three alternatives makes this pass for every sample, including ones that only say 'involve the works council early' or tag the law as unchecked general knowledge. Consider requiring the specific duty (Arbowet 3(2) / RI&E) AND the OR consent right (art. 27(1)(d) WOR), or checking that the cited article is correct."
+      },
+      {
+        "assertion": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+        "reason": "'A line the user can use' is ambiguous: a line for the CEO conversation, or a framing line the CEO can take to the board? Samples split on this (one gives only a board-slide opener). Say which one is meant."
+      },
+      {
+        "reason": "No assertion covers what to do if the CEO still insists on 'stable'. The samples differ a lot here: some draw the line between framing and changing the numbers and name the board/supervisory board chair, some say 'put it in writing', some just say 'let the figures speak'. This is a key part of the user's real dilemma."
+      },
+      {
+        "assertion": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+        "reason": "Nearly every sample passes this; it doesn't discriminate much. The harder thing to check is whether the opening also tells the user to settle it with the CEO first."
+      }
+    ],
+    "overall": "5/6. Very tight and accurate; it misses a leadership response to staff on the trust score."
+  }
+}

@@ -8,8 +8,8 @@
     {
       "name": "the-human-c-suite",
       "source": "./",
-      "description": "The Human C-Suite: humane, technical CEO, CFO, CTO and CPTO skills that ground advice in company data, treat layoffs as a last resort, show every saving net of its costs, measure AI before banking on it, plan to real capacity, redeploy people when AI takes over work, borrow European and Nordic social practice and invite pushback.",
-      "version": "1.5.2",
+      "description": "The Human C-Suite: humane, technical CEO, CFO, CTO, CPTO and CHRO skills that ground advice in company data, treat layoffs as a last resort, show every saving net of its costs, measure AI before banking on it, plan to real capacity, judge people on their work instead of a curve, check pay equity, redeploy people when AI takes over work, borrow European and Nordic social practice and invite pushback.",
+      "version": "1.6.0",
       "author": {
         "name": "Jimmy Nguyen",
         "url": "https://jimmynguyen.nl"
@@ -23,6 +23,7 @@
         "cfo",
         "cto",
         "cpto",
+        "chro",
         "product-management",
         "engineering-management",
         "restructuring",
@@ -30,6 +31,9 @@
         "reskilling",
         "decision-making",
         "works-council",
+        "hr",
+        "people-management",
+        "pay-equity",
         "mcp"
       ]
     }

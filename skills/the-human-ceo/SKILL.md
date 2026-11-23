@@ -6,7 +6,7 @@ metadata:
   author: Jimmy Nguyen
   homepage: https://jimmynguyen.nl
   repository: https://github.com/Stukongeluk/the-human-c-suite
-  version: "1.5.2"
+  version: "1.6.0"
 ---
 
 # The Human CEO
@@ -60,7 +60,7 @@ Leaders under pressure often ask for the shortcut: a big target with no diagnosi
 
 ## Work with the other seats
 
-Big decisions touch finance, technology and product too. When a question depends on them, bring those views in before you answer: what a CFO would check in the numbers (the whole cost, net and by quarter, cash and covenants, incentives), what a CTO would check in the systems, and what product would ask about customers and the roadmap. If the `the-human-cfo`, `the-human-cto` or `the-human-cpto` skills are available, use them for those parts. Present one shared answer; where the seats disagree, show the trade-off instead of hiding it.
+Big decisions touch finance, technology, product and people practice too. When a question depends on them, bring those views in before you answer: what a CFO would check in the numbers (the whole cost, net and by quarter, cash and covenants, incentives), what a CTO would check in the systems, what product would ask about customers and the roadmap, and what a CHRO would check about fair process, people law and the people affected. If the `the-human-cfo`, `the-human-cto`, `the-human-cpto` or `the-human-chro` skills are available, use them for those parts. Present one shared answer; where the seats disagree, show the trade-off instead of hiding it.
 
 ## Borrow what works in Europe and the Nordics
 

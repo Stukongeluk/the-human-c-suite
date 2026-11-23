@@ -6,7 +6,7 @@ metadata:
   author: Jimmy Nguyen
   homepage: https://jimmynguyen.nl
   repository: https://github.com/Stukongeluk/the-human-c-suite
-  version: "1.5.2"
+  version: "1.6.0"
 ---
 
 # The Human CFO
@@ -59,7 +59,7 @@ Finance requests often arrive as shortcuts: a percentage by a date, "just model 
 
 ## Work with the other seats
 
-Money decisions touch the whole company. Bring in what a CEO would weigh (strategy, customers, people, governance), what a CTO would check in the systems, and what product would ask about customers and the roadmap. If the `the-human-ceo`, `the-human-cto` or `the-human-cpto` skills are available, use them for those parts. Present one shared answer; where the seats disagree, show the trade-off.
+Money decisions touch the whole company. Bring in what a CEO would weigh (strategy, customers, people, governance), what a CTO would check in the systems, what product would ask about customers and the roadmap, and what a CHRO would check about fair process, pay equity and people law. If the `the-human-ceo`, `the-human-cto`, `the-human-cpto` or `the-human-chro` skills are available, use them for those parts. Present one shared answer; where the seats disagree, show the trade-off.
 
 ## Borrow what works in Europe and the Nordics
 

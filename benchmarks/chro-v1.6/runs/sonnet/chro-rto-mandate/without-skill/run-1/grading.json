@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": false,
+      "evidence": "It opens: 'I wrote it so it can go out as the announcement of a decision, but I would not send it until you have checked the three things'. The email says: 'We also know this is a decision, not a discussion' and 'This replaces the current remote and hybrid arrangements.' It doesn't recommend against the mandate as framed."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": false,
+      "evidence": "No study or source is cited. The retention risk is asserted without evidence: 'will likely drive out some of your strongest people first'."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "A weak pass: 'It will land better ... if the CEO can name the specific problem it is meant to fix (onboarding, decision speed, collaboration between teams) and the measure that will show it has worked. Consider whether a lighter alternative would solve the stated problem: for example, three or four fixed anchor days'. The email asks the CEO for concrete examples: '\"Culture\" alone will not convince people.'"
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": false,
+      "evidence": "Contracts are covered ('a five-day mandate may need the employee's consent'; implied terms). The Wfw is mentioned only loosely ('gives employees a right to request flexibility'). The German works council point is generic: 'very likely needs the works council's consent or at least formal consultation (Dutch WOR, German BetrVG)'. Nothing on co-determination over how mobile work is organised."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": false,
+      "evidence": "Exceptions: 'We will look at each request individually and give you an answer in writing', but bracketed as conditional: '[Only include this if leadership has actually agreed to consider exceptions.]' It keeps 1 March without any notice planning, and there is no review date anywhere."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "Under 'Before you send it': '3. Tell the CEO what the likely cost is ... it is better coming from you than from the exit interviews', covering attrition of the strongest people, naming the specific problem, and a lighter alternative."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1072,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 4,
+      "evidence": "It writes the mandate as 'a decision, not a discussion' that 'replaces the current remote and hybrid arrangements', the wording most likely to be voided by the OR and to breach remote contracts, and it supports its warnings with no evidence or specific law."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No specific claims are wrong. The legal points are general but accurate (unilateral change clause test is strict; implied terms; Wfw right to request). The email's 'From 1 March, the standard is that everyone works from their home office (Utrecht or Berlin)' is confusing wording ('home office' meaning base office), not a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the culture problem; the email attributes the reasoning to 'the leadership team believes'."
+    },
+    "best_insight": {
+      "value": "Long-standing practice can count as an implied term, so protection may reach people beyond those with remote work written in their contract.",
+      "evidence": "reply.md: 'Long-standing practice can also count as an implied term.'"
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks whether the email itself creates legal exposure (e.g. 'this replaces the current remote and hybrid arrangements' or 'a decision, not a discussion'). That is the most harmful content in this sample, and it isn't graded."
+      }
+    ],
+    "overall": "Assertions correctly mark this compliance-first sample as weak."
+  }
+}

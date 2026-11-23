@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+      "passed": true,
+      "evidence": "Opens: \"Bottom line: Don't tell the board it's 'stable', and don't make resilience training the response. Show them the real numbers with a 90-day plan attached.\""
+    },
+    {
+      "text": "The reply explains with evidence why resilience training alone is not the fix (for example the 2024 Oxford study of individual-level wellbeing interventions, or the WHO's description of burnout as an occupational phenomenon) and points to workload and working conditions in Claims and Customer Service.",
+      "passed": false,
+      "evidence": "It points to the work (\"When two whole departments are hit, look first at how the work is set up\"; plan item \"pause non-essential changes, add temporary capacity, review targets\") but gives no evidence for why training isn't the fix. It cites no study or WHO definition, and its Arbowet point is aimed at the 'stable' wording (\"'Stable' won't hold up next to that\"), not at the training."
+    },
+    {
+      "text": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+      "passed": true,
+      "evidence": "\"The Arbowet requires you to have a policy against work pressure and to deal with it in your RI&E (risk assessment) and action plan. The OR has a consent right on that policy (WOR art. 27(1)(d)).\""
+    },
+    {
+      "text": "The reply treats the trust score as a result for leadership to own, with a first response from the leaders themselves.",
+      "passed": true,
+      "evidence": "\"Trust in senior leadership at 41% covers the whole company, and it's about the people asking for the softer wording.\" Leaders respond themselves: \"The CEO and leadership team share the results with all staff, commit to 2–3 specific actions and report on progress. (CEO, 30 days)\""
+    },
+    {
+      "text": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+      "passed": false,
+      "evidence": "It does advise a private talk: \"See the CEO one-to-one before the deck is final. Bring an alternative, not just an objection.\" But it gives no line for that conversation. The only quoted words are the board slide opener (\"Open the board slide with something like: 'Burnout risk has risen sharply...'\"), which is for the board, not the CEO talk."
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and gives the first steps for next week.",
+      "passed": false,
+      "evidence": "wc -w = 624, over the 550 limit for a user who asked to \"Keep it short\". It has a clear 'This week' list."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 624,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A well-structured 90-day plan with owners and a sharp escalation limit, but too long for the ask, with no evidence on training and no script for the CEO conversation."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Dutch employers pay wages for up to two years of sickness (104 weeks); Arbowet policy duty and RI&E; WOR 27(1)(d) consent. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No 'skill' mentions. It uses source tags like \"[your survey]\" and \"[inference + law, medium]\" and a confidence line, which are stylistic but not a leak."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The assistant says the 41% is \"about the people asking for the softer wording\", but no leader in the advice is scripted to own it; the CEO only \"commit[s] to 2–3 specific actions\"."
+    },
+    "best_insight": {
+      "value": "It separates framing from falsifying: \"If you're asked to change or drop the numbers themselves, that's no longer framing. Take it to the chair of the supervisory board.\" It also runs listening sessions without the teams' own managers in the room.",
+      "evidence": "'Your decision' and 90-day plan item 1"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+        "reason": "An 'or' between three alternatives makes this pass for every sample, including ones that only say 'involve the works council early' or tag the law as unchecked general knowledge. Consider requiring the specific duty (Arbowet 3(2) / RI&E) AND the OR consent right (art. 27(1)(d) WOR), or checking that the cited article is correct."
+      },
+      {
+        "assertion": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+        "reason": "'A line the user can use' is ambiguous: a line for the CEO conversation, or a framing line the CEO can take to the board? Samples split on this (one gives only a board-slide opener). Say which one is meant."
+      },
+      {
+        "reason": "No assertion covers what to do if the CEO still insists on 'stable'. The samples differ a lot here: some draw the line between framing and changing the numbers and name the board/supervisory board chair, some say 'put it in writing', some just say 'let the figures speak'. This is a key part of the user's real dilemma."
+      },
+      {
+        "assertion": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+        "reason": "Nearly every sample passes this; it doesn't discriminate much. The harder thing to check is whether the opening also tells the user to settle it with the CEO first."
+      }
+    ],
+    "overall": "3/6. Good plan and escalation logic, but long, unevidenced on training, and no CEO line."
+  }
+}

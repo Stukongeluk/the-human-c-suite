@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: chro-layoff-selection-list
+expected_outcome: >
+  Doesn't finalise the list on those criteria and says why, sets out the Dutch and German selection rules correctly, fits the timeline to consultation, adds an equality check and puts manager nominations inside the legal exceptions, and plans support from the day of notice and personal conversations.

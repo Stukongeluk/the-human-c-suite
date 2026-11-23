@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+      "passed": true,
+      "evidence": "Bottom line: 'Do not stay silent and do not wait five years. Fix the unexplained 6% inside the next one or two pay cycles (target: effective 1 January or 1 April 2027), tell your works councils and employees'. It is costed later (about 0.65m EUR loaded)."
+    },
+    {
+      "text": "The reply states correctly that equal pay for equal work is already law (Article 157 TFEU or national equal pay law), so a same-role gap is a legal exposure now, whatever the transposition date of the new directive.",
+      "passed": true,
+      "evidence": "'Equal pay for equal work is already a legal requirement in both countries, and claims can include back pay', after 'a plan to leave it in place for five years is a documented decision to keep underpaying women. That is the worst fact pattern in an equal-pay claim or labour inspection.' It then calls the directive 'the deadline that matters', which blurs the point, but it does say the law applies now."
+    },
+    {
+      "text": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+      "passed": true,
+      "evidence": "'If a gap of 5% or more in a worker category can't be justified by objective, gender-neutral criteria and isn't fixed within six months, a joint pay assessment with employee representatives is required.' Also: 'Employees get a right to information on pay levels for equal work'; 'Employers with 250 or more staff report their gap data annually, with the first report due in June 2027' (the directive's timetable); transposition deadline 7 June 2026."
+    },
+    {
+      "text": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+      "passed": false,
+      "evidence": "Separates the gaps and gives a method: 'regression controlling for role, grade, tenure, performance, location; check that grading itself isn't biased... separate explainable from unexplained gaps at individual level'. Nothing on small groups (cell sizes, minimum n or aggregation)."
+    },
+    {
+      "text": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+      "passed": true,
+      "evidence": "'~130... 65k EUR... 6%, closing it costs roughly 3.9k EUR per woman, so about 0.5m EUR base, or about 0.65m EUR with employer social charges. That is about 1.5% of a ~45m EUR payroll.' Framing: 'accrues back-pay exposure every year, risks losing women engineers... (attrition replacement costs far more than the adjustment)'. The number and framing are there, though its cash-flow reasoning is flawed (see factual_errors)."
+    },
+    {
+      "text": "The reply includes telling employees or their representatives honestly and fixing the causes (such as starting pay, promotion or bonus decisions).",
+      "passed": true,
+      "evidence": "'Brief the works councils (NL and BE) and agree the communication approach before any adjustments land'; Option A: 'inform the works councils and employees'. Causes: 'published pay bands per grade, a rule that offers are made within band, promotion and calibration review by gender, no salary-history questions'. Note that the CFO script softens staff communication to 'an employee-facing explanation of pay principles'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1348,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Right direction and a usable set of options. But it exposes its own working ('The skill's benchmark', 'Peer verification... was not run here'), rests on unverified general knowledge with no Dutch or Belgian specifics, and tells the CFO that a phased plan pays 'the same total, just later' and that the cost 'falls away', both wrong."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) 'A phased five-year plan saves little cash (you still pay the same total, just later)': a phased plan pays less in total, and the difference is pay withheld from women, the very liability at stake. 2) To the CFO: 'roughly 1 to 1.5% of payroll one time..., then it falls away': the correction is a permanent rise in payroll and doesn't fall away. 3) 'first report due in June 2027, so you are likely in scope and 2026 data will be the baseline': that is the directive's timetable, but the Dutch bill sets the first report for 7 June 2028 on 2027, and Belgium has no date (F does flag that the NL/BE dates need verifying). Minor: EUR 0.65M loaded set against an unloaded '~45m' payroll that doesn't match 650 x 65k = EUR 42M."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "'The skill's benchmark is a remediation budget of 0.5 to 1% of payroll in the first year'. Also process notes: 'Peer verification (CFO on costs, General Counsel on NL/BE law) was not run here.'"
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader says the gap is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Gender-only top-ups can seem unfair to men, so place everyone against the same band logic with transparent criteria rather than adding a blanket uplift for women.",
+      "evidence": "reply.md Risks"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+        "reason": "The clause 'with care for small groups' decides this assertion: B, C, F and G give strong analysis methods (hourly pay, all pay elements, equal-value comparisons, testing whether the controls are biased) and still fail on it. Consider splitting it into (a) separating the gaps and the objective-factor method and (b) small-cell handling, so the score shows which part was missed."
+      },
+      {
+        "reason": "No assertion checks the Belgian side, although it is what most defeats the CFO's 'say nothing' plan: the 22 April 2012 pay gap act already requires a pay-structure analysis for the works council every two years (50+ workers). It also doesn't check per-entity scope (Dutch entity 420 = annual reporting; Belgian 230 = 150-249 band). The strongest samples covered both."
+      },
+      {
+        "assertion": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+        "reason": "'Opens with ... a dated, budgeted plan' is ambiguous about whether the dates and budget must appear in the opening or anywhere in the reply. Only H puts both in its first lines. Say which is meant."
+      },
+      {
+        "reason": "Nothing checks whether the reply warns against funding the corrections from colleagues' raises or merit budget, or whether leadership owns the cause. Both separate good advice from merely compliant advice here (B suggests using part of the merit budget; C and H warn against it; E and H put the leadership bonus pool first)."
+      },
+      {
+        "assertion": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+        "reason": "F passes by giving a number and naming claims and attrition, while telling the CFO the phased plan pays 'the same total, just later' and that the cost 'falls away'. Consider requiring that the cost comparison is right: the five-year 'saving' equals the withheld pay, and the correction is permanent."
+      }
+    ],
+    "overall": "Passes five, but leaks its skill and gets the cash-flow logic wrong. No assertion checks whether the cost reasoning is right as well as present."
+  }
+}

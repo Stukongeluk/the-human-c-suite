@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": true,
+      "evidence": "Opening choice 1: \"It's written as a proposal that goes to the works councils, not as a done deal ... If the email announces five days from 1 March as already decided, it hands the councils the grounds to block the decision.\" A full sendable email follows. Later it proposes a lighter alternative: \"name the two or three real culture problems, then set the minimum office presence that fixes them\". Caveat: it opens with 'Here's the email' and the draft still proposes five days."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": true,
+      "evidence": "\"A [study of 54 large US tech and financial firms](Baylor link) found turnover rose 13–14% on average after RTO mandates ... vacancies took 23% longer to fill. A [randomised trial at Trip.com](Stanford link) (Nature, 2024) found that two days a week at home cut resignations by a third\". It notes 'Both studies are from outside Europe'. Figures verified against the Baylor page."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "The email replaces 'fix our culture' with three concrete placeholders (new joiners' ramp-up time, product/risk/engineering decisions, 'I know who to go to outside my team'). Point 4: 'which problem, what evidence, and why five days rather than fewer'. It matches options to problems: 'Five days doesn't fix the Utrecht–Berlin gap' and 'three or four fixed team days, full-time presence for new joiners' first [three] months, and a longer runway for remote hires'."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": true,
+      "evidence": "Contracts: 'in the Netherlands you will essentially need each person's agreement. In Germany ... agreement or an Änderungskündigung'. Wfw: 'Expect people to use the Wet flexibel werken to formally request to keep working from home. Each request has to be considered and answered in writing.' Germany: the email says 'our Betriebsrat has co-determination rights over how it's done', plus §99 transfer (BAG), LAG München and §77(5) BetrVG. §87(1) no. 14 isn't cited by number, but the substance is stated."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": false,
+      "evidence": "It handles cases individually: 'If a health condition, a disability, caring responsibilities ... There will be a clear process for adjustments and exceptions', with one-to-ones for remote hires. But the notice is in weeks: 'We'll confirm the final arrangement by [date], at least [six] weeks before anything takes effect'. There is no review date anywhere in the reply or the email."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "'two choices you should know about before you take it to the CEO'; 'If you can't fill the three placeholders, raise that with the CEO before this goes anywhere'; a 'What I'd put to the CEO' section with three concerns (who leaves, five days is the hardest version to defend, the Utrecht–Berlin gap)."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1774,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Deep, accurate legal groundwork in both countries and good CEO arguments, but the email still proposes five days on six weeks' final notice with no review."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Caterpillar 15 Sept 2025 (every workday in the office; OR consent required); LAG München made Allianz Re withdraw an order (2023); BAG 20.10.2021, 7 ABR 34/20 treats ending alternating telework as a Versetzung under §99 BetrVG (Norton Rose, Gleiss Lutz); §77(5) BetrVG three months' notice; Booking.com 40%, came down from 50-60%, six months' transition, hardship clause, 27% meeting the voluntary guideline, desks; Ding et al. 13-14%, 23%; Bloom one third. 'It barred Caterpillar ... until the OR consented or a court gave substitute consent' is a fair legal gloss, not stated in the press release but consistent with art. 27 WOR."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "'This is not a judgement on how hard anyone works' avoids blaming staff, but no leader says the culture problem is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "If Berlin has a works agreement on mobile working, its statutory three months' notice (§77(5) BetrVG) means that for 1 March notice must be given before December starts, about a week from today.",
+      "evidence": "reply.md, 'Before you send it', point 1, Germany."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+        "reason": "Three requirements are bundled in one assertion. The review date alone failed several otherwise strong samples (C, F, G). Splitting them would show which part is missing."
+      }
+    ],
+    "overall": "Assertions fit this sample well. The one fail (six weeks' notice, no review) is a real gap."
+  }
+}

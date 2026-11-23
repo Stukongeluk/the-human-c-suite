@@ -1,0 +1,81 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+      "passed": true,
+      "evidence": "Opening: 'Don't take the CFO's plan. Fix the 6% gap for people in the same role and grade within about six months, tell the works councils now, and treat the 14% overall gap as a separate, longer job with yearly targets. A quiet five-year catch-up is more expensive than it looks, and it probably can't stay quiet.' The budget comes later: 'Budget it as a one-off correction, not as a rolling five-year line' and 'a dated plan, a budget you've seen'."
+    },
+    {
+      "text": "The reply states correctly that equal pay for equal work is already law (Article 157 TFEU or national equal pay law), so a same-role gap is a legal exposure now, whatever the transposition date of the new directive.",
+      "passed": true,
+      "evidence": "'The 6% is the legal problem. Equal pay for equal work is already law across the EU (Article 157 TFEU), whatever the transposition date.'"
+    },
+    {
+      "text": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+      "passed": true,
+      "evidence": "'The Pay Transparency Directive adds a joint pay assessment with workers' representatives. That applies when a gap of 5% or more in a category of workers can't be justified by objective, gender-neutral factors and isn't fixed within six months.' Dates: 'Dutch reporting should start in June 2028, on 2027 data, for your 420-person entity. Belgian dates aren't set, because the law isn't published. Each legal entity reports for itself.' Right to information: 'employees will soon be able to ask for the numbers.'"
+    },
+    {
+      "text": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+      "passed": true,
+      "evidence": "Step 1: 'Check what explains it: grade, location, tenure, billing level, starting salary. Keep only factors that are objective and gender-neutral. Show the number of people in each cell, and report groups under five only in aggregate. Have counsel review it.' Step 5: 'Give the 14% its own plan. Most of it probably comes from who sits in which job and grade (hiring, promotion, who gets the high-billing work), not from pay within a grade.' Check list: 'Did the 6% control for tenure and billing level, and for anything else that could be a proxy for gender?' One nit: starting salary is listed as a possible explanatory factor, though it often carries the gap, and the reply itself names it as a cause to fix."
+    },
+    {
+      "text": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+      "passed": true,
+      "evidence": "Method: 'Finance and I will price the correction this month: the cost of lifting each underpaid person to the level of comparable peers. It will almost certainly be a small fraction of 6% of payroll'. Framing: 'The five-year plan doesn't save that money. It defers it and adds back-pay claims, interest, attrition and a legal position we'd have to defend. I'd compare the routes as what we pay plus what the underpaid go without.' Also 'replacing someone costs half to two times their salary' and 'When hidden gaps surface, the story is about the hiding.'"
+    },
+    {
+      "text": "The reply includes telling employees or their representatives honestly and fixing the causes (such as starting pay, promotion or bonus decisions).",
+      "passed": true,
+      "evidence": "'Brief both works councils now (month 1). Go to them with the real numbers while the plan can still change.' 'Fix the causes (months 2 to 9). Starting salaries negotiated case by case, bonus and promotion decisions without criteria, and penalties for part-time or leave.' 'Tell people. Say what you found and what you're doing. Say plainly that the gap comes from past pay decisions that leadership owns'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1002,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample."
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Thorough and legally careful, with good CFO scripts and a clear split between the 6% fix and a multi-year plan for the 14%. At about 1,000 words it is long for a chat reply, and there is no CFO note to hand over."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One minor timing error: 'Any employee can also ask for pay levels by sex for equal work' states the directive's right to information as already in force. It isn't yet in Dutch or Belgian law, and the reply later says 'will soon be able to ask'. The action-plan consent claim is unverified, not counted."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Say plainly that the gap comes from past pay decisions that leadership owns, not from anything the underpaid did.'"
+    },
+    "best_insight": {
+      "value": "It tells the CFO to compare the routes as 'what we pay plus what the underpaid go without'. It also points out that even an objectively explained part 'still has to be written down and shown to the councils', which closes off the quiet route for the explained part too.",
+      "evidence": "'What to tell the CFO' and closing paragraph."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion penalises listing tainted factors (starting salary, billing level) as 'objective' explanations without testing them for gender bias. Consider requiring that explanatory factors be checked for being gender-neutral, not just named."
+      },
+      {
+        "reason": "No assertion checks the tense of claims about rights that are not yet transposed, such as the right to information. A stricter version of assertion 3 could require that rights from the directive are placed correctly in time."
+      }
+    ],
+    "overall": "Assertions are solid; this sample meets all of them, and the only defects are length and one premature legal claim."
+  }
+}

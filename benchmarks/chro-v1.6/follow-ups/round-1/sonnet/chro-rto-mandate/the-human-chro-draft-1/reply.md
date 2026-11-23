@@ -1,0 +1,18 @@
+I wrote the email, but I changed one thing. It announces the direction and a 1 March start while saying plainly what is still open. It does not say "everyone, five days, no exceptions". I'd also send it later than you may expect, because three steps need to happen first. The draft is in `announcement-email.md`, written for the CEO to sign.
+
+**What I changed and why.** About 270 of your 800 people were hired as remote or hybrid, and where that is in a contract or offer letter, an email can't change it. Dutch employees can also ask to change their place of work under the Wet flexibel werken, and you have to answer in writing. In Germany, how mobile work is organised needs works council agreement where one exists. So the email says the contracts stay as they are until each person has been spoken to. It says nothing more about exceptions than "case by case, in writing". Please have counsel check that paragraph, because I am not giving legal advice.
+
+**Do these before the email goes out.**
+1. **Works councils.** Your Utrecht OR is mandatory at this size, and it has an advisory right on major decisions (art. 25 WOR). Ask counsel whether a consent right applies as well (art. 27 WOR covers working hours). In Berlin, find out whether a Betriebsrat exists and what it can co-decide (§87 BetrVG). If you tell them after the all-staff email, the consultation is not real, and they will notice.
+2. **Managers.** Brief them a day or two ahead, with the questions they will be asked and an answer for "what about my team member who was hired remote?"
+3. **Contract check.** Ask HR to count how many people have remote or hybrid written into their contract or offer letter, by country and team. That list drives the individual conversations.
+
+**Two things to raise with the CEO, privately and first.**
+- **"Fix our culture" needs a specific problem.** Without one, five days becomes a symbol and nobody can tell whether it worked. The email has blanks for two or three concrete problems with a fact each. If the CEO can't fill them in, that tells you something. Which problems has the CEO seen: onboarding, handoffs between Utrecht and Berlin, or something else?
+- **The retention cost.** Among 54 large US tech and finance firms that mandated a return, turnover went up by about 14%, most among women, senior and skilled staff, and hiring took about 23% longer ([Ding et al., 2025](https://hankamer.baylor.edu/news/story/2025/return-office-mandates-and-hidden-cost-brain-drain)). This is correlation, mostly in the US, but a fintech competing for engineers should expect something similar. Pull your own regretted attrition and time-to-fill for the last two years first, so you have a baseline.
+
+**Options to put next to the CEO's plan.** (a) Five days from 1 March, as asked: fastest, and highest risk of losing the people you hired as remote. (b) Teams agree anchor days with a set minimum, starting 1 March or later: slower, but it targets the specific problems and is easier to defend. (c) Five days for new joiners from 1 March, with existing staff phased in over a few months: this reduces the contract problem. Do nothing is also an option, but the CEO has already said no to it. The email draft works for (a) or (c). If the CEO is open to (b), tell me and I will rewrite it.
+
+**Timing.** 1 March is about 14 weeks away. That is tight for consultation plus individual conversations, so push for a later date if the consultation turns anything up. Also agree a review after one quarter, and put the date in the email.
+
+What am I missing, and what would make this wrong? In particular: do the contracts actually say remote, or only the job ads? And has the CEO already told anyone outside the board?

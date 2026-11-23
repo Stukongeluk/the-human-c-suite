@@ -122,6 +122,8 @@ def main() -> int:
             errors.append(f"{rel}: frontmatter name {fm.get('name')!r} != folder {skill_dir.name!r}")
         if not fm.get("description"):
             errors.append(f"{rel}: missing 'description'")
+        elif len(str(fm["description"])) > 1024:
+            errors.append(f"{rel}: description is {len(str(fm['description']))} characters; the Agent Skills limit is 1024")
         if not fm.get("license"):
             errors.append(f"{rel}: missing 'license'")
 

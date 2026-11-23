@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+      "passed": false,
+      "evidence": "Opens: 'Close the same-role gap within two to three pay rounds, tell your people and the works council what you found, and give the CFO a costed budget instead of a five-year drift.' It is budgeted and not quiet, but it isn't dated, and the speed is only modestly better than five years. The reply's own table puts the recommended route at 'Higher in years 1 to 3, then done', so up to three years. That sits badly with the six-month remediation window the reply itself cites. With Dutch first reports due by June 2028 on 2027 data, a three-round fix would probably still be open six months after the first report, which triggers the joint pay assessment. It meets the letter, not the spirit, of 'much faster'."
+    },
+    {
+      "text": "The reply states correctly that equal pay for equal work is already law (Article 157 TFEU or national equal pay law), so a same-role gap is a legal exposure now, whatever the transposition date of the new directive.",
+      "passed": true,
+      "evidence": "'Equal pay is already law. Equal pay for equal work is already required (Article 157 TFEU, plus Dutch and Belgian national law). A 6% gap in the same role and grade is an exposure today, whatever the date of the new transparency rules.'"
+    },
+    {
+      "text": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+      "passed": true,
+      "evidence": "'If a gap of 5% or more in a category of workers can't be explained by objective, gender-neutral factors and isn't fixed within six months, you must carry out a joint pay assessment with employee representatives.' Also: 'Reporting starts in 2027 in the directive's timetable, and the Dutch bill puts the first report on 7 June 2028' (correct per Rijksoverheid) and 'Employees will also be able to ask for pay averages by sex for their own role.' It passes on the core rule plus the employee right to information. It does misapply the size threshold to the group total ('With 650 employees you fall in the group that reports every year') and later says 'from 2027 we have to report'. Both are recorded under factual_errors."
+    },
+    {
+      "text": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+      "passed": true,
+      "evidence": "Method: 'show how many people sit in each role and grade cell. Groups under five are reported only in aggregate. Separate what objective factors explain (real differences in skills, scope, location, tenure where it truly matters) from what they don't. Also check that your grades are not carrying the gap. Women may have been graded lower for similar work, or hired at lower starting salaries within a grade.' Separation: 'The 14% overall gap is a different problem, about who sits in which roles and grades, and it needs a separate, longer plan'."
+    },
+    {
+      "text": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+      "passed": true,
+      "evidence": "'The cost is the sum of the individual unexplained shortfalls... If 130 women are on an average of EUR 70,000 and the unexplained gap is 6%, the fix is roughly EUR 550,000 a year. Spread over two or three pay rounds, that is roughly EUR 180,000 to 275,000 extra a round.' The arithmetic checks: 130 x €70k x 6% = €546k; /3 = €182k; /2 = €273k. Framed: 'The CFO should compare that with the cost of a claim, back pay, losing people (replacing an engineer costs half to two times salary) and a public report'."
+    },
+    {
+      "text": "The reply includes telling employees or their representatives honestly and fixing the causes (such as starting pay, promotion or bonus decisions).",
+      "passed": true,
+      "evidence": "Telling: 'Brief the works council and Belgian employee representatives first, while the plan can still change. Then tell all employees what you found, what you will do and by when, and how they can ask about their own pay. Managers hear it before everyone else.' Causes: 'Set starting-salary rules so offers aren't negotiated case by case. Give bonus and promotion decisions written criteria. Check part-time and leave effects.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 976,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Well structured, with a useful options table, a correct cost illustration and a sharp point about grades hiding the gap. But it settles for a two-to-three-year fix that undercuts its own legal argument, stays vague on Belgium, and misstates when and how often the company must report."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) 'With 650 employees you fall in the group that reports every year': reporting thresholds apply per employer/legal entity. The fact sheet says 'each legal entity reporting for itself', and Lewis Silkin (Feb 2026) says Dutch reporting is generally per subsidiary. A 230-person Belgian entity would fall in the directive's 150-249 band (every three years), and Belgium's law isn't published yet. (2) 'a public report in 2027' and 'from 2027 we have to report': the Dutch first report is due by 7 June 2028 on 2027 data, as the reply itself says, and Belgium has no date yet. Correct claims checked: Art. 157 TFEU, the joint pay assessment rule, Dutch first report on 7 June 2028 (Rijksoverheid 21 May 2026), WOR art. 27(1)(c), and the cost arithmetic. Not verified (the search budget was exhausted): works council consent for the action plan under the Dutch bill."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'. 'skills' appears only as an objective pay factor."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that leadership is responsible for the gap. The closest line, 'Five years of knowingly paying women less for the same work is a worse position in a claim', is about legal risk, not ownership."
+    },
+    "best_insight": {
+      "value": "It warns that the grading itself may carry the gap (women graded lower for similar work), so a 'same grade' comparison can understate the true equal-work gap.",
+      "evidence": "'Also check that your grades are not carrying the gap. Women may have been graded lower for similar work, or hired at lower starting salaries within a grade.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+        "reason": "The parenthetical 'the Dutch law is expected in 2027' is ambiguous: Rijksoverheid (21 May 2026) says the Dutch law is meant to take effect on 1 January 2027, but first reports are due by 7 June 2028 on 2027 data. Reword it (in force 2027, first report 2028) so a reply that says 'we must report in 2027' isn't rewarded."
+      },
+      {
+        "reason": "No assertion covers Belgium's existing 2012 pay gap law (employers with 50+ workers give the works council a pay-structure analysis by sex every two years). That law already rules out 'keep it internal' for the 230 Belgian staff, and it separates the samples sharply. Only one sample caught it."
+      },
+      {
+        "reason": "No assertion checks that reporting thresholds are applied per legal entity (420 NL / 230 BE), not to the 650 group total. One sample got this wrong."
+      },
+      {
+        "assertion": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+        "reason": "'Much faster than five years' is soft. Anchor it, for example to 'within about a year, so the gap is closed before the first report plus six months'. That way a two-to-three-year phasing isn't left to the grader's judgment."
+      },
+      {
+        "assertion": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+        "reason": "A one-line method passes the 'shows how to compute it' branch. None of the samples added employer on-costs (social charges, pension accrual) to the cost of the correction. Consider requiring them."
+      }
+    ],
+    "overall": "Good on law, cost and communication. It fails the speed assertion, because the 2-3 round phasing contradicts its own six-month point. The factual slips on reporting frequency and dates aren't caught by any assertion."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": true,
+      "evidence": "Opens: \"I'd advise against sending an email that announces this as a final decision on 1 March; send one that announces it as a proposal, with a real input window, and only after managers and employee representatives have been told.\" email-draft.md is a usable, sendable proposal email (\"Our proposal for working from the office from 1 March, and how you can change it\") with decided/open items, input channels and a review."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": false,
+      "evidence": "No study or source is cited anywhere. The only retention point is \"Expect regretted leavers, and your best people are the ones who can leave\" and an explicitly invented illustration: \"losing, say, 5 to 10% of that third ... treat that percentage as an illustration only.\""
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": false,
+      "evidence": "It frames the question concretely (\"'To fix our culture' is a conclusion, not a diagnosis\"; \"What exactly is broken, and what evidence is there (attrition, engagement, onboarding, delivery)?\"), but it does not match options to the problem. The alternatives offered are about dose and reversibility (\"why not three or four? A short pilot with a measure\"), not about which fix suits which problem; the email leaves the reasons as a placeholder."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": false,
+      "evidence": "Contract point present (\"a single email can't change those terms; counsel needs to say what you can change unilaterally and what needs agreement\"; email: \"where the law requires it, needs your agreement\"). But the Dutch Flexible Working Act (Wet flexibel werken) is never mentioned, and for Germany it says only \"If a Berlin Betriebsrat exists, the same applies\" with no mention of co-determination over mobile work (§87(1) no. 14 BetrVG). It also frames the Dutch OR route as advice (art. 25) and says only that it \"may have consent rights\"."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": false,
+      "evidence": "Review date present (\"After six months we will look at [measures agreed up front...]\"). But no notice period is planned: the email keeps \"From 1 March 2027\" with an example decision date of \"[date, e.g. 22 January]\", which would leave about five weeks. Individual situations are not offered case-by-case handling: care duties and childcare are acknowledged, and \"exceptions and phasing\" are listed as open, but there is no route for care, disability or distance cases."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "\"Before you send it, two questions for the CEO\" (what exactly is broken and the evidence; desks for 800 and the cost of losing people), and \"Sequence: exec team, then works council advice request, then managers (with a Q&A sheet), then the email\". The concerns go to the CEO in a one-to-one conversation with the HR director before the email."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 487,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 592,
+      "evidence": "wc -w email-draft.md: 592"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound process (proposal framing, sequencing, leaders go first, six-month review against agreed measures), but no evidence, a thin and partly misdirected legal analysis (advice rather than consent, nothing on German co-determination or the Wfw), and no plan for notice or individual cases."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "One misstatement about its own deliverable: the reply says the draft \"Has no placeholders for facts I don't have\", but email-draft.md has 13 bracketed placeholders for exactly those facts (reasons, dates, mailbox, measures), and its own header says \"Items in [brackets] must be filled in\". It probably meant 'no invented facts', but as written it is wrong. No errors found in the legal or factual claims; \"If a Berlin Betriebsrat exists, the same applies\" is loose, since German rights are co-determination, not WOR advice, but it is not clearly false."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt has no bad outcome to own, only a CEO's view that culture needs fixing. A does not attribute that to leadership either."
+    },
+    "best_insight": {
+      "value": "\"Leaders go first\": the executive team works in the office five days a week before anyone else is asked to, and managers must not learn of the change from the all-company email.",
+      "evidence": "email-draft.md and reply.md 'Sequence'"
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+        "reason": "The assertion leaves out the Dutch works council's consent right over home-working policy (art. 27(1)(b)/(d) WOR; Caterpillar 2025, Booking.com 2026), arguably the single most decisive legal point for a five-day mandate. A sample can pass by naming the Wfw while treating the OR as advisory only, and fail despite the strongest legal analysis. Consider adding the OR consent right or splitting the assertion into separate checks."
+      },
+      {
+        "assertion": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+        "reason": "All three samples pass easily; it would discriminate more if it required the private conversation to cover specific concerns (retention evidence, legal consent, contract exposure) rather than any pre-email chat."
+      },
+      {
+        "reason": "No assertion checks the email's internal consistency with the advice: for example, a draft that announces five days as 'what we are deciding' while saying the works council 'can change the plan', or a three-month notice promise that conflicts with a 1 March date. That is where samples differed most in real usability."
+      },
+      {
+        "assertion": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+        "reason": "'A review date' is ambiguous: a relative review point ('after one quarter') versus a dated placeholder. State which counts."
+      }
+    ],
+    "overall": "Good process, but no evidence, missing Wfw and German co-determination points, and no notice or individual-case plan: 2/6. Web search budget was exhausted during grading; the Ding et al. figures were checked against the Baylor page and the Booking.com ruling against the rechtspraak.nl press release (both fetched directly). Wet flexibel werken, §87(1) no. 14 BetrVG and the Bloom/Han/Liang Nature 2024 trial were checked against established knowledge, not a fresh search."
+  }
+}

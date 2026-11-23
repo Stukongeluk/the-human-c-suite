@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against a fixed quota of low ratings and says why (it labels a fixed share of every team whatever its actual performance), while taking the CEO's underlying concern seriously.",
+      "passed": true,
+      "evidence": "Opens: \"I'll give you the design, but not the version the CEO described. As written (a 10% quota per manager...) it is likely to be unlawful or unenforceable...\" Why: \"The quota decides who is 'bottom' before anyone has measured performance... 'You were in the bottom 10% of a strong team' is not a ground for dismissal\"; \"Quotas force managers to name someone even on a strong team.\" CEO concern: \"His legitimate goals are probably: a more honest performance culture, a credible way to deal with real underperformance, and the ability to act on it within a year.\""
+    },
+    {
+      "text": "The reply cites at least one real piece of evidence on forced or stack ranking, or on what drives performance differences between teams, with its source (for example Microsoft dropping stack ranking in 2013, simulation research on forced distribution, or research on managers' effect on teams).",
+      "passed": false,
+      "evidence": "No named, sourced evidence. \"Forced ranking has a long record of being adopted and then dropped, including by firms that made it famous\" names no firm and gives no date or source; \"Studies of forced ranking consistently find it falls disproportionately on part-timers...\" cites no study; \"In most companies, 5 to 10% of employees do sit in the bottom category\" is unsourced."
+    },
+    {
+      "text": "The reply flags that the works council must consent to the appraisal system in both countries (Netherlands: article 27(1)(g) WOR or its consent right on staff appraisal; Germany: §94 BetrVG appraisal principles), and that a plan starting from a ranking is weak ground for a later dismissal (the Dutch court expects timely notice, support and a real chance to improve; in Germany a low-performance dismissal usually needs a warning and proof).",
+      "passed": true,
+      "evidence": "\"the ranking system is subject to their consent or co-determination rights. In NL that is under art. 27 WOR for appraisal and dismissal-related rules, and in DE under §§87 and 94 BetrVG\"; NL d-ground file: told clearly, told in time, real chance with support, and \"an outcome fixed in advance by a quota, is the classic reason these cases fail\"; DE: \"persistent, significant underperformance over a long period... Being the lowest-ranked person in a team doesn't meet that.\" Passes on substance despite the UWV error (see factual_errors)."
+    },
+    {
+      "text": "The reply delivers a usable alternative process: clear expectations per role, calibration that aligns standards and checks for bias without forcing a distribution, and individual handling of real underperformance with support and a realistic period.",
+      "passed": true,
+      "evidence": "\"Managers rate against defined criteria, not against each other... There is a bottom category... but no percentage. If a team has no one in it, that is fine\"; calibration compares across teams and tests each bottom rating for evidence, prior notice and \"protected status or recent leave\"; plan \"60 to 90 days depending on the role\" with support, weekly check-ins, a mid-point review and open outcomes. Its 'expect about 5 to 10%' is reported at company level with outliers reviewed both ways, so it is not forced."
+    },
+    {
+      "text": "The reply includes a check of ratings by group (such as gender, age, part-time or people on leave) before ratings are used for pay, plans or exits.",
+      "passed": false,
+      "evidence": "The only group-level check comes after the fact: \"Phase 6: Review (end of Q2) — HR reviews outcomes for pattern risks (age, gender, part-time, leave, nationality, location).\" That is after ratings have triggered 60-90-day plans. Calibration checks individuals for protected status, not ratings by group."
+    },
+    {
+      "text": "The reply gives the user a line or approach for a private conversation with the CEO first, and a usable manager briefing or its outline.",
+      "passed": true,
+      "evidence": "Section 6: \"Put it this way: 'We can have rigorous reviews and act on underperformance this year. A hard quota can't be defended in NL or DE...'\" with three things to show him and a pilot fallback; section 5 is a usable manager briefing. It doesn't frame the CEO meeting as private and lists it third in next steps, after counsel and the works-council check."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 2161,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other files."
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "The direction is right and it includes a workable briefing, but the evidence is unsourced and overstated, the Dutch dismissal route is wrong, the fairness check comes after plans start, and everything is packed into one long reply."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) Says a Dutch performance dismissal 'goes through UWV or the kantonrechter' and fails with 'a refused permit'. The d-ground goes to the cantonal court only; UWV handles economic and long-term illness dismissals. Repeated as 'UWV or court in NL'. (2) 'Studies of forced ranking consistently find it falls disproportionately on part-timers, people on leave, older workers, women returning from parental leave and people with disabilities' is an unsupported overclaim with no study cited. (3) 'In most companies, 5 to 10% of employees do sit in the bottom category when managers are honest' is unsourced."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill or reference files."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt is a proposed policy, not a bad outcome."
+    },
+    "best_insight": {
+      "value": "If the CEO insists on a quota, ask for a pilot in one function with works council agreement and measurable results to compare against; train managers on practice cases such as a well-liked but weak performer and someone just back from long-term sick leave.",
+      "evidence": "Sections 5 and 6."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply delivers a usable alternative process: clear expectations per role, calibration that aligns standards and checks for bias without forcing a distribution, and individual handling of real underperformance with support and a realistic period.",
+        "reason": "Several samples swap the quota for a company- or function-level 'expected range' (e.g. 10-17% at the bottom) drawn from an unsourced framework. Add a check that no expected or target share is introduced, or that any reference range is sourced and never used to move a rating."
+      },
+      {
+        "assertion": "The reply gives the user a line or approach for a private conversation with the CEO first, and a usable manager briefing or its outline.",
+        "reason": "Nearly any CEO talking point passes. Consider requiring that the conversation comes before ExCo, managers or works councils and that it tests what 'it worked at his last company' meant (measure, period, legal setting)."
+      },
+      {
+        "reason": "No assertion checks that the reply separates a possible cost or headcount goal from performance management (restructuring route, collective-dismissal rules if exits are driven by a fixed number). The strongest samples do this."
+      },
+      {
+        "reason": "No assertion checks the Dutch route for a performance dismissal (cantonal court, not UWV); at least one sample gets this wrong and still passes assertion 3."
+      },
+      {
+        "assertion": "The reply includes a check of ratings by group (such as gender, age, part-time or people on leave) before ratings are used for pay, plans or exits.",
+        "reason": "Correctly fails a sample whose only group check happens at 'end of Q2', after ratings have already triggered plans. The 'before' timing is the discriminating part; keep it."
+      }
+    ],
+    "overall": "Assertions 2 and 5 discriminate correctly here; assertion 3 passes despite a wrong statement about the UWV route, so legal accuracy is not tested."
+  }
+}

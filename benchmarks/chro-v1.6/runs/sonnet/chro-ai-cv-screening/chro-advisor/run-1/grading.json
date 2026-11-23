@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to reject candidates automatically without a person reviewing them, and offers a workable way to handle the volume.",
+      "passed": true,
+      "evidence": "Opens: \"I can't give you a rollout plan for 'score every CV and auto-reject the bottom 70% with no recruiter looking'. That design is the one I'd stop.\" Then: \"I'd build the same module as a ranking and triage tool with a human making every rejection decision ... It still removes most of the manual reading.\""
+    },
+    {
+      "text": "The reply states that AI used to screen or evaluate job applicants is high-risk under the EU AI Act (Annex III) and gets the timing right: those obligations are not yet in force and apply from 2 December 2027; or it says correctly that they are coming but don't apply yet.",
+      "passed": false,
+      "evidence": "Classification is right (\"AI used to filter or evaluate job applicants is listed as high-risk (Annex III)\"), but the timing is wrong: \"The headline application date was August 2026. There have been proposals to delay parts of it, so have counsel confirm the current date.\" The Digital Omnibus delay was adopted and has been in force since 27 July 2026, and Annex III duties apply from 2 December 2027. The reply never says they don't apply yet."
+    },
+    {
+      "text": "The reply flags the GDPR rule on decisions based solely on automated processing (Article 22) for automatic rejections, and the need to inform candidates and to assess data protection impact.",
+      "passed": true,
+      "evidence": "Point 1: \"GDPR Art. 22 (solely automated decisions) ... Rejecting an applicant with no human involvement is a decision with significant effects\". Phase 0 checklist: \"DPIA (GDPR Art. 35) before any processing\" and \"Candidate transparency: privacy notice and application-page text that say AI assists screening, how, and how to ask for human review.\""
+    },
+    {
+      "text": "The reply treats \"bias-free\" as a claim to test: it asks for the vendor's evidence or audit and tests selection rates by group (such as gender, age, nationality or disability) on the company's own applicants before and after any rollout.",
+      "passed": true,
+      "evidence": "\"'Bias-free' is not a credible claim ... Ask for the evidence instead: validation studies, adverse-impact results by group\". Shadow-mode gate: \"Adverse-impact ratios are within threshold for gender, age band, nationality or ethnicity proxy, and country.\" After rollout: \"Quarterly bias audit\" and an adverse-impact ratio per group and country, with 0.8 as the trigger."
+    },
+    {
+      "text": "The reply flags that works councils have consent or co-determination rights over recruitment selection rules or such a tool in the Netherlands and Germany.",
+      "passed": true,
+      "evidence": "\"Netherlands: a works council (OR) normally has a right of consent (instemmingsrecht) under the WOR over selection and assessment systems\"; \"Germany: the Betriebsrat has co-determination rights on selection guidelines and on technical systems that monitor behaviour or performance (BetrVG).\""
+    },
+    {
+      "text": "The reply gives a rollout plan with a pilot measured against today's process, a person reviewing every rejection or low score, and stop criteria agreed up front.",
+      "passed": false,
+      "evidence": "There is a shadow mode compared with recruiter shortlists, baseline metrics, gates and a kill switch. But a person does not review every rejection: \"Every rejection is a recruiter action, with a one-click bulk reject for the low-ranked band. A sample of low-scored CVs is read in full\". The cost section confirms it: \"Bulk-rejecting a low-ranked band that a recruiter has glanced at and sampled\". On top of that, \"The model can auto-reject ... on objective, documented knock-out criteria\" from Phase 2. That is a sample, not a review of every low score, and the reply itself warns that rubber-stamping won't count as oversight."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1766,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "The core advice is sound: don't auto-reject, run a shadow mode, a DPIA and works councils first, and test the vendor's evidence. But it gives a stale AI Act date, its own design allows the bulk reject it warns against, and its metrics include irrelevant 'IC roles' reference targets."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) AI Act timing: it presents August 2026 as the application date with only 'proposals' to delay. The Digital Omnibus was adopted (in force 27 July 2026), and Annex III/Art. 26 duties apply from 2 December 2027. The other legal claims check out: SCHUFA C-634/21 (Dec 2023), Art. 22(2) exceptions, the AGG burden of proof, and the AI-literacy duty already applying."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "\"The skill's reference target for IC roles is under 45 days.\" and \"Reference targets above 85% and below 5%.\""
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt."
+    },
+    "best_insight": {
+      "value": "It ties the cut-off to capacity and validated score distributions instead of a fixed percentage, noting that a fixed bottom-70% rejects people in one month who would be shortlisted in another.",
+      "evidence": "Point 6, 'The 70% cut is arbitrary'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives a rollout plan with a pilot measured against today's process, a person reviewing every rejection or low score, and stop criteria agreed up front.",
+        "reason": "'A person reviewing every rejection' should exclude a one-click bulk reject of the low band with only a sample read (sample A). Rubber-stamping falls back under Art. 22 after SCHUFA. Ask for individual review of each proposed rejection, with no bulk-reject, and a check against rubber-stamping."
+      },
+      {
+        "assertion": "The reply flags that works councils have consent or co-determination rights over recruitment selection rules or such a tool in the Netherlands and Germany.",
+        "reason": "The assertion doesn't check the legal hook. Samples citing the wrong WOR letter (27(1)(d), or only (l) for applicant assessment) pass the same as those citing 27(1)(e) WOR and section 95 BetrVG. Consider requiring the hiring-policy or selection-guideline basis."
+      },
+      {
+        "reason": "No assertion checks whether the reply prices keeping a human on every rejection, for example the 0.3-0.75 FTE gap against auto-reject. That is what actually separates a workable alternative from a bare 'no'. No assertion covers Belgium (CBA 9/39 information and consultation) either, though the user hires there."
+      }
+    ],
+    "overall": "Strong on GDPR, bias and works councils, but it fails on AI Act timing and on human review of every rejection (bulk reject plus model knock-outs), and it leaks 'the skill's reference target'."
+  }
+}

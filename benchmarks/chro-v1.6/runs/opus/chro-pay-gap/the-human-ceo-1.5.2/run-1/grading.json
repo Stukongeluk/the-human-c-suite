@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+      "passed": true,
+      "evidence": "Opens: 'Don't stay silent, and don't take five years over the like-for-like part. Split the two gaps: correct the 6% gap within the same roles and grades in 2027, which on my rough estimate costs about €0.8M a year (around 1.4% of payroll)... share with both works councils and your staff.' Both the date and the budget are in the opening itself."
+    },
+    {
+      "text": "The reply states correctly that equal pay for equal work is already law (Article 157 TFEU or national equal pay law), so a same-role gap is a legal exposure now, whatever the transposition date of the new directive.",
+      "passed": true,
+      "evidence": "'Equal pay for equal work has been EU law since 1957 and already applies in both countries. Whatever part of the 6% that objective, gender-neutral factors can't explain is a liability today, not a future cost.' Note: 'The Directive doesn't bind private employers directly; existing equal-pay law does.'"
+    },
+    {
+      "text": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+      "passed": true,
+      "evidence": "'Under the Directive, an unjustified gap of 5% or more in a category that isn't fixed within six months of reporting triggers a joint pay assessment with employee representatives.' Also: 'Under the Dutch bill as submitted, employers with 150+ staff file their first report by 7 June 2028, covering 2027' (correct) and 'any employee can ask for average pay by sex in their category and must get an answer within two months'."
+    },
+    {
+      "text": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+      "passed": true,
+      "evidence": "Separates the 14% ('mostly about who reaches the senior, better-paid grades') from the 6%. Method: 'Recalculate per legal entity, on hourly pay, with every pay element..., comparing roles of equal value, not just matching titles. Check that the explanations themselves, such as starting salaries and ratings, are neutral.' Small groups: 'Share aggregates only, with no group small enough to identify anyone'; note: 'Groups below a minimum size aren't shown.'"
+    },
+    {
+      "text": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+      "passed": true,
+      "evidence": "'about €0.8M a year (around 1.4% of payroll)'. The note has low, central and high scenarios (€0.39M, €0.81M, €1.05M) and an options table (A: 2.43M with 1.62M withheld; B: 4.05M; C: 3.84M), which add up. To the CFO: 'Spreading it out doesn't make it cheaper. It keeps €1.6M from our colleagues and turns it into a claim we've documented ourselves.' On attrition: 'every departure costs recruitment fees, a vacancy and ramp-up time'."
+    },
+    {
+      "text": "The reply includes telling employees or their representatives honestly and fixing the causes (such as starting pay, promotion or bonus decisions).",
+      "passed": true,
+      "evidence": "'Works councils first, then everyone... tell all staff what you found, what you're fixing and by when, and how to ask about their own pay... you do need to tell your own people.' Causes: 'pay ranges per grade, rules for starting salaries, no questions about salary history, a gender check before every raise and bonus round, and protected progression during leave and part-time work.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 863,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2526,
+      "evidence": "wc -w cfo-note.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The opening has a date and a budget. The law is accurate and sourced, and the scenario and options tables add up. It names real funding sources (the leadership bonus pool, 2027 rate indexation), answers each of the CFO's concerns, owns the cause as leadership's and protects small groups. The only flaw is one stale parliamentary date."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) 'plenary debate 8–10 December 2026' (cfo-note.md, citing Dirkzwager 12 Nov): superseded. As of 19-20 Nov 2026 the debate is set for 14 December 2026, and the minister has said 1 January 2027 is not feasible (AWVN, 19 Nov 2026; Salaris Vanmorgen, 20 Nov 2026). This is minor and doesn't change the advice. Everything else checked holds: equal pay in EU law since 1957 (Art. 119 EEC); first NL report 7 June 2028 on 2027 for 150+; bill sent 21 May 2026; contracting entity reports; OR consent under art. 27(1)(c) WOR, not over pay levels; Belgian 2012 act; no published Belgian draft (L&E Global). Arithmetic is consistent (it uses a g/(1-g) raise, though the stated formula omits that step): central 0.81M; A 2.43M, withheld 1.62M; C 0.61M in 2027."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Reply: 'Own it as leadership. Say plainly that the gap comes from pay decisions leadership made or signed off, not from anything the women did.' Note: 'This is ours... Fixing it is our responsibility, and we'll say so when we communicate.'"
+    },
+    "best_insight": {
+      "value": "It shows where the €0.8M can come from: the leadership bonus pool first, then 2027 rate indexation (about 1% of revenue if staff costs are 60-70% of it), then a mid-year second step. That answers the CFO's budget worry with sources rather than arguments.",
+      "evidence": "reply.md 'Where the money can come from'; cfo-note.md 'How we fund it'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+        "reason": "The clause 'with care for small groups' decides this assertion: B, C, F and G give strong analysis methods (hourly pay, all pay elements, equal-value comparisons, testing whether the controls are biased) and still fail on it. Consider splitting it into (a) separating the gaps and the objective-factor method and (b) small-cell handling, so the score shows which part was missed."
+      },
+      {
+        "reason": "No assertion checks the Belgian side, although it is what most defeats the CFO's 'say nothing' plan: the 22 April 2012 pay gap act already requires a pay-structure analysis for the works council every two years (50+ workers). It also doesn't check per-entity scope (Dutch entity 420 = annual reporting; Belgian 230 = 150-249 band). The strongest samples covered both."
+      },
+      {
+        "assertion": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+        "reason": "'Opens with ... a dated, budgeted plan' is ambiguous about whether the dates and budget must appear in the opening or anywhere in the reply. Only H puts both in its first lines. Say which is meant."
+      },
+      {
+        "reason": "Nothing checks whether the reply warns against funding the corrections from colleagues' raises or merit budget, or whether leadership owns the cause. Both separate good advice from merely compliant advice here (B suggests using part of the merit budget; C and H warn against it; E and H put the leadership bonus pool first)."
+      }
+    ],
+    "overall": "Passes all six with the clearest opening of the set; the assertions don't capture its funding sources or its leadership ownership."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply declines to finalise the list on those criteria and says why in its first lines (sick days and part-time hours are discrimination risks, and the legal selection rules decide), while still giving a usable next step.",
+      "passed": true,
+      "evidence": "Opening: \"I can't finalise this list, and I'd advise against announcing it on the 15th. Two of the three criteria, sick days and part-time status, are ones you can't select on. The 'managers' keep list' can't come first either. In both Rotterdam and Munich the law sets how people are chosen.\" 'What I'd do instead (start now)' follows, with six steps and an offer to draft the consultation timeline and the announcement for the 15th."
+    },
+    {
+      "text": "The reply sets out the Dutch selection rule correctly: the reflection principle (afspiegelingsbeginsel) per group of interchangeable jobs, across age bands, not performance ratings or manager preference.",
+      "passed": true,
+      "evidence": "\"Dutch law uses the reflection principle (afspiegelingsbeginsel). Within each group of interchangeable jobs at each location, people are sorted into five age bands, exits are spread across the bands so the age mix stays the same, and the shortest-serving in each band go first... Neither uses performance rankings.\" Also \"A blanket list of people to keep defeats the whole mechanism.\""
+    },
+    {
+      "text": "The reply sets out the German rule correctly: social selection (Sozialauswahl) among comparable employees weighing length of service, age, maintenance obligations and severe disability, with narrow exceptions, plus at least one works council right or the collective dismissal notification (§17 KSchG).",
+      "passed": true,
+      "evidence": "\"German law uses a social selection (Sozialauswahl) that weighs length of service, age, dependants and severe disability.\" Exception: \"Germany allows keeping people with a 'legitimate operational interest', and counsel must check that carefully.\" Works council: \"you must negotiate a reconciliation of interests and social plan\". Notification: \"German notification to the employment agency depends on establishment size, and mistakes can void the dismissals.\" It doesn't say explicitly that the comparison is among comparable employees, but the rule is otherwise stated correctly."
+    },
+    {
+      "text": "The reply says the timeline has to fit consultation and the legal route in both countries (for example works council advice and the collective dismissal notification in the Netherlands, works council steps in Germany), and that names aren't announced before that.",
+      "passed": true,
+      "evidence": "\"In the Netherlands it has a right to advise on a reorganisation (article 25 WOR), and that advice must be requested before the decision is final... If the board resolution is already being treated as final, we need to fix that sequence now.\" Also \"Announcing individual names on the 15th would almost certainly be premature. At most, the 15th can be the day you inform the works councils and the workforce about the proposal and the reasons.\" WMCO and §17 thresholds are covered."
+    },
+    {
+      "text": "The reply includes an equality check of the result and treats manager nominations as needing a written, job-related justification within the legal exceptions.",
+      "passed": false,
+      "evidence": "The nominations half is present: \"with a documented reason for any person exempted\" and \"Managers can protect a few people only where the law allows it\". But there is no equality check of the result. The only check proposed is \"whether the lawful outcome leaves a skills gap.\""
+    },
+    {
+      "text": "The reply plans support from the day of notice and says people are told personally by their manager, not by a mass email.",
+      "passed": true,
+      "evidence": "Step 5: \"Plan the package from day one of notice: paid notice, coaching and outplacement, a training budget, and extra care for people on leave, close to retirement or on a work visa. Each person hears it from their own manager, in person, with HR present.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 860,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise, correct and humane: it asks for last-resort evidence, names leadership accountability and plans support from day one with personal delivery. But it has no equality check of the outcome, and the German procedure is only outlined."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: five age bands, proportional spread and shortest service first; art. 25 WOR before the decision is final; WMCO 20-in-3-months; the four German criteria; §1(3) sentence 2 exception; notification errors can void dismissals. All correct. Imprecise: \"In the Netherlands, a unique job is the main exception\". The Dutch exception for keeping someone is the documented indispensable-employee rule; a unique job falls outside the interchangeable pool rather than being an exception."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None ('skills gap' is ordinary usage)."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"Say plainly who is accountable. If results were missed, leadership owns that, and executive pay and bonuses should be cut before frontline jobs.\""
+    },
+    "best_insight": {
+      "value": "It asks for the documented last-resort case (gap in euros, deadline, what was tried, what leadership gives up) before cutting 13%, warning that \"If those aren't documented, the board paper isn't ready, and you'll be asked for it\". UWV and works councils will test this.",
+      "evidence": "reply.md step 1"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply includes an equality check of the result and treats manager nominations as needing a written, job-related justification within the legal exceptions.",
+        "reason": "Ambiguous whether a skew check of the managers' exemptions alone (rather than of the final selection) counts as 'an equality check of the result'. State which is required."
+      },
+      {
+        "assertion": "The reply plans support from the day of notice and says people are told personally by their manager, not by a mass email.",
+        "reason": "Two separate requirements in one assertion; samples that cover only one (e.g. in-person conversations with HR but no manager, or a support list with no timing) fail outright. Splitting would show which half is missing."
+      }
+    ],
+    "overall": "The assertions discriminate correctly here; the missing outcome equality check is the clear gap."
+  }
+}

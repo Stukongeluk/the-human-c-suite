@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+      "passed": true,
+      "evidence": "Opens: \"Bottom line: Don't tell the board 'stable with some pockets of concern,' and don't make resilience training the whole answer. Present the survey as it is, with a fix that targets the causes.\""
+    },
+    {
+      "text": "The reply explains with evidence why resilience training alone is not the fix (for example the 2024 Oxford study of individual-level wellbeing interventions, or the WHO's description of burnout as an occupational phenomenon) and points to workload and working conditions in Claims and Customer Service.",
+      "passed": false,
+      "evidence": "It points to the causes (\"The usual causes are workload, staffing, targets, and managers\") but gives no evidence. The section is tagged \"[medium]\" and rests on reasoning only (\"If those don't change, training reads as 'the problem is you'\"). It cites no study, WHO or regulator; the Arbowet mention is labelled \"from my general knowledge\" and isn't tied to the training question."
+    },
+    {
+      "text": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+      "passed": true,
+      "evidence": "\"Under the Arbowet an employer has to manage psychosocial workload (PSA) at its source\" and \"Involve the OR early. With 450 staff you have a works council, and it has rights on health and safety.\" Both are hedged as unchecked, but both are flagged."
+    },
+    {
+      "text": "The reply treats the trust score as a result for leadership to own, with a first response from the leaders themselves.",
+      "passed": false,
+      "evidence": "The leaders' first response is there: \"A visible commitment from the CEO and senior team: listening sessions, and a few specific changes announced and then delivered. That is what moves trust.\" But the reply never says the trust score is leadership's result to own. It calls it \"a company-wide result, not a pocket\" (scope, not ownership), and it frames the CEO talk as making the CEO \"look in control\" rather than owning the result."
+    },
+    {
+      "text": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+      "passed": true,
+      "evidence": "\"Talk to them before the board meeting, not in it. Something like: 'If we call it stable and the OR or the next pulse says otherwise, we lose credibility on the whole people agenda. I can present this as a clear signal with a plan already moving, which makes you look in control.'\""
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and gives the first steps for next week.",
+      "passed": false,
+      "evidence": "wc -w = 697, over the 550 limit for a user who asked to \"Keep it short\". It does give first steps."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 697,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "The substance is sound and includes a useful manager-level diagnosis, but it is too long for the ask and has no evidence for the core claim. Confidence tags clutter it, and one is wrong: \"[verified]\" sits on speculative points such as the board probably seeing the numbers elsewhere."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Nothing stated is wrong. The Arbowet source duty, the OR's arbo rights and 'manager quality is the biggest controllable factor' (consistent with Gallup's 70% of variance) hold. The '[verified]' label on inferences overstates certainty, but that is a labelling problem, not a false fact."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No 'skill' or file mentions. It does use bracketed confidence tags ([verified], [medium], [assumed]), an internal convention that reads oddly to a user."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader in the advice says the responsibility is leadership's; it only asks for a \"visible commitment from the CEO and senior team\"."
+    },
+    "best_insight": {
+      "value": "Break the data down by team and manager: \"If exits or complaints cluster under particular managers, that's the real finding.\" If overruled, put your concern in writing.",
+      "evidence": "Step 1 and 'How to handle the CEO'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+        "reason": "An 'or' between three alternatives makes this pass for every sample, including ones that only say 'involve the works council early' or tag the law as unchecked general knowledge. Consider requiring the specific duty (Arbowet 3(2) / RI&E) AND the OR consent right (art. 27(1)(d) WOR), or checking that the cited article is correct."
+      },
+      {
+        "assertion": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+        "reason": "'A line the user can use' is ambiguous: a line for the CEO conversation, or a framing line the CEO can take to the board? Samples split on this (one gives only a board-slide opener). Say which one is meant."
+      },
+      {
+        "reason": "No assertion covers what to do if the CEO still insists on 'stable'. The samples differ a lot here: some draw the line between framing and changing the numbers and name the board/supervisory board chair, some say 'put it in writing', some just say 'let the figures speak'. This is a key part of the user's real dilemma."
+      },
+      {
+        "assertion": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+        "reason": "Nearly every sample passes this; it doesn't discriminate much. The harder thing to check is whether the opening also tells the user to settle it with the CEO first."
+      }
+    ],
+    "overall": "3/6. Over length, no evidence, and ownership of the trust score is implicit."
+  }
+}

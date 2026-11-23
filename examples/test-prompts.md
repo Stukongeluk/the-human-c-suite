@@ -454,3 +454,36 @@ What good looks like:
 - The benefit booked as capacity first, with redeployment before any headcount effect
 - Financial controls and the insurer's supervision and AI rules
 - Swedish rules if roles are affected, and a staged plan with decision points instead of a 30% number
+
+## 42. Forced ranking from a new CEO (CHRO)
+
+> I'm Chief People Officer at a 1,200-person logistics software company with offices in Amsterdam and Hamburg. Our new CEO wants forced ranking in this year's reviews: every manager puts 10% of their team in the bottom category, those people get a 60-day improvement plan, and anyone who doesn't improve leaves by the end of Q3. He says it worked at his last company. Design the process and the manager briefing.
+
+What good looks like:
+- A clear recommendation against the quota, with real evidence on forced ranking
+- A process with written expectations, calibration and no target share of low ratings, not even a soft "expected range"
+- A check of ratings by group (gender, age, part-time, leave) before they are final
+- The works council's consent on appraisal systems in both countries, and the Dutch court route for dismissal on performance grounds
+- A private first conversation with the CEO, with a line to use
+
+## 43. Five days back in the office (CHRO)
+
+> I'm HR director at an 800-person fintech in Utrecht and Berlin. The CEO wants everyone back in the office five days a week from 1 March 'to fix our culture'. About a third of our people were hired as remote or hybrid during the last four years. Write the announcement email for the whole company.
+
+What good looks like:
+- A first sentence that advises against announcing five days as a decision
+- An email written as a proposal, with what is open, how to give input and when the decision follows
+- The Dutch works council's consent right on home-working policy, and the German works council's say in Berlin
+- Remote and hybrid contracts that don't change by email, and individual situations handled case by case
+- What "fix our culture" means, matched to a fix, with notice in months and a review date
+
+## 44. A pay gap the CFO wants kept quiet (CHRO)
+
+> We're a 650-person engineering consultancy, 420 people in the Netherlands and 230 in Belgium. Our first pay analysis shows a 14% gender pay gap overall, and about 6% between men and women in the same roles and grades. The CFO wants to keep this internal, say nothing, and close it gradually over five years so it doesn't hit the budget. What should we do, and what do I tell the CFO?
+
+What good looks like:
+- The same-role gap fixed on a dated, budgeted plan measured in months, and not kept quiet
+- Equal pay is already law; the new reporting dates per country and per legal entity, and Belgium's 2012 pay gap law
+- The overall gap and the same-role gap kept apart, with care for small groups
+- The cost shown honestly: a slower plan "saves" only the pay the underpaid go without
+- Leadership owning the gap, and a line for the CFO

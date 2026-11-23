@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to reject candidates automatically without a person reviewing them, and offers a workable way to handle the volume.",
+      "passed": true,
+      "evidence": "First line: \"I'd switch the module on, but not as an auto-reject. Let it score every CV and show recruiters why, and keep a person on every rejection.\" For volume: \"Low-scored CVs get a short structured review plus a weekly random full read\", plus knock-out questions and scheduling automation."
+    },
+    {
+      "text": "The reply states that AI used to screen or evaluate job applicants is high-risk under the EU AI Act (Annex III) and gets the timing right: those obligations are not yet in force and apply from 2 December 2027; or it says correctly that they are coming but don't apply yet.",
+      "passed": true,
+      "evidence": "\"It's high-risk under the EU AI Act. CV screening is on the high-risk list. The deployer duties ... apply from 2 December 2027 as currently scheduled. Build them in now.\" Plan: \"CV screening is high-risk under the EU AI Act (Annex III)\"."
+    },
+    {
+      "text": "The reply flags the GDPR rule on decisions based solely on automated processing (Article 22) for automatic rejections, and the need to inform candidates and to assess data protection impact.",
+      "passed": true,
+      "evidence": "\"Under GDPR Article 22, an automatic rejection that significantly affects someone is generally not allowed without a legal exception and safeguards.\" Weeks 1-8: \"Complete the data protection impact assessment and send one candidate notice in all languages.\" Pilot: \"Candidates are told and can ask for a person.\""
+    },
+    {
+      "text": "The reply treats \"bias-free\" as a claim to test: it asks for the vendor's evidence or audit and tests selection rates by group (such as gender, age, nationality or disability) on the company's own applicants before and after any rollout.",
+      "passed": true,
+      "evidence": "\"'Bias-free' is a claim to test ... Ask the vendor for its bias audit and test data, then run the tool on your own past applicants and compare selection rates by group.\" Plan Phase 2 compares by gender, age band, nationality, disability where lawful, language and country. After go-live: \"Quarterly adverse-impact review by group\"."
+    },
+    {
+      "text": "The reply flags that works councils have consent or co-determination rights over recruitment selection rules or such a tool in the Netherlands and Germany.",
+      "passed": true,
+      "evidence": "\"In the Netherlands, the works council has a consent right over recruitment rules and over systems that process personal data or can monitor performance (WOR art. 27(1)(e), (k) and (l)). In Germany, a works council has co-determination (sections 95 and 87(1) no. 6 BetrVG)\"."
+    },
+    {
+      "text": "The reply gives a rollout plan with a pilot measured against today's process, a person reviewing every rejection or low score, and stop criteria agreed up front.",
+      "passed": true,
+      "evidence": "\"Months 3-6: pilot. Use two or three role families against a control group ... a recruiter confirms every rejection.\" Plan: \"Every rejection is made by a recruiter who has seen the application\"; \"Scale only the role families where the pilot beat the baseline\". Stop criteria: \"Agree stop criteria up front\", and in the plan, \"Stop criteria agreed in advance: for example, any group's selection rate below 80% of the highest group\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 609,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1512,
+      "evidence": "wc -w rollout-plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise and correct on the essentials, with a control-group pilot and honest gaps (Belgium unverified). It is thinner than the best plans: little on vendor contract terms, no cost of human review in the recommended design, and a shadow test on past applications that Dutch retention rules may not allow."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Art. 22, SCHUFA, Annex III and 2 Dec 2027, WOR 27(1)(e)/(k)/(l), BetrVG sections 95 and 87(1) no. 6, and Mobley v. Workday (2025). 4,000 x 2 min = 133 h, about 1 FTE. 'Inference of sensitive traits (prohibited in recruitment since 2 February 2025)' is broad, since the AI Act bans it only via biometric categorisation, but it is defensible given photos on CVs."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None found."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It runs the pilot against a matched control group of roles screened the current way, so the time and quality gains are measured, not assumed.",
+      "evidence": "Plan Phase 3: 'A matched control group of roles screened the current way.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives a rollout plan with a pilot measured against today's process, a person reviewing every rejection or low score, and stop criteria agreed up front.",
+        "reason": "'A person reviewing every rejection' should exclude a one-click bulk reject of the low band with only a sample read (sample A). Rubber-stamping falls back under Art. 22 after SCHUFA. Ask for individual review of each proposed rejection, with no bulk-reject, and a check against rubber-stamping."
+      },
+      {
+        "assertion": "The reply flags that works councils have consent or co-determination rights over recruitment selection rules or such a tool in the Netherlands and Germany.",
+        "reason": "The assertion doesn't check the legal hook. Samples citing the wrong WOR letter (27(1)(d), or only (l) for applicant assessment) pass the same as those citing 27(1)(e) WOR and section 95 BetrVG. Consider requiring the hiring-policy or selection-guideline basis."
+      },
+      {
+        "reason": "No assertion checks whether the reply prices keeping a human on every rejection, for example the 0.3-0.75 FTE gap against auto-reject. That is what actually separates a workable alternative from a bare 'no'. No assertion covers Belgium (CBA 9/39 information and consultation) either, though the user hires there."
+      }
+    ],
+    "overall": "Passes everything in a compact form; less depth than the strongest samples."
+  }
+}

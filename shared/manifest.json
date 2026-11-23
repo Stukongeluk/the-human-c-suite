@@ -4,31 +4,36 @@
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "people-and-change.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "when-cuts-are-unavoidable.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "company-context.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "data-sources.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "tech-evaluations.md": [
       "the-human-cto",
@@ -50,31 +55,36 @@
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "european-and-nordic-practice.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "good-leadership.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "leadership-toolkit.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ],
     "company-types.md": [
       "the-human-ceo",
       "the-human-cto",
       "the-human-cpto",
-      "the-human-cfo"
+      "the-human-cfo",
+      "the-human-chro"
     ]
   },
   "blocks": {
@@ -82,25 +92,29 @@
       "the-human-ceo/references/evidence.md",
       "the-human-cto/references/evidence.md",
       "the-human-cpto/references/evidence.md",
-      "the-human-cfo/references/evidence.md"
+      "the-human-cfo/references/evidence.md",
+      "the-human-chro/references/evidence.md"
     ],
     "hidden-costs-of-layoffs": [
       "the-human-ceo/references/evidence.md",
       "the-human-cto/references/evidence.md",
       "the-human-cpto/references/evidence.md",
-      "the-human-cfo/references/evidence.md"
+      "the-human-cfo/references/evidence.md",
+      "the-human-chro/references/evidence.md"
     ],
     "shortcuts-and-decision-quality": [
       "the-human-ceo/references/evidence.md",
       "the-human-cto/references/evidence.md",
       "the-human-cpto/references/evidence.md",
-      "the-human-cfo/references/evidence.md"
+      "the-human-cfo/references/evidence.md",
+      "the-human-chro/references/evidence.md"
     ],
     "people-templates": [
       "the-human-ceo/references/templates.md",
       "the-human-cto/references/templates.md",
       "the-human-cpto/references/templates.md",
-      "the-human-cfo/references/templates.md"
+      "the-human-cfo/references/templates.md",
+      "the-human-chro/references/templates.md"
     ],
     "tech-templates": [
       "the-human-cto/references/templates.md",
@@ -110,13 +124,15 @@
       "the-human-ceo/references/evidence.md",
       "the-human-cto/references/evidence.md",
       "the-human-cpto/references/evidence.md",
-      "the-human-cfo/references/evidence.md"
+      "the-human-cfo/references/evidence.md",
+      "the-human-chro/references/evidence.md"
     ],
     "voice-and-fair-process": [
       "the-human-ceo/references/evidence.md",
       "the-human-cto/references/evidence.md",
       "the-human-cpto/references/evidence.md",
-      "the-human-cfo/references/evidence.md"
+      "the-human-cfo/references/evidence.md",
+      "the-human-chro/references/evidence.md"
     ]
   }
 }

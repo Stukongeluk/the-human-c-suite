@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+      "passed": true,
+      "evidence": "Bottom line: 'The 6% gap... can't wait five years. Check how much of it is really unexplained, close that part within about 12 months, and tell your own people once the fix is in place... Staying silent won't last.' The plan is dated ('From 1 April 2027... Everything else is closed from 1 January 2028') and budgeted ('separate pay-equity pool... about 1% of payroll')."
+    },
+    {
+      "text": "The reply states correctly that equal pay for equal work is already law (Article 157 TFEU or national equal pay law), so a same-role gap is a legal exposure now, whatever the transposition date of the new directive.",
+      "passed": true,
+      "evidence": "'Paying women less for the same work is already unlawful in both countries.' 'Unless objective, gender-neutral factors explain it, it is unequal pay, and that is already prohibited: Art. 157 TFEU at EU level; in the Netherlands art. 7:646 BW and the Equal Treatment of Men and Women Act (WGB); in Belgium the Gender Act of 2007.' To the CFO: 'it's unlawful today, not in 2028.'"
+    },
+    {
+      "text": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+      "passed": true,
+      "evidence": "'If the gap there is 5% or more, can't be justified on gender-neutral grounds and isn't fixed within six months of the report, you must run a joint pay assessment with workers' representatives.' Also: 'With 250+ staff, your Dutch entity will report every year, first by 7 June 2028 on 2027 pay'; 'any employee can ask for average pay by gender for their category of work, and you must answer within two months'; the target start of 1 Jan 2027 now looks unlikely."
+    },
+    {
+      "text": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+      "passed": false,
+      "evidence": "The separation is excellent (the two-gaps table), and the method is detailed: regression with gender-neutral controls, testing those controls for bias, equal-value comparisons across job families, a per-person list. But nothing in the reply or the briefing deals with small groups: no cell sizes, minimum n or aggregation of small groups."
+    },
+    {
+      "text": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+      "passed": true,
+      "evidence": "'Closing a 3-6% like-for-like gap costs an assumed EUR 0.4-0.8M a year fully loaded, about 0.7-1.4% of payroll.' The cost model in the briefing adds up. Framing: the deferred money 'is pay women can claim back... In Belgium, a claimant can ask for a flat six months' pay... about EUR 30k, or roughly eight years of one woman's gap'. On attrition: the women it loses 'will cost you billable capacity, not just recruiting fees'."
+    },
+    {
+      "text": "The reply includes telling employees or their representatives honestly and fixing the causes (such as starting pay, promotion or bonus decisions).",
+      "passed": true,
+      "evidence": "Works councils in Q1 2027 ('Belgium: put the findings into the two-yearly pay analysis and agree an action plan... Netherlands: share the findings with the OR'). 'talk one-to-one with everyone whose pay changes. Then send an all-staff note covering both numbers'. Causes: 'salary ranges in job ads, no questions about previous pay, and a gender check in every pay-rise and promotion round.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1729,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2768,
+      "evidence": "wc -w pay-gap-briefing.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Thorough and mostly accurate, with the best cost model: it uses the correct g/(1-g) raise, and its CFO-versus-recommended deltas and back-pay range check out. The 12-month plan is dated with owners. But it is very long, slightly stale on the Dutch debate date, has no small-group handling, and concedes 'we don't go public now' in the CFO script."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) 'Plenary debate is planned for week 50 of 2026 and week 2 of 2027': as of 19-20 Nov 2026 the Tweede Kamer debate is set for 14 December 2026 (week 51), and the minister has said 1 January 2027 is not feasible (AWVN, 19 Nov 2026; Salaris Vanmorgen, 20 Nov 2026). This is a minor stale date and doesn't change the advice. Everything else checked holds: Art. 157 TFEU, art. 7:646 BW, WGB, Gender Act 2007; bill 36949; first NL report 7 June 2028 on 2027; OR consent over how unjustified differences are fixed (CMS); Belgian 2012 act incl. mediator; the Belgian minister asked the Commission for a six-month postponement (L&E Global); a preliminary Belgian draft exists (Baker McKenzie, Sep 2026). Arithmetic: 162 x 60k x 6.38% x 1.27 = ~EUR 790k; deltas 138/474/316/158k = EUR 1.09M; deferral 2C = EUR 0.8-1.6M."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Uses its own confidence tags ('[verified: statute]', '[assumed: ...]') but doesn't mention skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader says the gap is leadership's responsibility. It frames delay as 'a choice you knowingly made' but not the cause as leadership's."
+    },
+    "best_insight": {
+      "value": "Fund the corrections from a separate pay-equity pool, not the merit budget, so they aren't seen as costing colleagues their raises. Also look beyond role and grade, because equal-value comparisons across job families can show gaps the 6% misses.",
+      "evidence": "reply.md How to act step 3 and Risks; briefing section 4 item 6 and section 5"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+        "reason": "The clause 'with care for small groups' decides this assertion: B, C, F and G give strong analysis methods (hourly pay, all pay elements, equal-value comparisons, testing whether the controls are biased) and still fail on it. Consider splitting it into (a) separating the gaps and the objective-factor method and (b) small-cell handling, so the score shows which part was missed."
+      },
+      {
+        "reason": "No assertion checks the Belgian side, although it is what most defeats the CFO's 'say nothing' plan: the 22 April 2012 pay gap act already requires a pay-structure analysis for the works council every two years (50+ workers). It also doesn't check per-entity scope (Dutch entity 420 = annual reporting; Belgian 230 = 150-249 band). The strongest samples covered both."
+      },
+      {
+        "assertion": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+        "reason": "'Opens with ... a dated, budgeted plan' is ambiguous about whether the dates and budget must appear in the opening or anywhere in the reply. Only H puts both in its first lines. Say which is meant."
+      },
+      {
+        "reason": "Nothing checks whether the reply warns against funding the corrections from colleagues' raises or merit budget, or whether leadership owns the cause. Both separate good advice from merely compliant advice here (B suggests using part of the merit budget; C and H warn against it; E and H put the leadership bonus pool first)."
+      }
+    ],
+    "overall": "Fails only the small-group clause. It is the strongest cost model of the set, but long, and one parliamentary date is stale."
+  }
+}

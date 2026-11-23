@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: chro-ai-cv-screening
+expected_outcome: >
+  Advises against automatic rejection without a person and offers a workable way to handle the volume, gets the AI Act and GDPR points right, treats 'bias-free' as a claim to test on the company's own data, flags works council rights, and gives a measured pilot with human review and stop criteria.

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to reject candidates automatically without a person reviewing them, and offers a workable way to handle the volume.",
+      "passed": true,
+      "evidence": "First line: \"My recommendation: switch the module on as a ranking assistant, not as an auto-rejecter. Let it score every CV and say why, and have a recruiter confirm each of the roughly 2,800 rejections a month. That costs an estimated 0.4-0.75 FTE more than full automation, about EUR 21-52k a year.\" It adds knock-outs and scheduling automation for volume."
+    },
+    {
+      "text": "The reply states that AI used to screen or evaluate job applicants is high-risk under the EU AI Act (Annex III) and gets the timing right: those obligations are not yet in force and apply from 2 December 2027; or it says correctly that they are coming but don't apply yet.",
+      "passed": true,
+      "evidence": "\"The AI Act classes CV filtering as high-risk. The deployer duties (trained human oversight, logs, informing candidates and staff) apply from 2 December 2027, after the Digital Omnibus delay.\" Plan section 5: \"AI Act, Annex III point 4 ... From 2 Dec 2027, after the Digital Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026)\". Verified against Lewis Silkin (OJ L 2026/1744, in force 27 July 2026)."
+    },
+    {
+      "text": "The reply flags the GDPR rule on decisions based solely on automated processing (Article 22) for automatic rejections, and the need to inform candidates and to assess data protection impact.",
+      "passed": true,
+      "evidence": "\"It's the case the GDPR restricts. Recital 71 names 'e-recruiting practices without any human intervention'\"; \"as controller, the DPIA, transparency and safeguards are yours\". Plan: \"GDPR art. 35 | Data protection impact assessment before processing starts\"; design rule 7: \"Candidates are told up front, in Dutch, French, German and English ... AI helps rank applications, a person decides\"."
+    },
+    {
+      "text": "The reply treats \"bias-free\" as a claim to test: it asks for the vendor's evidence or audit and tests selection rates by group (such as gender, age, nationality or disability) on the company's own applicants before and after any rollout.",
+      "passed": true,
+      "evidence": "\"'Bias-free' is a claim, not evidence\". Vendor: \"an adverse-impact report on European data\". Before rollout: \"Shadow test ... compare selection rates by gender, age band and CV language. Proceed only if no group falls below 80% of the best-treated group.\" After: \"monthly dashboard, quarterly bias review, yearly independent audit\", and a selection-rate ratio 'at the AI step and at each later stage'."
+    },
+    {
+      "text": "The reply flags that works councils have consent or co-determination rights over recruitment selection rules or such a tool in the Netherlands and Germany.",
+      "passed": true,
+      "evidence": "\"In the Netherlands they have a consent right on hiring-policy rules (art. 27(1)(e) WOR). In Germany they must consent to selection guidelines, including AI-built ones (section 95(1), (2a) BetrVG).\" The plan adds section 87(1) no. 6, sections 90 and 80(3), and Belgium's CBA 9/39."
+    },
+    {
+      "text": "The reply gives a rollout plan with a pilot measured against today's process, a person reviewing every rejection or low score, and stop criteria agreed up front.",
+      "passed": true,
+      "evidence": "Pilot against today: \"Count how many of your actual hires it would have rejected\", and the pilot gate \"Time to first response better than baseline\". Every rejection reviewed: \"Recruiters confirm every rejection\"; \"Recruiters can't bulk-reject candidates below a score threshold. Each proposed rejection is opened together with the CV\". Stop rules are set in advance (section 11), for example \"A group's selection-rate ratio falls below 0.8 ... pause the score for that job family\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 923,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4482,
+      "evidence": "wc -w rollout-plan.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A decision-ready plan with correct, dated law, a priced alternative (0.37-0.75 FTE, arithmetic checks out), rules against rubber-stamping, stop rules, recruiter reassurance and named accountability. It is long, but every section earns its place."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Recital 71, WP251's 'tens of thousands of applications' example, SCHUFA 7 Dec 2023, C-203/22 of 27 Feb 2025, WOR 27(1)(e), section 95(2a) BetrVG, AGG sections 15/22 (three months' pay, two months to claim), the Omnibus date, number and Art. 4 softening (Lewis Silkin), Sackett 2022 (.07/.42/.33), the UW study (85%/9%, 52%/11%), the EEOC iTutorGroup case (2023) and Mobley v. Workday (May 2025). The cost table adds up: 2,800 x 2-4 min = 93-187 h; half = 47-93 h; /125 h = 0.37-0.75 FTE."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt, though it says up front: 'if the system treats applicants unfairly, that's on leadership, not on the recruiter who clicked confirm'."
+    },
+    "best_insight": {
+      "value": "It shows that CVs are a weak predictor for most retail roles (experience .07 vs structured interviews .42), so a no-CV short application for store roles may save more time and be fairer than any CV scoring.",
+      "evidence": "Reply bullet 5 and option D in the plan."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply gives a rollout plan with a pilot measured against today's process, a person reviewing every rejection or low score, and stop criteria agreed up front.",
+        "reason": "'A person reviewing every rejection' should exclude a one-click bulk reject of the low band with only a sample read (sample A). Rubber-stamping falls back under Art. 22 after SCHUFA. Ask for individual review of each proposed rejection, with no bulk-reject, and a check against rubber-stamping."
+      },
+      {
+        "assertion": "The reply flags that works councils have consent or co-determination rights over recruitment selection rules or such a tool in the Netherlands and Germany.",
+        "reason": "The assertion doesn't check the legal hook. Samples citing the wrong WOR letter (27(1)(d), or only (l) for applicant assessment) pass the same as those citing 27(1)(e) WOR and section 95 BetrVG. Consider requiring the hiring-policy or selection-guideline basis."
+      },
+      {
+        "reason": "No assertion checks whether the reply prices keeping a human on every rejection, for example the 0.3-0.75 FTE gap against auto-reject. That is what actually separates a workable alternative from a bare 'no'. No assertion covers Belgium (CBA 9/39 information and consultation) either, though the user hires there."
+      }
+    ],
+    "overall": "Passes everything, with precise, current law and a costed, workable alternative."
+  }
+}

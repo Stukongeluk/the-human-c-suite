@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation against a fixed quota of low ratings and says why (it labels a fixed share of every team whatever its actual performance), while taking the CEO's underlying concern seriously.",
+      "passed": true,
+      "evidence": "Reply opens: 'I'd not run the 10% quota with a fixed exit date. I'd run a calibrated review with a real support track instead. That still addresses underperformance...' Why: 'In a team of six, 10% is 0.6 of a person, so someone is picked whether or not anyone is struggling.' CEO's concern: 'I want the same outcome you do: a higher standard and faster action on real underperformance.'"
+    },
+    {
+      "text": "The reply cites at least one real piece of evidence on forced or stack ranking, or on what drives performance differences between teams, with its source (for example Microsoft dropping stack ranking in 2013, simulation research on forced distribution, or research on managers' effect on teams).",
+      "passed": true,
+      "evidence": "'Microsoft, a well-known user, [ended stack ranking in 2013](bloomberg.com/... 2013-11-13 ...) after years of criticism.' A real, sourced example of the kind the assertion lists. It is the only evidence cited: no research."
+    },
+    {
+      "text": "The reply flags that the works council must consent to the appraisal system in both countries (Netherlands: article 27(1)(g) WOR or its consent right on staff appraisal; Germany: §94 BetrVG appraisal principles), and that a plan starting from a ranking is weak ground for a later dismissal (the Dutch court expects timely notice, support and a real chance to improve; in Germany a low-performance dismissal usually needs a warning and proof).",
+      "passed": true,
+      "evidence": "Consent in both countries: 'In the Netherlands, systems that can assess performance need council consent (art. 27(1)(l) WOR). In Germany, where a council exists... §94 BetrVG covers assessment principles (counsel to confirm). The CEO cannot launch this alone.' Dismissal: 'It expects the employee to have been told in good time, supported and given a real chance to improve (art. 7:669(3)(d) BW). A rank or quota is no evidence, and a plan whose end is fixed in advance would look like a formality.' Germany: 'a dismissal for performance normally needs documented shortfalls and prior warnings.' Passes on substance, but the Dutch article is mis-cited: staff appraisal is 27(1)(g), and 27(1)(l) covers monitoring facilities. Recorded under factual_errors."
+    },
+    {
+      "text": "The reply delivers a usable alternative process: clear expectations per role, calibration that aligns standards and checks for bias without forcing a distribution, and individual handling of real underperformance with support and a realistic period.",
+      "passed": true,
+      "evidence": "Document: 'One page per role family: what \"meets expectations\" looks like, in observable outcomes'; calibration: 'Check that ratings are consistent across teams and free of bias. Review every \"needs support\" rating and every outlier. The expected spread is a sanity check, never a target.'; support plan with coaching, training, a buddy, workload and role fit checked, weekly check-ins, a first review at 60 days and the option 'progress but not yet there (plan continues with new dates)'. The reply's line that the support track 'still fits the CEO's Q3 timeline' is optimistic, but the plan itself is open-ended."
+    },
+    {
+      "text": "The reply includes a check of ratings by group (such as gender, age, part-time or people on leave) before ratings are used for pay, plans or exits.",
+      "passed": false,
+      "evidence": "No check of ratings by group before they are used. Calibration (step 4) says only 'free of bias'. The group breakdown appears only under 'Measures we review' as 'Share of \"needs support\" ratings reversed or changed in calibration, and the pattern by team, gender, age, location and part-time status', a review measure with no timing before pay, plans or exits. The manager briefing's 'Watch for these' (visibility of part-time staff, leave as context) is guidance to managers, not a group check of the results."
+    },
+    {
+      "text": "The reply gives the user a line or approach for a private conversation with the CEO first, and a usable manager briefing or its outline.",
+      "passed": true,
+      "evidence": "Reply: 'Raise it privately first, before any wider forum. For example: \"I want the same outcome you do: a higher standard and faster action on real underperformance. This design gets us there without a legal and retention risk I can show you. Let me bring a version with the dates.\"' Document Part 2: a manager briefing with what is asked, what is not asked, biases to watch, conversation guidance, plan basics and confidentiality."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 689,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1171,
+      "evidence": "wc -w review-process-and-manager-briefing.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A sound recommendation with a useful options table and good manager-bias guidance, but it mis-cites the Dutch consent right, lacks a pre-use equality check by group, cites only an anecdote as evidence, and tells the CEO Q3 is 'realistic', which is optimistic in Germany."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) Cites art. 27(1)(l) WOR (monitoring facilities) as the consent basis for the performance-review system; staff appraisal is 27(1)(g), with dismissal policy under 27(1)(e). (2) Minor: Dutch works council 'mandatory above 50 employees'; the threshold is from 50."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt. (The briefing says a first-time surprise means 'the failure is ours, not theirs'.)"
+    },
+    "best_insight": {
+      "value": "It proposes that the CEO and executive team go through the same standards and calibration first, and asks counsel to check whether ~60 quota-driven exits per site could count as a collective dismissal (WMCO / §17 KSchG).",
+      "evidence": "Document step 8 and 'Where exits can happen'; reply point 5."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply cites at least one real piece of evidence on forced or stack ranking, or on what drives performance differences between teams, with its source (for example Microsoft dropping stack ranking in 2013, simulation research on forced distribution, or research on managers' effect on teams).",
+        "reason": "A bare Microsoft-2013 anecdote with a news link passes, so the assertion does not separate samples that cite research (Scullen et al. 2005 with its limits) from those that cite one company story. Consider requiring at least one study or research finding, not only a company example."
+      },
+      {
+        "assertion": "The reply flags that the works council must consent to the appraisal system in both countries (Netherlands: article 27(1)(g) WOR or its consent right on staff appraisal; Germany: §94 BetrVG appraisal principles), and that a plan starting from a ranking is weak ground for a later dismissal (the Dutch court expects timely notice, support and a real chance to improve; in Germany a low-performance dismissal usually needs a warning and proof).",
+        "reason": "The assertion does not check that the cited provision is right: a sample citing art. 27(1)(l) WOR (monitoring facilities) instead of 27(1)(g) (staff appraisal) can still pass on the 'consent right' wording. Consider requiring the correct basis, or recording a mis-cited article as a fail."
+      },
+      {
+        "reason": "No assertion checks that the reply refuses to promise the CEO's end-of-Q3 exit date (warning, notice periods up to seven months in Germany, cantonal court or settlement in the Netherlands). One sample says Q3 'is realistic where the evidence supports it', which goes uncaught."
+      },
+      {
+        "reason": "No assertion checks whether the reply asks if the real driver is cost, and says that any cuts must follow statutory selection rules (afspiegeling / Sozialauswahl), not ratings. This was the sharpest point in the strongest samples."
+      }
+    ],
+    "overall": "Five of six pass. The group check is missing as a pre-use step, and the Dutch article is mis-cited, which assertion 3 doesn't catch. The Q3 promise goes untested by any assertion."
+  }
+}

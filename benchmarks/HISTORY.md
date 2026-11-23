@@ -2,6 +2,25 @@
 
 What each version of the seats was tested on, how it did and what the tests changed, newest first. The [main README](../README.md#does-it-help) has the comparisons in short; [CHANGELOG.md](../CHANGELOG.md) lists every change; the folders in this directory hold every reply, grade and token count from version 1.3 on.
 
+## Version 1.6: a humane CHRO
+
+Does a dedicated people seat give better advice on people decisions than the CEO seat? Six HR cases on Claude only, one run per setup, graded blind: forced ranking with a 10% quota, AI screening that auto-rejects 70% of applicants, five days back in the office, a 6% same-role pay gap the CFO wants kept quiet, a burnout survey the CEO wants called stable, and a layoff list ranked on ratings, sick days and part-time work. Next to the CEO seat ran `chro-advisor` from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) and no skill. The rule set before the test: the CHRO becomes the fifth seat only if it beats the CEO seat on both models.
+
+| Model | CHRO seat (draft) | CEO seat 1.5.2 | `chro-advisor` | Without a skill |
+|---|---|---|---|---|
+| Claude Sonnet | 34 of 36 checks (quality 7.5) | 27 of 36 (6.5) | 24 of 36 (5.5) | 23 of 36 (5.7) |
+| Claude Opus | 36 of 36 (9.0) | 33 of 36 (8.7) | 29 of 36 (7.5) | 32 of 36 (7.7) |
+
+**Read it with care.** One run per setup, and the checks were written with the CHRO seat. On Opus the lead over the CEO seat is small. `chro-advisor` is built for startup people strategy, while these cases are European, legal and adversarial. The return to office separated the setups most: the best answers wrote a proposal rather than a decision, because Dutch works councils must consent to a change in home-working policy.
+
+**What changed.** The draft missed two checks on Sonnet: an undated pay plan with a wrong 2027 reporting date, and an email that still announced five days as decided. On both models it almost never said that bad news was leadership's to own. Version 1.6.0:
+- **Pay:** corrects the Dutch pay transparency dates (1 January 2027 is no longer feasible; first reports in June 2028, per legal entity), adds Belgium's 2012 pay gap law, and fixes same-role gaps within months, showing a slower plan's "saving" as pay withheld.
+- **Return to office:** adds the Caterpillar and Booking.com rulings and the German transfer rule, and says that where representatives must consent, the announcement is a proposal.
+- **Bad news:** leadership says plainly that cuts, a pay gap or low trust come from its own decisions.
+- **Length:** an HR leader taking a plan to their own CEO or CFO gets at most 500 words, and what is cut goes into a document handed over with the reply.
+
+The shared country notes gained Belgium, the Dutch home-working rulings and the German ruling of April 2026 that dismissals are void when the mass-dismissal notification is missing or early. In three rounds of Sonnet reruns, graded blind next to the earlier answers, the fixed version passed every pay-gap and layoff check, 5 of 6 on the return to office, and the pay gap and forced ranking in under 500 words. Opus wasn't rerun: the shared web search budget was spent, and its draft had passed all 36 checks. Details and every run: [`chro-v1.6/`](chro-v1.6/benchmark.md).
+
 ## Version 1.5.2: against the other C-level advisors, under pushback and when picking a skill
 
 Three tests on Claude only, graded blind:

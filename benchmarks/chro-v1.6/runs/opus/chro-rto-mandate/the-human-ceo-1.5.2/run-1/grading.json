@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": true,
+      "evidence": "First line: \"I wouldn't send 'five days a week from 1 March'.\" Then: 'The draft in announcement-email.md is the version you can send: the problem, the CEO's proposal as a proposal, and how and when you'll decide.' The email weighs alternatives (fixed team days, in-office onboarding, on-site weeks for people who live far away) and gives a decision timeline."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": true,
+      "evidence": "'In a randomised trial, hybrid working cut resignations by a third ... After mandates at large US tech and finance firms, turnover rose about 14% ... vacancies took 23% longer to fill.' Sources are listed: Bloom et al., Nature 2024; Ding et al. (Baylor) 2025; Emanuel, Harrington & Pallais, NBER w31880. The '18% more code feedback' matches the paper's abstract (18.3%)."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "'What does \"culture\" mean in data: engagement scores, onboarding time, who leaves, Utrecht–Berlin friction?'; 'That supports targeted office time (onboarding, juniors, team days), not five days for everyone'; 'Five office days still leave Utrecht–Berlin teams on video. If that's where culture breaks, the fix is different.' The email: 'We'll choose what best fixes the problems above at the lowest cost to your lives'."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": false,
+      "evidence": "Contracts: 'where the contracts of the roughly 265 remote hires say remote, an email can't change them'; email: 'that stays as it is unless you and we agree otherwise'. Germany: transfer consent (BAG 7 ABR 34/20) and 'we have informed the Betriebsrat and will agree the details with it'. But the Wet flexibel werken isn't mentioned anywhere."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": false,
+      "evidence": "Notice is in months: 'Any change starts at least [three] months after the decision, and later for people for whom it is a bigger change'. Hardship: 'Care duties, health, a long commute: talk to your manager or HR. There will be a hardship arrangement'. But neither the reply nor the email sets a review date for the policy."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "'Step 1: talk to the CEO privately before anything goes out', with an opening line, followed by 'What to bring' (Booking.com, cost, the CEO's own evidence, two offices, ownership)."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 527,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 700,
+      "evidence": "wc -w announcement-email.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Concise and well sourced, with a ready CEO script, fair use of the CEO's own evidence, leadership owning the culture problem and a real proposal email. It misses the Wfw and a review date."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Caterpillar 2025 (ECLI:NL:RBOBR:2025:5758, the OR could declare the decision void); Booking.com October 2026 (ECLI:NL:RBAMS:2026:10590, 40%, voluntary attendance not working, six months, hardship clause); the OR's appeal (announced 10 Nov 2026); BAG 7 ABR 34/20 (2021) on transfer consent; NBER 18.3%; Ding ~14%/23%; Bloom one third; 14 weeks. No errors."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Email: 'That is on the leadership team, not on how any of you have chosen to work ... Fixing that is our job.' Reply: \"'To fix our culture' makes culture sound like the staff's problem. In the draft, the CEO says it's leadership's, and leaders go first.\""
+    },
+    "best_insight": {
+      "value": "If part of the hope is that some people will leave, the mandate is a headcount reduction by another route and must be handled as one.",
+      "evidence": "reply.md, 'What to bring'."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion rewards the leadership owning the culture problem rather than implying remote staff broke it, or the warning against using a mandate as a covert headcount cut. This sample does both, and they matter for trust."
+      },
+      {
+        "assertion": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+        "reason": "The Wfw element alone failed this sample and H, both of which had the strongest German analysis. Consider splitting the three legal points."
+      }
+    ],
+    "overall": "High-quality sample that loses two assertions on specific omissions (Wfw, review date)."
+  }
+}

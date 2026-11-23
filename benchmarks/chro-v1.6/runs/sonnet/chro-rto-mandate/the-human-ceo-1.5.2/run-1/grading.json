@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": true,
+      "evidence": "First line: \"I'd advise against sending an email that announces this as a final decision on 1 March; send one that announces it as a proposal, with a real input window, and only after managers and employee representatives have been told.\" email-draft.md is a usable proposal email with decided/open items, a two-week input window and Q&A sessions. Caveat: the draft still proposes five days, so the 'better approach' is about process, not the policy."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": false,
+      "evidence": "No study or source is cited. The only retention point is 'Expect regretted leavers, and your best people are the ones who can leave' and an illustrative '5 to 10%' that the reply itself calls 'an illustration only'."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": false,
+      "evidence": "It asks: \"What exactly is broken, and what evidence is there (attrition, engagement, onboarding, delivery)? If five days is the answer, why not three or four? A short pilot with a measure is a reversible alternative\". But it doesn't link any option to a specific culture problem. The alternatives (three or four days, a pilot) are generic, so the matching half is missing."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": false,
+      "evidence": "The contract point is present ('a single email can't change those terms'; draft: 'where the law requires it, needs your agreement'). There is no mention of the Wet flexibel werken. The German point is only 'If a Berlin Betriebsrat exists, the same applies', after framing the Dutch right as art. 25 advice. Nothing on co-determination over how mobile work is organised."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": false,
+      "evidence": "There is a review ('After six months we will look at...'). But there is no notice plan: the decision comes 'by [date, e.g. 22 January]' for a 1 March proposal, about five weeks, with the start date merely 'open'. There is no case-by-case process for care, disability or distance; 'exceptions and phasing' is only listed as open."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "\"Before you send it, two questions for the CEO\": what exactly is broken and what the evidence is, and whether there are desks for 800 people and what losing part of the remote third would cost. The sequence starts with 'exec team'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 487,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 592,
+      "evidence": "wc -w email-draft.md"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "Its process instincts are sound (proposal, input window, managers first, leaders go first), but it has no evidence, the legal points are vague and frame the OR's right as advice rather than consent, and the draft still proposes five days, so the HR director gets little to change the CEO's mind."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No outright error. Weakness: it says the Utrecht OR 'must be asked for advice ... (art. 25 WOR)' and only 'may have consent rights', and the draft tells staff the OR 'has been asked for its advice'. Recent case law (Caterpillar 2025, Booking.com 2026) treats a home-working policy change as needing consent under art. 27 WOR, so this understates the main constraint. It is hedged, so not counted as an error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The draft says 'I may be wrong about the cause or the cure', but no leader takes responsibility for the culture problem."
+    },
+    "best_insight": {
+      "value": "It suggests a short pilot with a measure as a reversible alternative to a company-wide order, and asks whether both offices even have desks for 800 people five days a week.",
+      "evidence": "reply.md, questions for the CEO."
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+        "reason": "This passes when a sample objects only to the 'final decision' framing while its draft still proposes five days. Consider saying whether recommending a lighter policy is required, or whether a process change is enough."
+      }
+    ],
+    "overall": "Assertions 2, 4 and 5 rightly caught the missing evidence, legal detail and notice plan."
+  }
+}

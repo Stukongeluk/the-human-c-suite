@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": false,
+      "evidence": "It opens: 'I wrote the email, but I changed one thing. It announces the direction and a 1 March start while saying plainly what is still open. It does not say \"everyone, five days, no exceptions\".' The email says: 'What we are deciding. From 1 March, our default is that we work from the office, five days a week.' It softens the exceptions but still announces the five-day mandate as decided. The reply says 'The email draft works for (a) or (c)'; it doesn't recommend against the mandate."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": true,
+      "evidence": "\"Among 54 large US tech and finance firms that mandated a return, turnover went up by about 14%, most among women, senior and skilled staff, and hiring took about 23% longer ([Ding et al., 2025](Baylor link)). This is correlation, mostly in the US\". Verified against the Baylor page."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "\"'Fix our culture' needs a specific problem ... Which problems has the CEO seen: onboarding, handoffs between Utrecht and Berlin, or something else?\" Options are matched: '(b) Teams agree anchor days with a set minimum ... it targets the specific problems'; '(c) Five days for new joiners from 1 March'. The email has placeholders for 'two or three specific things, with a fact each'."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": true,
+      "evidence": "'where that is in a contract or offer letter, an email can't change it'; email: 'we will not change it without your agreement or a proper basis to do so'. 'Dutch employees can also ask to change their place of work under the Wet flexibel werken, and you have to answer in writing.' 'In Germany, how mobile work is organised needs works council agreement where one exists.'"
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": true,
+      "evidence": "Timing: '1 March is about 14 weeks away. That is tight ..., so push for a later date if the consultation turns anything up.' Email: 'If distance, care for a family member, health, or a disability makes five days hard ... We will look at each situation, one by one, and a request will get a written answer from us.' Review: 'We will review this on [date, about three months after 1 March]', and the reply says to put the date in the email. A modest pass: the notice is the CEO's ~3 months, with a push for later."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "'Two things to raise with the CEO, privately and first': the culture problem needs to be specific, and the retention cost."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 644,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 615,
+      "evidence": "wc -w announcement-email.md"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Correct legal pointers, a sourced retention study and useful options, but the email still announces five days as the decided default, which is exactly what the Dutch consent right makes risky."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Ding et al. figures, Wfw place-of-work requests, art. 25 WOR advisory right, art. 27 covering working hours, and 14 weeks to 1 March. No errors. Weakness: it treats the OR's consent right as uncertain ('Ask counsel whether a consent right applies as well'), though the 2025-2026 case law says it does. Internal inconsistency: the email header says 'Send only after the works councils have been consulted', but the email says they 'are being consulted now'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The email says 'not everyone will agree with me', but no leader says the culture problem is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Option (c), five days for new joiners from 1 March with existing staff phased in, sidesteps most of the contract problem. It also asks the sharp question of whether the contracts actually say remote or only the job ads did.",
+      "evidence": "reply.md, options and closing questions."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+        "reason": "This sample passes while understating the OR's consent right under art. 27 WOR, the point that decides whether a 1 March mandate can stand. Add it to this assertion or to a separate one."
+      }
+    ],
+    "overall": "Assertion 1 correctly separates this 'mandate with caveats' sample from those that recommend against the mandate."
+  }
+}

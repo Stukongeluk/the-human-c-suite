@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+      "passed": true,
+      "evidence": "Opening: 'Don't take the CFO's plan to the board. Close the 6% in the next pay round (or one off-cycle adjustment), tell your people and their representatives, and treat the 14% as a separate, longer job. Quiet, five-year catch-up is the one option that gets more expensive and riskier every year.' The budget comes in the CFO section: 'It is one budgeted line, not a surprise' and 'phase the cost within the year'."
+    },
+    {
+      "text": "The reply states correctly that equal pay for equal work is already law (Article 157 TFEU or national equal pay law), so a same-role gap is a legal exposure now, whatever the transposition date of the new directive.",
+      "passed": true,
+      "evidence": "'Equal pay for equal work is already law (Article 157 TFEU). A 6% gap between men and women in the same role and grade is a legal exposure today.'"
+    },
+    {
+      "text": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+      "passed": true,
+      "evidence": "'Under the pay transparency rules, an unexplained gap of 5% or more that isn't fixed within six months triggers a joint pay assessment with worker representatives.' The bullet is about the same-role-and-grade gap, so the category of workers is implied, and 'unexplained' stands for 'not justified'. It is less precise than the directive's wording, but nothing in it is wrong. Dates and transposition: 'The Dutch bill is still in parliament (first report expected June 2028, covering 2027), so confirm dates with counsel.' This matches the Rijksoverheid page: the bill went to the Tweede Kamer on 21 May 2026, aimed at 1 January 2027, with 150+ employers reporting by 7 June 2028 on 2027."
+    },
+    {
+      "text": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+      "passed": false,
+      "evidence": "The separation is there: 'Treat the 14% separately. It mostly reflects who sits in senior, higher-paid roles'. But the guidance on analysis is one clause: 'check that the 6% is real: how many people per cell, and whether grade or location explains any of it.' Grade is already controlled for in a same-role-and-grade gap. The reply names no other factors (tenure, experience, performance), never says the factors must be objective and gender-neutral, and does not say what to do with small cells. That is a nod, not an explanation of how to analyse it."
+    },
+    {
+      "text": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+      "passed": true,
+      "evidence": "Method from payroll: 'Cost: 6% of the women's pay in the affected grades. Ask finance to price it.' This is a rough formula that ignores the explained/unexplained split, but it is specific and computable. Framing: 'Slow isn't cheap: it means back pay, interest, legal fees and disclosure on someone else's timetable'; 'In the Netherlands they can claim it back for five years, with interest'; 'replacing an engineer costs half to two times salary.'"
+    },
+    {
+      "text": "The reply includes telling employees or their representatives honestly and fixing the causes (such as starting pay, promotion or bonus decisions).",
+      "passed": true,
+      "evidence": "'Fix the causes: starting salaries, bonus and promotion criteria.' and 'Brief both works councils early, while the plan can still change. Then tell all staff plainly that this is leadership's pay system to put right, not the employees' fault.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 495,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A sound, tight and legally accurate answer with a usable CFO line, but its guidance on checking the 6% is thin, its cost formula is rough, and it assumes the CFO is a man ('His worry') in an answer about gender pay."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date found. One claim is unverified (Dutch bill gives consent on the action plan). 'His worry' assumes the CFO's gender, which is an unsupported assumption, not a legal error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'tell all staff plainly that this is leadership's pay system to put right, not the employees' fault.'"
+    },
+    "best_insight": {
+      "value": "It answers the CFO's leak worry with 'You control the timing by telling people first', and offers a concession that keeps within the rules: phase the cost within the year, biggest adjustments first.",
+      "evidence": "'What to tell the CFO' section."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+        "reason": "None of the samples puts 'budgeted' in the opening; it always appears later. Either drop 'budgeted' from the opening requirement or say the budget may appear anywhere, so graders apply it the same way."
+      },
+      {
+        "assertion": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+        "reason": "A rough '6% of women's pay' passes. To make the assertion discriminate, ask that only the unexplained, per-person shortfall is costed, as an annual recurring cost plus charges."
+      }
+    ],
+    "overall": "Assertions cover the core well; the analysis assertion (small groups, objective factors) is the one that separates thin answers from thorough ones."
+  }
+}

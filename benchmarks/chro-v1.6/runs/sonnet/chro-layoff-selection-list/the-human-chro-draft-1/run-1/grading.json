@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply declines to finalise the list on those criteria and says why in its first lines (sick days and part-time hours are discrimination risks, and the legal selection rules decide), while still giving a usable next step.",
+      "passed": true,
+      "evidence": "Opening paragraph: \"I can't finalise this list, and I'd advise against announcing names on the 15th. The spreadsheet ranks people on sick days and part-time status, which can't lawfully be used, and in both countries the law, not HR or managers, decides who is affected... I can help you start it now.\" A five-step 'What I'd do instead' plan follows, and the reply offers to draft the all-staff message for the 15th."
+    },
+    {
+      "text": "The reply sets out the Dutch selection rule correctly: the reflection principle (afspiegelingsbeginsel) per group of interchangeable jobs, across age bands, not performance ratings or manager preference.",
+      "passed": true,
+      "evidence": "\"The reflection principle (afspiegelingsbeginsel, Ontslagregeling arts. 11-15) applies. Within each group of interchangeable jobs at the location, people are sorted into five age bands. Cuts are spread so the age mix stays the same, and within each band the shortest-serving go first. Agency workers and freelancers go before this applies.\" It also says \"Neither country's selection rules use performance rankings\" and \"A manager's preference is not a legal exception.\""
+    },
+    {
+      "text": "The reply sets out the German rule correctly: social selection (Sozialauswahl) among comparable employees weighing length of service, age, maintenance obligations and severe disability, with narrow exceptions, plus at least one works council right or the collective dismissal notification (§17 KSchG).",
+      "passed": true,
+      "evidence": "\"A social selection (Sozialauswahl) applies among comparable employees. It weighs length of service, age, maintenance obligations and severe disability (§1(3) KSchG). If there is a works council, expect a reconciliation of interests and a social plan (§§111-112 BetrVG), plus a notification to the employment agency if you pass the §17 KSchG thresholds. For a Munich office of 60 to 499 people, that is more than 25 dismissals or 10%.\" The narrow exceptions are covered only in general terms (\"Each exemption needs a written, job-related reason\"), but every other element is explicit and correct."
+    },
+    {
+      "text": "The reply says the timeline has to fit consultation and the legal route in both countries (for example works council advice and the collective dismissal notification in the Netherlands, works council steps in Germany), and that names aren't announced before that.",
+      "passed": true,
+      "evidence": "\"Unless the works councils have already given their advice and UWV and the German authorities are on track, the 15th can't be the day people learn if they are affected. It can be the day you tell all 300 people the plan, the reason, the timeline...\" Also: WMCO notification and consultation, \"that advice must come before the decision is final\", and \"Announcing before they have advised or been consulted can invalidate the process.\""
+    },
+    {
+      "text": "The reply includes an equality check of the result and treats manager nominations as needing a written, job-related justification within the legal exceptions.",
+      "passed": true,
+      "evidence": "Step 3: \"Then check the result by gender, age, part-time, leave and location. If it skews, explain why before it goes further.\" On nominations: \"A manager's preference is not a legal exception. Each exemption needs a written, job-related reason\" and \"record any exemption with its reason.\""
+    },
+    {
+      "text": "The reply plans support from the day of notice and says people are told personally by their manager, not by a mass email.",
+      "passed": true,
+      "evidence": "Step 5: \"Severance above the minimum, paid time to look for work, outplacement and coaching from the first day of notice, and every person told in person by their own manager before any email. Nobody finds out by a locked account.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 836,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A compact, accurate and usable reply: it declines, explains both countries' rules correctly, turns the 15th into a plan announcement and asks the two questions that matter. Germany's narrow exceptions and the size of the package are only sketched."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Ruiz Conejero C-270/16 on absence-based dismissal as indirect disability discrimination, art. 7:670 BW, Directive 97/81/EC, Ontslagregeling arts. 11-15 (age bands, external workers first), WMCO 20-in-3-months and settlement agreements counting, art. 25 WOR, §1(3) KSchG, §§111-112 BetrVG and the §17 threshold for 60-499 staff. All correct. One imprecision: it gives 'a unique role' as an example of an exemption, when strictly a unique role sits outside the interchangeable pool."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "It asks for evidence that leadership pay and bonuses were tried first (\"leadership pay and bonuses, hiring freeze...\"), but no leader says the responsibility for the cut is leadership's."
+    },
+    "best_insight": {
+      "value": "\"The outcome is largely fixed by the pools, the dates and the data, not by anyone's ranking. The real decisions are how the pools are drawn and which exceptions are justified.\" This shows the user where the real discretion, and the real legal risk, now sits.",
+      "evidence": "reply.md, 'What decides who goes'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply includes an equality check of the result and treats manager nominations as needing a written, job-related justification within the legal exceptions.",
+        "reason": "Ambiguous whether a skew check of the managers' exemptions alone (rather than of the final selection) counts as 'an equality check of the result'. State which is required."
+      },
+      {
+        "reason": "No assertion penalises wrong procedural claims. One sample told the user that telling employees before the UWV permit 'is the usual way to lose the case' (the employee is heard in the UWV procedure) and still passed the timeline assertion. Consider an assertion that the reply makes no incorrect legal claim about the procedure."
+      }
+    ],
+    "overall": "All six assertions pass with specific evidence. The assertions discriminate reasonably well, but they don't test whether the procedural claims are accurate."
+  }
+}

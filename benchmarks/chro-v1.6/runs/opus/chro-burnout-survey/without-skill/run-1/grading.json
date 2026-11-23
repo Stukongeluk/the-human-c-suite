@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+      "passed": true,
+      "evidence": "Opens: \"Short version: don't soften the numbers, don't make resilience training the response, and settle this with your CEO before the board meeting, not during it.\""
+    },
+    {
+      "text": "The reply explains with evidence why resilience training alone is not the fix (for example the 2024 Oxford study of individual-level wellbeing interventions, or the WHO's description of burnout as an occupational phenomenon) and points to workload and working conditions in Claims and Customer Service.",
+      "passed": true,
+      "evidence": "Points to the work: \"Burnout in Claims and Customer Service is usually driven by workload, staffing, backlogs, targets and systems, not by people lacking resilience.\" Its evidence is a cited regulator source rather than a study: \"under the Arbowet you have to tackle work stress at the source, and the Labour Inspectorate puts organising the work differently ahead of individual coping measures, though it expects both\", linked to the Inspectorate's werkinstructie, which I checked (\"Bronaanpak/collectieve aanpak (bijv. anders organiseren van het werk) boven individuele beschermingsmiddelen\"). This is the weakest pass: an authoritative source like the WHO example, but no outcome research."
+    },
+    {
+      "text": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+      "passed": true,
+      "evidence": "\"Dutch law also sets the order: under the Arbowet you have to tackle work stress at the source\" and \"Involve the works council (OR) now. Decisions that affect working conditions, including the RI&E and its action plan, generally need OR consent under art. 27 WOR.\""
+    },
+    {
+      "text": "The reply treats the trust score as a result for leadership to own, with a first response from the leaders themselves.",
+      "passed": true,
+      "evidence": "\"Say outright that the trust figure is about leadership, not about Claims or CS.\" Leaders respond themselves: \"Leadership shares the results with all staff and says what will change.\" The CEO line: \"We've seen them, we own them, and here's our plan.\""
+    },
+    {
+      "text": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+      "passed": true,
+      "evidence": "\"Talk to the CEO this week, one-on-one. Present it as protecting him... Give him a better line to use: 'Two clear warning signs. We've seen them, we own them, and here's our plan.'\""
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and gives the first steps for next week.",
+      "passed": true,
+      "evidence": "wc -w = 519 (≤550). First steps: \"Talk to the CEO this week\", \"Before next week, get the hard data for both departments\" (sick leave, turnover, caseload per FTE, overtime), and the three things to give the board."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 519,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A complete, well-sourced plan: it argues candour as protecting the CEO, gives verified Dutch legal points, asks the board for a concrete decision and sets a clear escalation limit. It has no outcome evidence that resilience training fails, and it assumes the CEO is male."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: the Inspectorate werkinstructie ranks organisational (source) measures above individual ones and expects measures at organisation, team and individual level. Rendement confirms the RI&E and plan van aanpak fall under the OR consent right (art. 27(1)(d) WOR). No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"Say outright that the trust figure is about leadership\"; CEO line \"we own them\"."
+    },
+    "best_insight": {
+      "value": "Softening the summary would turn the board's story from burnout into leadership credibility, the very thing that scored 41%. And asking the board for a concrete decision (budget for extra capacity) means the item isn't only bad news.",
+      "evidence": "Steps 1 and 4"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+        "reason": "An 'or' between three alternatives makes this pass for every sample, including ones that only say 'involve the works council early' or tag the law as unchecked general knowledge. Consider requiring the specific duty (Arbowet 3(2) / RI&E) AND the OR consent right (art. 27(1)(d) WOR), or checking that the cited article is correct."
+      },
+      {
+        "assertion": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+        "reason": "'A line the user can use' is ambiguous: a line for the CEO conversation, or a framing line the CEO can take to the board? Samples split on this (one gives only a board-slide opener). Say which one is meant."
+      },
+      {
+        "reason": "No assertion covers what to do if the CEO still insists on 'stable'. The samples differ a lot here: some draw the line between framing and changing the numbers and name the board/supervisory board chair, some say 'put it in writing', some just say 'let the figures speak'. This is a key part of the user's real dilemma."
+      },
+      {
+        "assertion": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+        "reason": "Nearly every sample passes this; it doesn't discriminate much. The harder thing to check is whether the opening also tells the user to settle it with the CEO first."
+      }
+    ],
+    "overall": "6/6. Strong; the evidence assertion passes on a regulator source, not research."
+  }
+}

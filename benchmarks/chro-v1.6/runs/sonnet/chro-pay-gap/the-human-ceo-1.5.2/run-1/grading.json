@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+      "passed": true,
+      "evidence": "Opens: 'Don't stay silent, and don't spread the whole thing over five years. Fix the 6% same-work gap within 12 to 18 months... Tell the works councils and staff early, with a plan attached.' The timeline runs from weeks 1-4 to months 3-18 with two pay rounds, and it is costed at €0.55-0.6M a year."
+    },
+    {
+      "text": "The reply states correctly that equal pay for equal work is already law (Article 157 TFEU or national equal pay law), so a same-role gap is a legal exposure now, whatever the transposition date of the new directive.",
+      "passed": false,
+      "evidence": "It never says that equal pay for equal work is already law. The 6% is called 'a legal problem', and the whole legal case rests on the new directive ('Silence isn't ours to choose. The EU Pay Transparency Directive's transposition deadline...'; 'Under the directive, affected employees can claim full back pay'). There is no Art. 157 TFEU or national equal pay law, and nothing showing exposure exists now whatever the transposition date."
+    },
+    {
+      "text": "The reply gets the EU Pay Transparency Directive right: a gap of 5% or more within a category of workers that can't be justified by objective, gender-neutral factors and isn't fixed within six months triggers a joint pay assessment with workers' representatives; and it notes at least one of the reporting thresholds and dates, the employee right to information, or that transposition is late (the Dutch law is expected in 2027).",
+      "passed": true,
+      "evidence": "'If a gap of 5% or more in a group doing equal work isn't justified by objective, gender-neutral criteria and isn't fixed within six months, the directive requires a joint pay assessment with employee representatives.' Also: 'transposition deadline (7 June 2026) has passed and most member states are late' and 'For employers with 150 or more staff, the first pay gap reports are due in 2027.'"
+    },
+    {
+      "text": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+      "passed": false,
+      "evidence": "It separates the gaps ('The 6% is equal work, unequal pay... The 14% mostly reflects who sits in which roles and grades'). But the only analysis guidance is 'run a role-by-role check for legitimate pay factors. Keep reporting aggregated.' That is a vague nod: no method for testing what objective factors explain, and no real small-group handling."
+    },
+    {
+      "text": "The reply puts a number on the cost of closing the same-role gap, or shows how to compute it from the payroll data, and frames it for the CFO against the cost of claims, attrition or reputation.",
+      "passed": true,
+      "evidence": "'Closing a 6% gap costs about €0.55M to €0.6M a year, roughly 1.2% of a payroll near €45M.' To the CFO: 'claims, attrition and reputation cost more than 1.2%'. Thin, but it gives a specific number and frames it against those costs."
+    },
+    {
+      "text": "The reply includes telling employees or their representatives honestly and fixing the causes (such as starting pay, promotion or bonus decisions).",
+      "passed": true,
+      "evidence": "'Brief the works councils (NL) and Belgian employee representatives with the real numbers, while they can still shape the plan. Then tell all staff.' 'Fix causes too: starting ranges, raise and promotion criteria.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 509,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Right direction, honest that it hadn't checked Dutch and Belgian status, and good on leadership paying first. But it is thin: it never says equal pay is already law, gives little analysis method and no Dutch or Belgian specifics (not even the Belgian 2012 act), and it assumes the CFO is a man ('him', 'His side')."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "None found. Directive statements are correct at directive level (deadline 7 June 2026 passed; 150+ first report in 2027; 5% / six-month joint pay assessment; full back pay and burden of proof), and it says it hasn't confirmed NL/BE status. Dutch works council mandatory from 50 is correct. Cost: 130 x 70k x 6% = EUR 546k; 650 x 70k = EUR 45.5M; 1.2%, consistent."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Fund part of it from the leadership bonus pool: this is a leadership failure, so leadership pays first.'"
+    },
+    "best_insight": {
+      "value": "Fund part of the correction from the leadership bonus pool, because it is a leadership failure. That both eases the budget and signals accountability to staff.",
+      "evidence": "reply.md What to tell the CFO, point 4"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply separates the overall gap from the same-role gap and explains how to analyse what objective factors explain, with care for small groups.",
+        "reason": "The clause 'with care for small groups' decides this assertion: B, C, F and G give strong analysis methods (hourly pay, all pay elements, equal-value comparisons, testing whether the controls are biased) and still fail on it. Consider splitting it into (a) separating the gaps and the objective-factor method and (b) small-cell handling, so the score shows which part was missed."
+      },
+      {
+        "reason": "No assertion checks the Belgian side, although it is what most defeats the CFO's 'say nothing' plan: the 22 April 2012 pay gap act already requires a pay-structure analysis for the works council every two years (50+ workers). It also doesn't check per-entity scope (Dutch entity 420 = annual reporting; Belgian 230 = 150-249 band). The strongest samples covered both."
+      },
+      {
+        "assertion": "The reply opens with a recommendation to close the same-role gap on a dated, budgeted plan much faster than five years, and not to keep it quiet.",
+        "reason": "'Opens with ... a dated, budgeted plan' is ambiguous about whether the dates and budget must appear in the opening or anywhere in the reply. Only H puts both in its first lines. Say which is meant."
+      },
+      {
+        "reason": "Nothing checks whether the reply warns against funding the corrections from colleagues' raises or merit budget, or whether leadership owns the cause. Both separate good advice from merely compliant advice here (B suggests using part of the merit budget; C and H warn against it; E and H put the leadership bonus pool first)."
+      }
+    ],
+    "overall": "Short and directionally right, but it misses the existing-law point and gives no real analysis method; the assertions catch both."
+  }
+}

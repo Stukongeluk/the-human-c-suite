@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+      "passed": true,
+      "evidence": "Opens: \"Don't present 'stable with some pockets of concern', and don't make resilience training the answer. Take the real numbers to the board, with a short action plan.\""
+    },
+    {
+      "text": "The reply explains with evidence why resilience training alone is not the fix (for example the 2024 Oxford study of individual-level wellbeing interventions, or the WHO's description of burnout as an occupational phenomenon) and points to workload and working conditions in Claims and Customer Service.",
+      "passed": true,
+      "evidence": "\"A 2024 study of 46,336 UK workers in 233 organisations found people on resilience, mindfulness or wellbeing-app programmes were no better off than those who weren't (Fleming, Industrial Relations Journal). Burnout comes from workload and control.\" It points to the work: \"Two or three workload fixes, chosen with the teams: staffing or backfill, fewer handling-time pressures\"."
+    },
+    {
+      "text": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+      "passed": true,
+      "evidence": "\"The Arbowet requires a policy to prevent or limit psychosocial workload, and it belongs in your RI&E.\" Also: \"ask the works council (OR) to help shape the actions, since they have a say on social policy.\""
+    },
+    {
+      "text": "The reply treats the trust score as a result for leadership to own, with a first response from the leaders themselves.",
+      "passed": true,
+      "evidence": "\"Treat the 41% as a leadership result. Senior leaders should say what they heard, what they will change and by when.\""
+    },
+    {
+      "text": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+      "passed": true,
+      "evidence": "\"See the CEO this week, one-on-one. Frame it as protecting them... Offer a version they can own: 'We have a real problem, here is our plan, I own it.'\""
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and gives the first steps for next week.",
+      "passed": true,
+      "evidence": "wc -w = 500. 'Your first steps': the CEO this week, find the causes before the board meeting, treat the 41% as a leadership result. Then what to put to the board."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 500,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Evidence-backed and legally correct, with clear ownership, a usable CEO line, the cost of doing nothing and stated assumptions. It says little about what to do if the CEO refuses."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Fleming 2024 (46,336 workers, 233 organisations, resilience/mindfulness/apps); Arbowet 3(2) wording ('voorkoming en, indien dat niet mogelijk is, beperking van psychosociale arbeidsbelasting'); Gallup half-to-two-times replacement cost; Dutch sick pay for up to two years. All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "CEO line \"I own it\"; \"Treat the 41% as a leadership result.\""
+    },
+    "best_insight": {
+      "value": "It puts 'do nothing' and its cost in front of the board (replacement cost, two years' sick pay) and notes that \"A board told 'stable' has been given a wrong picture of a legal risk.\"",
+      "evidence": "'Why' and 'What to put to the board'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Dutch employer's legal duty to prevent or limit psychosocial workload (Arbowet article 3(2), or the risk assessment RI&E), or the works council's role in working conditions.",
+        "reason": "An 'or' between three alternatives makes this pass for every sample, including ones that only say 'involve the works council early' or tag the law as unchecked general knowledge. Consider requiring the specific duty (Arbowet 3(2) / RI&E) AND the OR consent right (art. 27(1)(d) WOR), or checking that the cited article is correct."
+      },
+      {
+        "assertion": "The reply advises a private conversation with the CEO before the board meeting, with a line the user can use.",
+        "reason": "'A line the user can use' is ambiguous: a line for the CEO conversation, or a framing line the CEO can take to the board? Samples split on this (one gives only a board-slide opener). Say which one is meant."
+      },
+      {
+        "reason": "No assertion covers what to do if the CEO still insists on 'stable'. The samples differ a lot here: some draw the line between framing and changing the numbers and name the board/supervisory board chair, some say 'put it in writing', some just say 'let the figures speak'. This is a key part of the user's real dilemma."
+      },
+      {
+        "assertion": "The reply opens with a clear recommendation: report the results to the board honestly, and don't treat burnout as an individual resilience problem.",
+        "reason": "Nearly every sample passes this; it doesn't discriminate much. The harder thing to check is whether the opening also tells the user to settle it with the CEO first."
+      }
+    ],
+    "overall": "6/6. Strong, evidence-backed and within length."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": false,
+      "evidence": "It opens: 'Here is the email, written so it can be sent. I would not send it until three things are settled'. The email announces the mandate as decided: 'From 1 March, we will work from our offices in Utrecht and Berlin five days a week. This is a decision [name CEO] and the leadership team have taken'. It recommends delaying the send and softening the wording only conditionally, not against the mandate as framed."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": false,
+      "evidence": "No study or source is cited. 'The evidence I would lean on: flexibility is a real retention driver, and the reasons people give for leaving are mostly manager quality and growth, not the number of office days' is unsourced. The 10-15% attrition figure is hypothetical."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "\"'To fix our culture' is not a measurable goal. Ask what outcome it should produce and how you will know in six months. If the goal is collaboration, onboarding or speed, a defined set of anchor days (three or four, with a purpose) usually gets most of the benefit\". The email placeholder asks the CEO for 'at least one concrete example, such as slower decisions between teams, weaker onboarding for new joiners'."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": false,
+      "evidence": "The contract point is covered (art. 7:613 BW change clause and weighty interest; Weisungsrecht limited by the contract). There is no mention of the Wet flexibel werken. The German works council point is generic: 'Rules on working location and working arrangements typically carry consent or consultation rights (WOR art. 27 ...; BetrVG section 87 in Germany)'. Nothing specific on co-determination over how mobile work is organised."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": true,
+      "evidence": "A weak pass. Timing: 'about 14 weeks to 1 March ... it is tight. If the start date cannot hold, a phased start (for example three days from 1 March, five from 1 June for those with remote contracts)'. Individual: 'By [date, e.g. 15 January], your manager and HR will talk with every person whose arrangement is affected ... note any circumstances', plus '[review of individual cases such as caring responsibilities or health]'. Review: 'We will look at how this is working after [three/six] months'."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "A hedged pass: 'What I would raise with the CEO (you may want to do this first)', covering a measurable goal, regretted attrition among critical roles, hiring and exception rules. It is suggested before sending, but it isn't in the recommended next steps."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1413,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files."
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "It flags the right risks and offers a phased start, but it hands over a 'this is a decision' email and recommends sending it in early December, with generic legal points and no evidence, so it mostly executes the CEO's plan."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No clear error. Art. 7:613 BW is described correctly and 14 weeks to 1 March is right. Questionable assumption, not counted: 'At 800 people you almost certainly have both [OR and Betriebsrat]'. A German Betriebsrat exists only if employees have elected one, so this should be asked, not assumed (the email does say '[adjust to the actual status]'). Formatting glitch: '([medium] medium confidence'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader takes responsibility for the culture problem. The email calls the remote terms 'a fair expectation', but that is not ownership."
+    },
+    "best_insight": {
+      "value": "Exceptions need a written rule, not a favour: decide the criteria up front, because ad hoc exemptions negotiated by individual managers are the fastest way to turn the policy into a fairness problem.",
+      "evidence": "reply.md: 'Exceptions need a rule, not a favour.'"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion penalises a draft that announces the mandate as a final decision before OR consent. That is the main legal risk (Caterpillar 2025), and this sample's email does it while still passing three assertions."
+      }
+    ],
+    "overall": "Assertions separate this compliance-first sample from the strong ones on the opening stance, evidence and legal detail."
+  }
+}

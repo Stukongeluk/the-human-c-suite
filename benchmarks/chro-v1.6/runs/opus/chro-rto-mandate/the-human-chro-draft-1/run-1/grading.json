@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": true,
+      "evidence": "First line of reply.md: \"Don't send a 'five days from 1 March' email yet. Send one that announces a proposal and how it will be decided.\" announcement-email.md has a complete, sendable email (subject, why, proposal, decided/not decided, what it means for you, review, Q&A) with a recommended Version A (\"three days a week together in the office, on anchor days the team chooses itself\") and a Version B paragraph if the CEO keeps five days."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": true,
+      "evidence": "\"In a randomised trial, two home days a week cut quitting by a third with no effect on performance ([Bloom et al., *Nature*, 2024])\"; \"US firms that mandated office work saw turnover rise about 14%, most of all among women and senior staff (a correlation; [Baylor, 2025])\"; NBER digest of Emanuel, Harrington & Pallais (22% more code feedback). Checked: Baylor page says 54 S&P 500 tech/finance firms, 13-14% abnormal turnover, vacancies 23% longer; NBER digest says 22%. Limits are stated (one firm in China, co-author co-founded it; correlations)."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "CEO line: \"Name the three things that worry you most\"; \"Two questions would change my advice: what exactly does the CEO see as the culture problem\". Email placeholders give concrete problems (\"new colleagues tell us it takes them months to find their way\", \"teams in Utrecht and Berlin barely know each other\"). Options are matched: proximity feedback gains were mostly for juniors, \"That argues for targeted time together, not five days for all\", hence \"more office time for new joiners\" and team-chosen anchor days."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": true,
+      "evidence": "Contracts: \"changing them needs the person's agreement or a contractual basis ... article 7:613 BW ... in Germany, agreement or a socially justified change notice (Änderungskündigung)\". Wfw: FAQ \"In the Netherlands, once you've worked here six months, you can also make a formal request about where you work under the Flexible Working Act (Wet flexibel werken), and we'll answer it in writing.\" Germany: \"In Berlin, how mobile work is organised is co-determined (§87(1) no. 14 BetrVG), and any existing works agreement binds you.\""
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": true,
+      "evidence": "Email: \"We'll publish the final policy by [1 March 2027], and nothing new starts before [1 June 2027]\"; timeline \"later for people whose contract says remote\". Exceptions: \"If you have care responsibilities, a health condition or disability, a long journey ... We'll look at each situation individually, and raising it will never count against you.\" Review: \"review the policy with the works councils [six months] after it starts\"."
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "First step: \"Talk to the CEO privately before anything goes out. A line you can use: 'I want to fix what you're seeing. Name the three things that worry you most, and give me two weeks...'\"; repeated in the draft's \"Before you send\" list."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 455,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1905,
+      "evidence": "wc -w announcement-email.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A sendable proposal email with a recommended three-day version and a five-day fallback, accurate case law (Caterpillar, Booking.com, LAG München), evidence with limits, a manager FAQ, data to pull and a dated timeline: an HR director could act on it this week."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Caterpillar (Rb. Oost-Brabant, 15 Sept 2025, OR could declare the withdrawal void, existing arrangements stay in force); Booking.com (ECLI:NL:RBAMS:2026:10590, published 28 Oct 2026 so 'last month' is right; at least 40%, earlier 50-60% plans dropped, six months' transition, hardship clause, desks); LAG München 10 Aug 2023, 8 TaBVGa 6/23 (Allianz Re, existing 2016 works agreement); Rendement June 2025 cites art. 27(1)(b) and (d) WOR; NBER digest 22%; Bloom et al. 1,612 employees, quits down a third; Ding et al. ~14%, 23% longer to fill; Wfw 26-week service requirement. 14 weeks to 1 March is correct. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The email names the culture problems ('there are problems I don't want to ignore') but no leader says the responsibility for them is leadership's."
+    },
+    "best_insight": {
+      "value": "It keeps the CEO's 1 March but recasts it as the date the final policy is published, with nothing starting before 1 June, so the CEO keeps a deadline and the OR consent process gets room to work.",
+      "evidence": "reply.md: '1 March kept as the date the final policy is published'; timeline table."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+        "reason": "Passed for all eight samples, including ones that wrote a final-decision email, so it doesn't discriminate. It's also ambiguous: 'the concerns' could mean the HR director's or the employees'. Tighten it to require the CEO conversation as an explicit first step that brings evidence and an alternative."
+      },
+      {
+        "reason": "No assertion checks the most important Dutch legal point: a change to the home-working policy needs the OR's consent under art. 27 WOR (Caterpillar 2025, Booking.com 2026). Some samples framed it as an art. 25 advice right and were not caught."
+      }
+    ],
+    "overall": "Strongest sample: it passes every assertion on substance, and its numbers and case law hold up."
+  }
+}
