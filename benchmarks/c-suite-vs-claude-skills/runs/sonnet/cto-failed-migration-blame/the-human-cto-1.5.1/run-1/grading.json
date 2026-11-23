@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'A line for the chair: \"I own this outage.\"' and 'Own it, privately first... The result is yours, and you say so before discussing anyone else's part.' Also 'someone senior should visibly carry that... That person is you'."
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't fire the platform team lead now'; exception 'If the review shows someone ignored explicit rules or hid risks, individual consequences can follow, on facts and through proper process'; why: 'Firing before the facts are in tells engineers that raising risk is dangerous. Your next migration gets fewer warnings' and 'The same failure returns under a new lead.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Start a blameless review with a deadline of about 10 working days, led by someone outside the migration team. Cover the timeline, who approved what, what was tested, why rollback took 9 hours... Include your own decisions.'; 'Every action gets an owner, a deadline and a measure, such as a timed rollback rehearsal and a go/no-go checklist you sign. Report monthly.'"
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "Line for the chair: 'In two weeks you'll get the review, owners and dates for every fix, and a clear answer on whether anyone broke our rules'; review covers 'the timeline, who approved what, what was tested'; 'Every action gets an owner, a deadline and a measure... Report monthly.'"
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "Narrow pass: 'Tell the lead yourself that a review is happening and they will be heard. Their account is your best input.' plus 'Keep written records factual... no guesses about motives.' A private conversation and protection, but nothing on the lead's wellbeing or the wider team."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "First sentence: 'Don't fire the platform team lead now.' reply.md is 452 words by wc -w."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 452,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Tight and practical (chair line, review scope including the CTO's own decisions, factual records), but it assumes the Netherlands without saying so, asserts customers lost money, and treats the lead mainly as a witness rather than a person to support."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "The Dutch claim ('a dismissal needs a defensible ground and a proper process') is correct; the country is an unflagged assumption, not a wrong rule. 'customers lost money and trust' is an unsupported inference from the prompt, noted in quality rather than as a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/reference files/cost ladder/rungs found nothing"
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'I own this outage.' and 'That person is you'"
+    },
+    "best_insight": {
+      "value": "Scope the review to include the CTO's own decisions and keep written records to dates and sources with no guesses about motives, which keeps it fair and legally defensible.",
+      "evidence": "Steps 2 and 5"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+        "reason": "Passes for replies that only say 'each fix gets an owner and a date' without giving any dates or owner roles themselves; consider requiring at least a review deadline and named owner roles for the first fixes."
+      },
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "Combines the lead and 'the team', but both examples are about the lead. Replies that only protect the lead pass; consider splitting it or requiring a concrete step for the wider team (time off after the weekend, watching attrition, a team conversation)."
+      },
+      {
+        "reason": "No assertion checks unflagged assumptions about the user's country or facts not in the prompt (one sample assumes the Netherlands, one invents a 'standard' the user never stated, one asserts customers lost money)."
+      },
+      {
+        "reason": "No assertion rewards checking the EUR 2 million figure or offering the board a visible consequence at the CTO's own level (e.g. bonus tied to delivering the fixes), which were among the most useful differentiators."
+      }
+    ],
+    "overall": "Passes all six; assertion 5 passes on lead-only care, showing that assertion does not really test care for 'the team'."
+  }
+}

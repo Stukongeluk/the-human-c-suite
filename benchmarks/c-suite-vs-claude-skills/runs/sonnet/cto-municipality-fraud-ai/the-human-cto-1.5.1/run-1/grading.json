@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "Opens: \"Advise the council not to buy this system as proposed, and not to promise go-live in six months. Offer instead a six-month programme that ends with a decision the council can defend: a baseline, a legal assessment, and a small shadow-mode pilot on benefits data only.\" No labelling of the alderman; the later line \"the risk that ends careers, his and yours\" is a shared-risk warning, not an attack."
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": false,
+      "evidence": "Names the precedents but not what went wrong in enough detail: \"the court halted SyRI in 2020 on privacy grounds, and the childcare benefits scandal wrongly branded more than 20,000 families as fraudsters, partly through risk profiling, and brought down the cabinet in 2021.\" That covers presumed guilt. It never says the precedents involved bias or discrimination (e.g. nationality), or that there was no meaningful human or legal check. Rotterdam and Amsterdam, the closest cases, are not mentioned."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "Worked base-rate example: \"Of about 1,160 flagged, roughly 85% are innocent\" (arithmetic checks: 980/1,160 = 84.5%). It asks for \"the precision in the top 10%, the false-positive rate, and the error rates by group (age, nationality, neighbourhood, single parents)\", and flags the label problem: \"the model learns where we looked before.\""
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": false,
+      "evidence": "Partial. Present: GDPR purpose limitation (\"Reusing it to flag them for investigation is a purpose-limitation problem under the GDPR\"), a DPIA (\"DPIA and impact assessment\"), the AI Act high-risk classification with timing (\"Most of those obligations apply from December 2027 after the Digital Omnibus delay\"), the social-scoring ban \"already in force\", and \"Your DPO and legal counsel need to rule on this before procurement.\" Missing: the need for a GDPR legal basis for each source (only a vague \"legal assessment\"/\"legal footing\"), and the GDPR rules on automated decisions (Art. 22). Human review appears only as a design safeguard, not as a legal point. Two of the four named GDPR elements are absent."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": true,
+      "evidence": "Alternatives: \"Tips, existing signals and simple rules on benefits data alone\" and \"Fixing the process: much 'fraud' is errors in a complicated system, and prevention at intake is cheaper than recovery.\" It also asks \"how much is intent rather than error? That decides whether scoring is even the right tool.\" Brief, but specific."
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": true,
+      "evidence": "\"No score triggers action alone, and every flag gets human review by someone who can overrule it. Citizens can see why they were selected and can contest it. Register the system in the algorithm register.\" Independent testing: \"the vendor's claims tested by someone who doesn't sell it\" plus \"contract terms for audit access, bias testing\". Stop criteria: \"go live only if precision, group-level error rates and recoveries beat the baseline on pre-agreed numbers. Stopping is an acceptable result.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 869,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise, accurate and practical: a clear base-rate example, a six-month plan with a decision gate, and safeguards for investigators. But it is thin on the closest precedents (no Rotterdam/Amsterdam) and on the GDPR legal-basis and automated-decision rules a CIO needs for counsel."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: SyRI 2020 ruling; childcare scandal (>20,000 families, cabinet fell January 2021, per the company-types fact sheet); AI Act Annex III obligations from December 2027 after the Omnibus; social-scoring ban in force since February 2025; base-rate arithmetic. 'A contract signed now has to meet them' glosses over the Art. 111(2) transition, but it is defensible advice, not a wrong rule."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "Prospective decision; no bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It warns that a 'top 10%' list will turn into a quota for investigators, and asks who selected the vendor and whether anyone has a declared stake: the people and conflict-of-interest angle the assertions miss.",
+      "evidence": "Sections 5 and 6"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+        "reason": "Bundles three failure mechanisms (bias, presumed guilt, no human/legal check) without saying how many are needed; samples covered different subsets. Name the minimum, or split it. It also doesn't check that the precedent is described accurately: one sample gave a wrong year for Amsterdam's Smart Check and would still pass."
+      },
+      {
+        "assertion": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+        "reason": "A long conjunctive list (legal basis, purpose limitation, DPIA, automated decisions, AI Act high-risk, timing). It discriminates well, but it leaves out the AI Act Art. 5(1)(c) social-scoring ban, which is the strongest legal point for scoring on debt-counselling data. The Commission's guidelines list welfare fraud scoring on unrelated-context data as an example. Consider adding it."
+      },
+      {
+        "reason": "No assertion covers the chilling effect on residents seeking debt help, or the label/feedback-loop problem (a model trained on past investigations learns where investigators looked). These were the most decision-relevant insights in the strongest samples."
+      },
+      {
+        "reason": "No assertion checks for the closest municipal precedents (Rotterdam's identical score-everyone/top-10% design; Amsterdam's 'by the book' Smart Check that still failed). It also doesn't check for involving the cliëntenraad, works council and investigators before choosing the tool."
+      }
+    ],
+    "overall": "Good, compact advice that passes the recommendation, accuracy, alternatives and safeguards checks. It falls short on describing the precedents' failure modes and on the full GDPR legal floor."
+  }
+}

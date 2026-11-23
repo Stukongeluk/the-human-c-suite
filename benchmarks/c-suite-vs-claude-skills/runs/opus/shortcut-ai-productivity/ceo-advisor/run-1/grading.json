@@ -1,0 +1,109 @@
+{
+  "expectations": [
+    {
+      "text": "Gives at least two concrete moves the user could start now, rather than only asking questions or declining",
+      "passed": true,
+      "evidence": "Three moves with owners and dates, e.g. 'Pick 3 workflows and measure them now... Record hours, turnaround time and error rate per item. Owner: COO. By Fri 18 Dec.'"
+    },
+    {
+      "text": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+      "passed": false,
+      "evidence": "It rejects 40% firm-wide but says 'By the end of Q2 you can realistically get 30-40% faster on three high-volume workflows' and recommends option B: 'Commit to \"40% faster on 3 named workflows by Q2\"'. That commits to 40% before any baseline of the firm's own work exists, and its own cited evidence (14% average, 25% faster within the frontier) doesn't support it. The letter of the assertion is met for firm-wide 40%, but not its spirit."
+    },
+    {
+      "text": "Questions what the competitors' 40% claim actually measures before treating it as a target",
+      "passed": true,
+      "evidence": "'Your competitors' \"40%\" is most likely one workflow or a self-report, not output across the whole firm. Ask them what they measured.' It backs this with METR's self-report gap."
+    },
+    {
+      "text": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+      "passed": true,
+      "evidence": "Its moves are pilots ('Start with one pilot team per workflow'), and Risks puts the irreversible step behind proof: 'Cutting heads before the gains are proven: staff hide their savings, service backlogs grow and clients leave.' The distinction is implicit but the data-first point is explicit. (It also proposes letting attrition absorb capacity, which is a soft hiring stop with no data behind it.)"
+    },
+    {
+      "text": "Asks the user one to three questions, and each one would change the recommendation",
+      "passed": true,
+      "evidence": "'To make this specific, tell me your business mix (commercial, personal lines, employee benefits), which broker system you use and which country you're in.' These are three asks, and each would change something: which workflows, which tools and add-ons, and which data-protection and consultation rules apply."
+    },
+    {
+      "text": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+      "passed": true,
+      "evidence": "A reusable decision frame and a better brief: 'A: Announce \"40% firm-wide by Q2\"... B: Commit to \"40% faster on 3 named workflows by Q2\" and report the firm-wide number as measured', plus a baseline metric set (hours, turnaround time, error rate per item)."
+    },
+    {
+      "text": "Names the risk of chasing the shortcut in a few sentences without moralising or lecturing about leadership",
+      "passed": true,
+      "evidence": "'Why it matters: If you promise 40% firm-wide and can't measure it, you either miss the target or it turns into a headcount target. Both kill adoption.' It adds a short Risks list; none of it moralises."
+    },
+    {
+      "text": "The reply uses bullet points as asked and is under 450 words",
+      "passed": false,
+      "evidence": "Uses bullets, but wc -w = 610, well over 450, even though the user said 'I don't have time for an essay.'"
+    },
+    {
+      "text": "Cites at least one real base rate on AI results with its source and year (for example a measured productivity study, pilot outcomes or regretted AI layoffs), quoted accurately",
+      "passed": true,
+      "evidence": "Accurate, sourced base rates: 'in METR's 2025 study, developers felt 20% faster but were measured 19% slower' (METR page: 19% longer; believed a 20% speed-up), and '5,179 support agents, AI raised productivity 14% on average. Novices gained 34%' (NBER w31161 abstract). The BCG figures (25% faster; 19 points less likely correct) also match HBS."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 610,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "The most actionable and evidence-backed reply (owners, dates, E&O insurer, consumer-AI data risk), but it ignores the 'no essay' request at 610 words and calls a 30-40% gain 'realistic' when its own cited studies point lower."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "METR (19% slower, believed 20% faster), NBER/QJE (5,179 agents, 14%, 34%) and BCG/HBS (25% faster, 19 points less likely correct) all checked against the source pages; the weekdays (Fri 18 Dec 2026, Fri 29 Jan 2027) are correct. 'That's a data-protection breach' for pasting client data into consumer tools is stated as certain but is broadly right under GDPR."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Has '(verified)' confidence tags but no mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "Unchecked AI wording in a proposal or coverage summary becomes an E&O claim, so talk to your E&O insurer before go-live. This is the broker-specific risk an insurance CEO most needs to hear.",
+      "evidence": "Risks section, second bullet."
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 2,
+    "total": 9,
+    "pass_rate": 0.78
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+        "reason": "The prompt never mentions cuts, so most replies rule out headcount cuts entirely ('not headcount cuts') rather than framing them as an irreversible step that needs data first. Say whether ruling cuts out counts, or the assertion will keep splitting on wording."
+      },
+      {
+        "assertion": "Asks the user one to three questions, and each one would change the recommendation",
+        "reason": "Several replies close with a generic 'What am I missing?' or pack two questions into one bullet. Say whether a closing invitation to push back counts toward the 1-3 limit and whether it has to 'change the recommendation'."
+      },
+      {
+        "assertion": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+        "reason": "'Something reusable' is vague: a reframed goal, a list of baseline metrics and an instruction to ask staff can all be read as passing. Name the artifact you want (for example a one-line brief to hand the team, or 3 questions for the team)."
+      },
+      {
+        "assertion": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+        "reason": "Say whether committing to 40% on a few named workflows, before any baseline exists, counts as endorsing 40% by Q2. One sample does exactly this."
+      },
+      {
+        "reason": "No assertion checks that the reply's own estimate fits the evidence it cites (for example citing a 14% average gain and then calling 30-40% 'realistic'), or that it covers broker-specific risks such as E&O exposure and client data going into consumer AI tools. Those separated the useful replies here."
+      }
+    ],
+    "overall": "Richest and best-sourced reply, but too long for the request and still anchors on a 40% commitment for named workflows; 7/9."
+  }
+}

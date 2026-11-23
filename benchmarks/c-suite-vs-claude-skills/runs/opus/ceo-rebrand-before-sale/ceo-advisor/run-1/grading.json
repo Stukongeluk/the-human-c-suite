@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "Reply Bottom Line: 'I wouldn't take the three moves to the board as agreed. With NPS down 25 points, they would raise EBITDA on paper and lower what a buyer pays for it. Take a plan that puts customer retention first.' First WHAT bullet: 'Your customers are the biggest risk to exit value.' Paper §1 'turns the customer curve first'."
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "Paper §5 Workstream 1: 'Find the cause within 30 days. Break NPS and churn down by company, product, segment and customer tenure. Lay the NPS trend against the dates of the three restructures... Read every detractor comment. I will personally call ten customers who left.' Then 'Fix the top three detractor drivers, each with a named owner, a date and a measure.' Appendix adds 'churn reasons; interviews with churned customers'."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "Reply: 'choose the name now and launch it at group level in Q2. Switch the customer-facing brands only once NPS and retention recover.' Paper §7.1 gates the customer switch on 'NPS has been at or above [+20] for two consecutive quarters and gross revenue retention is back at [prior-year level]', noting 'the switch may well be the buyer's decision'."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "Paper §1: 'Three restructures in two years coincided with NPS falling 25 points, and we do not yet know what they saved.' §11 critic's view: 'nobody has yet shown what the last three restructures saved and what they did to NPS'. Appendix: 'Savings and one-off costs of the past three restructures; NPS and attrition after each'. Costs: 'Senior and key people leave first. A fourth restructure is visible to buyers (and on Kununu). Works councils turn hostile'. Replaced by 'No company-wide restructure'."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "Paper §7.3: contractor list with 'whether the work is tied to revenue, whether it is critical for customers, and status risk', then end/convert/keep; 'We keep existing juniors, apprentices and dual students'; juniors are 'our cheapest capacity and our pipeline'. §6 'Profit that customers won't feel' puts duplicated non-people costs, the contractor review and a hiring freeze with attrition first, and back-office consolidation later."
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": true,
+      "evidence": "Reply 'HOW TO ACT' gives owner and date per step (e.g. 'Fill in the bracketed figures... → CFO + customer lead → before the paper goes out'; 'Get labour counsel's view... → CHRO + labour counsel → before the board'). Paper workstreams name owners ('Owner: [Chief Customer Officer / customer lead]. Sponsor: CEO'; 'Owners: CFO and COO'; lever owners CFO/CHRO/COO/CRO/CTO; 'Owners: CHRO, CFO and General Counsel'), with a dated timeline to Q2 2028 and a scorecard with gates. Owners' terms: 'Exit value = EBITDA × multiple − net debt', 'Buyers price software largely on retention', 'The integration premium is earned, not named... rests on shared customers... and stable retention, not on a shared name', and the key people 'a buyer is effectively buying'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 967,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 3919,
+      "evidence": "wc -w sample-D/board-plan.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "A sharp, exit-value-framed plan with owners, dates, gates (including an exit-timing check) and a detailed German legal table, held back by having no leadership ownership or first cut on executive pay while asking for a key-people retention pool, and by an overstated line that 'any restructure' triggers works council consultation."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor overstatement in the reply: 'Under German labour law, any restructure means works council consultation and possibly a social plan'. Works council rights apply only where one has been elected, and only to a Betriebsänderung; the paper never says to check whether councils exist. Everything else checked is correct: §112a BetrVG thresholds (20%/37 at 60-249, 15%/60 at 250-499, 10% but at least 60 at 500+), §17 KSchG (at least 30 at 500+; 10% or more than 25 at 60-499; termination agreements count), §113 BetrVG Nachteilsausgleich, §1(3) KSchG, §22 BBiG, AGG, §1a KSchG half a month per year, §622 BGB up to seven months, and the Wirtschaftsausschuss's information right on a change of control (§106(3) no. 9a BetrVG). Arithmetic correct: 12 x €65k = €0.78m ≈ €0.7-0.8m EBITDA per €1m churned at 70-80% margin; 10% of 900 = 90 leavers. The statute checks were made from knowledge because the web search budget was exhausted."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Uses [Verified]/[Medium]/[Assumed] tags and a 'CEO ADVISOR' header, but no mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No leader says the NPS fall or churn is leadership's responsibility; there is no executive pay or bonus cut. The closest is 'Three restructures in two years coincided with NPS falling 25 points', which is not ownership."
+    },
+    "best_insight": {
+      "value": "It adds an exit-timing gate: if retention is still falling at end Q3 2027 the board discusses whether a Q2 2028 sale still maximises value, and it notes that commercial due diligence will interview customers, so the NPS drop cannot be hidden by selling sooner.",
+      "evidence": "Paper §10 Gate 2 and §12 Q5."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+        "reason": "All four samples pass this; it does not discriminate. A stronger version would require the reply to quantify the link from churn to EBITDA to exit value (or to name the buyer's quality-of-earnings and commercial due-diligence tests), which only some samples do."
+      },
+      {
+        "reason": "No assertion checks whether leadership owns the NPS fall and takes the first cut on its own pay. Two samples do this explicitly and two omit it entirely; this is a core part of the guidance for a 'results disappoint' case and currently goes unscored."
+      },
+      {
+        "reason": "No assertion checks the German legal floor (works councils where elected, §§111-112 BetrVG, §17 KSchG, social selection, §22 BBiG, AGG) or that people-related savings land late because of consultation and notice periods. Samples differ a lot in accuracy and realism here."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "This assertion bundles four tests (direction, owners, measures and dates, owners' terms). Splitting it would show which part failed; most failures here are on owners alone."
+      }
+    ],
+    "overall": "Meets every assertion clearly. The unscored gap is leadership accountability and the leaders' first cut."
+  }
+}

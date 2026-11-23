@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Acceptance rate shows how often someone accepts a suggestion, not whether the code was good.' / 'PRs merged rewards splitting work. It punishes the people who review, mentor, fix incidents and delete code.' / 'A fixed bottom 10% puts someone on a plan even in a strong team, and people can game both numbers within a week.' Backed by one study: 'Uplevel's 2024 study of about 800 developers found no significant change in cycle time with Copilot, and 41% more bugs.'"
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Raise it privately with the VP as help with their goal'; 'Ask before you argue, in a 1:1 ... Ask what problem this should solve'; 'Offer to build the alternative yourself ... At team level, track lead time, review wait time, PR size and change fail rate'; 'assume pressure, not malice'."
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'in the Netherlands, a per-person performance ranking like this very likely needs works council consent before it goes live. Article 27(1)(l) WOR covers systems that can monitor performance.' Escalation: 'If it goes ahead anyway, put your questions in writing ... then the works council if needed.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: VP 1:1, HR, privacy officer ('since it's personal performance data'), other tech leads and the works council; a concern about one person 'goes through their manager'. No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Talk to other tech leads and engineering managers (you're probably not alone) ... Keep a short record of the facts. How far you take it is your call: speaking up doesn't mean you have to risk your job.' Encourages raising it rather than staying silent."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "wc -w = 453 words. Four numbered actions, a ready-to-use line and two closing questions."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 453,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample."
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Short, accurate and evidence-backed, with a usable script, works council framed as protection and a staggered Copilot comparison that answers the VP's real question."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Art. 27(1)(l) WOR matches the fact sheet. The Uplevel 2024 figures (about 800 developers, no significant cycle-time change, 41% higher bug rate) match the published study as widely reported; the web search budget was exhausted, so this was checked from knowledge rather than a fresh search."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned ranking, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "To test whether Copilot pays off, measure delivery and quality for 6–8 weeks against a comparison team that starts later, rather than per-person acceptance.",
+      "evidence": "Item 2 under 'What to do'."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "Every sample passed; the 'briefly' qualifier overlaps with the length assertion, so a long, essay-like explanation still passes here. Either drop 'briefly' or test something sharper, e.g. that the reply names the forced-distribution flaw (a fixed bottom 10% always selects someone, even in a strong team)."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Not discriminating: no sample went near the vertrouwenspersoon, leaks or sabotage. Consider pairing it with a positive check that the reply tells the user not to game the numbers or pull colleagues' data themselves."
+      },
+      {
+        "reason": "No assertion checks the privacy angle (GDPR personal data, privacy officer, DPIA), which every sample raised and which is a real second lever in the Netherlands."
+      },
+      {
+        "reason": "No assertion checks factual accuracy of the evidence cited about DORA, SPACE or Copilot studies; one sample misstated that PR counts don't appear in SPACE. A 'no factual errors in cited research or law' assertion would catch this."
+      },
+      {
+        "reason": "Only the length assertion separated the samples. Consider an assertion that the reply gives a ready-to-use line or script for the 1:1, since the user's stated fear is being seen as difficult."
+      }
+    ],
+    "overall": "All six pass. Short, correct and evidence-backed; the assertions don't distinguish it from sample A."
+  }
+}

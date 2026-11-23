@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "First sentence: 'Plan Q1 around your customers' top three problems, with a small, dated rebrand alongside, and take that to your CEO as a costed option rather than an objection.' Option B: 'a small squad ships the rebrand must-haves...; everyone else fixes the three complaints'."
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "'Split the rebrand. Must-have: the name in the app, the legal entity on invoices and contracts, the new domain with redirects. Can be phased: the full design system and the marketing site (often an agency job).' Cost made visible through 'Get the teams' own estimates for both', a 'small squad' for the must-haves, the hidden cost of the domain ('touches the accounting integration's OAuth callbacks and webhooks... SPF, DKIM and DMARC... Rushed, the rebrand can make two of your three complaints worse') and Option A's cost ('complaints wait; revenue at risk'). Thinnest on per-part sizing, but it meets the assertion."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "'Rank the complaints by evidence: revenue renewing in the next two quarters from accounts that raised them, churn reasons in the CRM, ticket volume, NPS comments.' Measures: 'Each fix gets an owner and a measure: invoice run time, integration sync failures, renewals among those accounts.'"
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "'Put two options on one page: A, as decided: everyone on the rebrand; complaints wait; revenue at risk from step 2. B, recommended: ...' and 'take that to your CEO as a costed option rather than an objection'; the script says 'I'll deliver the rebrand... you decide'."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": true,
+      "evidence": "All elements present: 'Talk to the CEO privately first, this week. Ask for the reasons, not a reversal'; '\"any decision beats no decision\" suits choices that are cheap to undo, not leaving customers waiting another quarter'; light process: 'Can I bring you two options with team estimates within two weeks, and you decide?' and a one-page options sheet; no labelling: 'That respects \"leadership decides\"' and 'The CEO has a point: after a merger, one name and one story matter'."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": true,
+      "evidence": "reply.md is 436 words (wc -w); five numbered, concrete steps with a ready-to-use line; offers 'Want me to draft that one-page options memo?'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 436,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Short, respectful and actionable, with a usable CEO script, an evidence-based ranking, a real must-have split and a sharp warning that a rushed domain move worsens the very complaints at stake; only light on what Option B defers and when."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "'Until at least April' is right for a Q1 that ends 31 March; SPF/DKIM/DMARC for invoice-email deliverability and OAuth callbacks/webhooks on a domain change are accurate."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The NPS fall is a bad outcome in the prompt; the reply doesn't have any leader say that it is leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Rebuild the invoicing and report screens in the new design system while fixing them, so customers see the new brand where they actually work, and treat the domain move as a risk to the integration and invoice emails.",
+      "evidence": "Option B and step 4"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+        "reason": "All four samples pass this; it does not separate a weak reply from a strong one. Consider requiring the protected share to be stated or sized (e.g. which teams or roughly what share stays on the complaints)."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "'Makes the cost of each visible' is hard to grade when no data exists; samples can only describe a sizing step. Clarify what counts: relative size of each part, or an explicit ask to size each part, plus what is deferred and to when."
+      },
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "Bundles four separate behaviours (private first, ask reasons, reversible vs irreversible, light process). Samples that do three of four are hard to grade consistently; consider splitting into two assertions."
+      },
+      {
+        "reason": "No assertion checks the technical coupling between the rebrand and the complaints (a new domain touches the accounting integration's OAuth redirect URIs/webhooks and invoice-email deliverability). It was the most useful insight in the stronger samples and is easy to miss."
+      },
+      {
+        "reason": "No assertion checks planning to real capacity with slack (no overtime) or telling teams and affected customers the plan; both appear in the better samples and matter for this case."
+      }
+    ],
+    "overall": "Passes everything; assertion 2's cost wording is the only borderline call."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "Full scenario arithmetic in reply and detail doc: 'Your cash runs out somewhere between August and December 2027, depending on whether your nine months already counts revenue growth'; 'A B that starts \"next summer at the earliest\" means you pitch with a few months of cash at best, and with none if it slips.' The doc tabulates cash-out dates with and without a 30% cut by revenue/cost ratio (20%: Sep→Nov 2027; 35%: Oct 2027→Feb 2028; 50%: break-even first), people to cut under no new money vs 2- and 4-month insider bridges, break-even slip if growth drops to 3%, and burn multiple. I rebuilt the model from its stated assumptions: the cash-out table matches exactly and the people-to-cut table to within one person."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "The cut is sized net of non-job levers and the bridge: 'People to cut (of 48) to reach the target, assuming you also take 15% off non-people costs', with columns for no new money / 2-month / 4-month bridge (e.g. at 45% revenue share: 11 → 4 → 0 people; at 60%: 0). Reply step 2: 'hiring freeze, about 15% off non-people costs, and a request to your largest customers for annual prepayment'; Option C: 'a smaller cut plus an insider bridge'. Founders' pay is weak ('small money', doc only) but the bridge lever is sized in people saved before any cut number is set."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'Don't cut 30% just because two investors picked 30%... size a single cut against a hard target: cash through mid-2028 with a reserve, or break-even before then'; '30% is only right in a narrow band'; ties it to strategy: 'Cut bets and side projects, not the revenue engine', protect 'the 2 or 3 B milestones'; once: 'One cut, with margin. Tell the team it is the only one planned... Then make that true.'"
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "Reply: 'You can't decide on it until the MBL negotiations with the union are finished'; 'You must notify Arbetsförmedlingen (varsel) at least 2 months before the first person leaves'; 'Notice periods run 1–6 months'; 'Swedish law sets the order by length of service (last in, first out) within each unit, and you can exempt only three people'; 'get employment counsel to design the cut'. Doc adds the 5-in-one-county threshold, MBL §13 duty without a collective agreement, re-employment priority. All verified against the fact sheet, Arbetsförmedlingen and Företagarna."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": false,
+      "evidence": "Exit support is beyond the minimum (doc: 'notice pay plus a fair package, garden leave where it makes sense, proper references, active introductions to your investors' portfolio companies'). But the team is only told once the board has already chosen a cut: step 4 'Bring two options to the full board... Then decide' (9 Dec), step 5 'If you're cutting: call the MBL negotiations, file the varsel, and tell the whole team the same day, with the numbers and the plan.' The team never hears the runway or the options while they are still open, and hears nothing if there is no cut. Fails the second half of the assertion."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": false,
+      "evidence": "Only the detail doc touches this: 'Leadership first. Founders and leadership take a visible pay cut before or together with the cut. It is small money, but it buys credibility.' 'Before or together with' isn't first, and nowhere does the founder say the burn, the hiring or the plan built around a B were their decisions. No ownership statement."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1106,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2075,
+      "evidence": "wc -w runway-decision-detail.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "The most rigorous and reproducible runway and cut-size modelling of the set, accurate Swedish process and a sharp investor trade ('this is the cut the numbers need; if you want it smaller, the difference is a bridge'), but leadership never owns the result and the team is brought in only after the board has picked a cut."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and verified: World Fund 14.7% vs 24.5% seed-to-B conversion; Fortune/PitchBook climate-specialist VC fundraising down nearly 40% in 2025 vs 2024; varsel 2 months before the first person's employment ends for 5–25 people in one county; notices may be given during the varsel period; LAS notice 1/2/3/4/5/6 months by service band; three exemptions named at the latest at the MBL negotiation; MBL §13 duty and asking staff about union membership without a collective agreement; re-employment priority (12 months in 3 years, 9 months); Carta bridge piece (Sep 2025). Only trivial rounding slips in the burn-multiple table (e.g. 35% 'Jul 2027, no action' 2.5x vs 2.6x reproduced). Minor internal tension: the board 'decides' on 9 Dec before MBL opens, though the reply frames it as 'negotiations starting, not a done deal'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, cost ladder or rungs."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that the burn, hiring or B-dependent plan were leadership's decisions; only 'Founders and leadership take a visible pay cut... it buys credibility'."
+    },
+    "best_insight": {
+      "value": "Reading the investors' pressure as a possible sign of thin follow-on reserves (climate-specialist VC fundraising down ~40%) and turning the 30% demand into a priced trade, cut size versus bridge months, gives the CEO real leverage in the room.",
+      "evidence": "Reply: 'Ask what reserves they hold for you... part of the push to cut may be that they can't fund a follow-on'; Recommendation counter-offer."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "The 'or' list lets any single mention pass; all four samples passed, including one that never names MBL or the varsel threshold. Consider requiring the core sequence (MBL before the decision, varsel lead time, LAS selection order) and failing replies that misstate a rule."
+      },
+      {
+        "assertion": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+        "reason": "This bundles two different behaviours, exit generosity and early transparency, and samples split on them (one communicates early but plans no package; another plans a good package but tells staff only after the board picks a cut). Splitting it would make the results easier to interpret."
+      },
+      {
+        "assertion": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+        "reason": "This bundles 'go first' with 'own the result'. Several samples include a founder pay cut without any ownership statement; separating them would show which part is missing."
+      },
+      {
+        "reason": "No assertion checks that the numbers are internally consistent or reproducible. Here they all were, but a reply with confident but wrong runway maths would currently pass assertion 1."
+      },
+      {
+        "reason": "No assertion covers turning the investors' demand into a trade (cut size vs bridge money, checking shareholder-agreement consent rights, the fact that two investors are not the board). All samples did it, but it is central to the user's situation."
+      }
+    ],
+    "overall": "Strongest numbers in the set; loses on leadership ownership and late team communication."
+  }
+}

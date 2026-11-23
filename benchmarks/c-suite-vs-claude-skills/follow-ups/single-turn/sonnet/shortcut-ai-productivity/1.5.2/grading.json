@@ -1,0 +1,108 @@
+{
+  "expectations": [
+    {
+      "text": "Gives at least two concrete moves the user could start now, rather than only asking questions or declining",
+      "passed": true,
+      "evidence": "Three moves: 'Baseline two or three workflows in 30 days', 'Automate the toil with the people doing it. Run 8-week pilots on those workflows: document extraction, quote comparison, email drafts, call notes', 'Turn freed hours into growth, not exits.'"
+    },
+    {
+      "text": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+      "passed": true,
+      "evidence": "'Treat 40% as a hypothesis to test, not a promise.' and 'Company-wide 40% by Q2 is unlikely.'"
+    },
+    {
+      "text": "Questions what the competitors' 40% claim actually measures before treating it as a target",
+      "passed": true,
+      "evidence": "'Competitor claims are usually self-reported' and the question 'what exactly are competitors measuring (hours, revenue per head, cost)?'"
+    },
+    {
+      "text": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+      "passed": false,
+      "evidence": "No reversible/irreversible distinction. It argues against exits ('growth, not exits'; 'Layoffs for AI are often regretted') and says 'measure first' about the AI rollout, but never says that layoffs, hiring stops or outsourcing are one-way decisions that need data first."
+    },
+    {
+      "text": "Asks the user one to three questions, and each one would change the recommendation",
+      "passed": true,
+      "evidence": "Two questions: 'what exactly are competitors measuring (hours, revenue per head, cost)?' and 'what is the real goal behind 40%: margin, growth, or a board promise?' Both would change the target and the plan. Closing invitation to push back."
+    },
+    {
+      "text": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+      "passed": false,
+      "evidence": "The measures ('Record time per case, error rate, rework and customer wait'; 'Measure hours freed, retention and new premium') sit inside the moves. There is no reworded brief, checklist or set of questions for the team."
+    },
+    {
+      "text": "Names the risk of chasing the shortcut in a few sentences without moralising or lecturing about leadership",
+      "passed": true,
+      "evidence": "'Company-wide 40% by Q2 is unlikely, and chasing it usually ends in cutting what's easiest to count.' and 'Without this, any \"40%\" is a feeling.' Short and not preachy."
+    },
+    {
+      "text": "The reply uses bullet points as asked and is under 450 words",
+      "passed": true,
+      "evidence": "277 words (wc -w); the three moves are bullets. The closing questions are in prose, but the main content is bulleted."
+    },
+    {
+      "text": "Cites at least one real base rate on AI results with its source and year (for example a measured productivity study, pilot outcomes or regretted AI layoffs), quoted accurately",
+      "passed": true,
+      "evidence": "'in a controlled trial (METR, 2025) experienced developers using AI were 19% slower while believing they were faster' matches METR's July 2025 RCT (16 experienced OSS developers, 19% longer; they believed AI had sped them up ~20%). The second figure ('one 2025 survey: 55% of leaders who made them') is accurate (Orgvue) but unnamed."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 277,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "A credible, well-paced plan (30-day baseline, 8-week pilots, freed hours to new premium) with a sharp point on self-reported gains, but it gives no rule for irreversible moves and nothing reusable, and its main study is about software developers rather than broker work."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "METR 2025 RCT figures verified on metr.org (METR's Feb 2026 update calls newer data unreliable and does not reverse the 2025 measurement); the Orgvue 2025 figure of 55% regretting AI redundancies matches blocks/ai-layoff-regret.md."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it is a goal-setting request."
+    },
+    "best_insight": {
+      "value": "The METR perception gap (19% slower while believing they were faster) directly undermines trust in competitors' self-reported 40%, giving the CEO a concrete reason to measure rather than copy.",
+      "evidence": "'Competitor claims are usually self-reported, and in a controlled trial (METR, 2025) experienced developers using AI were 19% slower while believing they were faster.'"
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 2,
+    "total": 9,
+    "pass_rate": 0.78
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+        "reason": "Ambiguous: every sample gives a reframed target and a list of measures inside its moves. Specify whether a reworded goal statement counts as 'a better brief', or require a separate artefact (for example 'a one-line goal the CEO could hand the team, with metric, baseline and date', or '2-3 questions to ask team leads')."
+      },
+      {
+        "assertion": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+        "reason": "Three of four samples rule out layoffs outright ('nobody loses their job') instead of saying they need data first. Decide whether a firm no-layoff stance should satisfy this, since it arguably meets the spirit (no irreversible move without evidence) without the letter."
+      },
+      {
+        "assertion": "Asks the user one to three questions, and each one would change the recommendation",
+        "reason": "Every sample ends with a generic 'What am I missing?' and two samples pack two questions into one bullet. State whether the closing pushback invitation and compound bullets count towards the three-question cap."
+      },
+      {
+        "reason": "No assertion checks whether the reply's own replacement estimate (10-20% or 10-25%) is presented as an unsupported guess or is justified; three samples offer a number with no basis in the company's data, which is in tension with assertion 2's spirit."
+      },
+      {
+        "reason": "No assertion checks sector-specific risk for an insurance broker (E&O/professional liability, client data under GDPR, regulated advice sign-off); this separated the more useful samples and could be a discriminating check."
+      }
+    ],
+    "overall": "Sharp on why the 40% claim is weak, but it misses the irreversible-moves rule and any reusable tool."
+  }
+}

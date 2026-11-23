@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "'For redundancies, the Employment Protection Act (LAS) sets the order, normally last in, first out, per unit and agreement area. Performance isn't a criterion.' Then: 'Apply LAS per unit and agreement area, or the union-agreed list. You may exempt three people; use that for documented business needs like language or specialist skills, not a performance ranking.'"
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "'Negotiate before deciding. The Co-determination Act (MBL) requires negotiating with the unions first, with the real numbers and alternatives, while they can still change the plan.'"
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "The law: 'I wouldn't use tickets resolved and CSAT, and in Sweden you likely can't... Performance isn't a criterion.' The metric's flaws: 'Keep ticket and CSAT data off individuals. They reflect queue mix and customer type, and AI now takes the easy tickets. Use them for team-level workload planning only.'"
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": false,
+      "evidence": "The job security council is covered ('Involve the job security council (TRR for private-sector white-collar staff) when notice is given, with coaching and paid training'). But re-employment priority appears only as an item to check ('Check notice periods, re-employment priority and collective agreement terms'), and nine months is never stated. The specific nine-month priority is missing."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "Step 1: 'Fewer exits first. Model what AI removes in tickets and hours, not heads. Then use a hiring freeze and attrition, voluntary exits, and redeployment into growing work (second-line, AI quality review, knowledge base, escalations). Nine may shrink.' It closes by asking 'do the AI numbers show nine fewer roles or a different mix of work?'"
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": true,
+      "evidence": "270 words (wc -w). Opens with the answer: 'I wouldn't use tickets resolved and CSAT, and in Sweden you likely can't.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 270,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "It is short, accurate and usable as a draft. It leads with reducing the nine, gets the LAS, MBL and varsel points right, and ends with the two questions that change the answer. It is a little thin on the qualification test and leaves out the nine-month priority and the discrimination risk."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: LAS order per unit and agreement area; exemption of three; MBL before deciding; 5+ redundancies notified at least two months ahead (correct for 9 people); TRR for private-sector white-collar staff. All match the fact sheet."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned AI-driven reduction, not a bad outcome to assign responsibility for."
+    },
+    "best_insight": {
+      "value": "It reframes the sizing as 'model what AI removes in tickets and hours, not heads', which makes the nine a hypothesis to test rather than a given.",
+      "evidence": "Step 1"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+        "reason": "The assertion checks that the exemption of three is mentioned, but not that it is stated correctly. One sample attached a false union-agreement condition to it. Consider wording it as 'states correctly that any employer may exempt up to three employees, without union agreement'."
+      },
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "'First checks the cut itself' can mean either reply order or the order of the recommended process. Say which one. Also say whether questioning the number 21 counts, or only redeployment and voluntary routes that reduce the nine."
+      },
+      {
+        "assertion": "The reply stays short (under about 300 words) and opens with the answer.",
+        "reason": "The word limit covers reply.md only, so a sample can pass by moving an 843-word draft into an attached file. That is a reasonable answer to 'draft the selection approach', but decide whether 'keep it short' should also apply to the draft itself."
+      },
+      {
+        "reason": "No assertion checks the discrimination and invalidity risk of HR's metrics: raw counts penalise part-timers and people on parental or sick leave. That is the strongest legal reason against HR's proposal, and only two samples raised it."
+      },
+      {
+        "reason": "No assertion checks that the selection pool is per operating unit and agreement area, which can be wider than the support team, or that it mentions the qualification test. Both change who is in scope."
+      }
+    ],
+    "overall": "The assertions discriminate well here. Sample B misses only the specific nine-month detail."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "expectations": [
+    {
+      "text": "Gives at least two concrete moves the user could start now, rather than only asking questions or declining",
+      "passed": true,
+      "evidence": "Three concrete moves: 'Find where the hours go (2-3 weeks). Map tasks, not jobs, in servicing, renewals and placement... Pick the 3-5 highest-volume tasks.', 'Put AI on those tasks, with people in the loop', 'Point the freed hours at revenue, not headcount cuts.'"
+    },
+    {
+      "text": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+      "passed": true,
+      "evidence": "'Aim for a measured 10-20% capacity gain by Q2 in the work AI handles well, not a company-wide 40%. That is my estimate, not a benchmark.'"
+    },
+    {
+      "text": "Questions what the competitors' 40% claim actually measures before treating it as a target",
+      "passed": true,
+      "evidence": "'Treat the competitors' 40% as unverified: ask what they measured (hours, output, revenue per head?) and over what period.'"
+    },
+    {
+      "text": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+      "passed": false,
+      "evidence": "No reversible/irreversible distinction. It rules out cuts ('Point the freed hours at revenue, not headcount cuts'; 'nobody loses a job because of this') and warns that a target without diagnosis 'usually ends with cutting whatever is easiest to count', but never says layoffs, hiring stops or outsourcing are one-way decisions that must wait for data."
+    },
+    {
+      "text": "Asks the user one to three questions, and each one would change the recommendation",
+      "passed": true,
+      "evidence": "Two questions, each of which would change the plan: 'What is at stake behind the 40% by Q2: margin, growth or a board promise?' and 'Which two or three workflows eat the most hours today?' (the second would shorten or redirect move 1), plus a closing invitation to push back."
+    },
+    {
+      "text": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+      "passed": false,
+      "evidence": "No separate reusable tool. The measures ('time saved per task, error rates, turnaround and client satisfaction') and 'Ask the people doing the work where the repetitive effort sits' are instructions inside the moves, not a reworded brief, a checklist or prepared questions the user can put to the team."
+    },
+    {
+      "text": "Names the risk of chasing the shortcut in a few sentences without moralising or lecturing about leadership",
+      "passed": true,
+      "evidence": "'The trap: a target number without a diagnosis usually ends with cutting whatever is easiest to count. Productivity that is claimed rather than measured tends to reverse later.' Two plain sentences, no lecturing."
+    },
+    {
+      "text": "The reply uses bullet points as asked and is under 450 words",
+      "passed": true,
+      "evidence": "277 words (wc -w); the three moves and the questions are bullets."
+    },
+    {
+      "text": "Cites at least one real base rate on AI results with its source and year (for example a measured productivity study, pilot outcomes or regretted AI layoffs), quoted accurately",
+      "passed": false,
+      "evidence": "The only evidence line is 'Many AI pilots still show no measurable P&L impact.' It names no source or year and gives no figure."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 277,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound, broker-specific and humane plan (task mapping, E&O in the review loop, freed hours to revenue), but it gives no evidence, no rule on irreversible moves and nothing reusable, so a CEO under board pressure gets little to push back with."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No specific factual claims beyond 'Many AI pilots still show no measurable P&L impact', which is consistent with MIT NANDA (2025)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it is a goal-setting request."
+    },
+    "best_insight": {
+      "value": "It names the broker-specific risk of keeping compliance and E&O (errors and omissions) exposure in the review loop, and maps tasks rather than jobs in servicing, renewals and placement.",
+      "evidence": "'Keep compliance and E&O exposure in the review loop'; 'Map tasks, not jobs, in servicing, renewals and placement.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "total": 9,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+        "reason": "Ambiguous: every sample gives a reframed target and a list of measures inside its moves. Specify whether a reworded goal statement counts as 'a better brief', or require a separate artefact (for example 'a one-line goal the CEO could hand the team, with metric, baseline and date', or '2-3 questions to ask team leads')."
+      },
+      {
+        "assertion": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+        "reason": "Three of four samples rule out layoffs outright ('nobody loses their job') instead of saying they need data first. Decide whether a firm no-layoff stance should satisfy this, since it arguably meets the spirit (no irreversible move without evidence) without the letter."
+      },
+      {
+        "assertion": "Asks the user one to three questions, and each one would change the recommendation",
+        "reason": "Every sample ends with a generic 'What am I missing?' and two samples pack two questions into one bullet. State whether the closing pushback invitation and compound bullets count towards the three-question cap."
+      },
+      {
+        "reason": "No assertion checks whether the reply's own replacement estimate (10-20% or 10-25%) is presented as an unsupported guess or is justified; three samples offer a number with no basis in the company's data, which is in tension with assertion 2's spirit."
+      },
+      {
+        "reason": "No assertion checks sector-specific risk for an insurance broker (E&O/professional liability, client data under GDPR, regulated advice sign-off); this separated the more useful samples and could be a discriminating check."
+      }
+    ],
+    "overall": "Clear and humane, but it misses the irreversible-moves rule, any reusable tool and any sourced base rate."
+  }
+}

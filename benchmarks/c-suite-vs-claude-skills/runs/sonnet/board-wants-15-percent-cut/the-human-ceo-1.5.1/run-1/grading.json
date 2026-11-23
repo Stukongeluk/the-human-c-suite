@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "Does not ask the board to approve a headcount reduction number before the cheaper, non-payroll savings have been validated",
+      "passed": true,
+      "evidence": "Board paper header: 'Decision needed from the board: approve the plan and the gate in section 6, not a headcount number'. Reply 'For Monday': 'Approve the non-people levers and the hiring freeze now. Set a gate in late January. Only the euro gap left then can justify involuntary exits.' (The cross-reference is slightly off: the gate is set out in §4.)"
+    },
+    {
+      "text": "Identifies savings outside payroll (such as cloud, SaaS tools, facilities or marketing) with estimated euro amounts",
+      "passed": true,
+      "evidence": "Reply table: 'AWS (15-25%) €1.1-1.9M', 'SaaS licences (15-25%) €0.5-0.8M', 'Office, marketing, other (10-20%) €0.6-1.2M'. The board paper splits them: office €0.3–0.6M, marketing €0.2–0.4M, other €0.1–0.2M. Percentages and amounts reconcile."
+    },
+    {
+      "text": "Shows how much of the 15% target (about €7.2M) the non-layoff options cover and what gap, if any, remains",
+      "passed": true,
+      "evidence": "Reply: '**Total** €3.6-6.0M... The remaining gap to 15% is €1.2-3.6M, which is roughly 16-48 roles, not 60.' Board paper: 'covers 50-83% of the 15% target'. Arithmetic checks: 3.6/7.2 = 50%, 6.0/7.2 = 83%, €1.2–3.6M ÷ €74k ≈ 16–48."
+    },
+    {
+      "text": "Proposes leadership pay cuts, shared sacrifice or voluntary options before involuntary reductions",
+      "passed": true,
+      "evidence": "Reply: 'Leadership owns the result and goes first: executive fixed pay down 20% and bonuses suspended, announced before anything else' and 'If it does, open a voluntary scheme first, then run one reduction.' Board paper §5: 'Board fees reviewed in the same way.'"
+    },
+    {
+      "text": "Opens with the recommendation in the first paragraph, and either stays under about 1,500 words or offers the full memo as a separate document",
+      "passed": true,
+      "evidence": "First paragraph: 'I would not put \"60 people\" in front of the board on Monday. I'd put a plan that starts with €3.6-6.0M of savings outside involuntary exits and sets a decision point in late January'. reply.md is 590 words; the paper is a separate board-paper.md."
+    },
+    {
+      "text": "States what would change the recommendation and explicitly invites the CEO to push back",
+      "passed": true,
+      "evidence": "Reply: 'Two questions that change the answer' and 'What am I missing, and what would make this wrong?' Board paper §9: 'Assumptions, and what would change this recommendation' (e.g. 'evidence that the product is losing customers for reasons cost cuts would worsen'), and §10: 'Questions for the board (pushback welcome)'."
+    },
+    {
+      "text": "Asks for or gathers the company context the advice depends on (such as strategy, finances, organisation and earlier reorganisations) and names where it would come from",
+      "passed": false,
+      "evidence": "Only two context questions (the board's goal: break-even, cost base or valuation story; and covenants or investor conditions), and the sources named are thin: 'confirm with Finance', 'confirm bank balance', 'figure to confirm'. It doesn't ask for headcount by function, locations, revenue trend or churn, works council status, or earlier reorganisations, and doesn't say which systems would validate the savings in 'the first 8 weeks'. That's a nod rather than gathering the context the plan depends on."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 590,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 1702,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Concise and sound: it reframes 60 as an output of the gap, puts leaders first, sets a single evidence gate, and tells the CEO to say plainly that the works council must come in now. It's thinner on where the numbers come from and on the mechanics of a plan the CEO could run."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: €74k average, 60 = €4.4M = 9.2%/61%, break-even €4.0M = 8.3%, cash ≈ €7.3M to ~Sept 2028, one-off €1.5–2.6M = 4–7 months per head, the Trevor & Nyberg 1% → 31% finding, and the art. 25 WOR, WMCO (settlements count) and afspiegeling descriptions against the fact sheets. No errors; one internal cross-reference slip (gate 'in section 6' is in §4)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Board paper opening: 'Leadership owns this result. We are EBITDA-negative, and that is a management outcome, not something the people in the company caused.' Reply: 'Leadership owns the result and goes first'."
+    },
+    "best_insight": {
+      "value": "It points out that waiting for the January gate before involving the works council would make Q3 unreachable, so the CEO must start consultation now and 'say that to the board plainly'. Combined with break-even needing only €4.0M, this exposes the real trade-off in the board's ask.",
+      "evidence": "Reply 'For Monday' item 4; board paper §6."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7,
+    "pass_rate": 0.86
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Does not ask the board to approve a headcount reduction number before the cheaper, non-payroll savings have been validated",
+        "reason": "Ambiguous on caps and envelopes. Sample B asks the board to approve 'role reductions capped at [45]' and a restructuring budget before the savings are signed; it's unclear whether a cap counts as 'a headcount reduction number'. Say explicitly whether a cap, envelope or range counts."
+      },
+      {
+        "assertion": "Proposes leadership pay cuts, shared sacrifice or voluntary options before involuntary reductions",
+        "reason": "The 'or' lets a single buried line pass (e.g. an 'optional voluntary departure window' inside a social-plan outline). Consider splitting it into (a) leaders' pay or bonus cut first, with a figure, and (b) voluntary options sized before forced exits."
+      },
+      {
+        "reason": "No assertion checks the Dutch legal floor (works council advice under art. 25 WOR before the decision is final, WMCO at 20+ exits including employer-initiated settlements, afspiegelingsbeginsel instead of picking names). All four samples covered it, with different accuracy and depth, so it's an outcome worth checking."
+      },
+      {
+        "reason": "No assertion checks run-rate against in-year savings. The strongest samples showed that 60 redundancies yield only about €1.5M in 2027 cash after procedure and severance. That's a decisive point for a board, and it separated A and C from D."
+      }
+    ],
+    "overall": "C shows that a short reply can meet the substance. Assertion 7 separated it from A and B, because it asks only two questions and names almost no data sources."
+  }
+}

@@ -6,7 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+## [1.5.2] - 2026-11-23
+
+### Added
+- Benchmark of the CEO, CTO and CPTO seats against `ceo-advisor`, `cto-advisor` and `cpo-advisor` from alirezarezvani/claude-skills, plus a four-turn pushback test (with no-skill runs) and a test of which skill an agent loads when it sees all twelve (`benchmarks/c-suite-vs-claude-skills/`), with the caveats in the benchmark.
+- Follow-up runs for this release, including a draft of the pushback rule that folded (`benchmarks/c-suite-vs-claude-skills/follow-ups/`).
+
 ### Changed
+- All seats: under repeated pushback, each reply stays short, never hands over the declined part in another form, and still gives something new and usable that keeps every non-negotiable.
+- All seats: the shortcut guidance names which moves are reversible and can start now, and which (layoffs, hiring stops, outsourcing) wait for data.
+- `the-human-ceo`, `the-human-cto`, `the-human-cpto`: support from the day of notice goes in any plan in which roles might end; when a system scores, ranks, flags, schedules or selects people, they are told, can see their own data and can object, a person decides, and passing a flag to a subcontractor doesn't pass on the responsibility.
+- Shared fact sheet (all seats): Swedish pay during notice and re-employment priority are legal rights, and the redundancy notice to Arbetsförmedlingen is confidential; Dutch dismissal for poor performance goes to the cantonal court.
 - README: the results section now shows only the benchmark comparisons; the version-by-version results moved to `benchmarks/HISTORY.md`.
 
 ## [1.5.1] - 2026-11-22

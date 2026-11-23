@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "\"Advise the council not to buy this system as specified and not to go live in six months. Offer the alderman something he can still announce: a six-month 'prepare and prove' phase that ends in a go/no-go decision backed by evidence.\" No attack on the alderman."
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": true,
+      "evidence": "\"Toeslagenaffaire: risk profiling and a fraud-first culture ruined thousands of families\" (presumed guilt); \"SyRI was ruled unlawful by the Hague court in 2020\"; \"Rotterdam's welfare fraud algorithm was suspended and later found to disadvantage groups through its variables\" (bias); \"Features like postcode... can act as proxies\". It does contain a factual error: \"Amsterdam's Smart Check pilot was stopped in 2025\". It was stopped in late November 2023; MIT Technology Review reported it in June 2025."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "\"Of the ~1,160 flagged, only about 1 in 7 is actually committing fraud\" (180/1,160 is closer to 1 in 6.4; minor rounding). Asks for \"precision at the top 10%, recall, false-positive rate, and the figures broken down by group\" and \"performance split by group (age, gender, nationality or migration background, household type)\", and notes \"postcode, household composition, or debt can act as proxies for ethnicity, migration background or poverty.\""
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": false,
+      "evidence": "GDPR elements are present: \"needs a lawful basis you probably don't have\", \"AVG purpose limitation\", \"A DPIA is mandatory here. If the residual risk is high you must consult the AP\", and \"falls under AVG art. 22\". AI Act high-risk is named. But there is no timing: it says only that \"the Digital Omnibus may shift application dates\" and \"I would also verify the current AI Act dates, since the Digital Omnibus may change them\". By November 2026 the Omnibus (Regulation (EU) 2026/1744) had already set 2 December 2027. It also lists provider duties (risk management, data governance) as things the municipality needs before go-live. The assertion's 'with their timing' is not met."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": false,
+      "evidence": "The only alternative is a different detection method: \"Transparent, rule-based risk indicators built with investigators... plus random sampling.\" Nothing addresses causes (simpler reporting, help with applications, plain-language letters, data quality). It never says many errors are honest mistakes; it only asks whether training labels mean \"intentional fraud, or any recovery or administrative error\". 'Fix the data basis first' is about lawful basis, not data quality."
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": true,
+      "evidence": "\"a human investigator who must verify before any action, no automatic benefit stops, and an objection route for citizens\"; \"an independent review (e.g. ... an external algorithm auditor), council oversight, publication in the algorithm register\"; \"Kill criteria (agree them now, with the alderman): Stop or do not proceed if...\" with specific triggers. Explainability: \"can you tell a citizen and a judge why they were flagged?\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1457,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound direction, good vendor questions and kill criteria. But it gets the Amsterdam date wrong, treats settled AI Act dates as uncertain, and offers no cause-fixing alternatives, so a CIO would need to re-check it before using it in a council paper."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) \"Amsterdam's Smart Check pilot was stopped in 2025\": it was stopped in late November 2023 (MIT Technology Review, June 2025). (2) Minor: \"about 1 in 7\" should be about 1 in 6 (180/1,160 = 15.5%). (3) It presents the AI Act Omnibus dates as possibly shifting when Regulation (EU) 2026/1744 had already fixed 2 December 2027: outdated rather than wrong. Loose: \"exactly the kind of linkage SyRI was struck down for\". The court's grounds were lack of transparency/verifiability and fair balance under Art. 8 ECHR, not linkage as such."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Mild: \"Under the evaluation framework I use\", a stray \"🟢\" confidence marker, and an instruction to record \"an ADR with 3-year TCO\". These read as internal method artefacts."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "Prospective decision; no bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "Random sampling alongside any rules gives the unbiased labels any later model needs, and there is a concrete fallback if the council insists on speed: rules-based, benefits-data-only, human-reviewed.",
+      "evidence": "'Consider a simpler first step' and 'Alternative if the council insists on speed'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+        "reason": "Bundles three failure mechanisms (bias, presumed guilt, no human/legal check) without saying how many are needed; samples covered different subsets. Name the minimum, or split it. It also doesn't check that the precedent is described accurately: one sample gave a wrong year for Amsterdam's Smart Check and would still pass."
+      },
+      {
+        "assertion": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+        "reason": "A long conjunctive list (legal basis, purpose limitation, DPIA, automated decisions, AI Act high-risk, timing). It discriminates well, but it leaves out the AI Act Art. 5(1)(c) social-scoring ban, which is the strongest legal point for scoring on debt-counselling data. The Commission's guidelines list welfare fraud scoring on unrelated-context data as an example. Consider adding it."
+      },
+      {
+        "reason": "No assertion covers the chilling effect on residents seeking debt help, or the label/feedback-loop problem (a model trained on past investigations learns where investigators looked). These were the most decision-relevant insights in the strongest samples."
+      },
+      {
+        "reason": "No assertion checks for the closest municipal precedents (Rotterdam's identical score-everyone/top-10% design; Amsterdam's 'by the book' Smart Check that still failed). It also doesn't check for involving the cliëntenraad, works council and investigators before choosing the tool."
+      }
+    ],
+    "overall": "Solid structure and safeguards, but it misses AI Act timing and cause-fixing alternatives, and it contains a dated factual error on Amsterdam."
+  }
+}

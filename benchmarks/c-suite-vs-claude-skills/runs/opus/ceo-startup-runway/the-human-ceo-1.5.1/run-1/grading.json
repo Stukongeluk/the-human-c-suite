@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "'Nine months takes you to the end of August 2027'; 'nine months of cash against a Series B that closes in seven to nine months at the earliest means raising on an empty tank'; 'at flat costs break-even still takes 18 months if gross profit covers half your costs, and 28 if it covers a third' (ln2/ln1.04 = 17.7; ln3/ln1.04 = 28.0); table of what a 30% cut buys by gross-profit share incl. 'only to November 2027 if growth slips to 3%'; scenarios 'B in summer 2027, B late or never, growth at 3%' against 'break-even, or cash into mid-2028'. Board paper gives the break-even formula and decision rule. I reproduced the illustration from its assumptions (SEK 85k, payroll 73%, 14 leave from March, 2 months' extra pay): Oct–Nov 2027 at 20–30%, just reaching early/mid-2028 at 40%, Dec 2027 at 3% growth, break-even first at 50%."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "'Start the moves that cost no jobs this week, and let the numbers decide within about three weeks whether a reduction is needed and how big': leadership pay cut 20–30%, hiring freeze, spend cuts, R&D deduction, prepayment and collections, insider bridge, grants out of the base case; 'In the same illustration, the no-job moves below buy roughly 1.5 to 3.5 months. So the honest answer could be less than 30%, 30% plus a bridge, or about 30% once.' Board paper: 'Any workforce reduction is sized from the gap that remains'; 'move to the next only when the earlier ones can't close the gap in time.'"
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'If a gap remains, make one reduction, sized for the downside case so there's no second round'; 'Decide which work stops before deciding about roles'; board paper option 11 'One reduction, sized to the remaining gap and tied to work we stop' and 'It isn't 30% by default: the model sets the size, which could be smaller, similar or larger.'"
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'MBL requires negotiating with the unions before you decide. Arbetsförmedlingen must be notified at least two months before the first person leaves (5–25 people), and notice runs one to six months'; 'LAS sets the order by length of service, with three exemptions, unless you agree a list with the union'; 'Take the MBL and LAS steps with employment counsel'. The board paper adds re-employment priority, the short-time work limits and the control balance sheet duty."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": true,
+      "evidence": "Beyond the minimum: 'extra pay on top of paid notice, transition support from day one (your job security council, or Kammarkollegiet without a collective agreement), and extra care for anyone on a work permit'. The board paper package adds 2–3 months' extra pay, the Airbnb benchmark, equity, laptops, references, introductions, and how the day is run. Communication: 'Tell the team the numbers and the options while they can still shape them, and bring the unions in early'; timeline puts the all-hands with real numbers before the 10 Dec board decision."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": true,
+      "evidence": "'You and the leadership team take the first and largest pay cut (say 20–30%, bonuses suspended), and say plainly that the gap is a leadership result: you and the board planned around a B that didn't come.' Board paper: 'we hired and spent on the assumption of a Series B... That was management's plan, approved by this board, and management owns the result.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 890,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2229,
+      "evidence": "wc -w runway-plan-board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The most complete and well-judged advice: levers first and sized, a gap-sized single reduction, an accurate Swedish timeline, real ownership, a strong package and a board paper ready for real numbers, with one factual slip about varsel confidentiality."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Error: says the Arbetsförmedlingen varsel 'is public' (reply: 'it's a notice of risk, not a decision, but it's public'; board paper: 'It becomes public'). Arbetsförmedlingen states 'En varselanmälan omfattas alltid av sekretess.' Verified correct: World Fund $13.5bn Series B shortfall vs US 2020–2024; R&D deduction 20%, ≥50% R&D time, SEK 3m/group/month cap from 1 Jan 2024; Migrationsverket three months from the last day of employment; Kammarkollegiet support for those without a collective agreement (12-month work condition); short-time work only in special cases for unforeseeable external causes; ABL 25:13 control balance sheet; Trevor & Nyberg 1%→31%; Airbnb 2020 terms; LAS/MBL/varsel rules; break-even arithmetic; 11 Jan 2027 is a Monday."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Only 'skills support' as the name of Kammarkollegiet's government scheme; no mention of skills, reference files, cost ladder or rungs."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'say plainly that the gap is a leadership result: you and the board planned around a B that didn't come'; board paper 'management owns the result'."
+    },
+    "best_insight": {
+      "value": "Asking why the B slipped: if investors cited growth, a deep cut that slows growth makes the round harder, which turns the cut-size question into a question about the B story. It also adds non-obvious Swedish specifics: the R&D employer-contribution deduction as a no-job cash lever, and the three-month clock for staff on work permits.",
+      "evidence": "'Why did the B slip: the market, or what investors said about your growth? If it's growth, a deep cut that slows growth makes the B harder.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "The 'or' list lets any single mention pass; all four samples passed, including one that never names MBL or the varsel threshold. Consider requiring the core sequence (MBL before the decision, varsel lead time, LAS selection order) and failing replies that misstate a rule."
+      },
+      {
+        "assertion": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+        "reason": "This bundles two different behaviours, exit generosity and early transparency, and samples split on them (one communicates early but plans no package; another plans a good package but tells staff only after the board picks a cut). Splitting it would make the results easier to interpret."
+      },
+      {
+        "assertion": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+        "reason": "This bundles 'go first' with 'own the result'. Several samples include a founder pay cut without any ownership statement; separating them would show which part is missing."
+      },
+      {
+        "reason": "No assertion checks that the numbers are internally consistent or reproducible. Here they all were, but a reply with confident but wrong runway maths would currently pass assertion 1."
+      },
+      {
+        "reason": "No assertion covers turning the investors' demand into a trade (cut size vs bridge money, checking shareholder-agreement consent rights, the fact that two investors are not the board). All samples did it, but it is central to the user's situation."
+      }
+    ],
+    "overall": "Meets every assertion with substance; the one factual slip is about varsel confidentiality."
+  }
+}

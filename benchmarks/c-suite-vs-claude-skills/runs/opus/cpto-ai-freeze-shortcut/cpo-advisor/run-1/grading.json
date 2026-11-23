@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (yes, no, or partly / not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "After a decorative rule and heading, the first sentence is \"Not as framed.\" followed by \"Build it, but start with 2 of the 8 teams, keep a tech-debt floor instead of a freeze\"."
+    },
+    {
+      "text": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+      "passed": true,
+      "evidence": "\"An assistant leans hard on data access, APIs, auth and monitoring. If you freeze that debt, you ship onto a platform that's getting weaker. That debt sits on the assistant's critical path.\""
+    },
+    {
+      "text": "Offers a smaller, reversible bet, such as one or two teams, design partners or a staged beta with gates",
+      "passed": true,
+      "evidence": "\"Two teams on the assistant\" and \"Ship a narrow v1 to 5-10 pilot customers. At the end of Q1, compare usage and retention ... and add teams for Q2 if it's working\"."
+    },
+    {
+      "text": "Asks which customer problem the assistant should solve, or what customers want from it",
+      "passed": true,
+      "evidence": "\"Nobody has checked yet what job your users would hire an assistant for.\" and \"Customer interviews (10-15 recent buyers and churners) plus a teardown of the competitor's assistant\"."
+    },
+    {
+      "text": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+      "passed": true,
+      "evidence": "\"A competitor's launch shows their roadmap, not your customers' needs\" and the recommendation avoids \"betting the whole roadmap on a competitor's launch\"; teams are not crunched (two teams, six stay on core with a 20% debt floor). Note the tension with the unevidenced \"Waiting means losing share, so move now.\""
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": false,
+      "evidence": "wc -w reply.md = 438, well over the 300-word limit, despite the user asking to keep it short."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No coaching on how to brief or decide; the Option A/B block is a decision framing for this case, not a lecture on decision habits."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 438,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files in sample-C"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Good substance (debt on the assistant's critical path, a 20% debt floor, data-and-workflow moat, pilot customers, named owners) but 438 words with heavy template chrome against 'keep it short', and it asserts 'Waiting means losing share, so move now' while admitting it hasn't seen churn or retention."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable external claims; 'Waiting means losing share' is an unsupported assertion that contradicts the reply's own 'I haven't seen your retention, churn' but cannot be shown false."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill or reference files; it does self-label as '📊 CPO' and uses a templated BOTTOM LINE/WHAT/WHY/HOW/RISKS/DECISION layout with decorative rules, but no internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "\"An assistant is a feature, not a moat ... Yours only wins if it's built on what they can't copy: your customers' data and workflows\" reframes the response from matching the competitor to differentiating.",
+      "evidence": "WHAT, second bullet"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7,
+    "pass_rate": 0.86
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+        "reason": "Passes for replies that explain the cost of a freeze but then recommend 'capping' debt at 10-15% and limiting it to assistant blockers (a soft freeze for most teams). Consider an assertion that the alternative keeps a protected debt/reliability floor for every team, not a cap."
+      },
+      {
+        "assertion": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+        "reason": "The 'or avoids a crunch' branch makes this easy to pass; a reply can call the launch information while also asserting unevidenced urgency ('Waiting means losing share, so move now'). Consider splitting into two assertions, or requiring that urgency be tied to evidence such as lost deals."
+      },
+      {
+        "reason": "No assertion checks that the reply avoids committing to a ship date or timeline before the building teams have estimated it, which separates the strongest samples from those that invent an '8-to-10-week' ship target."
+      },
+      {
+        "reason": "Sample C's 'compare usage and retention for adopters vs non-adopters' as the scale-up gate has selection bias (engaged users adopt first); no assertion checks that the gate measures the assistant's effect fairly."
+      }
+    ],
+    "overall": "Strong on substance and the only sample with an explicit debt floor in numbers, but fails the word limit badly; the unevidenced urgency line slips through assertion 5."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opens: \"Back the goal, not the design: work with Operations on the 8%, but don't build a live leaderboard or a weekly bottom-10% list for subcontractors.\" Alternative under 'What to offer instead': aggregate diagnosis of where time goes, route-adjusted depot/subcontractor dashboards, a controlled test after peak."
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "\"Stops per hour is mostly the route: density, flats versus houses, parcels per stop, parking, how late the van left the depot. The bottom 10% will be hard routes and new drivers.\" Safety: \"The quickest way up the board is worse service: 'not home' cards without ringing, skipped breaks, speeding. And a live ranking invites glances at the screen while driving.\""
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "\"Find where the time goes, in aggregate: stop time by route type and depot, late departures, failed addresses, and the app's own taps and waits per stop\" and \"Route-adjusted dashboards per depot and subcontractor ... with first-attempt success, damage, complaints and safety beside stops per hour.\""
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": false,
+      "evidence": "Two of three parts are there: \"Dutch works council consent for performance monitoring (art. 27(1)(l) WOR) and a mandatory DPIA\" and the SCHUFA / Article 22 GDPR point. But AI or algorithmic-management rules on monitoring workers or allocating their work (AI Act Annex III, Platform Work Directive) are never mentioned. Article 22 GDPR is data protection, not a separate AI or algorithmic-management rule."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": false,
+      "evidence": "The legal risk is covered: \"you'd score people you don't employ for their employer to act on\", the SCHUFA ruling and the Belgian Parcel Delivery Act presumption of liability. But the reply never says the flag hands responsibility to the subcontractor without fixing causes (drivers dropped, churn), and its alternative is arm's-length (\"Subcontractors manage their people; you manage the contract on outcomes\") rather than working with subcontractors on conditions. This is a borderline fail."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": false,
+      "evidence": "Drivers are involved: \"Drivers and employee representatives in both countries in the design from the start, not at sign-off.\" But drivers never get their own data. The alternative is depot and subcontractor dashboards, with no private per-driver feedback, so the second half of the assertion is missing."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 464,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Sharp, accurate and right-sized, with an unusually strong legal point (SCHUFA) and a usable line for Operations, but it gives drivers nothing of their own and treats subcontractors only through contract management."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked the 240 figure, Barankay, WOR 27(1)(l), the DPIA, SCHUFA and the Belgian Parcel Delivery Act; all correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome."
+    },
+    "best_insight": {
+      "value": "Under the CJEU's SCHUFA ruling, a score that the subcontractor relies on heavily can itself count as an automated decision under GDPR Article 22, so the principal is exposed even if a human at the subcontractor takes the final step.",
+      "evidence": "Legal floor bullet"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+        "reason": "A simple stops-per-hour ranking may not be an 'AI system' under the AI Act at all. The assertion should say whether algorithmic-management rules (Platform Work Directive) or GDPR Art. 22 automated-decision rules count, or it will reward citing the AI Act where it may not apply."
+      },
+      {
+        "reason": "No assertion checks the most discriminating analytical point: a before/after gain for flagged drivers is inflated by regression to the mean, so the 8% needs a controlled test. This sample makes the point but gets no credit for it."
+      }
+    ],
+    "overall": "Compact and accurate; it loses on the bundled assertions (AI rules, driver-owned data, subcontractor collaboration) rather than on any error."
+  }
+}

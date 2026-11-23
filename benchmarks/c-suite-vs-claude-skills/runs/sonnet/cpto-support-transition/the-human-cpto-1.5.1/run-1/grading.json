@@ -1,0 +1,104 @@
+{
+  "expectations": [
+    {
+      "text": "The first paragraph of the reply states the recommendation itself, not only that a document was written",
+      "passed": true,
+      "evidence": "First paragraph: 'I'd plan this as a gated move from 18 to 6, not a fixed 12-person cut, and I'd keep involuntary exits as the last step.'"
+    },
+    {
+      "text": "Requires evidence that the AI holds up (resolution quality, CSAT, escalations or reopen rates) before roles are reduced, and ties the pace of reduction to those measures",
+      "passed": true,
+      "evidence": "Reply: 'Measure what the AI really resolves (customer-confirmed, no reopen within 7 days, not just \"deflected\"). Compare CSAT and reopen rates for AI and human handling, by language'; 'Each step is released by a gate: customer metrics at least as good as before...'. Plan §3 gate: 'AI resolution quality holds for 2 consecutive months: CSAT and reopen rate not worse than before AI'; §1 'a step that fails its gate waits'. Weakness: voluntary options open in phase 1, before that AI-quality gate is formally passed."
+    },
+    {
+      "text": "Looks for redeployment first, naming concrete destinations such as customer success, onboarding, QA, AI quality review or knowledge management",
+      "passed": true,
+      "evidence": "Reply: 'Move people into second-line, AI quality and knowledge work, customer success and onboarding, and internal vacancies, with paid learning time.' Plan §4 adds product feedback roles and says 'people are offered internal vacancies first'."
+    },
+    {
+      "text": "Covers negotiation with unions or employee representatives before decisions in both countries (for example MBL negotiation in Sweden and change negotiations under Finland's Co-operation Act)",
+      "passed": true,
+      "evidence": "Reply: 'Sweden: you negotiate with the unions first (MBL)'. Plan §6: 'Negotiate with the unions under the Co-determination Act (MBL) before the decision, at the problem stage'; Finland: 'Co-operation negotiations under the Co-operation Act. The full act applies from 50 employees; below that, negotiations are required only if measures affect at least 20 employees within 90 days.' Phase 0: 'open the conversation with employee representatives and unions with the real numbers'."
+    },
+    {
+      "text": "Offers transition support that starts at notice, such as job security council support in Sweden or Finland's employer-funded training, with coaching and paid training",
+      "passed": true,
+      "evidence": "Plan §6: 'Job security council support (for example TRR...) from the day of notice. If it does not, the company funds an equivalent.' §7: 'Coaching, job search and paid training from the day of notice, with a budget per person (at least one month's salary equivalent in both countries)'. Finnish change security is stated."
+    },
+    {
+      "text": "Uses voluntary options and natural attrition before any involuntary reductions",
+      "passed": true,
+      "evidence": "Plan §5 order: '3. Hiring freeze and natural attrition... 4. Redeploy and reskill... 6. Voluntary exits, with a package better than the statutory minimum 7. Only then, involuntary reductions, once'."
+    },
+    {
+      "text": "Mentions paid study or reskilling support for adults, such as Sweden's transition study support (omställningsstudiestöd), or a company-funded learning budget",
+      "passed": true,
+      "evidence": "Plan §7: 'paid training from the day of notice, with a budget per person (at least one month's salary equivalent in both countries)'; §4: 'paid learning time during working hours, with mentoring and shadowing'. Company-funded; omställningsstudiestöd is not mentioned."
+    },
+    {
+      "text": "Plans for the six who stay: workload, new role definitions, and which work AI hands back to humans",
+      "passed": true,
+      "evidence": "Thinner than the others, but all three elements are there. Roles: 'Second-line and complex-case specialists (the work AI escalates, usually harder and more valuable)', 'AI quality and resolution designers: review AI answers, find failures, write and fix the knowledge base, maintain the test set'. Workload: §2 'What do 6 people have to cover? Contacts per year x handling time / productive hours per person, plus coverage hours, absence and holiday cover, and language cover'; 'A coverage model that only works with overtime is not accepted'; gate 'Escalation workload per remaining person within the agreed limit'. It doesn't set out who the six are or how to retain them."
+    },
+    {
+      "text": "Phases the change over the year with named checkpoints rather than one cut",
+      "passed": true,
+      "evidence": "Plan §3: phases 0 Understand (months 0–2), 1 Absorb (2–5), 2 Redeploy (5–8), 3 Settle (8–12), each with a headcount ceiling and a named 'Gate to move on'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 563,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2016,
+      "evidence": "wc -w people-plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise, accurate on both countries' rules, and sound on sequencing and support from the day of notice. But it keeps 6 by month 12 without testing workload or coverage, gives the six little design, and drops an oddly placed 'leaders take the first and largest pay cut' step into an AI efficiency move."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Checked: Klarna's 700-agent claim (2024) and 2025 reversal; Ingka 47% / 8,500 retrained; LAS three exemptions; Arbetsförmedlingen two months for 5–25 people; Co-operation Act thresholds; change security at 30+ employees and 5 years; re-hire duty at 50+ since June 2026; AI Act Art. 50 since Aug 2026 and the high-risk information duty from Dec 2027; Moffatt v. Air Canada (2024)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or jargon such as 'cost ladder'. §5's ordered list reads like a template but uses no jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes no bad outcome."
+    },
+    "best_insight": {
+      "value": "It refuses to play the two sites against each other: the Stockholm/Helsinki split must follow the capacity model, language needs and each country's legal order, not which city is cheaper to cut, and the stricter process applies at both sites.",
+      "evidence": "Plan §6 'Across both countries'."
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Mentions paid study or reskilling support for adults, such as Sweden's transition study support (omställningsstudiestöd), or a company-funded learning budget",
+        "reason": "The 'or a company-funded learning budget' clause lets almost any plan pass (all four did). Consider requiring Swedish transition study support (omställningsstudiestöd) or a funded learning budget for people who stay or move, not only for leavers."
+      },
+      {
+        "reason": "No assertion checks whether the target of 6 is tested against the real workload and coverage (tickets vs handle hours, harder residual cases, July holidays, languages). That was the biggest difference between samples: A and C model it with numbers, B reasons about it, and D only lists it as something to measure."
+      },
+      {
+        "assertion": "Covers negotiation with unions or employee representatives before decisions in both countries (for example MBL negotiation in Sweden and change negotiations under Finland's Co-operation Act)",
+        "reason": "Make the timing testable: representatives must see the proposal before anything is announced to staff. That would separate plans that brief unions first (A, C, D) from B, whose timeline announces 'direction and timeline' before consultation starts."
+      },
+      {
+        "reason": "No assertion checks the selection constraint: Sweden's LAS seniority order (with three exemptions or an agreed list) means leaders cannot simply choose the six, and the Finnish entity's headcount decides whether the Co-operation Act applies. Both are central to a people plan and easy to get wrong."
+      }
+    ],
+    "overall": "Passes all assertions, though assertion 8 only narrowly. The assertions can't tell this thinner plan apart from A and C."
+  }
+}

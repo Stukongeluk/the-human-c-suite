@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (yes, no, or partly / not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "First sentence: \"Not as framed.\" followed by \"Staff the AI assistant now, but with two or three teams, not all eight, and cap tech debt work rather than freeze it.\""
+    },
+    {
+      "text": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+      "passed": true,
+      "evidence": "\"A blanket debt freeze tends to come back as incidents and slower delivery, just when the assistant needs a stable base.\""
+    },
+    {
+      "text": "Offers a smaller, reversible bet, such as one or two teams, design partners or a staged beta with gates",
+      "passed": true,
+      "evidence": "\"Start with the two or three teams closest to those jobs. Use design partners, a test set, a cost-per-use figure and a human fallback. Add teams only when a gate shows it speeds things up.\""
+    },
+    {
+      "text": "Asks which customer problem the assistant should solve, or what customers want from it",
+      "passed": true,
+      "evidence": "\"We don't yet know what our customers want from an assistant\" and \"15 to 20 customers and lost deals, plus tickets and usage. Pick the one or two jobs it should do.\""
+    },
+    {
+      "text": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+      "passed": true,
+      "evidence": "\"**Launch is a signal, not a deadline.**\""
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": true,
+      "evidence": "wc -w reply.md = 236 (< 300)."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No lecture on decision habits; it closes with two questions that would change the answer and \"What am I missing, and what would make this wrong?\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 236,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files in sample-D"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise, direct and well staged (discovery, design partners, test set, cost per use, human fallback, gates, estimates to check with teams), but its debt answer is a 10-15% cap 'limited to what blocks the assistant or causes incidents', which still freezes most debt work."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable external claims; all figures are labelled as estimates to check with the teams."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "Asking \"what have the teams promised customers for the next two quarters?\" surfaces the hidden cost of the plan: broken commitments to existing customers.",
+      "evidence": "closing questions"
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+        "reason": "Passes for replies that explain the cost of a freeze but then recommend 'capping' debt at 10-15% and limiting it to assistant blockers (a soft freeze for most teams). Consider an assertion that the alternative keeps a protected debt/reliability floor for every team, not a cap."
+      },
+      {
+        "assertion": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+        "reason": "The 'or avoids a crunch' branch makes this easy to pass; a reply can call the launch information while also asserting unevidenced urgency ('Waiting means losing share, so move now'). Consider splitting into two assertions, or requiring that urgency be tied to evidence such as lost deals."
+      },
+      {
+        "reason": "No assertion checks that the reply avoids committing to a ship date or timeline before the building teams have estimated it, which separates the strongest samples from those that invent an '8-to-10-week' ship target."
+      }
+    ],
+    "overall": "Passes every assertion and is the shortest; the assertions miss that its debt 'cap' limited to assistant blockers and incidents is close to the freeze it argues against."
+  }
+}

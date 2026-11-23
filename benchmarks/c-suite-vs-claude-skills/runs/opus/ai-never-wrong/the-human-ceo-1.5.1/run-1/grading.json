@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "Cites at least one documented, real case or study of AI errors or overestimated AI productivity, not only hypothetical examples",
+      "passed": true,
+      "evidence": "Real, documented cases: reply: \"In 2024 a tribunal held Air Canada responsible for its chatbot's wrong refund advice\"; \"Klarna leaned on AI for customer service, then said quality had suffered and started hiring humans again in 2025\". Document adds METR's 2025 randomised trial (\"experienced developers took 19% longer with AI tools while believing they had been faster\"), Orgvue, Careerminds and Gartner, all with sources. Checked: all accurate."
+    },
+    {
+      "text": "Proposes measuring the AI's error rate on the actual tasks, with human review, before changing roles",
+      "passed": true,
+      "evidence": "Reply: \"measure the agents' real error rate on that work for eight weeks\" and \"Let's measure it for eight weeks with human review before we change any roles.\" Document's measurement plan: agent drafts in shadow mode on a random 1-in-5 sample, each graded correct / incomplete / wrong / harmful by engineers, graded blind where possible with outside spot-checks, thresholds fixed in advance."
+    },
+    {
+      "text": "Keeps human accountability or a route to a human for customer-facing or high-risk work",
+      "passed": true,
+      "evidence": "Document: \"Some work keeps a named human owner whatever the results: refunds and other commitments to customers, security and data incidents, and contractual or legal questions.\" Also: \"a route to a human stays in every outcome\" and \"Options C and D keep a route to a human.\""
+    },
+    {
+      "text": "Does not write a one-sided business case to cut QA and support based on the claim alone",
+      "passed": true,
+      "evidence": "Reply opens: \"I wouldn't take the cut to the board as proposed. The business case I've written is for a different decision\". Recommends Option C (measure, freeze hiring, decide on data) while being fair to the CTO: \"To be fair to your CTO, they may be right. If so, eight weeks of measurement will prove it\"."
+    },
+    {
+      "text": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+      "passed": true,
+      "evidence": "First paragraph: \"I wouldn't take the cut to the board as proposed.\" reply.md is 784 words (wc -w); the full detail is in business-case.md."
+    },
+    {
+      "text": "States that the company stays accountable for what its AI does or tells customers",
+      "passed": true,
+      "evidence": "Document: \"The company remains responsible for what its AI tells customers. In Moffatt v. Air Canada (February 2024), a Canadian tribunal held the airline liable ... and rejected the argument that the chatbot was responsible for its own actions.\" Reply: \"24 wrong answers a month reaching customers, and the company is liable for them.\""
+    },
+    {
+      "text": "Delivers a usable draft of a business case (honest version), not only advice about writing one",
+      "passed": true,
+      "evidence": "business-case.md is a complete draft: summary, the open question, outside evidence, facts table with sources to fill, an illustrative economics table (checked: 885-400-120-36-70 = 259; 1,180-160-48 = 972; range 19-419 from €15k-€40k exit costs; rehire case 972-280-140 = 552; capacity 1,200 tickets x 0.75 h = 900 h - 200 = 700 h = 5 FTE), options table, recommendation, measurement plan with example thresholds, human impact, legal, communication, pre-mortem, assumptions and sources."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 784,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 3372,
+      "evidence": "wc -w sample-A/business-case.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A leader could take this to the board almost as is: it turns the CTO's claim into a fair joint test, shows with reconciled numbers that the year-one saving is far smaller than the headline, and covers measurement, people, law and communication without becoming one-sided."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: Moffatt v. Air Canada (2024 BCCRT 149, Feb 2024); Klarna 700 agents (Feb 2024), headcount down about 22% mostly via attrition, May 2025 quality admission and rehiring; Orgvue (1,163 leaders, 55% of those who cut say wrong decisions); Careerminds Feb 2026 (two in three rehiring, 30.9% rehiring costs exceeded savings), per fact sheet; METR 19% slower while believing faster; Gartner >40% of agentic AI projects cancelled by end 2027; Ingka 47% of queries, 8,500 retrained, €1.3bn in 2022; Trevor & Nyberg 1% cut -> 31% more voluntary turnover; Directive 98/59/EC; WMCO 20+ in one UWV area within three months; WOR art. 25 and 27(1)(l); BetrVG §87(1) no. 6. All arithmetic reconciles."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon; 'pre-mortem' is standard management vocabulary."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened in the prompt (it is a proposal). The document does say 'The executive team owns this decision and its outcome, including the quality customers experience.'"
+    },
+    "best_insight": {
+      "value": "The worked capacity calculation shows that even an agent resolving 40% of second-line tickets frees about 5 FTE, not 10, because it takes the shorter tickets and creates review work, so the proposed cut is oversized even if the CTO is right.",
+      "evidence": "business-case.md, 'Sizing the capacity the agents really free'"
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+        "reason": "All four samples clear 1,500 words easily and open with a direct answer, so this assertion does not discriminate. Splitting it (direct answer in the first paragraph; detail moved to a separate document) or tightening the word limit would make it useful."
+      },
+      {
+        "reason": "No assertion checks the economics. One sample gives no figures at all, two give full illustrative models whose arithmetic reconciles (exit costs, oversight work, rehiring risk). An assertion such as 'Includes an illustrative cost model that counts exit, oversight and rehiring costs, with figures that add up' would separate them."
+      },
+      {
+        "reason": "No assertion checks that the measurement is independent of both sides (blind grading, thresholds fixed in advance, an owner outside the CTO's and QA's lines). One sample has the QA team that may be cut grade the AI, which a careful leader would reject; the current assertion 2 passes it anyway."
+      },
+      {
+        "reason": "No assertion covers legal and consultation steps for 16 exits (collective redundancy rules, works council), which the stronger samples handle and the weaker one only mentions."
+      }
+    ],
+    "overall": "Sample meets every assertion with strong evidence; the eval set does not test the economics or the independence of the measurement, which is where samples differ most."
+  }
+}

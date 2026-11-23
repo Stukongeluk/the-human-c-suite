@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "Reply: 'Nine months takes you to the end of August 2027'; 'at flat costs break-even still takes 18 months if gross profit covers half your costs, and 28 if it covers a third' (checks: ln2/ln1.04 = 17.7, ln3/ln1.04 = 28.0). Scenario table with stated assumptions (SEK 85k loaded, payroll 73%, 14 leaving from March with two months' extra pay): '20–30% | Cash lasts to October–November 2027 | ... you still need a bridge', 'About 40% | Into early 2028; only to November 2027 if growth slips to 3%', '50% or more | Break-even before cash runs out'. My re-model reproduces each row. Target and downside case (B in summer 2027, B late or never, growth at 3%) defined in the reply and the board paper."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "'This week: fast, reversible, no jobs': leadership pay cut 20–30%, hiring freeze, spend cuts, the Swedish R&D deduction on employer contributions, annual prepayment and renewal pricing, insider bridge. Sized: 'the no-job moves below buy roughly 1.5 to 3.5 months', with the cut decided only 'within about three weeks'. The board paper's options table orders these levers before options 11–12 (reductions), with a stated 'least harm first' rule."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'If a gap remains, make one reduction, sized for the downside case so there's no second round' and 'Decide which work stops before deciding about roles.' Board paper: 'It isn't 30% by default: the model sets the size, which could be smaller, similar or larger.'"
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'MBL requires negotiating with the unions before you decide. Arbetsförmedlingen must be notified at least two months before the first person leaves (5–25 people), and notice runs one to six months by length of service... LAS sets the order by length of service, with three exemptions, unless you agree a list with the union.' 'Take the MBL and LAS steps with employment counsel.' Board paper adds the nine-month rehiring priority."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": true,
+      "evidence": "'Tell the team the numbers and the options while they can still shape them, and bring the unions in early.' 'Go beyond the minimum: extra pay on top of paid notice, transition support from day one (your job security council, or Kammarkollegiet without a collective agreement), and extra care for anyone on a work permit'. Board paper adds 2–3 months' extra pay, a coaching budget, equity treatment, kept laptops, references, portfolio introductions, and no notices over the holidays."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": true,
+      "evidence": "Reply: 'You and the leadership team take the first and largest pay cut ... and say plainly that the gap is a leadership result: you and the board planned around a B that didn't come.' Board paper: 'we hired and spent on the assumption of a Series B by [original date]. That was management's plan, approved by this board, and management owns the result. The leadership team takes the first cut.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 890,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2229,
+      "evidence": "wc -w runway-plan-board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The most complete and usable package: a verified illustration keyed to the one number that decides the answer, Sweden-specific non-job levers and risks (R&D deduction, work permits, control balance sheet duty), a dated plan that avoids pre-Christmas notices, and a board paper ready for real figures. It is marred by one wrong claim about varsel publicity."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) Reply: 'Notify Arbetsförmedlingen early: it's a notice of risk, not a decision, but it's public'; board paper: 'It becomes public, so staff hear it from us first.' Arbetsförmedlingen states 'En varselanmälan omfattas alltid av sekretess', and the fact sheet says the varsel is kept confidential. The resulting advice (tell staff first) is still sound. Everything else checked holds: World Fund $13.5bn Series B shortfall 2020–2024; forskningsavdrag 20%, SEK 3m per group a month, at least half of working time, from 1 Jan 2024; three months for work-permit holders (Migrationsverket); Kammarkollegiet support for workers without a collective agreement; short-time work only for unforeseeable external difficulties; ABL 25:13 control balance sheet; Trevor & Nyberg 1% → 31%; Airbnb 2020 terms."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Only 'skills support' as the name of Kammarkollegiet's programme; no skill or reference-file mention."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'we hired and spent on the assumption of a Series B ... management owns the result'"
+    },
+    "best_insight": {
+      "value": "It asks why the B slipped ('If it's growth, a deep cut that slows growth makes the B harder') and pairs that with a lever the others missed: claiming Sweden's R&D deduction on employer contributions, which cuts cash burn without touching a job.",
+      "evidence": "Reply 'Two questions' item 2 and 'This week' item 3"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "The 'or' makes this pass with any one of four items, and all four samples listed all four, so it doesn't discriminate. It also doesn't check accuracy: sample D says the varsel to Arbetsförmedlingen is public, which Arbetsförmedlingen contradicts ('En varselanmälan omfattas alltid av sekretess'). Consider requiring MBL-before-decision plus LAS order, stated correctly."
+      },
+      {
+        "assertion": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+        "reason": "Add that the 'beyond the minimum' items must actually exceed Swedish law. Paid notice (LAS s.12) and rehiring priority (LAS s.25) are statutory, and sample B listed them as 'well beyond statutory terms'."
+      },
+      {
+        "reason": "No assertion checks that illustrative numbers state their assumptions and add up, or that the reply deals with the two investors constructively (e.g. asking them to back their demand with a bridge or agreeing a written trigger). These were the clearest differences between samples."
+      }
+    ],
+    "overall": "Passes all six; the only flaw found is factual (varsel publicity), which no assertion checks."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opens: \"Don't ship it as specced. Say yes to the goal (productivity, 8% is worth chasing) and no to a public stops-per-hour ranking with an automatic bottom-10% flag. Offer a 10-week pilot with quality measures and a comparison group instead\"."
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "\"Stops per hour mostly measures the route, not the driver. Dense city centre versus rural Belgium, apartment blocks, parcels per stop, access problems, failed first attempts, how the depot loaded the van, traffic.\" Safety: \"rushed handovers, missed breaks ... It is also a road-safety issue when a live leaderboard sits on the screen of someone who is driving\", plus safety incidents as a pilot guardrail. This is the thinnest safety treatment of the four (no explicit speeding or injuries), but it names a road-safety risk from chasing the number."
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "\"I'd expect the big items to be route planning and stop sequencing, depot loading order, failed deliveries and redeliveries, address and access data quality, app friction per stop\" and \"Flag routes and depots, not drivers. The weekly report to subcontractors becomes the bottom 10% of routes and depots by route-adjusted time lost, with the causes.\""
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": true,
+      "evidence": "All three parts, flagged for counsel: works council consent (\"consent right on systems suited to monitoring behaviour or performance, art. 27 WOR\"; Belgium's own monitoring rules); GDPR (\"joint-controller, purpose and proportionality questions, and probably a DPIA\"); AI rules (\"check the EU AI Act high-risk rules for worker management (the information duty applies from December 2027, so it isn't live yet)\"). The date matches the fact sheet."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": true,
+      "evidence": "\"A flag from you to their employer works as a dismissal signal, and a driver cannot see the data or challenge it. Expect turnover and subcontractors who walk away\"; legal: \"raises worker-classification and chain-liability questions\"; \"What happens to a flagged driver? If the answer is 'the subcontractor drops them', the real cost belongs in the business case\". Instead, subcontractors get route and depot reports \"with the causes\", individual conversations stay \"the subcontractor's call\", and subcontractors are involved in designing the pilot."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": true,
+      "evidence": "\"Show drivers their own data, privately. Their stops per hour, first-attempt rate and a route-adjusted comparison, plus a way to report obstacles ... No public leaderboard.\" Design: \"Involve subcontractors and driver representatives in designing it, before choosing the metrics.\" It involves representatives rather than drivers directly, and doesn't say explicitly that subcontracted drivers are included, but with subcontractors in the room and B's note about subcontractor councils it meets the spirit."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 877,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Balanced and practical, with a fair steelman for Operations, a clear alternative (route and depot flags, private driver data, a controlled pilot with guardrails), correct legal flags including the AI Act date, and the right questions about where the 8% comes from and what happens to flagged drivers."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked the 240 and 12,500 arithmetic, WOR art. 27, the DPIA and the AI Act date; none wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome."
+    },
+    "best_insight": {
+      "value": "Turn the weekly subcontractor report into the bottom 10% of routes and depots by route-adjusted time lost, with causes, and put the cost of replacing drivers that subcontractors drop into Operations' business case.",
+      "evidence": "'Flag routes and depots, not drivers' and 'Two questions that would change my answer'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+        "reason": "The safety half can be met by a single line about a screen in the van. Consider requiring the pace-pressure-to-harm link (speeding, skipped breaks, injuries) to be explicit."
+      },
+      {
+        "assertion": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+        "reason": "Two checks are bundled here, and 'including subcontracted ones' is almost never made explicit by any sample. Split it, or say whether 'driver representatives' or unqualified 'drivers' counts."
+      }
+    ],
+    "overall": "Meets every assertion with substance; the safety and co-design parts are the lightest."
+  }
+}

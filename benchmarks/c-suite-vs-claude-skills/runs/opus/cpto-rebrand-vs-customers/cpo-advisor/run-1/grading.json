@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "Bottom line first: 'Deliver the rebrand in Q1, but don't plan it as \"everyone works on the rebrand.\" ... Keep the teams that own invoicing, the accounting integration and reporting working on those three problems.'"
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": true,
+      "evidence": "'The launch core (name, look, domain, site) ships in Q1. The full design-system migration runs on into Q2 and Q3.' Cost made visible: 'The name, logo, theme and domain are weeks of work for a few teams. Marketing mostly owns the marketing site. The long pole is rebuilding every screen in a new component library'; Option B trade-off: 'Full visual consistency across every screen arrives one or two quarters later'; q1-plan.md has a workstream table and a sizing step ('Capacity table: team, track, weeks'; the name sweep is 'days per team, not weeks')."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "Evidence pack: 'Tag detractor comments by theme. List the revenue and renewal dates of the accounts raising the three issues. Add ticket counts, the integration's failure rate and invoice time (p95)'; q1-plan.md ranks with RICE 'with revenue affected as reach' and a scorecard (sync success rate, invoice time p95, tickets per theme, H1 revenue at risk, NPS)."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Options table A/B/C with a 'Trade-off' column, e.g. A: 'Complaints wait until at least Q2, and the launch lands on an unchanged product'; B: 'Full visual consistency... arrives one or two quarters later'; C: 'Reverses a leadership decision and drags out the two-brand confusion', and a fallback plan if A is chosen."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": false,
+      "evidence": "Partly there: no labelling ('\"Leadership decides\" is fine too: your job is to make sure they decide with the cost in front of them'), a light process ('a decision that can be made in one meeting, with a default and a February checkpoint so it's cheap to change'; 'Written decision, recorded with its accepted risks'), and it asks what fixes the date. But there is no private conversation first (a 'Decision meeting with the CEO' with a memo), and it does not separate cheap-to-reverse from hard-to-reverse decisions; it makes the one decision cheap to change instead."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": false,
+      "evidence": "reply.md is 1146 words (wc -w), about double the limit, even though a 2556-word q1-plan.md is attached for the detail."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1146,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 2556,
+      "evidence": "wc -w sample-C/q1-plan.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "The most thorough and technically accurate plan (correct dates, a strong domain-migration checklist, a scorecard, a CEO memo), but the reply itself is too long to act on, and it skips the private conversation and the reasons behind the CEO's stance."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: all weekdays (Fri 4 Dec, Fri 11 Dec, week of 14 Dec, Mon 4 Jan, Fri 26 Feb = end of week 8, week 12 from 22 Mar 2027) are correct; RICE, p95, Search Console change-of-address tool, cross-domain cookies, SAML ACS/entity IDs and POST-redirect behaviour are stated correctly."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon; confidence labels are explained in plain words."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The NPS fall is in the prompt; no leader in the advice owns it as leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "Keep invoices and payment reminders on the proven sending domain until the new one is warmed up, and have the integrations team own its own domain cutover so one team holds all the integration's risk.",
+      "evidence": "q1-plan.md sections 3 and 4"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+        "reason": "All four samples pass this; it does not separate a weak reply from a strong one. Consider requiring the protected share to be stated or sized (e.g. which teams or roughly what share stays on the complaints)."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "'Makes the cost of each visible' is hard to grade when no data exists; samples can only describe a sizing step. Clarify what counts: relative size of each part, or an explicit ask to size each part, plus what is deferred and to when."
+      },
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "Bundles four separate behaviours (private first, ask reasons, reversible vs irreversible, light process). Samples that do three of four are hard to grade consistently; consider splitting into two assertions."
+      },
+      {
+        "reason": "No assertion checks the technical coupling between the rebrand and the complaints (a new domain touches the accounting integration's OAuth redirect URIs/webhooks and invoice-email deliverability). It was the most useful insight in the stronger samples and is easy to miss."
+      },
+      {
+        "reason": "No assertion checks planning to real capacity with slack (no overtime) or telling teams and affected customers the plan; both appear in the better samples and matter for this case."
+      }
+    ],
+    "overall": "Strongest content but fails on length and the private-first/reversibility handling; the assertions reward brevity over depth here, which is fair for a chat reply."
+  }
+}

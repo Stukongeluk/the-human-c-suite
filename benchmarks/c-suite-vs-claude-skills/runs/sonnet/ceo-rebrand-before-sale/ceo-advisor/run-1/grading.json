@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "Bottom Line: 'I would not take the three agreed moves to the board as written... Your NPS is down 25 points (+31 to +6) and churn is rising. That is the number a buyer's diligence team will look at first.' The plan 'stops the churn first'."
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "Phase 0: 'Churn diagnosis. Look at churn and NPS by company, product, segment... Read the verbatim NPS comments and call the 20 biggest accounts that are at risk. Establish whether the cause is service, product, price, integration, or people leaving.' Phase 1: 'A customer recovery programme with named executive sponsors for the top accounts, fixed response times, and a visible fix list.'"
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "'Do the invisible part in Q1: legal entity naming review, trademark and domain clearance... Move to an endorsed model first... Make the visible switch for each company only after that company's NPS and churn have stabilised.' Also: 'A rebrand fixes none of the usual causes of falling NPS'."
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": false,
+      "evidence": "Costs are named ('The best people leave first, because they can. Decisions and service slow down during the change'; 'Restructure fatigue is a known cause of regretted attrition'). But the reply never asks what the three earlier restructures were meant to fix or why they didn't work, and Phase 0 includes no review of them. It accepts the move ('Keep one, final, well-designed restructure') and questions only its timing and method ('look at spans and decisions, not to pick a number of layers to remove'). That changes the design. It does not ask whether a fourth reorganisation would solve a problem the first three didn't."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "'Do not do this as a blanket rule'; 'Some contractors will hold knowledge of the four old platforms that nobody else has. Check this before any notice is given.'; juniors 'are the future supply of mid-level engineers and consultants'; 'Replace the blanket ban with a capacity plan by team'. Less harmful options first: 'Cost baseline... duplicate systems... overlapping vendors and real estate. The first savings should come from here, not from people who serve customers.'"
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": false,
+      "evidence": "Direction, dates (Phase 0 to day 30, months 2-6, 6-12, 12-18) and a scorecard with measures are there, and it uses the owners' terms ('Buyers pay for earnings quality, not just earnings... recurring revenue, net revenue retention, churn by cohort'). But no priority or phase has an owner. The Phase 0 items, the recovery programme, the cost baseline and the restructure design are all unassigned, as are the actions in 'How to act this week'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 2581,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files; the plan is in the reply itself."
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sensible direction and sequencing with a correct, suitably hedged German legal section, but there are no owners, no leadership ownership of the NPS fall or first cut, no review of the three past restructures, and it partly misreads 'ending all junior roles' as a hiring ban ('Ending junior hiring saves little now')."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Legal points are hedged and correct: works council duties 'if there is a Betriebsrat', Interessenausgleich and Sozialplan, KSchG notification thresholds depending on headcount and dismissals within 30 days, Sozialauswahl, possible transfer-of-undertakings rules. Sizing arithmetic correct: 900 x €120k = €108m; 1 point of churn = about €1.1m. The unsourced claim that rebrands during trust problems 'often see a short-term drop in recognition' is tagged [medium] and is not a clear error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Uses its own [verified]/[medium]/[assumed] tags but no mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "Nowhere does a leader take responsibility for the NPS fall or the churn, and there is no leadership pay or bonus measure."
+    },
+    "best_insight": {
+      "value": "It points out that the real window is 9-12 months rather than 18, because vendor due diligence and the trailing-twelve-month figures a buyer sees start well before signing, so anything begun in Q1 must show in the numbers by Q3-Q4.",
+      "evidence": "'The real window is about 9 to 12 months.'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+        "reason": "All four samples pass this; it does not discriminate. A stronger version would require the reply to quantify the link from churn to EBITDA to exit value (or to name the buyer's quality-of-earnings and commercial due-diligence tests), which only some samples do."
+      },
+      {
+        "reason": "No assertion checks whether leadership owns the NPS fall and takes the first cut on its own pay. Two samples do this explicitly and two omit it entirely; this is a core part of the guidance for a 'results disappoint' case and currently goes unscored."
+      },
+      {
+        "reason": "No assertion checks the German legal floor (works councils where elected, §§111-112 BetrVG, §17 KSchG, social selection, §22 BBiG, AGG) or that people-related savings land late because of consultation and notice periods. Samples differ a lot in accuracy and realism here."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "This assertion bundles four tests (direction, owners, measures and dates, owners' terms). Splitting it would show which part failed; most failures here are on owners alone."
+      }
+    ],
+    "overall": "Right direction, but it fails on questioning the restructure and on owners. Missing leadership accountability is not scored but is a notable gap."
+  }
+}

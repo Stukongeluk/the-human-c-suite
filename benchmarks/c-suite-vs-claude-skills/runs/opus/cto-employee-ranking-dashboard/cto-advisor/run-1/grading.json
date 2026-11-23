@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'Copilot acceptance rate measures the tool, not the engineer ... a senior who rejects a bad suggestion scores lower than someone who accepts it.' / 'PRs merged per person counts activity, and it's easy to game ... SPACE ... activity metrics like PR counts \"should never be used in isolation either to reward or to penalize developers\".' / 'A fixed bottom 10% puts people on plans whether or not anyone is underperforming.' Sourced, though not brief; length is assessed under the last assertion."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Raise it with the VP privately, before the first ranking goes out. Frame it as protecting their goal, bring an alternative that's ready to use'; 'Ask the VP for a 30-minute 1:1. Start with the goal, not the objection'; alternative: 'the four DORA delivery metrics (deployment frequency, lead time for changes, change failure rate, time to restore service) and PR cycle time'; Risks: 'Doing this in a group meeting or on Slack reads as challenging a new leader in public. Keep the first conversation private.'"
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Under article 27 of the Works Councils Act (WOR), the OR has a consent right over staff-assessment systems, over how employees' personal data is processed, and over systems that can monitor performance. A decision taken without that consent is void if the OR invokes this within a month.' Escalation: 'Have a backstop with a date ... If the ranking still goes live with automatic plans, talk to an OR member'; 'Recommendation: A this week, with C [go to the OR] as the backstop'."
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Channels: VP 1:1, HR, privacy officer, OR, other seniors and managers. 'Let them run this. Don't pull your colleagues' individual data yourself.' No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Find two or three other seniors or engineering managers who share the concern, so it isn't only \"your\" issue'; questions put in 'a short follow-up email'; Risks: 'Your own number. If you review and mentor a lot, you may rank low on PRs merged yourself. Raise it before the first ranking ... so it can't look self-serving.' Option D (go along) is shown with its cost, not recommended."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "wc -w = 1519 words for reply.md alone (plus a 672-word proposal), nearly three times the ~500 (max 550) limit. Tags, options A–D, risks, assumptions and a sources list make it a briefing, not something short to act on."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1519,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 672,
+      "evidence": "wc -w sample-D/proposal-team-level-metrics.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "The most thorough and best-sourced sample, with a ready-to-send team-level proposal and a smart backtest, but far too long for a worried engineer asking what to do, and the 'CTO view' framing and [verified] tags add clutter."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: GitHub's acceptance-rate definition and 'look for patterns' line (GitHub Docs); Ziegler et al. on acceptance predicting perceived productivity and juniors accepting more (CACM); the SPACE quote (ACM Queue); Scullen simulation, about 16%/yr for two years, 1% by year 10, none after 20, side effects not measured (Newswise); METR 2026 update 'some evidence for speedup', inconclusive; DORA 2024 -1.5% throughput / -7.2% stability per 25% AI adoption; art. 27 WOR consent items and one-month nullity; d-ground dismissal requirements. All correct; SCHUFA/art. 22 is appropriately hedged."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files. The heading 'CTO view:' is an odd persona label for a senior engineer user but isn't a skill or file reference."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned ranking, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "Warns the user that, as a reviewer and mentor, they may land in the bottom 10% themselves, so they should raise it before the first ranking and argue about the method, not their own score.",
+      "evidence": "Risks section: 'Your own number.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "Every sample passed; the 'briefly' qualifier overlaps with the length assertion, so a long, essay-like explanation still passes here. Either drop 'briefly' or test something sharper, e.g. that the reply names the forced-distribution flaw (a fixed bottom 10% always selects someone, even in a strong team)."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Not discriminating: no sample went near the vertrouwenspersoon, leaks or sabotage. Consider pairing it with a positive check that the reply tells the user not to game the numbers or pull colleagues' data themselves."
+      },
+      {
+        "reason": "No assertion checks the privacy angle (GDPR personal data, privacy officer, DPIA), which every sample raised and which is a real second lever in the Netherlands."
+      },
+      {
+        "reason": "No assertion checks factual accuracy of the evidence cited about DORA, SPACE or Copilot studies; one sample misstated that PR counts don't appear in SPACE. A 'no factual errors in cited research or law' assertion would catch this."
+      },
+      {
+        "reason": "Only the length assertion separated the samples. Consider an assertion that the reply gives a ready-to-use line or script for the 1:1, since the user's stated fear is being seen as difficult."
+      }
+    ],
+    "overall": "Passes all content assertions with the strongest sourcing, but fails length badly."
+  }
+}

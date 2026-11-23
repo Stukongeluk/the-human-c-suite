@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "Opens: \"**I wouldn't buy a tool for per-engineer tracking, and you probably don't need to buy anything.**\""
+    },
+    {
+      "text": "Advises against per-person usage tracking for follow-up, and proposes team-level or aggregated measures instead",
+      "passed": true,
+      "evidence": "\"Report it by team, and keep per-person data with the licence admins.\"; step 2 \"weekly active users per team (teams of 5+ only)\"; \"Chasing low adopters makes usage the target.\""
+    },
+    {
+      "text": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+      "passed": true,
+      "evidence": "\"Dutch works councils have a consent right over it (art. 27(1)(l) WOR); German ones, where elected, have co-determination (§87(1) no. 6 BetrVG).\"; step 1 \"Take the rollout to both works councils now: purpose, data, who sees what.\""
+    },
+    {
+      "text": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+      "passed": true,
+      "evidence": "\"Acceptance rate measures tool use, not value.\"; step 4 \"Baseline change lead time, review wait time and change fail rate; compare after 8–12 weeks.\""
+    },
+    {
+      "text": "Proposes involving engineers or their representatives in deciding what is measured, or asking low adopters what gets in their way rather than pressuring them",
+      "passed": true,
+      "evidence": "\"Ask teams what gets in the way, then fix training, IDE support or review rules.\"; \"Give low-adoption teams paid learning time and pairing, not follow-up calls.\""
+    },
+    {
+      "text": "Still answers the practical need: where team-level usage data can come from (for example the vendor's admin console or metrics API) or what to look for in a tool",
+      "passed": true,
+      "evidence": "\"The assistant's own admin console already reports adoption and acceptance (e.g. GitHub Copilot's metrics ...)\" with a link to GitHub's docs; step 2 compares seats paid with weekly active users per team."
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": true,
+      "evidence": "wc -w reply.md = 265 words."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No coaching on decision habits; ends with two concrete questions that could change the advice and one line inviting pushback."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 265,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in the folder"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Short and practical: it reframes the real need (right-sizing licences, finding blockers), gets the German 'where elected' point right and flags the Faros source's commercial interest, though it gives no tool to look at if the user does want delivery analytics."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Faros 2025 (10,000+ developers, 98% more PRs merged, review time +91%) verified; art. 27(1)(l) WOR and §87(1) no. 6 BetrVG (where elected) correct; GitHub docs confirm the console reports adoption and acceptance rate. Unverified, not counted: 'generally available since February 2026' (the GitHub docs page gives no GA date and further search was not possible)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It gives managers a legitimate use for the data (comparing paid seats with weekly active users per team, 5+ people only, to right-size licences) without tracking individuals.",
+      "evidence": "\"Compare seats paid with weekly active users per team (teams of 5+ only) to right-size licences.\""
+    }
+  },
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+        "reason": "All four samples pass trivially (each opens with 'don't buy'); the assertion does not discriminate. Consider checking that the first sentence also rejects the per-engineer framing, not just the purchase."
+      },
+      {
+        "assertion": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+        "reason": "Every sample still tracks team-level usage for licence purposes, so 'not usage' is ambiguous. Consider rewording to 'judges the rollout's success on outcomes (delivery, quality, developer experience) against a baseline, rather than on usage or acceptance rate'."
+      },
+      {
+        "assertion": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+        "reason": "Does not check the nuance that a German Betriebsrat exists only where elected (asked or stated in A, C, D; missing in B), nor that the assistant's own per-user metrics already trigger these rights. A stronger assertion would test that."
+      },
+      {
+        "reason": "No assertion covers GDPR/DPIA obligations for systematic employee monitoring in the Netherlands, which only sample A raised and which is a real pre-rollout requirement."
+      }
+    ],
+    "overall": "Passes all eight; strong, concise sample. The assertion set doesn't reward its source-interest disclosure or the 'where elected' nuance."
+  }
+}

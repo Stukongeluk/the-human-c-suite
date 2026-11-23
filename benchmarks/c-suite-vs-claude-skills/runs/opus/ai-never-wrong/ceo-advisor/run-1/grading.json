@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "Cites at least one documented, real case or study of AI errors or overestimated AI productivity, not only hypothetical examples",
+      "passed": true,
+      "evidence": "Reply: \"AI-written code introduced security flaws in 45% of Veracode's 2025 tests. Leading agents completed about 35% of multi-turn CRM tasks in Salesforce's 2025 benchmark.\" \"Klarna and Commonwealth Bank both reversed AI-driven support cuts. In an Orgvue survey, 55% of leaders...\" Document adds METR (19% slower, believed 20% faster), Air Canada, Gartner and IBM, all linked. Checked: accurate."
+    },
+    {
+      "text": "Proposes measuring the AI's error rate on the actual tasks, with human review, before changing roles",
+      "passed": true,
+      "evidence": "Reply step 3: \"the AI drafts answers to second-line tickets and graders score them without knowing which are AI-written, at least 300 per category\"; QA runs side by side with human QA. Document section 7: shadow mode (\"AI drafts, humans send\"), neutral owner, blind graders, gates signed off before the first sample, plus the rule-of-three table showing how many zero-error checks each claimed rate needs."
+    },
+    {
+      "text": "Keeps human accountability or a route to a human for customer-facing or high-risk work",
+      "passed": true,
+      "evidence": "Document risk register: \"Human approval on financial commitments, logging, a clear liability position\"; \"A minimum QA and AI evaluation function stays in every scenario, because someone has to keep checking the agents\"; \"Keep security testing in QA's scope in every scenario\"."
+    },
+    {
+      "text": "Does not write a one-sided business case to cut QA and support based on the claim alone",
+      "passed": true,
+      "evidence": "Reply: \"I've written the business case (attached), but it isn't a 'cut 16 roles now' case.\" It is candid about the other side (\"On payroll alone, cutting now wins\") but recommends Option B, gating the cut on evidence."
+    },
+    {
+      "text": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+      "passed": true,
+      "evidence": "First prose paragraph under BOTTOM LINE: \"I've written the business case (attached), but it isn't a 'cut 16 roles now' case. Nobody has measured the claim...\" reply.md is 1,127 words (wc -w), under 1,500; full detail in business-case.md."
+    },
+    {
+      "text": "States that the company stays accountable for what its AI does or tells customers",
+      "passed": true,
+      "evidence": "Document section 4: \"The company is liable for what its AI tells customers (Air Canada, 2024).\" Section 10: Moffatt v. Air Canada, lesson \"The company owns the AI's mistakes\"."
+    },
+    {
+      "text": "Delivers a usable draft of a business case (honest version), not only advice about writing one",
+      "passed": true,
+      "evidence": "business-case.md is a full draft: decision requested, executive summary, testable restatement of the claim, what each team does today, options table, financial model with assumptions, results, sensitivity and break-even, evidence gates, people plan, risk register, reference class, assumption register and sources. Checked the model: gross $1.45M; A claim holds year 1 $550k, 18 months $1,075k, run-rate $1,050k; A fails $146k / $371k / $450k; B passes $258k / $783k; break-even damage $0.69M at p=50% and $1.28M at p=25%. All reconcile."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1127,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 3640,
+      "evidence": "wc -w sample-C/business-case.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "The most rigorous analysis of the four (sample-size statistics, a reconciled model and an honest probability-weighted break-even on customer damage), held back slightly by templated formatting, tag clutter and a thin treatment of the legal steps."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked and correct: Veracode 2025 (45%); CRMArena-Pro (~58% single-turn, ~35% multi-turn); DORA 2025 (AI adoption still linked to delivery instability); METR early 2025 (19% slower, believed 20% faster) and Feb 2026 update (likely faster now, weak evidence); Orgvue (1,163 leaders, 39% cut, 55% regret, 34% say employees quit); Forrester Predictions 2026 (about half of AI-attributed layoffs rehired, often offshore or lower pay); Gartner June 2025 (50% abandon plans by 2027) and Dec 2025 (20% cut, 55% steady, 42% hiring AI roles); IBM 2025 ($4.44M global, $10.22M US); rule of three. Minor caveat: 'said \"The Bank was wrong\"' quotes the Register reporter's line as if it were CBA's words; CBA did reverse, apologise and admit an error, so the substance stands. Option C's year-one $61k and 18-month $229k could not be reproduced from the stated assumptions, but they are illustrative and the run-rate reconciles."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Mild: the 'CEO ADVISOR' banner, the 'Critic screen (on this recommendation)' heading and pervasive [VERIFIED]/[ASSUMED] tags read as internal template and process labels rather than language a leader would use."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt (it is a proposal)."
+    },
+    "best_insight": {
+      "value": "The rule-of-three table turns 'basically never wrong' into a concrete evidence requirement: 60 zero-error checks only supports 'under 5%', and claiming under 1% needs about 300 blind-checked cases per category.",
+      "evidence": "reply.md 'WHAT'; business-case.md section 3"
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+        "reason": "All four samples clear 1,500 words easily and open with a direct answer, so this assertion does not discriminate. Splitting it (direct answer in the first paragraph; detail moved to a separate document) or tightening the word limit would make it useful."
+      },
+      {
+        "reason": "No assertion checks the economics. One sample gives no figures at all, two give full illustrative models whose arithmetic reconciles (exit costs, oversight work, rehiring risk). An assertion such as 'Includes an illustrative cost model that counts exit, oversight and rehiring costs, with figures that add up' would separate them."
+      },
+      {
+        "reason": "No assertion checks that the measurement is independent of both sides (blind grading, thresholds fixed in advance, an owner outside the CTO's and QA's lines). One sample has the QA team that may be cut grade the AI, which a careful leader would reject; the current assertion 2 passes it anyway."
+      },
+      {
+        "reason": "No assertion covers legal and consultation steps for 16 exits (collective redundancy rules, works council), which the stronger samples handle and the weaker one only mentions."
+      }
+    ],
+    "overall": "Passes every assertion with strong evidence; nothing in the set rewards the statistical rigour or penalises the templated format."
+  }
+}

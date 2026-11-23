@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (yes, no, or partly / not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "First sentence: 'Bottom Line: Half of it is good.' That is a direct 'partly' answer, followed at once by 'Roll out AI coding agents to everyone, but don't drop code review for small changes.'"
+    },
+    {
+      "text": "Explains briefly why dropping code review is risky (quality, security, accountability), ideally with a real, dated source",
+      "passed": true,
+      "evidence": "It explains the risk in quality and ownership terms: 'Agents raise the number of changes and make it easy to produce plausible-looking code nobody fully understands. Review is the main check on that'; 'Small diffs cause outages (a config flag, an auth check, a query change)'; 'how the team keeps shared ownership of the code'. It gives no source at all, which the assertion only 'ideally' asks for, so this is a weak pass."
+    },
+    {
+      "text": "Offers a reversible step, such as a pilot with one or two teams, measuring before scaling, or making review faster instead of removing it",
+      "passed": true,
+      "evidence": "'yes, with a short pilot first ... Track the results from day one'; 'Speed up the rest. Use an AI first-pass review, small PRs, and a review SLA'; 'Measure before and after ... Set a stop rule up front: if change failure rate rises meaningfully for two consecutive weeks, tighten review again.'"
+    },
+    {
+      "text": "Asks what problem the change should solve (for example where the time goes today) or what evidence there is for the speed-up",
+      "passed": true,
+      "evidence": "Borderline. It asks for evidence on where the time goes and on the size of the speed-up: 'The real bottleneck is usually review wait time ... check against your own PR cycle-time data' and 'Tell me your current PR review wait time and change failure rate and I can size the gain.' It never asks what the speed-up is for."
+    },
+    {
+      "text": "Keeps human accountability, tests or security checks for AI-written code",
+      "passed": true,
+      "evidence": "'Keep the agent's author accountable. The engineer who merges agent code owns it and must be able to explain it.'; 'Everything touching auth, payments, data, infra or config needs a human reviewer'; 'Auto-merge with green CI'."
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": false,
+      "evidence": "wc -w reply.md = 418 words, over 300, after the user asked to keep it short."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "There is no coaching on how to decide. The closing 'If you still want to skip review for some classes, name them and set the rollback trigger first' is one sentence of practical advice about this plan."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 418,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "The advice is sensible and practical (risk tiers, a review SLA, an owner for agent code, a stop rule), but it gives no evidence, runs to 418 words despite 'keep it short', fills the text with confidence tags, and auto-merges dependency bumps and test-only changes, which are riskier than it suggests."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "It makes no specific factual claims about studies, laws or numbers. The DORA-style metrics it names (lead time, deployment frequency, change failure rate, time to recovery) are correct. Auto-merging dependency bumps is questionable advice, not a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "It does not mention a skill, reference files or framework jargon. It uses 'Confidence: medium/high/low' tags and What/Why/How to Act/Your Decision headings."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "There is no bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It sets a stop rule in advance (tighten review again if change failure rate rises for two consecutive weeks) and samples the no-review merges every week, so any exemption stays reversible and is audited.",
+      "evidence": "'Audit. Sample the no-review merges weekly for the first quarter.'; 'Set a stop rule up front'."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7,
+    "pass_rate": 0.86
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Explains briefly why dropping code review is risky (quality, security, accountability), ideally with a real, dated source",
+        "reason": "'Ideally with a real, dated source' is optional, so a reply with no evidence at all (sample B) passes the same as one with four verified, dated studies. Consider a separate assertion that requires at least one real, dated source and checks it is accurate."
+      },
+      {
+        "reason": "No assertion checks that the proposed fast lane really is low risk. Sample D puts config in the lighter-review lane, and sample B auto-merges dependency bumps and test-only changes. Both categories cause outages or supply-chain risk, while other samples rightly keep them with a human. An assertion such as 'any review exemption is defined by risk, and excludes auth, config, infra, dependencies and payments' would tell these samples apart."
+      },
+      {
+        "assertion": "Asks what problem the change should solve (for example where the time goes today) or what evidence there is for the speed-up",
+        "reason": "It is unclear whether a request for data ('Tell me your PR review wait time and I can size the gain') counts as asking about the problem or the evidence. Say whether the reply must ask what the speed-up is for, or whether a data request is enough."
+      },
+      {
+        "reason": "Nothing checks how the January rollout itself is handled: an AI usage and data policy, training time, no per-person AI usage metrics, and works council involvement where the tools can monitor performance. Samples C and A cover parts of this, but none of it is graded."
+      }
+    ],
+    "overall": "Sound but unsourced and too long. It passes the source assertion only because a source is optional, and no assertion catches that it auto-merges dependency bumps."
+  }
+}

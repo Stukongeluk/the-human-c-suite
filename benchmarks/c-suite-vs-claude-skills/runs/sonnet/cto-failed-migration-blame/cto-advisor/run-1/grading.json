@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "'Own it at the top... Tell the board \"I am accountable, and here is how I will show you what happened and what changes.\"' and 'If it shows process, planning or resourcing failures, accountability sits with me and the leadership chain'."
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Do not fire the platform team lead now'; exception 'If the review shows reckless disregard of agreed procedure, falsified readiness, or concealed problems, we will take individual action'; why: 'Engineers will hide risk, avoid owning risky work and stop flagging problems. That raises the odds of the next outage' and 'the next lead hits the same wall'."
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless post-mortem... with an external or cross-team facilitator'; system questions ('tested rollback plan... rehearsed on production-like data', 'Who approved the go/no-go', 'monitoring, alerting or on-call gaps'); table with When/Owner, e.g. 'Next 30 days | Fixes: mandatory rehearsal on production-like data, tested and timed rollback, go/no-go checklist with a named approver, staged cutovers... | Platform and you'."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "'Board briefing | Root causes, owners, dates and a rule for individual accountability, plus a new migration gate'; 'track the metrics that show whether the fix works: change failure rate, time to recovery, and the share of high-risk changes that had a rehearsed rollback'; framing 'Here is what I know, what I am finding out, by when, and what I am changing.'"
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "Narrow pass: '5. Protect the lead while the review runs. Keep them in the room and do not suspend them on rumor', and 'Give the board a decision rule instead of a name'. This is protection from blame, but there is no conversation with the lead, no word on their wellbeing and nothing for the wider team."
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "Opens with the recommendation ('Do not fire the platform team lead now...'), but reply.md is 1048 words by wc -w, far above the 550-word ceiling."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1048,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound substance (diagnostic questions, decision rule, owner/date table, recovery metrics), but it is twice the length a CTO needs, cluttered with confidence tags, invents a stated user 'standard', and gives the lead only procedural protection."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) 'Your own standard (incidents are system failures, not people failures) applies here' presents as fact a standard the user never stated in the prompt (fabricated premise). No law, study or number claims are wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/reference files/cost ladder/rungs found nothing"
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Tell the board \"I am accountable...\"' and 'accountability sits with me and the leadership chain'"
+    },
+    "best_insight": {
+      "value": "It separates the failure from the 9-hour recovery ('recovery time is often the larger one') and asks whether the lead raised risks and was overruled, which is what actually locates accountability.",
+      "evidence": "Section 3 questions"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+        "reason": "Passes for replies that only say 'each fix gets an owner and a date' without giving any dates or owner roles themselves; consider requiring at least a review deadline and named owner roles for the first fixes."
+      },
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "Combines the lead and 'the team', but both examples are about the lead. Replies that only protect the lead pass; consider splitting it or requiring a concrete step for the wider team (time off after the weekend, watching attrition, a team conversation)."
+      },
+      {
+        "reason": "No assertion checks unflagged assumptions about the user's country or facts not in the prompt (one sample assumes the Netherlands, one invents a 'standard' the user never stated, one asserts customers lost money)."
+      },
+      {
+        "reason": "No assertion rewards checking the EUR 2 million figure or offering the board a visible consequence at the CTO's own level (e.g. bonus tied to delivering the fixes), which were among the most useful differentiators."
+      }
+    ],
+    "overall": "Good content fails only on length; the lead-and-team assertion is passed on thin procedural protection alone."
+  }
+}

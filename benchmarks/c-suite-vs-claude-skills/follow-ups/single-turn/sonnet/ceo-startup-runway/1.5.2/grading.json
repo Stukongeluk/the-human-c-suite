@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": false,
+      "evidence": "Some correct runway arithmetic is there: 'Nine months from now is late summer 2027'; 'you need cash into roughly Q1 2028 ... closing a gap of four to five months'; '4% a month compounds to about 42% over nine months and 60% over a year... revenue only doubles in about 18 months, so growth alone won't close the gap unless revenue is already close to your costs'; 'cut net burn by roughly a third'. But there are no scenarios such as no raise, a later raise or a bridge: the options table is qualitative ('Partly', 'Plausibly 3 to 5 months'), whether the company can reach break-even without a raise is never worked out, and the scenarios are deferred ('I'll build the 13-week cash view and the three scenarios'). It also compares a fifth of total costs with a third of net burn, which understates the cut's effect on burn. Meets the letter in part, not the spirit."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "Option B ('Spend, pricing, focus, hiring freeze, leaders' pay first, bridge or grants | Plausibly 3 to 5 months | Within 30-60 days') comes before any cut, and the cut sits behind a dated gate ('if by 28 February net burn isn't down by X% and a bridge or term sheet isn't in hand, you do one cut'). The sizing is an unsupported estimate, but it is sized against the stated 4–5 month gap."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'make one deliberate cut and not the one the investors have proposed' and 'If you ever cut, do it once, deep enough not to repeat, tied to the new strategy ... and a decision about which work stops ... Two or three small rounds are the worst outcome.'"
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'negotiation with the unions before any decision (MBL), at least two months' notice to Arbetsförmedlingen for 5 to 25 dismissals, and individual notice periods of one to six months... Employment counsel must confirm the timeline. Under LAS, selection follows length of service, with only three exemptions per employer'."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": true,
+      "evidence": "'Share the runway model with the team monthly, including the scenarios. Nobody should first learn about it from a town hall.' Beyond the minimum: 'paid notice beyond the minimum, TRR support from day one ... Airbnb's 2020 package (at least 14 weeks' pay, equity cliff waived) is the benchmark.' Longer paid notice and an Airbnb-level package do exceed Swedish law."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": false,
+      "evidence": "Leaders go first and accept responsibility in general terms: 'The funding slip and the runway are leadership's result. Founders and execs take the first and largest pay cut, and you say plainly to the team that this is on you.' It doesn't say that the burn or the hiring were the founders' decisions; it owns 'the funding slip' (largely outside their control) rather than the spending and hiring choices that made the slip fatal. The first cut is there; the specific ownership isn't."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1027,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound direction (levers first, written gates, one cut, investors' case put fairly) but the least quantified of the four. Its key comparison mixes total costs with net burn, and the 3–5 months it credits to the reversible levers has no stated basis, so the founder gets less to take to the board."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Swedish rules, compounding (1.04^9 ≈ 1.42, 1.04^12 ≈ 1.60, doubling ≈ 18 months), Airbnb 2020 terms and the 'ninth of your runway' per month are correct. A reasoning flaw rather than a factual error: 'cut net burn by roughly a third' is compared with '14 fewer people reduces total costs by around a fifth', but a fifth of total costs is a larger share of net burn when revenue covers part of costs."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'you say plainly to the team that this is on you'"
+    },
+    "best_insight": {
+      "value": "It reads the two investors' demand as a confidence signal and turns it into an ask for money: 'If they won't back you with cash, they have less standing to demand a layoff.'",
+      "evidence": "'Use the investors differently' item"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "The 'or' makes this pass with any one of four items, and all four samples listed all four, so it doesn't discriminate. It also doesn't check accuracy: sample D says the varsel to Arbetsförmedlingen is public, which Arbetsförmedlingen contradicts ('En varselanmälan omfattas alltid av sekretess'). Consider requiring MBL-before-decision plus LAS order, stated correctly."
+      },
+      {
+        "assertion": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+        "reason": "Add that the 'beyond the minimum' items must actually exceed Swedish law. Paid notice (LAS s.12) and rehiring priority (LAS s.25) are statutory, and sample B listed them as 'well beyond statutory terms'."
+      },
+      {
+        "reason": "No assertion checks that illustrative numbers state their assumptions and add up, or that the reply deals with the two investors constructively (e.g. asking them to back their demand with a bridge or agreeing a written trigger). These were the clearest differences between samples."
+      }
+    ],
+    "overall": "Good instincts but under-quantified; failed on scenario arithmetic and on specific ownership."
+  }
+}

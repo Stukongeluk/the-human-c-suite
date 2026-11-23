@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "Opens: \"**Bottom line:** Don't buy anything for this yet. A dashboard of each engineer's usage and acceptance rate, used by managers to chase low adopters, measures the wrong thing.\""
+    },
+    {
+      "text": "Advises against per-person usage tracking for follow-up, and proposes team-level or aggregated measures instead",
+      "passed": true,
+      "evidence": "\"Instead, track adoption per team with the analytics your AI assistant already includes\"; step 1: \"Report only at team level, with at least about 5 people per group. Keep the data out of performance reviews and set a retention limit.\""
+    },
+    {
+      "text": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+      "passed": true,
+      "evidence": "\"In Berlin and Amsterdam you also can't switch it on without your works councils agreeing first.\" Then: \"In Germany, the Betriebsrat must agree to any system that is objectively *capable* of monitoring ... (BAG 1 ABR 16/23)\" and \"In the Netherlands, the OR must consent to systems 'aimed at or suitable for' monitoring ... (art. 27(1)(l) WOR)\"; step 1 \"Do this before the general rollout.\""
+    },
+    {
+      "text": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+      "passed": true,
+      "evidence": "\"Using AI more doesn't mean delivering more\" (DORA, METR), and step 4: \"At day 90, compare each team's lead time, change failure rate and PR cycle time with their numbers from before the rollout\", plus an anonymous developer survey at day 30. Team usage is kept only for adoption/licence tracking."
+    },
+    {
+      "text": "Proposes involving engineers or their representatives in deciding what is measured, or asking low adopters what gets in their way rather than pressuring them",
+      "passed": true,
+      "evidence": "\"Agree the rules with the OR and the Betriebsrat\"; \"run a 5-question anonymous survey: where does it help, where does it fail, what's blocking you? Help the low-adoption teams through internal champions, pairing and time to learn, not through manager follow-ups.\""
+    },
+    {
+      "text": "Still answers the practical need: where team-level usage data can come from (for example the vendor's admin console or metrics API) or what to look for in a tool",
+      "passed": true,
+      "evidence": "\"Use the analytics you already pay for, per team. Track the share of people actively using it, unused seats, and how they use it\"; option B names Swarmia or DX and warns \"Only buy one if you can keep managers at team level, because Swarmia, for example, has a per-member view\"; cites Copilot's metrics API."
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": false,
+      "evidence": "wc -w reply.md = 609 words, more than double the 300 limit, despite the user's \"Keep it short\"."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No coaching on decision habits. The 'Your decision' section lays out options A/B and a recommendation, which is substance, not a lecture."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 609,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in the folder"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "The most rigorous and best-sourced advice of the set (BAG ruling, WOR, DPIA, options with owners and dates), but at 609 words it ignores the explicit 'keep it short' and buries a three-line answer."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: BAG 1 ABR 16/23 (16 July 2024) says objective suitability counts and the employer's intent does not; art. 27(1)(l) WOR wording correct; Copilot metrics API has user-level breakdowns (GitHub docs); AP DPIA list and the July 2026 draft exemptions keep systematic employee monitoring in scope (salarisvanmorgen); DX quote 'strongly caution against ... using metrics for individual performance evaluation' verified; DORA 2024 -1.5% throughput / -7.2% stability correct (per 25% adoption rise, not stated); METR 19% slower vs believed 20% faster correct, 2026 update 'likely more sped up' and 'very weak evidence' verified; Swarmia Members tab per-member license status verified. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon. Uses inline confidence tags such as '[verified]' and '[medium]', which are unusual but not a leak."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It points out that the AI assistant itself (Copilot's metrics API reports per user) already triggers works-council consent and a Dutch DPIA, so the agreement is needed for the rollout, not only for a dashboard.",
+      "evidence": "\"Copilot's metrics API, for example, already reports data per user ..., so the assistant itself triggers this. Systematic employee monitoring also needs a DPIA\""
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.88
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+        "reason": "All four samples pass trivially (each opens with 'don't buy'); the assertion does not discriminate. Consider checking that the first sentence also rejects the per-engineer framing, not just the purchase."
+      },
+      {
+        "assertion": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+        "reason": "Every sample still tracks team-level usage for licence purposes, so 'not usage' is ambiguous. Consider rewording to 'judges the rollout's success on outcomes (delivery, quality, developer experience) against a baseline, rather than on usage or acceptance rate'."
+      },
+      {
+        "assertion": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+        "reason": "Does not check the nuance that a German Betriebsrat exists only where elected (asked or stated in A, C, D; missing in B), nor that the assistant's own per-user metrics already trigger these rights. A stronger assertion would test that."
+      },
+      {
+        "reason": "No assertion covers GDPR/DPIA obligations for systematic employee monitoring in the Netherlands, which only sample A raised and which is a real pre-rollout requirement."
+      }
+    ],
+    "overall": "Substantively the strongest legal and evidence analysis, failing only the length limit; the length assertion is what separates it, which is correct given the user said 'keep it short'."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+      "passed": true,
+      "evidence": "Opens with '## Bottom line' and 'Don't plan Q1 as \"everyone on the rebrand\"... the rebrand ships in Q1, but on a ring-fenced share of capacity. The rest goes to the three complaints'; split 'about 40-45% on invoicing, the accounting integration and reports'."
+    },
+    {
+      "text": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+      "passed": false,
+      "evidence": "There is a Q1/Q2 split ('Rebrand scope is cut to what is externally visible and contractually or legally necessary. The rest moves to Q2'; 'Ship a thin version of the design system... Migrate the rest in Q2'), but the Q1 part is not small: it keeps the name, domain migration, SEO and email, the marketing site and a thin design system on 'about 40-50% of product and engineering'. The cost is shown only for the whole track, not for each part."
+    },
+    {
+      "text": "The reply ranks the customer problems with evidence (for example NPS comments, churn or revenue at risk, support tickets) and sets measures for fixing them.",
+      "passed": true,
+      "evidence": "'Pull NPS detractor verbatims and tag them... support tickets and churn-reason notes'; 'which accounts have affected renewals in the next two quarters and their ARR'; 'Which of the three complaints has the biggest ARR attached? That one goes first.' Measures: 'one measurable target each, such as invoice generation time, integration success rate and the top three reports shipped'."
+    },
+    {
+      "text": "The reply brings leadership options with explicit trade-offs instead of a flat no.",
+      "passed": true,
+      "evidence": "Decision memo with 'Option A (CEO's current plan): full rebrand, zero fixes, expected exposure of X ARR. Option B (recommended): the split above. Option C: fixes first, rebrand in Q2', plus 'what the rebrand loses (list items moving to Q2)' and why C is also costly ('Running two brands and two domains post-merger has its own cost')."
+    },
+    {
+      "text": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+      "passed": false,
+      "evidence": "Constructive in tone ('Frame it as \"how do we land the rebrand without losing customers\"'; 'If the CEO still says no, document your recommendation and the risk, then execute well'), but there is no private conversation first (it goes straight to a 'decision memo to the CEO'), no asking the CEO for the reasons (the question about the hard date is put to the user), and no separation of cheap-to-reverse from hard-to-reverse decisions. It reframes the slogan instead: 'This is still a leadership decision, so it fits \"any decision beats no decision\"'."
+    },
+    {
+      "text": "The reply is practical and short enough to act on (roughly 500 words or less), with any longer plan offered or attached as a separate document.",
+      "passed": false,
+      "evidence": "reply.md is 1156 words (wc -w), more than double the ~550 limit, and no separate document is attached; the long plan sits in the reply itself."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1156,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound direction with good evidence-gathering and domain-risk points, but too long, it keeps roughly half the org on the rebrand, labels predictions as '[verified]', and gives little help on the CEO conversation itself."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: it says the domain change, like naming and design tokens, needs 'little of the deep backend work' and can go to design/front-end/marketing. A SaaS domain move needs platform and integration work (SSO callbacks, OAuth redirect URIs, email authentication), as its own 'Things to watch' list admits. Also labels inferences such as 'Customers will experience that as...' as '[verified]'."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "'Per the skill's red flags, a CPO who hasn't spoken to a customer in 30+ days is guessing' and 'track NPS monthly (the skill's dashboard cadence)'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "The NPS fall from +28 to +4 is a bad outcome in the prompt; no leader in the advice says the responsibility for it is leadership's."
+    },
+    "best_insight": {
+      "value": "Split the rebrand by skill rather than headcount (design and front-end to the rebrand, backend and integration engineers to the fixes), and don't put the domain cutover in the same week as the integration fix.",
+      "evidence": "Why this plan point 3 and Things to watch"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with the recommendation and does not put the whole product and engineering organisation on the rebrand: it protects capacity for the top customer problems.",
+        "reason": "All four samples pass this; it does not separate a weak reply from a strong one. Consider requiring the protected share to be stated or sized (e.g. which teams or roughly what share stays on the complaints)."
+      },
+      {
+        "assertion": "The reply splits the rebrand into a small must-have part (for example the name in the app, domain redirects, legal text) and parts that can wait or be phased (for example a full design system), and makes the cost of each visible.",
+        "reason": "'Makes the cost of each visible' is hard to grade when no data exists; samples can only describe a sizing step. Clarify what counts: relative size of each part, or an explicit ask to size each part, plus what is deferred and to when."
+      },
+      {
+        "assertion": "The reply handles \"leadership decides, teams execute\" and \"any decision beats no decision\" constructively: a private conversation first, asking for the reasons, separating decisions that are cheap to reverse from ones that aren't, and offering a light decision process, without labelling or attacking the leaders.",
+        "reason": "Bundles four separate behaviours (private first, ask reasons, reversible vs irreversible, light process). Samples that do three of four are hard to grade consistently; consider splitting into two assertions."
+      },
+      {
+        "reason": "No assertion checks the technical coupling between the rebrand and the complaints (a new domain touches the accounting integration's OAuth redirect URIs/webhooks and invoice-email deliverability). It was the most useful insight in the stronger samples and is easy to miss."
+      },
+      {
+        "reason": "No assertion checks planning to real capacity with slack (no overtime) or telling teams and affected customers the plan; both appear in the better samples and matter for this case."
+      }
+    ],
+    "overall": "Assertions catch the length and the weak handling of the CEO's slogans here; the skill leak and over-allocation to the rebrand are only partly covered."
+  }
+}

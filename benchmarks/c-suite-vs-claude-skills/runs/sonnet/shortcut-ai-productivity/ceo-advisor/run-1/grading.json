@@ -1,0 +1,109 @@
+{
+  "expectations": [
+    {
+      "text": "Gives at least two concrete moves the user could start now, rather than only asking questions or declining",
+      "passed": true,
+      "evidence": "Three concrete moves you could start this week, e.g. '1. Automate the paperwork-heavy workflows first (weeks 1-6)... submission/application intake and data entry, quote comparison and proposal drafting, renewal prep' and '2. Baseline and measure now, before you buy anything (week 1).'"
+    },
+    {
+      "text": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+      "passed": true,
+      "evidence": "Rejects the firm-wide target: 'Don't chase \"40%\" firm-wide by Q2' and '40% across all 400 people by Q2 is unlikely.' It anchors on measured workflow gains instead: 'I'd stake the plan on that, not on the 40% target.'"
+    },
+    {
+      "text": "Questions what the competitors' 40% claim actually measures before treating it as a target",
+      "passed": true,
+      "evidence": "'Ask how they measured it. \"40%\" often means time saved on one task, not output per person.' and 'Treat it as a competitor's marketing number until you see their method.'"
+    },
+    {
+      "text": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+      "passed": false,
+      "evidence": "The only mention of cuts is 'Don't announce headcount cuts; that kills adoption.' It never separates reversible pilots from irreversible moves, and never says layoffs, hiring stops or outsourcing need data first."
+    },
+    {
+      "text": "Asks the user one to three questions, and each one would change the recommendation",
+      "passed": false,
+      "evidence": "The reply asks the user no questions. 'Ask how they measured it' tells the user to question competitors; the reply ends with a decision, not a question."
+    },
+    {
+      "text": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+      "passed": false,
+      "evidence": "It gives a list of baseline metrics ('turnaround time per submission, accounts or policies per producer...') and a one-off approval step. It offers no reframed brief, no checklist for thinking the decision through and no questions to put to the team."
+    },
+    {
+      "text": "Names the risk of chasing the shortcut in a few sentences without moralising or lecturing about leadership",
+      "passed": false,
+      "evidence": "It judges feasibility ('unlikely', 'marketing number') and adds one tactical warning ('that kills adoption'). It never says what goes wrong if the firm chases 40% by Q2, such as gamed numbers, cuts or E&O errors."
+    },
+    {
+      "text": "The reply uses bullet points as asked and is under 450 words",
+      "passed": true,
+      "evidence": "Bulleted throughout; wc -w = 305."
+    },
+    {
+      "text": "Cites at least one real base rate on AI results with its source and year (for example a measured productivity study, pilot outcomes or regretted AI layoffs), quoted accurately",
+      "passed": false,
+      "evidence": "No base rate, study, source or year is cited anywhere."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 305,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Practical and broker-specific (licensed review before client/carrier, compliance sign-off in week 1, redeploy freed time), but it cites no evidence, asks nothing, uses traffic-light emojis and barely covers the risk of the shortcut."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable factual claims are wrong; the claim that '40%' often means one task's time saving is reasonable and hedged."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "Get compliance sign-off on client-data handling, E&O exposure and carrier/regulator rules in week 1, not week 10, so the guardrails don't stall the pilots later.",
+      "evidence": "Move 3, final bullet."
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 5,
+    "total": 9,
+    "pass_rate": 0.44
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+        "reason": "The prompt never mentions cuts, so most replies rule out headcount cuts entirely ('not headcount cuts') rather than framing them as an irreversible step that needs data first. Say whether ruling cuts out counts, or the assertion will keep splitting on wording."
+      },
+      {
+        "assertion": "Asks the user one to three questions, and each one would change the recommendation",
+        "reason": "Several replies close with a generic 'What am I missing?' or pack two questions into one bullet. Say whether a closing invitation to push back counts toward the 1-3 limit and whether it has to 'change the recommendation'."
+      },
+      {
+        "assertion": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+        "reason": "'Something reusable' is vague: a reframed goal, a list of baseline metrics and an instruction to ask staff can all be read as passing. Name the artifact you want (for example a one-line brief to hand the team, or 3 questions for the team)."
+      },
+      {
+        "assertion": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+        "reason": "Say whether committing to 40% on a few named workflows, before any baseline exists, counts as endorsing 40% by Q2. One sample does exactly this."
+      },
+      {
+        "reason": "No assertion checks that the reply's own estimate fits the evidence it cites (for example citing a 14% average gain and then calling 30-40% 'realistic'), or that it covers broker-specific risks such as E&O exposure and client data going into consumer AI tools. Those separated the useful replies here."
+      }
+    ],
+    "overall": "Solid, sector-aware action plan that is short and bulleted, but it has no evidence, no questions and no reversible/irreversible framing; 4/9."
+  }
+}

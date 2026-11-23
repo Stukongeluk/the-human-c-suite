@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that rejects the all-stores-by-March roll-out as specified and offers a phased alternative.",
+      "passed": true,
+      "evidence": "First line: 'Recommend a staged rollout, not \"all 140 stores live by March\": sign for March, go live in about 10 stores in February or March, and expand in waves only when the pilot beats the status quo on sales and availability as well as hours.'"
+    },
+    {
+      "text": "The reply warns that short-notice, unstable schedules carry hidden costs (such as turnover, absence, service, empty shelves or lost sales), with evidence such as the Gap stable scheduling study.",
+      "passed": true,
+      "evidence": "'Fifteen-minute slots, a three-day horizon and day-of changes mean shorter shifts, split shifts and less control over exams and second jobs. That predicts turnover. The one randomised trial I know of, 28 Gap stores, found that more predictable schedules raised median sales by 7% and labour productivity by 5%. Churn costs real money: recruiting, training...' and 'Under-staffed stores show up as empty shelves, queues and lost sales, not on the labour line.'"
+    },
+    {
+      "text": "The reply proposes a pilot against comparison stores, with success measures beyond labour hours: for example sales, availability, customer scores, staff turnover and absence, and how staff rate their schedules.",
+      "passed": true,
+      "evidence": "'pilot in about 10 stores across formats... with matched control stores'; indicators: 'hours vs forecast, sales and on-shelf availability, queue times, shrink, staff turnover, absence, swap requests, and a short pulse survey. Hours saved counts only if the others hold.'"
+    },
+    {
+      "text": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+      "passed": true,
+      "evidence": "'Publish at least four days ahead for on-call staff, and aim for a week for everyone else'; 'Minimum shift length (for example three hours) and no split shifts'; 'Staff availability and exam periods are inputs the tool must respect, with a simple swap function'; 'Same-day changes are an offer staff can decline, with a premium, never an order.' All four elements are present, though four days for on-call staff sits below the CAO's one-week roster rule that C asks the user to check."
+    },
+    {
+      "text": "The reply flags the Dutch legal floor for counsel: the works council's consent right over working-hours rules or systems that can monitor staff, and the notice rules for on-call workers (at least four days unless a collective agreement shortens it, and pay when a shift is cancelled late).",
+      "passed": true,
+      "evidence": "'A system able to monitor staff or performance needs its consent (art. 27(1)(l) WOR). Working-time and roster rules are likely to need it too, which counsel should confirm.' and 'on-call workers must be called at least four days ahead, or they may refuse. A CAO can shorten that to no less than 24 hours. A shift cancelled or changed inside the window is still paid.'"
+    },
+    {
+      "text": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+      "passed": false,
+      "evidence": "Two of three parts are met clearly: 'agree the indicators before the pilot, per store, never per person' and 'Reporting is by store and team, with no rankings of individuals', plus 'no individual performance scoring'. But involvement in the design runs only through the OR ('brief the OR and the unions', 'Guardrails to agree with the OR'); store managers appear only as operators ('the store manager decides and can override', 'Store managers keep the final call'), and store staff and managers are never asked to help design the pilot or the rules. The burden of proof isn't met for 'involves store staff and managers in the design'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1004,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Sound, concise and legally accurate advice with a clear staged plan, guardrails, store-level indicators and a no-dismissals commitment, though it leaves the CAO roster rules unchecked and gives store managers and staff no design role."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: four-day call-in, CAO floor of 24 hours, paid cancellations (Ondernemersplein); WOR 27(1)(l); works council mandatory from 50 staff; AI Act duty to inform from 2 Dec 2027 after the Digital Omnibus; Gap 28 stores, 7%/5%; cost of delay 'at most one twelfth of the annual benefit for each month' is correct arithmetic. 'AI that allocates tasks... is high-risk' simplifies Annex III (allocation based on individual behaviour or traits) but isn't wrong in direction."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files. The heading 'The other seats' views' is slightly framework-flavoured but reads as ordinary executive language."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It reframes the cost of waiting as at most one twelfth of the annual benefit per month, against the cost of a failed national go-live, and says a proven 6% with better availability is still a good outcome. It also commits to no dismissals, with the cut coming from not refilling leavers.",
+      "evidence": "Sections 'Where the hours should come from' and 'The other seats' views'."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+        "reason": "'Enough advance notice' is loose: a sample proposing only the statutory four days for on-call staff passes, although the supermarket CAO (verified: CAO Levensmiddelenbedrijf art. 4.3f) requires the full roster a full week ahead. Consider requiring notice at or above the CAO's one week, or naming two weeks as in the Gap study."
+      },
+      {
+        "assertion": "The reply flags the Dutch legal floor for counsel: the works council's consent right over working-hours rules or systems that can monitor staff, and the notice rules for on-call workers (at least four days unless a collective agreement shortens it, and pay when a shift is cancelled late).",
+        "reason": "The strongest legal point in the best samples is that the CAO itself, not only the WAB, blocks three-day publication (roster a full week ahead; 24-hour window only for erbijbaners). An assertion on checking the applicable CAO's roster rules would discriminate better than the generic four-day rule, which every sample got."
+      },
+      {
+        "reason": "No assertion checks the economics: that the 12% is a vendor claim to be re-based, that same-day cuts inside the notice window are still paid, or that the first-year saving sits below the run rate. The best samples quantified this (break-even sales drop, cost of delay); the weakest only gestured at it."
+      },
+      {
+        "reason": "No assertion checks where saved hours come from (not replacing leavers versus cutting students' hours and income), which is the main people question in a 12% hours cut for a student-heavy workforce."
+      },
+      {
+        "assertion": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+        "reason": "This bundles three separate checks (team-level measures, participatory design, no individual ranking); samples often meet two of three. Splitting it would make the results easier to read."
+      }
+    ],
+    "overall": "Five of six passed; C missed only the participatory-design part of the last assertion."
+  }
+}

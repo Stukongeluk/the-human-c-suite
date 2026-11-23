@@ -2,6 +2,40 @@
 
 What each version of the seats was tested on, how it did and what the tests changed, newest first. The [main README](../README.md#does-it-help) has the comparisons in short; [CHANGELOG.md](../CHANGELOG.md) lists every change; the folders in this directory hold every reply, grade and token count from version 1.3 on.
 
+## Version 1.5.2: against the other C-level advisors, under pushback and when picking a skill
+
+Three tests on Claude only, graded blind:
+- **Comparison.** The CEO, CTO and CPTO seats (1.5.1) against `ceo-advisor`, `cto-advisor` and `cpo-advisor` from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills), on the 18 cases of those seats, one run per skill per model.
+- **Pushback.** Four four-turn conversations in which the user pushes back three times, with our seat, the other set's advisor and no skill.
+- **Loading.** Twelve prompts given to an agent that saw all twelve skills at once.
+
+| Test | Ours | The other set | No skill |
+|---|---|---|---|
+| Comparison, Claude Sonnet | 111 of 120 checks (quality 7.5) | 73 of 120 (5.9) | not run |
+| Comparison, Claude Opus | 114 of 120 (8.5) | 101 of 120 (7.6) | not run |
+| Pushback, Claude Sonnet | 21 of 24 (6.8) | 20 of 24 (6.0) | 14 of 24 (4.8) |
+| Pushback, Claude Opus | 22 of 24 (8.5) | 20 of 24 (6.8) | 16 of 24 (6.5) |
+
+**Read it with care.**
+- **The checks favour our stance.** The other set is built for founders and startups, the cases are mostly established European companies, and the checks were written with our seats.
+- **Much of the comparison gap is length.** Twelve checks are word limits on prompts that asked for something short. Our seats passed all 24 of those runs and the other set 5. Without them, Opus is close to a tie (102 against 99 of 108); on Sonnet the gap stays (99 against 70).
+- **The other set won some cases.** On Opus it won the municipal fraud-scoring and delivery-driver cases. In the pushback test, `cpo-advisor` beat our CPTO.
+- **Where the tests separated the setups.** Under pushback, our CTO never built the per-engineer ranking; `cto-advisor` and both runs without a skill built it by turn 2 and handed over the query with names at the end.
+- **Loading.** All 24 runs loaded what we expected: the right seat for the eight people-and-money prompts, nothing for a SQL query or an offsite agenda, and the other set's skill for an NDA clause and an LTV:CAC question. We wrote those prompts, though, and several echo our own descriptions.
+
+**What changed.** Version 1.5.2 fixes what the seats missed:
+- **Pushback:** a reply that refuses still hands over something new and usable that keeps every non-negotiable, instead of a menu of offers.
+- **Reversible moves:** they are named, and the moves that must wait for data are said.
+- **Support from the day of notice:** it goes in any plan in which roles might end.
+- **People scored or selected by a system:** they are told, can see their own data and can object.
+- **The fact sheet:** it now covers the Swedish notice and re-employment rights, the confidential redundancy notice, and the Dutch court route for dismissal on performance grounds.
+
+Reruns of the missed cases, graded blind next to 1.5.1:
+- **Single-turn cases:** 47 of 54 checks against 41.
+- **Pushback cases:** 35 of 36 against 31.
+
+A first draft of the pushback rule folded on Sonnet (a named query for the CTO, an unsupported "€6m a year" slide for the CFO). The rule now forbids handing over the declined part in another form. Details and every run: [`c-suite-vs-claude-skills/`](c-suite-vs-claude-skills/benchmark.md) and its [follow-ups](c-suite-vs-claude-skills/follow-ups/README.md).
+
 ## Version 1.5.1: against another CFO skill
 
 How does the CFO seat compare with the closest open-source skill we found, `cfo-advisor` from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills)? Same six finance cases, same brief for both, two runs per skill per model, graded blind in one pool with the no-skill runs.

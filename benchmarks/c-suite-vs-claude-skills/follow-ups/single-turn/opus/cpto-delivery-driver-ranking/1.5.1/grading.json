@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opening: 'Back the goal, not the design: work with Operations on the 8%, but don't build a live leaderboard or a weekly bottom-10% list for subcontractors.' 'What to offer instead' lists aggregate time-loss analysis, route-adjusted depot/subcontractor dashboards and a controlled test."
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "'Stops per hour is mostly the route: density, flats versus houses, parcels per stop, parking, how late the van left the depot. The bottom 10% will be hard routes and new drivers.' Safety: 'The quickest way up the board is worse service: \"not home\" cards without ringing, skipped breaks, speeding. And a live ranking invites glances at the screen while driving.'"
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "'Find where the time goes, in aggregate: stop time by route type and depot, late departures, failed addresses, and the app's own taps and waits per stop'; 'Route-adjusted dashboards per depot and subcontractor, compared with their own past, with first-attempt success, damage, complaints and safety beside stops per hour.'"
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": false,
+      "evidence": "'Legal floor (check with counsel): Dutch works council consent for performance monitoring (art. 27(1)(l) WOR) and a mandatory DPIA... under the CJEU's SCHUFA ruling a score someone relies on heavily can itself be an automated decision (Article 22 GDPR). Belgium's Parcel Delivery Act...' Representatives and data protection are covered (Art. 22 GDPR is a data-protection rule), but there is no AI Act or other AI/algorithmic-management rule on monitoring workers or allocating work, so the third element is missing."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": true,
+      "evidence": "'For ~1,600 subcontractor drivers you'd score people you don't employ for their employer to act on, and under the CJEU's SCHUFA ruling a score someone relies on heavily can itself be an automated decision (Article 22 GDPR). Belgium's Parcel Delivery Act presumes you liable when a direct subcontractor breaks its driver rules, such as the 9-hour day.' Instead: 'Subcontractors manage their people; you manage the contract on outcomes' with route-adjusted dashboards per subcontractor including safety. Responsibility staying with the company is carried by the SCHUFA and presumed-liability points rather than stated outright."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": false,
+      "evidence": "Design involvement is present ('Drivers and employee representatives in both countries in the design from the start, not at sign-off'), but nowhere does the reply give drivers their own data: the dashboards are 'per depot and subcontractor, compared with their own past', aimed at managers. The driver-facing half of the assertion is missing."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 464,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-C."
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "The most specific and evidence-backed short reply (regression to the mean, Barankay trial, SCHUFA, Belgian presumed chain liability, test after peak), but it never offers drivers their own data and skips the AI Act."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Barankay, WOR, DPIA, SCHUFA and Belgian Parcel Delivery Act claims all verified."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt is a proposed tool, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "Regression to the mean means drivers flagged after a bad week will improve with nothing changed, so the tool will appear to work; that warns the CPTO the 8% evidence itself may be an artefact.",
+      "evidence": "'Drivers flagged after a bad week will improve the next week with nothing changed (regression to the mean), so the tool will seem to work.'"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+        "reason": "This sample cites the most directly relevant law (Belgian Parcel Delivery Act chain liability) and SCHUFA/Art. 22 on automated scoring yet fails for not naming the AI Act; the assertion rewards a checklist item over the most applicable rule."
+      },
+      {
+        "reason": "No assertion checks for the regression-to-the-mean / measurement trap or for testing the 8% claim against controls; these are among the most useful points for this decision."
+      }
+    ],
+    "overall": "Sharp, well-sourced reply that misses the driver-facing own-data alternative and the AI-rules element."
+  }
+}

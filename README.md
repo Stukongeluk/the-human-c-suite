@@ -213,19 +213,28 @@ Checks passed with the seat against without a skill, on the same cases.
 | A company without direction, two cases | 18 vs 14 of 24 | 23 vs 20 of 24 | 21 vs 13 of 24 | 18 vs 10 of 24 |
 | Organisations outside software, six cases (first draft) | 32 vs 20 of 36 | 24 vs 29 of 36 | – | – |
 | CFO, six finance cases (first draft) | 33 vs 21 of 36 | 36 vs 26 of 36 | – | – |
+| Pushback, four conversations of four turns | 21 vs 14 of 24 | 22 vs 16 of 24 | – | – |
 
 A dash means that comparison wasn't run. The CTO and CPTO rows share six cases between them. Opus did worse with the first draft for organisations outside software, because it kept formal advice to a board or council too short; version 1.4.0 fixed that, and on a rerun of four of those cases it passed 21 of 24 checks against 15 for the draft.
 
 ### Against another skill
 
-The CFO seat against `cfo-advisor` from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills), the closest open-source skill we found, on the six finance cases. Quality is the grader's overall score from 1 to 10, given apart from the checks.
+Each seat against the matching advisor from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills), the closest open-source set we found: `ceo-advisor`, `cto-advisor`, `cpo-advisor` and `cfo-advisor`. Same cases and same brief for both, graded blind. Cells show checks passed, ours against theirs, with the grader's overall quality score from 1 to 10 in brackets.
 
-| Model | the-human-cfo 1.5.0 | cfo-advisor | Without a skill |
-|---|---|---|---|
-| Claude Sonnet | 69 of 72 checks (quality 7.4) | 28 of 72 (5.0) | 21 of 36 (5.7) |
-| Claude Opus | 72 of 72 (9.0) | 57 of 72 (7.8) | 26 of 36 (7.2) |
+| Seat and cases | Claude Sonnet | Claude Opus |
+|---|---|---|
+| CEO, six cases | 36 vs 18 of 41 (7.3 vs 5.7) | 39 vs 32 of 41 (8.8 vs 7.7) |
+| CTO, six cases | 36 vs 29 of 39 (7.5 vs 6.2) | 38 vs 34 of 39 (8.3 vs 7.8) |
+| CPTO, six cases | 39 vs 26 of 40 (7.7 vs 6.0) | 37 vs 35 of 40 (8.3 vs 7.2) |
+| CFO, six finance cases, two runs each | 69 vs 28 of 72 (7.4 vs 5.0) | 72 vs 57 of 72 (9.0 vs 7.8) |
+| Pushback, four conversations of four turns | 21 vs 20 of 24 (6.8 vs 6.0) | 22 vs 20 of 24 (8.5 vs 6.8) |
 
-`cfo-advisor` is built for startup finance, these cases are established companies, and the checks were written with our seat, so weigh the quality score as much as the checks. Details: [`benchmarks/cfo-vs-c-level-advisor/`](benchmarks/cfo-vs-c-level-advisor/benchmark.md).
+Weigh the quality score as much as the checks:
+- **The checks favour our stance.** The other set is built for founders and startups. Most of these cases are established European companies, and the checks were written with our seats.
+- **Much of the CEO, CTO and CPTO gap is length.** Many of those checks are word limits on prompts that asked for something short. Without them, Opus is close to a tie: 102 against 99 of 108.
+- **Picking the right skill.** Given all twelve skills at once, an agent loaded the right seat on all 16 runs where one fitted. On the 8 runs where none did, it loaded nothing or the other set's matching skill.
+
+Details: [`benchmarks/c-suite-vs-claude-skills/`](benchmarks/c-suite-vs-claude-skills/benchmark.md) and [`benchmarks/cfo-vs-c-level-advisor/`](benchmarks/cfo-vs-c-level-advisor/benchmark.md).
 
 ### How to read this
 

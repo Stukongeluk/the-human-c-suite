@@ -1,0 +1,561 @@
+[
+ {
+  "model": "sonnet",
+  "id": "t1-opex-15",
+  "prompt": "The board wants opex down 15% by Q3. How do we get there?",
+  "expected": "the-human-cfo or the-human-ceo",
+  "loaded": [
+   "the-human-cfo",
+   "the-human-ceo"
+  ],
+  "order_shown": [
+   "ceo-advisor",
+   "the-human-cfo",
+   "the-human-cpto",
+   "cfo-advisor",
+   "cto-advisor",
+   "chief-ai-officer-advisor",
+   "the-human-cto",
+   "chro-advisor",
+   "the-human-ceo",
+   "general-counsel-advisor",
+   "coo-advisor",
+   "cpo-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t1-opex-15",
+  "prompt": "The board wants opex down 15% by Q3. How do we get there?",
+  "expected": "the-human-cfo or the-human-ceo",
+  "loaded": [
+   "the-human-cfo",
+   "the-human-ceo"
+  ],
+  "order_shown": [
+   "the-human-ceo",
+   "cfo-advisor",
+   "cpo-advisor",
+   "chro-advisor",
+   "ceo-advisor",
+   "coo-advisor",
+   "cto-advisor",
+   "general-counsel-advisor",
+   "the-human-cto",
+   "the-human-cpto",
+   "chief-ai-officer-advisor",
+   "the-human-cfo"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "t2-underperformers",
+  "prompt": "Our velocity dropped from 62 to 44 points per sprint. Which developers are underperforming? I can share the Jira export.",
+  "expected": "the-human-cto",
+  "loaded": [
+   "the-human-cto"
+  ],
+  "order_shown": [
+   "chro-advisor",
+   "ceo-advisor",
+   "general-counsel-advisor",
+   "coo-advisor",
+   "the-human-cto",
+   "the-human-cpto",
+   "chief-ai-officer-advisor",
+   "the-human-cfo",
+   "cpo-advisor",
+   "cto-advisor",
+   "cfo-advisor",
+   "the-human-ceo"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t2-underperformers",
+  "prompt": "Our velocity dropped from 62 to 44 points per sprint. Which developers are underperforming? I can share the Jira export.",
+  "expected": "the-human-cto",
+  "loaded": [
+   "the-human-cto"
+  ],
+  "order_shown": [
+   "coo-advisor",
+   "cfo-advisor",
+   "the-human-cfo",
+   "ceo-advisor",
+   "chief-ai-officer-advisor",
+   "general-counsel-advisor",
+   "the-human-ceo",
+   "chro-advisor",
+   "the-human-cpto",
+   "cto-advisor",
+   "cpo-advisor",
+   "the-human-cto"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "t3-redundancy-model",
+  "prompt": "Model the savings from 40 redundancies for next month's board pack.",
+  "expected": "the-human-cfo",
+  "loaded": [
+   "the-human-cfo"
+  ],
+  "order_shown": [
+   "cto-advisor",
+   "the-human-cfo",
+   "general-counsel-advisor",
+   "cfo-advisor",
+   "the-human-cpto",
+   "chief-ai-officer-advisor",
+   "the-human-cto",
+   "cpo-advisor",
+   "ceo-advisor",
+   "the-human-ceo",
+   "chro-advisor",
+   "coo-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t3-redundancy-model",
+  "prompt": "Model the savings from 40 redundancies for next month's board pack.",
+  "expected": "the-human-cfo",
+  "loaded": [
+   "the-human-cfo",
+   "the-human-ceo"
+  ],
+  "order_shown": [
+   "the-human-cpto",
+   "the-human-ceo",
+   "cfo-advisor",
+   "the-human-cfo",
+   "coo-advisor",
+   "the-human-cto",
+   "cto-advisor",
+   "ceo-advisor",
+   "chief-ai-officer-advisor",
+   "chro-advisor",
+   "general-counsel-advisor",
+   "cpo-advisor"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "t4-support-ai",
+  "prompt": "Should we replace our 20-person support team with an AI agent?",
+  "expected": "the-human-ceo or the-human-cpto",
+  "loaded": [
+   "the-human-ceo"
+  ],
+  "order_shown": [
+   "cpo-advisor",
+   "the-human-ceo",
+   "coo-advisor",
+   "the-human-cpto",
+   "cfo-advisor",
+   "cto-advisor",
+   "general-counsel-advisor",
+   "ceo-advisor",
+   "the-human-cto",
+   "chro-advisor",
+   "chief-ai-officer-advisor",
+   "the-human-cfo"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t4-support-ai",
+  "prompt": "Should we replace our 20-person support team with an AI agent?",
+  "expected": "the-human-ceo or the-human-cpto",
+  "loaded": [
+   "the-human-ceo",
+   "the-human-cfo",
+   "the-human-cto"
+  ],
+  "order_shown": [
+   "chief-ai-officer-advisor",
+   "ceo-advisor",
+   "the-human-ceo",
+   "the-human-cto",
+   "the-human-cpto",
+   "cto-advisor",
+   "cfo-advisor",
+   "the-human-cfo",
+   "general-counsel-advisor",
+   "chro-advisor",
+   "cpo-advisor",
+   "coo-advisor"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "t5-ebitda-bonus",
+  "prompt": "Design next year's management bonus plan, paid on adjusted EBITDA.",
+  "expected": "the-human-cfo",
+  "loaded": [
+   "the-human-cfo"
+  ],
+  "order_shown": [
+   "cfo-advisor",
+   "cpo-advisor",
+   "ceo-advisor",
+   "the-human-cto",
+   "the-human-cfo",
+   "chief-ai-officer-advisor",
+   "the-human-ceo",
+   "the-human-cpto",
+   "cto-advisor",
+   "general-counsel-advisor",
+   "chro-advisor",
+   "coo-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t5-ebitda-bonus",
+  "prompt": "Design next year's management bonus plan, paid on adjusted EBITDA.",
+  "expected": "the-human-cfo",
+  "loaded": [
+   "the-human-cfo"
+  ],
+  "order_shown": [
+   "cpo-advisor",
+   "cfo-advisor",
+   "coo-advisor",
+   "ceo-advisor",
+   "chro-advisor",
+   "cto-advisor",
+   "the-human-cpto",
+   "the-human-cto",
+   "the-human-ceo",
+   "the-human-cfo",
+   "general-counsel-advisor",
+   "chief-ai-officer-advisor"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "t6-covenant",
+  "prompt": "We'll breach our leverage covenant next quarter. What do we do?",
+  "expected": "the-human-cfo",
+  "loaded": [
+   "the-human-cfo"
+  ],
+  "order_shown": [
+   "cpo-advisor",
+   "chief-ai-officer-advisor",
+   "coo-advisor",
+   "the-human-cto",
+   "cto-advisor",
+   "ceo-advisor",
+   "chro-advisor",
+   "the-human-cpto",
+   "the-human-cfo",
+   "cfo-advisor",
+   "general-counsel-advisor",
+   "the-human-ceo"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t6-covenant",
+  "prompt": "We'll breach our leverage covenant next quarter. What do we do?",
+  "expected": "the-human-cfo",
+  "loaded": [
+   "the-human-cfo"
+  ],
+  "order_shown": [
+   "the-human-cpto",
+   "the-human-cto",
+   "chro-advisor",
+   "ceo-advisor",
+   "general-counsel-advisor",
+   "the-human-ceo",
+   "cpo-advisor",
+   "coo-advisor",
+   "cto-advisor",
+   "cfo-advisor",
+   "chief-ai-officer-advisor",
+   "the-human-cfo"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "t7-ai-eng-costs",
+  "prompt": "AI makes developers twice as fast, so the board wants engineering costs 25% lower next year. Build the plan.",
+  "expected": "the-human-cto or the-human-cfo",
+  "loaded": [
+   "the-human-cto",
+   "the-human-cfo"
+  ],
+  "order_shown": [
+   "cfo-advisor",
+   "the-human-cto",
+   "cpo-advisor",
+   "the-human-ceo",
+   "chief-ai-officer-advisor",
+   "the-human-cpto",
+   "ceo-advisor",
+   "general-counsel-advisor",
+   "the-human-cfo",
+   "cto-advisor",
+   "coo-advisor",
+   "chro-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t7-ai-eng-costs",
+  "prompt": "AI makes developers twice as fast, so the board wants engineering costs 25% lower next year. Build the plan.",
+  "expected": "the-human-cto or the-human-cfo",
+  "loaded": [
+   "the-human-cto",
+   "the-human-cfo"
+  ],
+  "order_shown": [
+   "chief-ai-officer-advisor",
+   "ceo-advisor",
+   "chro-advisor",
+   "the-human-cto",
+   "the-human-cfo",
+   "cpo-advisor",
+   "coo-advisor",
+   "general-counsel-advisor",
+   "the-human-ceo",
+   "cfo-advisor",
+   "the-human-cpto",
+   "cto-advisor"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "t8-copilot-ranking",
+  "prompt": "Build a dashboard that ranks our engineers by Copilot acceptance rate.",
+  "expected": "the-human-cto",
+  "loaded": [
+   "the-human-cto"
+  ],
+  "order_shown": [
+   "general-counsel-advisor",
+   "chro-advisor",
+   "the-human-cto",
+   "ceo-advisor",
+   "chief-ai-officer-advisor",
+   "cpo-advisor",
+   "the-human-cpto",
+   "the-human-ceo",
+   "the-human-cfo",
+   "cto-advisor",
+   "coo-advisor",
+   "cfo-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "t8-copilot-ranking",
+  "prompt": "Build a dashboard that ranks our engineers by Copilot acceptance rate.",
+  "expected": "the-human-cto",
+  "loaded": [
+   "the-human-cto"
+  ],
+  "order_shown": [
+   "the-human-cpto",
+   "the-human-cfo",
+   "cfo-advisor",
+   "chro-advisor",
+   "ceo-advisor",
+   "coo-advisor",
+   "the-human-cto",
+   "cpo-advisor",
+   "the-human-ceo",
+   "general-counsel-advisor",
+   "cto-advisor",
+   "chief-ai-officer-advisor"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "n1-sql",
+  "prompt": "Write a SQL query that sums revenue per month from an orders table with columns id, created_at and amount.",
+  "expected": "none",
+  "loaded": [
+   "none"
+  ],
+  "order_shown": [
+   "the-human-ceo",
+   "general-counsel-advisor",
+   "the-human-cto",
+   "cfo-advisor",
+   "chief-ai-officer-advisor",
+   "coo-advisor",
+   "cpo-advisor",
+   "the-human-cpto",
+   "ceo-advisor",
+   "chro-advisor",
+   "the-human-cfo",
+   "cto-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "n1-sql",
+  "prompt": "Write a SQL query that sums revenue per month from an orders table with columns id, created_at and amount.",
+  "expected": "none",
+  "loaded": [
+   "none"
+  ],
+  "order_shown": [
+   "cpo-advisor",
+   "coo-advisor",
+   "chro-advisor",
+   "cfo-advisor",
+   "the-human-cto",
+   "general-counsel-advisor",
+   "chief-ai-officer-advisor",
+   "the-human-cfo",
+   "ceo-advisor",
+   "cto-advisor",
+   "the-human-ceo",
+   "the-human-cpto"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "n2-offsite",
+  "prompt": "Draft a two-day agenda for our leadership offsite in Lisbon.",
+  "expected": "none",
+  "loaded": [
+   "none"
+  ],
+  "order_shown": [
+   "the-human-cfo",
+   "cfo-advisor",
+   "coo-advisor",
+   "cpo-advisor",
+   "general-counsel-advisor",
+   "chief-ai-officer-advisor",
+   "the-human-cto",
+   "ceo-advisor",
+   "chro-advisor",
+   "the-human-ceo",
+   "cto-advisor",
+   "the-human-cpto"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "n2-offsite",
+  "prompt": "Draft a two-day agenda for our leadership offsite in Lisbon.",
+  "expected": "none",
+  "loaded": [
+   "none"
+  ],
+  "order_shown": [
+   "chief-ai-officer-advisor",
+   "cto-advisor",
+   "chro-advisor",
+   "cpo-advisor",
+   "the-human-cto",
+   "cfo-advisor",
+   "the-human-cpto",
+   "the-human-cfo",
+   "general-counsel-advisor",
+   "the-human-ceo",
+   "ceo-advisor",
+   "coo-advisor"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "n3-nda",
+  "prompt": "Is this NDA clause one-sided? 'The Recipient shall indemnify the Discloser for any loss arising from any disclosure, howsoever caused.'",
+  "expected": "general-counsel-advisor",
+  "loaded": [
+   "general-counsel-advisor"
+  ],
+  "order_shown": [
+   "the-human-cfo",
+   "coo-advisor",
+   "chief-ai-officer-advisor",
+   "the-human-ceo",
+   "cfo-advisor",
+   "ceo-advisor",
+   "chro-advisor",
+   "the-human-cpto",
+   "cpo-advisor",
+   "the-human-cto",
+   "cto-advisor",
+   "general-counsel-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "n3-nda",
+  "prompt": "Is this NDA clause one-sided? 'The Recipient shall indemnify the Discloser for any loss arising from any disclosure, howsoever caused.'",
+  "expected": "general-counsel-advisor",
+  "loaded": [
+   "general-counsel-advisor"
+  ],
+  "order_shown": [
+   "the-human-cto",
+   "coo-advisor",
+   "the-human-cpto",
+   "the-human-cfo",
+   "cto-advisor",
+   "general-counsel-advisor",
+   "the-human-ceo",
+   "chro-advisor",
+   "chief-ai-officer-advisor",
+   "cpo-advisor",
+   "cfo-advisor",
+   "ceo-advisor"
+  ]
+ },
+ {
+  "model": "sonnet",
+  "id": "n4-ltv-cac",
+  "prompt": "Our CAC is $1,200, ARPU is $90 a month and monthly churn is 3%. What's our LTV to CAC ratio, and is it healthy?",
+  "expected": "cfo-advisor",
+  "loaded": [
+   "cfo-advisor"
+  ],
+  "order_shown": [
+   "the-human-ceo",
+   "coo-advisor",
+   "chro-advisor",
+   "general-counsel-advisor",
+   "cto-advisor",
+   "cpo-advisor",
+   "ceo-advisor",
+   "the-human-cto",
+   "the-human-cpto",
+   "the-human-cfo",
+   "cfo-advisor",
+   "chief-ai-officer-advisor"
+  ]
+ },
+ {
+  "model": "opus",
+  "id": "n4-ltv-cac",
+  "prompt": "Our CAC is $1,200, ARPU is $90 a month and monthly churn is 3%. What's our LTV to CAC ratio, and is it healthy?",
+  "expected": "cfo-advisor",
+  "loaded": [
+   "cfo-advisor"
+  ],
+  "order_shown": [
+   "cto-advisor",
+   "coo-advisor",
+   "the-human-cto",
+   "chief-ai-officer-advisor",
+   "the-human-ceo",
+   "the-human-cfo",
+   "chro-advisor",
+   "general-counsel-advisor",
+   "the-human-cpto",
+   "ceo-advisor",
+   "cfo-advisor",
+   "cpo-advisor"
+  ]
+ }
+]

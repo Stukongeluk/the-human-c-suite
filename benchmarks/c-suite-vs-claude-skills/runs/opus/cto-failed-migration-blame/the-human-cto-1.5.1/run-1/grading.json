@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "Line for CEO and chair: '\"This happened under me, and I'm accountable.\"' and 'The migration ran in your organisation, so the result is yours first. Say so before anyone's name comes up.'"
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't let the platform lead go'; exception 'if the review shows the lead skipped agreed safeguards or ignored clear warnings, handle that separately and fairly, not as the answer to the board'; why: 'every engineer learns to hide risks, which makes the next incident bigger' and 'Firing the lead leaves all of them in place.'"
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Start a blameless review led by someone outside the platform team. Why did recovery take 9 hours? Was rollback tested? Who signed off the plan and the window, and what pressure was the team under?'; fixes 'a timed rollback and restore rehearsal before every major migration, a go/no-go gate with a maximum outage window, sign-off for high-risk changes. Each with an owner, a date and a measure'; review timebox 'three weeks'. Owners and dates are required rather than filled in."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "'you own the result, an independent review finds the causes, and you report fixes with owners and dates'; 'Report actions the board can check: ... Each with an owner, a date and a measure'; 'Include how the €2 million was calculated.' Facts, causes, changes and a measure are all named, though the facts of the incident are the thinnest element."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk to the lead and the team yourself. Tell them you won't offer up a person as the answer, and ask them to help find the causes. Make time off after that weekend normal.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": true,
+      "evidence": "First sentence: 'Don't let the platform lead go.' reply.md is 449 words by wc -w."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 449,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Concise, usable this week: a private line for the CEO and chair, a system-focused review, care for lead and team, and a visible consequence at the CTO's own level, though the board still gets few specifics on the incident facts."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Only legal claim ('In most European countries, dismissal over one failure in work the company approved is also hard to defend') is a hedged generalisation consistent with European practice; no errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/reference files/cost ladder/rungs found nothing"
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'This happened under me, and I'm accountable.'"
+    },
+    "best_insight": {
+      "value": "If the board wants a visible consequence, offer it at the CTO's level, such as part of the bonus tied to delivering the fixes, which gives the board real accountability without a scapegoat.",
+      "evidence": "Step 5"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+        "reason": "Passes for replies that only say 'each fix gets an owner and a date' without giving any dates or owner roles themselves; consider requiring at least a review deadline and named owner roles for the first fixes."
+      },
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "Combines the lead and 'the team', but both examples are about the lead. Replies that only protect the lead pass; consider splitting it or requiring a concrete step for the wider team (time off after the weekend, watching attrition, a team conversation)."
+      },
+      {
+        "reason": "No assertion checks unflagged assumptions about the user's country or facts not in the prompt (one sample assumes the Netherlands, one invents a 'standard' the user never stated, one asserts customers lost money)."
+      },
+      {
+        "reason": "No assertion rewards checking the EUR 2 million figure or offering the board a visible consequence at the CTO's own level (e.g. bonus tied to delivering the fixes), which were among the most useful differentiators."
+      }
+    ],
+    "overall": "Passes all six; assertion 3 and 4 accept 'each with an owner, a date and a measure' without concrete dates, which is reasonable but lenient."
+  }
+}

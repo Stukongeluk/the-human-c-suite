@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "\"My advice: don't buy this system as specified, and don't promise go-live in six months. Instead, offer the alderman a six-month plan that measurably improves enforcement, with a decision point at the end.\" Respectful: \"The council has a real point: fraud erodes support for the safety net\"; it also suggests a private conversation and offers a ready-to-use line."
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": true,
+      "evidence": "Rotterdam: \"Its own documents showed the model was only 50% better than random selection. The city paused it in 2021 over bias it couldn't remove.\" Amsterdam: \"The bias had come back in a new direction, and the model flagged more people than caseworkers without finding the right cases any better.\" SyRI: \"struck down... as insufficiently transparent and verifiable\"; \"the childcare benefits scandal showed where risk profiling ends.\" Bias and the failed legal check are explicit. The childcare case itself is thin, but the Rotterdam/Amsterdam detail covers the mechanism. Verified against Lighthouse Reports and MIT Technology Review."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "\"a model that flags nobody is 95% accurate. A 90%-accurate model that sends the top 10% to investigators flags 100 of every 1,000 recipients. Only 25 of those 100 are real cases; the other 75 committed no fraud\" (checks: TP 25, FP 75, FN 25, TN 875 → 90%). Asks for \"the hit rate within the top 10%, the error rates by group (nationality, gender, age, single parents), and whether it was measured on your data\"; proxies via \"DUO's simple rules (distance to parents, type of education) still discriminated indirectly\"."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": true,
+      "evidence": "\"The AI Act's ban on social scoring has applied since February 2025\" with the Commission's welfare-fraud example (verified via the FPF summary); \"very likely high-risk, because it concerns public benefits. The high-risk obligations, including a fundamental rights impact assessment, apply from 2 December 2027\"; \"The GDPR adds a DPIA and purpose limitation on the debt-counselling data, and after the CJEU's SCHUFA ruling a score that largely decides who is investigated may count as an automated decision\"; \"First you need a legal basis\"; \"get a written view from your FG and legal team before anything is procured.\""
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": true,
+      "evidence": "\"Investigate a random sample... deliberate fraud, honest mistakes with complex rules, or the municipality's own errors\"; \"fix what causes errors. Simplify reporting changes in income or household. Contact people as soon as an Inlichtingenbureau signal arrives instead of reclaiming months later. Use plain-language letters. Fewer errors mean fewer investigations.\""
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": false,
+      "evidence": "Has: \"An investigator always decides, and no payment is ever stopped on a score alone\"; \"registered in the Algoritmeregister\"; \"Fix the stop criteria before it starts, add an independent audit and involve the cliëntenraad.\" Missing: any safeguard that affected residents are told they were selected and can object or appeal. \"Selection you can explain\" and \"published rules\" give policy-level transparency, not individual notice and an objection route. One of the five required elements is absent."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 968,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Tight, accurate and well-sourced. The Rotterdam and Amsterdam specifics, cause-fixing alternatives, the Participatiewet in balans hook and a ready private line to the alderman make it very usable. It only lacks resident notice/objection and a fuller vendor-question list."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Verified: Rotterdam 2017–2021, ~30,000, top 10%, 'only 50 percent more accurate' than random, pulled in 2021 over bias it couldn't remove; Amsterdam stopped Nov 2023, ~€535,000 (€500k + €35k), flagged more without better hits; Participatieraad objected in March 2022; social-scoring ban Feb 2025 with the welfare example; high-risk from 2 Dec 2027; Participatiewet in balans partly in force 1 Jan 2026 with 'vertrouwen en de menselijke maat' central; DUO indirect discrimination and random checks since June 2023. Minor: 'about seven months after the planned go-live' is nearer six (late May to 2 Dec 2027)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "Prospective decision; no bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "The random sample is 'your only unbiased test data'. It also ties the advice to the Participatiewet in balans (trust and the human dimension), which gives the CIO a policy argument the council already signed up to.",
+      "evidence": "'Months 1–3: measure' and the 'It hurts the people you serve' bullet"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+        "reason": "Bundles three failure mechanisms (bias, presumed guilt, no human/legal check) without saying how many are needed; samples covered different subsets. Name the minimum, or split it. It also doesn't check that the precedent is described accurately: one sample gave a wrong year for Amsterdam's Smart Check and would still pass."
+      },
+      {
+        "assertion": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+        "reason": "A long conjunctive list (legal basis, purpose limitation, DPIA, automated decisions, AI Act high-risk, timing). It discriminates well, but it leaves out the AI Act Art. 5(1)(c) social-scoring ban, which is the strongest legal point for scoring on debt-counselling data. The Commission's guidelines list welfare fraud scoring on unrelated-context data as an example. Consider adding it."
+      },
+      {
+        "reason": "No assertion covers the chilling effect on residents seeking debt help, or the label/feedback-loop problem (a model trained on past investigations learns where investigators looked). These were the most decision-relevant insights in the strongest samples."
+      },
+      {
+        "reason": "No assertion checks for the closest municipal precedents (Rotterdam's identical score-everyone/top-10% design; Amsterdam's 'by the book' Smart Check that still failed). It also doesn't check for involving the cliëntenraad, works council and investigators before choosing the tool."
+      }
+    ],
+    "overall": "Strong, compact and accurate; it misses only the resident notice-and-objection safeguard."
+  }
+}

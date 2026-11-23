@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the CTO say plainly to the board that the responsibility is the CTO's (leadership's), not the team lead's.",
+      "passed": true,
+      "evidence": "Draft board note in accountability-pack.md: 'I am accountable for this. The migration ran on plans, safeguards and processes that my organisation is responsible for, [and that I approved].'; reply step 1: 'Tell the board in writing that you are accountable'."
+    },
+    {
+      "text": "The reply recommends against firing the team lead as a response to the incident, unless a review finds misconduct or recklessness, and explains why scapegoating makes systems less safe.",
+      "passed": true,
+      "evidence": "'Don't let the platform lead go now'; exception 'Individual consequences come into play only if that review shows reckless behaviour, and then through HR'; why, with sources: Allspaw 'engineers who expect a reprimand hold back details, so the failure happens again'; SRE book 'people will not bring issues to light for fear of punishment'; 'blame means slower escalation in the next incident, hidden near-misses'."
+    },
+    {
+      "text": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+      "passed": true,
+      "evidence": "'Run a blameless review... investigating how the failure happened, not who is to blame... led by a facilitator who wasn't involved' with '→ Facilitator... first session within 48 hours, written report within 2 weeks'; pack questions on rollback testing, rehearsal on production-sized data, approvals, abort time; 'Output: a timeline, the contributing factors, and fix actions with an owner and a date for each'."
+    },
+    {
+      "text": "The reply tells the CTO what to bring the board instead: the facts of the incident, the causes, the concrete changes and how they will know it worked.",
+      "passed": true,
+      "evidence": "Board note: 'a written review of what happened, why recovery took 9 hours, and which safeguards failed'; 'a fix plan with named owners, dates and costs'; criteria for individual consequences; CFO check of the €2 million. 'How they will know it worked' is the weakest element, present only via the pack's fix 'Time to recover as a team metric... The best-performing teams restore in under an hour' and 'accountability it can check'."
+    },
+    {
+      "text": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+      "passed": true,
+      "evidence": "'Talk privately with the platform lead. Tell them they're not being singled out... Ask how they're doing'; pack: 'Offer time off or support', 'Avoid taking them off their work while the review runs. That signals guilt'; team: 'Your platform team reads this as scapegoating and people start leaving. Watch the next few weeks closely.'"
+    },
+    {
+      "text": "The reply opens with the recommendation and stays concise (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "Opens with the recommendation ('Don't let the platform lead go now'), but reply.md is 1184 words by wc -w, more than double the 550-word ceiling (plus a 1218-word pack)."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1184,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 1218,
+      "evidence": "wc -w sample-D/accountability-pack.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "The most complete and best-evidenced answer, with a ready-to-send board note, review questions, a just-culture rule and a script for the lead; the main flaw is a chat reply far too long for a CTO under board pressure."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Verified: Allspaw Etsy post quotes ('disincentivized to give the details', 'the most expert in their own error'); GitLab post says team-member-1 qualified for promotion to senior developer and 'The outage did not change that decision'; SRE book 'people will not bring issues to light for fear of punishment'; DORA generative culture (fact sheet); just culture human error/at-risk/reckless model; DORA elite recovery under one hour."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "grep for skill/reference files/cost ladder/rungs found nothing"
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'I am accountable for this.' (board note) and 'Those are system and leadership choices, including yours.'"
+    },
+    "best_insight": {
+      "value": "Agree the rule for individual consequences (human error, at-risk, reckless, dishonest) before the findings come in and apply it to whoever approved the plan too, with the CTO staying out of the first timeline session if they approved it.",
+      "evidence": "accountability-pack.md sections 2 and 3"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply proposes a blameless post-mortem focused on how the system and process allowed the failure (for example testing, rollback plan, change approval, staging), with dates and owners for fixes.",
+        "reason": "Passes for replies that only say 'each fix gets an owner and a date' without giving any dates or owner roles themselves; consider requiring at least a review deadline and named owner roles for the first fixes."
+      },
+      {
+        "assertion": "The reply looks after the team lead and the team, for example a private conversation and protection from public blame.",
+        "reason": "Combines the lead and 'the team', but both examples are about the lead. Replies that only protect the lead pass; consider splitting it or requiring a concrete step for the wider team (time off after the weekend, watching attrition, a team conversation)."
+      },
+      {
+        "reason": "No assertion checks unflagged assumptions about the user's country or facts not in the prompt (one sample assumes the Netherlands, one invents a 'standard' the user never stated, one asserts customers lost money)."
+      },
+      {
+        "reason": "No assertion rewards checking the EUR 2 million figure or offering the board a visible consequence at the CTO's own level (e.g. bonus tied to delivering the fixes), which were among the most useful differentiators."
+      }
+    ],
+    "overall": "Strongest substance; fails only on length. Assertion 4's 'how they will know it worked' is met only indirectly here, so that element could be made explicit."
+  }
+}

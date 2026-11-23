@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'Before you talk to him (two or three days) - Ask your engineers for a rough estimate of each feature, as a range. - Using Jira and your roadmap, list what would slip and which customers that affects.' Opening: 'Don't absorb it quietly and don't refuse it.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "Options: '1. All three by end of Q1; these named roadmap items move to Q2. 2. The smallest version of each that solves the customer's problem, or two by Q1 and the third with a firm date. 3. Part of the need met another way: configuration, an integration or a workaround.' The opening asks for 'a private, one-page view of what the three features cost, what slips if you build them, and two or three ways to keep his promise.'"
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'Be clear about what isn't an option: overtime, or skipping testing or security review. That comes back as incidents and people leaving.' Also: 'The trap is saying yes and hoping extra hours close the gap.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Find out what the customer is trying to achieve: a renewal, a rollout, a deadline of their own.' Options 2 and 3 are built on 'the customer's problem' and meeting 'part of the need... another way'. It doesn't name the account manager as the route, but the assertion gives that only as an example."
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'The conversation (one-to-one, before any wider meeting)'. Good faith: 'Start from his goal, not your capacity. He made the promise to protect an important account, and that's a fair reason.' Process: 'Propose one rule for next time: nothing is promised to a customer until the team building it has estimated it. Until then, the customer gets a date for an answer.'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "440 words by wc -w. Opens with the answer: 'Don't absorb it quietly and don't refuse it. Within a week, take the CEO a private, one-page view...'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 440,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Short and complete, and the only sample that also protects the team ('won't commit them to anything they haven't estimated') and offers to stand with the CEO when he updates the customer; its customer-needs step is a little thinner than B's or D's."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable factual claims; 'Using Jira' is an assumption about tooling, not a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Telling the team up front that the PM won't commit them to anything they haven't estimated, and offering to join the CEO when he updates the customer, which protects team trust and shares the hard conversation instead of leaving it to him.",
+      "evidence": "'Before you talk to him' and 'Afterwards' sections"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate behaviours (private first, charitable reading of the CEO, future process). Samples hit them unevenly, so a single pass/fail hides which part was missed; consider splitting into separate assertions."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "Easy to pass with a generic 'get an estimate' line. A sharper version would require naming the specific roadmap items that would slip and who they affect, which separates real capacity work from a nod."
+      },
+      {
+        "reason": "No assertion checks whether the PM protects their own team during the process (e.g. telling the team they won't be committed to unestimated work) or asks the CEO to own and back the deferrals publicly; these were the most useful differentiators between samples."
+      }
+    ],
+    "overall": "Passes all six. It's the strongest on team protection, which no assertion checks."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "Does not ask the board to approve a headcount reduction number before the cheaper, non-payroll savings have been validated",
+      "passed": true,
+      "evidence": "Board decisions (board-paper §14) ask the board to confirm the target, approve the non-people programme and freeze, note the leadership pay cut and 'Approve opening consultation with the works council now, on the problem and the options', then 'Agree that any forced redundancy is decided once, at the February board, on verified numbers and after the works council's advice.' Reply: 'decides forced redundancies last, once, on verified numbers.' The ~16 figure is presented as an estimate, not for approval."
+    },
+    {
+      "text": "Identifies savings outside payroll (such as cloud, SaaS tools, facilities or marketing) with estimated euro amounts",
+      "passed": true,
+      "evidence": "Reply: 'Even at 15–25%, AWS and tools give €1.6–2.7M'. Board paper §5 table: Cloud 1.1–1.9 (1.5), SaaS 0.5–0.8 (0.6), facilities 0.3–0.7 (0.5), marketing 0.3–0.5 (0.4), other 0.1–0.3 (0.2); subtotal 2.3–4.2 (3.2). Arithmetic checks out."
+    },
+    {
+      "text": "Shows how much of the 15% target (about €7.2M) the non-layoff options cover and what gap, if any, remains",
+      "passed": true,
+      "evidence": "Reply table: 'Non-people spend only | €3.2M (€2.3–4.2M)'; the proposed mix is non-people €3.2M + freeze €1.4M + leadership €0.3M + voluntary €1.1M = €6.0M before any forced exit, leaving 'forced redundancies for whatever gap remains (€1.2M in the planning case)', i.e. about 16 roles (0–38). The ranges add up (4.4–7.8 before forced; 16×€73.8k ≈ €1.2M)."
+    },
+    {
+      "text": "Proposes leadership pay cuts, shared sacrifice or voluntary options before involuntary reductions",
+      "passed": true,
+      "evidence": "Reply: 'Leadership goes first... −30% for you, −20% for the executive team and no leadership bonuses in 2027'; the order is 'a leadership pay cut (€0.3M), a voluntary programme (€1.1M), then forced redundancies for whatever gap remains'. Board paper: 'Voluntary programme: departure scheme, reduced hours, unpaid leave; 10–20 FTE'."
+    },
+    {
+      "text": "Opens with the recommendation in the first paragraph, and either stays under about 1,500 words or offers the full memo as a separate document",
+      "passed": true,
+      "evidence": "First paragraph: 'My recommendation: don't take a 60-person layoff plan to the board on Monday. Take them a plan that reaches the full €7.2M...' reply.md is 777 words (wc -w), and the full paper is offered separately: 'The board paper is in `board-paper.md`.'"
+    },
+    {
+      "text": "States what would change the recommendation and explicitly invites the CEO to push back",
+      "passed": true,
+      "evidence": "Reply: 'Two questions that would change the answer most' (what the 15% is for; revenue growth and net retention) and it ends: 'What am I missing, and what would make this wrong?' Board paper §13: 'Assumptions, and what would change our mind'."
+    },
+    {
+      "text": "Asks for or gathers the company context the advice depends on (such as strategy, finances, organisation and earlier reorganisations) and names where it would come from",
+      "passed": true,
+      "evidence": "Reply asks 'What is the 15% for?... a funding round, a covenant...' and 'What are your 2027 revenue growth and net retention?', and names sources: 'Checking them against the AWS Cost and Usage Report, tool admin consoles, the lease and HR attrition data'. Board paper §3 'Gaps' lists the CUR/Cost Explorer, admin consoles, lease terms, CRM pipeline, aggregated HR data and the 2027 revenue forecast, and §10 adds covenants and investor milestones. It doesn't ask about earlier reorganisations."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 777,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3973,
+      "evidence": "wc -w board-paper.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "A rigorous, internally consistent plan that meets the board's €7.2M without locking in an irreversible number, puts leaders first, respects the Dutch legal floor and gives the board six concrete decisions; the only weakness is a long (~4,000-word) board paper with one unfilled placeholder ('[Candidate items to add before the meeting.]')."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: transition payment cap €102,000 in 2026 (Rendement); Flexera 2026, 29% waste, 750+ respondents, 18 March 2026; Zylo, 36% unused licences, 29 January 2026; WMCO one-month wait applies to settlement agreements unless the unions agree (UWV); afspiegeling, art. 25 WOR, werktijdverkorting limited to calamities and notice minus UWV time all match the fact sheets. 30 Nov 2026 is a Monday. All arithmetic checks."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Reply: 'The gap is the leadership team's responsibility, yours first, and the paper says so in your voice.' Paper §2: 'Our cost base grew faster than our revenue. That was the leadership team's call, and mine first.'"
+    },
+    "best_insight": {
+      "value": "It separates run-rate from in-year savings (60 redundancies give only ~€1.5M in 2027 after Dutch procedure and severance) and warns that if the board means €7.2M saved within 2027, no option, 60 layoffs included, gets there, so the board has to define its target.",
+      "evidence": "Reply question 1; board paper §13."
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Does not ask the board to approve a headcount reduction number before the cheaper, non-payroll savings have been validated",
+        "reason": "Ambiguous on caps and envelopes. Sample B asks the board to approve 'role reductions capped at [45]' and a restructuring budget before the savings are signed; it's unclear whether a cap counts as 'a headcount reduction number'. Say explicitly whether a cap, envelope or range counts."
+      },
+      {
+        "assertion": "Proposes leadership pay cuts, shared sacrifice or voluntary options before involuntary reductions",
+        "reason": "The 'or' lets a single buried line pass (e.g. an 'optional voluntary departure window' inside a social-plan outline). Consider splitting it into (a) leaders' pay or bonus cut first, with a figure, and (b) voluntary options sized before forced exits."
+      },
+      {
+        "reason": "No assertion checks the Dutch legal floor (works council advice under art. 25 WOR before the decision is final, WMCO at 20+ exits including employer-initiated settlements, afspiegelingsbeginsel instead of picking names). All four samples covered it, with different accuracy and depth, so it's an outcome worth checking."
+      },
+      {
+        "reason": "No assertion checks run-rate against in-year savings. The strongest samples showed that 60 redundancies yield only about €1.5M in 2027 cash after procedure and severance. That's a decisive point for a board, and it separated A and C from D."
+      }
+    ],
+    "overall": "A clears every assertion with substance. The assertions don't capture its main strength: run-rate against in-year modelling and consistent, checkable arithmetic."
+  }
+}

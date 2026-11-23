@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "Opens: \"**My advice: don't buy this system as specified, and don't promise go-live in six months. Instead, offer the alderman a six-month plan that measurably improves enforcement, with a decision point at the end.**\" The alderman is treated as a partner: \"Talk to the alderman privately before the committee\", with a script that offers him \"fairer and more effective enforcement, with numbers to show for it\", and \"The other side. The council has a real point: fraud erodes support for the safety net...\". No labelling."
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": true,
+      "evidence": "Names several precedents and explains what went wrong: Rotterdam \"scored about 30,000 recipients and sent the top 10% to investigators... only 50% better than random selection. The city paused it in 2021 over bias it couldn't remove\"; Amsterdam's 'fair' model, where \"The bias had come back in a new direction, and the model flagged more people than caseworkers without finding the right cases any better\"; \"a court struck down SyRI as insufficiently transparent and verifiable, and the childcare benefits scandal showed where risk profiling ends.\" Bias and the missing legal/verifiable check are explicit. Presumed guilt is only implicit (\"they learn whom investigators chose to look at, not who commits fraud\"; \"Three in four investigations would hit people who committed no fraud\"), but the failure mechanisms are explained in substance."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "Worked base-rate example: 5% fraud, \"A 90%-accurate model that sends the top 10% to investigators flags 100 of every 1,000 recipients. Only 25 of those 100 are real cases; the other 75 committed no fraud, and half the fraud goes unflagged.\" Arithmetic checks: 50 fraudsters; with 100 flagged and 90% accuracy, TP=25, FP=75, FN=25. Also \"a model that flags nobody is 95% accurate.\" Asks \"for the hit rate within the top 10%, the error rates by group (nationality, gender, age, single parents), and whether it was measured on your data.\" Proxies are covered through Amsterdam (bias returned after removing gender, nationality and age) and \"Bias-test the rules too: DUO's simple rules (distance to parents, type of education) still discriminated indirectly.\" Postcode isn't named, but proxy bias is explicit."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": true,
+      "evidence": "\"First you need a legal basis, a DPIA and IAMA\"; \"The GDPR adds a DPIA and purpose limitation on the debt-counselling data, and after the CJEU's SCHUFA ruling a score that largely decides who is investigated may count as an automated decision\"; \"If it isn't prohibited, it is very likely high-risk, because it concerns public benefits. The high-risk obligations, including a fundamental rights impact assessment, apply from 2 December 2027\"; \"This isn't legal advice: get a written view from your FG and legal team before anything is procured.\" All four GDPR elements are there, plus AI Act timing and the social-scoring ban (\"has applied since February 2025\")."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": true,
+      "evidence": "\"Months 1–6: fix what causes errors. Simplify reporting changes in income or household. Contact people as soon as an Inlichtingenbureau signal arrives instead of reclaiming months later. Use plain-language letters. Fewer errors mean fewer investigations.\" The random sample separates \"deliberate fraud, honest mistakes with complex rules, or the municipality's own errors.\""
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": false,
+      "evidence": "Several safeguards are present: \"An investigator always decides, and no payment is ever stopped on a score alone\"; \"registered in the Algoritmeregister\"; \"Fix the stop criteria before it starts, add an independent audit and involve the cliëntenraad.\" But the reply never says that affected residents are told they are scored or selected, or that they can object or challenge the selection. \"Selection you can explain\" and involving the cliëntenraad are about transparency and collective participation, not individual notice and objection. One of the five named safeguards is missing."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 968,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Specific, accurate and well-sourced Dutch precedents (Rotterdam, Amsterdam, SyRI, DUO), base-rate maths that checks out, the social-scoring risk of the combined data, a credible six-month alternative and a private script for the alderman. The one gap is individual notice and the right to object."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked Rotterdam, Amsterdam, Commission guidelines, Participatiewet in balans, DUO, SyRI and AI Act dates and found no errors. 'About seven months after go-live' is a slight stretch (about six months) but it is hedged."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt asks about a prospective decision, with no bad outcome yet."
+    },
+    "best_insight": {
+      "value": "A random sample of a few hundred files is 'your only unbiased test data' and the baseline any tool must beat, and Amsterdam's by-the-book 'fair' model still failed, which shows that good intentions and bias tuning don't rescue this design.",
+      "evidence": "Months 1–3 item and Amsterdam bullet"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+        "reason": "All four samples pass this easily; every reply opens with a 'don't buy as specified, offer a six-month alternative' line and none attacks the alderman. It doesn't tell the samples apart. Consider also checking that the opening gives the alderman something concrete to deliver within his six months."
+      },
+      {
+        "assertion": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+        "reason": "This bundles five or more sub-items (legal basis, purpose limitation, DPIA, automated decisions, AI Act high-risk, timing). Two samples covered nearly all of it but failed only on the GDPR automated-decision rule. Splitting it would show which legal points a sample actually misses."
+      },
+      {
+        "reason": "No assertion covers the AI Act Article 5 social-scoring ban, which is arguably the sharpest legal risk here: the Commission's guidelines name welfare agencies estimating fraud risk from data out of unrelated contexts (exactly the debt-counselling and housing data) as a prohibited example. Three of four samples raised it, and it can discriminate."
+      },
+      {
+        "assertion": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+        "reason": "'Bias, presumed guilt and no meaningful human or legal check' is three mechanisms in one clause. Samples that only state the outcome ('wrongly branded 20,000 families') sit on the line. Say whether naming the outcome is enough or the failure mechanism (e.g. nationality used as a risk factor) must be explained."
+      }
+    ],
+    "overall": "Strong sample. It fails only the safeguards assertion, for missing individual notice and objection rights."
+  }
+}

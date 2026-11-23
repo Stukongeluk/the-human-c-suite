@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "Does not ask the board to approve a headcount reduction number before the cheaper, non-payroll savings have been validated",
+      "passed": false,
+      "evidence": "The 60-person headcount is set before cheaper savings are tested. Bottom line: 'You can present a 60-person plan on Monday'. Process step 1: 'Monday, board: approve the target definition, the envelope and the process', with step 2 filing 'the formal request for advice' in the week of 1 December, while 'Non-personnel actions, starting in December' run in parallel. The recommended Option B is still '60 fewer people by 30 June, made up of about 35 to 40 redundancies'."
+    },
+    {
+      "text": "Identifies savings outside payroll (such as cloud, SaaS tools, facilities or marketing) with estimated euro amounts",
+      "passed": true,
+      "evidence": "Numbers table: 'AWS 15% (€1.1M), SaaS 20% (€0.6M), marketing 20% (€0.4M), office 10% (€0.3M), other 10% (€0.1M), total about €2.6M, stretch about €3.2M'."
+    },
+    {
+      "text": "Shows how much of the 15% target (about €7.2M) the non-layoff options cover and what gap, if any, remains",
+      "passed": false,
+      "evidence": "The logic runs backwards: it starts from 60 layoffs ('covers about 60% of the 15% target (€4.4M of €7.2M), and the other €2.6M to €3.2M has to come from non-personnel spend'; 'Remaining gap after layoffs €2.8M'). It never states what the non-layoff options cover on their own and what gap is left for redundancies, and the hiring freeze in Option B has no euro figure. Only Option C ('about €4.5M of cuts (about 25 to 30 redundancies plus non-personnel)') implies a residual."
+    },
+    {
+      "text": "Proposes leadership pay cuts, shared sacrifice or voluntary options before involuntary reductions",
+      "passed": false,
+      "evidence": "No leadership pay cut, bonus cut or shared sacrifice anywhere. There's no voluntary scheme, reduced hours or leave; 'Offer settlement agreements (vaststellingsovereenkomst) first' refers to the exit route for selected people, not a voluntary option. Non-backfilled attrition reduces redundancies but isn't a voluntary option offered to staff."
+    },
+    {
+      "text": "Opens with the recommendation in the first paragraph, and either stays under about 1,500 words or offers the full memo as a separate document",
+      "passed": true,
+      "evidence": "First paragraph under 'BOTTOM LINE': 'You can present a 60-person plan on Monday, but present it as a proposal that goes to your works council (OR) next... I recommend a variant of your plan (Option B below) that reaches the same headcount with fewer redundancies.' reply.md is 1,415 words, under about 1,500."
+    },
+    {
+      "text": "States what would change the recommendation and explicitly invites the CEO to push back",
+      "passed": false,
+      "evidence": "It lists 'WEAKEST POINTS AND RISKS' and says the board's purpose 'changes how many people you need to cut', but never invites the CEO to push back. The only 'push back' is about the board: 'Use it as your fallback position if the board pushes back on cash.' The closing offer ('If you send me the actual headcount and revenue data, I will tighten the savings') isn't an invitation to challenge the recommendation."
+    },
+    {
+      "text": "Asks for or gathers the company context the advice depends on (such as strategy, finances, organisation and earlier reorganisations) and names where it would come from",
+      "passed": true,
+      "evidence": "'BEFORE MONDAY (owners and deadlines)': 'CFO: replace my [A] items with actuals (revenue, cash, burn, contract and lease end dates, AWS commitments) and confirm the €7.2M definition with the board chair'; 'HR: headcount by function, age cohort, tenure and salary, plus current attrition rate'; 'Ask your customer lead which roles are safe to cut'; and 'Ask the board what 15% is meant to achieve: break-even, a fundraising story, or a margin target.' No question about earlier reorganisations."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1415,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "Numerate, honest about what isn't verified and clear on the Dutch process, but it mostly executes the 60-person premise. It makes no leaders-first or voluntary move and commits to the headcount (and the works council advice request) before testing cheaper savings."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: €73.8k average, €4.43M = 9.2%/62%, €2.8M = 16% of €17M non-personnel, lever percentages to €2.6M, one-off €1.5–2.4M = 20–33% of cash and 4–6.5 months' payback, the 12-month runway line ~Sept 2027, and the age bands and afspiegeling, WOR and WMCO steps. Loose phrasing but nothing clearly wrong. 'contractors... sit outside the OR and UWV process' is a simplification (true for UWV; a works council advice request may still cover them as part of the reorganisation)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'. Borderline process narration: 'I treated it as a high-stakes decision and ran the weakest-point check above' and [V]/[A] tags."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that the losses or the need for cuts are leadership's responsibility."
+    },
+    "best_insight": {
+      "value": "It offers a break-even-only fallback (Option C, ~€4.5M with 25–30 redundancies) for the CEO to use if the board pushes back on cash, and flags that the company crosses a 12-month runway line around September 2027 if nothing is done.",
+      "evidence": "'YOUR DECISION' Option C; 'WEAKEST POINTS AND RISKS' runway bullet."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 4,
+    "total": 7,
+    "pass_rate": 0.43
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Does not ask the board to approve a headcount reduction number before the cheaper, non-payroll savings have been validated",
+        "reason": "Ambiguous on caps and envelopes. Sample B asks the board to approve 'role reductions capped at [45]' and a restructuring budget before the savings are signed; it's unclear whether a cap counts as 'a headcount reduction number'. Say explicitly whether a cap, envelope or range counts."
+      },
+      {
+        "assertion": "Proposes leadership pay cuts, shared sacrifice or voluntary options before involuntary reductions",
+        "reason": "The 'or' lets a single buried line pass (e.g. an 'optional voluntary departure window' inside a social-plan outline). Consider splitting it into (a) leaders' pay or bonus cut first, with a figure, and (b) voluntary options sized before forced exits."
+      },
+      {
+        "reason": "No assertion checks the Dutch legal floor (works council advice under art. 25 WOR before the decision is final, WMCO at 20+ exits including employer-initiated settlements, afspiegelingsbeginsel instead of picking names). All four samples covered it, with different accuracy and depth, so it's an outcome worth checking."
+      },
+      {
+        "reason": "No assertion checks run-rate against in-year savings. The strongest samples showed that 60 redundancies yield only about €1.5M in 2027 cash after procedure and severance. That's a decisive point for a board, and it separated A and C from D."
+      }
+    ],
+    "overall": "The assertions discriminate well here: D's failures (premise accepted, no leaders-first or voluntary step, no invitation to push back) are exactly what the eval targets."
+  }
+}

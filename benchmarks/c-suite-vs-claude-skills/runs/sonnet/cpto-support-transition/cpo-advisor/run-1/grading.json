@@ -1,0 +1,104 @@
+{
+  "expectations": [
+    {
+      "text": "The first paragraph of the reply states the recommendation itself, not only that a document was written",
+      "passed": false,
+      "evidence": "First paragraph: 'Yes, I can draft this plan, and it is workable. I would change it in three ways before you commit.' It names no concrete recommendation, and the substance only comes in the list that follows. Calling it 'workable' also sits awkwardly with the list's advice to plan for 8 to 9 people at month 12."
+    },
+    {
+      "text": "Requires evidence that the AI holds up (resolution quality, CSAT, escalations or reopen rates) before roles are reduced, and ties the pace of reduction to those measures",
+      "passed": true,
+      "evidence": "Phase 0: 'Set the gate metrics and write them down: AI true-resolution rate, CSAT delta, reopen rate, escalation time, and human handle time. Each headcount step is released only when these hold for 8 consecutive weeks.' The timeline has a 'Gate to move on' column ('8 stable weeks on gate metrics')."
+    },
+    {
+      "text": "Looks for redeployment first, naming concrete destinations such as customer success, onboarding, QA, AI quality review or knowledge management",
+      "passed": true,
+      "evidence": "Phase 2, step 2: 'Internal moves with real training, not a token offer... Other good destinations are customer success, onboarding, QA and AI evaluation, technical writing for the knowledge base, sales support, and product operations. Pay for the training and protect the time to do it.' This comes before voluntary exits and redundancy."
+    },
+    {
+      "text": "Covers negotiation with unions or employee representatives before decisions in both countries (for example MBL negotiation in Sweden and change negotiations under Finland's Co-operation Act)",
+      "passed": false,
+      "evidence": "Both countries get only hedged checklist items, and neither law is named. Sweden: 'If employees are unionised, there are negotiation duties with the union before decisions on significant changes... Check the thresholds. (🟡 verify)'. Finland: 'The Finnish co-operation procedure (change negotiations) applies to employers above a size threshold... Check whether your Finnish entity is above or below the threshold.' The plan itself keeps representatives out of Phase 0 ('Keep it small and keep it confidential'). In months 1.5 to 3 it says 'Announce direction and timeline', with 'Union and works consultation started where required' only as that phase's exit gate, so staff hear the direction before consultation starts."
+    },
+    {
+      "text": "Offers transition support that starts at notice, such as job security council support in Sweden or Finland's employer-funded training, with coaching and paid training",
+      "passed": false,
+      "evidence": "Phase 4 offers 'Paid outplacement and a CV and interview service', 'Time off to interview during notice' and a 'Training budget they can spend after they leave'. It never says support starts at notice, and the training comes after the person leaves. Job security councils or TRR are not mentioned, and Finnish change security appears only as 'Check what applies.'"
+    },
+    {
+      "text": "Uses voluntary options and natural attrition before any involuntary reductions",
+      "passed": true,
+      "evidence": "'Use these in this order: 1. Hiring freeze and no backfill... 2. Internal moves... 3. Voluntary exits with a better-than-statutory package, offered first... 4. Reduced hours or role-sharing... 5. Redundancy as the last step, only for what remains after steps 1 to 4.'"
+    },
+    {
+      "text": "Mentions paid study or reskilling support for adults, such as Sweden's transition study support (omställningsstudiestöd), or a company-funded learning budget",
+      "passed": true,
+      "evidence": "'Internal moves with real training... Pay for the training and protect the time to do it'; Phase 4: 'Training budget they can spend after they leave.' Company-funded; omställningsstudiestöd is not mentioned."
+    },
+    {
+      "text": "Plans for the six who stay: workload, new role definitions, and which work AI hands back to humans",
+      "passed": true,
+      "evidence": "'A realistic target structure for 6': 3 senior escalation specialists, 1 AI support quality lead, 1 support operations and insights, 1 team lead, each with duties. 'When AI removes the easy tickets, the average human ticket gets harder, longer and more emotional... Plan on handle time per human ticket rising.' Phase 5: retention bonuses, 'pay increases and new titles', 'Rotation across escalation, quality and ops so nobody burns out'; coverage hours and languages to be decided explicitly."
+    },
+    {
+      "text": "Phases the change over the year with named checkpoints rather than one cut",
+      "passed": true,
+      "evidence": "Timeline table with phases at months 0–1.5, 1.5–3, 3–6, 6–9, 9–12 and 12–18. Each has a headcount and a named 'Gate to move on' (e.g. '8 stable weeks on gate metrics, coverage acceptable')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 2787,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Good instincts on deflection versus resolution, harder residual tickets and gated steps. But it is very long for a chat reply, vague and hedged on the Swedish and Finnish processes and transition institutions, and its timeline announces direction before consulting."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No material errors. Minor: it calls LAS's operational unit (driftsenhet) a 'turnover unit'. Its estimate of 'roughly 2 to 4 compulsory redundancies' doesn't match its own ranges: 8 to 11 non-compulsory exits implies 1 to 4."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes no bad outcome."
+    },
+    "best_insight": {
+      "value": "It checks AI quality per language, warning that models are often weaker in Finnish, so a cut sized on a blended resolution rate could hide a quality gap in Helsinki.",
+      "evidence": "Phase 0: 'Check AI quality per language. Finnish is a morphologically hard language...'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "total": 9,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Mentions paid study or reskilling support for adults, such as Sweden's transition study support (omställningsstudiestöd), or a company-funded learning budget",
+        "reason": "The 'or a company-funded learning budget' clause lets almost any plan pass (all four did). Consider requiring Swedish transition study support (omställningsstudiestöd) or a funded learning budget for people who stay or move, not only for leavers."
+      },
+      {
+        "reason": "No assertion checks whether the target of 6 is tested against the real workload and coverage (tickets vs handle hours, harder residual cases, July holidays, languages). That was the biggest difference between samples: A and C model it with numbers, B reasons about it, and D only lists it as something to measure."
+      },
+      {
+        "assertion": "Covers negotiation with unions or employee representatives before decisions in both countries (for example MBL negotiation in Sweden and change negotiations under Finland's Co-operation Act)",
+        "reason": "Make the timing testable: representatives must see the proposal before anything is announced to staff. That would separate plans that brief unions first (A, C, D) from B, whose timeline announces 'direction and timeline' before consultation starts."
+      },
+      {
+        "reason": "No assertion checks the selection constraint: Sweden's LAS seniority order (with three exemptions or an agreed list) means leaders cannot simply choose the six, and the Finnish entity's headcount decides whether the Co-operation Act applies. Both are central to a people plan and easy to get wrong."
+      }
+    ],
+    "overall": "Strong on gating and redeployment. It fails on its opening and on specific, timed coverage of the Nordic consultation and transition-support processes."
+  }
+}

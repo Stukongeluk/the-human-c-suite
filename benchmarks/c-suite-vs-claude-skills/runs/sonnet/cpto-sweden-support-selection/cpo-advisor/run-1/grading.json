@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": false,
+      "evidence": "States the order ('Under LAS, layoffs for redundancy follow a turordning (last in, first out)') and that 'Collective agreements can change the rules'. But it gets the exemption rule wrong: 'up to 3 employees you may exempt, with union agreement where required for larger employers'. Since the 2022 reform every employer may exempt three without union agreement (fact sheet: 'Since 2022 every employer may exempt three employees from it'). It also says pools are 'grouped by category of work', but job category is not a criterion. Because the asserted rule is misstated, this fails in spirit."
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "'Union negotiation (MBL) comes before you decide.'"
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "Rejects the method: 'Don't use performance ranking as the selection method. In Sweden, a redundancy (arbetsbrist) selection is governed by LAS seniority rules, not by merit.' Explains the metric's flaws: 'Remaining agents handle harder, slower, lower-CSAT tickets, so the numbers punish people on the toughest queues. CSAT is also noisy at per-person level'."
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": false,
+      "evidence": "Re-employment priority isn't mentioned at all. Support for leavers is only 'outplacement, references, and so on'. There is no job security council (TRR/TSL) and no transition study support."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "'Look first at alternatives to dismissal: voluntary departures with severance, redeployment into other teams, and natural attrition and open roles. Even a few reduce the number of forced exits. (Before the union meeting)'. Its decision recommends '(b) first explore voluntary exits and redeployment to cut the forced-exit number'. Note that it takes the 21 target as given rather than testing it."
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": false,
+      "evidence": "It opens with the answer ('Don't use performance ranking as the selection method'), but reply.md is 614 words (wc -w), more than double the ~300 limit, despite 'Keep it short'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 614,
+      "evidence": "wc -w sample-A/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "Its points on the metric flaws and on alternatives first are sound. But it is twice the requested length, misstates the Swedish exemption and pool rules in ways that could mislead HR, and leaves out re-employment priority and job security council support."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) 'up to 3 employees you may exempt, with union agreement where required for larger employers': since 2022 any employer may exempt three without union agreement. (2) Pools 'grouped by category of work': LAS uses one order per operating unit and collective-agreement area, and job category is not a criterion. (3) 'Notify Arbetsförmedlingen (varsel) before notices go out. For 5-25 affected people this is normally at least 2 months before': the two-month lead time runs to the first affected person's last day of employment, not to when notices go out (Arbetsförmedlingen). Also imprecise: 'Only employees whose work can be covered by the remaining staff count as comparable' borrows a comparability concept that isn't the Swedish qualification test."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon. It uses confidence labels and template headings only."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned AI-driven reduction, not a bad outcome to assign responsibility for."
+    },
+    "best_insight": {
+      "value": "It proposes agreeing up front how the remaining 21 will be measured (team-level resolution quality, not individual ticket counts), so the same flawed metric doesn't follow the survivors.",
+      "evidence": "How to Act step 5"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+        "reason": "The assertion checks that the exemption of three is mentioned, but not that it is stated correctly. One sample attached a false union-agreement condition to it. Consider wording it as 'states correctly that any employer may exempt up to three employees, without union agreement'."
+      },
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "'First checks the cut itself' can mean either reply order or the order of the recommended process. Say which one. Also say whether questioning the number 21 counts, or only redeployment and voluntary routes that reduce the nine."
+      },
+      {
+        "assertion": "The reply stays short (under about 300 words) and opens with the answer.",
+        "reason": "The word limit covers reply.md only, so a sample can pass by moving an 843-word draft into an attached file. That is a reasonable answer to 'draft the selection approach', but decide whether 'keep it short' should also apply to the draft itself."
+      },
+      {
+        "reason": "No assertion checks the discrimination and invalidity risk of HR's metrics: raw counts penalise part-timers and people on parental or sick leave. That is the strongest legal reason against HR's proposal, and only two samples raised it."
+      },
+      {
+        "reason": "No assertion checks that the selection pool is per operating unit and agreement area, which can be wider than the support team, or that it mentions the qualification test. Both change who is in scope."
+      }
+    ],
+    "overall": "The assertions mostly discriminate well. Assertion 1 should require the exemption rule to be stated correctly, not just mentioned."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (yes, no, or partly / not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "Below a title line ('CTO: AI coding agents and code review'), the first sentence answers directly: 'Bottom line: Yes to AI coding agents for every engineer in January. No to dropping review for small changes.' There are no questions before the answer."
+    },
+    {
+      "text": "Explains briefly why dropping code review is risky (quality, security, accountability), ideally with a real, dated source",
+      "passed": true,
+      "evidence": "It names quality, security and accountability risks and links its sources: 'AI co-authored PRs had about 1.7x more issues than human-only ones (CodeRabbit, 470 PRs)'; 'models picked the insecure option 45% of the time (Veracode, 100+ models)'; 'DORA's 2025 research ... still hurts stability \"without robust control systems\"'; 'code nobody on the team understands'. I checked all of these against the linked sources. The section is longer than 'briefly', and length is graded separately."
+    },
+    {
+      "text": "Offers a reversible step, such as a pilot with one or two teams, measuring before scaling, or making review faster instead of removing it",
+      "passed": true,
+      "evidence": "'Make review faster: an AI reviewer does a first pass, PRs stay small, and a human gives first review within 4 working hours'; 'Record a baseline per team'; 'Review at 30, 60 and 90 days. If change failure rate or review time rises, slow down.'"
+    },
+    {
+      "text": "Asks what problem the change should solve (for example where the time goes today) or what evidence there is for the speed-up",
+      "passed": false,
+      "evidence": "It never asks the user what problem the change should solve, where the time goes today, or what evidence exists for the speed-up. It tells them to measure ('Measure it.', 'Record a baseline'), and its only question is 'Want me to draft the one-page AI policy from step 2?'"
+    },
+    {
+      "text": "Keeps human accountability, tests or security checks for AI-written code",
+      "passed": true,
+      "evidence": "'Publish a one-page AI policy covering ... \"you own what you merge, whoever typed it\"'; 'Anything touching auth, payments, data, infra, dependencies, config or tests always gets a human'; docs changes 'merge once CI (the automated build and tests) passes'."
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": false,
+      "evidence": "wc -w reply.md = 563 words, well over 300, even though the user asked to keep it short."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "There is no coaching on decision habits. 'Your decision' sets out two options (A/B) with their consequences and a recommendation, which is advice about the plan, not a lecture on how to decide."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 563,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "The most rigorous and best-sourced answer, with a sound risk-based fast lane, compliance points and a dated, owned action plan. But at 563 words it ignores 'keep it short', and it never asks what the speed-up is meant to achieve."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "I checked every claim against its linked primary source. CodeRabbit (Dec 2025, 470 PRs, ~1.7x issues) is correct. Veracode (July 2025, 100+ models, insecure option 45% of the time) is correct. Faros AI (10,000+ developers, 98% more PRs merged, review time +91%, no company-level improvement) is correct. DORA 2025 (throughput up, stability down, 'without robust control systems') is correct. METR 2025 (believed ~20% faster, measured 19% slower) is correct, and the Feb 2026 update is indeed described as inconclusive. Anthropic RCT (Jan 2026, AI users scored 17% lower, biggest gap on debugging) is correct, though 'lowest on debugging' slightly blurs 'largest gap on debugging'. PCI DSS v4.0.1 req. 6.2.3 (bespoke and custom software reviewed before release) is correct. 'Skipping review saves a few hours per PR' is unsupported but is an estimate, not a sourced fact. Fri 18 Dec 2026 and Mon 4 Jan 2027 are the correct weekdays."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "It does not mention a skill, reference files or framework jargon. It does use a 'CTO:' persona title and inline tags such as '[verified]', '[medium: vendor telemetry]' and '[ASSUMPTION: ...]', which read as template output but are not a leak by this definition."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "There is no bad outcome in the prompt; it is a proposed plan."
+    },
+    "best_insight": {
+      "value": "It uses METR's perception gap (developers felt ~20% faster but measured 19% slower) and honestly notes that the 2026 follow-up is inconclusive, so the speed-up has to be measured rather than assumed. It also notes that PCI DSS 6.2.3 may make review mandatory.",
+      "evidence": "'Feeling faster isn't the same as being faster ... Their 2026 follow-up is inconclusive. Measure it.'; 'If you fall under PCI DSS, requirement 6.2.3 requires review before release'."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 2,
+    "total": 7,
+    "pass_rate": 0.71
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Explains briefly why dropping code review is risky (quality, security, accountability), ideally with a real, dated source",
+        "reason": "'Ideally with a real, dated source' is optional, so a reply with no evidence at all (sample B) passes the same as one with four verified, dated studies. Consider a separate assertion that requires at least one real, dated source and checks it is accurate."
+      },
+      {
+        "reason": "No assertion checks that the proposed fast lane really is low risk. Sample D puts config in the lighter-review lane, and sample B auto-merges dependency bumps and test-only changes. Both categories cause outages or supply-chain risk, while other samples rightly keep them with a human. An assertion such as 'any review exemption is defined by risk, and excludes auth, config, infra, dependencies and payments' would tell these samples apart."
+      },
+      {
+        "assertion": "Asks what problem the change should solve (for example where the time goes today) or what evidence there is for the speed-up",
+        "reason": "It is unclear whether a request for data ('Tell me your PR review wait time and I can size the gain') counts as asking about the problem or the evidence. Say whether the reply must ask what the speed-up is for, or whether a data request is enough."
+      },
+      {
+        "reason": "Nothing checks how the January rollout itself is handled: an AI usage and data policy, training time, no per-person AI usage metrics, and works council involvement where the tools can monitor performance. Samples C and A cover parts of this, but none of it is graded."
+      }
+    ],
+    "overall": "The strongest evidence of the four, but too long for 'keep it short', and it does not ask about the underlying problem. The assertions catch both, but they don't reward its unusually accurate sourcing over unsourced replies."
+  }
+}

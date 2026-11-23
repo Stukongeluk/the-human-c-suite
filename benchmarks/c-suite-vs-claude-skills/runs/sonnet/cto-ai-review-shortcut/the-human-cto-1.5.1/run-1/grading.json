@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (yes, no, or partly / not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "First sentence: 'Half of it: yes to AI coding agents for everyone from January, no to dropping review for small changes.'"
+    },
+    {
+      "text": "Explains briefly why dropping code review is risky (quality, security, accountability), ideally with a real, dated source",
+      "passed": true,
+      "evidence": "It gives dated sources: 'Faros AI (10,000+ developers, 2025): on high-adoption teams, merged pull requests rose 98% but review time rose 91%'; 'Veracode (2025): AI-generated code introduced OWASP Top 10 vulnerabilities in 45% of test tasks'; 'DORA 2025: AI amplifies what you already have. Without strong review and tests, it amplifies the weaknesses.'"
+    },
+    {
+      "text": "Offers a reversible step, such as a pilot with one or two teams, measuring before scaling, or making review faster instead of removing it",
+      "passed": true,
+      "evidence": "'Keep review, but make it faster: small PRs, a review SLA ...'; 'Baseline now: lead time, review wait, change fail rate, escaped defects. Compare after 8-12 weeks. If small changes prove safe, relax the rules for those paths using your own data.'"
+    },
+    {
+      "text": "Asks what problem the change should solve (for example where the time goes today) or what evidence there is for the speed-up",
+      "passed": true,
+      "evidence": "'What is the actual bottleneck today: writing code, review wait, or releases?' and 'Do you have automated tests and a change fail rate you trust?'"
+    },
+    {
+      "text": "Keeps human accountability, tests or security checks for AI-written code",
+      "passed": true,
+      "evidence": "'automated tests, linting and security scans as the first gate', within 'Keep review, but make it faster'."
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": true,
+      "evidence": "wc -w reply.md = 276 words."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "There is no coaching on how to decide. 'Two questions that would change my answer' and 'What am I missing, and what would make this wrong?' invite pushback without lecturing."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 276,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Short, direct and mostly well sourced, with good questions, and it warns against promising a speed-up number. But it puts config in the lighter-review lane, though config changes are a classic cause of outages; it argues the 'small' point weakly; and its GitClear figure could not be verified."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Faros AI 2025 (98% more PRs, review time +91%, 10,000+ developers), Veracode 2025 (OWASP Top 10 in 45% of test tasks) and DORA 2025 ('AI amplifies what's already there') all match their sources. One doubtful claim, 'GitClear found code duplication up 81%', has no date and could not be verified: web search was unavailable, and GitClear's page could not be fetched without approval. GitClear's widely reported 2025 figures were framed as a multi-fold rise in duplicated blocks rather than 81%, so it is doubtful, but it is not confirmed as an error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "It does not mention a skill, reference files or jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "There is no bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It tells the user not to promise a speed-up number to anyone until it is measured, and asks whether they even have a change fail rate they trust. Without that baseline, any review exemption can't be judged.",
+      "evidence": "'Don't promise a speed-up number to anyone yet. Measure it first.'; 'Do you have automated tests and a change fail rate you trust?'"
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Explains briefly why dropping code review is risky (quality, security, accountability), ideally with a real, dated source",
+        "reason": "'Ideally with a real, dated source' is optional, so a reply with no evidence at all (sample B) passes the same as one with four verified, dated studies. Consider a separate assertion that requires at least one real, dated source and checks it is accurate."
+      },
+      {
+        "reason": "No assertion checks that the proposed fast lane really is low risk. Sample D puts config in the lighter-review lane, and sample B auto-merges dependency bumps and test-only changes. Both categories cause outages or supply-chain risk, while other samples rightly keep them with a human. An assertion such as 'any review exemption is defined by risk, and excludes auth, config, infra, dependencies and payments' would tell these samples apart."
+      },
+      {
+        "assertion": "Asks what problem the change should solve (for example where the time goes today) or what evidence there is for the speed-up",
+        "reason": "It is unclear whether a request for data ('Tell me your PR review wait time and I can size the gain') counts as asking about the problem or the evidence. Say whether the reply must ask what the speed-up is for, or whether a data request is enough."
+      },
+      {
+        "reason": "Nothing checks how the January rollout itself is handled: an AI usage and data policy, training time, no per-person AI usage metrics, and works council involvement where the tools can monitor performance. Samples C and A cover parts of this, but none of it is graded."
+      }
+    ],
+    "overall": "It passes everything, but the assertions miss that its 'lighter review' lane includes config, a high-risk category, and that one statistic is unverified."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "BOTTOM LINE, right after the header: \"Agree with Operations on the productivity goal and decline the design. Don't ship a live stops-per-hour leaderboard, and don't send a weekly bottom-10% list to subcontractors. Instead, share the target with Operations, run a two-week diagnostic, and after peak season run a randomized pilot of route-adjusted feedback plus fixes to the app and routing.\""
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "\"Stops per hour mostly ranks routes, not drivers\", backed by a variance model (\"only about 3 in 10 drivers in a weekly bottom 10% are really among your weakest. About 8 in 10 are on the hardest quarter of routes\"), plus \"A 'not home' scan counts as a stop\". Safety: \"A live ranking in the van is time pressure while driving, and EU-OSHA says time pressure raises crash risk ... Couriers working to time windows say they speed to keep up (UCL)\". The detail doc names stop density, apartment blocks, parcel mix and depot load-out."
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "\"Your biggest levers are in the product, not in a ranking. They are seconds per stop in the app, load sequencing, address data and first-attempt success\", with sizing (10 s x 130 stops is about 4.5% of a shift). The detail doc has leading indicators (load-out time, geocode error rate, planned vs actual route time) and fleet-level subcontractor scorecards."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": true,
+      "evidence": "For counsel (\"General Counsel has not checked any of this yet\"; action 4 is a legal scope memo): works council consent (\"WOR art. 27(1)(l)\"); data protection (\"systematic monitoring of employees needs a DPIA ... also touches GDPR art. 22\"); algorithmic-management rules (\"EU Platform Work Directive: transposition is due 2 December 2026 ... Whether you are in scope is a question for counsel\"). The AI Act is not named, but the Platform Work Directive's rules on automated monitoring and decision-making systems cover monitoring and allocating work."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": true,
+      "evidence": "\"naming them to their own employer for action looks like you are exercising employer authority over people you don't employ\" (Belgian Parcel Delivery Act; Wtta from 1 January 2027); \"subcontractors will drop drivers who aren't the problem ... and replace them with slower new hires ... Meanwhile you build evidence that you are the real employer of about 1,600 subcontracted drivers.\" Reputational: the detail doc cites inspectorate findings and says \"Inspectors and the press will read 'flag drivers to subcontractors' in that light.\" Instead: \"manage subcontractors on fleet-level outcomes and let them manage their own people\", with fleet scorecards that include safety and working-time compliance, and a data-sharing agreement."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": true,
+      "evidence": "Own data: \"Drivers get private, route-adjusted feedback at the end of their shift\", shown as a band and \"never live while driving\". Design input: \"Do 15 to 20 ride-alongs across Dutch and Belgian depots\" and \"test mock-ups of the feedback screens with drivers before building them\". The critic section notes \"drivers and subcontractors haven't been asked yet.\" Subcontracted drivers are not named explicitly in the design step."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1167,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2793,
+      "evidence": "wc -w driver-productivity-response-detail.md"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "The most rigorous and actionable sample: a simulation that checks out shows why a weekly bottom-10% flag is mostly noise and would fake the 8%, every cited source verifies, and there's a dated plan with owners, a peak-season freeze and a ready-to-send note. But at nearly 4,000 words with template labels it is heavier than a CPTO needs to read."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked about 15 specific claims (model numbers, studies, Belgian Act, Wtta, PWD, DPA list, inspectorate, TNO) against sources and simulation; all correct. Barankay mechanism slightly simplified in reply."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Mild template or process jargon: \"CPTO ADVISOR\" banner, \"PEER CHECK: Not done yet\", a \"Critic pre-screen\" section (\"so the advice gets a challenge before it is final\"), and \"This follows the north star, leading indicators and lagging indicators hierarchy.\" No mention of skills or reference files."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome."
+    },
+    "best_insight": {
+      "value": "Its model shows that weekly flagged drivers 'improve' about 16% the next week with no intervention, so any before/after evidence for the 8% is built-in regression to the mean. It also proposes checking 'not home' scans against GPS dwell time to see whether stops per hour is already being gamed.",
+      "evidence": "WHAT bullet 2 and detail section 2"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+        "reason": "This sample cites the Platform Work Directive rather than the AI Act. The assertion should state whether algorithmic-management rules count as 'AI rules', since the AI Act may not apply to a non-AI metric."
+      },
+      {
+        "reason": "No assertion rewards questioning the 8% with a controlled design (regression to the mean, matched control depots). That is the strongest separator between samples here."
+      },
+      {
+        "reason": "No length or format guidance exists for this prompt, so a ~4,000-word package and a 464-word reply are graded the same. Consider an assertion on proportionate length, or on putting the decision in the first lines."
+      }
+    ],
+    "overall": "Passes everything with deep, verified evidence; the assertions don't distinguish this depth from thinner passes."
+  }
+}

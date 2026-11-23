@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that rejects the all-stores-by-March roll-out as specified and offers a phased alternative.",
+      "passed": true,
+      "evidence": "Reply opens: 'Back the technology but not the plan. Recommend a pilot in 8–10 stores that goes live in March... Make a go/no-go decision in June 2027 and roll out in waves from September. Reject three things: all 140 stores by March, schedules published three days ahead, and same-day changes staff can't refuse.'"
+    },
+    {
+      "text": "The reply warns that short-notice, unstable schedules carry hidden costs (such as turnover, absence, service, empty shelves or lost sales), with evidence such as the Gap stable scheduling study.",
+      "passed": true,
+      "evidence": "Reply: 'cutting hours can cost sales... In a randomised trial at Gap, more stable schedules lifted median sales by 7% and productivity by 5%. On my rough model, a realistic 3% saving is wiped out by a sales drop of about 1.2%.' and 'predictable shifts are what keep them'. Memo adds Mani, Kesavan & Swaminathan (all 41 stores understaffed at a 3-hour peak, verified) and that losing students 'costs recruitment and training'."
+    },
+    {
+      "text": "The reply proposes a pilot against comparison stores, with success measures beyond labour hours: for example sales, availability, customer scores, staff turnover and absence, and how staff rate their schedules.",
+      "passed": true,
+      "evidence": "Reply: '8–10 pilot stores plus matched control stores... scorecard that counts sales, shelf availability, queues, staff turnover, sick leave, schedule stability and compliance, not just labour hours.' Memo scorecard includes like-for-like sales, on-shelf availability, complaints, voluntary turnover, sick leave and a staff survey ('I can plan my life around my roster'), with difference-in-differences against control stores."
+    },
+    {
+      "text": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+      "passed": true,
+      "evidence": "Memo guardrails: 'Rosters published at least 7 full days ahead (CAO floor), aiming for 14'; 'A minimum shift length agreed with the OR'; 'Same-day flexibility only through voluntary offers'; vendor table: 'Same-day changes become voluntary offers (open shifts, swaps, \"go home early\" offers)'; staff availability from the app; 'staff can see why they got their hours, and there is a contest route'."
+    },
+    {
+      "text": "The reply flags the Dutch legal floor for counsel: the works council's consent right over working-hours rules or systems that can monitor staff, and the notice rules for on-call workers (at least four days unless a collective agreement shortens it, and pay when a shift is cancelled late).",
+      "passed": true,
+      "evidence": "Reply: 'The OR must consent to three things under the Works Councils Act (WOR art. 27(1)(b), (k), (l)): roster rules, processing of staff data, and any system that could monitor performance'; 'By law, other on-call staff get 4 days' notice and are paid for any hours cancelled inside that window'; the CAO's 24-hour window for erbijbaners; 'Not yet checked by... General Counsel (my reading of the CAO, WAB, WOR and AI Act)'. Verified against Ondernemersplein and the CAO text."
+    },
+    {
+      "text": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+      "passed": true,
+      "evidence": "Memo: 'No individual performance scoring. Results are measured at team and store level only.' Reply risk: 'The tool may score individual workers' productivity... Switch those features off for the pilot.' Design involvement: 'store managers and students haven't been asked... so involve them in the pilot design', OR consent request covering 'the draft roster rules... and the guardrails', and pilot store choice with the COO."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1140,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 3375,
+      "evidence": "wc -w decision-memo.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The most rigorous sample: it reads the actual CAO text (roster a full week ahead, 24-hour window only for erbijbaners, 50% structural hours), models the break-even sales drop, and gives owners, dates, contract terms and an integration checklist, though the reply is long and template-heavy."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: CAO Levensmiddelenbedrijf art. 4.3f (one full week), 24-hour rule for erbijbaners up to 12 h/week, 4.3c 50% structural hours (CAO PDF); ATW 28-day default; four-day call-in and paid cancellations (Ondernemersplein); WOR 27(1)(b),(k),(l) and 25(1)(k); AI Act Annex III from 2 Dec 2027, Regulation (EU) 2026/1744 (White & Case); students ≤16 h/week exempt and 130% bandwidth from 1 Jan 2028 (Dirkzwager); CAO premiums 50/50/100% (CNV); Forrester TEI 6–7% and 87%→96% accuracy; Deloitte 0.5–2.5%; Mani et al. 41 stores/3-hour peak; Gap 7%/5%. Model arithmetic checks: 9,000×17×52 ≈ 8.0M h, ×€18 ≈ €143M, 1% ≈ €1.43M; 1% of €1.4bn sales at 25% margin = €3.5M; break-evens 4.9%/2.5%/1.2%/0.6%; deferral €9–13M and €2–3M; €1/employee/month ≈ €108k/yr."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Minor: memo headings '13. Critic pre-screen' and '14. Peer verification still needed' and the reply's 'Not yet checked by the other roles' read as internal review-pipeline jargon rather than business language. No mention of skills or reference files."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "The break-even table shows how small a sales loss cancels the saving (a realistic 3% hours cut is wiped out by about a 1.2% sales drop), and it asks the vendor to restate the 12% with Dutch and CAO rules switched on and put part of its fee at risk on that number.",
+      "evidence": "Reply 'WHAT' bullet 3 and 'HOW TO ACT' 1; memo sections 7 and 10."
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+        "reason": "'Enough advance notice' is loose: a sample proposing only the statutory four days for on-call staff passes, although the supermarket CAO (verified: CAO Levensmiddelenbedrijf art. 4.3f) requires the full roster a full week ahead. Consider requiring notice at or above the CAO's one week, or naming two weeks as in the Gap study."
+      },
+      {
+        "assertion": "The reply flags the Dutch legal floor for counsel: the works council's consent right over working-hours rules or systems that can monitor staff, and the notice rules for on-call workers (at least four days unless a collective agreement shortens it, and pay when a shift is cancelled late).",
+        "reason": "The strongest legal point in the best samples is that the CAO itself, not only the WAB, blocks three-day publication (roster a full week ahead; 24-hour window only for erbijbaners). An assertion on checking the applicable CAO's roster rules would discriminate better than the generic four-day rule, which every sample got."
+      },
+      {
+        "reason": "No assertion checks the economics: that the 12% is a vendor claim to be re-based, that same-day cuts inside the notice window are still paid, or that the first-year saving sits below the run rate. The best samples quantified this (break-even sales drop, cost of delay); the weakest only gestured at it."
+      },
+      {
+        "reason": "No assertion checks where saved hours come from (not replacing leavers versus cutting students' hours and income), which is the main people question in a 12% hours cut for a student-heavy workforce."
+      },
+      {
+        "assertion": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+        "reason": "This bundles three separate checks (team-level measures, participatory design, no individual ranking); samples often meet two of three. Splitting it would make the results easier to read."
+      }
+    ],
+    "overall": "All six assertions passed; B's CAO-level detail and savings model go well beyond what the assertions test."
+  }
+}

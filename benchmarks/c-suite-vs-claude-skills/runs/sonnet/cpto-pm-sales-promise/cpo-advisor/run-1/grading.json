@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'2. Do a quick sizing with engineering (2-3 days, rough ranges...)... Capacity: what is committed for Q1, and what happens to each item if people move. Name the specific roadmap items that slip'. Bottom line: 'Don't push back on the promise. Take the CEO a decision about it.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "Options table with a 'What it costs' column: 'A. Deliver all three | ... named roadmap items slip to Q2 or later', 'B. Phase it | Feature 1 fully, smallest versions of 2 and 3 | ... Customer must accept a phased delivery', 'C. Re-sequence with the customer', 'D. Add capacity | ... Rarely lands in one quarter'. Also: 'Lead with the one you recommend and say why.'"
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": false,
+      "evidence": "No explicit rule against overtime or crunch. The closest is 'Your team is at capacity, so \"yes, on top of everything\" can't happen' and 'Taking on all three \"on top\"... usually means... quality drops, or people burn out', which describe risks. The fallback for 'all three, no slip' is to 'name the risk plainly, ask who owns it... and propose a checkpoint at week 4', which leaves crunch open as the way to absorb it."
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "Step 1: 'Separate three things: the problem the customer wants solved, the feature as they described it, and the date.' Step 3: 'Talk to the customer, or sit in on a call with the account owner. Ask what they need first and what would make them stop worrying.'"
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": false,
+      "evidence": "Good faith and process are there: 'Start from his goal'; 'Raising it while he is under pressure turns the discussion into blame'; and later 'propose a lightweight process: \"Before we commit dates to customers, can sales or you send me a quick message, and I'll get you a read within 48 hours?\"'. But it never says to have the conversation privately or one-to-one first. Step 4 is only 'Go to the CEO with options', and 'quietly' appears only for one side question. A required part of the assertion is missing."
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": false,
+      "evidence": "reply.md is 1178 words by wc -w, more than double the 550-word ceiling. It does open with the answer under '## Bottom Line'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1178,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Thoughtful on customer discovery and on handling the 'without asking us' issue later, but it's too long to act on quickly, it never rules out crunch, its fallback quietly accepts 'all three, no slip', and it tags opinions as '[verified]'."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date. It does overclaim: '[verified: this is standard practice for sales-driven roadmap pressure]' labels a judgement as verified, and 'It is rarely a contractual deadline' is an unsupported generalisation (though hedged with 'check it')."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files. Some format tags ('[verified: ...]', '[assumed]', '[medium]') show through but aren't skill jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Quietly asking the CEO whether the three features serve the wider customer base or only this account, which guards against building one customer's workaround at everyone else's expense.",
+      "evidence": "'Why this approach', third bullet"
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate behaviours (private first, charitable reading of the CEO, future process). Samples hit them unevenly, so a single pass/fail hides which part was missed; consider splitting into separate assertions."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "Easy to pass with a generic 'get an estimate' line. A sharper version would require naming the specific roadmap items that would slip and who they affect, which separates real capacity work from a nod."
+      },
+      {
+        "reason": "No assertion checks whether the PM protects their own team during the process (e.g. telling the team they won't be committed to unestimated work) or asks the CEO to own and back the deferrals publicly; these were the most useful differentiators between samples."
+      },
+      {
+        "assertion": "The reply rules out closing the gap with overtime or crunch.",
+        "reason": "This sample shows why the assertion matters: a reply can call 'on top of everything' impossible and still leave crunch as the de facto fallback. Keep it, perhaps reworded to 'explicitly excludes overtime or crunch as an option, including in the fallback'."
+      }
+    ],
+    "overall": "Strong on customer discovery, but it misses the crunch guard and the private-first step, and it runs to more than twice the length limit."
+  }
+}

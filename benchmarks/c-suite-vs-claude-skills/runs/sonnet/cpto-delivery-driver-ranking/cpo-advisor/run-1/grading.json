@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Bottom line: \"Do not ship it as specified. Say yes to the goal (productivity) and no to the mechanism (a raw, live, ranked stops-per-hour board plus an automatic weekly bottom-10% flag sent to subcontractors). Counter-propose a 6-8 week controlled pilot of a route-adjusted, private-to-the-driver feedback tool with quality guardrails\"."
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "\"It depends on stop density, parcels per stop, building type (apartment blocks vs rural addresses vs B2B), access and parking, time windows, parcel size and weight, vehicle, weather and traffic, and how the route was planned.\" Safety: \"parking illegally, cutting breaks, speed and phone use while driving ... road safety ... A leaderboard that is live in the app, while the driver is driving, makes the safety point worse.\""
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "\"Route quality, stop sequencing, failed-attempt reduction, depot loading order and wait times, access problems and address data, and app friction (scan time per stop, navigation hand-offs) typically hold more productivity than pressuring individual drivers\"; \"Depot or subcontractor-level benchmarks (team vs team) for managers\"; route-adjusted metric."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": true,
+      "evidence": "All three are flagged for Legal (\"confirm with Legal\"): works council (\"systems that monitor employees generally need works council consent ... Belgium has its own collective agreements on monitoring\"); data protection (\"lawful basis, purpose limitation, a data protection impact assessment ... decisions with significant effects based solely on automated processing are restricted\"); algorithmic management (\"EU rules on algorithmic management in platform work are being transposed in 2026 ... [assumed: scope; ask Legal]\"). Weakness: the works council point names only the subcontractor's council, not the company's own council for its directly employed drivers, and the AI Act isn't named."
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": true,
+      "evidence": "Legal: \"that looks like you directing and assessing the work ... chain liability, labour-hire and bogus-contracting rules in both NL and BE\". Shifting without fixing: \"Good subcontractors will see it as interference or will lose drivers; weak ones will use it to churn drivers, which then hits your quality\"; costs land \"on your customer experience, claims cost, road safety and brand, not on the subcontractor's\". Instead: subcontractor-level benchmarks, a causes-first prompt (\"look at causes first (route, vehicle, training, access problems)\"), and \"Pick pilot subcontractors that are willing\". This is a pass, though the alternative still sends individual prompts to subcontractors."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": false,
+      "evidence": "Drivers get their own data: \"Each driver sees their own trend and their own route-adjusted figure, privately, outside driving time ... No live board, no public ranking.\" But nothing involves drivers, employed or subcontracted, in designing the tool. The only design partners named are Legal, the works-council position and \"pilot subcontractors that are willing\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1624,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Thorough and sound, with a route-adjusted standard instead of a rank, rolling windows, a pre-registered pilot, a send-ready message and a minimum fallback if overruled. But it is long for a chat reply, never brings drivers into design, misframes works-council consent as only the subcontractor's, and still keeps individual prompts to subcontractors."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No wrong rule, number or date found; the works-council framing is incomplete rather than wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "Confidence tags only; no mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a proposal, not a bad outcome."
+    },
+    "best_insight": {
+      "value": "'A bottom 10% is a rank, not a standard': replace 'who is last' with 'who is below a defined, route-adjusted standard, for how long, and why', and if overruled insist on minimum conditions (no live in-drive display, human review, a rollback trigger on the guardrails).",
+      "evidence": "Point 3 and 'Your decision' option 3"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+        "reason": "This sample passes while still sending individual 'persistently below standard' prompts to subcontractors. If the intent is no individual flags to the employer, the assertion should say so."
+      }
+    ],
+    "overall": "Strong on metric logic and the pilot; it misses driver co-design and is longer than it needs to be."
+  }
+}

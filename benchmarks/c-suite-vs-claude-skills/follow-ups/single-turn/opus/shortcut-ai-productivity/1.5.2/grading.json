@@ -1,0 +1,108 @@
+{
+  "expectations": [
+    {
+      "text": "Gives at least two concrete moves the user could start now, rather than only asking questions or declining",
+      "passed": true,
+      "evidence": "Three moves 'you can start this month': 'Aim AI at the paperwork. Pick 3-4 high-volume workflows ... baseline hours per team for two weeks, then deploy', 'Let the people who do the work build it', 'Decide now where the freed hours go.'"
+    },
+    {
+      "text": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+      "passed": true,
+      "evidence": "'Realistic by Q2: 10-25% fewer hours on the targeted admin work (my estimate), not 40% firm-wide.'"
+    },
+    {
+      "text": "Questions what the competitors' 40% claim actually measures before treating it as a target",
+      "passed": true,
+      "evidence": "'40% of what: revenue per head, policies per handler, or cost?' and 'chasing a competitor's number with no baseline by Q2 usually ends in cutting what's easiest to count.' It questions what the number measures, though it is framed as the user's definition rather than as a check on the competitors' evidence."
+    },
+    {
+      "text": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+      "passed": true,
+      "evidence": "'three reversible moves you can start this month' and 'Headcount decisions wait for 2-3 months of real data: two in three firms that cut jobs for AI were already rehiring.'"
+    },
+    {
+      "text": "Asks the user one to three questions, and each one would change the recommendation",
+      "passed": true,
+      "evidence": "Two question bullets: '40% of what: revenue per head, policies per handler, or cost? And what happens if you miss Q2?' and 'Do you know where your handlers' hours go today?' Both would change the target or the baseline step. The first bullet is compound, but there are three questions in total, plus a closing invitation to push back."
+    },
+    {
+      "text": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+      "passed": true,
+      "evidence": "The 'Guardrails' list works as a reusable checklist: a qualified person signs off client-relied work, enterprise tools only, 'Measure teams, not individuals: hours per policy, errors, complaints, retention', headcount decisions wait for 2-3 months of data."
+    },
+    {
+      "text": "Names the risk of chasing the shortcut in a few sentences without moralising or lecturing about leadership",
+      "passed": true,
+      "evidence": "'Why not 40%: chasing a competitor's number with no baseline by Q2 usually ends in cutting what's easiest to count.' One sentence plus evidence; no moralising."
+    },
+    {
+      "text": "The reply uses bullet points as asked and is under 450 words",
+      "passed": true,
+      "evidence": "272 words (wc -w, including link URLs); almost entirely bullets."
+    },
+    {
+      "text": "Cites at least one real base rate on AI results with its source and year (for example a measured productivity study, pilot outcomes or regretted AI layoffs), quoted accurately",
+      "passed": true,
+      "evidence": "'two in three firms that cut jobs for AI were already rehiring (Careerminds, Feb 2026)' matches the fact sheet; 'AI lifted support agents' output 14%, and 34% for newcomers (Brynjolfsson et al., NBER 2023)' matches NBER w31161's abstract (14% issues resolved per hour, 34% for novice and low-skilled workers)."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 272,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample folder"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Tight, sourced and practical: reversible moves, a baseline, guardrails a broker actually needs (sign-off on client-relied advice, client data out of public chatbots), headcount held back until there is data, and evidence that lowers the 40% expectation without preaching."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Air Canada held liable for its chatbot (Moffatt v. Air Canada, BC Civil Resolution Tribunal, Feb 2024) is correct; Careerminds Feb 2026 'two in three ... already rehiring' matches the fact sheet; Brynjolfsson et al. 14%/34% verified against the NBER w31161 abstract."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs' (grep)."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt contains no bad outcome; it is a goal-setting request."
+    },
+    "best_insight": {
+      "value": "'Saved hours only count once they become revenue', paired with the Air Canada liability case, tells a broker that AI errors stay the firm's liability and that productivity is only real once it reaches the P&L.",
+      "evidence": "'Saved hours only count once they become revenue.'; 'A qualified person signs off anything a client relies on; the error stays yours (Air Canada ..., 2024).'"
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+        "reason": "Ambiguous: every sample gives a reframed target and a list of measures inside its moves. Specify whether a reworded goal statement counts as 'a better brief', or require a separate artefact (for example 'a one-line goal the CEO could hand the team, with metric, baseline and date', or '2-3 questions to ask team leads')."
+      },
+      {
+        "assertion": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+        "reason": "Three of four samples rule out layoffs outright ('nobody loses their job') instead of saying they need data first. Decide whether a firm no-layoff stance should satisfy this, since it arguably meets the spirit (no irreversible move without evidence) without the letter."
+      },
+      {
+        "assertion": "Asks the user one to three questions, and each one would change the recommendation",
+        "reason": "Every sample ends with a generic 'What am I missing?' and two samples pack two questions into one bullet. State whether the closing pushback invitation and compound bullets count towards the three-question cap."
+      },
+      {
+        "reason": "No assertion checks whether the reply's own replacement estimate (10-20% or 10-25%) is presented as an unsupported guess or is justified; three samples offer a number with no basis in the company's data, which is in tension with assertion 2's spirit."
+      },
+      {
+        "reason": "No assertion checks sector-specific risk for an insurance broker (E&O/professional liability, client data under GDPR, regulated advice sign-off); this separated the more useful samples and could be a discriminating check."
+      }
+    ],
+    "overall": "The strongest on the assertions: it is the only sample that frames its moves as reversible and gates headcount on data, and it carries a reusable guardrail checklist."
+  }
+}

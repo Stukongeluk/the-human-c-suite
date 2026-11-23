@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "'1. Do the homework first (2-3 days)... Get a rough estimate from the engineers who'd build each feature. Ranges and confidence levels are fine, but not your gut. Pull your current Q1 roadmap with the revenue, churn or customer problem behind each item.' Opening: 'Don't absorb this quietly and don't fight it publicly.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "Four options with costs: 'A. Swap: build all three; name the roadmap items that slip, with what each slip costs', 'B. Cut scope: the one or two features that matter most to them by end of Q1, the rest in Q2', 'C. Pilot: a thin version with the customer as design partner', 'D. Add capacity: a contractor or borrowed team, with the real cost and ramp-up time.'"
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "'\"On top of everything\" is not on the list, because it only works through overtime and quality loss, and it will end in a missed date anyway.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "'Ask the customer-facing owner exactly what was promised' and 'Ask what the customer actually needs. Often it is the problem behind the features, and a smaller version or a configuration may cover it.'"
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'in a private 1:1 this week'. Good faith: 'Open the 1:1 as an ally. Start with the shared goal: keeping this customer.' (This is the least explicit of the samples about the CEO's motive, but it clearly treats the promise as made for the customer rather than as bad behaviour.) Process: 'Ask for one habit, framed as protecting him: before any customer commitment, ask product and engineering for a quick estimate.'"
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": true,
+      "evidence": "459 words by wc -w. Opens with the answer: 'Don't absorb this quietly and don't fight it publicly. Take the CEO a decision to make, in a private 1:1 this week'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 459,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Tight, complete and immediately usable: homework, four realistic options including add-capacity with its ramp-up caveat, a script line, and a face-saving process for the future; it doesn't address the PM's own team."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable factual claims beyond general practice; none wrong."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet in the prompt."
+    },
+    "best_insight": {
+      "value": "Giving the CEO a holding line for future deals ('we'll come back with a date in two weeks'), which keeps deals alive without locking the team in and makes the new process easy for him to accept.",
+      "evidence": "section 4"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate behaviours (private first, charitable reading of the CEO, future process). Samples hit them unevenly, so a single pass/fail hides which part was missed; consider splitting into separate assertions."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "Easy to pass with a generic 'get an estimate' line. A sharper version would require naming the specific roadmap items that would slip and who they affect, which separates real capacity work from a nod."
+      },
+      {
+        "reason": "No assertion checks whether the PM protects their own team during the process (e.g. telling the team they won't be committed to unestimated work) or asks the CEO to own and back the deferrals publicly; these were the most useful differentiators between samples."
+      }
+    ],
+    "overall": "Passes all six; the assertions don't reward protecting the team, which this sample omits."
+  }
+}

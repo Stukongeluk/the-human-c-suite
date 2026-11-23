@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": true,
+      "evidence": "\"Own it. Say plainly the launch was leadership's call. Executives take a 20–30% pay cut and no 2026 bonuses.\" This is item 1 of the alternative. Staff cuts come only after a trigger, \"voluntary first\"."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": true,
+      "evidence": "\"A signal, not savings\", paired with measures on the cause and the bridge: \"Independent post-mortem on the flop, then stage gates with kill criteria, external playtests and milestone funding for both 2028 projects\", plus non-payroll cuts sized line by line, a backfill freeze, \"co-development or publisher co-funding\" and a cash-floor trigger."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": true,
+      "evidence": "\"€40m covers about three years at a €12m loss, past your 2028 launches, if the loss is roughly cash burn.\" The cut \"removes people building the 2028 games\". The recommendation: \"Don't cut 15% now. 'Show discipline' is a signal, not a cash gap\"."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "\"Involve the works council now, at the problem stage (article 25 WOR); a 37-person cut would also require notifying UWV and the unions.\""
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "\"Iwata halved his salary after the 3DS flop and kept Nintendo's teams together.\" This matches the vetted record: in July 2011, after the 3DS sold poorly, Iwata halved his fixed salary, and the teams stayed together. It's framed as \"A signal, not savings\", with no claim that the cut caused a recovery (the Switch isn't even mentioned). \"1% downsizing went with 31% more voluntary turnover the next year (Trevor & Nyberg, 2008)\" also matches the source."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": true,
+      "evidence": "318 words (wc -w). First sentence: \"Don't cut 15% now.\""
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 318,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "The most complete board alternative in under 350 words: runway arithmetic, the cost of survivor turnover, open ownership with a sized leadership cut, a post-mortem and stage gates that fix the cause, bridge funding, a trigger, and works-council involvement at the problem stage, all with accurate evidence."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: €40m / €12m is about 3.3 years; 37 x €70-80k = €2.6-3.0m, a quarter of the loss; Trevor & Nyberg 2008 (1% downsizing, 31% more voluntary turnover); Iwata halving his salary after the 3DS sold poorly (2011); art. 25 WOR; WMCO notification of UWV and unions for 20+. The backfill estimate (€1.5-2m at 8-10% turnover) is a little generous if only 'non-critical' backfills are frozen, but it's an assumption, not an error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "\"Say plainly the launch was leadership's call.\""
+    },
+    "best_insight": {
+      "value": "Asking who owns the studio and what 'discipline' must prove to them goes to the board's real motive, so the CEO can offer the proof they need instead of a headcount number.",
+      "evidence": "\"Who owns you, and what must 'discipline' prove to them?\""
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "Trivially satisfied when no example is cited (three of four samples cite none). Consider making it conditional in the grading notes, or adding a separate check that a cited leader-sacrifice example carries its limit (signal, not cause of recovery)."
+      },
+      {
+        "reason": "No assertion checks that the reply reads the user's own numbers correctly. One sample subtracted the €12m loss from the €40m cash (\"you hold about €28M\"), understating runway by 30%, and still passed most checks that do not depend on it. An assertion such as 'runway is estimated from €40m against the burn (about three years at €12m a year) and the reply asks for real cash burn' would catch this."
+      },
+      {
+        "assertion": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+        "reason": "Could also check that the reply does not offer a smaller cut purely to placate the board (one sample proposes an 'under 5%' reduction 'if the board still insists'), which is a cut made to show discipline by another name."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "'Mentions' is a low bar: a line listing works council advice as a cost of a collective dismissal passes, as does a recommendation to involve it now, at the problem stage. Consider requiring early involvement (article 25 WOR: while the advice can still change the decision)."
+      },
+      {
+        "assertion": "The reply stays under 350 words and its first sentence states the recommendation.",
+        "reason": "Combines two independent checks (length and answer-first); splitting them would make failures easier to read."
+      }
+    ],
+    "overall": "6/6. The strongest sample; every assertion passes on substance, not just the letter."
+  }
+}

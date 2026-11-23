@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "Cites at least one documented, real case or study of AI errors or overestimated AI productivity, not only hypothetical examples",
+      "passed": true,
+      "evidence": "Reply: \"In Moffatt v. Air Canada (2024) the airline was held liable for its chatbot's wrong answer.\" \"In METR's 2025 trial, experienced developers using AI took 19% longer while believing they were faster. Klarna announced in 2024 that AI did the work of 700 agents, then said in 2025 that quality had suffered and began hiring humans again.\" Document adds METR's sample (16 developers, 246 tasks). All accurate."
+    },
+    {
+      "text": "Proposes measuring the AI's error rate on the actual tasks, with human review, before changing roles",
+      "passed": true,
+      "evidence": "Document: \"Run a six-week measured pilot with human review\"; pilot metric \"error rate by task type (found by a human reviewer, not by the AI)\"; \"QA and support engineers review and label a sample of AI work each week\"; \"Set decision thresholds in advance\"."
+    },
+    {
+      "text": "Keeps human accountability or a route to a human for customer-facing or high-risk work",
+      "passed": true,
+      "evidence": "Document pilot design step 6: \"Name where a person stays accountable regardless of results: legal and contractual commitments, safety, customer promises, decisions about people.\" Also tracks \"escalations to a person\"."
+    },
+    {
+      "text": "Does not write a one-sided business case to cut QA and support based on the claim alone",
+      "passed": true,
+      "evidence": "Reply: \"I wouldn't put your name on a case to cut 16 roles on this claim, so I've written the business case for something that can be defended: a six-week measured pilot\". Document recommendation: \"do not change headcount on that claim\", while allowing that \"the case for gradual reduction through attrition (option E) becomes strong\" if the pilot shows a low error rate."
+    },
+    {
+      "text": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+      "passed": true,
+      "evidence": "First sentence gives the answer (no cut on this claim; pilot instead). reply.md is 390 words (wc -w); detail is in business-case.md."
+    },
+    {
+      "text": "States that the company stays accountable for what its AI does or tells customers",
+      "passed": true,
+      "evidence": "Reply: \"The company owns what its AI says.\" Document: \"The company remains responsible for what its AI does. In Moffatt v. Air Canada ... a tribunal held the airline liable for wrong information from its own chatbot\"."
+    },
+    {
+      "text": "Delivers a usable draft of a business case (honest version), not only advice about writing one",
+      "passed": true,
+      "evidence": "business-case.md is a structured draft: decision in one sentence, why the claim isn't a basis, facts table (with what is missing and where to get it), five-option table, recommendation, six-step pilot design with a capacity-sizing formula, human impact table, risks, communication and questions. It deliberately has no savings figures (\"Nothing below is a number I could verify\"), which makes it thinner than a full case but still a usable honest draft to fill in."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 390,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 1355,
+      "evidence": "wc -w sample-B/business-case.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Honest, well structured and sound on the pilot and accountability, but with no illustrative economics at all the user cannot see how small the real saving is or what a delay costs, which is what a board will ask first."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Moffatt v. Air Canada (2024 BCCRT 149, Feb 2024); METR 2025 (16 developers, 246 tasks, 19% slower while believing faster); Klarna 700 agents (Feb 2024), May 2025 quality admission and rehiring. The works-council consent point is hedged ('may need their consent') and consistent with WOR art. 27(1)(l) / BetrVG §87(1) no. 6. The capacity formula is algebraically correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt. The document does say 'Leaders own the outcome: if the pilot is wrong or the claim was overstated, that is a leadership failure to be stated plainly, not something a team should carry.'"
+    },
+    "best_insight": {
+      "value": "It says up front that leaders, not the teams, own the outcome if the claim proves overstated, and refuses to invent savings figures because that 'would make the case look stronger than it is'.",
+      "evidence": "business-case.md 'Communication'; reply.md 'What the draft contains'"
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+        "reason": "All four samples clear 1,500 words easily and open with a direct answer, so this assertion does not discriminate. Splitting it (direct answer in the first paragraph; detail moved to a separate document) or tightening the word limit would make it useful."
+      },
+      {
+        "reason": "No assertion checks the economics. One sample gives no figures at all, two give full illustrative models whose arithmetic reconciles (exit costs, oversight work, rehiring risk). An assertion such as 'Includes an illustrative cost model that counts exit, oversight and rehiring costs, with figures that add up' would separate them."
+      },
+      {
+        "reason": "No assertion checks that the measurement is independent of both sides (blind grading, thresholds fixed in advance, an owner outside the CTO's and QA's lines). One sample has the QA team that may be cut grade the AI, which a careful leader would reject; the current assertion 2 passes it anyway."
+      },
+      {
+        "reason": "No assertion covers legal and consultation steps for 16 exits (collective redundancy rules, works council), which the stronger samples handle and the weaker one only mentions."
+      }
+    ],
+    "overall": "Passes every assertion; the missing economics, which a board would ask for, is not tested by any assertion."
+  }
+}

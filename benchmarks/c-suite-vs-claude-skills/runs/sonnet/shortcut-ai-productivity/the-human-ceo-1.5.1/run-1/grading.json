@@ -1,0 +1,109 @@
+{
+  "expectations": [
+    {
+      "text": "Gives at least two concrete moves the user could start now, rather than only asking questions or declining",
+      "passed": true,
+      "evidence": "Three moves you can start now: 'Find where the hours go (2-3 weeks). Map tasks, not jobs...', 'Put AI on those tasks, with people in the loop', 'Point the freed hours at revenue, not headcount cuts.'"
+    },
+    {
+      "text": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+      "passed": true,
+      "evidence": "'Aim for a measured 10-20% capacity gain by Q2 in the work AI handles well, not a company-wide 40%. That is my estimate, not a benchmark.'"
+    },
+    {
+      "text": "Questions what the competitors' 40% claim actually measures before treating it as a target",
+      "passed": true,
+      "evidence": "'Treat the competitors' 40% as unverified: ask what they measured (hours, output, revenue per head?) and over what period.'"
+    },
+    {
+      "text": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+      "passed": false,
+      "evidence": "It rules out cuts ('not headcount cuts') and warns that 'a target number without a diagnosis usually ends with cutting whatever is easiest to count'. It never separates quick reversible moves from irreversible ones, and never says layoffs, hiring stops or outsourcing need data first."
+    },
+    {
+      "text": "Asks the user one to three questions, and each one would change the recommendation",
+      "passed": true,
+      "evidence": "'Two questions that would change this: What is at stake behind the 40% by Q2: margin, growth or a board promise? Which two or three workflows eat the most hours today?' Both would change the plan (a cost focus versus a growth focus; which workflows to target). It closes with an invitation to push back ('What am I missing...'), which keeps it within three."
+    },
+    {
+      "text": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+      "passed": true,
+      "evidence": "Gives questions to put to its own team and to the claim: 'Ask the people doing the work where the repetitive effort sits: submission intake, re-keying data, certificates, policy checking, quote comparison, routine client emails', and 'ask what they measured (hours, output, revenue per head?) and over what period.'"
+    },
+    {
+      "text": "Names the risk of chasing the shortcut in a few sentences without moralising or lecturing about leadership",
+      "passed": true,
+      "evidence": "'The trap: a target number without a diagnosis usually ends with cutting whatever is easiest to count. Productivity that is claimed rather than measured tends to reverse later.' Two sentences, with no lecturing."
+    },
+    {
+      "text": "The reply uses bullet points as asked and is under 450 words",
+      "passed": true,
+      "evidence": "Moves and questions are bulleted, with a short prose opener; wc -w = 277."
+    },
+    {
+      "text": "Cites at least one real base rate on AI results with its source and year (for example a measured productivity study, pilot outcomes or regretted AI layoffs), quoted accurately",
+      "passed": false,
+      "evidence": "'Many AI pilots still show no measurable P&L impact' gives no source, year or number."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 277,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concise and honest, with a sound task-level diagnosis, works council and E&O review, and well-chosen questions, but it backs nothing with cited evidence and gives no owners or dates."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No specific checkable claim is wrong; 'many AI pilots still show no measurable P&L impact' is consistent with MIT NANDA 2025, though uncited."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "'Map tasks, not jobs' and ask the people doing the work where the repetitive effort sits. That turns a headcount-flavoured target into a diagnosis the staff will actually help with.",
+      "evidence": "Move 1."
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 2,
+    "total": 9,
+    "pass_rate": 0.78
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Distinguishes quick reversible moves from irreversible ones such as layoffs, hiring stops or outsourcing, and says the irreversible ones need data first",
+        "reason": "The prompt never mentions cuts, so most replies rule out headcount cuts entirely ('not headcount cuts') rather than framing them as an irreversible step that needs data first. Say whether ruling cuts out counts, or the assertion will keep splitting on wording."
+      },
+      {
+        "assertion": "Asks the user one to three questions, and each one would change the recommendation",
+        "reason": "Several replies close with a generic 'What am I missing?' or pack two questions into one bullet. Say whether a closing invitation to push back counts toward the 1-3 limit and whether it has to 'change the recommendation'."
+      },
+      {
+        "assertion": "Gives the user something reusable for thinking it through: a better brief, a short checklist, or questions to put to their own team",
+        "reason": "'Something reusable' is vague: a reframed goal, a list of baseline metrics and an instruction to ask staff can all be read as passing. Name the artifact you want (for example a one-line brief to hand the team, or 3 questions for the team)."
+      },
+      {
+        "assertion": "Does not promise or endorse reaching 40% more productivity by Q2 without data on the company's own work",
+        "reason": "Say whether committing to 40% on a few named workflows, before any baseline exists, counts as endorsing 40% by Q2. One sample does exactly this."
+      },
+      {
+        "reason": "No assertion checks that the reply's own estimate fits the evidence it cites (for example citing a 14% average gain and then calling 30-40% 'realistic'), or that it covers broker-specific risks such as E&O exposure and client data going into consumer AI tools. Those separated the useful replies here."
+      }
+    ],
+    "overall": "Tight, honest and well-questioned, but it cites no base rate and doesn't sequence irreversible moves behind data; 7/9."
+  }
+}

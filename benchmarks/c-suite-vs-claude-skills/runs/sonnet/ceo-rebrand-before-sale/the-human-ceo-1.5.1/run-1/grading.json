@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+      "passed": true,
+      "evidence": "Reply opens: 'I'd take a different plan to the board... Fix the customer problems first... A buyer checks churn and NPS in due diligence, and your NPS has fallen 25 points. Profit gained by cutting capability while customers leave will be priced back out of the sale.' Paper §1 item 1: 'Fix the customer problems that drive NPS and churn first. This is the largest and most certain profit lever we have.'"
+    },
+    {
+      "text": "The reply makes finding and fixing the top customer problems the first priority, using evidence such as NPS comments, churn reasons, support data or customer interviews.",
+      "passed": true,
+      "evidence": "Reply: 'Customers first. In 30 days, rank the top five customer problems with evidence, and give each at-risk large account an executive owner and a save plan.' Paper §6.1: 'rank the top five customer problems, each with its own evidence (NPS comments, churn reasons, support tickets, revenue at risk)'; §3: 'Gaps we will close in the first 30 days... why customers churn (reasons by cohort and by account), what the NPS comments say'."
+    },
+    {
+      "text": "The reply does not treat the rebrand as the strategy: it keeps the must-have part small, phases it, or puts it behind the customer fixes.",
+      "passed": true,
+      "evidence": "Reply: 'Rebrand, small and gated. Decide the name in Q1 and tell staff first. Do only the must-haves: name, legal entities, domains, contracts. Launch to customers when the save plans exist and the top problems are improving.' Paper §6.2: 'If these are not met by the planned date, we move the date, not the conditions.'"
+    },
+    {
+      "text": "The reply questions a fourth restructure: it asks which problem it would solve or why the previous ones didn't work, and names the cost of repeated reorganisations (for example lost knowledge, productivity dips or people leaving).",
+      "passed": true,
+      "evidence": "Reply: 'A fourth restructure in two years. Each one brings lost knowledge, new hand-offs and departures. Ask what the last three failed to solve and why this one will. If the answer is vague, the structure is not the problem.' Paper §4 repeats this and adds 'a productivity dip'."
+    },
+    {
+      "text": "The reply rejects ending all contractor and junior roles as a blanket move: it checks which roles hold critical knowledge or the future talent pipeline, and looks at less harmful cost options first.",
+      "passed": true,
+      "evidence": "Reply: 'Review every contractor by role, rate and knowledge held. End what is genuinely not needed, with proper notice. Keep a planned junior intake.' and 'contractors often hold knowledge of systems inherited from four companies'; juniors are 'your future seniors'. Less harmful options first: 'Profit before people. Four acquisitions mean duplicate vendors, licences, cloud, offices and tools. Add pricing, cross-sell and stopping low-value projects.'"
+    },
+    {
+      "text": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+      "passed": false,
+      "evidence": "Owners' terms are strong: 'A buyer pays for retained customers, recurring revenue and capable teams, and checks churn, customer satisfaction and key-person risk in due diligence.' Measures (§10) and relative dates (30 days, day 45, weeks 0-6) are given. But the priorities have no owners: §6.1 'owner: [FILL, a named executive]', §6.2 'Owner: [FILL]', and §6.3, §6.4 and §6.6 name none; only §6.5 has 'Finance to size each lever'. Even a role would do; leaving owners blank fails the 'owners' part."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 703,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 2497,
+      "evidence": "wc -w sample-B/board-paper.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Sound, honest and concise, with a correct German legal floor, leadership ownership and a fair steelman of the owners' view, but it leaves owners blank, gives only week-based timing and offers a thinner profit plan than the strongest samples."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Minor: paper §4 says 'three of the four companies' customers will meet it [the new name]', but the user said all four companies are rebranded under one new name, so all four customer bases meet it. Legal claims checked and correct: §§111-112 BetrVG over 20 employees, §17 KSchG example threshold and termination agreements counting, §1(3) KSchG criteria, §87(1) no. 6 BetrVG, §622 BGB up to seven months, supervisory-board representation from 500 (per vetted sheet), Kurzarbeit maximum falling from 24 to 12 months on 1 January 2027 unless extended, Davis et al. NBER 2019 rev. 2024. The AWS CEO quote (Matt Garman, August 2025) matches my knowledge; web search was unavailable to re-confirm. Illustration arithmetic correct: 3% x €100m = €3.0m, x1.5 = €4.5m, x3 = €13.5m; 60 x €55k = €3.3m."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Paper §2: 'Responsibility for this sits with the leadership team, me included.' Reply: 'The result is the leadership team's to own, and the paper says so.'"
+    },
+    "best_insight": {
+      "value": "It names the condition under which its own case weakens: if the owners will sell on a fixed EBITDA multiple whatever churn does, the board should say so openly, which turns a disagreement into an explicit question for the owners.",
+      "evidence": "Reply 'The strongest case for the other side' and paper §11."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply puts the falling customer satisfaction and rising churn at the centre as the main risk to profit and to the sale, and opens with that recommendation rather than with the rebrand.",
+        "reason": "All four samples pass this; it does not discriminate. A stronger version would require the reply to quantify the link from churn to EBITDA to exit value (or to name the buyer's quality-of-earnings and commercial due-diligence tests), which only some samples do."
+      },
+      {
+        "reason": "No assertion checks whether leadership owns the NPS fall and takes the first cut on its own pay. Two samples do this explicitly and two omit it entirely; this is a core part of the guidance for a 'results disappoint' case and currently goes unscored."
+      },
+      {
+        "reason": "No assertion checks the German legal floor (works councils where elected, §§111-112 BetrVG, §17 KSchG, social selection, §22 BBiG, AGG) or that people-related savings land late because of consultation and notice periods. Samples differ a lot in accuracy and realism here."
+      },
+      {
+        "assertion": "The reply gives clear direction, a short list of priorities with owners, measures and dates, and makes the case in the owners' terms: a buyer pays for retained customers, recurring revenue and capable teams, not for a new name.",
+        "reason": "This assertion bundles four tests (direction, owners, measures and dates, owners' terms). Splitting it would show which part failed; most failures here are on owners alone."
+      }
+    ],
+    "overall": "Good on substance; fails only on owners for the priorities. The 'three of the four companies' line contradicts the prompt."
+  }
+}

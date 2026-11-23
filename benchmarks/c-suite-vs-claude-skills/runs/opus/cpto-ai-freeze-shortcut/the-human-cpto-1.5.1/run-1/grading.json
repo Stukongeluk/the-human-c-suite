@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (yes, no, or partly / not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "First sentence: \"**No, not in that shape.**\" followed by \"Yes to building an AI assistant fast; no to all eight teams, and no to freezing tech debt.\""
+    },
+    {
+      "text": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+      "passed": true,
+      "evidence": "\"Frozen debt keeps growing. In Stripe's developer survey, engineers estimated it already takes about a third of their week (13.5 of 41 hours).\" Brief and specific about why the freeze compounds; also \"pay first the debt on the assistant's path (data access, APIs, auth).\""
+    },
+    {
+      "text": "Offers a smaller, reversible bet, such as one or two teams, design partners or a staged beta with gates",
+      "passed": true,
+      "evidence": "\"one or two teams owning the closest product area build it, with a test set of real cases, cost per conversation, and design partners before beta\" and \"Around week 8 (estimate): add teams only if usage and quality prove demand.\""
+    },
+    {
+      "text": "Asks which customer problem the assistant should solve, or what customers want from it",
+      "passed": true,
+      "evidence": "\"Weeks 1-2: ask 10-15 customers and sales what they want from the competitor's assistant; check lost deals for it.\" and \"Are we actually losing deals or customers to their assistant?\""
+    },
+    {
+      "text": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+      "passed": true,
+      "evidence": "\"A competitor's launch is a signal to understand, not a deadline; matching it with everyone bets two quarters on a guess.\" Also \"No date to the board until the building teams have estimated it.\""
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": true,
+      "evidence": "wc -w reply.md = 259 (< 300)."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No coaching on how to brief or decide; it ends with two concrete questions that would change the answer and \"What am I missing?\", which is inviting pushback rather than lecturing."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 259,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files in sample-A"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Short, direct and evidence-backed (correctly cited Stripe and caveated MIT NANDA figures), keeps every team's debt budget, stages the bet with design partners and gates and refuses to give the board a date before teams estimate; the NANDA base rate (enterprise internal pilots) is a slight stretch for a customer-facing product feature."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Stripe Developer Coefficient: 13.5 of 41 hours on technical debt matches the fact sheet; MIT NANDA 2025 ~95% of pilots with no measurable P&L impact matches and is caveated as contested; AI Act transparency duty (Article 50) for systems that talk to people applies since August 2026, so 'check AI Act transparency' is correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "\"No date to the board until the building teams have estimated it\" stops the competitor-driven deadline from being set top-down, and paying first the debt on the assistant's path turns debt work into an enabler of the launch.",
+      "evidence": "reply.md 'Instead' list"
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+        "reason": "Passes for replies that explain the cost of a freeze but then recommend 'capping' debt at 10-15% and limiting it to assistant blockers (a soft freeze for most teams). Consider an assertion that the alternative keeps a protected debt/reliability floor for every team, not a cap."
+      },
+      {
+        "assertion": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+        "reason": "The 'or avoids a crunch' branch makes this easy to pass; a reply can call the launch information while also asserting unevidenced urgency ('Waiting means losing share, so move now'). Consider splitting into two assertions, or requiring that urgency be tied to evidence such as lost deals."
+      },
+      {
+        "reason": "No assertion checks that the reply avoids committing to a ship date or timeline before the building teams have estimated it, which separates the strongest samples from those that invent an '8-to-10-week' ship target."
+      }
+    ],
+    "overall": "Strongest-format sample: answers first, stays under the limit, and its numbers check out. Assertions are easy for any competent reply to pass except the word limit."
+  }
+}

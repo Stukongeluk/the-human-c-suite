@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "Illustrative model with stated assumptions (€250k revenue growing 4%, €650k costs, €400k people, cash = 9 months): 'With 4% growth, revenue only covers costs in about two years'; table: do nothing 9 months ('Dies before Series B'), levers 11–12 months, '+ €1M insider bridge about 17 months', 30% cut about 13 months and 'if growth slows to 2% after the cut, about 10 months'; 'if the round slips by even a quarter, you run out of cash first'; steelman: 'leaders-first steps plus the full 14-person cut reach break-even in my model without any Series B'. Reproduced: break-even ≈24 months, levers 10.5–11.6, bridge 16–18, cut 12–14.5 months, levers+14 cut break-even month 17–18."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "Non-job levers come first and are sized: 'Leaders' pay -25%, other spend -12%, hiring freeze, price or annual-prepay changes | about 11 to 12 months'; 'The above plus €1M insider bridge | about 17 months'; only then 'one cut of about 8 people... only if the tripwire trips'. Step 1 'This week: take the first and largest pay cut yourself... Stop hiring, cut non-people spend, and look at pricing and prepaid annual contracts.'"
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'if a reduction is still needed, do it once, sized to the number'; tripwire: 'you carry out one reduction, sized to the gap, tied to which work you stop'; 'cut the work as well as the roles, do it once'; '\"30%\" is a solution, though, not a problem, and the real problem is getting to roughly 15 or more months of runway.'"
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'You negotiate with the unions first (MBL), notify Arbetsförmedlingen at least two months ahead for 5 to 25 people, and pay notice of one to six months. Selection follows seniority (LAS), with only three exemptions... Please check all of this with employment counsel'. All verified."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": false,
+      "evidence": "Communication is strong ('Put the numbers in front of the team now. Share the runway scenarios monthly... bring them in at the problem stage'). But the exit support isn't beyond the legal minimum: 'go well beyond statutory terms: paid notice, job-security-council or outplacement support from day one, and rehiring priority.' Paid notice (LAS §12) and rehiring priority (LAS §25) are statutory in Sweden, and job-security-council support comes with the collective agreement. Only outplacement, offered as an alternative, goes further. No extra severance, equity, references or day-of handling. Letter, not substance: FAIL."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": true,
+      "evidence": "'This week: take the first and largest pay cut yourself and have the leadership team follow. Say plainly that the runway is leadership's responsibility, not the team's.' Founder goes first and owns it plainly, though it doesn't name the hiring specifically."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 846,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Crisp, honest and quantified, with a fair steelman of the investors' 30% and a usable tripwire trade, but exit planning is thin and mislabels statutory rights as generosity, and a mid-February trigger leaves little time given Swedish lead times."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "Error: lists 'paid notice' and 'rehiring priority' as going 'well beyond statutory terms'. Both are statutory under LAS (pay during notice, §12; re-employment priority, §25). Other legal claims verified (MBL first, varsel 2 months for 5–25, notice 1–6 months, LAS seniority with three exemptions, TRR via collective agreement)."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, cost ladder or rungs."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Say plainly that the runway is leadership's responsibility, not the team's.'"
+    },
+    "best_insight": {
+      "value": "It honestly steelmans the investors: in its own model, leaders-first steps plus the full 14-person cut reach break-even without any Series B, so it names the cost of that option instead of pretending 30% is simply wrong.",
+      "evidence": "'Be honest about the steelman: the leaders-first steps plus the full 14-person cut reach break-even in my model without any Series B. That is a real option and a defensible one.'"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "The 'or' list lets any single mention pass; all four samples passed, including one that never names MBL or the varsel threshold. Consider requiring the core sequence (MBL before the decision, varsel lead time, LAS selection order) and failing replies that misstate a rule."
+      },
+      {
+        "assertion": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+        "reason": "This bundles two different behaviours, exit generosity and early transparency, and samples split on them (one communicates early but plans no package; another plans a good package but tells staff only after the board picks a cut). Splitting it would make the results easier to interpret."
+      },
+      {
+        "assertion": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+        "reason": "This bundles 'go first' with 'own the result'. Several samples include a founder pay cut without any ownership statement; separating them would show which part is missing."
+      },
+      {
+        "reason": "No assertion checks that the numbers are internally consistent or reproducible. Here they all were, but a reply with confident but wrong runway maths would currently pass assertion 1."
+      },
+      {
+        "reason": "No assertion covers turning the investors' demand into a trade (cut size vs bridge money, checking shareholder-agreement consent rights, the fact that two investors are not the board). All samples did it, but it is central to the user's situation."
+      }
+    ],
+    "overall": "Strong, concise and owned; the exit package is where it falls short."
+  }
+}

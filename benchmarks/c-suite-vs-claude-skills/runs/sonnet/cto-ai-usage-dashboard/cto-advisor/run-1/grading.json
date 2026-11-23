@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "Opens: \"**Bottom Line:** Don't buy a separate tool for this.\" followed by \"show them per team, not per engineer.\""
+    },
+    {
+      "text": "Advises against per-person usage tracking for follow-up, and proposes team-level or aggregated measures instead",
+      "passed": true,
+      "evidence": "\"show them per team, not per engineer. A named list of low adopters is the wrong thing to build.\"; \"Report by team and office\"; \"Say in writing that individual data is not used for performance reviews.\""
+    },
+    {
+      "text": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+      "passed": true,
+      "evidence": "\"In Germany, a system that can monitor employee behaviour or performance normally needs works council agreement (BetrVG §87(1) no. 6). In the Netherlands the works council has a consent right over personnel monitoring systems (WOR art. 27).\" and \"Agree the metrics with the works councils before launch.\""
+    },
+    {
+      "text": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+      "passed": false,
+      "evidence": "The headline recommendation is still usage and acceptance: \"Use the usage and acceptance dashboards that come with the assistant you choose, and show them per team\". Outcomes appear only as a correlate of usage (\"weekly active users, and how usage relates to PR cycle time and review load\") and delivery metrics are deferred (\"If you later want delivery context next to adoption ...\"). No baseline, quality or developer-experience measure of success. Meets the letter at best, not the spirit."
+    },
+    {
+      "text": "Proposes involving engineers or their representatives in deciding what is measured, or asking low adopters what gets in their way rather than pressuring them",
+      "passed": true,
+      "evidence": "\"For low adoption, ask why. Run a short survey and hold manager conversations about blockers such as licences, training, repo coverage or trust. Offer pairing sessions and champions in each team.\" and \"Agree the metrics with the works councils before launch.\""
+    },
+    {
+      "text": "Still answers the practical need: where team-level usage data can come from (for example the vendor's admin console or metrics API) or what to look for in a tool",
+      "passed": true,
+      "evidence": "\"Every major assistant (GitHub Copilot, Cursor, Claude Code and others) already ships an admin dashboard with active users, usage and suggestion acceptance.\" Also names Swarmia for delivery context and says to \"confirm team-level views and German and Dutch data-protection terms\"."
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": false,
+      "evidence": "wc -w reply.md = 405 words, over the 300 limit despite \"Keep it short\"."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No lecture on decision habits; \"My default is buy, but only when nothing you already have covers the need\" is one sentence of reasoning, and the closing 'Your decision' is a direct question with a recommendation."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 405,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in the folder"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Gets the direction and the legal basis right and ends with a useful decision question, but it is too long, keeps usage and acceptance dashboards as the main measure, names a non-existent tool ('LinkedB') and the emoji traffic lights add noise."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) \"Swarmia or LinkedB\": there is no engineering-analytics product called LinkedB; the intended tool is presumably LinearB, so a user searching for it would not find it. Other claims checked and fine: §87(1) no. 6 BetrVG and art. 27 WOR are correct; Copilot, Cursor and Claude Code all ship admin usage analytics."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon; uses 🟢🟡🔴 confidence markers."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It turns the disagreement into one decision for the user and invites pushback on the real gap: what managers need to decide that team-level data can't tell them.",
+      "evidence": "\"If you want to push back, tell me what the managers need to decide that team-level data can't tell them.\""
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+        "reason": "All four samples pass trivially (each opens with 'don't buy'); the assertion does not discriminate. Consider checking that the first sentence also rejects the per-engineer framing, not just the purchase."
+      },
+      {
+        "assertion": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+        "reason": "Every sample still tracks team-level usage for licence purposes, so 'not usage' is ambiguous. Consider rewording to 'judges the rollout's success on outcomes (delivery, quality, developer experience) against a baseline, rather than on usage or acceptance rate'."
+      },
+      {
+        "assertion": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+        "reason": "Does not check the nuance that a German Betriebsrat exists only where elected (asked or stated in A, C, D; missing in B), nor that the assistant's own per-user metrics already trigger these rights. A stronger assertion would test that."
+      },
+      {
+        "reason": "No assertion covers GDPR/DPIA obligations for systematic employee monitoring in the Netherlands, which only sample A raised and which is a real pre-rollout requirement."
+      }
+    ],
+    "overall": "Fails length and the outcomes-not-usage assertion; the latter is a fair discriminator here because B's headline answer is still 'use the usage and acceptance dashboards'."
+  }
+}

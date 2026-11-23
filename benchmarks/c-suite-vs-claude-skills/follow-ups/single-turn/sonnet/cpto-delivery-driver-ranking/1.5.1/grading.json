@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a recommendation not to build the individual leaderboard and automatic flagging as specified, and offers an alternative that serves the productivity goal.",
+      "passed": true,
+      "evidence": "Opening: 'Don't ship it as specced. Say yes to the goal (productivity, 8% is worth chasing) and no to a public stops-per-hour ranking with an automatic bottom-10% flag. Offer a 10-week pilot with quality measures and a comparison group instead'. 'What I would offer instead' then lists finding the minutes, private driver data, flagging routes/depots and testing the 8%."
+    },
+    {
+      "text": "The reply explains why stops per hour misleads at individual level (such as route density, traffic, parcel mix, building access or failed deliveries) and names the safety risk of pace pressure, such as speeding or injuries.",
+      "passed": true,
+      "evidence": "'Stops per hour mostly measures the route, not the driver. Dense city centre versus rural Belgium, apartment blocks, parcels per stop, access problems, failed first attempts, how the depot loaded the van, traffic.' Safety: 'People optimise the number... rushed handovers, missed breaks... It is also a road-safety issue when a live leaderboard sits on the screen of someone who is driving'; pilot guardrail includes 'safety incidents'."
+    },
+    {
+      "text": "The reply targets system causes with route- or team-level measures, such as route planning, loading, address data or first-time delivery rates.",
+      "passed": true,
+      "evidence": "'Find the minutes first... aggregated by depot, route and time of day... route planning and stop sequencing, depot loading order, failed deliveries and redeliveries, address and access data quality, app friction per stop.' 'Flag routes and depots, not drivers.' Pairs speed with 'first-attempt success, damage, complaints'."
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: employee representatives' rights over monitoring systems, data protection, and AI rules on monitoring workers or allocating their work.",
+      "passed": true,
+      "evidence": "Section 'Legal and governance exposure (not legal advice, check with counsel)': works council consent 'art. 27 WOR' and 'Belgium has its own rules on monitoring employees'; 'GDPR: ... joint-controller, purpose and proportionality questions, and probably a DPIA'; 'If any automation allocates work or evaluates drivers, check the EU AI Act high-risk rules for worker management (the information duty applies from December 2027, so it isn't live yet).'"
+    },
+    {
+      "text": "The reply addresses the subcontractor chain: flagging individuals to their employer shifts responsibility without fixing causes and creates legal or reputational risk for the company; it works with subcontractors on conditions instead.",
+      "passed": true,
+      "evidence": "'About 1,600 of your drivers work for subcontractors. A flag from you to their employer works as a dismissal signal, and a driver cannot see the data or challenge it. Expect turnover and subcontractors who walk away'; legal: 'pushing them out by weekly ranking is the kind of thing that raises worker-classification and chain-liability questions'. Instead: 'The weekly report to subcontractors becomes the bottom 10% of routes and depots by route-adjusted time lost, with the causes' and 'Involve subcontractors and driver representatives in designing it'. It never says in so many words that responsibility stays with the company, but the dismissal-signal and chain-liability points carry it."
+    },
+    {
+      "text": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+      "passed": true,
+      "evidence": "'Show drivers their own data, privately. Their stops per hour, first-attempt rate and a route-adjusted comparison, plus a way to report obstacles... No public leaderboard.' Design: 'Involve subcontractors and driver representatives in designing it, before choosing the metrics.' Subcontracted drivers are covered through 'subcontractors and driver representatives' rather than named explicitly."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 877,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in sample-B."
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Thorough and fair (steelman for Ops, route effect, gaming, legal exposure incl. AI Act and classification, routes-not-drivers weekly report, controlled pilot with guardrails), though long for a chat reply and the 'not yours' works-council point is shaky."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Arithmetic and cited rules check out; the claim that subcontractor drivers fall only under the subcontractor's council is an oversimplification rather than a clear error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt is a proposed tool, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "Keeping the weekly cadence Ops wants but turning the subcontractor report into the bottom 10% of routes and depots with their causes gives Ops a concrete substitute rather than a no.",
+      "evidence": "'The weekly report to subcontractors becomes the bottom 10% of routes and depots by route-adjusted time lost, with the causes.'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks Belgium-specific rules, although the company operates there and the Belgian Parcel Delivery Act (presumption of liability for direct subcontractors, 9-hour day, delivery-time registration) is the most directly relevant law; only one sample used it."
+      },
+      {
+        "assertion": "The reply involves drivers, including subcontracted ones, in designing any tool, and gives drivers their own data to use rather than a public ranking.",
+        "reason": "No sample names subcontracted drivers explicitly in the design step; graders must infer from unqualified 'drivers'. Make the requirement explicit or drop the qualifier."
+      }
+    ],
+    "overall": "Passes all six; the assertions don't separate this from D, and none rewards brevity or Belgian law."
+  }
+}

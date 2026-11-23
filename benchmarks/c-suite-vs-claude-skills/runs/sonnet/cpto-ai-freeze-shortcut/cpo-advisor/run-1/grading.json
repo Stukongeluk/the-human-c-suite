@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (yes, no, or partly / not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "First sentence: \"**Bottom Line:** No-go as framed.\""
+    },
+    {
+      "text": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+      "passed": true,
+      "evidence": "\"A hard two-quarter debt freeze usually costs more than it saves. Whatever slows you now slows the AI build too, and the bill arrives when the team is least able to pay it.\""
+    },
+    {
+      "text": "Offers a smaller, reversible bet, such as one or two teams, design partners or a staged beta with gates",
+      "passed": true,
+      "evidence": "\"Staff 2-3 teams on a ship-in-8-to-10-weeks version. Review at week 4 against that metric before adding anyone.\""
+    },
+    {
+      "text": "Asks which customer problem the assistant should solve, or what customers want from it",
+      "passed": true,
+      "evidence": "\"Which customers asked for an assistant? Any churn or lost deals citing it?\" and \"Name the one job the assistant must do better than theirs, and the metric that proves it.\""
+    },
+    {
+      "text": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+      "passed": true,
+      "evidence": "\"The competitor's launch is a signal, not evidence.\" and \"Their launch date says nothing about their quality or adoption. Check that first.\""
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": false,
+      "evidence": "wc -w reply.md = 393, over the 300-word limit, despite the user asking to keep it short."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No coaching on how to brief or make decisions; \"Your north star is customer value, not matching a feature list\" is product reasoning, and \"Your Decision\" offers a choice rather than a lecture."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 393,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files in sample-B"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound direction and honest about what it hasn't verified, but it ignores 'keep it short' (393 words), recommends a debt 'cap' rather than a protected floor, invents an 8-to-10-week ship target, and its week-4 review against D30 retention can't happen before an 8-10-week ship."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No checkable external claims (laws, studies, figures); the week-4/D30 inconsistency is an internal planning flaw, not a factual error."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill or reference files; uses a templated Bottom Line/What/Why/How/Decision layout with unexplained colour emojis, but no internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "\"Tell the other teams what is paused and what isn't, so the freeze doesn't happen by accident\" recognises that an all-hands push freezes work implicitly even when leadership doesn't say so.",
+      "evidence": "How to Act, step 5"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7,
+    "pass_rate": 0.86
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Explains briefly why freezing tech debt or reliability work for two quarters is a long-term cost",
+        "reason": "Passes for replies that explain the cost of a freeze but then recommend 'capping' debt at 10-15% and limiting it to assistant blockers (a soft freeze for most teams). Consider an assertion that the alternative keeps a protected debt/reliability floor for every team, not a cap."
+      },
+      {
+        "assertion": "Treats the competitor's launch as a signal rather than a deadline, or avoids a crunch for the teams",
+        "reason": "The 'or avoids a crunch' branch makes this easy to pass; a reply can call the launch information while also asserting unevidenced urgency ('Waiting means losing share, so move now'). Consider splitting into two assertions, or requiring that urgency be tied to evidence such as lost deals."
+      },
+      {
+        "reason": "No assertion checks that the reply avoids committing to a ship date or timeline before the building teams have estimated it, which separates the strongest samples from those that invent an '8-to-10-week' ship target."
+      },
+      {
+        "reason": "Sample B's 'Review at week 4 against that metric' (activation or D30 retention) before an 8-10-week ship is internally inconsistent; no assertion checks that gates use metrics that can actually be measured at the gate."
+      }
+    ],
+    "overall": "Content passes most checks; fails only the word limit. The debt 'cap' and invented ship window are weaknesses the assertions don't catch."
+  }
+}

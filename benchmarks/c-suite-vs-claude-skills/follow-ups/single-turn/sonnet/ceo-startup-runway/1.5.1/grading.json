@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "Explicit illustrative model: '€250k monthly revenue growing 4%, €650k monthly costs (about €400k of it people), and cash set so the runway is 9 months'; 'With 4% growth, revenue only covers costs in about two years' (checks: ln(2.6)/ln(1.04) ≈ 24 months). Table: 'Do nothing | 9 months | Dies before Series B', '+ €1M insider bridge | about 17 months', 'Investors' 30% ... about 13 months ... if growth slows to 2% after the cut, about 10 months'; steelman: 'leaders-first steps plus the full 14-person cut reach break-even in my model without any Series B'. My re-run of these assumptions gives ~10.5–11.5, ~15.5–18, ~12.7 months and break-even around month 17–18, so the numbers hold up."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "Row 'Leaders' pay -25%, other spend -12%, hiring freeze, price or annual-prepay changes | about 11 to 12 months | ... Starts now, reversible' and 'The above plus €1M insider bridge | about 17 months', before any cut; the cut only follows 'a written tripwire ... mid-February'."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'you carry out one reduction, sized to the gap, tied to which work you stop' and 'If the tripwire trips, cut the work as well as the roles, do it once'. Models an 8-person alternative to 14."
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'You negotiate with the unions first (MBL), notify Arbetsförmedlingen at least two months ahead for 5 to 25 people, and pay notice of one to six months. Selection follows seniority (LAS), with only three exemptions... Please check all of this with employment counsel'."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": false,
+      "evidence": "Communication part is met ('Put the numbers in front of the team now. Share the runway scenarios monthly... bring them in at the problem stage'). But the support 'beyond the legal minimum' isn't: 'go well beyond statutory terms: paid notice, job-security-council or outplacement support from day one, and rehiring priority'. Paid notice (LAS s.12) and rehiring priority (LAS s.25) are statutory rights in Sweden, and the job security council comes through the collective agreement. No severance or other real extra is named, so the 'beyond' half isn't met in substance."
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": false,
+      "evidence": "Founders go first ('take the first and largest pay cut yourself and have the leadership team follow') and there is a general ownership line ('Say plainly that the runway is leadership's responsibility, not the team's'). It never says the burn or hiring were leadership's decisions; 'responsibility' here can read as the job of fixing it rather than having caused it. It falls short of the specific ownership the assertion asks for."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 846,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Concrete, internally consistent model with explicit assumptions, an honest steelman of the 30% option and a well-designed tripwire, let down by presenting statutory terms as generous ones and a thin exit package."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) 'go well beyond statutory terms: paid notice ... and rehiring priority': both are legal rights under LAS (s.12 pay during notice, s.25 re-employment priority), not extras. Other Swedish rules stated correctly. Minor: the '2% growth → about 10 months' row comes out nearer 11–11.5 months on its own assumptions; it's illustrative, so not counted."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'Say plainly that the runway is leadership's responsibility, not the team's.'"
+    },
+    "best_insight": {
+      "value": "It offers the investors a written tripwire (no bridge by mid-February or runway under 12 months triggers one reduction sized to the gap) and openly concedes that leaders-first steps plus the full 14-person cut reach break-even without a Series B, which makes the trade-off honest rather than one-sided.",
+      "evidence": "'What I'd do' item 3 and the steelman paragraph"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "The 'or' makes this pass with any one of four items, and all four samples listed all four, so it doesn't discriminate. It also doesn't check accuracy: sample D says the varsel to Arbetsförmedlingen is public, which Arbetsförmedlingen contradicts ('En varselanmälan omfattas alltid av sekretess'). Consider requiring MBL-before-decision plus LAS order, stated correctly."
+      },
+      {
+        "assertion": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+        "reason": "Add that the 'beyond the minimum' items must actually exceed Swedish law. Paid notice (LAS s.12) and rehiring priority (LAS s.25) are statutory, and sample B listed them as 'well beyond statutory terms'."
+      },
+      {
+        "reason": "No assertion checks that illustrative numbers state their assumptions and add up, or that the reply deals with the two investors constructively (e.g. asking them to back their demand with a bridge or agreeing a written trigger). These were the clearest differences between samples."
+      }
+    ],
+    "overall": "Solid numbers and process; failed on the substance of the exit package and on specific ownership."
+  }
+}

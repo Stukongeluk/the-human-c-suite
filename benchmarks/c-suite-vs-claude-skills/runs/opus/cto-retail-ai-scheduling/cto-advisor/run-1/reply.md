@@ -1,0 +1,41 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**CTO — AI workforce-management rollout: what to recommend**
+
+**BOTTOM LINE**
+Back the technology but not the plan. Recommend a pilot in 8–10 stores that goes live in March, with works-council consent and a setup that follows Dutch law and your CAO (collective labour agreement). Make a go/no-go decision in June 2027 and roll out in waves from September. Reject three things: all 140 stores by March, schedules published three days ahead, and same-day changes staff can't refuse. Confidence: High on the legal blockers, Medium on the savings numbers.
+
+**WHAT**
+- **The tool breaks your CAO as pitched.** Both supermarket CAOs say the full roster must be known at least one full week before it starts. The 24-hour call-in and cancellation window covers only small-hours staff (*erbijbaners*, at most 12 h/week, and *hulpkrachten*), and only for unforeseen events. At least 50% of contracted hours must be fixed "structural" hours. By law, other on-call staff get 4 days' notice and are paid for any hours cancelled inside that window. Cutting hours on the day therefore saves little here. [Verified: [CAO Levensmiddelenbedrijf 2025/26](https://zoek.officielebekendmakingen.nl/stcrt-2025-14579.pdf), [VGL CAO text](https://www.fnv.nl/getmedia/18c9c6e7-339c-46d3-963e-af97eb245d25/608-Supermarkten-VGL-cao-Grootwinkelbedrijven-Levensmiddelen-2020-2023-v291221.pdf), [WAB on-call rules](https://ondernemersplein.overheid.nl/wetten-en-regels/regels-voor-oproepkrachten/). Confirm against the exact CAO you apply.]
+- **It can't go live without your works council (OR).** The OR must consent to three things under the Works Councils Act (WOR art. 27(1)(b), (k), (l)): roster rules, processing of staff data, and any system that could monitor performance. It also advises on a major technology change (art. 25). If you go live without consent, the OR can have the decision declared void. A DPIA (data protection impact assessment) is mandatory, because the Dutch regulator lists systematic monitoring and profiling of employees. Under the EU AI Act, AI that allocates work or evaluates staff becomes high-risk from **2 December 2027**, which falls inside any three-year contract. [Verified: [OR and rosters](https://www.rendement.nl/instemmingsrecht-artikel-27-wor/nieuws/instemmingsrecht-or-werktijd-en-vakantie.html), [OR and AI tools](https://www.praxikon.com/nl/posts/or-instemmingsrecht-ai-op-de-werkvloer), [DPIA list](https://www.dirkzwager.nl/kennis/artikelen/definitieve-nederlandse-lijst-verwerkingen-waarbij-dpia-gegevensbeschermingseffectbeoordeling-verplicht-is-gepubliceerd), [AI Act Omnibus dates](https://www.cuatrecasas.com/en/portugal/intellectual-property/art/digital-omnibus-ai-has-been-published)]
+- **12% is far above other estimates, and cutting hours can cost sales.** A Forrester study paid for by a comparable vendor models 6–7% fewer scheduled hours. Deloitte puts auto-scheduling gains at 0.5–2.5% of labour cost. In a randomised trial at Gap, more stable schedules lifted median sales by 7% and productivity by 5%. On my rough model, a realistic 3% saving is wiped out by a sales drop of about 1.2%. [Sources verified: [Forrester/Legion](https://tei.forrester.com/go/legion/workforcemanagement/), [Deloitte](https://www.deloitte.com/us/en/industries/consumer/articles/retail-labor-optimization-workforce-management.html), [Gap study](https://news.uchicago.edu/story/stable-scheduling-increases-sales-and-employee-productivity-study-finds). Your figures are assumed; see the memo.]
+- **March is a bad moment.** If you freeze store changes over the December peak, only about 8–10 working weeks remain. The sector CAO expired on 1 April 2026, and talks were suspended on 17 November. The unions want zero-hours and min-max contracts replaced, and they oppose productivity norms imposed without agreement. From 1 January 2028 the *Wet meer zekerheid flexwerkers* (a new flex-work law) changes the flexible contracts this tool relies on. A 12% cut in hours for 9,000 people, launched in the middle of the talks, will be read as the employers' real offer. [The facts are verified ([FNV, 18 Nov](https://www.fnv.nl/nieuwsbericht/sectornieuws/handel/2026/11/voortgang-onderhandelingen-cao-supermarkten), [FNV proposals](https://www.fnv.nl/getmedia/0a042a4d-7803-4450-839a-5504b9088fdf/Voorstellenbrief-CAO-LMB-VGL-2026-2027.pdf), [flex law](https://www.dirkzwager.nl/kennis/artikelen/wet-meer-zekerheid-flexwerkers-dit-verandert-er-voor-werkgevers)). The read on how it lands is my judgement, Medium confidence.]
+- **The hard part is integration, not the algorithm.** Forecasts in 15-minute slots per store need clean sales (POS), promotion and DC-delivery data. Schedules need contract types, ages, school calendars and availability, and the CAO premiums must reach payroll correctly. A payroll error across 9,000 people in month one would kill adoption. [Assumed; needs a review of your systems]
+
+**WHY THIS MATTERS**
+Done as pitched, you risk a rollout the OR can void, a fight with the unions and lower sales, in return for savings that probably aren't there. Done well, better forecasts put hours where the customers are and give students predictable shifts, and predictable shifts are what keep them.
+
+**HOW TO ACT**
+1. Ask the vendor to restate the 12% with Dutch rules switched on: rosters a week ahead, no forced same-day changes, cancelled hours paid, youth working-time limits, 50% structural hours. Ask them to put part of their fee at risk on that number. → CTO with Procurement → by 11 Dec 2026
+2. Agree a joint position with the COO: "live in March" means 8–10 pilot stores plus matched control stores, not 140. → CTO and COO → by 4 Dec 2026, to the CEO by 11 Dec
+3. Send the OR a consent request covering the draft roster rules, the use of staff data and the guardrails, and start the DPIA. → HR director with the DPO (data protection officer) and CTO → by 18 Dec 2026
+4. Connect POS and HR data in January. From February, run the pilot stores in forecast-only shadow mode (sales data, no staff data) to measure forecast accuracy before any rosters depend on it. → CTO → Feb 2027
+5. Run a 12-week live pilot from March. Decide go/no-go in June on a scorecard that counts sales, shelf availability, queues, staff turnover, sick leave, schedule stability and compliance, not just labour hours. Then roll out in waves from September, pausing over December. → COO owns, CTO and CFO co-sign → decision June 2027
+
+**RISKS**
+- **The 12% may already be in the 2027 budget.** Re-baseline it now to a number the pilot can prove, before it is in the forecast the board sees.
+- **The vendor may refuse a pilot-only contract.** That tells you how confident they are. Get quotes from two alternatives with Dutch retail references; the March deadline is theirs, not yours.
+- **Pilot stores may do well because their managers are keen.** Compare against matched control stores, and add a second pilot group before scaling.
+- **The tool may score individual workers' productivity.** That puts it under the high-risk AI rules and the OR's monitoring rules. Switch those features off for the pilot.
+
+**YOUR DECISION**
+- **Option A: the vendor's plan as-is** (140 stores by March). Fastest savings on paper. It breaks the CAO, invites the OR to void it, and risks payroll errors at every store at once during the CAO talks.
+- **Option B: pilot from March, rollout in waves from September 2027.** Chain-wide savings start 6–9 months later, but they are measured and defensible to the OR, the unions and the board.
+- **Option C: don't buy, and improve current scheduling instead.** Lowest risk, but you give up the forecasting gains you probably want.
+- **Recommendation: Option B.** It keeps the COO's goal and the March date, and turns the vendor's promise into evidence.
+
+Not yet checked by the other roles: General Counsel (my reading of the CAO, WAB, WOR and AI Act), the CFO (savings and sales model), HR (OR process and timeline) and the COO (choice of pilot stores).
+
+**DETAIL:** `decision-memo.md` (in this folder) has a table of the legal limits, the pilot design and scorecard, contract terms, the savings and 3-year cost model with its assumptions, the timeline to Q1 2028, and all sources.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

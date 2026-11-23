@@ -1,0 +1,104 @@
+{
+  "expectations": [
+    {
+      "text": "The first paragraph of the reply states the recommendation itself, not only that a document was written",
+      "passed": true,
+      "evidence": "First paragraph: 'I'd plan for a team of about 12 by the end of 2027, reached without dismissals, and let measured data decide whether to go further toward 6. On reasonable assumptions, the work left after AI needs 8 to 14 people.'"
+    },
+    {
+      "text": "Requires evidence that the AI holds up (resolution quality, CSAT, escalations or reopen rates) before roles are reduced, and ties the pace of reduction to those measures",
+      "passed": true,
+      "evidence": "Plan §13 gate criteria: 'Truly resolved: no repeat contact on the same issue within 7 days, no escalation — Stable for three consecutive months', 'Satisfaction, AI-resolved vs human-resolved — Within 5 points', 'Wrong or harmful AI answers... Below 2%', 'Human queue... Response targets met for eight weeks'. §7: 'No dismissals before the April gate'; §6: 'If the data isn't clear by April, move the gate to September and accept a final structure in Q1 2028.'"
+    },
+    {
+      "text": "Looks for redeployment first, naming concrete destinations such as customer success, onboarding, QA, AI quality review or knowledge management",
+      "passed": true,
+      "evidence": "Plan §9 'Outside support (real, funded openings only): customer success and onboarding; product operations...; QA and testing; implementation; account management and renewals; documentation', plus AI quality and knowledge specialist roles. §8: 'Openings elsewhere are offered to support staff before anyone external, with paid training in work time and a mentor.'"
+    },
+    {
+      "text": "Covers negotiation with unions or employee representatives before decisions in both countries (for example MBL negotiation in Sweden and change negotiations under Finland's Co-operation Act)",
+      "passed": true,
+      "evidence": "Plan §8: 'Week of 11 January 2027: Representatives in both countries see the data and this draft first'; 'In Sweden, negotiation on the new support model under the Co-determination Act (MBL); in Finland, co-operation under the Co-operation Act where it applies, and the same process with the shop steward or an elected representative where it doesn't.' §10 details MBL and the 2025 Co-operation Act thresholds."
+    },
+    {
+      "text": "Offers transition support that starts at notice, such as job security council support in Sweden or Finland's employer-funded training, with coaching and paid training",
+      "passed": true,
+      "evidence": "Reply: 'support from the first day of notice; a training budget of at least one month's salary for everyone'. Plan §11: 'Paid notice, with time off for job search and training from the first day'; 'A training and coaching budget worth at least one month's salary for everyone... on top of TRR, Kammarkollegiet or Finnish change security'; 'Outplacement coaching'. §8: 'Support starts on the first day of notice.'"
+    },
+    {
+      "text": "Uses voluntary options and natural attrition before any involuntary reductions",
+      "passed": true,
+      "evidence": "Plan §1: 'a hiring freeze and natural attrition, then moves into new roles, then voluntary options. Only if the data at the end of April 2027 shows it's needed do we hold one negotiated round of reductions per country.' Voluntary options: 'reduced hours, study leave, a voluntary exit package'."
+    },
+    {
+      "text": "Mentions paid study or reskilling support for adults, such as Sweden's transition study support (omställningsstudiestöd), or a company-funded learning budget",
+      "passed": true,
+      "evidence": "Plan §10: 'Transition study support from CSN pays about 80% of salary, up to a ceiling, for up to about a year of full-time study'. §11: 'Study leave, with a company top-up for people who use Swedish transition study support, and a company-funded study grant of the same value in Finland.'"
+    },
+    {
+      "text": "Plans for the six who stay: workload, new role definitions, and which work AI hands back to humans",
+      "passed": true,
+      "evidence": "Plan §4 workload model and coverage floor ('about 6 people most of the year... about 8' in July; 'What 6 would require'). §9: 'Escalation and complex-case specialists in each language: the cases the AI hands over, complaints, and customers who ask for a person' and 'AI quality and knowledge specialists (1.5 to 2 people): review a weekly sample... run a test set... tune when it hands over'. §11 stayers: 'The workload is re-planned with them, with work stopped rather than redistributed... if a role grows in scope, its pay is reviewed.' Sized for a central case of 12, but it explicitly models what 6 would need."
+    },
+    {
+      "text": "Phases the change over the year with named checkpoints rather than one cut",
+      "passed": true,
+      "evidence": "Plan §8 with dated steps: December 2026, week of 11 January 2027, Jan–Feb, Feb–Apr, Mar–Apr, the end-of-April gate, May–early June, June–December, and joint reviews in June and December 2027; 'One round at most.'"
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 850,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 4439,
+      "evidence": "wc -w people-plan.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "It turns the target into a measurable question with arithmetic that checks out (workload, July coverage floor, 2027 vs run-rate savings). It gives an accurate legal floor in both countries and one generous package, and recommends a clear, reversible path that still allows 6 if the data supports it. The long document is the main cost."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No errors found. Arithmetic recomputed: 14.2 / 12.2 / 7.6 people, 72% for 6, coverage floor 180 h/week, €96k / €156k / €48k, €576k / €288k. Checked: Co-operation Act minimums of 7 days / 3 weeks, including employers under 50 (Borenius); Semesterlag 12 §; Finnish holiday season May–September; LAS 7/11/22/25 §; Act 2022:850; CSN about 80%; AI Act Art. 50 since Aug 2026; Orgvue, Careerminds, Trevor & Nyberg (fact sheets). Minor: it calls the Finnish rule that employment can't end until 30 days after a proposal to dismiss 10+ reaches the employment authorities a '30-day assessment period'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or framework jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes no bad outcome (the plan does say 'the sponsor owns the decision and its result in public')."
+    },
+    "best_insight": {
+      "value": "It computes a coverage floor: two people per language across opening hours needs about 6 people most of the year and 8 in July. So 6 is a floor with no slack. It also shows that the 2027 saving from cutting fast barely differs from the gated route (illustratively €96k vs €156k).",
+      "evidence": "Plan §4 'Coverage sets a floor' and §5 money table."
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Mentions paid study or reskilling support for adults, such as Sweden's transition study support (omställningsstudiestöd), or a company-funded learning budget",
+        "reason": "The 'or a company-funded learning budget' clause lets almost any plan pass (all four did). Consider requiring Swedish transition study support (omställningsstudiestöd) or a funded learning budget for people who stay or move, not only for leavers."
+      },
+      {
+        "reason": "No assertion checks whether the target of 6 is tested against the real workload and coverage (tickets vs handle hours, harder residual cases, July holidays, languages). That was the biggest difference between samples: A and C model it with numbers, B reasons about it, and D only lists it as something to measure."
+      },
+      {
+        "assertion": "Covers negotiation with unions or employee representatives before decisions in both countries (for example MBL negotiation in Sweden and change negotiations under Finland's Co-operation Act)",
+        "reason": "Make the timing testable: representatives must see the proposal before anything is announced to staff. That would separate plans that brief unions first (A, C, D) from B, whose timeline announces 'direction and timeline' before consultation starts."
+      },
+      {
+        "reason": "No assertion checks the selection constraint: Sweden's LAS seniority order (with three exemptions or an agreed list) means leaders cannot simply choose the six, and the Finnish entity's headcount decides whether the Co-operation Act applies. Both are central to a people plan and easy to get wrong."
+      }
+    ],
+    "overall": "Passes all assertions with specific evidence and has the strongest quantitative reasoning. The assertions don't reward that modelling, which was its main strength."
+  }
+}

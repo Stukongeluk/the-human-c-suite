@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+      "passed": true,
+      "evidence": "'In Sweden, people are selected for redundancy by length of service unless you agree a different list with the union.' 'LAS 22 § ranks people by total length of service... one pool per operating unit and collective-agreement area.' 'You can exempt three people (high). Before ranking, you may exempt up to three employees who are especially important to the business.' It also notes 'your collective agreement (it can change these rules)'."
+    },
+    {
+      "text": "The reply says the employer must negotiate with the union under the Co-determination Act (MBL) before deciding.",
+      "passed": true,
+      "evidence": "'Negotiate with the union under MBL 11 § before you decide.'"
+    },
+    {
+      "text": "The reply rejects selecting people by tickets resolved or CSAT as the method, and explains why (the law and the metric's flaws).",
+      "passed": true,
+      "evidence": "Rejects the method: 'Don't rank people on tickets resolved and CSAT.' The law: 'Choosing by HR's metrics without union agreement breaches the selection rules. Each affected person can claim damages'. The metric's flaws: 'pre-AI counts reward the old job, and the people who took the hard cases look worse. Raw counts also penalise part-timers and anyone on parental or sick leave.'"
+    },
+    {
+      "text": "The reply mentions the nine-month re-employment priority and support through a job security council or transition study support.",
+      "passed": true,
+      "evidence": "'Give those who leave re-employment priority for their notice period plus 9 months, if they worked for you more than 12 months in the last 3 years.' Also: 'offer transition support (TRR/TSL)'."
+    },
+    {
+      "text": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+      "passed": true,
+      "evidence": "How to Act step 1, 'Before calling the union': 'prove that 21 is the right number with 8 to 12 weeks of AI data... Define the 21 roles honestly: complex cases, AI quality review, knowledge base.' Step 2 maps 'redeployment options', step 3 offers 'voluntary departures... Each volunteer is one fewer forced exit', and it says to 'Check in writing for redeployment options across the whole company.' This is weaker than leading with it: the bottom line goes straight to selection."
+    },
+    {
+      "text": "The reply stays short (under about 300 words) and opens with the answer.",
+      "passed": false,
+      "evidence": "It opens with the answer ('Don't rank people on tickets resolved and CSAT'), but reply.md is 799 words (wc -w), far over ~300, despite 'Keep it short'."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 799,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "It is the most legally precise sample: the age tie-break, the qualification test, the three-month exemption lockout, damages versus invalidity, and varsel by county, all sourced. But at 799 words it ignores 'keep it short', and the selection mechanics bury the alternatives to dismissal."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: LAS 22 § order, age tie-break, three exemptions and the three-month bar on new exemptions (LAS 22 § text); varsel for 5+ in one county, at least 2 months before the first person's employment ends (Arbetsförmedlingen); re-employment priority for the notice period plus 9 months with the 12-in-3 condition; invalidity for part-time discrimination (Act 2002:293 § 6); Klarna's CEO saying AI gave 'lower quality' (Entrepreneur, 9 May 2025). All correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or jargon. The heading 'CPO:' is a role label, not a leak."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned AI-driven reduction, not a bad outcome to assign responsibility for."
+    },
+    "best_insight": {
+      "value": "It flags that HR's raw counts penalise part-timers and people on parental leave, and that such a link can get a dismissal declared invalid, not just cost damages. That is a sharper legal risk than an ordinary breach of the selection order.",
+      "evidence": "WHAT, 'HR's metrics are the wrong yardstick', and WHY THIS MATTERS"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply says that in Sweden the selection follows the LAS order by length of service, unless a collective agreement or a list agreed with the union says otherwise, and that the employer may exempt up to three employees.",
+        "reason": "The assertion checks that the exemption of three is mentioned, but not that it is stated correctly. One sample attached a false union-agreement condition to it. Consider wording it as 'states correctly that any employer may exempt up to three employees, without union agreement'."
+      },
+      {
+        "assertion": "The reply first checks the cut itself: whether people could be redeployed to other work (for example complex cases or new services) instead of nine dismissals.",
+        "reason": "'First checks the cut itself' can mean either reply order or the order of the recommended process. Say which one. Also say whether questioning the number 21 counts, or only redeployment and voluntary routes that reduce the nine."
+      },
+      {
+        "assertion": "The reply stays short (under about 300 words) and opens with the answer.",
+        "reason": "The word limit covers reply.md only, so a sample can pass by moving an 843-word draft into an attached file. That is a reasonable answer to 'draft the selection approach', but decide whether 'keep it short' should also apply to the draft itself."
+      },
+      {
+        "reason": "No assertion checks the discrimination and invalidity risk of HR's metrics: raw counts penalise part-timers and people on parental or sick leave. That is the strongest legal reason against HR's proposal, and only two samples raised it."
+      },
+      {
+        "reason": "No assertion checks that the selection pool is per operating unit and agreement area, which can be wider than the support team, or that it mentions the qualification test. Both change who is in scope."
+      }
+    ],
+    "overall": "The assertions discriminate well. Sample C's content is strong and accurate, and it fails only on length."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply does the runway arithmetic: whether the company reaches profitability or the next round on current burn and growth, with scenarios such as no raise, a later raise or a bridge.",
+      "passed": true,
+      "evidence": "Scenario table under two revenue-coverage cases (20% / 35% of costs) with stated assumptions ('people are about 70% of costs, growth stays at 4% a month, and leavers get two months' severance'): 'As is ... Cash out Aug 2027', '30% cut alone ... Oct–Nov 2027', 'No-job-loss moves + bridge of 3 months' burn ... Feb 2028 / Break-even ~Sep 2028', 'No-job-loss moves + bridge + 15% cut ... May 2028 / Break-even ~Jun 2028'. Sets the bar 'cash into at least Q2 2028 even if the round slips again, or \"default alive\"'. My rough re-model with the same assumptions lands in the same months for the cut-alone and bridge rows."
+    },
+    {
+      "text": "The reply looks at the levers that don't cost jobs first (such as burn, pricing, revenue, focus, founders' pay or bridge financing) and sizes what they close before setting any cut.",
+      "passed": true,
+      "evidence": "'This week (reversible, nobody loses their job)': hiring freeze, leadership's 'first and largest pay cut', non-people spend, 'Pull cash forward: discounted annual prepayment...', insider bridge, venture debt, grants, voluntary reduced hours. Sized: 'the moves that cost no jobs buy 1.5 to 2.5 [months]', with table rows for moves and moves + bridge, and a cut decided only 'by mid-December, on numbers'."
+    },
+    {
+      "text": "The reply sizes any reduction to the plan rather than accepting a reflex 30%, ties it to the strategy, and makes it once so it isn't repeated.",
+      "passed": true,
+      "evidence": "'If a gap remains in mid-December, cut once, sized to the gap: Decide what work stops (a product line, a market, a pilot), not only who goes.' Also 'one decisive cut beats three small ones' and a modelled 15% option alongside 30%."
+    },
+    {
+      "text": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+      "passed": true,
+      "evidence": "'The Swedish floor, which is not legal advice, so check it with employment counsel: MBL negotiation before the decision. Varsel to Arbetsförmedlingen at least two months before dismissals of 5 to 25 people. One to six months' notice, by length of service. LAS selection by length of service, with three exemptions, unless the union agrees a different list.' All correct per the fact sheet."
+    },
+    {
+      "text": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+      "passed": true,
+      "evidence": "Honest communication before decisions: 'Show the team the runway scenarios and open MBL talks with the union(s) now, while they can still change the plan.' Beyond the minimum: 'severance on top of paid notice, TRR support from the day of notice (or paid outplacement if you have no collective agreement), longer option exercise windows, references and real rehiring priority. Everyone hears it from their own manager, in person.'"
+    },
+    {
+      "text": "The reply has the founders go first and own the result: they say plainly that the burn and the hiring were their decisions and take the first cut.",
+      "passed": true,
+      "evidence": "'You and the leadership team take the first and largest pay cut until the B closes. Tell the board and the team plainly that the gap is leadership's result, because the plan bet on a round that slipped.' Names leadership's planning decision (the spend plan built on the round) as the cause, and takes the first cut. It doesn't name hiring explicitly, but ties ownership to the decision rather than a slogan."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 861,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Tight, accurate and decision-ready: the scenario table shows that the bridge does the most work and that moves + bridge + a 15% cut beats 30% alone, and it turns the investor conflict into a deal. It is slightly less grounded than D because the size of the no-job moves isn't stated."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Swedish rules (MBL, LAS order and three exemptions, 1–6 months' notice, varsel two months ahead for 5–25 people, TRR) match the fact sheet; Energimyndigheten, Vinnova and EIC Accelerator exist. Minor internal looseness only: the table's no-job-moves row (Aug→Nov 2027 at 35%) implies ~3 months against the text's '1.5 to 2.5'."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or jargon."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "'the gap is leadership's result, because the plan bet on a round that slipped'"
+    },
+    "best_insight": {
+      "value": "It quantifies the cost of waiting as well as the cost of cutting ('each month a needed cut waits costs half a month to a month of runway'), which gives the investors their due and makes the mid-December decision date a real deadline rather than a delay.",
+      "evidence": "'Go back to the two investors with a deal, not a no' section"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply flags the Swedish legal floor for counsel: negotiation with the union under the Co-determination Act (MBL) where it applies, the LAS order of selection, notice periods, or advance notification to the Public Employment Service for five or more dismissals.",
+        "reason": "The 'or' makes this pass with any one of four items, and all four samples listed all four, so it doesn't discriminate. It also doesn't check accuracy: sample D says the varsel to Arbetsförmedlingen is public, which Arbetsförmedlingen contradicts ('En varselanmälan omfattas alltid av sekretess'). Consider requiring MBL-before-decision plus LAS order, stated correctly."
+      },
+      {
+        "assertion": "The reply plans exits decently and communicates honestly: support beyond the legal minimum, and the team told about the runway and the options before decisions are final.",
+        "reason": "Add that the 'beyond the minimum' items must actually exceed Swedish law. Paid notice (LAS s.12) and rehiring priority (LAS s.25) are statutory, and sample B listed them as 'well beyond statutory terms'."
+      },
+      {
+        "reason": "No assertion checks that illustrative numbers state their assumptions and add up, or that the reply deals with the two investors constructively (e.g. asking them to back their demand with a bridge or agreeing a written trigger). These were the clearest differences between samples."
+      }
+    ],
+    "overall": "Sample passes all six; assertions 3 and 4 were met by every sample and don't discriminate much."
+  }
+}

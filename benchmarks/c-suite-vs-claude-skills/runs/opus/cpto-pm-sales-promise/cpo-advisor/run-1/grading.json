@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+      "passed": true,
+      "evidence": "Step 2: 'Get a rough size for each feature (S/M/L, with how confident engineering is) against what's already planned for Q1, and name the specific items that would have to move. → You + engineering lead → within 5 working days', done before the CEO meeting in step 4. Bottom line: 'Don't say no, and don't absorb it quietly.'"
+    },
+    {
+      "text": "The reply has the PM bring the CEO concrete options with explicit trade-offs (for example what drops from the roadmap, a smaller first version, or phased dates) instead of a flat no.",
+      "passed": true,
+      "evidence": "YOUR DECISION lists 'Option A: all three in full by Q1, with named roadmap items deferred... The cost is other commitments', 'Option B: the most important one or two by Q1, the rest early in Q2... he has to go back to the customer', 'Option C: a slimmer version of each by Q1... the customer has to accept the smaller scope', plus a recommendation. The kit adds a trade-off table."
+    },
+    {
+      "text": "The reply rules out closing the gap with overtime or crunch.",
+      "passed": true,
+      "evidence": "RISKS: 'You absorb it with overtime. The roadmap slips anyway, likely around February, the team burns out... Rule this out; don't offer it as an option.' Kit: 'Leave overtime out of every option. If a plan only works with extra hours for four months, it doesn't work.'"
+    },
+    {
+      "text": "The reply suggests finding out what the customer actually needs (the problem behind the three features), for example together with sales or the account manager.",
+      "passed": true,
+      "evidence": "Step 1: 'Find out the wording, whether it's in a contract or renewal, what problem each feature solves for the customer and what \"done\" means to them. → You, with the CEO or the account owner'. Kit: 'Which of the three matters most to them? If nobody knows, can you and the account owner ask them directly?'"
+    },
+    {
+      "text": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+      "passed": true,
+      "evidence": "Private: 'Meet the CEO one-to-one, not in a group meeting.' Charitable reading: 'What the CEO actually committed to is the customer relationship (probably a renewal or expansion)'; kit: 'Frame it as \"help me deliver this\", never as \"why did you promise this\"'. Process: 'propose a 48-hour sanity check before anyone commits a date to a customer', timed for after delivery is on track."
+    },
+    {
+      "text": "The reply is short enough to act on (roughly 500 words or less) and opens with the answer.",
+      "passed": false,
+      "evidence": "reply.md is 856 words by wc -w, well over the 550-word ceiling. It does open with a BOTTOM LINE answer, but only after a decorative rule line and an emoji header ('📊 CPO: ...')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 856,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 864,
+      "evidence": "wc -w ceo-conversation-kit.md"
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Sound, practical method with a genuinely usable kit (fact-finding questions, trade-off table, phrase swaps, follow-up email), but the reply is overlong and wrapped in emoji and confidence-tag scaffolding, and it's labelled 'CPO' though the user is a PM."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Few checkable claims. '18 calendar weeks' to end of March 2027 is correct (128 days); '15–16 working weeks after the holidays' is a fair rough figure (about 18.6 business weeks before holidays); 'adding people this late usually slows a team down' matches Brooks's law; planning at about 80% is presented, correctly, as a rule of thumb."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of a skill or reference files. Template scaffolding does show through ('[VERIFIED: ...]', '[ASSUMED]', 'NOT YET PEER-VERIFIED', '📊 CPO:' header, 🟢/🟡/🔴 markers), but none of it is skill jargon like 'cost ladder' or 'rungs', and the peer-verification line is explained."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome has happened yet; the prompt is about handling an over-commitment. (The reply does say the CEO 'has to own' the deferred commitments.)"
+    },
+    "best_insight": {
+      "value": "Asking the CEO not just to choose an option but to 'back the deferrals when people ask why their work moved', so the PM isn't left carrying the CEO's trade-off alone, plus a phrase-swap table ('The team is too busy' → 'These are the specific items it would replace').",
+      "evidence": "reply step 4; kit section 3"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply keeps the relationship in mind: private conversation first, assuming pressure rather than bad intent, and suggests agreeing a process so future promises are checked with product first.",
+        "reason": "Bundles three separate behaviours (private first, charitable reading of the CEO, future process). Samples hit them unevenly, so a single pass/fail hides which part was missed; consider splitting into separate assertions."
+      },
+      {
+        "assertion": "The reply has the PM size the three features against the team's real capacity before answering, rather than accepting or refusing outright.",
+        "reason": "Easy to pass with a generic 'get an estimate' line. A sharper version would require naming the specific roadmap items that would slip and who they affect, which separates real capacity work from a nod."
+      },
+      {
+        "reason": "No assertion checks whether the PM protects their own team during the process (e.g. telling the team they won't be committed to unestimated work) or asks the CEO to own and back the deferrals publicly; these were the most useful differentiators between samples."
+      }
+    ],
+    "overall": "Passes on substance; fails only on length. Assertion 5 would be better split into its three parts."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+      "passed": true,
+      "evidence": "Opens: \"**My advice: don't buy this system as specified, and don't commit to going live in six months. Go back to the alderman with a six-month plan for the same goal, putting scarce investigators on real fraud, without giving every resident on benefits a risk score.**\" The alderman is approached respectfully: \"For the alderman, in private first: 'I want to tackle fraud as much as you do...'\", and \"The council has a point: investigators are scarce and gut feeling and tips are biased too.\""
+    },
+    {
+      "text": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+      "passed": true,
+      "evidence": "Reply: \"In the childcare benefits scandal, risk profiling helped wrongly accuse more than 20,000 families... SyRI... struck down... under Article 8 ECHR. Rotterdam dropped its welfare risk score in 2021 after a critical report by its court of audit, and journalists later showed it weighed age, gender and Dutch language skills.\" Advice note adds: \"The Tax Administration's risk classification, which used nationality, contributed to more than 20,000 families being wrongly accused\", SyRI was \"insufficiently transparent and verifiable\", and \"The common thread: people were selected on their circumstances rather than their conduct, could not see why\". Bias, presumed guilt and the missing check or recourse are all explicit."
+    },
+    {
+      "text": "The reply questions the \"90% accurate\" claim: with a low share of real fraud, most people flagged may have done nothing wrong; it asks for false-positive rates and bias tests across groups and proxies such as nationality, age or postcode.",
+      "passed": true,
+      "evidence": "\"Take 3,000 households... assume 5% commit fraud... It then flags about 420 households, and 285 of them did nothing wrong. Two out of three people your investigators look into would be innocent.\" (135 TP + 285 FP = 420, which checks; the note's table for 2/5/10% also checks.) \"Ask the vendor in writing: 90% of what (accuracy, precision in the top 10%, recall)... What are the error rates by gender, age, single parents, migration background and neighbourhood?\" Proxies: \"Housing data (address, household make-up, neighbourhood) is a classic proxy for origin and income.\""
+    },
+    {
+      "text": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+      "passed": true,
+      "evidence": "Reply: \"strains purpose limitation under the GDPR and very likely the Wgs\"; \"A DPIA and equal treatment apply now\"; \"AI used to assess or reclaim public benefits is high-risk under the AI Act; after the 2026 Digital Omnibus those duties... apply from 2 December 2027\"; \"get your privacy officer and legal team to answer in writing.\" Advice note: \"re-using it for fraud selection needs a specific legal basis and a compatibility test. In the SCHUFA case (C-634/21, 7 December 2023) the EU Court of Justice held that a score can itself be an automated decision under Article 22\". Every element is covered across the reply and its note."
+    },
+    {
+      "text": "The reply offers alternatives that address causes, such as simpler rules, help with applications or better data quality, noting that many errors are mistakes rather than fraud.",
+      "passed": true,
+      "evidence": "\"Fix the causes. Tackle the top three causes of overpayment, often changing income from flexible work: simpler reporting, the income signals you already get through Suwinet and the Inlichtingenbureau, and earlier help with debts.\" Also: \"Much of what's recorded as fraud under the Participatiewet is a missed reporting duty, often an honest mistake by someone with irregular income or limited Dutch.\" The note's plan gives this workstream an owner and dates (months 2–5)."
+    },
+    {
+      "text": "The reply sets safeguards for anything that goes ahead: a human decides, people are told and can object, an independent audit, publication in the algorithm register, and criteria for stopping.",
+      "passed": true,
+      "evidence": "Reply: \"an independent bias audit and a shadow run where scores aren't used. Residents are told and can see and challenge their score, an investigator always decides\"; checks \"published in the national algorithm register\". Advice note: \"Stop criteria agreed in advance, such as error-rate gaps between groups above [x] or a hit rate no better than random selection plus rules\" and \"Published in the algorithm register and reviewed every year.\" All five safeguards are there, with stop criteria spelled out in the note."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 928,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 2428,
+      "evidence": "wc -w sample-C/advice-note.md"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "Accurate and thorough: the reply stands on its own, and the advice note (fact table with blanks, options with reversibility, a plan with owners, vendor questions, minimum conditions, a communication plan) is something a CIO could take to the college almost as is. It also says honestly that it couldn't re-check sources online."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked the AP fine, the SyRI ECLI, Rotterdam, DUO, SCHUFA, the AI Act articles and dates, the WOR articles and the base-rate tables. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "'Dutch language skills' is the only match, and it is ordinary usage."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt asks about a prospective decision, with no bad outcome yet."
+    },
+    "best_insight": {
+      "value": "Its options table judges each route on reversibility ('the harm to residents and to trust remains after the system is switched off'), and it asks the college whether it is prepared to explain to every resident how they were selected; if not, the method shouldn't be used.",
+      "evidence": "advice-note.md, 'Options considered' and 'Questions for the college'"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens with a clear recommendation the council can act on, without labelling or attacking the alderman.",
+        "reason": "All four samples pass this easily; every reply opens with a 'don't buy as specified, offer a six-month alternative' line and none attacks the alderman. It doesn't tell the samples apart. Consider also checking that the opening gives the alderman something concrete to deliver within his six months."
+      },
+      {
+        "assertion": "The reply flags the legal floor for counsel: the GDPR (legal basis, purpose limitation for debt-counselling data, a data protection impact assessment, automated decisions) and the AI Act's high-risk rules for public benefits, with their timing.",
+        "reason": "This bundles five or more sub-items (legal basis, purpose limitation, DPIA, automated decisions, AI Act high-risk, timing). Two samples covered nearly all of it but failed only on the GDPR automated-decision rule. Splitting it would show which legal points a sample actually misses."
+      },
+      {
+        "reason": "No assertion covers the AI Act Article 5 social-scoring ban, which is arguably the sharpest legal risk here: the Commission's guidelines name welfare agencies estimating fraud risk from data out of unrelated contexts (exactly the debt-counselling and housing data) as a prohibited example. Three of four samples raised it, and it can discriminate."
+      },
+      {
+        "assertion": "The reply names the precedent and what went wrong: the Dutch childcare benefits scandal or similar risk-scoring cases, with bias, presumed guilt and no meaningful human or legal check.",
+        "reason": "'Bias, presumed guilt and no meaningful human or legal check' is three mechanisms in one clause. Samples that only state the outcome ('wrongly branded 20,000 families') sit on the line. Say whether naming the outcome is enough or the failure mechanism (e.g. nationality used as a risk factor) must be explained."
+      }
+    ],
+    "overall": "Best sample: passes everything, with a usable advice note. The only nit is that stop criteria sit in the note rather than the reply."
+  }
+}

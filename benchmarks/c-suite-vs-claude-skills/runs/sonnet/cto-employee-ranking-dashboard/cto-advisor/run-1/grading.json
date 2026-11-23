@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+      "passed": true,
+      "evidence": "'A careful engineer who rejects bad suggestions scores low. Someone who accepts everything and fixes it later scores high.' / 'PRs merged rewards small, frequent PRs and punishes the people we most want ... the reviewer who unblocks five colleagues' / 'Goodhart's law will hit within weeks' / 'A \"bottom 10%\" is a quota, not a performance finding'. The explanation is clear but not brief (five numbered points, roughly 500 words); length is assessed under the last assertion."
+    },
+    {
+      "text": "The reply suggests raising it with the VP privately first, with questions and a concrete alternative such as team-level delivery measures (for example DORA metrics), rather than an open confrontation.",
+      "passed": true,
+      "evidence": "'Ask questions first, in a 1:1 (this week). Don't open with \"I think it's wrong\". Open with: \"What problem are we trying to solve?...\"' and 'Offer a replacement ... Measure the team, not individuals: DORA metrics (deploy frequency, lead time, change failure rate, time to restore), plus PR cycle time and review turnaround.' Also 'Avoid \"this is unfair\" ... or anything about the VP's judgment.'"
+    },
+    {
+      "text": "The reply says that in the Netherlands a system for monitoring employees' performance needs the works council's consent (article 27 WOR), and suggests involving the works council if a private conversation doesn't work.",
+      "passed": true,
+      "evidence": "'Under the Works Councils Act (WOR, art. 27), employee assessment systems and systems that record or monitor employee performance generally need the works council's consent before introduction.' Escalation: 'If they won't move: raise the works council and privacy questions through HR, and gather allies.'"
+    },
+    {
+      "text": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+      "passed": true,
+      "evidence": "Routes to the VP, HR, the works council and a privacy assessment; 'Escalating through legitimate channels is not being difficult.' Explicitly: 'Don't game the numbers, and don't tell your team to.' No vertrouwenspersoon, leaks or sabotage."
+    },
+    {
+      "text": "The reply helps the user protect themselves, for example by keeping a factual record and finding allies, without telling them to stay silent.",
+      "passed": true,
+      "evidence": "'Line up allies. Talk to a few other seniors and tech leads before the meeting. One engineer objecting looks like resistance.' and 'Protect yourself and your team in the meantime. Keep a short written record of what you raised and when.' Does not counsel silence."
+    },
+    {
+      "text": "The reply is practical and short enough to act on, not a lecture (roughly 500 words or less).",
+      "passed": false,
+      "evidence": "wc -w = 1427 words, far above the ~500 (max 550) limit. The content is practical, but with five 'what is wrong' sections, seven actions, phrasings and a decision section it reads closer to a briefing than something to act on quickly."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1427,
+      "evidence": "wc -w sample-B/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files in the sample."
+    },
+    "overall_quality": {
+      "value": 7,
+      "evidence": "Sound and well-structured advice with a strong sanity-test idea and the Dutch dismissal-law angle, but nearly three times too long for the question and with one misstatement about SPACE."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "'Neither metric appears in the standard engineering metrics frameworks (DORA, SPACE).' The SPACE paper (ACM Queue, 2021) lists 'Volume or count of ... pull requests, commits, and code reviews' as example Activity metrics; it warns they 'should never be used in isolation', but PR counts do appear. Other claims (works council from 50, art. 27 WOR consent, GDPR personal data, d-ground dismissal requirements) are correct."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Mild and indirect: 'The frameworks I work from list individual velocity and commit counts as things not to measure' cites the assistant's own internal reference material as authority, not a source the user can check."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "The prompt describes a planned ranking, not a bad outcome that has already happened."
+    },
+    "best_insight": {
+      "value": "Run a quick sanity test on the last four weeks of data: if the bottom 10% turns out to be tech leads, reviewers and on-call people, that's a convincing, non-personal argument.",
+      "evidence": "Item 4 under 'What you can actually do'."
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply explains briefly why ranking individuals by AI acceptance rate and PRs merged misleads (for example it rewards volume and gaming and says nothing about value or quality).",
+        "reason": "Every sample passed; the 'briefly' qualifier overlaps with the length assertion, so a long, essay-like explanation still passes here. Either drop 'briefly' or test something sharper, e.g. that the reply names the forced-distribution flaw (a fixed bottom 10% always selects someone, even in a strong team)."
+      },
+      {
+        "assertion": "The reply routes concerns to the right channel and does not send a business disagreement to the confidential adviser (vertrouwenspersoon) or suggest leaks or sabotage.",
+        "reason": "Not discriminating: no sample went near the vertrouwenspersoon, leaks or sabotage. Consider pairing it with a positive check that the reply tells the user not to game the numbers or pull colleagues' data themselves."
+      },
+      {
+        "reason": "No assertion checks the privacy angle (GDPR personal data, privacy officer, DPIA), which every sample raised and which is a real second lever in the Netherlands."
+      },
+      {
+        "reason": "No assertion checks factual accuracy of the evidence cited about DORA, SPACE or Copilot studies; one sample misstated that PR counts don't appear in SPACE. A 'no factual errors in cited research or law' assertion would catch this."
+      },
+      {
+        "reason": "Only the length assertion separated the samples. Consider an assertion that the reply gives a ready-to-use line or script for the 1:1, since the user's stated fear is being seen as difficult."
+      }
+    ],
+    "overall": "Passes all content assertions but fails length badly; one factual slip about SPACE."
+  }
+}

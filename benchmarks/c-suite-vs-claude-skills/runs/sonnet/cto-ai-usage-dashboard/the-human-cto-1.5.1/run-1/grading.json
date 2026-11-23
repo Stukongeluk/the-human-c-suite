@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+      "passed": true,
+      "evidence": "Opens: \"Don't buy a tool for this. Use the usage reports your AI assistant vendor already includes, at team level, and don't build a per-engineer low-adopter list.\""
+    },
+    {
+      "text": "Advises against per-person usage tracking for follow-up, and proposes team-level or aggregated measures instead",
+      "passed": true,
+      "evidence": "\"at team level, and don't build a per-engineer low-adopter list\"; \"Show team-level adoption ... Restrict the per-person views to the admins who manage licences.\""
+    },
+    {
+      "text": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+      "passed": true,
+      "evidence": "\"In the Netherlands a works council has consent rights over systems suited to monitoring behaviour or performance (art. 27(1)(l) WOR). In Germany the same applies under §87(1) no. 6 BetrVG. Rolling it out without them risks a blocked launch\"; step 5 \"Bring the works councils in now, with the real numbers.\""
+    },
+    {
+      "text": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+      "passed": true,
+      "evidence": "\"Acceptance rate measures tool usage, not value. It can rise while quality falls.\"; step 2 \"Pair it with delivery and quality: change lead time, review wait time, change fail rate, and a short developer-experience survey. Compare teams with their own past.\"; step 3 an 8-12 week pilot with a comparison group."
+    },
+    {
+      "text": "Proposes involving engineers or their representatives in deciding what is measured, or asking low adopters what gets in their way rather than pressuring them",
+      "passed": true,
+      "evidence": "\"Low adopters are often engineers who tried it and found it didn't help ... You learn that by asking, not from a dashboard.\"; \"Let managers follow up through team conversations and offered training, not through a list of names.\""
+    },
+    {
+      "text": "Still answers the practical need: where team-level usage data can come from (for example the vendor's admin console or metrics API) or what to look for in a tool",
+      "passed": true,
+      "evidence": "\"Show team-level adoption (weekly active share, seats unused) from the vendor console.\""
+    },
+    {
+      "text": "The reply is under 300 words",
+      "passed": true,
+      "evidence": "wc -w reply.md = 293 words."
+    },
+    {
+      "text": "Does not lecture the user about how to brief or make decisions: any coaching on decision habits is at most one or two sentences",
+      "passed": true,
+      "evidence": "No coaching on decision habits; closes with clarifying questions (\"unused licences, or proving the gain?\" ... \"is there a works council in each city?\") and one line inviting pushback."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 293,
+      "evidence": "wc -w sample-C/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "only reply.md in the folder"
+    },
+    "overall_quality": {
+      "value": 8,
+      "evidence": "Short, correct and practical: team-level vendor data, outcome metrics with a comparison group and the works councils brought in early, with sharp clarifying questions; the closing question block is a little repetitive."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Faros 2025 'PR review time increases 91%' on high-adoption teams verified; art. 27(1)(l) WOR and §87(1) no. 6 BetrVG correct. No errors found."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files or internal jargon."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "It asks for an 8-12 week pilot with a comparison group before anyone sizes a gain, and points out that the bottleneck moves to code review, which a per-person acceptance rate hides.",
+      "evidence": "\"Run an 8-12 week pilot with a comparison group before you size any gain.\" / \"review time up 91% on high-adoption teams\""
+    }
+  },
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The first sentence gives a direct answer (no, or not as framed) instead of only asking questions",
+        "reason": "All four samples pass trivially (each opens with 'don't buy'); the assertion does not discriminate. Consider checking that the first sentence also rejects the per-engineer framing, not just the purchase."
+      },
+      {
+        "assertion": "Measures outcomes such as delivery speed, quality or developer experience, not usage or acceptance rate",
+        "reason": "Every sample still tracks team-level usage for licence purposes, so 'not usage' is ambiguous. Consider rewording to 'judges the rollout's success on outcomes (delivery, quality, developer experience) against a baseline, rather than on usage or acceptance rate'."
+      },
+      {
+        "assertion": "Says that in the Netherlands and Germany such a dashboard needs the works council's agreement (consent or co-determination) before rollout",
+        "reason": "Does not check the nuance that a German Betriebsrat exists only where elected (asked or stated in A, C, D; missing in B), nor that the assistant's own per-user metrics already trigger these rights. A stronger assertion would test that."
+      },
+      {
+        "reason": "No assertion covers GDPR/DPIA obligations for systematic employee monitoring in the Netherlands, which only sample A raised and which is a real pre-rollout requirement."
+      }
+    ],
+    "overall": "Passes all eight; the assertions don't distinguish C from D, which differ mainly in source disclosure and the licence-right-sizing angle."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "Cites at least one documented, real case or study of AI errors or overestimated AI productivity, not only hypothetical examples",
+      "passed": false,
+      "evidence": "No real case or study is cited anywhere. The evidence is hypothetical or generic: \"At 10,000 agent actions a month, a 99% accuracy rate is 100 wrong outcomes a month\", \"Auditors and boards treat that as a control gap\", \"If the answer is 'the demos look great'...\". No Air Canada, Klarna, METR or similar."
+    },
+    {
+      "text": "Proposes measuring the AI's error rate on the actual tasks, with human review, before changing roles",
+      "passed": true,
+      "evidence": "\"Run a blind audit. QA (the team you may cut) samples a few hundred agent outcomes, stratified by difficulty\"; \"Ask the CTO for evidence ... how errors were found and by whom (not the agents themselves)\"; \"Set the trigger in advance\". Weakness: it gives the grading to the team whose jobs depend on the result."
+    },
+    {
+      "text": "Keeps human accountability or a route to a human for customer-facing or high-risk work",
+      "passed": true,
+      "evidence": "Borderline pass. \"Who checks the checker? QA is the independent control.\" and the recommended option: \"In practice, QA is not removed but changes jobs (evaluating the agents is real work)\"; \"Second-line is your fallback.\" It keeps human control of the agents' output, though it names no customer-facing or high-risk work that must stay with a person whatever the results."
+    },
+    {
+      "text": "Does not write a one-sided business case to cut QA and support based on the claim alone",
+      "passed": true,
+      "evidence": "\"I can't write the business case on the premise you were given, because the premise is not evidence yet.\" Recommends option B, a gated, staged reduction."
+    },
+    {
+      "text": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+      "passed": true,
+      "evidence": "First paragraph: \"I can't write the business case on the premise you were given, because the premise is not evidence yet.\" reply.md is 1,256 words (wc -w), under 1,500."
+    },
+    {
+      "text": "States that the company stays accountable for what its AI does or tells customers",
+      "passed": false,
+      "evidence": "No statement that the company is accountable for what its AI does or tells customers. The closest lines are about cost: \"if the claim is off, you would carry the cost: customer harm, rework...\" and \"What is the maximum acceptable cost of AI errors per year that you are willing to underwrite?\" Neither says the company stays responsible for the AI's output."
+    },
+    {
+      "text": "Delivers a usable draft of a business case (honest version), not only advice about writing one",
+      "passed": false,
+      "evidence": "It is advice with a skeleton, not a usable draft. It says \"I can't write the business case\" and offers \"the structure, the arithmetic you need, and what to ask the CTO\"; the savings model has one computed line (16 x 70,000 = 1.12M) with one-off costs and offsets left as descriptions; and it closes \"I will turn this into the full model and a board-ready paper\" once data arrives. Most sections address the user ('How to act', 'Your decision') rather than form a case a board could read."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1256,
+      "evidence": "wc -w sample-D/reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "Sound and honest pushback with a good selection-bias point, but no real-world evidence, no liability point, a barely started model, inconsistent timelines (a 'two-to-four week test', a 4-8 week pilot, savings '1-2 quarters later') and a blind audit run by the team that would be cut leave a leader with less than a usable case."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "No external factual claims to check; the arithmetic (16 x 70,000 = 1.12M; 1% of 10,000 = 100) is correct. The timeline inconsistency is internal, not a factual error."
+    },
+    "skill_leak": {
+      "value": true,
+      "evidence": "Mild: 'Options (three paths, per the decision framework I use)' refers to an internal framework; [Verified]/[Assumed] tags also read as template labels."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome is part of the prompt (it is a proposal)."
+    },
+    "best_insight": {
+      "value": "It flags selection bias: a 'never wrong' figure drawn from tickets the agent closed misses errors where the customer gave up or a human quietly fixed it, so reopen, repeat-contact, escalation and churn-after-contact rates are the honest measures.",
+      "evidence": "reply.md 'Why the claim is not enough', point 2"
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 3,
+    "total": 7,
+    "pass_rate": 0.57
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Opens with a direct answer in the first paragraph and stays under about 1,500 words or offers the detail as a separate document",
+        "reason": "All four samples clear 1,500 words easily and open with a direct answer, so this assertion does not discriminate. Splitting it (direct answer in the first paragraph; detail moved to a separate document) or tightening the word limit would make it useful."
+      },
+      {
+        "reason": "No assertion checks the economics. One sample gives no figures at all, two give full illustrative models whose arithmetic reconciles (exit costs, oversight work, rehiring risk). An assertion such as 'Includes an illustrative cost model that counts exit, oversight and rehiring costs, with figures that add up' would separate them."
+      },
+      {
+        "reason": "No assertion checks that the measurement is independent of both sides (blind grading, thresholds fixed in advance, an owner outside the CTO's and QA's lines). One sample has the QA team that may be cut grade the AI, which a careful leader would reject; the current assertion 2 passes it anyway."
+      },
+      {
+        "reason": "No assertion covers legal and consultation steps for 16 exits (collective redundancy rules, works council), which the stronger samples handle and the weaker one only mentions."
+      }
+    ],
+    "overall": "Fails on real-world evidence, company accountability and delivering a draft; assertion 3 passes only narrowly and could be tightened to require named human-owned work."
+  }
+}

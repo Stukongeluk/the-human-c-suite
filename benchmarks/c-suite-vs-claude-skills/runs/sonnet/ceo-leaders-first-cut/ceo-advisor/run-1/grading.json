@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The reply has leadership take the first and largest cut (executive pay, bonuses or perks) and openly own responsibility for the flop, before any staff cuts.",
+      "passed": false,
+      "evidence": "No leadership pay, bonus or perk cut appears anywhere, and leadership never owns the flop. The closest line, \"present a short, honest account of why the launch failed and what has changed in greenlighting\", is a post-mortem, not ownership. The cost plan cuts hiring, attrition backfill, contractors, marketing, leases and tools, but nothing at the top."
+    },
+    {
+      "text": "The reply treats the leadership pay cut as a signal of trust, not as closing the €12 million gap: it pairs it with concrete measures that address the cause of the loss or bridge to the 2028 projects.",
+      "passed": false,
+      "evidence": "There is no leadership pay cut to frame as a signal. The concrete measures exist (stage-gated tranches, redeployment, co-development), but the leadership-cut element the assertion tests is missing."
+    },
+    {
+      "text": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+      "passed": false,
+      "evidence": "It misreads the cash: \"After the €12M loss you hold about €28M. Whether that reaches 2028 depends on your burn, which I don't have.\" The user said they have €40m in cash, so the reply never uses that figure to judge whether the loss is temporary and declines to judge at all. It argues against cutting the 2028 teams (\"risks the only assets that can recover the loss\") and makes layoffs \"the fallback, not the opening move\", but then offers \"If the board still insists on cuts, propose a smaller, voluntary-first reduction (under 5%)\", which is a cut made to satisfy the board."
+    },
+    {
+      "text": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+      "passed": true,
+      "evidence": "\"In the Netherlands, a collective dismissal means works council advice, UWV/union steps and transition payments.\" This is a specific mention of the works council's advice before dismissals. It's the weakest of the samples: it appears as a process cost, not as advice to involve the council now, and the later 'targeted restructuring' and 'under 5%' fallback don't mention it."
+    },
+    {
+      "text": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+      "passed": true,
+      "evidence": "Cites no named real-world example, and makes no claim that a pay cut caused a recovery (it proposes no pay cut). Passes vacuously. The €28M misreading is an error, but it isn't a real-world example."
+    },
+    {
+      "text": "The reply stays under 350 words and its first sentence states the recommendation.",
+      "passed": false,
+      "evidence": "347 words (wc -w) is under 350, but the first sentence, \"Don't bring the board a 'no'.\", says how to frame the answer, not what to do. On its own it could even be read as 'accept the cut'. The recommendation (a staged plan with a trigger, layoffs as fallback) comes only in the second and third sentences."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 347,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "no other .md files"
+    },
+    "overall_quality": {
+      "value": 5,
+      "evidence": "A reasonable staged cost plan with milestone-funded tranches and a cash-floor trigger, but it understates the cash by €12m, has leadership neither pay nor own the flop, and hands the board a fallback cut, which weakens the CEO's position on Thursday."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "1) \"After the €12M loss you hold about €28M\" misreads the user's figures: they said they have €40m in cash, so subtracting the year's loss again double-counts it and understates the runway by about 30%. The Dutch collective-dismissal line and the arithmetic (38 x €90k = €3.4m) are otherwise correct."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills, reference files, 'cost ladder' or 'rungs'."
+    },
+    "owns_result": {
+      "value": false,
+      "evidence": "No statement that the flop is leadership's responsibility; only a post-mortem of 'why the launch failed'."
+    },
+    "best_insight": {
+      "value": "Releasing 2028 project funding in tranches against milestones (vertical slice, playtest data, publisher interest) gives the board real control over spend rather than a promise.",
+      "evidence": "\"Stage-gate both projects: release funding in tranches against milestones... The board gets control, not just a promise.\""
+    }
+  },
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Any real-world example the reply cites is accurate, and it does not claim that a CEO pay cut by itself caused a company's recovery.",
+        "reason": "Trivially satisfied when no example is cited (three of four samples cite none). Consider making it conditional in the grading notes, or adding a separate check that a cited leader-sacrifice example carries its limit (signal, not cause of recovery)."
+      },
+      {
+        "reason": "No assertion checks that the reply reads the user's own numbers correctly. One sample subtracted the €12m loss from the €40m cash (\"you hold about €28M\"), understating runway by 30%, and still passed most checks that do not depend on it. An assertion such as 'runway is estimated from €40m against the burn (about three years at €12m a year) and the reply asks for real cash burn' would catch this."
+      },
+      {
+        "assertion": "The reply uses the €40 million cash and the 2028 pipeline to judge whether the loss is temporary, and recommends against a 15% cut made only to \"show discipline\".",
+        "reason": "Could also check that the reply does not offer a smaller cut purely to placate the board (one sample proposes an 'under 5%' reduction 'if the board still insists'), which is a cut made to show discipline by another name."
+      },
+      {
+        "assertion": "The reply mentions involving the works council (ondernemingsraad) before any reorganisation or job cuts in the Netherlands.",
+        "reason": "'Mentions' is a low bar: a line listing works council advice as a cost of a collective dismissal passes, as does a recommendation to involve it now, at the problem stage. Consider requiring early involvement (article 25 WOR: while the advice can still change the decision)."
+      },
+      {
+        "assertion": "The reply stays under 350 words and its first sentence states the recommendation.",
+        "reason": "Combines two independent checks (length and answer-first); splitting them would make failures easier to read."
+      }
+    ],
+    "overall": "2/6. Misses the leadership-first element entirely, misreads the cash position and doesn't lead with the recommendation."
+  }
+}

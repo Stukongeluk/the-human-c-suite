@@ -1,0 +1,96 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens with a clear recommendation that rejects the all-stores-by-March roll-out as specified and offers a phased alternative.",
+      "passed": true,
+      "evidence": "Opening: 'Do not commit to \"all stores live by March\". Recommend a staged rollout with hard go/no-go gates: a proven pilot in roughly 8-12 stores from February, then waves across the remaining stores if the gates are met.'"
+    },
+    {
+      "text": "The reply warns that short-notice, unstable schedules carry hidden costs (such as turnover, absence, service, empty shelves or lost sales), with evidence such as the Gap stable scheduling study.",
+      "passed": false,
+      "evidence": "D warns about hidden costs ('you will pay for it in attrition, recruitment and training. Those costs do not appear in the vendor's 12%'; 'queues, empty shelves, missed freshness... which cost sales'), but cites no evidence. 'Predictable schedules are a retention lever' is asserted without the Gap study or any other research; the only data pointer is 'Your own turnover data will show what a 1-2 point rise costs you.' The assertion asks for evidence such as the Gap study."
+    },
+    {
+      "text": "The reply proposes a pilot against comparison stores, with success measures beyond labour hours: for example sales, availability, customer scores, staff turnover and absence, and how staff rate their schedules.",
+      "passed": true,
+      "evidence": "'8-12 stores, mixed types, with matched control stores'; gates: 'service KPIs flat: queue times, on-shelf availability, sales per labour hour, customer satisfaction'; 'Staff metrics: no rise in no-shows, shift-swap complaints or voluntary attrition among students beyond an agreed band; a staff survey.'"
+    },
+    {
+      "text": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+      "passed": false,
+      "evidence": "Guardrails given: 'no automatic shift changes without staff acceptance; minimum notice that satisfies the stricter of law and CAO (probably 4+ days for on-call, not 3); fairness rules; a manager override at every step; no silent cuts of contracted hours', and 'Delay \"adjust on the day\" until later'. Notice and same-day limits are covered, but there is no minimum shift length, no staff availability input and no swap mechanism ('fairness rules' is unspecified). Notice is set only at the legal minimum. Not all the listed guardrails are present."
+    },
+    {
+      "text": "The reply flags the Dutch legal floor for counsel: the works council's consent right over working-hours rules or systems that can monitor staff, and the notice rules for on-call workers (at least four days unless a collective agreement shortens it, and pay when a shift is cancelled late).",
+      "passed": true,
+      "evidence": "'WOR art. 27 gives the Works Council a consent right over working-time/rota regulations and over systems that process or monitor employee data... Check the exact sub-sections with your labour lawyer.' and 'on-call staff get at least 4 days' notice of a shift. A CAO can shorten that... Cancelling inside the notice period generally means the wages are still owed.' The elements are present, though it doesn't give the 24-hour floor and the line 'but not necessarily to 3 days' is muddled."
+    },
+    {
+      "text": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+      "passed": false,
+      "evidence": "No statement that measures stay at store or team level and no ban on ranking or flagging individuals: 'fairness rules' and student attrition 'beyond an agreed band' are the closest. Design involvement covers the Works Council ('Involve them now as a design partner') but not store staff or managers, who only approve recommendations ('assisted mode')."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 1585,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 0,
+      "evidence": "No other .md files"
+    },
+    "overall_quality": {
+      "value": 6,
+      "evidence": "A sensible staged-rollout structure with gates and contract levers, but it gets the AI Act date wrong, offers no evidence on schedule stability, leaves guardrails thin and says nothing about individual ranking. The emoji confidence markers make it read like a template."
+    },
+    "factual_errors": {
+      "value": true,
+      "evidence": "(1) 'Obligations are scheduled to apply from August 2026, but a proposed delay is in play' is out of date: the Digital Omnibus on AI was adopted and entered into force on 27 July 2026 (Regulation (EU) 2026/1744), and Annex III employment obligations apply from 2 December 2027. As of 23 Nov 2026 the August 2026 date has passed and the delay is law, not a proposal. (2) Imprecise rather than wrong: 'A CAO can shorten that, but not necessarily to 3 days' leaves out that a CAO may shorten the call-in period to as little as 24 hours."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "No mention of skills or reference files; 'ADR' is standard engineering vocabulary."
+    },
+    "owns_result": {
+      "value": "n/a",
+      "evidence": "No bad outcome in the prompt."
+    },
+    "best_insight": {
+      "value": "Much supermarket work (deliveries, replenishment, bakery, cleaning) isn't demand-driven or divisible into 15-minute pieces, so the vendor must show how the model handles non-checkout tasks before its 12% is credible.",
+      "evidence": "'What (with confidence)' last row and 'Why' point 1."
+    }
+  },
+  "summary": {
+    "passed": 3,
+    "failed": 3,
+    "total": 6,
+    "pass_rate": 0.5
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply sets scheduling guardrails for the tool: enough advance notice, minimum shift lengths or hours, staff input or shift swaps, and limits on same-day changes.",
+        "reason": "'Enough advance notice' is loose: a sample proposing only the statutory four days for on-call staff passes, although the supermarket CAO (verified: CAO Levensmiddelenbedrijf art. 4.3f) requires the full roster a full week ahead. Consider requiring notice at or above the CAO's one week, or naming two weeks as in the Gap study."
+      },
+      {
+        "assertion": "The reply flags the Dutch legal floor for counsel: the works council's consent right over working-hours rules or systems that can monitor staff, and the notice rules for on-call workers (at least four days unless a collective agreement shortens it, and pay when a shift is cancelled late).",
+        "reason": "The strongest legal point in the best samples is that the CAO itself, not only the WAB, blocks three-day publication (roster a full week ahead; 24-hour window only for erbijbaners). An assertion on checking the applicable CAO's roster rules would discriminate better than the generic four-day rule, which every sample got."
+      },
+      {
+        "reason": "No assertion checks the economics: that the 12% is a vendor claim to be re-based, that same-day cuts inside the notice window are still paid, or that the first-year saving sits below the run rate. The best samples quantified this (break-even sales drop, cost of delay); the weakest only gestured at it."
+      },
+      {
+        "reason": "No assertion checks where saved hours come from (not replacing leavers versus cutting students' hours and income), which is the main people question in a 12% hours cut for a student-heavy workforce."
+      },
+      {
+        "assertion": "The reply keeps measures at store or team level, involves store staff and managers in the design, and does not rank or flag individual employees.",
+        "reason": "This bundles three separate checks (team-level measures, participatory design, no individual ranking); samples often meet two of three. Splitting it would make the results easier to read."
+      },
+      {
+        "reason": "No assertion checks the AI Act timing, which D got wrong (August 2026 with a 'proposed' delay, when the Omnibus moved Annex III to 2 December 2027). A date-accuracy assertion would catch stale regulatory claims."
+      }
+    ],
+    "overall": "Three of six passed; D lacked evidence on schedule stability, full guardrails and a no-individual-ranking commitment, and has an outdated AI Act date."
+  }
+}

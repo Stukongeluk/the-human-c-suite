@@ -11,6 +11,7 @@ Every reply, grade and token count behind the results in the main [README](../RE
 | [`company-types-v1.4/`](company-types-v1.4/benchmark.md) | Every kind of organisation: the version 1.4 draft against version 1.3.3 (and no skill on Claude) on six cases outside software, plus the [follow-ups](company-types-v1.4/follow-ups.md) that led to version 1.4.0 | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 60 + 17 |
 | [`cfo-v1.5/`](cfo-v1.5/benchmark.md) | A humane CFO seat: the draft against the CEO seat (and no skill on Claude) on six finance cases, plus the [follow-ups](cfo-v1.5/follow-ups/) that led to version 1.5.0 | Claude Sonnet 5.5, Claude Opus 5.5, Gemini 4 Neon, Gemini 4 Hydrogen | 60 + 8 |
 | [`cfo-vs-c-level-advisor/`](cfo-vs-c-level-advisor/benchmark.md) | `the-human-cfo` 1.5.0 against another open-source CFO skill, `cfo-advisor` from alirezarezvani/claude-skills (and no skill), on the six finance cases, plus the [follow-ups](cfo-vs-c-level-advisor/follow-ups/README.md) that led to version 1.5.1 | Claude Sonnet 5.5, Claude Opus 5.5 | 48 + 12 + 16 |
+| [`c-suite-vs-claude-skills/`](c-suite-vs-claude-skills/benchmark.md) | The CEO, CTO and CPTO seats (1.5.1) against `ceo-advisor`, `cto-advisor` and `cpo-advisor` from alirezarezvani/claude-skills on their 18 cases; a four-turn pushback test with no skill too; which of twelve skills an agent loads by itself; plus the [follow-ups](c-suite-vs-claude-skills/follow-ups/README.md) that led to version 1.5.2 | Claude Sonnet 5.5, Claude Opus 5.5 | 72 + 24 + 24 + 17 |
 
 ## Method
 
