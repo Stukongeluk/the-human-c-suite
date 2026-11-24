@@ -84,11 +84,12 @@ The fixes, verified against current sources:
 - the Dutch pay transparency dates (the minister said on 19 November 2026 that 1 January 2027 is no longer feasible), reporting per legal entity, Belgium's 2012 pay gap law and a plan measured in months, with the cost shown as pay withheld;
 - the Dutch consent right on home-working policy (Caterpillar, Booking.com), the German transfer rule, and announcing a proposal, not a decision, where representatives must consent;
 - leadership saying plainly that bad news (cuts, a pay gap, low trust) comes from its decisions;
-- the 500-word limit for someone handling their own situation now also covers an HR leader taking a plan to their own CEO or CFO, as in the other seats, and what is cut goes into a document handed over with the reply.
+- the 500-word limit for someone handling their own situation now also covers an HR leader taking a plan to their own CEO or CFO, as in the other seats, and what is cut goes into a document handed over with the reply;
+- in the return to office, options that take nothing away from people come first: fix the named problem directly, and make home working good with funded team days, a home-working allowance (€2.45 a day tax-free in the Netherlands in 2026) and proper equipment.
 
 The shared country notes gained Belgium, the Dutch home-working rulings and the German Federal Labour Court's April 2026 ruling that dismissals are void when the mass-dismissal notification is missing or early.
 
-Each round ran on Sonnet and was graded blind next to earlier answers to the same case. The web search budget was spent by then, and the Opus runs depend on live research, so Opus wasn't rerun; its draft had passed all 36 checks.
+Each round was graded blind next to earlier answers to the same case. Rounds 1 to 3 ran on Sonnet only: the web search budget was spent by then, and the Opus runs depend on live research. Opus's draft had passed all 36 checks. Round 4 ran on both models.
 
 | Round | Case | What ran | Checks (quality) | Reply words |
 |---|---|---|---|---|
@@ -97,10 +98,25 @@ Each round ran on Sonnet and was graded blind next to earlier answers to the sam
 | 1 | chro-layoff-selection-list | draft 2 / draft 1 / CEO seat | 6 (9) / 6 (8) / 4 (7) | 906 / 836 / 860 |
 | 2 | chro-pay-gap | draft 3 / draft 2 / draft 1 / CEO seat | 5 (7) / 6 (9) / 5 (7) / 4 (6) | 495 / 1002 / 976 / 509 |
 | 2 | chro-forced-ranking | draft 3 / draft 1 / CEO seat | 6 (9) / 6 (9) / 5 (7) | 493 / 969 / 689 |
-| 3 | chro-pay-gap | **1.6.0** / draft 3 / draft 2 | **6 (9)** / 5 (7) / 6 (8) | **488** / 495 / 1002 |
-| 3 | chro-forced-ranking | **1.6.0** / draft 3 / draft 1 | **6 (7)** / 6 (9) / 6 (8) | **461** / 493 / 969 |
+| 3 | chro-pay-gap | draft 4 / draft 3 / draft 2 | 6 (9) / 5 (7) / 6 (8) | 488 / 495 / 1002 |
+| 3 | chro-forced-ranking | draft 4 / draft 3 / draft 1 | 6 (7) / 6 (9) / 6 (8) | 461 / 493 / 969 |
 
-Draft 2 holds the fixes. Draft 3 adds the word limit: replies halved, but on the pay gap the shorter reply dropped how to test the 6% and lost a check. Version 1.6.0 moves what is cut into a handed-over document: on the pay gap it got full marks in 488 words, with a 904-word CFO note and plan. The leadership line landed: in round 1, draft 2 said plainly that the gap and the cuts were leadership's, where draft 1 hadn't. The 1.6.0 forced-ranking answer scored lower on quality partly because it ended with a stray file path, an artefact of the test harness.
+Draft 2 holds the fixes. Draft 3 adds the word limit: replies halved, but on the pay gap the shorter reply dropped how to test the 6% and lost a check. Draft 4 moves what is cut into a handed-over document: on the pay gap it got full marks in 488 words, with a 904-word CFO note and plan. The leadership line landed: in round 1, draft 2 said plainly that the gap and the cuts were leadership's, where draft 1 hadn't. Draft 4's forced-ranking answer scored lower on quality partly because it ended with a stray file path, an artefact of the test harness.
+
+### Round 4: support for home working
+
+A return to office can be softened without being humane: every answer so far protected remote contracts and wrote a proposal, but none put money or effort into making home working good. Draft 5 adds that option to the return-to-office guidance, with the Dutch and German figures. On Sonnet it still went straight to fewer office days, so version 1.6.0 adds one line to the seat itself: lead with the options that take nothing away from people. The grader got one extra check, whether an answer offers a concrete way to make home or hybrid work better (an allowance, equipment, funded team days), and graded six answers together, blind:
+
+| Model | Answer | Checks (quality) | Supports home working | Reply words |
+|---|---|---|---|---|
+| Sonnet | **1.6.0** | **5 (8)** | **yes** | 466 |
+| Sonnet | draft 1 | 3 (5) | no | 644 |
+| Opus | draft 5 | 6 (9) | yes | 487 |
+| Opus | draft 1 | 6 (8) | no | 455 |
+| Opus | CEO seat 1.5.2 | 4 (7) | no | 527 |
+| Opus | without a skill | 5 (7) | no | 1774 |
+
+Only the new versions offered home-working support. Sonnet's 1.6.0 answer led with a buddy and funded team days, then the €2.45 allowance and equipment, and priced the allowance at about €91,000 a year for 270 people against the cost of replacing those who leave. Opus's draft 5 started those measures on 1 March, because they need nobody's consent, and put team-agreed anchor days to the works councils as a proposal. Sonnet's 1.6.0 answer missed one check by leaving out the Dutch Flexible Working Act. Opus wasn't rerun with the final one-line change.
 
 ## Read these with care
 
@@ -110,8 +126,9 @@ Draft 2 holds the fixes. Draft 3 adds the word limit: replies halved, but on the
 - **Claude only.** The Gemini quota was used up, so this round has no Gemini runs.
 - **The web search budget ran out.** All agents in one turn share 200 searches. The graders of the main round ran out partway and checked the rest by opening the sources the answers cited; the follow-up graders could only fetch pages and use the vetted fact sheets. A few claims were left unverified rather than counted as errors; each `grading.json` says which.
 - **Graders vary.** The same answer got different grades in different rounds: draft 1's return-to-office answer passed 5 checks in the main round and 4 in round 1, and draft 2's pay-gap answer had no factual error in round 1 and one in round 3. Compare setups within one grading round, not across them.
-- **Version 1.6.0 was rerun on two cases only.** It is draft 2 plus the length and document rules; the return-to-office and layoff fixes were tested as draft 2. Its description was then shortened to fit the Agent Skills limit of 1,024 characters. The runs read `SKILL.md` directly, so that didn't affect them, but which prompts make an agent load the CHRO seat by itself hasn't been tested yet.
+- **Version 1.6.0 was rerun on one case.** It is draft 4 plus the home-working guidance and the line on options that take nothing away; the pay-gap and length fixes were tested as draft 4, the layoff fixes as draft 2. Opus last ran as draft 5, one line short of 1.6.0. Its description was then shortened to fit the Agent Skills limit of 1,024 characters. The runs read `SKILL.md` directly, so that didn't affect them, but which prompts make an agent load the CHRO seat by itself hasn't been tested yet.
 - **One rerun saved its reply one folder too high.** The file was moved into `outputs/` before grading; nothing else was changed.
+- **One check was added for round 4.** "Supports home working" is an extra check, not one of the six, and it was written after the gap was found, so it measures the fix rather than discovering it.
 - **The checks have known gaps.** The graders' notes in each `grading.json` list them, for example: no check on the Dutch consent right in the return-to-office case, a soft quota that still passes the forced-ranking checks, and bundled checks where one omission fails an otherwise strong answer. They are the starting point for the next round of test cases.
 
 Each run folder holds `reply.md`, any document the agent wrote, `grading.json` and `timing.json`. `benchmark.json` lists every run of the main round; [`follow-ups/`](follow-ups/) holds the three rounds, with their own `benchmark.json`.

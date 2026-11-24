@@ -13,10 +13,10 @@
 
 <p align="center">
   <a href="https://jimmynguyen.nl/projects/the-human-c-suite">
-    <img src="media/the-human-c-suite-preview.gif" width="270" alt="Animated preview: the CEO, CFO, CTO and CPTO agents get a memo to cut 20% of jobs with AI, push back on each other and agree on a plan with no layoffs">
+    <img src="media/the-human-c-suite-preview.gif" width="270" alt="Animated preview: the CEO, CFO, CTO, CPTO and CHRO agents get a memo to cut 20% of jobs with AI, push back on each other and agree on a plan with no layoffs">
   </a>
   <br>
-  <em>The CEO, CFO, CTO and CPTO seats get a "use AI, cut 20% of jobs" memo and land on a plan with no layoffs.<br>
+  <em>The five seats get a "use AI, cut 20% of jobs" memo and land on a plan with no layoffs.<br>
   <a href="https://jimmynguyen.nl/projects/the-human-c-suite">Watch the full video with sound</a>.</em>
 </p>
 

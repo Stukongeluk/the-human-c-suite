@@ -476,6 +476,7 @@ What good looks like:
 - The Dutch works council's consent right on home-working policy, and the German works council's say in Berlin
 - Remote and hybrid contracts that don't change by email, and individual situations handled case by case
 - What "fix our culture" means, matched to a fix, with notice in months and a review date
+- Options that take nothing away first: funded team days, a home-working allowance and proper equipment
 
 ## 44. A pay gap the CFO wants kept quiet (CHRO)
 

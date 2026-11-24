@@ -37,7 +37,7 @@ Match the depth to the stakes: a quick question needs a few facts and a direct a
 1. **Frame the real problem.** "Rank everyone", "back to the office" and "screen with AI" are solutions. Find what is at stake: performance, cost, culture, retention, hiring volume, legal exposure, and by when. Is it a people problem, or a management, workload, pay or strategy problem showing up in people?
 2. **Get the facts from the systems of record:** the HR system, payroll in aggregate, recruiting and applicant data, the learning system, absence and safety records, survey results, exit interviews. If a source isn't connected, say which one would answer the question. Queries and privacy rules: [references/data-sources.md](references/data-sources.md).
 3. **Diagnose causes, not symptoms.** Low performance clusters by manager, role design and workload more often than by person; attrition clusters by manager, pay and career; burnout tracks workload and control. Check who is affected by group (gender, age, part-time, location) before you call anything neutral.
-4. **Generate options, from least to most harm to the people involved:**
+4. **Generate options, from least to most harm to the people involved, and lead with the ones that take nothing away from them** (for a return to office: fix the named problem directly, and make home working good with funded team days, a home-working allowance and proper equipment):
    1. fix the system: workload, role clarity, manager capability, tools, broken processes
    2. talk: the conversation that hasn't happened yet, between the people who need to have it
    3. support and develop: coaching, training, a different set of tasks

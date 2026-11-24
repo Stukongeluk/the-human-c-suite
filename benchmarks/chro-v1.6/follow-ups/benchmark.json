@@ -17,7 +17,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -34,7 +35,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -53,7 +55,8 @@
   "document_words": 0,
   "factual_errors": true,
   "skill_leak": false,
-  "owns_result": false
+  "owns_result": false,
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -75,7 +78,8 @@
   "document_words": 592,
   "factual_errors": true,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -95,7 +99,8 @@
   "document_words": 615,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -114,7 +119,8 @@
   "document_words": 664,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -131,7 +137,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": false
+  "owns_result": false,
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -148,7 +155,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-1",
@@ -168,7 +176,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-2",
@@ -187,7 +196,8 @@
   "document_words": 0,
   "factual_errors": true,
   "skill_leak": false,
-  "owns_result": false
+  "owns_result": false,
+  "supports_home_work": null
  },
  {
   "round": "round-2",
@@ -204,7 +214,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-2",
@@ -223,7 +234,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-2",
@@ -243,7 +255,8 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-2",
@@ -260,7 +273,8 @@
   "document_words": 1817,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-2",
@@ -277,7 +291,8 @@
   "document_words": 1867,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-2",
@@ -296,7 +311,8 @@
   "document_words": 1171,
   "factual_errors": true,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-3",
@@ -315,13 +331,14 @@
   "document_words": 0,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-3",
   "model": "sonnet",
   "case": "chro-pay-gap",
-  "config": "the-human-chro-1.6.0",
+  "config": "the-human-chro-draft-4",
   "total_tokens": 96845,
   "duration_seconds": 52.5,
   "passed": 6,
@@ -332,7 +349,8 @@
   "document_words": 904,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-3",
@@ -349,7 +367,8 @@
   "document_words": 0,
   "factual_errors": true,
   "skill_leak": false,
-  "owns_result": true
+  "owns_result": true,
+  "supports_home_work": null
  },
  {
   "round": "round-3",
@@ -366,7 +385,8 @@
   "document_words": 1867,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-3",
@@ -383,13 +403,14 @@
   "document_words": 1817,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
  },
  {
   "round": "round-3",
   "model": "sonnet",
   "case": "chro-forced-ranking",
-  "config": "the-human-chro-1.6.0",
+  "config": "the-human-chro-draft-4",
   "total_tokens": 116664,
   "duration_seconds": 63.1,
   "passed": 6,
@@ -400,6 +421,126 @@
   "document_words": 1455,
   "factual_errors": false,
   "skill_leak": false,
-  "owns_result": "n/a"
+  "owns_result": "n/a",
+  "supports_home_work": null
+ },
+ {
+  "round": "round-4",
+  "model": "sonnet",
+  "case": "chro-rto-mandate",
+  "config": "the-human-chro-1.6.0",
+  "total_tokens": 92713,
+  "duration_seconds": 47.9,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG)."
+  ],
+  "overall_quality": 8,
+  "reply_words": 466,
+  "document_words": 707,
+  "factual_errors": false,
+  "skill_leak": false,
+  "owns_result": true,
+  "supports_home_work": true
+ },
+ {
+  "round": "round-4",
+  "model": "sonnet",
+  "case": "chro-rto-mandate",
+  "config": "the-human-chro-draft-1",
+  "total_tokens": 95483,
+  "duration_seconds": 45.6,
+  "passed": 3,
+  "total": 6,
+  "failed": [
+   "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+   "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+   "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date."
+  ],
+  "overall_quality": 5,
+  "reply_words": 644,
+  "document_words": 615,
+  "factual_errors": false,
+  "skill_leak": false,
+  "owns_result": false,
+  "supports_home_work": false
+ },
+ {
+  "round": "round-4",
+  "model": "opus",
+  "case": "chro-rto-mandate",
+  "config": "the-human-ceo-1.5.2",
+  "total_tokens": 153361,
+  "duration_seconds": 401.2,
+  "passed": 4,
+  "total": 6,
+  "failed": [
+   "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+   "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date."
+  ],
+  "overall_quality": 7,
+  "reply_words": 527,
+  "document_words": 700,
+  "factual_errors": false,
+  "skill_leak": false,
+  "owns_result": true,
+  "supports_home_work": false
+ },
+ {
+  "round": "round-4",
+  "model": "opus",
+  "case": "chro-rto-mandate",
+  "config": "without-skill",
+  "total_tokens": 117455,
+  "duration_seconds": 324.2,
+  "passed": 5,
+  "total": 6,
+  "failed": [
+   "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date."
+  ],
+  "overall_quality": 7,
+  "reply_words": 1774,
+  "document_words": 0,
+  "factual_errors": false,
+  "skill_leak": false,
+  "owns_result": false,
+  "supports_home_work": false
+ },
+ {
+  "round": "round-4",
+  "model": "opus",
+  "case": "chro-rto-mandate",
+  "config": "the-human-chro-draft-5",
+  "total_tokens": 131327,
+  "duration_seconds": 301.1,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "overall_quality": 9,
+  "reply_words": 487,
+  "document_words": 2553,
+  "factual_errors": false,
+  "skill_leak": false,
+  "owns_result": true,
+  "supports_home_work": true
+ },
+ {
+  "round": "round-4",
+  "model": "opus",
+  "case": "chro-rto-mandate",
+  "config": "the-human-chro-draft-1",
+  "total_tokens": 154756,
+  "duration_seconds": 435.8,
+  "passed": 6,
+  "total": 6,
+  "failed": [],
+  "overall_quality": 8,
+  "reply_words": 455,
+  "document_words": 1905,
+  "factual_errors": false,
+  "skill_leak": false,
+  "owns_result": false,
+  "supports_home_work": false
  }
 ]

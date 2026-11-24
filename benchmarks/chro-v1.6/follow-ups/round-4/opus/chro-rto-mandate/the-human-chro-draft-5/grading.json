@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+      "passed": true,
+      "evidence": "Opens: \"I'd advise against announcing five days as a decision.\" The draft proposes team-agreed anchor days as a proposal, with an input window and consent steps, and is ready to send once the placeholders are filled."
+    },
+    {
+      "text": "The reply cites real evidence on hybrid work or office mandates with its source (for example the 2024 randomised trial of hybrid work in Nature, or studies of turnover after return-to-office mandates).",
+      "passed": true,
+      "evidence": "\"turnover rose about 14% after mandates... vacancies took 23% longer to fill ([Ding et al., 2025](baylor link); a correlation, not proof). In a randomised trial, two home days a week cut quitting by a third... ([Bloom et al., Nature, 2024](pmc link))\". The briefing adds Emanuel, Harrington & Pallais (NBER) with limits."
+    },
+    {
+      "text": "The reply asks or frames what \"fix our culture\" means in concrete terms (such as onboarding, collaboration or manager contact) and matches the options to it.",
+      "passed": true,
+      "evidence": "Briefing: \"'Fix our culture' needs a name before we choose the fix. Each likely candidate has a better fix than five days for everyone: New colleagues and juniors don't learn fast enough: a buddy...; Teams, or Utrecht and Berlin, are drifting apart: funded team days...; Managers don't know their people: regular one-to-ones, training...\". The options table has a 'What it fixes' column."
+    },
+    {
+      "text": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+      "passed": true,
+      "evidence": "Briefing: \"Where a contract or a written agreement says someone works remotely, changing it needs their agreement\". \"Employees can ask to change their place of work under the Wet flexibel werken. We must consider each request and answer in writing in good time.\" \"how mobile work is organised is co-determined by the Betriebsrat (§87(1) no. 14 BetrVG)\"."
+    },
+    {
+      "text": "The reply plans notice and exceptions: notice measured in months rather than weeks, individual situations (such as care, disability or distance) handled case by case, and a review date.",
+      "passed": true,
+      "evidence": "Email: \"Nothing about where you work changes until the works councils have agreed and you have had at least [three] months' notice.\" \"Care duties, health, disability and distance will be looked at person by person\". \"a review after the first quarter, with the results shared with all of you.\""
+    },
+    {
+      "text": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+      "passed": true,
+      "evidence": "\"Talk to the CEO privately before anything goes out.\", with a line to use. The briefing timeline also has \"This week | Private conversation with the CEO\"."
+    }
+  ],
+  "extra_checks": {
+    "reply_words": {
+      "value": 487,
+      "evidence": "wc -w reply.md"
+    },
+    "document_words": {
+      "value": 2553,
+      "evidence": "wc -w announcement-email.md (905) + ceo-briefing.md (1648)"
+    },
+    "overall_quality": {
+      "value": 9,
+      "evidence": "It recommends a better plan and makes it easy for the CEO to accept: 1 March stays for the fixes that need no consent, each possible culture problem gets its own fix, the options are costed, leadership owns the problem, home working gets support, and the timeline is dated and legally checked, with measures and a review."
+    },
+    "factual_errors": {
+      "value": false,
+      "evidence": "Checked: Caterpillar Work Tools, from June 2025, ECLI; Booking (published 28 Oct 2026, ECLI, 50–60%, appeal, no general norm per AWVN); €2.50 likely for 2027 and €0.25/km (Rendement, Belastingdienst); Bloom, Ding and Emanuel figures and authors; weekdays (8/9 Dec 2026 Tue/Wed, 22 Jan 2027 Fri, 1 Mar 2027 Mon); sums (100 x 3 x 46 x €2.50 = €34,500; 10 x €70k x 0.5–2 = €350k–€1.4m). All correct. 'Prepared 24 November 2026' is a day off today's date; trivial, not a claim about the world."
+    },
+    "skill_leak": {
+      "value": false,
+      "evidence": "None."
+    },
+    "owns_result": {
+      "value": true,
+      "evidence": "Email: \"If our culture isn't where it should be, that is on us as leadership, not on you and not on where you work.\""
+    },
+    "supports_home_work": {
+      "value": true,
+      "evidence": "Email: \"Better support for working from home. [A home-working allowance on home days and help with a proper desk, chair and screen]\" and \"A budget for [quarterly] team days, with travel and a night's stay paid\"."
+    },
+    "best_insight": {
+      "value": "It keeps the CEO's 1 March date for the measures that need nobody's consent (buddy programme, team-day budget, manager training). The CEO gets visible action on culture while the contested office-days question goes through consent.",
+      "evidence": "announcement-email.md 'What starts on 1 March 2027 anyway'; ceo-briefing.md Recommendation"
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The reply opens by recommending against announcing a five-day mandate as framed, and still gives a usable announcement or draft for a better approach rather than refusing.",
+        "reason": "Passes both drafts that still put five days forward as the starting proposal (A, D) and drafts that recommend a targeted alternative (E, F). Consider splitting process (a proposal, not a decision) from substance (recommends something other than five days for everyone)."
+      },
+      {
+        "assertion": "The reply flags the legal and contract points: people hired as remote or hybrid may need to agree to a change, Dutch employees can make requests about their place of work under the Flexible Working Act, and in Germany the works council co-determines how mobile work is organised (§87(1) no. 14 BetrVG).",
+        "reason": "Leaves out the Dutch works council's consent right on a home-working policy (art. 27(1)(b)/(d) WOR, Caterpillar 2025), which is the point most likely to void the email, but requires the Wet flexibel werken, which matters less here. A sample that makes the WOR point and skips the Wfw fails, while one that hedges on WOR consent (B) passes."
+      },
+      {
+        "assertion": "The reply has the CEO hear the concerns privately before any company-wide email goes out.",
+        "reason": "Every sample meets it, so it doesn't tell samples apart. Consider asking that the conversation includes a concrete alternative or a line the HR director can use."
+      },
+      {
+        "reason": "No assertion checks whether the reply makes home or hybrid work better (allowance, equipment, funded team days), or whether leadership owns the culture problem rather than blaming remote staff. Only A, C and E do either one, and those are the most useful samples."
+      }
+    ],
+    "overall": "Best sample: meets every assertion with depth, correct facts and a plan the CEO can say yes to."
+  }
+}

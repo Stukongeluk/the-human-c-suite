@@ -76,7 +76,7 @@ Before any AI tool screens, scores, schedules, monitors or decides about candida
 
 **The problem we are solving:** <onboarding, collaboration, culture, cost of space; with the evidence for it>
 **What we know:** <attendance today, survey results, attrition, time to fill, what research says>
-**Options:** <current arrangement; team-agreed anchor days; a set minimum; full office>, each with what it fixes, who is affected and the expected effect on retention and hiring
+**Options:** <fix the named problem directly (onboarding, funded team days); make home working good (home-working allowance, equipment, reachability agreements); team-agreed anchor days; a set minimum; full office>, each with what it fixes, who is affected, what it costs and the expected effect on retention and hiring
 **Recommendation and why**
 **Legal and contracts:** <requests to change place of work, contracts that say remote, works council rights, disability adjustments>
 **How we decide team by team:** <who agrees anchor days, by when>

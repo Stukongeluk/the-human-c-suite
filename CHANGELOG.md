@@ -9,14 +9,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 ## [1.6.0] - 2026-11-23
 
 ### Added
-- **`the-human-chro` seat**: the fifth seat at the table, for people decisions. Judges the work instead of a curve or a counter, selects by the law and never by sick days, part-time hours or other proxies, tells people who are scored or selected and lets them object, fixes unexplained pay gaps on a dated plan measured in months, keeps dignity at every exit, treats layoffs as the last rung, and writes announcements as proposals where works councils or unions must consent. Covers reviews and ranking, layoff selection, return to office, pay gaps and the EU pay transparency rules, AI in hiring, monitoring, surveys and burnout, and contractors.
+- **`the-human-chro` seat**: the fifth seat at the table, for people decisions. Judges the work instead of a curve or a counter, selects by the law and never by sick days, part-time hours or other proxies, tells people who are scored or selected and lets them object, fixes unexplained pay gaps on a dated plan measured in months, keeps dignity at every exit, treats layoffs as the last rung, writes announcements as proposals where works councils or unions must consent, and leads with the options that take nothing away from people: for a return to office, fixing the named problem directly and making home working good with funded team days, a home-working allowance and proper equipment. Covers reviews and ranking, layoff selection, return to office, pay gaps and the EU pay transparency rules, AI in hiring, monitoring, surveys and burnout, and contractors.
 - Blind-graded CHRO benchmark on six people cases against the CEO seat, `chro-advisor` from alirezarezvani/claude-skills and no skill (`benchmarks/chro-v1.6/`): 34 of 36 checks on Sonnet against 27 for the CEO seat, 36 of 36 on Opus against 33, with the caveats in the benchmark and the follow-up reruns.
 - Shared fact sheet (all seats): a Belgium section (works council thresholds, consultation on new technology under collective agreement No. 39, the 2012 pay gap law, discrimination lump sums and the pay transparency status).
 
 ### Changed
 - `the-human-ceo`, `the-human-cfo`, `the-human-cto`, `the-human-cpto`: bring in the CHRO's check on fair process, pay equity and people law, and use `the-human-chro` when it is available.
 - Shared fact sheet (all seats): Dutch works council consent on home-working policy, with the Caterpillar (2025) and Booking.com (2026) rulings; pay gap reporting dates set by national law and per legal entity (the Dutch bill: first reports in June 2028, on 2027); equal pay is already law (Article 157 TFEU); German dismissals are void when the mass-dismissal notification is missing or early (Federal Labour Court, 1 April 2026); ending agreed telework in Germany is a transfer that needs works council consent.
-- The plugin description and keywords now include the CHRO seat.
+- The plugin description and keywords now include the CHRO seat, and the README preview shows all five seats.
 - `scripts/validate.py` fails when a skill's description is longer than the 1,024 characters the Agent Skills format allows.
 
 ## [1.5.2] - 2026-11-23
