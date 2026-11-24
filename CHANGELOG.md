@@ -6,6 +6,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+## [1.6.1] - 2026-11-24
+
 ### Added
 - Trigger test of the five descriptions (`benchmarks/triggers-v1.6/`): 90 messages against the seats and 22 competing skills on Sonnet and Opus. The CEO, CFO and CHRO were picked for 58 to 60 of their 60 requests, the CTO for 55 (and a seat for all 60), and no routine near-miss loaded a seat. The CPTO, at 45 of 60, got a new description; on a retest it rose from 30 to 40 of 52 with no new false loads.
 
