@@ -41,9 +41,11 @@ A seat loads on its own when a request matches. You can also call one by name, f
 
 On Claude Code before 2.1.275, add the marketplace first with `/plugin marketplace add Stukongeluk/the-human-c-suite`, then run `/plugin install the-human-c-suite@the-human-c-suite`.
 
-## What this plugin contains and runs
+## What this plugin contains and connects to
 
-Only skills: Markdown instructions and reference files. There are no hooks, MCP servers, commands, agents or scripts, and the plugin sends nothing anywhere by itself. When a seat needs facts, it uses the tools your session already has, such as the connectors you have connected (Jira, a data warehouse, finance or HR systems) and web search. Every seat is read-only by default: it changes nothing in your systems and sends no messages to staff without your explicit approval.
+Five skills (Markdown instructions and reference files) and a list of official, vendor-hosted MCP servers: Atlassian, Linear, Asana, monday.com, ClickUp, Notion, GitHub (read-only), PagerDuty, Datadog, BigQuery, Snowflake, Databricks, Amplitude, Pendo, Intercom, HubSpot, Microsoft 365 and Google Drive. [CONNECTORS.md](CONNECTORS.md) lists them, with how to keep each one read-only.
+
+None of the servers connects until you sign in to it. Once you do, Claude reads data from that service with your own account and permissions, and the data passes only between Claude and that vendor. There are no hooks, commands, agents or scripts, and the plugin collects and sends nothing by itself ([privacy](PRIVACY.md)). The seats also use web search and any other connectors your session already has. Every seat is read-only by default: it changes nothing in your systems and sends no messages to staff without your explicit approval.
 
 ## More
 

@@ -130,7 +130,9 @@ the-human-c-suite/
 ├── .claude-plugin/marketplace.json     # Claude Code plugin marketplace (installs all five skills)
 ├── plugins/the-human-c-suite/          # the plugin: what people install
 │   ├── .claude-plugin/plugin.json      # plugin manifest (name, version, description)
+│   ├── .mcp.json                       # official, vendor-hosted MCP servers (see CONNECTORS.md)
 │   ├── README.md                       # the plugin's own README, shown in plugin listings
+│   ├── CONNECTORS.md, PRIVACY.md       # which systems it can connect to, and what happens to your data
 │   └── skills/
 │       ├── the-human-ceo/              # SKILL.md, references/
 │       ├── the-human-cfo/
@@ -170,7 +172,7 @@ You can also call one directly: `/the-human-cto` (plain skill) or `/the-human-c-
 
 ### Connect your company's tools
 
-The seats work best when they can read your real systems. Without them, each seat tells you which data it needs and which connector would reach it. Official, vendor-maintained MCP servers and Claude connectors worth connecting (checked November 2026):
+The seats work best when they can read your real systems. Without them, each seat tells you which data it needs and which connector would reach it. The Claude Code plugin comes with these official, vendor-hosted MCP servers already listed (GitHub on its read-only URL); none connects until you sign in to it. See [CONNECTORS.md](plugins/the-human-c-suite/CONNECTORS.md) for the list and [PRIVACY.md](plugins/the-human-c-suite/PRIVACY.md) for what happens to your data. Official, vendor-maintained MCP servers and Claude connectors worth connecting (checked November 2026):
 
 | Area | Connectors |
 |---|---|

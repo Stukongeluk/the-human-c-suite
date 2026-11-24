@@ -9,6 +9,7 @@
   },
   "homepage": "https://jimmynguyen.nl/projects/the-human-c-suite",
   "repository": "https://github.com/Stukongeluk/the-human-c-suite",
+  "privacyPolicyUrl": "https://github.com/Stukongeluk/the-human-c-suite/blob/main/plugins/the-human-c-suite/PRIVACY.md",
   "license": "MIT",
   "keywords": [
     "leadership",

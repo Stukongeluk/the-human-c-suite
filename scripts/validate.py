@@ -9,7 +9,8 @@ Checks:
   3. The plugin folder meets the Claude plugin directory's file rules: a README
      of at least 40 words outside code blocks, a LICENSE, at most 512 files,
      only text or image files, nothing but images over 256 KiB, no OS clutter
-     and no test cases (those live in evals/ at the repository root).
+     and no test cases (those live in evals/ at the repository root); every
+     MCP server in .mcp.json is a remote https server without credentials.
   4. Every skill in the plugin has a SKILL.md with required frontmatter fields
      and a metadata.version matching the plugin version, and every folder in
      evals/ belongs to a skill.
@@ -173,6 +174,23 @@ def main() -> int:
             errors.append(f"{rel_path}: not a text or image file")
         elif path.stat().st_size > MAX_FILE_BYTES:
             errors.append(f"{rel_path}: {path.stat().st_size // 1024} KiB; keep files under 256 KiB")
+
+    mcp_file = PLUGIN_DIR / ".mcp.json"
+    if mcp_file.exists():
+        mcp_rel = mcp_file.relative_to(ROOT)
+        try:
+            servers = json.loads(mcp_file.read_text(encoding="utf-8")).get("mcpServers", {})
+        except Exception as exc:
+            errors.append(f"{mcp_rel}: invalid JSON ({exc})")
+            servers = {}
+        for name, server in servers.items():
+            url = server.get("url")
+            if server.get("type") != "http" or url is None:
+                errors.append(f"{mcp_rel}: {name!r} must be a remote server with type 'http' and a url")
+            elif url and not url.startswith("https://"):
+                errors.append(f"{mcp_rel}: {name!r} url must be https:// (or empty for a server without a fixed address)")
+            if server.get("headers") or server.get("command"):
+                errors.append(f"{mcp_rel}: {name!r} must not carry headers or a local command")
 
     # 4. Validate each skill
     skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir())
