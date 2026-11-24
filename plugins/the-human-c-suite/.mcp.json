@@ -68,10 +68,6 @@
       "type": "http",
       "url": "https://mcp.hubspot.com/anthropic"
     },
-    "microsoft-365": {
-      "type": "http",
-      "url": "https://microsoft365.mcp.claude.com/mcp"
-    },
     "google-drive": {
       "type": "http",
       "url": "https://drivemcp.googleapis.com/mcp/v1"

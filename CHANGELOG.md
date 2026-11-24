@@ -6,6 +6,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Removed
+- The Microsoft 365 entry in the plugin's `.mcp.json`. Its address is hosted by Anthropic, and the Claude plugin directory only accepts Anthropic-hosted addresses from verified organisations. Use Claude's own Microsoft 365 connector instead. `scripts/validate.py` now rejects Anthropic-hosted addresses and custom sign-in settings in `.mcp.json`.
+
 ## [1.7.0] - 2026-11-24
 
 ### Added

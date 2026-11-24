@@ -43,7 +43,7 @@ On Claude Code before 2.1.275, add the marketplace first with `/plugin marketpla
 
 ## What this plugin contains and connects to
 
-Five skills (Markdown instructions and reference files) and a list of official, vendor-hosted MCP servers: Atlassian, Linear, Asana, monday.com, ClickUp, Notion, GitHub (read-only), PagerDuty, Datadog, BigQuery, Snowflake, Databricks, Amplitude, Pendo, Intercom, HubSpot, Microsoft 365 and Google Drive. [CONNECTORS.md](CONNECTORS.md) lists them, with how to keep each one read-only.
+Five skills (Markdown instructions and reference files) and a list of official, vendor-hosted MCP servers: Atlassian, Linear, Asana, monday.com, ClickUp, Notion, GitHub (read-only), PagerDuty, Datadog, BigQuery, Snowflake, Databricks, Amplitude, Pendo, Intercom, HubSpot and Google Drive. [CONNECTORS.md](CONNECTORS.md) lists them, with how to keep each one read-only.
 
 None of the servers connects until you sign in to it. Once you do, Claude reads data from that service with your own account and permissions, and the data passes only between Claude and that vendor. There are no hooks, commands, agents or scripts, and the plugin collects and sends nothing by itself ([privacy](PRIVACY.md)). The seats also use web search and any other connectors your session already has. Every seat is read-only by default: it changes nothing in your systems and sends no messages to staff without your explicit approval.
 

@@ -26,6 +26,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
@@ -191,6 +192,14 @@ def main() -> int:
                 errors.append(f"{mcp_rel}: {name!r} url must be https:// (or empty for a server without a fixed address)")
             if server.get("headers") or server.get("command"):
                 errors.append(f"{mcp_rel}: {name!r} must not carry headers or a local command")
+            host = (urlparse(url).hostname or "").lower() if url else ""
+            if re.search(r"(^|\.)(claude\.(com|ai)|anthropic\.com)$", host):
+                errors.append(
+                    f"{mcp_rel}: {name!r} uses an Anthropic-hosted address ({host}); the plugin "
+                    "directory accepts those only from verified organisations"
+                )
+            if server.get("oauth") or server.get("authServerMetadataUrl"):
+                errors.append(f"{mcp_rel}: {name!r} must not set its own sign-in (oauth, clientId or authServerMetadataUrl)")
 
     # 4. Validate each skill
     skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir())
