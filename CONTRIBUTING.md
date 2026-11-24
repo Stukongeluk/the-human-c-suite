@@ -11,7 +11,7 @@ Pushback is the point. Every seat ends with *"what am I missing?"* — and the s
 
 ## Working with shared files
 
-Each folder under `skills/` is designed to work on its own (for single-skill zip installs). Files shared across multiple seats live once in `shared/` (and marked blocks in `shared/blocks/`), then get copied into each skill.
+Each folder under `plugins/the-human-c-suite/skills/` is designed to work on its own (for single-skill zip installs). Files shared across multiple seats live once in `shared/` (and marked blocks in `shared/blocks/`), then get copied into each skill.
 
 Always edit the canonical copy in `shared/`, then run:
 
@@ -33,9 +33,10 @@ CI runs `python3 scripts/validate.py` on every pull request and fails if any ski
 Before opening a pull request that changes skill behaviour, check that the relevant seat still passes its evals. With Claude Code (note: these are real, billed model runs):
 
 ```bash
-cd skills/the-human-cto
-claude plugin eval . --allow-tools Write,Edit,Bash
+python3 scripts/run_evals.py the-human-cto -- --allow-tools Write,Edit,Bash
 ```
+
+The test cases live in `evals/<seat>/`, outside the plugin, so installs stay small and the plugin stays within the Claude plugin directory's file limits. The script copies the seat and its cases into `dist/eval-runs/<seat>/` and runs `claude plugin eval` there; add new cases to `evals/<seat>/`, never inside the skill folder.
 
 You can also try prompts by hand from [examples/test-prompts.md](examples/test-prompts.md).
 
@@ -48,7 +49,7 @@ python3 scripts/package_skills.py
 ```
 
 To cut a new release:
-1. Bump `"version"` in `.claude-plugin/marketplace.json` and `metadata.version` in every `skills/*/SKILL.md`.
+1. Bump `"version"` in `.claude-plugin/marketplace.json`, in `plugins/the-human-c-suite/.claude-plugin/plugin.json` and `metadata.version` in every `plugins/the-human-c-suite/skills/*/SKILL.md`.
 2. Add a matching `## [X.Y.Z] - YYYY-MM-DD` section to [CHANGELOG.md](CHANGELOG.md).
 3. Run `python3 scripts/validate.py --tag vX.Y.Z`.
 4. Commit, tag `vX.Y.Z`, and push the tag — GitHub Actions automatically builds the clean `.zip` archives and publishes the GitHub Release.

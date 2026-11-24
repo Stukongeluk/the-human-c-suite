@@ -15,7 +15,7 @@ How does `the-human-cfo` 1.5.0 compare with the closest open-source skill we cou
 
 ## Method
 
-- **Cases.** The six cases in [`skills/the-human-cfo/evals/`](../../skills/the-human-cfo/evals/), six checks each: an 8% opex cut for every cost centre, a model for 120 redundancies in Germany and the Netherlands, a bonus paid 100% on adjusted EBITDA, a buyback to rescue EPS guidance, a covenant breach with 10% job cuts on the table, and AI to replace 30% of an insurer's back office.
+- **Cases.** The six cases in [`evals/the-human-cfo/`](../../evals/the-human-cfo/), six checks each: an 8% opex cut for every cost centre, a model for 120 redundancies in Germany and the Netherlands, a bonus paid 100% on adjusted EBITDA, a buyback to rescue EPS guidance, a covenant breach with 10% job cuts on the table, and AI to replace 30% of an insurer's back office.
 - **Runs.** Each run was a fresh Claude Code subagent (Claude Sonnet 5.5 or Claude Opus 5.5) with exactly the same brief for both skills. Each skill sat in a folder with all of its sibling skills, so `cfo-advisor` could open the `agent-protocol` skill it links to for its output format. The brief:
 
 ```text

@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validate skills and packaging
+    name: Validate skills, plugin and packaging
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,3 +26,15 @@ jobs:
 
       - name: Dry-run skill packaging
         run: python3 scripts/package_skills.py --out dist
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate the marketplace and plugin with Claude Code
+        env:
+          CLAUDE_CODE_VERSION: "2.1.331"
+        run: |
+          npx --yes "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}" plugin validate . --strict
+          npx --yes "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}" plugin validate plugins/the-human-c-suite --profile directory --strict

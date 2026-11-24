@@ -6,7 +6,7 @@ The question: does a dedicated CFO seat give better money advice than the CEO se
 
 ## The cases
 
-All anonymous and generic; the checks are in [`skills/the-human-cfo/evals/`](../../skills/the-human-cfo/evals/).
+All anonymous and generic; the checks are in [`evals/the-human-cfo/`](../../evals/the-human-cfo/).
 
 | Case | The ask |
 |---|---|

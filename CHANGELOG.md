@@ -6,6 +6,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Added
+- Trigger test of the five descriptions (`benchmarks/triggers-v1.6/`): 90 messages against the seats and 22 competing skills on Sonnet and Opus. The CEO, CFO and CHRO were picked for 58 to 60 of their 60 requests, the CTO for 55 (and a seat for all 60), and no routine near-miss loaded a seat. The CPTO, at 45 of 60, got a new description; on a retest it rose from 30 to 40 of 52 with no new false loads.
+
+### Changed
+- The plugin now lives in its own folder, `plugins/the-human-c-suite/`, with a `.claude-plugin/plugin.json` manifest, a README, a licence and an icon, so it can be submitted to the Claude plugin directory. The marketplace points at that folder, so `/plugin install` works as before. To install the seats as plain skills, copy them from `plugins/the-human-c-suite/skills/`.
+- The test cases moved from `skills/<seat>/evals/` to `evals/<seat>/`, outside the plugin. Installs now bring only the skills, and the plugin holds 90 files instead of almost 700, within the directory's limit of 512. `scripts/run_evals.py` runs a seat's cases with `claude plugin eval`.
+- `the-human-cpto`: the description now names falling NPS, churn or adoption, so customer-outcome questions reach the CPTO instead of a generic metrics skill. To stay within 1,024 characters it no longer lists AI tooling and spend, which the CTO covers.
+- `scripts/validate.py` also checks the plugin manifest against the marketplace (name, version and source) and the directory's file rules (README, licence, file count, file types and sizes, no test cases inside the plugin). CI also runs Claude Code's `claude plugin validate` on the marketplace and, with the directory profile, on the plugin.
+
 ## [1.6.0] - 2026-11-23
 
 ### Added

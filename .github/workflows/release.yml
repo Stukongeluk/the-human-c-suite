@@ -46,7 +46,7 @@ jobs:
           )
           body = match.group(1).strip() if match else f"Release {tag}."
 
-          seats = sorted(p.name for p in Path("skills").iterdir() if p.is_dir())
+          seats = sorted(p.name for p in Path("plugins/the-human-c-suite/skills").iterdir() if p.is_dir())
           seat_rows = "\n".join(
               f"| `{seat}-{tag}.zip` | Upload to Claude apps (**Customize > Skills > Upload a skill**) |"
               for seat in seats
@@ -54,7 +54,7 @@ jobs:
 
           downloads = (
               "### Downloads\n\n"
-              "All archives exclude `evals/` and are ready to install directly.\n\n"
+              "All archives hold only the skills (no test cases) and are ready to install directly.\n\n"
               "| File | Use it for |\n"
               "|---|---|\n"
               f"| `the-human-c-suite-{tag}.zip` | All {len(seats)} seats — unzip into `.agents/skills/` (Antigravity) or `~/.claude/skills/` (Claude Code) |\n"

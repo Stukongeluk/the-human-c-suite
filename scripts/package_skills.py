@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Package each skill and the full C-Suite into clean, upload-ready zip archives.
 
-Excludes evals/ and OS/Python clutter so the archives can be uploaded directly
+Excludes test cases and OS/Python clutter so the archives can be uploaded directly
 to Claude apps (Customize > Skills) or unzipped into an agent's skills folder
 (such as .agents/skills/ in Antigravity or ~/.claude/skills/ in Claude Code).
 
@@ -18,7 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
-SKILLS_DIR = ROOT / "skills"
+SKILLS_DIR = ROOT / "plugins" / "the-human-c-suite" / "skills"
 
 EXCLUDED_DIRS = {"evals", "__pycache__"}
 EXCLUDED_FILES = {".DS_Store", "Thumbs.db"}
@@ -71,7 +71,7 @@ def main() -> int:
 
     skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir())
     if not skill_dirs:
-        print("No skill directories found under skills/", file=sys.stderr)
+        print(f"No skill directories found under {SKILLS_DIR.relative_to(ROOT)}/", file=sys.stderr)
         return 1
 
     created: list[Path] = []

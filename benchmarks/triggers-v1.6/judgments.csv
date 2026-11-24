@@ -1,0 +1,805 @@
+round,model,shuffle,area,expected,message,skill_chosen
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,cfo,none,Format this trial balance as a clean table.,none
+"1.6.0 descriptions, full set",opus,s0,chro,none,Turn this list of new hires into an onboarding checklist.,none
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Model the savings from closing our Leeds site with 120 redundancies.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,"I need quick wins for the board meeting on Thursday, revenue is flat.",the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,Leadership wants monitoring software on every laptop to track productivity. Thoughts?,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,Design our return-to-office policy: three days a week in the office.,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,The PE owner wants a dividend recap. Walk me through the risks.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,ceo,none,Summarise this 30-page board deck into five bullets.,none
+"1.6.0 descriptions, full set",opus,s0,chro,none,Write a job description for a senior backend engineer.,none
+"1.6.0 descriptions, full set",opus,s0,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,How do we run calibration for annual reviews fairly?,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,Our engagement survey shows burnout scores at an all-time high. What next?,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,cfo,none,What's the difference between a 10-K and a 10-Q?,none
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,cfo,none,Reconcile these two CSV exports of invoices and flag mismatches.,xlsx
+"1.6.0 descriptions, full set",opus,s0,chro,none,What does FMLA stand for?,none
+"1.6.0 descriptions, full set",opus,s0,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, full set",opus,s0,ceo,none,Explain what a SPAC is.,none
+"1.6.0 descriptions, full set",opus,s0,cto,none,"Our API latency spiked at 14:00, help me read these logs.",engineering:debug
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Every cost centre has to cut opex by 8% next year. Help me allocate it.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,Our COO says the AI is never wrong and wants to drop human review of all customer emails. Thoughts?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,chro,none,Plan the agenda for our team offsite in Lisbon.,none
+"1.6.0 descriptions, full set",opus,s0,ceo,none,Write a LinkedIn post announcing our Series B round.,marketing:content-creation
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,Our gender pay gap is 14%. What do we do before the EU pay transparency deadline?,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,ceo,none,Make a slide template for our quarterly business review.,pptx
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,"Can we use AI to screen CVs for the 2,000 applications we get each month?",the-human-chro
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Our bank covenant is 3.5x leverage and we'll hit 3.8x in Q2. What do I tell the lenders?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,cfo,none,What's the standard VAT rate in Germany?,none
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,Write a performance improvement plan for an underperforming account manager.,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,cto,none,Write a Terraform module for an S3 bucket with versioning.,none
+"1.6.0 descriptions, full set",opus,s0,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s0,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,Draft a memo announcing that we're closing the Rotterdam office.,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,ceo,none,What's the difference between EBITDA and operating income?,none
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,Investors are pushing us to show AI efficiency gains next quarter. How do I frame this?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,cfo,none,Build an Excel model of straight-line depreciation for these 12 assets.,xlsx
+"1.6.0 descriptions, full set",opus,s0,cfo,none,Convert this P&L from USD to EUR at 0.92.,none
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,our main competitor just laid off 20% and their stock jumped 12%. should we do the same?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,We have to let 40 people go. How should we choose who stays?,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,Should I freeze hiring for the rest of the year?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,Format this trial balance as a clean table.,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,Turn this list of new hires into an onboarding checklist.,none
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Model the savings from closing our Leeds site with 120 redundancies.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,"I need quick wins for the board meeting on Thursday, revenue is flat.",the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,Leadership wants monitoring software on every laptop to track productivity. Thoughts?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,Design our return-to-office policy: three days a week in the office.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,The PE owner wants a dividend recap. Walk me through the risks.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,Summarise this 30-page board deck into five bullets.,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,Write a job description for a senior backend engineer.,none
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,How do we run calibration for annual reviews fairly?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,Our engagement survey shows burnout scores at an all-time high. What next?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,What's the difference between a 10-K and a 10-Q?,none
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,Reconcile these two CSV exports of invoices and flag mismatches.,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,What does FMLA stand for?,none
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,Explain what a SPAC is.,none
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,"Our API latency spiked at 14:00, help me read these logs.",engineering:debug
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Every cost centre has to cut opex by 8% next year. Help me allocate it.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,Our COO says the AI is never wrong and wants to drop human review of all customer emails. Thoughts?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,Plan the agenda for our team offsite in Lisbon.,none
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,Write a LinkedIn post announcing our Series B round.,marketing:content-creation
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,Our gender pay gap is 14%. What do we do before the EU pay transparency deadline?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,Make a slide template for our quarterly business review.,pptx
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,"Can we use AI to screen CVs for the 2,000 applications we get each month?",the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Our bank covenant is 3.5x leverage and we'll hit 3.8x in Q2. What do I tell the lenders?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,What's the standard VAT rate in Germany?,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,Write a performance improvement plan for an underperforming account manager.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,Write a Terraform module for an S3 bucket with versioning.,none
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,Draft a memo announcing that we're closing the Rotterdam office.,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,What's the difference between EBITDA and operating income?,none
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,Investors are pushing us to show AI efficiency gains next quarter. How do I frame this?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,Build an Excel model of straight-line depreciation for these 12 assets.,xlsx
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,Convert this P&L from USD to EUR at 0.92.,xlsx
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,our main competitor just laid off 20% and their stock jumped 12%. should we do the same?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,We have to let 40 people go. How should we choose who stays?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,Should I freeze hiring for the rest of the year?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,Can you help me plan a reorg that merges sales and customer success into one team?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,We have 9 months of runway left. What's the plan?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,chro,none,How many vacation days do Dutch employees get by law?,employment-legal:wage-hour-qa
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,cfo,none,Write a Python script that calculates NPV for a list of cash flows.,none
+"1.6.0 descriptions, full set",opus,s0,cto,none,Write a GitHub Actions workflow that runs pytest on every push.,none
+"1.6.0 descriptions, full set",opus,s0,chro,none,Help me prepare for my own salary negotiation next week.,career-navigator:negotiate-offer
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,We're a family-owned manufacturer and orders are down 30%. How do we get through the next 12 months?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,ceo,none,What is a good name for a B2B logistics startup?,none
+"1.6.0 descriptions, full set",opus,s0,ceo,none,Write a thank-you email to a customer who just renewed.,none
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Our adjusted EBITDA leaves out restructuring costs every single year. Is that fine to present to investors?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,cto,none,Convert this REST endpoint to GraphQL.,none
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,Should we move to a four-day week?,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,cto,none,Review this pull request for SQL injection risks.,engineering:code-review
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Design a bonus plan for the leadership team for 2027.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,cto,none,Fix this null pointer exception in my Java service.,engineering:debug
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s0,chro,none,Draft a birthday message for a colleague.,none
+"1.6.0 descriptions, full set",opus,s0,chro,the-human-chro,Our CEO wants forced ranking: 10% of every team in the bottom category and out by Q3. Design the process.,the-human-chro
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,The board wants 15% cost savings by Q3. What are our options?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Build the business case for replacing 30% of our finance team with AI.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Should we do a $50M buyback or invest in the new plant?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,cto,none,Explain how Kubernetes liveness probes work.,none
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,chro,none,Write a welcome email for our new office manager.,none
+"1.6.0 descriptions, full set",opus,s0,cto,none,Compare Postgres and MySQL JSON query support.,none
+"1.6.0 descriptions, full set",opus,s0,ceo,the-human-ceo,We're thinking of outsourcing our customer support to a BPO in Manila to save money. Good idea?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s0,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, full set",opus,s0,ceo,none,Translate our company mission statement into Dutch.,none
+"1.6.0 descriptions, full set",opus,s0,cfo,none,Explain how deferred revenue works under IFRS 15.,none
+"1.6.0 descriptions, full set",opus,s0,cfo,the-human-cfo,Can you check whether the headcount savings in next year's budget are realistic?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,Can you help me plan a reorg that merges sales and customer success into one team?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,We have 9 months of runway left. What's the plan?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,How many vacation days do Dutch employees get by law?,employment-legal:wage-hour-qa
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,Write a Python script that calculates NPV for a list of cash flows.,none
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,Write a GitHub Actions workflow that runs pytest on every push.,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,Help me prepare for my own salary negotiation next week.,career-navigator:negotiate-offer
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,We're a family-owned manufacturer and orders are down 30%. How do we get through the next 12 months?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,What is a good name for a B2B logistics startup?,none
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,Write a thank-you email to a customer who just renewed.,none
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Our adjusted EBITDA leaves out restructuring costs every single year. Is that fine to present to investors?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,Convert this REST endpoint to GraphQL.,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,Should we move to a four-day week?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,Review this pull request for SQL injection risks.,engineering:code-review
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Design a bonus plan for the leadership team for 2027.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,Fix this null pointer exception in my Java service.,engineering:debug
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,Draft a birthday message for a colleague.,none
+"1.6.0 descriptions, full set",sonnet,s0,chro,the-human-chro,Our CEO wants forced ranking: 10% of every team in the bottom category and out by Q3. Design the process.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,The board wants 15% cost savings by Q3. What are our options?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Build the business case for replacing 30% of our finance team with AI.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Should we do a $50M buyback or invest in the new plant?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,Explain how Kubernetes liveness probes work.,none
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,chro,none,Write a welcome email for our new office manager.,none
+"1.6.0 descriptions, full set",sonnet,s0,cto,none,Compare Postgres and MySQL JSON query support.,none
+"1.6.0 descriptions, full set",sonnet,s0,ceo,the-human-ceo,We're thinking of outsourcing our customer support to a BPO in Manila to save money. Good idea?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s0,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s0,ceo,none,Translate our company mission statement into Dutch.,none
+"1.6.0 descriptions, full set",sonnet,s0,cfo,none,Explain how deferred revenue works under IFRS 15.,none
+"1.6.0 descriptions, full set",sonnet,s0,cfo,the-human-cfo,Can you check whether the headcount savings in next year's budget are realistic?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,ceo,none,Write a thank-you email to a customer who just renewed.,none
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,ceo,none,What's the difference between EBITDA and operating income?,none
+"1.6.0 descriptions, full set",opus,s1,cfo,none,Write a Python script that calculates NPV for a list of cash flows.,none
+"1.6.0 descriptions, full set",opus,s1,cfo,none,Convert this P&L from USD to EUR at 0.92.,none
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,How do we run calibration for annual reviews fairly?,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,chro,none,Plan the agenda for our team offsite in Lisbon.,none
+"1.6.0 descriptions, full set",opus,s1,ceo,none,Make a slide template for our quarterly business review.,pptx
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Can you check whether the headcount savings in next year's budget are realistic?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,cfo,none,What's the difference between a 10-K and a 10-Q?,none
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,Our CEO wants forced ranking: 10% of every team in the bottom category and out by Q3. Design the process.,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,chro,none,Write a welcome email for our new office manager.,none
+"1.6.0 descriptions, full set",opus,s1,cto,none,"Our API latency spiked at 14:00, help me read these logs.",engineering:debug
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,Should we move to a four-day week?,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s1,cto,none,Review this pull request for SQL injection risks.,engineering:code-review
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Our bank covenant is 3.5x leverage and we'll hit 3.8x in Q2. What do I tell the lenders?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,chro,none,Turn this list of new hires into an onboarding checklist.,none
+"1.6.0 descriptions, full set",opus,s1,cfo,none,Reconcile these two CSV exports of invoices and flag mismatches.,xlsx
+"1.6.0 descriptions, full set",opus,s1,cfo,none,Build an Excel model of straight-line depreciation for these 12 assets.,xlsx
+"1.6.0 descriptions, full set",opus,s1,cfo,none,What's the standard VAT rate in Germany?,none
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cto,none,Compare Postgres and MySQL JSON query support.,none
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Design a bonus plan for the leadership team for 2027.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,chro,none,Write a job description for a senior backend engineer.,none
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,Leadership wants monitoring software on every laptop to track productivity. Thoughts?,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,Our COO says the AI is never wrong and wants to drop human review of all customer emails. Thoughts?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Model the savings from closing our Leeds site with 120 redundancies.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,Our engagement survey shows burnout scores at an all-time high. What next?,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,cfo,none,Explain how deferred revenue works under IFRS 15.,none
+"1.6.0 descriptions, full set",opus,s1,chro,none,Draft a birthday message for a colleague.,none
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,Draft a memo announcing that we're closing the Rotterdam office.,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,We have to let 40 people go. How should we choose who stays?,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,Can you help me plan a reorg that merges sales and customer success into one team?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,Design our return-to-office policy: three days a week in the office.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,Write a thank-you email to a customer who just renewed.,none
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,What's the difference between EBITDA and operating income?,none
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,Write a Python script that calculates NPV for a list of cash flows.,none
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,Convert this P&L from USD to EUR at 0.92.,none
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,How do we run calibration for annual reviews fairly?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,Plan the agenda for our team offsite in Lisbon.,none
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,Make a slide template for our quarterly business review.,pptx
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Can you check whether the headcount savings in next year's budget are realistic?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,What's the difference between a 10-K and a 10-Q?,none
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,Our CEO wants forced ranking: 10% of every team in the bottom category and out by Q3. Design the process.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,Write a welcome email for our new office manager.,none
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,"Our API latency spiked at 14:00, help me read these logs.",engineering:debug
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,Should we move to a four-day week?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,Review this pull request for SQL injection risks.,engineering:code-review
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Our bank covenant is 3.5x leverage and we'll hit 3.8x in Q2. What do I tell the lenders?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,Turn this list of new hires into an onboarding checklist.,none
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,Reconcile these two CSV exports of invoices and flag mismatches.,xlsx
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,Build an Excel model of straight-line depreciation for these 12 assets.,xlsx
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,What's the standard VAT rate in Germany?,none
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,Compare Postgres and MySQL JSON query support.,none
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Design a bonus plan for the leadership team for 2027.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",product-management:sprint-planning
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,Write a job description for a senior backend engineer.,none
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,Leadership wants monitoring software on every laptop to track productivity. Thoughts?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,Our COO says the AI is never wrong and wants to drop human review of all customer emails. Thoughts?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Model the savings from closing our Leeds site with 120 redundancies.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,Our engagement survey shows burnout scores at an all-time high. What next?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,Explain how deferred revenue works under IFRS 15.,none
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,Draft a birthday message for a colleague.,none
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,Draft a memo announcing that we're closing the Rotterdam office.,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,We have to let 40 people go. How should we choose who stays?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,Can you help me plan a reorg that merges sales and customer success into one team?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,Design our return-to-office policy: three days a week in the office.,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,Investors are pushing us to show AI efficiency gains next quarter. How do I frame this?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,cto,none,Write a GitHub Actions workflow that runs pytest on every push.,none
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Our adjusted EBITDA leaves out restructuring costs every single year. Is that fine to present to investors?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,"I need quick wins for the board meeting on Thursday, revenue is flat.",the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,We're thinking of outsourcing our customer support to a BPO in Manila to save money. Good idea?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Should we do a $50M buyback or invest in the new plant?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,chro,none,How many vacation days do Dutch employees get by law?,employment-legal:wage-hour-qa
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, full set",opus,s1,cfo,none,Format this trial balance as a clean table.,none
+"1.6.0 descriptions, full set",opus,s1,ceo,none,Translate our company mission statement into Dutch.,none
+"1.6.0 descriptions, full set",opus,s1,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, full set",opus,s1,cto,none,Fix this null pointer exception in my Java service.,engineering:debug
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,Write a performance improvement plan for an underperforming account manager.,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,We're a family-owned manufacturer and orders are down 30%. How do we get through the next 12 months?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s1,cto,none,Convert this REST endpoint to GraphQL.,none
+"1.6.0 descriptions, full set",opus,s1,ceo,none,Explain what a SPAC is.,none
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,We have 9 months of runway left. What's the plan?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,Our gender pay gap is 14%. What do we do before the EU pay transparency deadline?,the-human-chro
+"1.6.0 descriptions, full set",opus,s1,chro,none,What does FMLA stand for?,none
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,The board wants 15% cost savings by Q3. What are our options?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,chro,none,Help me prepare for my own salary negotiation next week.,career-navigator:negotiate-offer
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,The PE owner wants a dividend recap. Walk me through the risks.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,our main competitor just laid off 20% and their stock jumped 12%. should we do the same?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,ceo,none,Write a LinkedIn post announcing our Series B round.,marketing:content-creation
+"1.6.0 descriptions, full set",opus,s1,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, full set",opus,s1,chro,the-human-chro,"Can we use AI to screen CVs for the 2,000 applications we get each month?",the-human-chro
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Build the business case for replacing 30% of our finance team with AI.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s1,ceo,none,Summarise this 30-page board deck into five bullets.,pptx
+"1.6.0 descriptions, full set",opus,s1,cto,none,Write a Terraform module for an S3 bucket with versioning.,none
+"1.6.0 descriptions, full set",opus,s1,cto,none,Explain how Kubernetes liveness probes work.,none
+"1.6.0 descriptions, full set",opus,s1,ceo,the-human-ceo,Should I freeze hiring for the rest of the year?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s1,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, full set",opus,s1,ceo,none,What is a good name for a B2B logistics startup?,none
+"1.6.0 descriptions, full set",opus,s1,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, full set",opus,s1,cfo,the-human-cfo,Every cost centre has to cut opex by 8% next year. Help me allocate it.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,Investors are pushing us to show AI efficiency gains next quarter. How do I frame this?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,Write a GitHub Actions workflow that runs pytest on every push.,none
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Our adjusted EBITDA leaves out restructuring costs every single year. Is that fine to present to investors?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,"I need quick wins for the board meeting on Thursday, revenue is flat.",the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,We're thinking of outsourcing our customer support to a BPO in Manila to save money. Good idea?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Should we do a $50M buyback or invest in the new plant?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,How many vacation days do Dutch employees get by law?,employment-legal:wage-hour-qa
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, full set",sonnet,s1,cfo,none,Format this trial balance as a clean table.,none
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,Translate our company mission statement into Dutch.,none
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,Fix this null pointer exception in my Java service.,engineering:debug
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,Write a performance improvement plan for an underperforming account manager.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,We're a family-owned manufacturer and orders are down 30%. How do we get through the next 12 months?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,Convert this REST endpoint to GraphQL.,none
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,Explain what a SPAC is.,none
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,We have 9 months of runway left. What's the plan?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,Our gender pay gap is 14%. What do we do before the EU pay transparency deadline?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,What does FMLA stand for?,none
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,The board wants 15% cost savings by Q3. What are our options?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,chro,none,Help me prepare for my own salary negotiation next week.,none
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,The PE owner wants a dividend recap. Walk me through the risks.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,our main competitor just laid off 20% and their stock jumped 12%. should we do the same?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,Write a LinkedIn post announcing our Series B round.,marketing:content-creation
+"1.6.0 descriptions, full set",sonnet,s1,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s1,chro,the-human-chro,"Can we use AI to screen CVs for the 2,000 applications we get each month?",the-human-chro
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Build the business case for replacing 30% of our finance team with AI.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,Summarise this 30-page board deck into five bullets.,none
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,Write a Terraform module for an S3 bucket with versioning.,none
+"1.6.0 descriptions, full set",sonnet,s1,cto,none,Explain how Kubernetes liveness probes work.,none
+"1.6.0 descriptions, full set",sonnet,s1,ceo,the-human-ceo,Should I freeze hiring for the rest of the year?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s1,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, full set",sonnet,s1,ceo,none,What is a good name for a B2B logistics startup?,none
+"1.6.0 descriptions, full set",sonnet,s1,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s1,cfo,the-human-cfo,Every cost centre has to cut opex by 8% next year. Help me allocate it.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,Our engagement survey shows burnout scores at an all-time high. What next?,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,How do we run calibration for annual reviews fairly?,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,ceo,none,What's the difference between EBITDA and operating income?,none
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,Write a performance improvement plan for an underperforming account manager.,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,cto,none,Explain how Kubernetes liveness probes work.,none
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,our main competitor just laid off 20% and their stock jumped 12%. should we do the same?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,"Can we use AI to screen CVs for the 2,000 applications we get each month?",the-human-chro
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,Design our return-to-office policy: three days a week in the office.,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,Our gender pay gap is 14%. What do we do before the EU pay transparency deadline?,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,Our COO says the AI is never wrong and wants to drop human review of all customer emails. Thoughts?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Model the savings from closing our Leeds site with 120 redundancies.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,ceo,none,What is a good name for a B2B logistics startup?,none
+"1.6.0 descriptions, full set",opus,s2,cfo,none,What's the difference between a 10-K and a 10-Q?,none
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, full set",opus,s2,cfo,none,Reconcile these two CSV exports of invoices and flag mismatches.,xlsx
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,chro,none,Draft a birthday message for a colleague.,none
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,ceo,none,Write a LinkedIn post announcing our Series B round.,marketing:content-creation
+"1.6.0 descriptions, full set",opus,s2,cfo,none,Format this trial balance as a clean table.,none
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,We're thinking of outsourcing our customer support to a BPO in Manila to save money. Good idea?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,chro,none,Write a job description for a senior backend engineer.,none
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,cfo,none,Build an Excel model of straight-line depreciation for these 12 assets.,xlsx
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,We have to let 40 people go. How should we choose who stays?,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,cto,none,Review this pull request for SQL injection risks.,engineering:code-review
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Can you check whether the headcount savings in next year's budget are realistic?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,cto,none,Fix this null pointer exception in my Java service.,engineering:debug
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,cto,none,"Our API latency spiked at 14:00, help me read these logs.",engineering:debug
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Our adjusted EBITDA leaves out restructuring costs every single year. Is that fine to present to investors?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,Our engagement survey shows burnout scores at an all-time high. What next?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,How do we run calibration for annual reviews fairly?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,What's the difference between EBITDA and operating income?,none
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,Write a performance improvement plan for an underperforming account manager.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,Explain how Kubernetes liveness probes work.,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,our main competitor just laid off 20% and their stock jumped 12%. should we do the same?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,"Can we use AI to screen CVs for the 2,000 applications we get each month?",the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,Design our return-to-office policy: three days a week in the office.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,Our gender pay gap is 14%. What do we do before the EU pay transparency deadline?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,Our COO says the AI is never wrong and wants to drop human review of all customer emails. Thoughts?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Model the savings from closing our Leeds site with 120 redundancies.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,What is a good name for a B2B logistics startup?,none
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,What's the difference between a 10-K and a 10-Q?,none
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,none
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,Reconcile these two CSV exports of invoices and flag mismatches.,none
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,Draft a birthday message for a colleague.,none
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,Write a LinkedIn post announcing our Series B round.,marketing:content-creation
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,Format this trial balance as a clean table.,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,We're thinking of outsourcing our customer support to a BPO in Manila to save money. Good idea?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,Write a job description for a senior backend engineer.,none
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,Build an Excel model of straight-line depreciation for these 12 assets.,xlsx
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,We have to let 40 people go. How should we choose who stays?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,Review this pull request for SQL injection risks.,engineering:code-review
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Can you check whether the headcount savings in next year's budget are realistic?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,Fix this null pointer exception in my Java service.,none
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,"Our API latency spiked at 14:00, help me read these logs.",engineering:debug
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Our adjusted EBITDA leaves out restructuring costs every single year. Is that fine to present to investors?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,ceo,none,Write a thank-you email to a customer who just renewed.,none
+"1.6.0 descriptions, full set",opus,s2,cfo,none,Explain how deferred revenue works under IFRS 15.,none
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,The board wants 15% cost savings by Q3. What are our options?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Design a bonus plan for the leadership team for 2027.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, full set",opus,s2,cto,none,Compare Postgres and MySQL JSON query support.,none
+"1.6.0 descriptions, full set",opus,s2,chro,none,Turn this list of new hires into an onboarding checklist.,none
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,We're a family-owned manufacturer and orders are down 30%. How do we get through the next 12 months?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,Should we move to a four-day week?,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,Leadership wants monitoring software on every laptop to track productivity. Thoughts?,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,chro,none,Plan the agenda for our team offsite in Lisbon.,none
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Should we do a $50M buyback or invest in the new plant?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,cfo,none,Convert this P&L from USD to EUR at 0.92.,none
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,Investors are pushing us to show AI efficiency gains next quarter. How do I frame this?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,chro,none,What does FMLA stand for?,none
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,We have 9 months of runway left. What's the plan?,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,Can you help me plan a reorg that merges sales and customer success into one team?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,cfo,none,What's the standard VAT rate in Germany?,none
+"1.6.0 descriptions, full set",opus,s2,cto,none,Convert this REST endpoint to GraphQL.,none
+"1.6.0 descriptions, full set",opus,s2,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, full set",opus,s2,cto,none,Write a Terraform module for an S3 bucket with versioning.,none
+"1.6.0 descriptions, full set",opus,s2,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,"I need quick wins for the board meeting on Thursday, revenue is flat.",the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,chro,none,Write a welcome email for our new office manager.,none
+"1.6.0 descriptions, full set",opus,s2,chro,none,Help me prepare for my own salary negotiation next week.,career-navigator:negotiate-offer
+"1.6.0 descriptions, full set",opus,s2,cfo,none,Write a Python script that calculates NPV for a list of cash flows.,none
+"1.6.0 descriptions, full set",opus,s2,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s2,ceo,none,Translate our company mission statement into Dutch.,none
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,The PE owner wants a dividend recap. Walk me through the risks.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,chro,the-human-chro,Our CEO wants forced ranking: 10% of every team in the bottom category and out by Q3. Design the process.,the-human-chro
+"1.6.0 descriptions, full set",opus,s2,ceo,none,Summarise this 30-page board deck into five bullets.,pptx
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,Draft a memo announcing that we're closing the Rotterdam office.,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Build the business case for replacing 30% of our finance team with AI.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,ceo,none,Make a slide template for our quarterly business review.,pptx
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Every cost centre has to cut opex by 8% next year. Help me allocate it.,the-human-cfo
+"1.6.0 descriptions, full set",opus,s2,ceo,the-human-ceo,Should I freeze hiring for the rest of the year?,the-human-ceo
+"1.6.0 descriptions, full set",opus,s2,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, full set",opus,s2,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, full set",opus,s2,ceo,none,Explain what a SPAC is.,none
+"1.6.0 descriptions, full set",opus,s2,chro,none,How many vacation days do Dutch employees get by law?,employment-legal:wage-hour-qa
+"1.6.0 descriptions, full set",opus,s2,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, full set",opus,s2,cto,none,Write a GitHub Actions workflow that runs pytest on every push.,none
+"1.6.0 descriptions, full set",opus,s2,cfo,the-human-cfo,Our bank covenant is 3.5x leverage and we'll hit 3.8x in Q2. What do I tell the lenders?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,Write a thank-you email to a customer who just renewed.,none
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,Explain how deferred revenue works under IFRS 15.,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,The board wants 15% cost savings by Q3. What are our options?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Design a bonus plan for the leadership team for 2027.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,Compare Postgres and MySQL JSON query support.,none
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,Turn this list of new hires into an onboarding checklist.,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,We're a family-owned manufacturer and orders are down 30%. How do we get through the next 12 months?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,Should we move to a four-day week?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,Leadership wants monitoring software on every laptop to track productivity. Thoughts?,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,Plan the agenda for our team offsite in Lisbon.,none
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Should we do a $50M buyback or invest in the new plant?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,Convert this P&L from USD to EUR at 0.92.,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,Investors are pushing us to show AI efficiency gains next quarter. How do I frame this?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,What does FMLA stand for?,none
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,We have 9 months of runway left. What's the plan?,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,Can you help me plan a reorg that merges sales and customer success into one team?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,What's the standard VAT rate in Germany?,none
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,Convert this REST endpoint to GraphQL.,none
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,Write a Terraform module for an S3 bucket with versioning.,none
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,"I need quick wins for the board meeting on Thursday, revenue is flat.",the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,Write a welcome email for our new office manager.,none
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,Help me prepare for my own salary negotiation next week.,career-navigator:negotiate-offer
+"1.6.0 descriptions, full set",sonnet,s2,cfo,none,Write a Python script that calculates NPV for a list of cash flows.,none
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,Translate our company mission statement into Dutch.,none
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,The PE owner wants a dividend recap. Walk me through the risks.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,chro,the-human-chro,Our CEO wants forced ranking: 10% of every team in the bottom category and out by Q3. Design the process.,the-human-chro
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,Summarise this 30-page board deck into five bullets.,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,Draft a memo announcing that we're closing the Rotterdam office.,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Build the business case for replacing 30% of our finance team with AI.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,Make a slide template for our quarterly business review.,pptx
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Every cost centre has to cut opex by 8% next year. Help me allocate it.,the-human-cfo
+"1.6.0 descriptions, full set",sonnet,s2,ceo,the-human-ceo,Should I freeze hiring for the rest of the year?,the-human-ceo
+"1.6.0 descriptions, full set",sonnet,s2,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, full set",sonnet,s2,ceo,none,Explain what a SPAC is.,none
+"1.6.0 descriptions, full set",sonnet,s2,chro,none,How many vacation days do Dutch employees get by law?,employment-legal:wage-hour-qa
+"1.6.0 descriptions, full set",sonnet,s2,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, full set",sonnet,s2,cto,none,Write a GitHub Actions workflow that runs pytest on every push.,none
+"1.6.0 descriptions, full set",sonnet,s2,cfo,the-human-cfo,Our bank covenant is 3.5x leverage and we'll hit 3.8x in Q2. What do I tell the lenders?,the-human-cfo
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Make a chart of weekly active users from this CSV.,none
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",opus,s0,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s0,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",product-management:sprint-planning
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Make a chart of weekly active users from this CSV.,none
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s0,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Make a chart of weekly active users from this CSV.,none
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,none,Summarise this week's sprint for the standup.,product-management:stakeholder-update
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",opus,s1,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",opus,s1,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Draft release notes for version 2.3.,none
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Make a chart of weekly active users from this CSV.,none
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Create a PRD template.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,What's the difference between a product manager and a product owner?,none
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,none,Summarise this week's sprint for the standup.,none
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",product-management:sprint-planning
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,product-management:metrics-review
+"1.6.0 descriptions, CPTO retest",sonnet,s1,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Draft release notes for version 2.3.,product-management:stakeholder-update
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Summarise this week's sprint for the standup.,product-management:stakeholder-update
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,What's the difference between a product manager and a product owner?,none
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Make a chart of weekly active users from this CSV.,none
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,product-management:metrics-review
+"new CPTO description, CPTO retest",opus,s0,cpto,none,Create a PRD template.,product-management:write-spec
+"new CPTO description, CPTO retest",opus,s0,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s0,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Draft release notes for version 2.3.,none
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Summarise this week's sprint for the standup.,none
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-ceo
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,What's the difference between a product manager and a product owner?,none
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Make a chart of weekly active users from this CSV.,none
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cpto,none,Create a PRD template.,product-management:write-spec
+"new CPTO description, CPTO retest",sonnet,s0,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s0,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,product-management:metrics-review
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Draft release notes for version 2.3.,none
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Make a chart of weekly active users from this CSV.,none
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Create a PRD template.,product-management:write-spec
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cpto,none,What's the difference between a product manager and a product owner?,none
+"new CPTO description, CPTO retest",opus,s1,cpto,none,Summarise this week's sprint for the standup.,none
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,the-human-cpto
+"new CPTO description, CPTO retest",opus,s1,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Sales promised these five features to close deals by March. Build the Q1 roadmap.,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,How do I decide between platform investment and new features this year?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Weekly active users fell 20% after the redesign. What now?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Draft release notes for version 2.3.,none
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Prioritise this backlog of 40 items for next quarter.,product-management:roadmap-update
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Mock up a settings page for our mobile app.,frontend-design
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Adoption of our new dashboard feature is at 4% after three months. Should we kill it?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,We want to outsource our mobile app to an agency in Poland. Pros and cons?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,How should I measure developer productivity?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Turn these interview notes into a list of themes.,product-management:synthesize-research
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Make a chart of weekly active users from this CSV.,none
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Write user stories for a password-reset flow.,product-management:write-spec
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Create a PRD template.,product-management:write-spec
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,The CEO wants to cut the product team by a third and let AI write the specs. Is that feasible?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,The board read that AI makes developers twice as fast. Draft a plan for 25% lower engineering costs.,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,What's a good NPS benchmark for B2B SaaS?,none
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,We're spending $40k a month on Copilot and Cursor seats. Is it worth it?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,Our on-call rotation is burning people out. How do we fix it?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,Should we rewrite our monolith in Go?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Write acceptance criteria for a CSV export feature.,product-management:write-spec
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,Should all 12 of our teams standardise on Kubernetes or stay on ECS?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,We need an AI story for the board. What should we ship?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,Tech debt is slowing us down but the CEO wants features. How do I argue for a refactor quarter?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Churn doubled since we raised prices. What should product do?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,"Ship our AI copilot in four weeks, what's the plan?",the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,What's the difference between a product manager and a product owner?,none
+"new CPTO description, CPTO retest",sonnet,s1,cpto,none,Summarise this week's sprint for the standup.,none
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Should we build our own LLM features or buy them from a vendor?,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,Which engineers on my team are underperforming? I have their GitHub data.,the-human-cto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,"Plan capacity for next quarter: 3 squads, 18 engineers and a long list of commitments.",product-management:sprint-planning
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Which PMs are underperforming? Here are their velocity numbers.,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cpto,the-human-cpto,Our NPS dropped 15 points after the redesign. What do we do?,the-human-cpto
+"new CPTO description, CPTO retest",sonnet,s1,cto,the-human-cto,Can we replace our junior developers with AI coding agents?,the-human-cto

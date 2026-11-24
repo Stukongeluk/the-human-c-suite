@@ -29,7 +29,7 @@
 /plugin install the-human-c-suite@the-human-c-suite
 ```
 
-Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. The plugin installs all five seats.
+Or from your shell: `claude plugin marketplace add Stukongeluk/the-human-c-suite`, then `claude plugin install the-human-c-suite@the-human-c-suite`. On Claude Code 2.1.275 or later, one line does both: `/plugin install the-human-c-suite --marketplace Stukongeluk/the-human-c-suite`. The plugin installs all five seats.
 
 ### Claude Code (as plain skills)
 
@@ -37,9 +37,9 @@ Copy the seats you want into your personal or project skills directory:
 
 ```bash
 git clone https://github.com/Stukongeluk/the-human-c-suite.git
-cp -r the-human-c-suite/skills/the-human-* ~/.claude/skills/      # all seats, for you, in every project
+cp -r the-human-c-suite/plugins/the-human-c-suite/skills/the-human-* ~/.claude/skills/      # all seats, for you, in every project
 # or one seat, for one project:
-cp -r the-human-c-suite/skills/the-human-cto .claude/skills/
+cp -r the-human-c-suite/plugins/the-human-c-suite/skills/the-human-cto .claude/skills/
 ```
 
 ### Claude apps (web, desktop, mobile)
@@ -48,11 +48,11 @@ Download the ready-to-upload `.zip` for any seat (for example `the-human-cto-v*.
 
 ### Google Antigravity (app and CLI)
 
-Download `the-human-c-suite-v*.zip` from the [Latest Release](https://github.com/Stukongeluk/the-human-c-suite/releases/latest) (already packaged without `evals/`) and unzip it into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too (the CHRO seat so far only on Claude): see [Does it help?](#does-it-help).
+Download `the-human-c-suite-v*.zip` from the [Latest Release](https://github.com/Stukongeluk/the-human-c-suite/releases/latest) (already packaged without the test cases) and unzip it into `.agents/skills/` in your workspace, or into `~/.gemini/config/skills/` for every workspace. Antigravity picks a seat up from its description, or you can call it by name, for example `/the-human-ceo`. The seats are tested on Gemini too (the CHRO seat so far only on Claude): see [Does it help?](#does-it-help).
 
 ### Other agents
 
-Copy the folders in `skills/` into your agent's skills folder. Any agent that supports the Agent Skills format can load them.
+Copy the folders in `plugins/the-human-c-suite/skills/` into your agent's skills folder. Any agent that supports the Agent Skills format can load them.
 
 ## Why we built it
 
@@ -85,11 +85,11 @@ A layoff looks cheap on a spreadsheet. The rest of the bill comes later: rehirin
 
 | Skill | Use it for | What it adds |
 |---|---|---|
-| [`the-human-ceo`](skills/the-human-ceo/SKILL.md) | Cost cuts, layoffs, reorgs, outsourcing, AI rollouts, shareholder pressure, board papers | The whole company in view: money, customers, people and governance. Layoffs as the last rung of a cost ladder. |
-| [`the-human-cfo`](skills/the-human-cfo/SKILL.md) | Budgets and opex targets, savings and layoff business cases, cash, covenants and the bank, buybacks and capital allocation, bonus plans, adjusted EBITDA, AI business cases | Every saving net of its costs and by quarter, honest numbers, the levers that cost no jobs first, and incentives that reward the long term, with leaders' pay first. |
-| [`the-human-cto`](skills/the-human-cto/SKILL.md) | AI coding tools and spend, engineering metrics, platform and vendor choices, tech debt, on-call, juniors and AI | Measured AI gains rather than vendor claims, fair technical evaluations, and the system measured instead of the person. |
-| [`the-human-cpto`](skills/the-human-cpto/SKILL.md) | Roadmaps, features promised by sales, the AI story for the board, AI features, capacity planning | Outcomes over output, plans that fit real capacity, and saying no with evidence. |
-| [`the-human-chro`](skills/the-human-chro/SKILL.md) | Reviews and forced ranking, layoff selection, return to office, pay gaps and pay transparency, AI in hiring, monitoring, surveys and burnout | Fair process before speed: people judged on their work, not a curve; selection by the law, never by sick days or part-time hours; pay gaps fixed on a dated plan; and announcements that stay proposals until employee representatives agree. |
+| [`the-human-ceo`](plugins/the-human-c-suite/skills/the-human-ceo/SKILL.md) | Cost cuts, layoffs, reorgs, outsourcing, AI rollouts, shareholder pressure, board papers | The whole company in view: money, customers, people and governance. Layoffs as the last rung of a cost ladder. |
+| [`the-human-cfo`](plugins/the-human-c-suite/skills/the-human-cfo/SKILL.md) | Budgets and opex targets, savings and layoff business cases, cash, covenants and the bank, buybacks and capital allocation, bonus plans, adjusted EBITDA, AI business cases | Every saving net of its costs and by quarter, honest numbers, the levers that cost no jobs first, and incentives that reward the long term, with leaders' pay first. |
+| [`the-human-cto`](plugins/the-human-c-suite/skills/the-human-cto/SKILL.md) | AI coding tools and spend, engineering metrics, platform and vendor choices, tech debt, on-call, juniors and AI | Measured AI gains rather than vendor claims, fair technical evaluations, and the system measured instead of the person. |
+| [`the-human-cpto`](plugins/the-human-c-suite/skills/the-human-cpto/SKILL.md) | Roadmaps, features promised by sales, the AI story for the board, AI features, capacity planning | Outcomes over output, plans that fit real capacity, and saying no with evidence. |
+| [`the-human-chro`](plugins/the-human-c-suite/skills/the-human-chro/SKILL.md) | Reviews and forced ranking, layoff selection, return to office, pay gaps and pay transparency, AI in hiring, monitoring, surveys and burnout | Fair process before speed: people judged on their work, not a curve; selection by the law, never by sick days or part-time hours; pay gaps fixed on a dated plan; and announcements that stay proposals until employee representatives agree. |
 
 Each seat is commercially sharp and technical enough to find the real data. Each also treats people as the company's compounding asset rather than its first cost to cut.
 
@@ -128,16 +128,20 @@ Each skill knows the others. When a question crosses seats, it brings in their v
 ```
 the-human-c-suite/
 ├── .claude-plugin/marketplace.json     # Claude Code plugin marketplace (installs all five skills)
-├── skills/
-│   ├── the-human-ceo/                  # SKILL.md, references/, evals/
-│   ├── the-human-cfo/                  # SKILL.md, references/, evals/
-│   ├── the-human-cto/                  # SKILL.md, references/, evals/
-│   ├── the-human-cpto/                 # SKILL.md, references/, evals/
-│   └── the-human-chro/                 # SKILL.md, references/, evals/
+├── plugins/the-human-c-suite/          # the plugin: what people install
+│   ├── .claude-plugin/plugin.json      # plugin manifest (name, version, description)
+│   ├── README.md                       # the plugin's own README, shown in plugin listings
+│   └── skills/
+│       ├── the-human-ceo/              # SKILL.md, references/
+│       ├── the-human-cfo/
+│       ├── the-human-cto/
+│       ├── the-human-cpto/
+│       └── the-human-chro/
+├── evals/                              # test cases per seat (prompt plus graders), kept out of the plugin
 ├── shared/                             # canonical copies of the reference files the seats share
 │   ├── manifest.json                   # which shared file or block goes into which skill
 │   └── blocks/                         # shared sections inside evidence.md and templates.md
-├── scripts/sync_shared.py              # copies shared/ into each skill; --check fails if anything drifted
+├── scripts/                            # sync_shared.py, validate.py, package_skills.py, run_evals.py
 ├── media/                              # the animated preview used in this README
 └── examples/test-prompts.md            # more prompts to check behaviour by hand
 ```
@@ -146,8 +150,9 @@ Every skill is self-contained, so you can install one seat on its own. The files
 
 Each skill folder holds:
 - `SKILL.md`: the skill itself, with non-negotiables, a way of working, coaching, and a routing table for its reference files;
-- `references/`: the playbooks, evidence with sources, templates and worked examples, loaded only when needed;
-- `evals/`: skill-creator test cases (prompt plus graders), runnable with `claude plugin eval`.
+- `references/`: the playbooks, evidence with sources, templates and worked examples, loaded only when needed.
+
+The test cases sit in `evals/<seat>/` (skill-creator format: a prompt plus graders), outside the plugin, so installing a seat brings only the skill. `scripts/run_evals.py` runs them with `claude plugin eval`.
 
 The skills follow the open [Agent Skills](https://agentskills.io/specification) format, so they work in any agent that supports it.
 
@@ -271,8 +276,7 @@ Before opening a pull request, run the test cases and check the skill still beha
 The skills were built and tested with Anthropic's skill-creator. With Claude Code you can run the tests yourself (these are real, billed model runs):
 
 ```bash
-cd skills/the-human-cto
-claude plugin eval . --allow-tools Write,Edit,Bash
+python3 scripts/run_evals.py the-human-cto -- --allow-tools Write,Edit,Bash
 ```
 
 More prompts to try by hand are in [examples/test-prompts.md](examples/test-prompts.md). See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide and [CHANGELOG.md](CHANGELOG.md) for release history.

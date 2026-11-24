@@ -208,7 +208,7 @@ The two CPTO data cases come from the first round.
 
 ## Version 1.0: the CEO
 
-**The analysis.** Two neutral requests against the same company (`skills/the-human-ceo/evals/brightlane-*`):
+**The analysis.** Two neutral requests against the same company (`evals/the-human-ceo/brightlane-*`):
 
 | Model | With the skill | Without the skill | Extra tokens with the skill |
 |---|---|---|---|
@@ -222,7 +222,7 @@ Given good data, current models already find the savings that don't touch jobs a
 - a sensitive governance point kept out of the board paper and raised privately;
 - a request for pushback at the end of every plan.
 
-**The coaching.** Two shortcut-style requests (`skills/the-human-ceo/evals/shortcut-ai-productivity`, `skills/the-human-ceo/evals/quick-win-reorg`):
+**The coaching.** Two shortcut-style requests (`evals/the-human-ceo/shortcut-ai-productivity`, `evals/the-human-ceo/quick-win-reorg`):
 
 | Model | With the skill | Without the skill |
 |---|---|---|

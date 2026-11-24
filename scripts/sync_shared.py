@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SHARED = ROOT / "shared"
-SKILLS = ROOT / "skills"
+SKILLS = ROOT / "plugins" / "the-human-c-suite" / "skills"
 
 
 def main() -> int:

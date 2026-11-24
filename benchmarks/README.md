@@ -13,10 +13,11 @@ Every reply, grade and token count behind the results in the main [README](../RE
 | [`cfo-vs-c-level-advisor/`](cfo-vs-c-level-advisor/benchmark.md) | `the-human-cfo` 1.5.0 against another open-source CFO skill, `cfo-advisor` from alirezarezvani/claude-skills (and no skill), on the six finance cases, plus the [follow-ups](cfo-vs-c-level-advisor/follow-ups/README.md) that led to version 1.5.1 | Claude Sonnet 5.5, Claude Opus 5.5 | 48 + 12 + 16 |
 | [`c-suite-vs-claude-skills/`](c-suite-vs-claude-skills/benchmark.md) | The CEO, CTO and CPTO seats (1.5.1) against `ceo-advisor`, `cto-advisor` and `cpo-advisor` from alirezarezvani/claude-skills on their 18 cases; a four-turn pushback test with no skill too; which of twelve skills an agent loads by itself; plus the [follow-ups](c-suite-vs-claude-skills/follow-ups/README.md) that led to version 1.5.2 | Claude Sonnet 5.5, Claude Opus 5.5 | 72 + 24 + 24 + 17 |
 | [`chro-v1.6/`](chro-v1.6/benchmark.md) | A humane CHRO seat: the draft against the CEO seat 1.5.2, `chro-advisor` from alirezarezvani/claude-skills and no skill, on six people cases, plus the [follow-ups](chro-v1.6/follow-ups/README.md) that led to version 1.6.0 | Claude Sonnet 5.5, Claude Opus 5.5 | 48 + 9 |
+| [`triggers-v1.6/`](triggers-v1.6/benchmark.md) | When Claude loads each seat: 90 messages (requests each seat should take and routine near-misses it should leave alone) against the five seats and 22 competing skills, plus a retest of a new CPTO description | Claude Sonnet 5.5, Claude Opus 5.5 | 540 + 264 judgments |
 
 ## Method
 
-- **Cases.** The seven version 1.3 cases in `skills/*/evals/`: a flop and a board that wants cuts, a board that overrules the alternatives, cuts in Germany without a works council, choosing who stays in a Swedish support team, a PM with a feature the CEO promised, an engineer facing an AI-usage ranking, and a CTO whose board wants someone fired after an outage. Each case has six checks in its `graders/` folder.
+- **Cases.** The seven version 1.3 cases in `evals/*/`: a flop and a board that wants cuts, a board that overrules the alternatives, cuts in Germany without a works council, choosing who stays in a Swedish support team, a PM with a feature the CEO promised, an engineer facing an AI-usage ranking, and a CTO whose board wants someone fired after an outage. Each case has six checks in its `graders/` folder.
 - **Runs.** Two runs per setup per model. The prompt is the user's message from the case's `prompt.md`; the agent is told not to ask clarifying questions first and may hand over a separate document.
 - **Claude.** Each run was a fresh Claude Code subagent that read the seat's `SKILL.md` first and followed it.
 - **Gemini.** Each run was a fresh, neutrally named workspace in the [Antigravity CLI](https://antigravity.google/docs/cli/headless) (`agy` 1.5.13, print mode, 20 November 2026). With the skill, the seat sat in `.agents/skills/` and was invoked as `/<seat>`; without it, the workspace was empty. Both setups got the same note after the user's message. [`run_agy.py`](gemini-v1.3/run_agy.py) is the exact harness.
@@ -38,7 +39,7 @@ Each run folder holds `reply.md`, any document the agent wrote, `grading.json` (
 ## Rerun
 
 ```bash
-# Claude Code: use skill-creator with the cases in skills/*/evals/
+# Claude Code: use skill-creator with the cases in evals/*/
 # Gemini through the Antigravity CLI (sign in once with an interactive `agy` session first):
 python benchmarks/gemini-v1.3/run_agy.py --workers 3 --out ./agy-bench
 ```

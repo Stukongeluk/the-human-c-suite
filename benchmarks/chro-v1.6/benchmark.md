@@ -8,7 +8,7 @@ The other skill is `chro-advisor` from the C-level advisor set in [alirezarezvan
 
 ## The cases
 
-All anonymous and generic; the checks are in [`skills/the-human-chro/evals/`](../../skills/the-human-chro/evals/).
+All anonymous and generic; the checks are in [`evals/the-human-chro/`](../../evals/the-human-chro/).
 
 | Case | The ask |
 |---|---|

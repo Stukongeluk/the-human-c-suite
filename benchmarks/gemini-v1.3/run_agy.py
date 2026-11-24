@@ -4,7 +4,7 @@ Usage (from the repository root):
     python benchmarks/gemini-v1.3/run_agy.py [--workers 3] [--out <folder>]
 
 Each run gets a fresh, neutrally named workspace outside the repository. With the skill, the
-seat is copied into <workspace>/.agents/skills/<seat>/ (without its evals folder) and invoked
+seat is copied into <workspace>/.agents/skills/<seat>/ (the test cases live outside it) and invoked
 as /<seat>; without the skill, the workspace is empty. Every run uses the same short note after
 the user's message, so both setups get identical instructions apart from the skill.
 Results land in <out>/results/<model>/<case>/<config>/run-N/ with reply.md, any documents the
@@ -49,7 +49,7 @@ def agy_path():
 
 
 def prompt_of(case):
-    text = (REPO / "skills" / CASES[case] / "evals" / case / "prompt.md").read_text(encoding="utf-8")
+    text = (REPO / "evals" / CASES[case] / case / "prompt.md").read_text(encoding="utf-8")
     return re.sub(r"^---.*?---\s*", "", text, flags=re.S).strip()
 
 
@@ -64,7 +64,7 @@ def run_one(job, out_root, ws_root, agy, settings_file):
         ws = ws_root / uuid.uuid4().hex[:12]
         ws.mkdir(parents=True)
         if cfg == "with_skill":
-            shutil.copytree(REPO / "skills" / seat, ws / ".agents" / "skills" / seat, ignore=shutil.ignore_patterns("evals"))
+            shutil.copytree(REPO / "plugins" / "the-human-c-suite" / "skills" / seat, ws / ".agents" / "skills" / seat)
             prompt = f"/{seat} {prompt_of(case)}{NOTE}"
         else:
             prompt = f"{prompt_of(case)}{NOTE}"

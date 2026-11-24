@@ -28,7 +28,7 @@ This folder holds three tests, all run on Claude only, plus the reruns that led 
 
 ## Comparison
 
-**Cases.** The six cases in each of [`skills/the-human-ceo/evals/`](../../skills/the-human-ceo/evals/), [`the-human-cto/evals/`](../../skills/the-human-cto/evals/) and [`the-human-cpto/evals/`](../../skills/the-human-cpto/evals/). Each case has six to nine checks in its `graders/` folder.
+**Cases.** The six cases in each of [`evals/the-human-ceo/`](../../evals/the-human-ceo/), [`the-human-cto/`](../../evals/the-human-cto/) and [`the-human-cpto/`](../../evals/the-human-cpto/). Each case has six to nine checks in its `graders/` folder.
 
 **Runs.** Each run was a fresh Claude Code subagent with the same brief for both skills. Each skill sat in a folder with all of its sibling skills, so the advisors could open the `agent-protocol` and context files they link to. The brief:
 
