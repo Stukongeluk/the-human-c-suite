@@ -6,6 +6,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-11-24
+
 ### Added
 - The plugin now lists 19 official, vendor-hosted MCP servers in `.mcp.json`, the same ones Anthropic's own plugins use: Atlassian, Linear, Asana, monday.com, ClickUp, Notion, GitHub (on its read-only URL), PagerDuty, Datadog, BigQuery, Snowflake and Databricks (no fixed address, add your own), Amplitude (US and EU), Pendo, Intercom, HubSpot, Microsoft 365 and Google Drive. None connects until you sign in. No HR system on purpose: the seats work from aggregated people data. `CONNECTORS.md` explains how to keep each one read-only, and `PRIVACY.md` what happens to your data.
 - `scripts/validate.py` checks that every MCP server is a remote https server without credentials.

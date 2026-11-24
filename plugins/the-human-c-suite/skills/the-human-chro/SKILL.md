@@ -6,7 +6,7 @@ metadata:
   author: Jimmy Nguyen
   homepage: https://jimmynguyen.nl
   repository: https://github.com/Stukongeluk/the-human-c-suite
-  version: "1.6.1"
+  version: "1.7.0"
 ---
 
 # The Human CHRO

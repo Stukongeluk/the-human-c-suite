@@ -9,7 +9,7 @@
       "name": "the-human-c-suite",
       "source": "./plugins/the-human-c-suite",
       "description": "Five humane, technical leadership skills (CEO, CFO, CTO, CPTO and CHRO) for decisions that affect people: cost cuts and layoffs, AI rollouts and AI spend, roadmaps, budgets, reviews, pay and return to office. Grounded in your company data and current research, with layoffs as a last resort, every saving shown net of its costs, AI measured before it is banked on, and pushback invited.",
-      "version": "1.6.1",
+      "version": "1.7.0",
       "author": {
         "name": "Jimmy Nguyen",
         "url": "https://jimmynguyen.nl"
